@@ -1,0 +1,122 @@
+## See https://github.com/marella/material-symbols/blob/main/.github/workflows/update.yml where inspiration for this script came from
+name: Version Increment
+
+on:
+  schedule:
+    - cron: '23 1 * * MON'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Force Update
+        default: '0'
+      dry:
+        description: Dry Run
+        default: '1'
+      bump:
+        type: choice
+        description: Bump Version
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    env:
+      HAVE_GIT_DEPLOY_KEY: ${{ secrets.DEPLOY_KEY != '' }}
+    steps:
+
+      - uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          fetch-depth: '3'
+
+      - name: Set up Git username and email
+        run: |
+            git config --global user.name "${{ vars.GPG_NAME }}"
+            git config --global user.email "${{ secrets.GPG_EMAIL }}"
+            echo "${{ secrets.GPG_KEY }}" | base64 --decode | gpg --import --no-tty --batch --yes
+            #gpg -v --refresh-keys #only needed for external gpg keys
+            gpg --list-secret-keys --keyid-format LONG
+            git config --global user.signingkey ${{ secrets.GPG_KEY_ID }}
+            git config --global commit.gpgSign true
+            git config --global tag.gpgSign true
+            git config --global gpg.program gpg
+
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v4
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: npm list
+
+
+      - uses: actions/setup-node@v4 #setup registry to github package repo
+        with:
+          node-version: 20
+
+      - name: npm ci (don't run prepare)
+        run: npm ci --ignore-scripts
+
+      - name: Update & Push git tags
+        if: ${{ env.HAVE_GIT_DEPLOY_KEY == 'true' }}
+        run: |
+          force="${{ github.event.inputs.force }}"
+          dry="${{ github.event.inputs.dry }}"
+          bump="${{ github.event.inputs.bump }}"
+          if [ "$bump" = "" ]; then
+            bump="patch"
+          fi
+
+          # Fetch the latest tags
+          git fetch --tags
+
+          # Get the latest tag
+          LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)
+
+          # Get the current commit hash
+          CURRENT_COMMIT=$(git rev-parse HEAD)
+
+          # Check if there are changes between the latest tag and the current commit
+          if git diff --quiet $LATEST_TAG $CURRENT_COMMIT; then
+            if [ "$force" != "1" ]; then
+              echo "No changes detected between the latest tag ($LATEST_TAG) and the current commit ($CURRENT_COMMIT)."  >> $GITHUB_STEP_SUMMARY
+              exit 0
+            else
+             echo "Force flag set continuing: No changes detected between the latest tag ($LATEST_TAG) and the current commit ($CURRENT_COMMIT)."  >> $GITHUB_STEP_SUMMARY
+            fi
+          else
+            echo "Changes detected between the latest tag ($LATEST_TAG) and the current commit ($CURRENT_COMMIT)."  >> $GITHUB_STEP_SUMMARY
+          fi
+
+          # Bump Version
+          npm version "$bump"
+
+          dry="${{ github.event.inputs.dry }}"
+          # Push
+          if [ "$dry" = "1" ]; then
+            exit 0
+          fi
+          git push --follow-tags
+
+      - name: Git Commit - Is Skipped
+        if: ${{ env.HAVE_GIT_DEPLOY_KEY != 'true' }}
+        run: |
+          echo "### Deployment config not configured" >> $GITHUB_STEP_SUMMARY
+          echo "secrets.DEPLOY_KEY not existing, npm version can't be pushed" >> $GITHUB_STEP_SUMMARY
+          echo "If this is a fork, please setup your own personal service account to publish to your own repo" >> $GITHUB_STEP_SUMMARY
+          echo "## We recommend using a service account with the least permissions necessary."  >> $GITHUB_STEP_SUMMARY
+          echo "[Learn more about creating and using encrypted secrets](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets)"  >> $GITHUB_STEP_SUMMARY

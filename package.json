@@ -8,6 +8,7 @@
     "url": "https://github.com/qld-gov-au/qgds-vanilla"
   },
   "scripts": {
+    "prepare": "npm run build",
     "build": "webpack --config webpack/webpack.prod.js",
     "build-all": "npm run build && npm run jsdoc",
     "serve": "webpack-dev-server --open --config webpack/webpack.dev.js",
@@ -15,7 +16,10 @@
     "jsdoc": "./node_modules/jsdoc/jsdoc.js -a all -c jsdoc.json -r -R README.md ./src/components/ -d ./documentation/jsdoc",
     "lint:js": "eslint \"./src/**/*.js\"",
     "lint:styles": "stylelint \"./src/**/*.css\" \"./src/**/*.scss\" \"!./src/**/*.min.css\"",
-    "lint": "npm run lint:js && npm run lint:styles"
+    "lint": "npm run lint:js && npm run lint:styles",
+    "test": "echo 'no tests exist'",
+    "test:integration": "echo 'no test:integration exist'",
+    "build-storybook": "echo 'no storybook exists'"
   },
   "keywords": [],
   "author": "",
@@ -53,7 +57,8 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.88.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
+    "webpack-dev-server": "^4.15.1",
+    "node-jq": "^6.0.1"
   },
   "dependencies": {
     "bloodhound-js": "^1.2.3",
@@ -66,7 +71,6 @@
     "jquery": "^3.5.1",
     "jquery-ui": "^1.13.0",
     "jquery-validation": "^1.19.3",
-    "node-jq": "^2.0.0",
     "prismjs": "^1.29.0",
     "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1",
