@@ -13,8 +13,8 @@
     <!--<![endif]-->
 
     <head>
-        <title>Queensland Design System</title>
-        
+        <title>Queensland Government Design System: Vanilla</title>
+
         ${require('../components/_global/html/head.html')}
     </head>
 
@@ -29,7 +29,7 @@
         })}
         <!-- MAIN BODY -->
         <main class="main" role="main">
-            
+
             ${require('../components/banner_basic/html/component.hbs')({
                 "site":require('/src/data/site.json'),
                 "current":require('/src/data/current.json')
@@ -46,7 +46,7 @@
                             })}
                         </div>
                         <div class="col-xs-12 col-lg-8 col-xl-8" id="content">
-                            
+
                             ${require('../components/_global/html/component.hbs')({
                                 "manifest":require('../components/banner_basic/js/manifest.json'),
                                 "component":require('!url-loader!../components/banner_basic/html/component.hbs'),
@@ -60,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-            </div>  
+            </div>
         </main>
         <!-- END MAIN BODY -->
 
@@ -69,7 +69,7 @@
             "site":require('/src/data/site.json'),
             "current":require('/src/data/current.json')
         })}
-        
+
         <!-- FOOTER-->
         ${require('../components/footer/html/component.hbs')({
             "site":require('/src/data/site.json')
