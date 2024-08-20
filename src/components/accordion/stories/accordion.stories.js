@@ -6,11 +6,15 @@
 
 import defaultdata from "./accordion.data.json";
 import template from "./../html/component.hbs?raw";
+import Handlebars from "handlebars";
+
+function compile(args) {
+    return Handlebars.compile(template)(args)
+}
 
 export default {
-  tags: ["autodocs"],
   title: "Components/Accordion",
-  render: (args) => Handlebars.compile(template, args),
+  render: (args) => compile(args),
   args: defaultdata,
 
   /**
