@@ -1,6 +1,6 @@
 {
     "name": "@qld-gov-au/qgds-vanilla",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "",
     "main": "index.js",
     "licence": "MIT",
@@ -8,9 +8,9 @@
         "type": "git",
         "url": "https://github.com/qld-gov-au/qgds-vanilla"
     },
-  "scripts": {
+    "scripts": {
         "prepare": "npm run build",
-    "build": "webpack --config webpack/webpack.prod.js",
+        "build": "webpack --config webpack/webpack.prod.js",
         "build-all": "npm run build && npm run jsdoc",
         "serve": "webpack-dev-server --open --config webpack/webpack.dev.js",
         "add-component": "bash scripts/add_component.sh",
@@ -18,16 +18,16 @@
         "lint:js": "eslint \"./src/**/*.js\"",
         "lint:styles": "stylelint \"./src/**/*.css\" \"./src/**/*.scss\" \"!./src/**/*.min.css\"",
         "lint": "npm run lint:js && npm run lint:styles",
-    "test": "echo 'no tests exist'",
-    "test:integration": "echo 'no test:integration exist'",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --webpack-stats-json "
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@chromatic-com/storybook": "^1.6.1",
+        "test": "echo 'no tests exist'",
+        "test:integration": "echo 'no test:integration exist'",
+        "storybook": "storybook dev -p 6006",
+        "build-storybook": "storybook build --webpack-stats-json "
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@chromatic-com/storybook": "^1.6.1",
         "@qld-gov-au/qgds-tokens": "^1.2.1",
         "@storybook/addon-a11y": "^8.2.1",
         "@storybook/addon-essentials": "^8.2.1",
@@ -79,17 +79,17 @@
         "webpack": "^5.88.0",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1",
-        "node-jq": "^6.0.1"},
-  "dependencies": {
-    "bloodhound-js": "^1.2.3",
-    "corejs-typeahead": "^1.3.1",
-    "datatables.net": "^1.13.4",
-    "datatables.net-dt": "^1.13.4",
-    "esri-leaflet": "3.0.1",
+        "node-jq": "^6.0.1"
+    },
+    "dependencies": {
+        "bloodhound-js": "^1.2.3",
+        "corejs-typeahead": "^1.3.1",
+        "datatables.net": "^1.13.4",
+        "datatables.net-dt": "^1.13.4",
+        "esri-leaflet": "3.0.1",
         "esri-leaflet-vector": "3.1.5",
         "leaflet": "1.7.1",
         "extract-loader": "^5.1.0",
-
         "handlebars-loader": "^1.7.1",
         "handlebars": "4.7.8",
         "highlight.js": "^11.1.0",
