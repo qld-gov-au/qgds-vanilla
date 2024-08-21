@@ -1,11 +1,9 @@
-# The Vanilla Design System by Queensland Government Design System
-## This is an alpha version, provided to the community for their use. Queensland Government Design System will not provide support for this design system.
+# The Vanilla Flavour by Queensland Government Design System
+## This is an alpha version, provided to the community for their use.
 
 If you are using assets from this Repo, please send an email to qgdesignsystem@chde.qld.gov.au so we can add you to the change management communications list for the formal future state Qld Gov Design System.
 
-An attached MIT (basic) licence with “THIS REPOSITORY (SOFTWARE) IS PROVIDED AS IS WITHOUT WARRANTY”
-
-This boilerplate is the frontend starting point for design cutups and front end component development for the Queensland Design System.
+This boilerplate is the frontend starting point for design cutups and front end component development for the Queensland Government Design System: Vanilla.
 
 ## Table of Contents
 #### [Getting Started](#getting-started-1)
@@ -43,8 +41,8 @@ When you first clone down the Design System, you automatically get the following
 - Hot-reload HTML, CSS and JS
 
 ### Requirements
-- Node: v16.20.0
-- NPM: 8.19.4
+- Node: v18.20.4
+- NPM: 10.7.0
 
 ### Local Development
 
