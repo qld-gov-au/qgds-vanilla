@@ -1,4 +1,9 @@
-# Queensland Health Design System
+# QGDS Vanilla - Prototype only
+
+Developed using the QLD Health Design System (refractored).
+
+# WORK IN PROGRESS
+
 ## This is an alpha version and is not production ready
 
 If you are using assets from this Repo, please send an email to designandcapability@chde.qld.gov.au so we can add you to our change management communications list
@@ -78,7 +83,7 @@ Instead of just serving the site into memory in your browser with `npm run serve
 
 ## Component development
 ### Creating a new component
-All existing components are located in src/components, and you can find the base component template in src/components/_template. Run the command `npm run add-component` and follow the prompts to create a new component from this template. 
+All existing components are located in src/components, and you can find the base component template in src/components/_template. Run the command `npm run add-component` and follow the prompts to create a new component from this template.
 
 **Please note:** If you've still got `npm run serve` running in another console window, you'll need to restart that process for Webpack to recognise it.
 
@@ -185,9 +190,9 @@ See the Cards component for an example of this (example manifest.json below).
         "status": "Released",
         "data": {
             "metadata": {
-                
+
 				//... Other component metadata
-                
+
 				"root_node": {
                     "type": "metadata_field_related_asset",
                     "description": "",
@@ -242,7 +247,7 @@ See the Cards component for an example of this (example manifest.json below).
         },
 
 		// ... All other child assets
-        
+
 		]
     }
 }
@@ -262,7 +267,7 @@ See the Tags List Linked component for an example of this (example manifest.json
 		"status": "In Development",
 		"data": {
 			"metadata": {
-				
+
 				// ... Other component metadata
 
 				"asset_select": {
@@ -303,7 +308,7 @@ See the Tags List Linked component for an example of this (example manifest.json
                     "is_contextable": true,
                     "use_default": true
                 },
-                
+
 				// ... All other attributes
             },
             "metadata": {
@@ -315,11 +320,11 @@ See the Tags List Linked component for an example of this (example manifest.json
                     "default_value": false,
                     "use_default": true
                 },
-                
+
 				// ... All other metadata
             }
-        }, 
-        
+        },
+
 		// ... All other selected assets
 
         }]
@@ -339,7 +344,7 @@ Here is an example from the existing **Accordion** component:
 {{#ifCond globals.current.data.metadata.pageType.value '==' 'landing'}}
 <section class="qld__body">
     <div class="container-fluid">
-{{/ifCond}}    
+{{/ifCond}}
 
 
 {{#if data.heading.value}}
@@ -354,14 +359,14 @@ Here is an example from the existing **Accordion** component:
 <ul class="qld__accordion-group">
     {{#each data}}
         {{#ifCond this.type '==' 'metadata_field_wysiwyg'}}
-            {{#ifCond @key '!=' 'intro'}} 
+            {{#ifCond @key '!=' 'intro'}}
                 {{#ifCond this.value '!=' ''}}
                 <li>
                     <section class="qld__accordion">
                         <button class="qld__accordion__title js-qld__accordion qld__accordion--closed" aria-controls="accordion-group-{{../containerId}}-{{this.fieldid}}" aria-expanded="false" >
                             {{#getTitle ../data @key}}{{/getTitle}}
                         </button>
-            
+
                         <div class="qld__accordion__body qld__accordion--closed" id="accordion-group-{{../containerId}}-{{this.fieldid}}">
                             <div class="qld__accordion__body-wrapper">
                                 {{{this.value}}}
@@ -415,7 +420,7 @@ Also take care to follow a 'mobile-first' approach with your SCSS code, where st
 @include QH-media( xl ) {}
 
 // >xxl breakpoint
-@include QH-media( xxl ) {} 
+@include QH-media( xxl ) {}
 
 ```
 
