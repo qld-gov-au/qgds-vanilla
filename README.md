@@ -433,6 +433,33 @@ To import your finished component, go to the Matrix Admin interface and in the '
 
 After successful import, you should have a new Content Template in Matrix with a Metadata Schema that matches your *manifest.json* file.
 
+
+## Advanced Features
+### Figma colour sync
+
+The Figma script pulls in all colour variables from the Figma file via the API which can be at '.figma.js'.
+
+By default the script points the design system file which can be updated to pull in new designs colour matrix.
+
+To pull in a new colour matrix you will need to update line 6 with the new path.
+```
+/qKsxl3ogIlBp7dafgxXuCA
+```
+The new path can be found in the url of the figma file, simply copy the figma file id '/file/<figma-file-id>'.
+e.g
+```
+https://www.figma.com/file/**qKsxl3ogIlBp7dafgxXuCA**/QLDH-DDS?node-id=5990%3A97450&viewport=241%2C48%2C0.5
+```
+Once the path has been updated and save you can now run the script with:
+```
+npm run get-figma
+```
+This will hit the figma API via a get request, process the values and save the new SASS varibles in:
+```
+/src/styles/imports/figma.scss
+```
+The figma variables can now be used by running either of the local or production scripts.
+
 ## General Boilerplate Features
 This section contains some general tips for writing code using this boilerplate
 ### Working in HTML files
@@ -537,3 +564,25 @@ When your changes are ready, submit the pull request with a clear and informativ
 
 ### Communication
 Feel free to reach out if you have questions or need assistance during the review process. We appreciate your contributions and look forward to collaborating with you!
+
+
+### Copyright and Warrannt
+Copyright (c) The State of Queensland 2023 (Queensland Health)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THIS REPOSITORY SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
