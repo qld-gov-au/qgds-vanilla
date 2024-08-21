@@ -69,6 +69,18 @@ const copyWebPack = new CopyWebpackPlugin({
             globOptions: {
                 ignore: ['__What is this folder for']
             }
+        },
+        {
+            from: path.resolve(__dirname, '../node_modules/esri-leaflet/dist/esri-leaflet.*'),
+            to: 'externals/[name][ext]',
+        },
+        {
+            from: path.resolve(__dirname, '../node_modules/esri-leaflet-vector/dist/esri-leaflet-vector.*'),
+            to: 'externals/[name][ext]',
+        },
+        {
+            from: path.resolve(__dirname, '../node_modules/leaflet/dist/leaflet.*'),
+            to: 'externals/[name][ext]',
         }
     ],
 });
