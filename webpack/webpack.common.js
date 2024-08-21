@@ -81,6 +81,10 @@ const copyWebPack = new CopyWebpackPlugin({
         {
             from: path.resolve(__dirname, '../node_modules/leaflet/dist/leaflet.*'),
             to: 'externals/[name][ext]',
+        },
+        {
+            from: path.resolve(__dirname, '../node_modules/handlebars/dist/handlebars.min.js'),
+            to: 'externals/[name][ext]',
         }
     ],
 });
