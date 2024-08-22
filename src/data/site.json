@@ -172,7 +172,7 @@
 			"use_default": true
 		},
 		"siteSearchUrl": {
-			"value": "https://qhscb.squiz.cloud/wog-design-system/search",
+			"value": "",
 			"fieldid": "72368",
 			"type": "metadata_field_text",
 			"is_contextable": true,
@@ -212,7 +212,7 @@
 			"use_default": true
 		},
 		"siteQuickExitUrl": {
-			"value": "https://qhscb.squiz.cloud/wog-design-system",
+			"value": "https://google.com.au",
 			"fieldid": "72373",
 			"type": "metadata_field_text",
 			"is_contextable": true,
@@ -228,7 +228,7 @@
 			"use_default": true
 		},
 		"siteDefaultIcons": {
-			"value": "/mysource_files/img/svg-icons.svg",
+			"value": "./img/svg-icons.svg",
 			"fieldid": "72372",
 			"type": "metadata_field_related_asset",
 			"is_contextable": true,
@@ -389,14 +389,14 @@
 			"friendly_name": "Pre Header Theme",
 			"value": "qld__header__pre-header--dark-alt",
 			"options": {
-					"qld__header__pre-header--dark": "Dark",
-					"qld__header__pre-header--dark-alt": "Dark Alternative"
+				"qld__header__pre-header--dark": "Dark",
+				"qld__header__pre-header--dark-alt": "Dark Alternative"
 			},
 			"required": false,
 			"editable": true
 		},
 		"sitePreHeaderLogo": {
-			"value": "/mysource_files/img/header-logo-qgov--light.svg",
+			"value": "./img/header-logo-qgov--light.svg",
 			"fieldid": "72393",
 			"type": "metadata_field_related_asset",
 			"is_contextable": true,
@@ -432,7 +432,7 @@
 			}
 		},
 		"mainNavStyle": {
-			"value": "",
+			"value": "qld__main-nav--dark",
 			"fieldid": "72402",
 			"type": "metadata_field_select",
 			"is_contextable": true,
@@ -444,7 +444,7 @@
 			}
 		},
 		"mainNavHomeIconShow": {
-			"value": "true",
+			"value": "false",
 			"fieldid": "72398",
 			"type": "metadata_field_select",
 			"is_contextable": true,
@@ -568,7 +568,7 @@
 			"use_default": true
 		},
 		"defaultBannerColour": {
-			"value": "light",
+			"value": "dark-alternate",
 			"fieldid": "72405",
 			"type": "metadata_field_select",
 			"is_contextable": true,
@@ -576,7 +576,7 @@
 			"use_default": true
 		},
 		"defaultBannerTexture": {
-			"value": "/mysource_files/img/Heart-Pattern.png",
+			"value": "./img/Heart-Pattern.png",
 			"fieldid": "72406",
 			"type": "metadata_field_related_asset",
 			"is_contextable": true,
@@ -584,7 +584,7 @@
 			"use_default": true
 		},
 		"defaultBannerTextureDark": {
-			"value": "/mysource_files/img/Heart-Pattern-Dark.png",
+			"value": "./img/Heart-Pattern-Dark.png",
 			"fieldid": "72406",
 			"type": "metadata_field_related_asset",
 			"is_contextable": true,
@@ -717,6 +717,7 @@
 		},
 		"footerCopyrightLink": {
 			"value": "asasdfasdfasdfasd",
+			"value": "",
 			"fieldid": "72422",
 			"type": "metadata_field_related_asset",
 			"is_contextable": true,
@@ -788,11 +789,87 @@
 			"use_default": true
 		}
 	},
+	"component": {
+		"data": {
+		  "metadata": {
+			"id_field": {
+			  "value": "custom-banner-id"
+			},
+			"hero_image": {
+			  "value": "12345"
+			},
+			"background_image_sm": {
+			  "value": "banner.png"
+			},
+			"background_image_lg": {
+			  "value": "banner.png"
+			},
+			"background_colour": {
+			  "value": "dark-alternate"
+			},
+			"breadcrumbs_display": {
+			  "value": "yes"
+			},
+			"hero_image_responsive_treatment": {
+			  "value": "scale"
+			},
+			"hero_image_padding": {
+			  "value": "yes"
+			},
+			"hero_image_alignment": {
+			  "value": "page"
+			},
+			"background_type": {
+			  "value": "image"
+			},
+			"background_image_alignment": {
+			  "value": "center"
+			},
+			"heading_primary": {
+			  "value": "Kitchen sink"
+			},
+			"abstract": {
+			  "value": "This is a test page used for the 'core' migration."
+			}
+		  },
+		  "assetid": "banner-123",
+		  "site": {
+			"metadata": {
+			  "defaultBannerTexture": {
+				"value": "67890"
+			  },
+			  "defaultBannerTextureDark": {
+				"value": "78901"
+			  }
+			}
+		  },
+		  "current": {
+			"lineage": [
+			  {
+				"asset_url": "/home",
+				"asset_short_name": "Home",
+				"asset_type_code": "page",
+				"asset_is_site_asset": "1"
+			  },
+			  {
+				"asset_url": "/section",
+				"asset_short_name": "Section",
+				"asset_type_code": "page"
+			  },
+			  {
+				"asset_url": "/current-page",
+				"asset_short_name": "Current Page",
+				"asset_type_code": "page"
+			  }
+			]
+		  }
+		}
+	  },
 	"children": [{
 		"asset_url": "/components.html",
 		"asset_assetid":"/components.html",
-		"asset_name": "Components &",
-		"asset_short_name": "Components &",
+		"asset_name": "Components",
+		"asset_short_name": "Components",
 		"asset_metadata_shortDescription": "This is level one short description",
 		"asset_metadata_showInMegaNav": "false",
 		"children": [{
@@ -840,9 +917,9 @@
 	{
 		"asset_assetid": "/inner.html",
 		"asset_url": "/inner.html",
-		"asset_name": "Inner",
-		"asset_short_name": "Inner",
-		"asset_metadata_showInMegaNav": "true",
+		"asset_name": "Contact us",
+		"asset_short_name": "Contact us",
+        "asset_metadata_showInMegaNav": "true",
     	"children": []
   	}
 	]
