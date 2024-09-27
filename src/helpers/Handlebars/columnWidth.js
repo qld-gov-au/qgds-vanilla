@@ -1,4 +1,4 @@
-module.exports = function(target_col, data) {
+export default function(target_col, data) {
 
     var col_widths = [
         data.col_1_width.value,

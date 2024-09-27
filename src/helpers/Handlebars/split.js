@@ -1,4 +1,4 @@
-module.exports = function(string, separator) {
+export default function(string, separator) {
     if(typeof string == 'string') {
         return string.split(separator);
     }

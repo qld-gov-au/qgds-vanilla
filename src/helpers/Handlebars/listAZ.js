@@ -1,4 +1,4 @@
-module.exports = function(items, url, options) {
+export default function(items, url, options) {
     var html = '<li class="qld__a-z_listing__options__item">';
     var services = [];
     var letters = [];
@@ -43,7 +43,7 @@ module.exports = function(items, url, options) {
             //sorting the letters disregarding the case.
             let lowerCaseA = a.name.toLowerCase();
             let lowerCaseB = b.name.toLowerCase();
-            
+
             if(lowerCaseA < lowerCaseB) { return -1; }
             if(lowerCaseA > lowerCaseB) { return 1; }
 

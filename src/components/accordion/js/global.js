@@ -2,17 +2,17 @@
  * @module accordion
  */
 
-(function () {
+export default function (QLD) {
 
     var accordion = {}
 
     /**
      * Set the correct Aria roles for given element on the accordion title and body
-     * 
+     *
      * @memberof module:accordion
-     * @instance 
+     * @instance
      * @private
-     * 
+     *
      * @param  {object} element - The DOM element we want to set attributes for
      * @param  {object} target  - The DOM element we want to set attributes for
      * @param  {string} state   - The DOM element we want to set attributes for
@@ -32,8 +32,8 @@
      *
      * @memberof module:accordion
      * @instance
-     * @private  
-     * 
+     * @private
+     *
      * @param  {object} element      - The DOM element we want to toggle classes on
      * @param  {object} target       - The DOM element we want to toggle classes on
      * @param  {object} state        - The current state of the animation on the element
@@ -57,7 +57,7 @@
 
     /**
      * IE8 compatible function for removing a class
-     * 
+     *
      * @memberof module:accordion
      * @instance
      * @private
@@ -76,7 +76,7 @@
 
     /**
      * IE8 compatible function for adding a class
-     * 
+     *
      * @memberof module:accordion
      * @instance
      * @private
@@ -95,7 +95,7 @@
 
     /**
      * Toggle an accordion element
-     * 
+     *
      * @memberof module:accordion
      *
      * @param  {string}  elements  - The DOM node/s to toggle
@@ -109,7 +109,8 @@
         try {
             window.event.cancelBubble = true;
             event.stopPropagation();
-        } catch (error) {}
+        } catch (error) {
+        }
 
         // making sure we can iterate over just one DOM element
         if (elements.length === undefined) {
@@ -198,17 +199,17 @@
                                 callbacks.afterOpen();
                             }
 
-                            if(target.classList.contains('qld__overflow_menu')) {
-                                
+                            if (target.classList.contains('qld__overflow_menu')) {
+
                                 var overFlowLinks = [];
                                 overFlowLinks = target.querySelectorAll('a.qld__overflow_menu_list-item-link');
 
-                                if(overFlowLinks[0]) {
-                                    setTimeout(function() {
+                                if (overFlowLinks[0]) {
+                                    setTimeout(function () {
                                         overFlowLinks[0].focus();
                                     }, 10);
                                 }
-                                
+
                             }
                         }
 
@@ -222,8 +223,8 @@
                             if (!event.target.closest(".qld__main-nav__menu-sub.qld__accordion__body.qld__accordion--open")) {
 
                                 controller.abort();
-                                if(elements[0].classList.contains('qld__accordion--open')) {
-                                    accordion.Toggle(elements, speed, callbacks);   
+                                if (elements[0].classList.contains('qld__accordion--open')) {
+                                    accordion.Toggle(elements, speed, callbacks);
                                 }
                             }
                         }
@@ -234,7 +235,7 @@
                                 document.addEventListener(
                                     "click",
                                     toggleNavOnDocumentClick,
-                                    { signal: controller.signal }
+                                    {signal: controller.signal}
                                 )
                             }
                         } else {
@@ -242,7 +243,7 @@
                                 document.removeEventListener(
                                     "click",
                                     toggleNavOnDocumentClick,
-                                    { signal: controller.signal }
+                                    {signal: controller.signal}
                                 )
                                 controller.abort();
                             }
@@ -259,7 +260,7 @@
 
     /**
      * Toggle all accordion elements
-     * 
+     *
      * @memberof module:accordion
      *
      * @param  {string}  elements  - The DOM node/s to toggle
@@ -272,13 +273,14 @@
         try {
             window.event.cancelBubble = true;
             event.stopPropagation();
-        } catch (error) {}
+        } catch (error) {
+        }
 
         var toogleAllButton = elements;
         // find the accordion wrapper
         var wrapper = toogleAllButton.closest(".qld__accordion-group");
         // get all the accordion buttons
-        var accordionButtons =  wrapper.querySelectorAll('.qld__accordion__title');
+        var accordionButtons = wrapper.querySelectorAll('.qld__accordion__title');
 
 
         // check this once
@@ -286,13 +288,13 @@
             callbacks = {};
         }
 
-        // Check if opened or closed 
-        if(toogleAllButton.classList.contains('qld__accordion__toggle-btn--closed')){
+        // Check if opened or closed
+        if (toogleAllButton.classList.contains('qld__accordion__toggle-btn--closed')) {
             toogleAllButton.classList.remove('qld__accordion__toggle-btn--closed');
             toogleAllButton.classList.add('qld__accordion__toggle-btn--open');
             toogleAllButton.textContent = "Close all";
             accordion.Open(accordionButtons);
-        }else if(toogleAllButton.classList.contains('qld__accordion__toggle-btn--open')){
+        } else if (toogleAllButton.classList.contains('qld__accordion__toggle-btn--open')) {
             toogleAllButton.classList.remove('qld__accordion__toggle-btn--open');
             toogleAllButton.classList.add('qld__accordion__toggle-btn--closed');
             toogleAllButton.textContent = "Open all";
@@ -305,7 +307,7 @@
 
     /**
      * Open a group of accordion elements
-     * 
+     *
      * @memberof module:accordion
      *
      * @param  {string}  elements - The DOM node/s to toggle
@@ -318,7 +320,8 @@
         try {
             window.event.cancelBubble = true;
             event.stopPropagation();
-        } catch (error) {}
+        } catch (error) {
+        }
 
         if (elements.length === undefined) {
             elements = [elements];
@@ -347,15 +350,15 @@
             toggleClasses(element, 'opening');
             setAriaRoles(element, target, 'opening');
 
-            if (typeof(window.dataLayer) !== 'undefined') {
+            if (typeof (window.dataLayer) !== 'undefined') {
                 window.dataLayer.push({
                     event: 'accordion open',
                     category: 'accordion',
                     action: 'close',
                     label: targetId
-                });            
+                });
             }
-            
+
             (function (target, speed, element) {
                 QLD.animate.Run({
                     element: target,
@@ -374,7 +377,7 @@
 
     /**
      * Close a group of accordion elements
-     * 
+     *
      * @memberof module:accordion
      *
      * @param  {string}  elements - The DOM node/s to toggle
@@ -387,7 +390,8 @@
         try {
             window.event.cancelBubble = true;
             event.stopPropagation();
-        } catch (error) {}
+        } catch (error) {
+        }
 
         if (elements.length === undefined) {
             elements = [elements];
@@ -401,16 +405,16 @@
 
             toggleClasses(element, 'closing');
             setAriaRoles(element, target, 'closing');
-            
-            if (typeof(window.dataLayer) !== 'undefined') {
+
+            if (typeof (window.dataLayer) !== 'undefined') {
                 window.dataLayer.push({
                     event: 'accordion close',
                     category: 'accordion',
                     action: 'close',
                     label: targetId
-                });             
+                });
             }
-            
+
             (function (target, speed) {
                 QLD.animate.Run({
                     element: target,
@@ -429,12 +433,12 @@
 
     /**
      * Init the accordion component by adding relevent event listeners
-     * 
+     *
      * @memberof module:accordion
      */
-    accordion.init = function(element) {
+    accordion.init = function (element) {
 
-        if(element == 'overflow') {
+        if (element == 'overflow') {
             var overflowMenuButtons = document.querySelectorAll('.qld__overflow_menu__btn');
             overflowMenuButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
@@ -448,7 +452,7 @@
                     accordion.Toggle(button)
                 });
             });
-    
+
             var accordionAllButtton = document.querySelectorAll('.qld__accordion__toggle-btn');
             accordionAllButtton.forEach(function (button) {
                 button.addEventListener('click', function () {
@@ -467,4 +471,4 @@
         QLD.accordion.init();
     });
 
-}());
+}

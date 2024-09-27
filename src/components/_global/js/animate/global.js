@@ -1,13 +1,14 @@
 /**
  * @module animate
  */
-(function (QLD) {
+export default function (QLD) {
+
 
     var animate = {}
 
     /**
      * Calculate the requirements for the desired animation
-     * 
+     *
      * @memberof module:animate
      * @instance
      * @private
@@ -56,7 +57,7 @@
 
     /**
      * Getting computed CSS styles from normal browsers and IE
-     * 
+     *
      * @memberof module:animate
      *
      * @param {object} element  - The DOM element we want to get the computed style from
@@ -81,7 +82,7 @@
 
     /**
      * Calculate the size of the element when it’s dimension(height or width) is set to auto
-     * 
+     *
      * @memberof module:animate
      *
      * @param  {object} element   - The element to read auto height from
@@ -111,7 +112,7 @@
 
     /**
      * Stop any au animation on a DOM element
-     * 
+     *
      * @memberof module:animate
      *
      * @param  {object} element - The element to stop animating
@@ -123,7 +124,7 @@
 
     /**
      * The magical animation function
-     * 
+     *
      * @memberof module:animate
      *
      * @param  {object}         options          - The options for the animation
@@ -217,7 +218,7 @@
 
     /**
      * Toggle animation
-     * 
+     *
      * @memberof module:animate
      *
      * @param  {object}         options              - The options for the animation
@@ -317,8 +318,6 @@
         }
     };
 
-    var QLD = QLD ? QLD : {};
     QLD.animate = animate;
-    window.QLD = QLD;
+}
 
-}(window.QLD));

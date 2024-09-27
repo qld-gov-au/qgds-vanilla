@@ -1,4 +1,4 @@
-(function () {
+export default function (QLD) {
     'use strict';
 
     /**
@@ -8,17 +8,17 @@
 
     /**
      * Initialise Promo Panel
-     * 
+     *
      * @memberof module:initPromoPanel
      */
-     initPromoPanel.init = function() {
+    initPromoPanel.init = function () {
 
-        if($('.qld__promo_panel').length > 0) {
-            $('section').each(function() {
-                if($(this).hasClass('qld__promo_panel') && !$(this).hasClass('qld__promo_panel--no-image')) {
+        if ($('.qld__promo_panel').length > 0) {
+            $('section').each(function () {
+                if ($(this).hasClass('qld__promo_panel') && !$(this).hasClass('qld__promo_panel--no-image')) {
                     var next = $(this).next();
 
-                    if($(this).next().is("data")) {
+                    if ($(this).next().is("data")) {
                         next = $(this).next().next();
                     }
 
@@ -40,6 +40,6 @@
 
     // Assign initPromoPanel to global QLD object of functions
     QLD.initPromoPanel = initPromoPanel;
-    
+
     document.addEventListener('DOMContentLoaded', initPromoPanel.init);
-}());
+}

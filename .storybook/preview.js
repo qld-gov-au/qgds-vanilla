@@ -1,13 +1,12 @@
 
-import "../dist/js/main.js"
-import "../dist/main.css"
+//load global styles and js
+import "../src/js/main.js";
+import "../src/css/main.scss";
+
 import {withThemeByClassName} from '@storybook/addon-themes';
 import {allBackgrounds} from "./modes.js";
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
-// import { } from "../dist/js/helpers.js"
-// import init from "../src/js/handlebars.init.js";
 
-import Handlebars from "handlebars";
 
 /** @type { import('@storybook/html-vite').Preview } */
 const preview = {
@@ -91,8 +90,9 @@ const preview = {
             },
             defaultTheme: 'None',
         }),
+
         (Story) => {
-            // init(Handlebars);
+
             return `
 
 					${Story()}

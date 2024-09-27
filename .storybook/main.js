@@ -8,7 +8,7 @@ const config = {
         "../src/**/!(*_)*.stories.js",
     ],
     staticDirs: [
-        { from: '../dist', to: '/' },
+        { from: '../src/', to: '/' },
     ], //Bring dist in statically instead of having it minified
     addons: [//Storybook addons
     //https://storybook.js.org/addons/

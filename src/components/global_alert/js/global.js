@@ -1,5 +1,6 @@
-(function () {
+export default function (QLD) {
     "use strict";
+
     /**
      * @module globalAlert
      */
@@ -15,7 +16,7 @@
 
         let alerts = document.getElementsByClassName("qld__global-alert") || [];
         let siteName = null;
-        if( document.querySelector(".qld__global-alert__include") && document.querySelector(".qld__global-alert__include").alertContainer) {
+        if (document.querySelector(".qld__global-alert__include") && document.querySelector(".qld__global-alert__include").alertContainer) {
             siteName = document.querySelector(".qld__global-alert__include").alertContainer.getAttribute("data-name");
         }
 
@@ -23,7 +24,7 @@
             siteName = 'global_alert_dev';
         }
 
-        for(let index = 0; index < alerts.length; index++) {
+        for (let index = 0; index < alerts.length; index++) {
 
             let alert = alerts[index];
             let alertSeen = QLD.utils.getCookie(`${siteName}_alertSeen_${index}`);
@@ -41,7 +42,7 @@
                     function () {
                         alert.style.maxHeight = "0";
                         alert.style.display = "none";
-                        QLD.utils.setCookie(`${siteName}_alertSeen_${index}`,"true");
+                        QLD.utils.setCookie(`${siteName}_alertSeen_${index}`, "true");
                     },
                     false
                 );
@@ -50,5 +51,5 @@
     }
 
     initGlobalAlert();
-    
-})();
+
+}

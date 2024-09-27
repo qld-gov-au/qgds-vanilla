@@ -1,4 +1,4 @@
-module.exports = function (str, search, replacement) {
+export default function (str, search, replacement) {
   var cleanReplacement = " " + replacement + " ";
   if(typeof str == 'string') {
       console.log(str);
