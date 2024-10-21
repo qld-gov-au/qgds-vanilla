@@ -141,6 +141,25 @@ export const componentGlobalElements = {
         templateFile: exampleTemplate
     },
     // globals: { theme: 'Disabled' },
+    parameters: {
+        // Disables Chromatic's snapshotting on a component level
+        chromatic: {
+            modes: {
+                "Light": {
+                    theme: "Light",
+                },
+                "Light alternative": {
+                    theme: "Light alternative",
+                },
+                "Dark": {
+                    theme: "Dark",
+                },
+                "Dark alternative": {
+                    theme: "Dark alternative",
+                }
+            }
+        },
+    },
 }
 
 /**
@@ -150,6 +169,10 @@ export const AllThemesGlobalElements = {
     args: { ...exampleAll,
         templateFile: exampleAllThemesTemplate},
     globals: { theme: 'Disabled' },
+    parameters: {
+        // Disables Chromatic's snapshotting on a component level
+        chromatic: { disableSnapshot: true },
+    },
 }
 /**
  * Hyperlink Underlines Example
