@@ -1,0 +1,333 @@
+import { Meta, Markdown, Canvas } from "@storybook/blocks";
+
+import LabotomisedOwl from"./spacing/Lobotomised-Owl.png"
+import DesktopSpacing from "./spacing/DesktopSpacing.md?raw"
+import MobileSpacing from "./spacing/MobileSpacing.md?raw"
+import * as TypographyStories from "./../components/_global/css/body/stories/typography.stories.js"
+import PaddingSmall from "./spacing/paddingRecommendationsSmall.md?raw"
+import PaddingMedium from "./spacing/paddingRecommendationsMedium.md?raw"
+import PaddingLarge from "./spacing/paddingRecommendationsLarge.md?raw"
+
+import FlexSpacingClassesTable from "./spacing/FlexSpacingClassesTable.md?raw"
+import SectionSpacingTable from "./spacing/SectionSpacingTable.md?raw"
+import Variables from "./spacing/variables.md?raw"
+import MarginAndPaddingSpacingClassesTable from "./spacing/MarginAndPaddingSpacingClassesTable.md?raw"
+
+
+<Meta title="1. Styles/Spacing" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Spacing
+=======
+
+The Design System uses consistent pattern for spacing elements vertically that ensures all content follows the same vertical rhythm across all pages. The spacing works in a logical way out of the box and allowing faster and easier editing of content.
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=6158%3A26608&mode=design&t=2NwtJXtJpL352qHk-1)
+
+
+Overview
+--------
+
+The consistent alignment of elements is paramount for good UI design.
+
+All spacing between interface elements should use the following predefined spacing options to help ensure consistency and speed up design and development time.
+
+The following are the general principles that we used to calculate and define spacing across the design system:
+
+*   the base-unit of spacing in the design system is derived from 1rem which in most browsers equates to 16px
+*   spacing options are generally based on increments of 8px in order to align to an 8px grid
+*   fonts and line heights are always multiples of 4 to align to a baseline grid of 4px
+*   generally spacing is always applied as a margin top.
+
+### Vertical rhythm
+
+Vertical rhythm is about establishing repetitive spacing and patterns that create a familiar and predictable experience across all pages of a site.
+
+To create vertical rhythm, we use our 8px vertical grid system with a defined set of rules for spacing between, text areas, components, content sections and containers.
+
+### Base units
+
+Base units are the fundamental measurements or building blocks used for defining dimensions and spacing in our Design System. In this system, the base units set in rems. There are 3 primary base units, the baseline grid, layout grid and default font size.
+
+*   Baseline grid: 0.25rem (4px)
+*   Layout grid: 0.5rem (8px)
+*   Default font size: 1rem (16px)
+
+#### Text alignment with baseline grid (4px increments)
+
+*   The baseline grid is a horizontal grid that gives text lines something to sit on, making sure that everything lines up properly across the layout
+*   In this system, text can increment in multiples of 4px to align with the baseline grid. This means that the line-height, font-size, margin or padding of text elements should be set to 4, 8, 12, 16 pixels etc. This ensures consistency and better vertical rhythm
+
+#### Components alignment with layout grid (8px increments)
+
+*   The layout grid is another horizontal grid, usually with larger increments than the baseline grid. It's used for arranging larger elements such as images, buttons, cards, etc
+*   Components and elements in this system can increment in multiples of 8px to align with the layout grid. This ensures consistency and symmetry in the layout of larger elements. 8px grid system is quite popular in modern web design for its simplicity and scalability
+
+#### 1rem as default font size
+
+*   1rem is equivalent to the font size of the root element of the document. In most browsers, the default is 16px
+*   Using rem units is a best practice for responsive design. It allows users to resize text without breaking the layout, and it makes it easier to make global changes to font sizes
+
+#### The benefits
+
+*   Makes designs scalable, so you can maintain proportions and alignments as your design grows
+*   Simplifies the math and decision-making process, reducing cognitive overload for the designer
+*   Provides visual harmony, as elements are aligned to a common set of intervals
+*   Is often more user-friendly, as the consistency can make content easier to read and interact with
+
+* * *
+
+Spacing guidelines
+------------------
+
+Effective spacing is fundamental for clean and balanced design. Our Design System employs a modular scale, using increments based on a base unit, ensuring harmonious spacing across elements.
+
+The guidelines detail the margin top values for
+
+*   **desktop spacing** for screens wider than 992px, optimised for more screen real estate
+*   **mobile spacing** for screens narrower than 992px, adapted for smaller displays.
+
+Spacing is expressed in rem units with pixel equivalents for clarity. The guidelines address the spacing between text elements, components, and form fields, to achieve coherence and an optimal user experience.
+
+Please see the tables below for specific spacing values and uses.
+
+### Desktop spacing (over 992px)
+
+<Markdown>
+    {DesktopSpacing}
+</Markdown>
+
+### Mobile spacing (below 992px)
+
+<Markdown>
+    {MobileSpacing}
+</Markdown>
+
+
+### Examples
+
+<Canvas additionalActions={[{ title: 'Splacing Example', layout: 'centered' }]}
+        of={TypographyStories.SpacingExample} />
+
+* * *
+
+Padding recommendations
+-----------------------
+
+Padding is essential for creating visual separation and improving the readability of components. It prevents elements from feeling cramped and ensures a balanced composition. Similar to spacing, our padding values are based on a modular scale.
+
+Padding values are two varied to be defined by set variables like those used for vertical spacing. Instead we recommend you use the table below as recommendations for building components in our design system.
+
+### For small components (e.g. buttons, tags)
+
+Small components usually contain short content and require less padding to maintain a compact appearance.
+
+<Markdown>
+    {PaddingSmall}
+</Markdown>
+
+
+### For medium components (e.g. cards, callouts, alerts)
+
+<Markdown>
+    {PaddingMedium}
+</Markdown>
+Medium components usually contain more content than small components and need adequate padding to prevent clutter.
+
+
+
+### For large components (e.g. modals, promotional panels, banners)
+
+Large components often encompass a variety of elements and require substantial padding to ensure a clear hierarchy and pleasant aesthetic.
+
+
+<Markdown>
+    {PaddingLarge}
+</Markdown>
+
+
+Research and rationale
+----------------------
+
+Our spacing system was developed by using the spacing and grid system is based on the one created by Digital Transformation Agency's Design System. We broke down all the spacing values, expanded these to work across our new components and developed more specific guidelines for how this spacing would apply to UI elements on a page.
+
+Most of the spacing values we used were the defaults that were inherent in the DTA Design System however they were just not exposed in a way that made it easy for users to see as whole or how they should be applied across a whole page layout.
+
+We referred to our spacing guidelines as our vertical rhythm.
+
+We found that the advantage of having a method like this to define spacing is that it allows designers and developers to speak a common language and lessons the risk of inconsistency when designing new components or patterns. It makes design scalable, simplifies the decision making process for designers and creates more visual harmony across our page layouts
+
+### Consistency and visual hierarchy
+
+The spacing values are based on a modular scale, which helps create a consistent vertical rhythm. Consistent spacing enhances the visual hierarchy, which in turn improves the readability and scan-ability of the content. [A List Apart](https://alistapart.com/article/more-meaningful-typography/) has a detailed article on modular scales and meaningful typography.
+
+### Accommodating user preferences
+
+By using `rem` units, the design can adjust to the user's browser font-size settings. This is also especially useful for creating responsive designs that adapt to different screen sizes and resolutions, accessibility and user preferences.
+
+### Harmonious design with 8-point grid system
+
+The use of 8px increments is part of the widely adopted 8-point grid system. This grid is popular because it provides a simple, flexible way to size and align elements, and it works well with various screen sizes. [Google's material design](https://m2.material.io/design/layout/spacing-methods.html#baseline-grid) also uses an 8dp grid system.
+
+### Improved legibility and content grouping
+
+With proper spacing, you allow for elements to be grouped or separated logically. This is important for the Gestalt principles where the human eye seeks to find order and can group elements based on proximity. Nielsen Norman Group’s [article](https://www.nngroup.com/articles/gestalt-proximity/) on proximity as a Gestalt principle explains this in detail.
+
+### Focus and attention
+
+Adequate spacing, especially around headings and between sections, helps guide the user's focus and attention. It makes it easier to distinguish different sections and comprehend the structure of the page.
+
+### Lobotomised owl ( \* + \* )
+
+We use a technique called lobotomised owl ( \* + \* ) to add spacing above components. This only occurs when the component follows another element. This allows us to apply a consistent spacing throughout the page.
+
+If an element is the first child or doesn't follow an element it won't receive a margin-top.
+
+<img src={LabotomisedOwl} alt="Illustration depicting a list of form components where all elments have a margin top other then the first one. " />
+
+
+Spacing variables and utilities
+-------------------------------
+
+### Controlling the site's vertical rhythm
+
+Spacing within our design system is controlled globally by a set of variables categorised by their component or HTML element type. These variables define the core values that establish our vertical rhythm, ensuring consistent repetitive spacing and patterns that across all pages of a site. Using variables allows for easy updates to from a central location, making the design process more efficient and scalable.
+
+Each variable's key-value comes from the base `$QLD-space-map` . The $QLD-space-map is a Sass map that defines a set of key-value pairs for consistent spacing values used throughout a design system, enabling uniform application of margins, padding, and other spacing-related properties across a website.
+
+### QLD-space-map
+
+The QLD Space Map is a foundational element in our design system, providing a standardised set of spacing values that are applied consistently across all components and HTML elements. This Sass map is crucial for maintaining a cohesive vertical rhythm and ensuring consistent spacing throughout the user interface.
+
+The values defined in this map are the only values that should be used for padding or margins in our design system.
+
+[Github](https://github.com/Qld-Health-Online-Team/design-system/blob/master/src/styles/imports/variables.scss)
+[Figma](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/branch/bk9GAqQgpN7Yz4q4TsAvGV/QLD-GOV-DDS?m=auto&node-id=58167-30151&t=gKqHvrswGUsp0tJa-1)
+
+
+```
+$QLD-space-map: (
+    0: 0,
+    1: 4,
+    2: 8,
+    3: 12,
+    4: 16,
+    5: 20,
+    6: 24,
+    7: 32,
+    8: 36,
+    9: 40,
+    10: 48,
+    11: 56,
+    12: 64,
+    13: 80,
+    14: 96,
+    15: 128,
+    16: 160
+) !default;
+```
+
+### Purpose of the QLD-space-map
+
+*   **Consistency:** The QLD-space-map ensures that all spacing between elements, such as margins, paddings, and gaps, follows a consistent pattern. This consistency helps create a visually harmonious and predictable layout, enhancing the user experience.
+*   **Scalability:** By mapping specific spacing values to keywords or numbers, the space map allows for easy adjustments and scalability. Whether designing for mobile or desktop, the same spacing principles can be applied, ensuring the design scales gracefully across different screen sizes.
+*   **Efficiency:** The predefined spacing values reduce the need for ad-hoc spacing decisions during development, streamlining the design and implementation process. This leads to more efficient coding practices and reduces the likelihood of spacing-related issues
+
+### Example of code using variables and our space functions
+
+It is essential that the correct variables are used when building or updating components, and that margins are always implemented using a combination of these variables and the ["Lobotomised Owl" methodology.](https://alistapart.com/article/axiomatic-css-and-lobotomized-owls/)
+
+Developers can use the function `QLD-space` for consistent spacing across elements on all browsers. This is done with a new unit we created, called `unit` , to allow designers and developers to be able to keep consistency. This function helps ensure that elements snap to our predefined 4-pixel-grid, which is set by the `$QLD-unit` variable.
+
+`1unit` is the equivalent of `1rem` , which by default is `16px` .
+
+The function `QLD-space` should be used to apply or padding and margin values.
+
+**Please note it is only necessary to use variables for spacing that relates to vertical spacing via margin-top values.**
+
+Our space function is based on the [Digital Transformation Agencies font and spacing functions](https://gold.designsystemau.org/get-started/font-size-space/).
+
+
+
+```
+/* Margin-top value * /
+* + .qld__component-name {
+    @include QLD-space(margin-top, $QLD-margin__component--desktop);
+}
+
+/* Padding value * /
+.qld__component-name {
+    @include QLD-space(padding, 1unit 0 1unit 0);
+}
+```
+Variables
+---------
+
+Each of these variables should be used as the margin top value for the relevant category.
+
+Each category has a variable for:
+
+*   **desktop spacing** for screens wider than 992px, optimised for more screen real estate
+*   **mobile spacing** for screens narrower than 992px, adapted for smaller displays.
+
+<Markdown>
+    {Variables}
+</Markdown>
+
+### Section spacing
+
+Section elements with background colours applied the the `qld__body` classes are unique in our design system, they are an essential part of our vertical rhythm however they use padding to create vertical space rather then margin top values. This is because using margin-top values for spacing would cause the backgrounds colours within sections stack incorrectly together on a page.
+
+<Markdown>
+    {SectionSpacingTable}
+</Markdown>
+
+
+Utility classes
+---------------
+
+We have a number of responsive classes that can be added to html elements to override or set margin values.
+
+They are categorised by the type of element or component you are applying space to and are useful when crafting custom layouts.
+
+In addition to setting margin-top values there are also utility classes to remove spacing and to apply row and column gap properties for flex-box layouts.
+
+### Margin and padding spacing classes
+
+<Markdown>
+    {MarginAndPaddingSpacingClassesTable}
+</Markdown>
+
+<Canvas additionalActions={[{ title: 'Section spacing example', layout: 'centered' }]}
+        of={TypographyStories.SpacingExample2} />
+
+[Github](https://github.com/qgds-vanilla/blob/master/src/css/imports/utilities.scss)
+
+
+
+### Flex spacing classes
+
+<Markdown>
+    {FlexSpacingClassesTable}
+</Markdown>
+* * *
+
+References
+----------
+
+Brown T (2023) [More Meaningful Typography](https://alistapart.com/article/more-meaningful-typography "https://alistapart.com/article/more-meaningful-typography/"), A List Apart, accessed 3 July 2023.
+
+Hayley A (2020) [Proximity Principle in Visual Design](https://www.nngroup.com/articles/gestalt-proximity "https://www.nngroup.com/articles/gestalt-proximity/"), Nielsen Norman Group, accessed 3 July 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21"), World Wide Web Consortium, accessed 10 April 2023.
+
+Material Design (n.d.) [Spacing methods](https://m2.material.io/design/layout/spacing-methods.html#baseline-grid "https://m2.material.io/design/layout/spacing-methods.html#baseline-grid"), Material Design, accessed 3 July 2023.
+
+Digital Transformation Agency (2018) [Core overview](https://gold.designsystemau.org/components/core/#spacing "https://gold.designsystemau.org/components/core/#spacing"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+**Last updated:** August 2024

@@ -1,0 +1,13 @@
+{{! text.hbs v0.0.1 }}
+{{#if component.data.items}}
+    {{#each component.data.items}}
+            {{#if component.type }}
+                {{> (lookup component "type") this }}
+            {{else}}
+                {{{ this }}}
+            {{/if}}
+    {{/each}}
+{{else}}
+    {{{ component.data.content.value }}}
+{{/if}}
+{{#if @partial-block}}{{> @partial-block }}{{/if}}

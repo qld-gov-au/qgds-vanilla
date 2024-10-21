@@ -1,0 +1,813 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+
+<Meta title="1. Styles/Floxbox utilities" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Flexbox utilities
+=================
+
+Classes to manage an item’s flexbox properties.
+
+Overview Parent utilities Child utilities
+
+On this page
+------------
+
+Overview
+--------
+
+You can use our responsive flexbox utilities classes to control the layout, alignment and sizing of any flexbox container and its children.
+
+Our flexbox utility classes are divided into two categories:
+
+*   **Parent utilities (flex containers)**: these apply flex properties for the parent container elements.
+*   **Child utilities (flex items)**: these apply flex properties to the child elements.
+
+### Wondering what utility classes are?
+
+A utility class applies a single rule or a very simple, universal pattern. In the context of this design system, utility classes are used as overrides or helper classes. That help to make small style adjustments to components or to assist in setting up more complex layouts.
+
+About flexbox
+-------------
+
+Flexbox (Flexible Box Layout Module) is a CSS layout mode designed to streamline the arrangement of elements on a page even when their size is unknown or dynamic.
+
+Unlike traditional layouts, flexbox allows for better space distribution between items with a variety of alignment capabilities across different screen sizes. It is particularly useful for aligning content horizontally or vertically and making responsive layouts where elements flow and stack.
+
+Before you use flexbox utilities in your projects its best get familiar with the basic principles, we recommend the following two resources which both offer offers excellent explanations, examples, and visual diagrams.
+
+*   [CSS-Tricks' comprehensive guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+*   [mdm web docs Basic concepts of flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+
+Enabling flex behaviours
+------------------------
+
+To set up a flexbox container using utility classes, begin by applying the `display` property, this class activates the flexbox model.
+The display propter can be set to inline or block depending on the given value.
+
+Once the element is designated as a flex container, you can further manipulate its layout and alignment using additional flex utilities applied either to the parent container or to the child items.
+
+### Applying display
+
+The `display` property of flex items can be set using the following classes:
+
+*   `qld__display-flex` or `qld__display-{breakpoint}-flex`
+*   `qld__display-inline-flex` or `qld__display-{breakpoint}-inline-flex`
+
+Example
+
+Flexbox container
+
+Inline flexbox container
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Display flex --> <div class="qld__display-flex">Flexbox container</div> <!-- Display inline flex --> <div class="qld__display-inline-flex">Inline flexbox container</div>`
+
+Responsive variations
+---------------------
+
+Most flexbox utilities classes can be adjusted per breakpoint using the following formulas:
+
+*   `qld__display-{breakpoint}-[property]` for display flex properties and
+*   `` `qld__display-{breakpoint}-[property]-[behaviour]` `` for various flex properties
+
+Each responsive style is applied to the specified breakpoint and up.
+
+The breakpoint can be one of the following: xs, sm, md, lg, or xl.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Apply the display flex property to a container at the large breakpoint and above --> <div class="qld__display-lg-flex">Flexbox container</div> <!-- Wrap as default behaviour then change to nowrap at the lg breakpoint --> <div class="qld__display-flex qld__flex-wrap qld__flex-lg-nowrap">Flexbox container</div> <!-- Align self to end at the medium breakpoint and above --> <div class="qld__display-flex"> <div>Flex item</div> <div class="qld__align-self-md-end">Flex item</div> <div>Flex item</div> </div> <!-- Align items center at xl breakpoint --> <div class="qld__display-flex qld__align-items-xl-center">...</div>`
+
+Usage guidelines
+----------------
+
+### When to use
+
+*   **Override system defaults:** Even the most thoroughly planned design systems can't foresee every possible use case. Utility classes provide a convenient way to override system defaults or to apply styles that are exceptions to the general design rules, without altering the underlying CSS architecture.
+*   **Minor adjustments and fine-tuning:** When a component needs small style adjustments that do not justify the creation of a new component variant, utility classes can be used to make these tweaks. This keeps the stylesheet cleaner and more manageable.
+*   **Centering content:** One of the most common challenges in CSS is vertically and horizontally centering content. Flexbox utilities simplify this by providing classes that can be applied to center content in various contexts, eliminating the need for complex calculations or additional wrappers.
+
+On this page
+------------
+
+Properties for the parent element or flex container
+---------------------------------------------------
+
+In CSS Flexbox, properties set on the parent element, or flex container, define the layout's structure and adjust the positioning of child elements, ensuring responsive designs across different screen size. The properties that apply to the parent are:
+
+*   **display** (See [Enabling flex behaviours](flex-box-utilities.html#section__enabling-flex-behaviours))
+*   **flex-direction**
+*   **flex-wrap**
+*   **justify-content**
+*   **align-items**
+*   **align-content**
+
+Flex-direction set rows and columns
+-----------------------------------
+
+Setting the flex-direction utility class on a flexbox container will change the alignment of its child elements on the main axis (x-axis by default).
+
+The `flex-direction` property in CSS can be set to several key values:
+
+*   **Row (default):** The flex items are laid out horizontally from left to right, unless the `dir` attribute or the `direction` CSS property is used to change the text direction.
+*   **Row-reverse:** The flex items are laid out horizontally but in reverse order (right to left).
+*   **Column:** The flex items are laid out vertically from top to bottom.
+*   **Column-reverse:** The flex items are laid out vertically but in reverse order (bottom to top).
+
+### Applying flex-direction
+
+The `flex-direction` property for flex containers can be applied using the following classes:
+
+*   `qld__flex-row` or `qld__flex-{breakpoint}-row`
+*   `qld__flex-column` or `qld__flex-{breakpoint}-column`
+*   `qld__flex-row-reverse` or `qld__flex-{breakpoint}-row-reverse`
+*   `qld__flex-column-reverse` or `qld__flex-{breakpoint}-column-reverse`
+
+Example
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Row --> <div class="col-xs-12 qld__display-flex qld__flex-row qld__example__container">...</div> <!-- Row reversed --> <div class="col-xs-12 qld__display-flex qld__flex-row-reverse qld__example__container">...</div> <!-- Column --> <div class="col-xs-6 qld__display-flex qld__flex-column qld__example__container">...</div> <!-- Column reversed --> <div class="col-xs-6 qld__display-flex qld__flex-column-reverse qld__example__container">...</div>`
+
+Wrap
+----
+
+By default, flex items will all try to fit onto one line. You can change that and allow the items to wrap as needed with the `flex-wrap` property.
+
+The `flex-wrap` property in CSS can be set to several key values:
+
+*   **Nowrap (default)**: all flex items will be on one line
+*   **Wrap**: flex items will wrap onto multiple lines, from top to bottom.
+*   **Wrap-reverse:** flex items will wrap onto multiple lines from bottom to top.
+
+### Applying wrap
+
+The `flex-wrap` property for flex containers can be applied using the following classes:
+
+*   `qld__flex-nowrap` and `qld__flex-{breakpoint}-nowrap`
+*   `qld__lex-wrap` and `qld__flex-{breakpoint}-wrap`
+*   `qld__flex-wrap-reverse` and `qld__flex-{breakpoint}-wrap-reverse`
+
+Example
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 4
+
+Flex item 5
+
+Flex item 6
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 4
+
+Flex item 5
+
+Flex item 6
+
+Flex item 7
+
+Flex item 8
+
+Flex item 9
+
+Flex item 10
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 4
+
+Flex item 5
+
+Flex item 6
+
+Flex item 7
+
+Flex item 8
+
+Flex item 9
+
+Flex item 10
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- No wrap --> <div class="qld__display-flex qld__flex-nowrap">...</div> <!-- Wrap --> <div class="qld__display-flex qld__flex-wrap">...</div> <!-- Wrap reverse --> <div class="qld__display-flex qld__flex-wrap-reverse">...</div>`
+
+Justify-content
+---------------
+
+This property is essential for controlling the spacing between and around items within a flex container.  Depending on the set direction ( `flex-direction` ), the main axis could be horizontal (default) or vertical.
+
+The `justify-content` property can be set to several key values:
+
+*   **Start (default):** Aligns items to the start of the container. In a row layout, items are placed at the beginning of the main axis. In a column layout, items start at the top of the container.
+*   **End:** Aligns items to the end of the container. In a row layout, items are moved to the far end of the main axis. In a column layout, items are aligned to the bottom.
+*   **Center:** Centers items along the main axis. This setting is useful for aligning items when there is extra space in the container, placing them in the middle of the layout axis.
+*   **Between (space-between):** Distributes items evenly, with the first item at the start and the last item at the end of the main axis. This setting is ideal for creating equal spacing between items while adhering them to the edges of the container.
+*   **Aaround (space-around):** Similar to `between` but provides space around each item. This means that the items will have half-size spaces on either end compared to the spaces between items, creating the perception of consistent spacing around all items.
+
+### Applying justify-content
+
+The `justify-content` property for flex containers can be applied using the following classes:
+
+`qld__justify-content-{alignment}` or `qld__justify-content-{breakpoint}-{alignment}`
+
+Example
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Justify content start --> <div class="qld__display-flex qld__justify-content-start">...</div> <!-- Justify content center --> <div class="qld__display-flex qld__justify-content-center">...</div> <!-- Justify content end --> <div class="qld__display-flex qld__justify-content-end">...</div> <!-- Justify content between --> <div class="qld__display-flex qld__justify-content-between">...</div> <!-- Justify content evenly --> <div class="qld__display-flex qld__justify-content-evenly">...</div> <!-- Justify content around --> <div class="qld__display-flex qld__justify-content-around">...</div>`
+
+Align items
+-----------
+
+The `align-items` property in CSS Flexbox controls the alignment of flex items along the cross axis (perpendicular to the main axis), allowing for the vertical centering, stretching, or baseline alignment of children within a flex container.
+
+The `align-items` property can be set to several key values:
+
+*   **Stretch (default)**: stretch to fill the container (still respect min-width/max-width).
+*   **Start:** items are placed at the start of the cross axis. The difference between these is subtle, and is about respecting the `flex-direction` rules or the `writing-mode` rules.
+*   **End:** items are placed at the end of the cross axis. The difference again is subtle and is about respecting `flex-direction` rules vs. `writing-mode` rules.
+*   **Center:** items are centered in the cross-axis.
+*   **Baseline:** items are aligned such as their baselines align.
+
+### Applying align-items
+
+The `align-items` property for flex containers can be applied using the following classes:
+
+`qld__align-items-{alignment}` or `qld__align-items-{breakpoint}-{alignment}` .
+
+Example
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Align items start --> <div class="qld__display-flex qld__align-items-start">...</div> <!-- Align items center --> <div class="qld__display-flex qld__align-items-center">...</div> <!-- Align items end --> <div class="qld__display-flex qld__align-items-end">...</div> <!-- Align items baseline --> <div class="qld__display-flex qld__align-items-baseline">...</div> <!-- Align items stretch --> <div class="qld__display-flex qld__align-items-stretch">...</div>`
+
+Align-content
+-------------
+
+Align content aligns a flex container’s lines within when there is extra space in the cross-axis, similar to how `justify-content` aligns individual items within the main-axis.
+
+The `align-content` property offers several values to control the distribution of space among lines within a container:
+
+*   **normal (default):** items are packed in their default position as if no value was set.
+*   **flex-start:** items packed to the start of the container. The (more supported) `flex-start` honors the `flex-direction` while `start` honors the `writing-mode` direction.
+*   **flex-end:** items packed to the end of the container. The (more support) `flex-end` honors the `flex-direction` while end honors the `writing-mode` direction.
+*   **center: i**tems centered in the container
+*   **space-between:** items evenly distributed; the first line is at the start of the container while the last one is at the end
+*   **space-around:** items evenly distributed with equal space around each line
+*   **space-evenly:** items are evenly distributed with equal space around them
+*   **stretch:** lines stretch to take up the remaining space
+
+### Applying align-content
+
+The `align-content` property for flex containers can be set applied the following classes:
+
+`qld__align-content-{alignment}` and `qld__align-content-{breakpoint}-{alignment}`.
+
+**Note:** This property only takes effect on multi-line flexible containers, where `flex-wrap` is set to either `wrap` or `wrap-reverse`. A single-line flexible container (i.e. where `flex-wrap` is set to its default value, `no-wrap`) will not reflect `align-content` .
+
+Example
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Flex item
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Align content start --> <div class="qld__display-flex qld__align-content-start qld__flex-wrap">...</div> <!-- Align content end --> <div class="qld__display-flex qld__align-content-end qld__flex-wrap">...</div> <!-- Align content center --> <div class="qld__display-flex qld__align-content-center qld__flex-wrap">...</div> <!-- Align content between --> <div class="qld__display-flex qld__align-content-between qld__flex-wrap">...</div> <!-- Align content around --> <div class="qld__display-flex qld__align-content-around qld__flex-wrap">...</div> <!-- Align content stretch --> <div class="qld__display-flex qld__align-content-stretch qld__flex-wrap">...</div>`
+
+On this page
+------------
+
+Properties for the child items or flex items
+--------------------------------------------
+
+In CSS Flexbox, properties set on the child elements, or flex items, can change their alignment, order, and size within the flex container.
+
+The properties that you can change using our utility classes include:
+
+*   **order**
+*   **flex-grow**
+*   **flex-shrink**
+*   **fill** (Shorthand for flex-grow, flex-shrink and flex-basis combined)
+*   **align-self**
+
+Order
+-----
+
+By default, flex items are laid out in the source order. However, the `order` property controls the order in which they appear in the flex container. You can change the visual order of specific flex items via order utilities.
+
+The value for the order properly can be 0-5.
+
+### Applying order
+
+The `order` property of flex items can be set using the following classes:
+
+*   `qld__order-{value}` or `qld__order-{breakpoint}-{value}`
+*   `qld__order-first` or `qld__order-{breakpoint}-first`
+*   `qld__order-last` or `qld__order-{breakpoint}-last`
+
+Items with the same order revert to source order.
+
+Example
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Flex item 4
+
+Flex item 5
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Order # --> <div class="qld__display-flex"> <div class="qld__order-3">Flex item 1</div> <div class="qld__order-2">Flex item 2</div> <div class="qld__order-1">Flex item 3</div> <div class="qld__order-5">Flex item 4</div> <div class="qld__order-4">Flex item 5</div> </div> <!-- Order first and order last --> <div class="qld__display-flex"> <div class="qld__order-last">Flex item 1</div> <div>Flex item 2</div> <div class="qld__order-first">Flex item 3</div> </div>`
+
+Flex-grow
+---------
+
+The `flex-grow` property in flexbox allows flex items to expand and fill any available extra space in their container.
+
+Via our utility classes the `flex-grow` property can be set to the value of 0 or 1.
+
+*   **Flex-grow-0:** Setting flex-grow to 0 prevents the flex item from expanding beyond its initial size, regardless of available space.
+*   **Flex-grow-1:** Setting to flex-grow 1will expand the item to fill any extra space in the container. If all flex items have flex-grow set to 1, they will share the space equally.
+
+### Applying flex-grow:
+
+The `flex-grow` property of flex items can be set using the following classes:
+
+`qld__flex-grow-{value}` or `qld__flex-grow-{breakpoint}-{value}`.
+
+Example
+
+Flex item 1
+
+Flex item 2
+
+Flex item 3
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Flex grow --> <div class="qld__display-flex"> <div class="qld__flex-grow-1">Flex item 1</div> <div>Flex item 2</div> <div>Flex item 3</div> </div>`
+
+Flex-shrink
+-----------
+
+The `flex-shrink` property in flexbox determines how flex items reduce their size when there isn't enough space available in their container.
+
+In our utility classes, the `flex-shrink` property can be set to either 0 or 1.
+
+*   **Flex-shrink-0:** Setting `flex-shrink` to 0 prevents the flex item from shrinking, meaning it will maintain its initial size even if there is not enough space.
+*   **Flex-shrink-1:** Setting `flex-shrink` to 1 allows the item to shrink to prevent overflow of the container. If all flex items have `flex-shrink` set to 1, they will reduce in size equally to fit the container.
+
+### Applying flex-shrink
+
+The `flex-shrink` property of flex items can be set using the following classes: `qld__flex-shrink-{value}` or `qld__flex-shrink-{breakpoint}-{value}`.
+
+Example
+
+Flex item 1 tries to take up the full width of parent
+
+Flex item 2
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Flex shrink --> <div class="qld__display-flex"> <div style="width:100%">Flex item 1 tries to take up the full width of parent</div> <div class="qld__flex-shrink-1">Flex item 2</div> </div>`
+
+Flex-fill
+---------
+
+Flex-fill is uses the `flex` property to combine  `flex-grow,` `flex-shrink` and `flex-basis`.  When Flex-fill is applied to sibling elements it forces them to best fill the space based on widths equal to their content.
+
+The flex-fill behaviour is implemented by setting the `flex` property to  `flex: 1 1 auto` . This is shorthand for flex-grow being set to 1, flex-shrink being set to 1and flex-basis being set to auto.
+
+### Applying flex-fill
+
+The `flex-fill` can be applied to flex items using the following classes:
+
+`qld__flex-fill` or `qld__flex-{breakpoint}-fill`.
+
+Example
+
+Flex item 1 with extra content
+
+Flex item 2
+
+Flex item 3
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Flex fill --> <div class="qld__display-flex"> <div class="qld__flex-fill">Flex item 1 with extra content</div> <div class="qld__flex-fill">Flex item 2</div> <div class="qld__flex-fill">Flex item 3</div> </div>`
+
+Align-self
+----------
+
+Use align self classes on flexbox items to individually change their alignment on the cross axis. You can choose from start, end, center, baseline, or stretch (browser default) as alignment options.
+
+### Applying align-self
+
+The `align-self` property of flex items can be set using the following classes:
+
+`qld__align-self-{alignment}` or `qld__align-self-{breakpoint}-{alignment}` .
+
+**Note:**that float, clear and vertical-align have no effect on a flex items.
+
+Example
+
+Flex item
+
+Aligned item
+
+Flex item
+
+Flex item
+
+Aligned item
+
+Flex item
+
+Flex item
+
+Aligned item
+
+Flex item
+
+Flex item
+
+Aligned item
+
+Flex item
+
+Flex item
+
+Aligned item
+
+Flex item
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Align self start --> <div class="qld__display-flex"> <div>Flex item</div> <div class="qld__align-self-start">Aligned item</div> <div>Flex item</div> </div> <!-- Align self center --> <div class="qld__display-flex"> <div>Flex item</div> <div class="qld__align-self-center">Aligned item</div> <div>Flex item</div> </div> <!-- Align self end --> <div class="qld__display-flex"> <div>Flex item</div> <div class="qld__align-self-end">Flex item</div> <div>Flex item</div> </div> <!-- Align self baseline --> <div class="qld__display-flex"> <div>Flex item</div> <div class="qld__align-self-baseline">Aligned item</div> <div>Flex item</div> </div> <!-- Align self stretch --> <div class="qld__display-flex"> <div>Flex item</div> <div class="qld__align-self-stretch">Aligned item</div> <div>Flex item</div> </div>`
+
+* * *
+
+References
+----------
+
+US Government (2022) [Flex | U.S. Web Design System (USWDS)](https://designsystem.digital.gov/utilities/flex), _USWDS (US Web Design System)_, accessed 10 April 2024.
+
+Digital NSW (n.d.) [Flexbox utilities](https://digitalnsw.github.io/nsw-design-system/docs/content/utilities/flex.html "https://digitalnsw.github.io/nsw-design-system/docs/content/utilities/flex.html"), _NSW Design System_, accessed 10 April 2024.
+
+W3C (2023) [Utilities - W3C Design System](https://design-system.w3.org/styles/utilities.html), _W3C Design System_, accessed 19 April 2024.
+
+Coyier C (2022) [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#top-of-site), CSS-Tricks, accessed 19 April 2024.
+
+Halfmoon (n.d.) [Flex utilities](https://www.gethalfmoon.com/docs/flex-utilities), _Halfmoon Design system,_ accessed 19 April 2024.
+
+Bootstrap (n.d.) [Flex](https://getbootstrap.com/docs/4.0/utilities/flex), _Bootstrap Documentation_, accessed 19 April 2024.
+
+**Last updated:** May 2024

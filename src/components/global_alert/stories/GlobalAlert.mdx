@@ -1,0 +1,264 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+import * as Stories from "./globalAlert.stories"
+
+
+<Meta of={Stories} name="Alerts (Global)" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Alerts (Global)
+===============
+
+May also be known as:
+
+system alert, alert bar and informational bar
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A314436&mode=design&t=BxfztQlUD4IInBwD-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Global alerts display across the top of the entire site to convey important information to the users.
+
+The message or action must be relevant for the entire service.
+
+There are 3 types of global alerts in our Design System, critical (alerts), default (warnings) and general (information).
+
+Critical alerts
+---------------
+
+These indicate a significant issue and should only be used for an immediate threat to human life.
+
+Example
+
+**Testing:** This website is currently undergoing testing
+
+[Learn more](alerts-global.html#)
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=23805%3A314436&t=jyGWG7bzBaAX7IIY-1) [Preview in new window](index.html%3Fa=158150.html)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!--Default alert style--> <div class="qld__global_alert_include"> <div role="region" aria-label="Alert" class="qld__global-alert qld__global-alert--critical"> <div class="container-fluid"> <div class="qld__global-alert__main"> <div class="qld__global-alert__icon"> <svg aria-label="Alert" role="img" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__critical"></use></svg> </div> <div class="qld__global-alert__content"> <div class="qld__global-alert__message"> <strong>Testing:</strong> This website is currently undergoing testing </div> <div class="qld__global-alert__action"> <a href="#"> <span>Learn more</span> <svg focusable="false" class="qld__icon qld__icon--sm"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__arrow-right"></use></svg> </a> </div> </div> <div class="qld__global-alert__close"> <button aria-label="Close alert"> <svg role="img" aria-label="Close" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__close"></use></svg> </button> </div> </div> </div> </div> </div>`
+
+Warning
+-------
+
+This is the default style for global alert. It should be used when an event has either happened or is about to and poses a threat to or will seriously affect a service.  It can also be used to communicate an ongoing crisis which seriously affects a services' operation.
+
+Example
+
+**Testing:** This website is currently undergoing testing
+
+[Learn more](alerts-global.html#)
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A314436&mode=design&t=x7Dyv8PSaIgWJgKU-1) [Preview in new window](index.html%3Fa=158160.html)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!--Default warning style--> <div class="qld__global_alert_include"> <div role="region" aria-label="Warning" class="qld__global-alert qld__global-alert--default"> <div class="container-fluid"> <div class="qld__global-alert__main"> <div class="qld__global-alert__icon"> <svg aria-label="Warning" role="img" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__warning"></use></svg> </div> <div class="qld__global-alert__content"> <div class="qld__global-alert__message"> <strong>Testing:</strong> This website is currently undergoing testing </div> <div class="qld__global-alert__action"> <a href="#"> <span>Learn more</span> <svg class="qld__icon qld__icon--sm"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__arrow-right"></use></svg> </a> </div> </div> <div class="qld__global-alert__close"> <button aria-label="Close alert"> <svg role="img" aria-label="Close" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__close"></use></svg> </button> </div> </div> </div> </div> </div>`
+
+Information
+-----------
+
+This style is for low level alerts that can be used to indicate a minor problem with the service or for important updates that may affect content across an entire site.
+
+Example
+
+**Testing:** This website is currently undergoing testing
+
+[Learn more](alerts-global.html#)
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A314436&mode=design&t=x7Dyv8PSaIgWJgKU-1) [Preview in new window](index.html%3Fa=158170.html)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!--Default general information style--> <div class="qld__global_alert_include"> <section class="qld__global-alert qld__global-alert--general"> <div class="container-fluid"> <div class="qld__global-alert__main"> <div class="qld__global-alert__icon"> <svg aria-label="General Alert" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__info"></use></svg> </div> <div class="qld__global-alert__content"> <div class="qld__global-alert__message"> <strong>Testing:</strong> This website is currently undergoing testing </div> <div class="qld__global-alert__action"> <a href="#"> <span>Learn more</span> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--sm"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__arrow-right"></use></svg> </a> </div> </div> <div class="qld__global-alert__close"> <button aria-label="Close alert"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__close"></use></svg> </button> </div> </div> </div> </section> </div>`
+
+Multiple alerts
+---------------
+
+In cases where separate messages on different critical issues are essential, a maximum of three global alerts is permissible.
+
+Example
+
+**Health alert:** Disease outbreak
+
+[Learn more](alerts-global.html#)
+
+**Natural disaster:** Floods
+
+[Learn more](alerts-global.html#)
+
+**Testing:** This website is currently undergoing testing
+
+[Learn more](alerts-global.html#)
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A314436&mode=design&t=ifM17sjYRqTeZTDU-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Mulitiple alert example --> <div class="qld__global_alert_include"> <div role="region" aria-label="Alert" class="qld__global-alert qld__global-alert--critical"> <div class="container-fluid"> <div class="qld__global-alert__main"> <div class="qld__global-alert__icon"> <svg aria-label="Alert" role="img" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__critical"></use></svg> </div> <div class="qld__global-alert__content"> <div class="qld__global-alert__message"> <strong>Health alert: </strong>Disease outbreak </div> <div class="qld__global-alert__action"> <a href="#"> <span>Learn more</span> <svg focusable="false" class="qld__icon qld__icon--sm"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__arrow-right"></use></svg> </a> </div> </div> <div class="qld__global-alert__close"> <button aria-label="Close alert"> <svg role="img" aria-label="Close" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__close"></use></svg> </button> </div> </div> </div> </div> <div role="region" aria-label="Alert" class="qld__global-alert qld__global-alert--critical"> <div class="container-fluid"> <div class="qld__global-alert__main"> <div class="qld__global-alert__icon"> <svg aria-label="Alert" role="img" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__critical"></use></svg> </div> <div class="qld__global-alert__content"> <div class="qld__global-alert__message"> <strong>Natural disaster:</strong> Floods </div> <div class="qld__global-alert__action"> <a href="#"> <span>Learn more</span> <svg focusable="false" class="qld__icon qld__icon--sm"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__arrow-right"></use></svg> </a> </div> </div> <div class="qld__global-alert__close"> <button aria-label="Close alert"> <svg role="img" aria-label="Close" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__close"></use></svg> </button> </div> </div> </div> </div> <div role="region" aria-label="Warning" class="qld__global-alert qld__global-alert--default"> <div class="container-fluid"> <div class="qld__global-alert__main"> <div class="qld__global-alert__icon"> <svg aria-label="Warning" role="img" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__warning"></use></svg> </div> <div class="qld__global-alert__content"> <div class="qld__global-alert__message"> <strong>Testing:</strong> This website is currently undergoing testing </div> <div class="qld__global-alert__action"> <a href="#"> <span>Learn more</span> <svg class="qld__icon qld__icon--sm"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__arrow-right"></use></svg> </a> </div> </div> <div class="qld__global-alert__close"> <button aria-label="Close alert"> <svg role="img" aria-label="Close" class="qld__icon qld__icon--md"><use href="./?a=167673:dist/mysource_files/img/svg-icons.svg#qld__icon__close"></use></svg> </button> </div> </div> </div> </div> </div>`
+
+Usage guidelines
+----------------
+
+### Success status icon Indicates a success state When to use
+
+These alert banners should be used sparingly, particularly warning and critical error banners, as they disrupt the user’s workflow.
+
+### Status Cancel Icon Cancel icon When not use
+
+Don't use global alerts for:
+
+*   System updates
+*   Validation errors
+*   Small localised incidents
+*   Little or no disruption to services
+*   An internal event
+*   Marketing campaigns
+*   The primary entry point for information
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+Always make sure that the key actionable information is visible at a glance. Text in alert banners should always be clear, concise and, where possible, give follow up actions to allow the user to become more informed or resolve the issue.
+
+Limit global alerts to one message per site. If multiple alerts are necessary, assess if they can be consolidated into a single alert with an integrated call to action. In cases where separate messages on different critical issues are essential, a maximum of three global alerts is permissible. However, it's advisable to minimise their use, as global alerts can disrupt the user's workflow.
+
+Alert banners use colour to add meaning, this only provides a visual indication, which will not be conveyed to users of assistive technologies – such as screen readers. This means that information denoted by the colour must also be obvious from the content itself. For example, the visible text, or indicated through alternative means within the code.
+
+Alert messages shouldn’t have more than 100 characters, so they don’t take up too much screen space on mobile and tablet designs. The link or action button has a 25 character limit — including spaces, so the link displays as a single line on a mobile device.
+
+Research and rationale
+----------------------
+
+The design of the global alert component is based on a combination of the [MyGov](https://my.gov.au "https://my.gov.au/") website design, the [Federal Department of Health](https://www.health.gov.au "https://www.health.gov.au/") site and [NSW Designs System](https://digitalnsw.github.io/nsw-design-system/components/global-alert/index.html "https://digitalnsw.github.io/nsw-design-system/components/global-alert/index.html").
+
+**The structure of the alert banner includes an:**
+
+*   icon
+*   title
+*   body text
+*   action button or link
+*   option to dismiss or close the banner.
+
+This is also consistent with the structure of alert messages seen in other major Design Systems such as [Microsoft Fluent](https://developer.microsoft.com/en-us/fabric-js/components/messagebar/messagebar "https://developer.microsoft.com/en-us/fabric-js/components/messagebar/messagebar") and [Shopify’s Polaris](https://polaris.shopify.com/components/feedback-indicators/banner "https://polaris.shopify.com/components/feedback-indicators/banner").
+
+Most designs systems use multiple global alerts, categorised by their significance.
+
+Our design follows this practice and is divided into 3 categories defined by colour and icons.
+
+**Queensland Government’s categories are:**
+
+*   critical (red)
+*   warning (amber)
+*   general (pale blue).
+
+We’ve used red as the colour for critical alerts. This is in line with The Queensland Government guidelines colour for state wide emergency department signage. The icon for critical alerts is based on a stop sign to command the attention of the user.
+
+The warning alert colour is bright amber. The Australian signage standards 1319 uses amber, black text and a triangular icon for hazards not considered to be life threatening.
+
+The general alert is a neutral pale blue colour. Pale blue is commonly associated with information signage which ties into the purpose of this alert. The icon for the general alert uses the international symbol for information. The square shape was chosen to further distinguish it from the other 2 categories.
+
+The global alert colours are based on Australian and international standards and won’t change across sites regardless of where those sites sit within the brand architecture. Global alerts should look the same across all Queensland Government sites.
+
+Classes and design tokens
+-------------------------
+
+Name
+
+Description
+
+`qld__global_alert--critical`
+
+Style used for critical alerts.
+
+`qld__global_alert--default`
+
+Default style used for warnings.
+
+`qld__global_alert--general`
+
+Style used to provide general information or for very minor service disruptions.
+
+Accessible global alert requirements
+------------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 2.1 Keyboard accessible
+
+Ensure that global alerts are operable by providing keyboard accessibility. Users should be able to navigate and interact with alerts using only a keyboard, without requiring a mouse or other pointing device. This includes ensuring that all interactive elements within the alert are keyboard accessible (W3C, 2018).
+
+#### 3.1.3 Unusual words
+
+Avoid using jargon, technical terms, or uncommon words in alert banners. If an unusual word is necessary, provide a clear definition or explanation in the alert or through a link to more information.
+
+**Example**: Instead of ‘Our DNS server is down.’ use ‘Our website is temporarily down.’
+
+#### 3.1.5 Reading level
+
+Make sure the text in alert banners is written at a reading level of between Grade 7 and 8. Use simple sentences and common words so it can be understood by more people.
+
+**Example**: Instead of ‘This website's functionality is unavailable. Our technical team is working expeditiously to rectify the situation.’ use ‘This site is temporarily down. We’re working to fix this as quickly as possible.’
+
+* * *
+
+References
+----------
+
+Digital NSW (n.d.) [Global alert](https://digitalnsw.github.io/nsw-design-system/components/global-alert/index.html "https://digitalnsw.github.io/nsw-design-system/components/global-alert/index.html"), _NSW Design System_, accessed 10 April 2023.
+
+Australian Government Department of Health (n.d.) [Guiding principles behind the Health Design System](https://designsystem.health.gov.au "https://designsystem.health.gov.au/"), Health Design System, accessed 10 April 2023.
+
+Digital Transformation Agency (2018) [Page Alerts](https://gold.designsystemau.org/components/page-alerts "https://gold.designsystemau.org/components/page-alerts/"), Gold Design System, accessed 10 April 2023.
+
+Shopify (n.d.) [Banner](https://polaris.shopify.com/components/feedback-indicators/banner "https://polaris.shopify.com/components/feedback-indicators/banner"), _Shopify Polaris_, accessed 10 April 2023.
+
+Microsoft (n.d.) [Fluent Design System](https://www.microsoft.com/design/fluent/#/web "https://www.microsoft.com/design/fluent/#/web"), Microsoft Design, accessed 10 April 2023.
+
+Standards Australia (n.d.) [AS 1319-1994 REC:2018](https://www.standards.org.au/standards-catalogue/sa-snz/publicsafety/sf-005/as--1319-1994--rec-colon-2018 "https://www.standards.org.au/standards-catalogue/sa-snz/publicsafety/sf-005/as--1319-1994--rec-colon-2018"), _Standards Catalogue_, accessed 10 April 2023.
+
+Mozilla Developer Network (2021) [Alert role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role "https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role"), MDN Web Docs, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+[//]: # (#content .qld\_\_code-preview-body.qld\_\_body{ padding-left:0px; padding-right:0px; })
+
+**Last updated:** December 2023

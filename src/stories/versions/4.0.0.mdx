@@ -1,0 +1,155 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+import ColorExample from "./4.0.0.Colour-Example.png"
+
+<Meta title="0. Versions/Pre QGDS-Vanilla/v4.0.0" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Release 4.0.0
+=============
+
+Colour variable/token update and new light theme
+------------------------------------------------
+
+The primary goal of this major update was to:
+
+*   refine our colour variables and tokens to ensure logical naming conventions
+*   align with our Figma design file
+*   adhere to best practice in colour system management.
+
+This update is part of a broader initiative to align our Figma file with our CSS variables, ensuring they utilise the correct values and incorporate the BEM (Block Element Modifier) methodology for a unified design-to-development workflow.
+
+In addition to the update of the colour variables we have also added an additional customisable background colour option for the light theme. We have done this by adjusting the default state for all components to use  neutral system colours rather then customisable brand colours. This freed up two background colours variables which can now be used to create a new customisable light theme.
+
+What this means is that when users are selecting colours they can now choose default, **light (new)** or alt. Opposed to just default and alt.
+
+Before you update we recommend
+------------------------------
+
+Before updating to the latest version of our design system, we recommend you **make a duplicate of your original file and test this update in that version first**. This is a **major update.** Components may return to the default states and colour theming plugins such as 'Switor' and ‘Themer’ will no longer be supported. If you update to this version you will need to use our [new method for customising colours.](https://www.figma.com/file/Im3nsCORFyDup2jhgoLYa2/New-Site-Template?type=design&node-id=908%3A120144&mode=design&t=4wJCd8oj7mbkpoBX-1 "https://www.figma.com/file/Im3nsCORFyDup2jhgoLYa2/New-Site-Template?type=design&node-id=908%3A120144&mode=design&t=4wJCd8oj7mbkpoBX-1")
+
+### Key highlights
+
+*   Unified naming conventions and alignment to best practices for variables/tokens
+*   Integration with Figma variables
+*   Enhanced alert and system colours
+*   New customisable light theme background colour
+
+<img src={ColorExample} alt="Example of new colour matrix" />
+
+* * *
+
+What's new
+----------
+
+### Core styles
+
+Colour styles have been converted to variables. Styles are no longer endorsed as the method for single values and solid fills. Read more about [the difference between styles and variables](https://help.figma.com/hc/en-us/articles/15871097384471-The-difference-between-variables-and-styles "https://help.figma.com/hc/en-us/articles/15871097384471-The-difference-between-variables-and-styles").
+
+*   **Updated** - Colour styles have been converted to variables
+*   **New** \-Colour tokens/variables added into Figma
+*   **Updated** - 'Default' component colours to use system/neutral variables
+*   **New** - Light background theme using existing customisable brand colours
+*   **Updated** \-Alert styles and variables to incorporate additional shades
+*   **Updated** -System colour values and renamed to ‘Neutral colours’
+
+### Component updates
+
+You’ll notice a new colour option called '**light**' in the following components in Figma.
+
+**The update impacts the following components:**
+
+*   **Updated** accordions
+*   **Updated** banners
+*   **Updated** callouts
+*   **Updated** cards
+*   **Updated** horizontal rules
+*   **Updated** tabs
+*   **Updated** link columns
+*   **Updated** and tags.
+
+### Plugin support and instructions for custom colour theming
+
+Colour variables are replacing colour styles in most situations within our Figma file. This means that plugins that previously worked by swapping styles from the ‘Design System’ Figma file to those defined in a local file will no long work.
+
+There’s now a new method for applying custom colour themes to your designs. This is similar to how previous plugins functioned, however it has the benefit of being much faster. You can update any existing files to use this method once you have updated to the latest Figma version.
+
+You can find instructions on how to customise colours with variables in [our new site starter template](https://www.figma.com/file/Im3nsCORFyDup2jhgoLYa2/New-Site-Template?type=design&node-id=908%3A120144&mode=design&t=4wJCd8oj7mbkpoBX-1 "https://www.figma.com/file/Im3nsCORFyDup2jhgoLYa2/New-Site-Template?type=design&node-id=908%3A120144&mode=design&t=4wJCd8oj7mbkpoBX-1")
+
+* * *
+
+Why are we updating colours
+---------------------------
+
+Our colour matrix was robust and has worked well, but needed to expand to accommodate for the creation of fully light or fully dark themed sites. Our research identified that an additional colour option in both light and dark themes would resolve this.
+
+Our plan was to first audit and improve our variables, then to add an additional colour option for both our light theme and dark themes. We chose to expand only our light palette as a first step. This is because most of our websites are primary light themed and it would allow us to better test and implement this large update across existing sites and designs.
+
+Key reasons for this update
+
+*   **Streamlined design-to-development workflow:** Adopting logical naming and aligning Figma with code enhances workflow efficiency.
+*   **Light and dark themed sites:** More customisable background colours in light and dark themes allows for the creation of entirely light or dark themed sites.
+*   **More creative options:** New customisable options for background colours enhance branding and thematic design capabilities.
+*   **Efficient use of Figma's new features:** Leveraging Figma's variable utilities simplifies design token management, benefiting both designers and developers.
+*   **Adherence to best practices:** Incorporating industry best practices ensures the design system remains competitive and relevant.
+*   **Facilitated team collaboration:** Unified and structured tokens improves communication between designers and developers.
+
+More about this update
+----------------------
+
+### Unified naming conventions
+
+In our latest update, we've meticulously refined our colour variables, ensuring uniformity across our Figma files and CSS variables. This was achieved by adopting a logical naming convention that aligns with the structure and principles of the BEM methodology. BEM, standing for Block, Element, Modifier, and is a well-regarded naming convention in the web development community for its clarity, specificity, and modularity.
+
+**Why BEM**
+
+*   **Clarity:** BEM provides a clear understanding of a component's purpose and relationship within the interface, simplifying the use of colour variables and design tokens.
+*   **Reusability:** Its modular approach encourages the reuse of styles across different parts of the project, making the design system scalable and efficient.
+*   **Consistency:** Ensures uniform naming across design and development platforms, facilitating a smoother workflow from design to code.
+*   **Collaboration:** BEM's straightforward naming convention improves communication between designers and developers, reducing misunderstandings.
+*   **Easy updates:** The methodology supports easy modifications and extensions of existing components, simplifying maintenance and future enhancements.
+
+### Integration with Figma variables
+
+Using Figma's new variable utilities has marked a significant advancement in our design system. Figma's variable functionality, currently in open beta, allows for the storage of reusable values applied across design properties and prototyping actions. This feature enhances variable management, simplifies the export process, and provides developers with a clearer roadmap from design to code by embodying design tokens within our system. It enables the efficient switch between design contexts, such as light and dark themes, and the implementation of dynamic designs through aliasing and scoping of variable.
+
+[Learn more about variables in Figma](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma "https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma")
+
+### Best practice and research-driven
+
+Our update was informed by an extensive analysis of other design systems, allowing us to refine our naming conventions and align our colour variables with industry best practice. This research has not only enriched our understanding but also inspired the expansion and refinement of our colour palette. Drawing inspiration from the Material Design colour system and rooted in the foundational principles of the Digital Transformation Agency's design system, this update should help to future proof our design system and allow for future expansions.
+
+### Enhanced alert and system colours
+
+We've refined our alert colours for better consistency and introduced additional shades to offer more versatility. Similarly, our system colours have been renamed and expanded into neutral tones, aligning more closely with common practices in design systems.
+
+### New ‘Light’ theme
+
+A significant addition is the introduction of a **new light theme colour option**.
+
+To create this we changed to the ‘Default' behaviour of components to use our updated ‘Neutral variables’ instead of the customisable brand variables ‘light-background’ and ‘light-background-shade’. This change meant that the ‘light-background’ and 'light-background-shade’ variables could be utilised to create an additional light theme option for components.
+
+In Figma all existing components set to ‘Default’ will now use ‘neutral colour variables’ and a new option called ‘Light’ has been added as a variant to these components.
+
+For light themes users will now see 3 colour options
+
+*   **default**,
+*   **light** or
+*   **alt**
+
+Previously users only had **'default'** and '**alt**' as options.
+
+This change is designed to offer more flexibility in branding and theming, allowing designers to move beyond the default white background and one other shade for light themed websites.
+
+Please note 'light' is a new variant for components and should not affect existing designs.
+
+### Backward compatibility
+
+While making these enhancements, we've ensured that the updates are largely backward compatible, minimising disruptions to existing designs. We collaborated with both developers and designers to try and work our how best to provide more colour options for designers without impacting existing site designs.
+
+**Last updated:** March 2024

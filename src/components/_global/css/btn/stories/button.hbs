@@ -1,0 +1,23 @@
+{{! button.hbs v0.0.1 }}
+
+{{#if component.data.url ~}}<a {{else}}<button {{/if ~}}
+    {{#if component.data.metadata.id_field.value ~}} id="{{component.data.metadata.id_field.value}}" {{/if ~}}
+   {{#if component.data.url ~}} href="{{ component.data.url}}" {{else}} type="button" {{/if ~}}
+    class="qld__btn {{#ifCond component.data.type '==' 'secondary'  ~}} qld__btn--secondary {{/ifCond ~}}
+    {{#ifCond component.data.type '==' 'tertiary'  ~}} qld__btn--tertiary {{/ifCond ~}}
+    {{#ifCond component.data.type '==' 'toggle'  ~}} qld__btn--toggle {{/ifCond ~}}
+    {{#ifCond component.data.icon.position '==' 'lead'  ~}} qld__btn--icon-lead {{/ifCond ~}}
+    {{#ifCond component.data.icon.position '==' 'trail'  ~}} qld__btn--icon-trail {{/ifCond ~}}
+    {{#if component.data.model ~}} qld__open-modal{{/if ~}}" {{#if component.data.hover ~}} hover="{{ component.data.hover }}"{{/if ~}}
+    {{#if component.data.disabled ~}} disabled="disabled"{{/if ~}}
+    {{#if component.data.data_attributes ~}}
+        {{#each component.data.data_attributes ~}}
+            {{#if value ~}}{{key}}="{{value}}"{{else ~}}{{key}}{{/if ~}}
+        {{/each ~}}
+    {{/if ~}} >
+    {{#ifCond component.data.icon.position '==' 'lead' ~}}<i class="{{component.data.icon.value}}" aria-hidden="true"></i>{{/ifCond ~}}
+    {{ component.data.value}}
+    {{#ifCond component.data.icon.position '==' 'trail' ~}}<i class="{{component.data.icon.value}}" aria-hidden="true"></i>{{/ifCond ~}}
+{{#if component.data.url ~}} </a> {{else}} </button> {{/if ~}}
+
+

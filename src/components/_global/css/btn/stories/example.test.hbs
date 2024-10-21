@@ -1,0 +1,10 @@
+{{! button example test wrapper }}
+    <ul class="qld__link-list qld__link-list--inline">
+{{#each buttons}}
+    <li>
+        <!--  {{ component.data.value}} Button -->
+    {{> (lookup component "type") this }}
+    </li>
+{{/each}}
+    </ul>
+

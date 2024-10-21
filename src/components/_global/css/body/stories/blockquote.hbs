@@ -1,0 +1,4 @@
+<figure {{#if component.data.metadata.id_field.value}}id="{{component.data.metadata.id_field.value}}"{{/if}} class="qld__block-quote">
+    <blockquote>{{{component.data.content.value}}}{{#if @partial-block}}{{> @partial-block }}{{/if}}</blockquote>
+{{#if component.data.source }}<figcaption class="qld__quote-source">{{{ component.data.source}}}</figcaption>{{/if}}
+</figure>

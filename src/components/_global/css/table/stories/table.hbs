@@ -1,0 +1,82 @@
+{{! Table v0.0.1 }}
+{{! This can use table body items in a object of  key=value pairs, if no header is given it will use the first row as the headers
+     alternatively you can provide it with a single array of headers or a multi dimensional array of headers for advance table layouts
+
+     Warning this handlbars file is subject to change as we are still working on the best way to handle tables
+}}
+{{#ifAny component.data.scroll component.data.contained }}<div class="{{#if component.data.scroll}} qld__table--scroll{{/if}}{{#if component.data.contained}} qld__table--contained{{/if}}">{{/ifAny}}
+<table
+    {{#if component.data.metadata.id_field.value ~}} id="{{component.data.metadata.id_field.value}}"{{/if~}}  class="qld__table
+    {{#if component.data.striped ~}} qld__table--striped{{/if ~}}
+    {{#if component.data.col_styles ~}}{{#each component.data.col_styles}} qld__table__{{this}}{{/each}}
+    {{/if ~}} ">
+    {{#ifAny component.data.caption.header.value component.data.caption.value ~}}
+       <caption>{{#if component.data.caption.header.value ~}}{{component.data.caption.header.value}}<br>{{/if ~}}
+              {{#if component.data.caption.value ~}}<span class="qld__caption">{{component.data.caption.value}}</span>{{/if ~}}
+           </caption>
+   {{/ifAny ~}}
+    <thead>
+        {{#if component.data.headers ~}}
+          {{#if component.data.headers.[0].value ~}}
+          {{!-- Handle single row --}}
+              {{#each component.data.headers ~}}
+              <th
+                      {{#if rowspan ~}}rowspan="{{rowspan}}"{{/if ~}}
+                  {{#if colspan ~}}colspan="{{colspan}}"{{/if ~}}
+                  {{#if scope ~}}scope="{{scope}}"{{/if ~}}
+                  {{#if class ~}}class="{{#ifArray class ~}}{{#each class}}qld__table__{{this}} {{/each}}{{else}}{{class}}{{/ifArray }}"{{/if ~}}
+              >{{{value}}}</th>
+              {{/each ~}}
+          {{else ~}}
+            {{#each  component.data.headers ~}}
+                <tr>
+                   {{#ifArray this ~}}
+                    {{!-- Handle nested array (multiple rows) --}}
+                    {{#each this ~}}
+                        <th
+                            {{#if rowspan ~}}rowspan="{{rowspan}}"{{/if ~}}
+                            {{#if colspan ~}}colspan="{{colspan}}"{{/if ~}}
+                            {{#if scope ~}}scope="{{scope}}"{{/if ~}}
+                            {{#if class ~}}class="{{#ifArray class ~}}{{#each class}}qld__table__{{this}} {{/each}}{{else}}{{class}}{{/ifArray }}"{{/if ~}}
+                        >{{{value}}}</th>
+                    {{/each ~}}
+                   {{else ~}}
+                   {{!-- Handle single row --}}
+                       <th
+                           {{#if rowspan ~}}rowspan="{{rowspan}}"{{/if ~}}
+                           {{#if colspan ~}}colspan="{{colspan}}"{{/if ~}}
+                           {{#if scope ~}}scope="{{scope}}"{{/if ~}}
+                           {{#if class ~}}class="{{#ifArray class ~}}{{#each class}}qld__table__{{this}} {{/each}}{{else}}{{class}}{{/ifArray }}"{{/if ~}}
+                       >{{{value}}}</th>
+                   {{/ifArray ~}}
+                </tr>
+            {{/each ~}}
+          {{/if ~}}
+        {{else ~}}
+        <tr>
+            {{#each component.data.items.[0] ~}}
+                <th {{#if ../component/data/simple_scope}}scope="col"{{/if}}>{{@key}}</th>
+            {{/each ~}}
+        </tr>
+        {{/if ~}}
+    </thead>
+    <tbody>
+    {{#each component.data.items ~}}
+        <tr>
+            {{#each this ~}}
+                <td>{{{this}}}</td>
+            {{/each ~}}
+        </tr>
+    {{/each ~}}
+    </tbody>
+    {{#if component.data.footer ~}}
+        <tfoot>
+        <tr>
+            {{#each component.data.footer ~}}
+                <td>{{{this}}}</td>
+            {{/each ~}}
+        </tr>
+        </tfoot>
+    {{/if ~}}
+</table>
+{{#if component.data.contained ~}}</div>{{/if ~}}

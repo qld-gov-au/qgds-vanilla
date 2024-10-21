@@ -1,0 +1,34 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+
+<Meta title="0. Exploring our decisions/The question of bootstrap" />
+
+The question of bootstrap
+=========================
+
+A question that has been asked continually is why don't we use a CSS framework like Bootstrap as the base of the design system.
+
+While we could use a framework like Bootstrap as a base and skin/theme it, there are a few considerations if using it as a design system.
+
+*   **Versioning/upgrades** - Bootstrap has versioning so you are locking yourself into a versioning and update cycle outside your control (new versions every 4-5 years). For example, the current SWE uses version 4.6.2. Bootstrap 4 went into long term support mode in Nov 21 and reached end of life Jan 23 (which means it's no longer supported). Bootstrap 5 was released in May 21.
+*   **Security** - With Bootstrap being a well known framework you are exposing yourself to their security vulnerabilities, putting more focus on site owners needing to be focused on updates/patching.
+*   The famous **'Bootstrap bloat'** - while to some extent this is relevant to any design system, this is a consistent criticism of bootstrap in general, with extra overhead for unneeded components, styles, JS etc.
+*   **Less focus on accessibility** - This is a key focus for government design systems, there is criticism around keyboard navigation, weak focus states and optimisation for screen readers in Bootstrap.
+*   **Locking yourself into a technology** - With a custom design system you have the ability to change to best practice technology as required, if you just adopt a framework this is more difficult. For example, there is criticism that the Bootstrap grid system is less efficient that options like Modern CSS Grid or Flexbox. Other government design systems are infact moving in the complete opposite direction and trying to remove the use of third party libraries entirely (e.g. UK Gov and their replacement of all jQuery with Vanilla JS [https://insidegovuk.blog.gov.uk/2022/08/11/how-and-why-we-removed-jquery-from-gov-uk/](https://insidegovuk.blog.gov.uk/2022/08/11/how-and-why-we-removed-jquery-from-gov-uk "https://insidegovuk.blog.gov.uk/2022/08/11/how-and-why-we-removed-jquery-from-gov-uk/")).
+
+In general, the most important factor is that Bootstrap is a generic framework for use across the web and government design systems have a focus specifically on the design of information from government and use of component in citizen interaction applications.
+
+This means government design systems have existing well defined and researched components for use in this context as well as standardised patterns for content pages, headers, footers etc.  They typically have been designed taking into account the complex branding requirements of government websites.
+
+The last consideration is when you look at other states within Australia and other key well known government leaders globally, they all have adopted their own design systems and not just utilised bootstrap. So the precedent is there from other leaders in government.  When you talk to other design system owners in government, they strongly advise starting from another design system as a base, in order to take advantage of all the research and refinement that has happened from previous teams.
+
+The strongest arguments pro the use of bootstrap we have heard is developer knowledge. Most developers know and have used bootstrap in the past. While this is true, it's not something that has been identified to us by other design system owners as a key issue they faced. Developers need to learn new technologies & standards and evolve all the time.
+
+Conclusion
+----------
+
+Weighing up the pros and cons its hard to justify the usage of bootstrap as the base of your design system. For us the key factor was that no other key leaders in the design system space have gone in this direction. When you look at the list of issues above and our keenness to build upon the existing design system, it was an easy decision to go down the technology agnostic route.
+
+**Author** - Luke Jennings - Product Owner (Qld Health Design System)
+
+**Last updated:** August 2023

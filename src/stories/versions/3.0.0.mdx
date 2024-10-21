@@ -1,0 +1,175 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+
+<Meta title="0. Versions/Pre QGDS-Vanilla/v3.0.0" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Release 3.0.0
+=============
+
+Release notes
+-------------
+
+Release date:  16 Jan 2023
+
+Queensland Government Design System update.
+
+In this release our components have been align to our most recent code update.
+
+This is a major release with large updates to all components and styles. We recommend that you make a duplicate copy of your working files before updating. This is due to large scale improvements released by Figma and greater alignment to our latest code release which has included many new components and UI improvements.
+
+### **Recommended**
+
+Before updating to the latest version of our design system, we recommend you make a back up of your original project file.
+
+What's new
+----------
+
+General updates
+---------------
+
+*   **Updated** all components to incorporate additional variables options.
+*   **Updated** all components to use latest versions of Figma auto-layout.
+*   **New** file structure changed to align with upcoming design system website including:
+*   brand foundations split into new **Brand requirements** and **Core styles**
+*   global Shell renamed to **Header, Footer and Navigation** for improved recognition and navigation
+*   UI Inventory renamed to **Component library** for improved recognition and navigation.
+*   Improved alignment of component names to code classes and css variables.
+*   **Update** to base font size from 16px to 17px to align with recommended best practice for Lato.
+*   General consistency improvements within component design structure and focus states.
+*   Many components using separate border and background colour objects within their have been coverted to use figma stroke or fill styles.
+
+Getting started
+---------------
+
+*   **New** backlog list and change log documentation.
+*   **New** instructions on how to customise colours using the plugin ‘Switor.’
+
+Design section
+--------------
+
+Brand foundations have been split into brand requirements and core styles. This is more consistent with how other design systems are structured. This also aligns with the proposed IA for the design system website and helps declutter the layouts of pages in the figma file.
+
+### Brand requirements
+
+*   **New** brand categorisation workflow.
+*   **Updated** brand category definitions and criteria.
+*   Guidelines for header and footer corporate ID requirements have been moved to this section so all branding requirements can be reviewed at the same time.
+
+### Core styles
+
+This is a new section that defines our core design styles used to create the Queensland Government look and feel.
+
+*   **Updated** body text from 16px to 17px. Based on research and feedback we received, we increased the font size of Lato from 16px to 17px. However all line heights remain the same so that it doesn’t affect the underline 4px baseline grid. This improvement assists with readability and is the same size that google recommends in its font breakdowns for lato.
+*   **New** underline colour styles and guidelines.
+*   **New** syntax highlighting colours for the code component.
+*   **Updated** colour styles including:
+*   two distinct maroon colour styles have been added
+*   updated Success Colour to #339D37 for improved accessibility and to make it more visually distinct from accent and dark action colours
+*   updated Light Background Alt to #E8E8E8 based on feedback was that it was too dark
+*   updated Light Background Alt Shade to #E0E0E0 to correspond to the change in Background Alt
+*   updated Foreground Border Alt to #7A7A7A as it no longer needed to be as dark to meet contrast requirements on Light Alt Backgrounds
+*   updated Foreground Action Alt Shade to #005B23 so that colour change on hover was more noticeable for iconography on light backgrounds
+*   updated Foreground Action Alt to #78BA00 to create more contrast between hover and rest states
+*   updated Foreground Action Alt to #FFE500 to be more distinct from alert caution colour
+*   updated Foreground Action Alt Shade to #FFEF60 so hover state is more distinct from rest state
+*   updated Dark Visited Link Colour to #E1BBEE for improved contrast.
+*   **Updated** colour theme examples, minor error corrections.
+*   **New** shadow elevation styles - more guidelines to come.
+*   **New** border radius variables and guidelines.
+*   **Removed** colour contrast guide as it no longer adds value and was left over from early design iterations.
+
+### Layout
+
+*   **Updated** design and layout for the content in the section has been simplified.
+*   Header and footer designs moved to separate section
+*   Branding guidelines moved to brand requirements section
+*   Navigation and mega-menu components moved to components section
+*   Global alerts and horizontal rules have been moved to the component section
+*   **New** spacing components have been added.
+*   **Draft** form spacing guidelines added.
+*   **New** vertical navigation guidelines and templates.
+
+Component section
+-----------------
+
+The component section has been split into 3 parts, including our design process, header/footer and primary navigation (previously global shell) and component library. This language and structure is easier to navigate and for users to understand.
+
+### Header, footer and primary navigation
+
+*   **Updated** header pattern removing unnecessary height.
+*   **Header component has been redesigned** to match more closely how it’s coded, and header and navigation have been split into 2 separate components.
+*   Header content now includes more variable options.
+*   Site utilities aren’t located in pre-header and have been removed from above the search box.
+*   Link options are now availed for the pre-header.
+*   **New** colour options have been added for the header component.
+*   **New** vertical navigation header option.
+*   **Updated** Queensland Coat of Arms colour to use only black or white based on advice from Department of Premier and Cabinet.
+*   Colour guidelines and documentation for different header sizes has been added.
+*   **Updated** horizontal primary navigation component including:
+*   reduced vertical height
+*   improved horizontal spacing of menu items at smaller screen sizes
+*   iconography has been updated to match new vertical navigation designs with added colour and hover states and leading icon options
+*   Option to turn off navigation has been added.
+*   **Updated** guidelines for mobile navigation and mega menu to make the breakdown of button states and options clearer.
+*   **New** vertical navigation component added.
+*   **New** vertical navigation footer component.
+*   **Updated** footer component including:
+*   **new** light colour option
+*   updated XL version that works for 1440px and 1920px templates
+*   social link colours now inherit the same colour as all other icons on the site.
+*   **Removed** older versions of vertical navigation component and mobile tablet navigation components so new components all use the same base elements.
+
+### Components
+
+*   **New** header, footer and navigation section.
+*   **New** filled style forms.
+*   **Updated** form states.
+*   **Updated** checkbox and radio buttons to use auto layout and fixed incorrect border colour on dark backgrounds.
+*   **Updated** card designs to interact better when changing sizes and variables.
+*   **New** video card components.
+*   **New** video player and transcript components.
+*   **Updated** button to have more consistent hover and focus states over the 3 primary types.
+*   **Removed** intermediate banners to simplify banner guidelines and components - all functionality now sit in the advance banner.
+*   **New** vertical navigation banner components.
+*   **New** promotional content components.
+*   **Updated** in-page left navigation to incorporate light and dark border colours to improve the distinction between level 1 and level 2 links.
+*   **Removed** link cols component and replaced with **New** **Version** to match mega-menu - also has options to show external links.
+
+Template section
+----------------
+
+Templates have been updated to include all new components. The new basic templates have also been structured to better reflect how the pages are coded.
+
+*   **New** basic home page and content page templates
+*   **New** patterns for some common section designs including multi-col cards and content.
+
+Component updates
+-----------------
+
+As we update components, you may find some content changes occur or overrides are reset to default. Colour will also often reset to default values so you may need to apply your colour styles again using themer or switor.
+
+### Component removals
+
+Components that have been removed will have an ❌ symbol. You’ll be able to find them in our archive folder until the next major release.
+
+### Component replacements
+
+Any components that have been replaced with new version have a 🔶 symbol. You’ll be able to find them in our archive folder until the next major release.
+
+**Please note:** you can choose to leave archived components in your designs but they won’t be supported in any future updates.
+
+**Support**
+
+If you have any questions, feedback or need help using the design system please feel free to email [digital@health.qld.gov.au](mailto:digital@health.qld.gov.au "mailto:digital@health.qld.gov.au").
+
+**Kind regards**
+
+Queensland Health Digital Transformation Team.
+
+**Last updated:** January 2024

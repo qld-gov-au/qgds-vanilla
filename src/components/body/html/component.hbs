@@ -1,5 +1,19 @@
-<section class="qld__body {{component.data.metadata.background.value}} {{component.data.metadata.body_width.value}}" id="{{#if component.data.metadata.id_field.value}}{{component.data.metadata.id_field.value}}{{else}}body-{{component.data.assetid}}{{/if}}">
+<section class="qld__body{{#if component.data.metadata.background.value }} qld__body--{{component.data.metadata.background.value}}{{/if ~}}
+    {{#if component.data.metadata.body_width.value }} qld__body--{{component.data.metadata.body_width.value}}{{/if}}" {{#ifAny component.data.metadata.id_field.value component.data.assetid ~}}
+         id="{{#if component.data.metadata.id_field.value ~}}
+        {{component.data.metadata.id_field.value}}{{else ~}}body-{{component.data.assetid}}{{/if ~}}"{{/ifAny ~}}>
     <div class="container-fluid">
-        {{{content}}}
+        {{#if component.data.items ~}}
+            {{#each component.data.items ~}}
+                {{#if component.type ~}}
+        {{> (lookup component "type") this ~}}
+                {{else ~}}
+        {{{ this }}}
+                {{/if ~}}
+            {{/each ~}}
+        {{else}}
+        {{{ component.data.content.value }}}
+        {{/if}}
+        {{#if @partial-block}}{{> @partial-block }}{{/if}}
     </div>
 </section>

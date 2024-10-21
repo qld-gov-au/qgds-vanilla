@@ -1,0 +1,70 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+
+<Meta title="0. Exploring our decisions/Carousels" />
+
+Carousels
+=========
+
+Also known as: sliders
+
+The case against carousels
+--------------------------
+
+Carousels are a feature widely used across the current Qld Government web ecosystem, traditionally used for promotional purposes on homepages. It has been noted that we do not have a carousel component in the design system and we do not recommend their use. Below is a list of reasons why we don't recommend the use of carousels.
+
+### 1\. Reduced engagement and information overload
+
+Contrary to popular belief, carousels often lead to reduced engagement. Research from Notre Dame University indicated that only about 1% of visitors click on a carousel, with 89% of those clicks being on the very first slide. This suggests that subsequent slides, no matter how important, are easily overlooked.
+
+In addition, a revolving carousel often tries to communicate multiple messages. But as the adage goes, "If everything is a priority, nothing is." When users are presented with too many rapidly changing messages, they often miss the primary message. If they try to read a slide and it changes before they can finish, they're likely to feel frustrated and disengaged.
+
+_Resource:_ [Notre Dame University study](https://erikrunyon.com/2013/01/carousel-interaction-stats)
+
+### 2\. Banner blindness - too many messages
+
+Carousels are not only prone to information overload but also fall victim to banner blindness. Even if users do pay attention, the rapid change of messages often means they can't grasp the core message.
+
+### 3\. They are not user focused content
+
+They tend to be solely used to tell senior management that their idea is ‘on the homepage’. We build the design system and our new Qld Health websites according to a strong user first principle not organisation first
+
+### 4\. Users need to be in control
+
+User control is fundamental in UI/UX design. Carousels, especially those that auto-rotate and have unclear navigation, take control away from the user. Many users feel overwhelmed by the automatic transitions and often miss out on content they might have found relevant.
+
+_Resource:_ [Nielsen Norman Group - Auto-Forwarding Carousels and Accordions Annoy Users and Reduce Visibility](https://www.nngroup.com/articles/auto-forwarding)
+
+### 5\. Movement and distraction
+
+Our brains are hardwired to notice movement. From an evolutionary perspective, this is linked to survival instincts. Any sudden change or movement would capture our attention, alerting us to potential dangers. This is the very reason why moving image sliders and carousels grab our attention.
+
+However, when used on a website with multiple elements, a carousel can divert attention from crucial information. Instead of focusing on essential content, users may get distracted by the carousel's constant movement.
+
+### 6\. Accessibility concerns and considerations
+
+Accessibility is a core principle of our design system. Carousels can present a range of issues for people with disabilities. For instance:
+
+*   Screen reader users might find it challenging to understand or navigate carousel content.
+*   People with motor control disabilities might struggle with carousel controls, especially if they're too small or not clearly delineated.
+*   Carousels that auto-advance can disorient or confuse users, especially those with cognitive disabilities.
+*   Carousels are also typically functionally optional for sighted people, they are not forced to use the carousel at all. They can click around the page wherever they want. Yet keyboard users are forced to navigate through the carousel in its entirety. That’s not fair.
+
+_Resource:_ [_W3C on Carousels_](https://www.w3.org/WAI/tutorials/carousels)
+
+### 7\. Mobile responsiveness and page load times
+
+While carousels might look visually appealing on desktops, they can become problematic on mobile devices. Text can become unreadable, CTAs can get lost, images can get distorted or extra work is required for images at mobile breakpoints.
+
+Carousels, especially image-heavy ones, can impact page load times. For users in rural areas or those with limited internet speeds, this could mean they're waiting longer for crucial information.
+
+Conclusion and recommendations
+------------------------------
+
+Carousels, despite their allure, have more pitfalls than advantages. We recommend using hero images in their place to promote content on homepages.  When it comes to the executive discussions and the mandate to have a carousel, we as a digital community need to become better at educating our leadership why the carousel pattern does not work and why their organisation needs should not come above user needs.
+
+For these reasons we do not endorse having a carousel pattern in the design system.
+
+If your agency loses the battle and must implement a carousel, then ensure users have control over navigation and that the carousel doesn't detract from more critical content. [Read more about carousel considerations](https://www.nngroup.com/articles/designing-effective-carousels/).
+
+**Last updated:** October 2023

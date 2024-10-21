@@ -1,0 +1,38 @@
+{
+    "component": {
+        "type": "table",
+        "data": {
+            "striped": true,
+            "caption": {
+                "header": {
+                    "value": "Table caption"
+                },
+                "value": "Table is ordered by"
+            },
+                "col_styles": [
+                "col-2-left-border",
+                "col-3-left-border",
+                "col-4-num"
+            ],
+            "headers": [
+                [
+                    { "value": "Header", "rowspan": 2, "scope": "col" },
+                    { "value": "Header", "colspan": 3, "scope": "colgroup", "class": ["cell-left-border", "cell--middle"] }
+                ],
+                [
+                    { "value": "Header", "scope": "col", "class": ["cell-left-border"] },
+                    { "value": "Header", "scope": "col", "class": ["cell-left-border"] },
+                    { "value": "Number %", "scope": "col", "class": ["cell-left-border", "cell--numeric"] }
+                ]
+            ],
+            "items": [
+                ["Cell", "Cell", "Cell", "5"],
+                ["Cell", "Cell", "Cell", "10"],
+                ["Cell", "Cell", "Cell", "15"],
+                ["Cell", "Cell", "Cell", "20"],
+                ["Cell", "Cell", "Cell", "25"]
+            ],
+            "footer": ["Footer", "Footer", "Footer", "Footer"]
+        }
+    }
+}

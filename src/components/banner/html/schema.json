@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+        "groupId": {
+            "type": "string"
+        },
+        "output": {
+            "type": "object",
+            "properties": {
+                "responseType": {
+                    "type": "string",
+                    "enum": ["html"]
+                },
+                "staticFiles": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "location": {
+                                "type": "string",
+                                "enum": ["header", "footer"]
+                            },
+                            "file": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string",
+                                        "enum": ["css", "js"]
+                                    },
+                                    "filepath": {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                },
+                                "required": ["type", "filepath"]
+                            }
+                        },
+                        "required": ["location", "file"]
+                    }
+                }
+            },
+            "required": ["responseType", "staticFiles"]
+        },
+        "previews": {
+            "type": "object",
+            "properties": {
+                "default": {
+                    "type": "object",
+                    "properties": {
+                        "functionData": {
+                            "type": "object",
+                            "properties": {
+                                "main": {
+                                    "type": "object",
+                                    "properties": {
+                                        "inputData": {
+                                            "type": "object",
+                                            "properties": {
+                                                "type": {
+                                                    "type": "string",
+                                                    "enum": ["file"]
+                                                },
+                                                "path": {
+                                                    "type": "string",
+                                                    "format": "uri"
+                                                }
+                                            },
+                                            "required": ["type", "path"]
+                                        },
+                                        "wrapper": {
+                                            "type": "object",
+                                            "properties": {
+                                                "path": {
+                                                    "type": "string",
+                                                    "format": "uri"
+                                                }
+                                            },
+                                            "required": ["path"]
+                                        }
+                                    },
+                                    "required": ["inputData", "wrapper"]
+                                }
+                            },
+                            "required": ["main"]
+                        }
+                    },
+                    "required": ["functionData"]
+                }
+            },
+            "required": ["default"]
+        }
+    },
+    "required": ["groupId", "output", "previews"]
+}

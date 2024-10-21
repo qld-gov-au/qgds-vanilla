@@ -1,0 +1,1091 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+import QgdsIcons from "./QGDS-icons.svg"
+import QgdsIconsV2 from "./QGDS-icons-v2.svg"
+
+<Meta title="1. Styles/Iconography" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Iconography
+===========
+
+Icons depict activities, convey current conditions, signal potential interactions, and highlight significant details.
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A306345&t=CRMvDW1T563jANY6-1)
+
+Overview Design Implementation Accessibilty
+
+On this page
+------------
+
+Under review
+
+We are currently investigating migrating from font-awesome to material icons. For our core icon suite. This will ensure that all core icons are available regardless of if users have font-awesome account.
+
+Overview
+--------
+
+Icons serve as an intuitive and visually engaging method to accentuate content, signify possible actions, or denote particular statuses, thereby minimising the cognitive effort required by users.
+
+We've chosen to use the [font-awesome light](https://fontawesome.com/search?p=6&o=r&s=light) library for all icons across our Design System. Implementing a uniform set of functional, alert, and descriptive icons across all sites enhances user familiarity and consistency, contributing to a seamless user experience.
+
+These icons are each associated with a specific function or concept and ensure predictability and reliability in user interactions. For instance, an envelope icon should consistently represent email, not a mailing address in a different context. This consistency allows users to trust that a specific icon will always signify the same action or concept, irrespective of its location on the site.
+
+### Font awesome light
+
+Icons used in the Queensland Government are simple and recognisable and use the thin line style.
+
+The Font Awesome Library light library is the preferred icon suite. It contains a large variety of quality icons and is already used extensively across government websites. The light collection consisting of over 1,800 icons with more continually being added.
+
+If you wish to use this on your website, you may need to purchase your own licence.
+
+* * *
+
+Functional icons
+----------------
+
+Function icons are those that form part of our components and are the key functionality of the Design System. Functional icons are those that indicate actions and activities. These are reserved icons that need to be used with caution outside of their existing patterns and components.
+
+Functional icons are implemented as SVGs and a sprite sheet. this is done in favour of using an icon font because it improves the performance, scalability, maintainability, and accessibility of your website or application.
+
+Below is sample of function icons. See the implementation tab for the full list.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+*   [Menu](iconography.html#)
+*   [Home](iconography.html#)
+*   [Close](iconography.html#)
+*   [Chevron feft](iconography.html#)
+*   [Arrow right](iconography.html#)
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<ul class="qld__link-list qld__link-list--inline"> <li><a href="#" class="qld__text-link"> <svg class="qld__icon qld__icon--lg qld__icon--lead" role="img"> <use href="./?a=151118#icon-Menu"></use> </svg>Menu</a> </li> <li><a href="#" class="qld__text-link"> <svg class="qld__icon qld__icon--lg qld__icon--lead" role="img"> <use href="./?a=151118#icon-Home"></use> </svg>Home</a> </li> <li><a href="#" class="qld__text-link"> <svg class="qld__icon qld__icon--lg qld__icon--lead" role="img"> <use href="./?a=151118#icon-Close-Circle"></use> </svg>Close</a> </li> <li><a href="#" class="qld__text-link"> <svg class="qld__icon qld__icon--lg qld__icon--lead" role="img"> <use href="./?a=151118#icon-Chevron-Left"></use> </svg>Chevron feft</a> </li> <li><a href="#" class="qld__text-link"> <svg class="qld__icon qld__icon--lg qld__icon--lead" role="img"> <use href="./?a=151118#icon-Direction-Right"></use> </svg>Arrow right</a> </li> </ul>`
+
+Preset sizes
+------------
+
+We have 6 preset sizes for icons ranging from extra small (xs) to extra extra large (xxl) and a dedicated feature size for large or detailed icons. Feature icons use a background shade to help make it stand out from other elements on the page.
+
+This size range allows for flexibility and adaptability in various design contexts while maintaining visual harmony and balance. These predefined sizes ensure that icons are proportionate and legible, enhancing their effectiveness and the overall aesthetic of the site.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<ul class="qld__link-list qld__link-list--inline"> <li> <svg class="qld__icon qld__icon--sm" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg> </li> <li> <svg class="qld__icon qld__icon--md" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg> </li> <li> <svg class="qld__icon qld__icon--lg" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg> </li> <li> <svg class="qld__icon qld__icon--xl" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg> </li> <li> <svg class="qld__icon qld__icon--xxl" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg> </li> <li> <svg class="qld__icon qld__icon--feature-lg" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg> </li> </ul>`
+
+Colour
+------
+
+### Icons used for actions
+
+Icons that are clickable should use secondary action colour. This allows them to be consistent with other action items on the site but differentiated from links and link text which ordinarily are the same as the primary action colour.
+
+### Decorative icons
+
+Icons that are used to help convey information but aren't associated with actions are by default set to use the text-heading colour. This makes them stand out from content on the page but not in any way be clickable. As an alternative users can override these icons and use the sites brand accent colour, but care should be taken so that this doesn't make these icons appear interactive.
+
+### Alert icons
+
+Icons used to represent alert information should use the appropriate colour, for example an icon used to represent an error should use the red error colour.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+*   [Icon associated with an action](iconography.html#)
+*   Decorative or descriptive icon
+*   Warning icon
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<ul class="qld__link-list"> <li> <a href="#"><svg class="qld__icon qld__icon--xl qld__icon--lead" role="img" aria-label="Profile"> <use href="./?a=151118#icon-Profile"></use> </svg>Icon associated with an action</a> </li> <li> <svg class="qld__icon qld__icon--xl qld__icon--lead" role="img" aria-label="Chart"> <use href="./?a=151118#icon-Chart"></use> </svg>Decorative or descriptive icon </li> <li> <svg class="qld__icon qld__icon--xl qld__icon--lead" role="img" aria-label="Warning"> <use href="./?a=151118#icon-Status-Warning"></use> </svg>Warning icon </li> </ul>`
+
+* * *
+
+Usage guidelines
+----------------
+
+It's crucial that each icon serves a singular, functional purpose consistently across a site or service, reinforcing user understanding and interaction.
+
+### When to use icons
+
+**To aid understanding:** Icons can act as visual aids to help users understand concepts, actions, or feedback. They can simplify complex ideas and make them easier to grasp.
+
+**To enhance navigation:** Icons can be used in primary navigation to support way-finding. They can help users find their way around a website or application.
+
+**To draw attention:** Icons can be used to draw attention to specific areas, actions, or information. They can be used in banners to highlight specific themes, such as announcements or errors.
+
+**To add clarity:** Icons can be used inline with text to add clarity. They can help to clarify the content by providing a visual cue and improve the legibility and scalability of the user interface.
+
+**To represent actions, objects, or concepts:** Icons can represent specific actions, objects, or concepts. They should be used when they can clearly represent a specific action or concept.
+
+### When to avoid icons
+
+**Avoid Ambiguity:** If the meaning of an icon is ambiguous by itself, it needs accompanying text. Icons shouldn't be used if they can lead to confusion or misinterpretation.
+
+**Avoid Overuse:** Overuse of icons can result in user interfaces that are visually overwhelming or distracting. Icons should be used sparingly and only when they add value to the user experience.
+
+**Don't use icons to replace text:** Icons shouldn't be used to replace the name of a product or feature. The purpose of an icon is to clarify the content, not to replace it.
+
+**Compensating for page structure.** Icons can't solve problems with a poorly organised page. They aren't a quick fix for a confusing layout or hard-to-find content. Before using an icon to highlight something important, make sure the content is well-structured and easy to find.
+
+### How to use
+
+The following are some general best practice guidlines for using icons:
+
+*   sites benefit from all using the same default functional and alert icons
+*   while it's recommended that 'Font-awesome' be used for custom icons users may choose alternative icons if an appropriate option within font-awesome isn't available. Material icons may be a good alternative. When adding custom fonts though try to ensure they match the same visual weight and appearance as other icons on the site
+*   avoid having icons alone without text this is because they may be interpreted differently by different users
+*   use the same icons consistently across your site or app to maintain a familiar and intuitive user experience
+*   avoid redefining established icons. Icons that have been used for a long time worldwide have a higher chance of being recognise and understood quickly. Don't reinvent an icon that's already been accepted as the convention.
+
+On this page
+------------
+
+Designing
+---------
+
+All icons used to build components are included in the [Figma UI Kit](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=5990%3A97482&t=KPBpRWd2G7J21lQN-1). However, you can also see all icons that are included in our symbol library below.
+
+If you require additional icons, you can find them at [https://fontawesome.com/search](https://fontawesome.com/search) or [https://fonts.google.com/icons](https://fonts.google.com/icons).
+
+Symbol library
+--------------
+
+### Functional icons
+
+Chevron up
+
+Chevron down
+
+Chevron left
+
+Chevron Right
+
+Arrow up
+
+Arrow down
+
+Arrow left
+
+Arrow right
+
+Arrow up and down
+
+Close
+
+Cancel or dismiss
+
+Delete or remove
+
+Tick, success or confirmed
+
+Edit or change
+
+Plus or add
+
+Subtract, minus or descrease
+
+Menu
+
+Search
+
+Zoom
+
+Show
+
+Hide
+
+Calendar
+
+Enlarge
+
+Filter
+
+Location marker
+
+Home
+
+Attach
+
+Copy
+
+Print
+
+Download
+
+Save
+
+Play
+
+Pause
+
+Stop
+
+Share
+
+Favourite
+
+Like
+
+Language
+
+Global navigation
+
+View all
+
+Settings
+
+Log out
+
+Sign in
+
+Account details
+
+### Descriptive icons
+
+Profile
+
+Users
+
+Identity
+
+Email
+
+Hospital
+
+Medical service
+
+Visiting time
+
+Car
+
+Phone
+
+Heart health
+
+Document
+
+Transcript
+
+Article
+
+Podcast
+
+Video
+
+Media release
+
+Speech or record
+
+Audio
+
+Op ed
+
+Features or campaign
+
+PDF
+
+Image
+
+Code
+
+Today or date
+
+Pending
+
+Accessibility
+
+Design
+
+Spreadsheet
+
+External
+
+Wheelchair
+
+Stethoscope
+
+Parking
+
+Directions
+
+Ambulance
+
+Time or duration
+
+Link
+
+Help
+
+Notification
+
+Chart
+
+Cost
+
+### Status and alert icons
+
+Cancel
+
+Error
+
+Danger
+
+Success
+
+Information
+
+Warning
+
+Page alert warning
+
+Page alert error
+
+Page alert information
+
+Page alert success
+
+* * *
+
+Research and rationale
+----------------------
+
+### Why we use SVGs with symbols for our default icons:
+
+Our Design System uses an approach very similar to the USA Design System incorporating all our icons in a single SVG sprite sheet.
+
+This method offers numerous advantages:
+
+*   reducing the number of HTTP requests, improving load times and overall system performance
+*   SVGs are scalable and resolution-independent, allowing for easy resizing without quality loss
+*   SVGS can be easily manipulated with CSS and JavaScript, providing a high degree of flexibility and control
+*   a single file for all SVGs simplifies maintenance and updates to the symbol library, enhancing efficiency
+*   mitigates the risks associated with icon fonts, which can fail due to cross-domain loading issues, font file loading failures, and browser bugs.
+
+This strategy results in a more efficient, manageable, and dependable Design System, enhancing both the user experience and the development process.
+
+### Why we are moving to material icons
+
+There are 4 key reasons why we promote material icons as the recommended icon library for our Design System, consistency, versatility, accessibility and cost.
+
+#### Consistency
+
+Google Material Icons are designed with a consistent aesthetic in mind. This means that all the icons share the same visual language, which can help to create a cohesive look and feel across your Design System. This consistency can also make it easier for users to understand and interact with your system.
+
+#### Versatility
+
+Google Material Icons come in a variety of styles and themes, making it easy to find an icon that fits your specific needs. They're also scalable, meaning they can be easily resized without losing quality.
+
+#### Accessibility
+
+Google Material Icons are designed with accessibility in mind. They use simple, clear designs that are easy to understand, even for users with visual impairments. They also support screen readers and other assistive technologies, making them accessible to a wide range of users.
+
+#### Cost
+
+Google Material icons are released under the Apache License Version 2.0, which allows you to freely use, modify, and distribute them. This means there aren't licensing issues for sites that choose to use our Design System.
+
+[//]: # (document.addEventListener&#40;'DOMContentLoaded', function&#40;&#41; { // Select all div elements with the class 'grid-item' inside divs with the class 'grid-container' const gridItems = document.querySelectorAll&#40;'.grid-container .grid-item'&#41;; gridItems.forEach&#40;gridItem => { // Find the SVG element inside the grid item const svg = gridItem.querySelector&#40;'svg'&#41;; // Create a tooltip element const tooltip = document.createElement&#40;'span'&#41;; tooltip.textContent = 'Copy code'; tooltip.className = 'qld\_\_code-tooltip'; // Apply the class tooltip.style.display = 'none'; // Initially hide the tooltip tooltip.style.bottom = 'calc&#40;80%&#41;'; // Set the bottom position // Append the tooltip to the grid item gridItem.appendChild&#40;tooltip&#41;; // Show the tooltip on mouseover gridItem.addEventListener&#40;'mouseover', &#40;&#41; => { tooltip.style.display = 'inline'; // Show the tooltip }&#41;; // Hide the tooltip on mouseout gridItem.addEventListener&#40;'mouseout', &#40;&#41; => { tooltip.style.display = 'none'; // Hide the tooltip }&#41;; // Copy the SVG code to the clipboard on click gridItem.addEventListener&#40;'click', &#40;&#41; => { const textarea = document.createElement&#40;'textarea'&#41;; textarea.value = new XMLSerializer&#40;&#41;.serializeToString&#40;svg&#41;; document.body.appendChild&#40;textarea&#41;; textarea.select&#40;&#41;; document.execCommand&#40;'copy'&#41;; document.body.removeChild&#40;textarea&#41;; // Change the tooltip text to "Copied" tooltip.textContent = 'Copied'; // Optionally, you can revert the tooltip text back to "Copy" after a delay setTimeout&#40;&#40;&#41; => { tooltip.textContent = 'Copy'; }, 2000&#41;; // 2 seconds }&#41;; }&#41;; }&#41;;)
+
+On this page
+------------
+
+Adding icons using our Design System
+------------------------------------
+
+Our Design System provides a streamlined way to add icons to your web pages. Here are step-by-step instructions:
+
+### Step 1: add SVG element
+
+Start by adding an SVG (Scalable Vector Graphics) element to your HTML. This is where the icon will be displayed.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<svg> <!-- Icon will be loaded here --> </svg>`
+
+### Step 2: apply classes for styling and size
+
+There are 2 classes you should add to the SVG element:
+
+*   qld\_\_icon: this class is necessary for the basic visual appearance of the icon, it also tell the icon what colour to be depending on if it sits within a link element and also based on what background it appears on
+*   qld\_\_icon--size: this class determines the size of the icon. Replace size with one of the following: sx, s, m, l, xl, xxl.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<svg class="qld__icon qld__icon--xxl"> <!-- Icon will be loaded here --> </svg>`
+
+### Step 3: add an aria-label and role for accessibility
+
+Inside the SVG element, add role="img" and an aria-label that describes the icons function. This is important for accessibility, however it should only be added if:
+
+*   the icon has a function
+*   the aria label does not duplicate any text used alongside the icon
+
+If an icon is decorative it does not need an aria-label.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<svg class="qld__icon qld__icon--xxl" role="img" aria-label="Opens profile settings"> <!-- Icon will be loaded here --> </svg>`
+
+### Step 4: use element to reference icon
+
+Inside the SVG element, after the title, add an element. The href attribute should point to the URL of the SVG sprite sheet, and you should include the ID of the icon you want to display after the #.
+
+In the example below, icon-Profile is the ID of the icon. Make sure to replace it with the ID of the icon you want to use.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<svg class="qld__icon qld__icon--xxl" role="img" aria-label="Opens profile setting"> <use href="./?a=151118#icon-Profile"></use> </svg>`
+
+Adding icons associated with text or links
+------------------------------------------
+
+When incorporating icons that are closely associated with text or links, the following steps should be taken.
+
+### Step 1: add SVG element inside the link element
+
+Similar to the standalone icons, you’ll add an SVG element. But in this case, the SVG element will be nested inside an anchor `<a>` element.
+
+### Step 2: apply the appropriate classes for positioning
+
+Along with the previously mentioned classes, you need to use one additional class to determine the position of the icon with respect to the text.
+
+*   qld\_\_icon--lead: use this class if the icon is placed before the text.
+*   qld\_\_icon--trail: use this class if the icon is placed after the text.
+
+### Step 3: add role and aria label if necessary
+
+In most situations a functional icon will always be accompanied by text describing its action.  In these situations you do not need to add any additional labels or alt text as this would cause duplicate text being read out by screen readers.
+
+In the first example below, the icon is used as a leading element before the text "Close". The SVG has the class `qld__icon--lead` which ensures it's placed before the text. The icon does not require an aria label describing its action.
+
+In the second example, the icon is used alone without supporting  text. In this situation the word "Close" is included in the aria-label for the icon. The role "img" is added to the icon to ensure it is identified correctly.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+[Close](iconography.html#)
+
+[](iconography.html#)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Functional icon with supporting text --> <a href="#" class="qld__text-link"> <svg class="qld__icon qld__icon--lg qld__icon--lead"> <use href="./?a=151118#icon-Close-Circle"></use> </svg>Close </a> <br/></br> <!-- Functional Icon without supporting text --> <a href="#"> <svg class="qld__icon qld__icon--lg qld__icon--lead" role="img" aria-label="Close"> <use href="./?a=151118#icon-Close-Circle"></use> </svg> </a>`
+
+### Accessibility consideration
+
+When icons are used alongside text or within actionable elements like links or buttons, no aria-label is necessary. This is because you want to ensure screen readers don't read out an action twice. The text next the icon should be sufficient for understanding the action.
+
+When adding icons that are associated with text or links, it’s essential to ensure they're positioned correctly using `qld__icon--lead` or `qld__icon--trail`, and that they don't interfere with the accessibility of the text.
+
+Leading icons are for reinforce the meaning of a label or button, indicating what action will be performed, such as a "play" icon before a "Play" button.  Leading icons also guide the user's attention and establish a visual hierarchy, making it easier to scan lists or menus. This is especially useful in navigation menus where icons can represent categories.
+
+Trailing icons are often used to suggest that more options are available or that the content will lead somewhere else.
+
+Replacing or updating icons
+---------------------------
+
+You can modify, update or add icons by updating the symbol library in the SVG file. You can also choose to use either the Google Material icon symbols library or font-awesome library by simply changing the source icon file. Please note if you choose to use font-awesome on your site you'll need to have an active licence for font-awesome 6.
+
+Google Material Icons
+
+<img src={QgdsIconsV2} alt="Google Material Icons"/>
+
+Font Awesome Icons
+
+<img src={QgdsIcons} alt="Font Awesome Icons"/>
+
+* * *
+
+Classes, variables and icon IDs
+-------------------------------
+
+### Classes and variables
+
+Name
+
+Description
+
+`qld__icon`Copy
+
+Applied to SVGs this sets the default styles for icons.
+
+`qld__icon--lead`Copy
+
+Class that sets element to small font size and heading weight.
+
+`qld__icon--trail`Copy
+
+Class that sets element to medium font size and heading weight.
+
+`qld__icon--sm`Copy
+
+Sets icon to 20px in size.
+
+`qld__icon--md`Copy
+
+Sets icon to 24px in size.
+
+`qld__icon--lg`Copy
+
+Sets icon to 32px in size.
+
+`qld__icon--xl`Copy
+
+Sets icon to 48px in size.
+
+`qld__icon--xxl`Copy
+
+Sets icon to 64px in size.
+
+`qld__icon--feature`Copy
+
+Defines the style of feature icons.
+
+`--QLD-color-light-heading`Copy
+
+Variable that defines colour of descriptive icons.
+
+`--QLD-color-dark-heading`Copy
+
+Variable that defines colour of descriptive icons on dark backgrounds.
+
+`--QLD-color-light-alt-button`Copy
+
+Variable that defines colour of icons that are associated with links on light backgrounds.
+
+`--QLD-color-light-alt-button__hover`Copy
+
+Variable that defines hover colour of icons that are associated with links on light backgrounds.
+
+`--QLD-color-dark-alt-button`Copy
+
+Variable that defines colour of icons that are associated with links on dark backgrounds.
+
+`--QLD-color-dark-alt-button__hover`Copy
+
+Variable that defines hover colour of icons that are associated with links on dark backgrounds.
+
+### Icon IDs (standard icons)
+
+ID
+
+Title
+
+`#icon-Accessibility`Copy
+
+Accessibility
+
+`#icon-Manage`Copy
+
+Account details
+
+`#icon-Direction-Right`Copy
+
+Arrow right
+
+`#icon-Direction-Down`Copy
+
+Arrow down
+
+`#icon-Direction-Up`Copy
+
+Arrow up
+
+`#icon-Direction-Up-Down`Copy
+
+Arrow up and down
+
+`#icon-Article`Copy
+
+Article
+
+`#icon-Attach`Copy
+
+Attach
+
+`#icon-Audio`Copy
+
+Audio
+
+`#icon-Calendar`Copy
+
+Calendar
+
+`#icon-Close-Circle`Copy
+
+Cancel/Dismiss
+
+`#icon-Car`Copy
+
+Car
+
+`#icon-Chevron-Down`Copy
+
+Chevron down
+
+`#icon-Chevron-Left`Copy
+
+Chevron left
+
+`#icon-Chevron-Right`Copy
+
+Chevron right
+
+`#icon-Chevron-Up`Copy
+
+Chevron up
+
+`#icon-Close`Copy
+
+Close
+
+`#icon-Code`Copy
+
+Code
+
+`#icon-Copy`Copy
+
+Copy
+
+`#icon-Delete`Copy
+
+Delete/Remove
+
+`#icon-Design`Copy
+
+Design
+
+`#icon-Document`Copy
+
+Document
+
+`#icon-Download`Copy
+
+Download
+
+`#icon-Edit`Copy
+
+Edit/Change
+
+`#icon-Email`Copy
+
+Email
+
+`#icon-Enlarge`Copy
+
+Enlarge
+
+`#icon-External`Copy
+
+External
+
+`#icon-Favourite`Copy
+
+Favourite
+
+`#icon-Feature`Copy
+
+Feature/Campaign
+
+`#icon-Filter`Copy
+
+Filter
+
+`#icon-Global-Nav`Copy
+
+Global Nav
+
+`#icon-Heart-Health-Service`Copy
+
+Heart Health
+
+`#icon-Info`Copy
+
+Help
+
+`#icon-Hide`Copy
+
+Hide
+
+`#icon-Home`Copy
+
+Home
+
+`#icon-Hospital`Copy
+
+Hospital
+
+`#icon-Identity`Copy
+
+Identify
+
+`#icon-Image`Copy
+
+Image
+
+`#icon-Language`Copy
+
+Language
+
+`#icon-Like`Copy
+
+Like
+
+`#icon-Location`Copy
+
+Location
+
+`#icon-Log-Out`Copy
+
+Log Out
+
+`#icon-Media-Release`Copy
+
+Media Release
+
+`#icon-Service`Copy
+
+Medical Service
+
+`#icon-Notificaiton`Copy
+
+Notification
+
+`#icon-Op-Ed`Copy
+
+Op ed
+
+`#icon-PDF`Copy
+
+Op PDF
+
+`#icon-Parking`Copy
+
+Parking
+
+`#icon-Pause`Copy
+
+Pause
+
+`#icon-Pending`Copy
+
+Pending
+
+`#icon-Phone`Copy
+
+Phone
+
+`#icon-PLay`Copy
+
+Play
+
+`#icon-Plus`Copy
+
+Plus/Add
+
+`#icon-Podcast`Copy
+
+Podcast
+
+`#icon-Print`Copy
+
+Print
+
+`#icon-Profile`Copy
+
+Profile
+
+`#icon-Save`Copy
+
+Save
+
+`#icon-Search`Copy
+
+Search
+
+`#icon-Settings`Copy
+
+Settings
+
+`#icon-Share`Copy
+
+Share
+
+`#icon-Show`Copy
+
+Show
+
+`#icon-Sign-In`Copy
+
+Sign in
+
+`#icon-Speech`Copy
+
+Speech
+
+`#icon-Spreadsheet`Copy
+
+Spreadsheet
+
+`#icon-Stethoscope`Copy
+
+Stethoscope
+
+`#icon-Stop`Copy
+
+Stop
+
+`#icon-Minus`Copy
+
+Subtract/Minus
+
+`#icon-Tick`Copy
+
+Tick/Success
+
+`#icon-Today`Copy
+
+Today/Date
+
+`#icon-Transcript`Copy
+
+Transcript
+
+`#icon-Users`Copy
+
+Users
+
+`#icon-Video`Copy
+
+Video
+
+`#icon-View-All`Copy
+
+View all
+
+`#icon-Visiting-Time`Copy
+
+Visiting time
+
+`#icon-Wheelchair`Copy
+
+Wheelchair
+
+`#icon-Zoom`Copy
+
+Zoom
+
+### Status Icons
+
+Name
+
+Description
+
+`#icon-Status-Cancel`Copy
+
+Cancel
+
+`#icon-Status-Error`Copy
+
+Error
+
+`#icon-Status-Danger`Copy
+
+Danger
+
+`#icon-Status-Success`Copy
+
+Success
+
+`#icon-Status-Information`Copy
+
+Information
+
+`#icon-Status-Warning`Copy
+
+Warning
+
+`#icon-Alert-Warning`Copy
+
+Warning (Page alert)
+
+`#icon-Alert-Error`Copy
+
+Error (Page alert)
+
+`#icon-Alert-Information`Copy
+
+Information (Page alert)
+
+`#icon-Alert-Success`Copy
+
+Success (Page alert)
+
+### Social icons
+
+Name
+
+Description
+
+`#icon-Facebook`Copy
+
+Facebook
+
+`#icon-Twitter`Copy
+
+Twitter
+
+`#icon-LinkedIn`Copy
+
+LinkedIn
+
+`#icon-Instagram`Copy
+
+Instagram
+
+`#icon-Youtube`Copy
+
+YouTube Icon
+
+Accessible icon requirements
+----------------------------
+
+When it comes to accessibility, the Web Content Accessibility Guidelines (WCAG) 2.1 provide several guidelines related to icons:
+
+Our default icons have already been designed to meet accessibility requirements for Level AA compliance. However, keep these considerations in mind if you're modifying the Design System or creating a custom component
+
+### WCAG guidelines
+
+#### 1.4.1 Non-text Contrast
+
+The visual presentation of user interface components, graphical objects, and icons must have a contrast ratio of at least 3:1 against adjacent color(s).
+
+#### 1.4.3 Content on Hover or Focus (Level AA)
+
+If pointer hover or keyboard focus can trigger additional content to become visible (such as tooltip icons), this additional content should be dismissible, hoverable, and persistent to be accessible.
+
+#### 1.3.3 Sensory Characteristics
+
+Instructions provided for understanding and operating icons must not rely solely on sensory characteristics such as shape, size, visual location, or sound.
+
+#### 2.4.4 Link Purpose (In Context)
+
+If an icon serves as a link, the purpose of the link should be determinable from the icon alone or from the icon and its programmatically associated text.
+
+#### 2.4.7 Focus Visible
+
+If an icon is actionable, it should have a clearly visible focus indicator when it receives keyboard focus.
+
+#### 2.5.5 Target Size
+
+(Level AAA, but recommended for better accessibility at AA)
+
+If an icon is used as a control, the size of the target for pointer inputs should be at least 44 by 44 CSS pixels, unless there's an equivalent link or control on the same page that is easier to use. Note that this guideline is technically Level AAA, but it's highly recommended for better accessibility even at Level AA.
+
+It's also good practice to provide alternative text (alt text) for icons, especially if they convey information or have a function, to make them accessible to screen reader users. This doesn't have a specific WCAG guideline but it's a general best practice for accessibility.
+
+#### 4.1.2 Name, Role, Value
+
+For icons that are interactive or convey information, these icons must be programmatically determined with a name that can be spoken by screen readers, and the role (e.g. button) and current value (e.g. pressed) should be programmatically set.
+
+* * *
+
+References
+----------
+
+Google Fonts (n.d.) [Icons](https://fonts.google.com/icons), Material Symbols, _Google Fonts_,  accessed 24 May 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+U.S. Web Design System (USWDS) (n.d.) [Icon](https://designsystem.digital.gov/components/icon), U.S. Web Design System (USWDS), accessed 11 June 2023.
+
+Shopify Polaris (n.d.) [Icons](https://polaris.shopify.com/design/icons), Shopify Polaris, accessed 11 June 2023.
+
+[//]: # (.grid-container { display: grid; grid-template-columns: repeat&#40;4, minmax&#40;160px, 1fr&#41;&#41;; grid-gap: 24px; align-items: start; margin-top:32px; } .grid-item { background-color: #F5F5F5; padding-bottom: 100%; /\* This makes the item square \*/ position: relative; } .grid-item-content { position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; box-sizing: border-box; border-radius: 8px; } .grid-item:hover{ cursor: pointer; } .grid-item:hover svg{ background-color: var&#40;--QLD-color-light\_\_background--alt&#41;; border-radius: var&#40;--QLD-border-radius-sm&#41;; fill:var&#40;--QLD-color-light\_\_action--secondary-hover&#41; } @media screen and &#40;max-width: 922px&#41; { .grid-container { grid-template-columns: repeat&#40;2, minmax&#40;160px, 1fr&#41;&#41;; } })
+
+**Last updated:** May 2024

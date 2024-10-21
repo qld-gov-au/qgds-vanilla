@@ -41,13 +41,14 @@ export default function (QLD) {
      * @param  {string} closingClass - The secondClass you want to toggle on the DOM node
      */
     function toggleClasses(element, state, openingClass, closingClass) {
-
+        var oldClass
+        var newClass
         if (state === 'opening' || state === 'open') {
-            var oldClass = openingClass || 'qld__accordion--closed';
-            var newClass = closingClass || 'qld__accordion--open';
+             oldClass = openingClass || 'qld__accordion--closed';
+             newClass = closingClass || 'qld__accordion--open';
         } else {
-            var oldClass = closingClass || 'qld__accordion--open';
-            var newClass = openingClass || 'qld__accordion--closed';
+             oldClass = closingClass || 'qld__accordion--open';
+             newClass = openingClass || 'qld__accordion--closed';
         }
 
         removeClass(element, oldClass);
