@@ -1,0 +1,240 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as Stories from "./breadcrumbs.stories"
+
+import Breadcrumbs from "./Breadcrumbs.png"
+import BreadcrumbAnatomy from "./Breadcrumbs-Anatomy.png"
+
+<Meta of={Stories} />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/breadcrumbs
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Breadcrumbs
+===========
+
+May also be known as:
+
+Navigation trail
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395557&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Breadcrumbs are a navigational aid that display a user's location on a website as a row of links, usually located at the top of the page.
+
+Breadcrumbs show users where they are in the website hierarchy and how to navigate back or up to previous levels or content.
+
+Our Design System has 2 styles of breadcrumbs one for desktop resolutions and one for mobile and tablet resolutions.
+
+### Desktop and table
+
+For resolutions over 992.
+
+*   [Home](javascript:void(0))
+*   [Page 1](javascript:void(0))
+*   [Page 2](javascript:void(0))
+*   [Page 3](javascript:void(0))
+*   [Parent page](javascript:void(0))
+*   Current page
+
+#### Overflow content for desktop and tablet
+
+When page titles are long and complex, it is better to collapse links into an overflow menu. Interacting with the overflow menu still provides the access to location hierarchy. Using an overflow menu provides the best user experience by effectively managing space and keeping the interface clean and easy to navigate.
+
+Breadcrumbs should never wrap onto a second line.
+
+Breadcrumbs will collapse into an overflow menu when there is not enough room to display all levels of the breadcrumb list or there are more then 5 levels of breadcrumbs.
+
+[View live example](breadcrumbs/tabs/overflow-example.html)
+
+<img src={Breadcrumbs} alt="An example of breadcrumbs with links collapsed into an overflow menu. " />
+
+### Mobile
+
+For resolutions below 992px.
+
+[Chevron LeftOpen leftParent page](breadcrumbs.html#)
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Default
+
+*   [Home](javascript:void(0))
+*   [Page 1](javascript:void(0))
+*   [Page 2](javascript:void(0))
+*   [Page 3](javascript:void(0))
+*   [Page 4](javascript:void(0))
+*   Breadcrumbs
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395557&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<p class="qld__text-bold">Default</p> <nav class="qld__breadcrumbs" aria-label="breadcrumb"> <ul class="qld__link-list qld__link-list--inline"> <li> <a href="javascript:void(0)">Home</a> </li> <li> <a href="javascript:void(0)">Page 1</a> </li> <li> <a href="javascript:void(0)">Page 2</a> </li> <li> <a href="javascript:void(0)">Page 3</a> </li> <li> <a href="javascript:void(0)">Page 4</a> </li> <li aria-current="page"> Breadcrumbs </li> </ul> </nav>`
+
+Guidelines for usage
+--------------------
+
+Breadcrumbs should be included on all pages except the home page for consistently across the site. They should always be placed at the top left of a page, before the `main` element. The breadcrumb should start with your ‘home’ page and end with the parent section of the current page. (GOV.UK, n.d.)
+
+### Success status icon Indicates a success state When to use
+
+Use the breadcrumbs component when you need to help users understand and move between the multiple levels of a website or task.
+
+### When not to use
+
+Don't use breadcrumbs for:
+
+*   **Simple websites with flat structure:** If your website has a simple hierarchy with a flat structure, breadcrumbs may not be necessary and could clutter the design
+*   **Homepages:** Breadcrumbs aren't needed on the homepage since users can easily return to it by clicking on the site logo or home button
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use breadcrumbs
+
+#### Do
+
+*   Display above the current page title (h1) in the content area
+*   Always start with Home for basic navigation structures.
+*   Each breadcrumb link should clearly describe the content of the page it leads to.
+*   Breadcrumbs should not be overly long or complex. Stick to the essential levels of the hierarchy.
+
+#### Don't
+
+*   Shorten breadcrumb links if possible.
+*   Wrap over two lines. Instead, use the overflow menu if a full path can’t be shown.
+*   Use abbreviations or vague terms within breadcrumb links or page titles.
+
+On this page
+------------
+
+Anatomy
+-------
+
+The anatomy of file breadcrumb consists of several elements:
+
+<img src={BreadcrumbAnatomy} alt="A numbered example of breadcrumb component that related to the number list below. " />
+
+1.  **Page link:** Each segment within a breadcrumb is styled as a link, and directs users to the parent level page.
+2.  **Separator:**  Visual separator to distinguish between links.
+3.  **Current page title:** Indicates the current page being viewed and is not styled as a link.
+4.  **Overflow menu**: When space becomes limited due to viewport or long page titles, an overflow menu is used to reduce the number of breadcrumbs. The first and last page links are always shown, but remaining breadcrumbs are condensed into an overflow menu as required to fit the space.
+5.  **Overflow menu container:** Contains the breadcrumb links that are been collapsed within the overflow menu when space is limited.
+
+* * *
+
+Research and rationale
+----------------------
+
+Our breadcrumb design was based on the research and designs from [DTA](https://gold.designsystemau.org/components/breadcrumbs/rationale "https://gold.designsystemau.org/components/breadcrumbs/rationale/") Design System that use a location based breadcrumb style which shows users where their current page stands in the hierarchy of a website.
+
+The final item in our breadcrumb list isn’t a link. Another way to approach breadcrumbs is making the last item a link with the `aria-current="page"` attribute. Screen readers will announce to the user that they're on the current page.
+
+Where our design differs from the DTA’s design is on mobile and table devices. On resolutions below 992 the breadcrumb shows a link to the immediate parent only. This is called single-level breadcrumb or back button breadcrumb and is an effective and intuitive design pattern for mobile. The choice was made to reduce complexity and vertical height in mobile designs (Laubheimer P, 2018).
+
+### Overflow behaviour
+
+To reduce the proliferation of websites, we often have large websites with deep content. This can result in long breadcrumbs that break over multiple lines, taking up vertical space and adding cognitive load.
+
+After considering various options, we found that an overflow menu provides the best user experience to solve this issue. An overflow menu manages space effectively and keeps the interface clean and easy to navigate.
+
+Our approach ensures that all navigation paths are accessible without overwhelming users with lengthy or heavily truncated breadcrumb trails.
+
+We chose the overflow menu because it is a familiar pattern in modern interfaces (used by IBM Carbon Design System, Atlassian Design System, Microsoft Fluent 2, Material Design), making it intuitive, accessible, and user-friendly.
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__breadcrumbs`
+
+Style for breadcrumbs.
+
+`qld__link-list`
+
+Default list Queensland Government list style.
+
+`qld__link-list--inline`
+
+Override class to set list for format as a single line.
+
+Accessible breadcrumb requirements
+----------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### Best practice
+
+The current page should be indicated by using `aria-current="page"`.
+
+Each link in the breadcrumb is implemented as an unordered list item so that screen readers provide more context (IBM Carbon Design System, 2023).
+
+### WCAG guidelines
+
+#### 1.3.1 Info and Relationships
+
+Use appropriate semantic elements such as the 'nav' element for the breadcrumb container and list elements for individual breadcrumbs (W3C, 2018).
+
+#### 2.4.1 Bypass Blocks
+
+Provide a way for users to skip over the breadcrumb navigation, using a "Skip to main content" link. Example: Add a link at the beginning of the page that allows users to skip the breadcrumb and navigate directly to the main content (W3C, 2018).
+
+#### 2.4.4 Link Purpose
+
+Ensure that the purpose of each breadcrumb link can be determined from its link text or the link text together with its programmatically determined link context (W3C, 2018).
+
+Example: Use descriptive and concise text for breadcrumb links, such as "Home > Products > Laptops" instead of generic text like "Page 1 > Page 2 > Page 3" .
+
+#### 4.1.2 Name, Role, Value:
+
+For all user interface components, ensure that the name, role, and value can be programmatically determined, and that states, properties, and values can be set programmatically (W3C, 2018).
+
+Example: Use the 'aria-label' attribute to provide a descriptive label for the breadcrumb container (e.g., 'aria-label="Breadcrumb"'), and the 'aria-current' attribute to indicate the current page (e.g., 'aria-current="page"').
+
+* * *
+
+Related
+-------
+
+[Side navigation](side-navigation.html)
+
+References
+----------
+
+Digital Transformation Agency (2018) [Breadcrumbs](https://gold.designsystemau.org/components/breadcrumbs "https://gold.designsystemau.org/components/breadcrumbs/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+[GOV.UK](https://gov.uk "http://GOV.UK") Design System (n.d.) [Breadcrumbs](https://design-system.service.gov.uk/components/breadcrumbs "https://design-system.service.gov.uk/components/breadcrumbs/"), [_GOV.UK_](https://gov.uk "http://GOV.UK") _Design System_, accessed 11 April 2023.
+
+Nielsen J (2007) [Breadcrumb Navigation Increasingly Useful](https://www.nngroup.com/articles/breadcrumb-navigation-useful "https://www.nngroup.com/articles/breadcrumb-navigation-useful/"), _Nielsen Norman Group_, accessed 11 April 2023.
+
+Laubheimer P (2018) [Breadcrumbs: 11 Design Guidelines for Desktop and Mobile](https://www.nngroup.com/articles/breadcrumbs "https://www.nngroup.com/articles/breadcrumbs/"), _Nielsen Norman Group_, accessed 11 April 2023.
+
+IBM Carbon Design System (2023) [Breadcrumb - Accessibility](https://carbondesignsystem.com/components/breadcrumb/accessibility "https://carbondesignsystem.com/components/breadcrumb/accessibility"), _Carbon Design System,_ accessed 11 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** August 2023

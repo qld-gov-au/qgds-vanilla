@@ -1,0 +1,204 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as Stories from "./ctaLink.stories.js"
+import viewAllExample from "./9e438fcd-caf7-4b36-8c3d-441fc8d77e8c.png"
+
+<Meta of={Stories} />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/call-to-action-cta
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Call to action (CTA)
+====================
+
+May also be known as:
+
+call-to-action button or a CTA button
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395565&mode=design&t=BFxhVIGoGN5iamZ3-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Call-to-Action (CTA) link is a text-based link that is designed to prompt users to take a specific action, such as signing up for a newsletter.
+
+CTA links are visually distinct instructions to users designed to provoke an immediate response using verbs such as 'call now' or 'find out more'.
+
+Our CTA links are different to buttons which are typically larger and more visually prominent. While both CTA links and buttons are used to encourage users to take a specific action, the main difference between the two is the visual design.
+
+CTA links are typically used for less important actions, such as linking to other important pages within a website while buttons are used for more important actions, such as submitting a form.
+
+It's worth noting that the line between CTA links and buttons can be blurry, and the specific design and implementation of CTAs can vary depending on the website or application.
+
+In our Design System we have 2 styles, a default and view all.
+
+Default
+-------
+
+A simple and clear link to direct users to a preferred action.
+
+[Sign up](call-to-action-cta.html#)
+
+View all
+--------
+
+When a CTA link appears at the end of link columns or drop down menus it uses a modified icon style for the arrow. This is so that it appears visually distinct and differentiated from other links and is not part of the proceeding list.
+
+[View all](call-to-action-cta.html#)
+
+### View all example
+
+<img src={viewAllExample} ></img>
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+*   [Sign up](call-to-action-cta.html#)
+*   [View all](call-to-action-cta.html#)
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Default: <a href="#" class="qld__cta-link">Sign up</a> View all: <a href="#" class="qld__cta-link qld__cta-link--view-all">View all</a> --> <ul style="list-style-type: none;"> <li><a href="#" class="qld__cta-link">Sign up</a></li> <li><a href="#" class="qld__cta-link qld__cta-link--view-all">View all</a></li> </ul>`
+
+Usage guidelines
+----------------
+
+CTA links are more subtle than buttons and are often used for secondary or tertiary actions on a page.
+
+### Success status icon Indicates a success state When to use it
+
+*   Use a CTA when the action is less important than a primary action that already exists on a page
+*   When the link is embedded in text
+
+### Status cancel icon Cancel icon or warning icon When not to use it
+
+*   When the link is not actionable: A CTA link should lead the user to take a specific action, such as "Sign Up" or "View all".If the link isn't actionable, such as a link to a related article or an external website, then it's better to style it as a regular hyperlink
+*   Sometimes, a CTA link may not be necessary if the user can already take the desired action through other means, such as a form or a button or link in primary navigation. In this case, adding an additional CTA link may clutter the page and confuse the user
+
+Research and rationale
+----------------------
+
+Our call-to-action link is built on the research completed by the [DTA](https://gold.designsystemau.org/components/accordion "https://gold.designsystemau.org/components/accordion/") (Digital Transformation Agency, 2018, call-to-action section). However, since the CTA is primary used to assist users to navigate to key areas of the site we updated the iconography and hover colours to be consistent with other navigation and directional links.
+
+### Iconography
+
+We’ve used arrows over chevrons with animated hover to produce greater visual prominence. In our Design System chevrons are used to indicate a state change that happens within the page that doesn't result with the user being directed to another page, because CTAs are most often used to direct users to other areas of the site an arrow icon was chosen to better communicate this action.
+
+### Appearance
+
+Our CTA links have a larger hit area then standard text links and include an animation for the hover state of the arrow to produce greater visual prominence.
+
+### View all design
+
+We added a different icon for consistency of view all buttons. View all is a common link used at the end of navigation panels and link lists to take users to landing pages. The view all CTA needed to look visually distinct from other navigation items that included arrow icons but still feel related to the content above it. Because we wanted the icon to still feel connected to the links above, we chose a simple arrow encased in a circle so that it was clear it was also a navigation item.
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__cta-link`
+
+Default style.
+
+`qld__cta-link--view-all`
+
+View all style.
+
+Variables
+---------
+
+Name
+
+Description
+
+`$QLD-color-light-alt-button`
+
+Colour of icon associated with interactivity on light backgrounds.
+
+`$QLD-color-light-link`
+
+Colour of light link text.
+
+`$QLD-color-dark-alt-button`
+
+Colour of icon associated with interactivity on dark backgrounds.
+
+`$QLD-color-dark-link`
+
+Colour of dark link text.
+
+Accessible CTA link requirements
+--------------------------------
+
+Keep these considerations in mind if you are modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.4.11 Non-text Contrast
+
+Visual information used to indicate states or boundaries and icons must have a contrast ratio of 3:1 against adjacent colours. This ensures that users with visual impairments can distinguish different states and boundaries.
+
+#### 1.4.3 Contrast (Minimum)
+
+The text colour and the background colour of the CTA must have a contrast ratio of at least 4.5:1 for normal text. This ensures readability for users with moderate visual impairments.
+
+#### 2.1.1 Keyboard Accessible
+
+The CTA links must be accessible using the keyboard alone. This allows for easier navigation for users who cannot or prefer not to use a mouse.
+
+#### 2.4.4 Link Purpose (In Context)
+
+The purpose of each CTA link should be clear from the link text alone. For example, "Sign up" and "View all" both accurately describe what the link will do. Users should not have to read or understand additional content to know what the link will do.
+
+#### 2.4.7 Focus Visible
+
+The CTA link must have a clear visual focus state to indicate when it has keyboard focus. This is important for users who navigate with a keyboard.
+
+#### 4.1.2 Name, Role, Value
+
+For each CTA link, the name (the visible text), role (link), and the value (URL it points to) should all be identifiable by assistive technologies.
+
+* * *
+
+Related
+-------
+
+[Buttons](buttons.html)
+
+[Direction links](direction-links.html)
+
+[Mega-menu](navigation-horizontal-primary.html)
+
+[Link columns](link-columns-link-list.html)
+
+References
+----------
+
+Digital Transformation Agency (2018) [CTA links](https://gold.designsystemau.org/components/cta-link/ "CTA Links"), Gold Design System, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** August 2023

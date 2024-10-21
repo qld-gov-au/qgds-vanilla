@@ -1,0 +1,331 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+[//]: # (import * as stories from "./promoPanel.stories.js")
+
+[//]: # (<Meta of={stories} />)
+<Meta title="Forms/Radio Buttons" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Radio buttons
+=============
+
+May also be known as:
+
+radio options, option buttons, or simply options.
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395570&mode=design&t=UEk2FqLHWN6pxgEy-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Radio buttons are a type of control input that allow users to select one item from a predefined set of mutually exclusive options.
+
+Default example
+---------------
+
+Vertically stacked radio buttons.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+\*Label Select an option
+
+Laptop
+
+Phone
+
+Tablet
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- This code displays a fieldset containing a list of radio buttons --> <!-- The fieldset contains a legend element to provide a description of the radio buttons --> <fieldset class="qld__fieldset" aria-describedby="radio-example-hint"> <legend class="qld__fieldset__legend"> <abbr title="required">*</abbr>Label </legend> <!-- The hint text provides instructions for the user --> <span class="qld__hint-text" id="radio-example-hint">Select an option</span> <!-- The radio buttons are contained in a group with a qld custom class 'qld_form-field' --> <div class="qld_form-field qld__control-group"> <!-- Radio option 1 --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="radio" name="1-radio-ex" id="1-rb-laptop" role="radio" aria-checked="false"> <label class="qld__control-input__text" for="1-rb-laptop">Laptop</label> </div> <!-- Radio option 2 --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="radio" name="1-radio-ex" id="1-rb-phone" role="radio" aria-checked="false"> <label class="qld__control-input__text" for="1-rb-phone">Phone</label> </div> <!-- Radio option 3 --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="radio" name="1-radio-ex" id="1-rb-tablet" role="radio" aria-checked="false"> <label class="qld__control-input__text" for="1-rb-tablet">Tablet</label> </div> </div> </fieldset>`
+
+Valid and invalid states
+------------------------
+
+Adds a border around the control inputs to indicate valid or invalid selections.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+\*Radio valid (Optional) Success message
+
+Laptop
+
+Phone
+
+Tablet
+
+\*Radio error Error message Select an option
+
+Laptop
+
+Phone
+
+Tablet
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- This code snippet is an HTML structure containing two sets of radio buttons, one with a valid state and the other with an invalid state. --> <div class="container"> <div class="row"> <div class="col-xs-6"> <!-- Start of the fieldset element--> <fieldset class="qld__fieldset"> <!-- Fieldset legend describing the purpose of the radio buttons --> <legend class="qld__fieldset__legend" id="legend-valid"><abbr title="required">*</abbr>Radio valid <span class="qld__label--optional">(Optional)</span></legend> <!-- Success message with SVG icon --> <span id="radio-field-success-message" class="qld__input--success"> <!-- Inline SVG as example --> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message </span> <!-- Start of the form field container with a qld custom class 'qld_form-field' --> <div class="qld_form-field qld__control-group" role="radiogroup" aria-labelledby="legend-valid"> <!-- Radio option 1--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--valid" aria-describedby="radio-field-success-message" type="radio" name="2-radio-ex" id="2-rb-laptop" role="radio"> <label class="qld__control-input__text" for="2-rb-laptop">Laptop</label> </div> <!-- Radio option 2--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="radio" name="2-radio-ex" id="2-rb-phone" role="radio"> <label class="qld__control-input__text" for="2-rb-phone">Phone</label> </div> <!-- Radio option 3--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="radio" name="2-radio-ex" id="2-rb-tablet" role="radio"> <label class="qld__control-input__text" for="2-rb-tablet">Tablet</label> </div> </div> </fieldset> </div> <div class="col-xs-6"> <!-- Start of the fieldset element--> <fieldset class="qld__fieldset" aria-describedby="radio-error-hint radio-field-error-message"> <!-- Fieldset legend describing the purpose of the radio buttons --> <legend class="qld__fieldset__legend" id="legend-error"><abbr title="required">*</abbr>Radio error</legend> <!-- Error message with SVG icon --> <span id="radio-field-error-message" class="qld__input--error"> <!-- Inline SVG as example --> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg> Error message </span> <!-- Hint text providing instructions for the user --> <span class="qld__hint-text" id="radio-error-example-hint">Select an option</span> <!-- Start of the form field container with a qld custom class 'qld_form-field' --> <div class="qld_form-field qld__control-group" role="radiogroup" aria-labelledby="legend-error"> <!-- Radio option 1--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--error" type="radio" name="3-radio-ex" id="3-rb-laptop" role="radio"> <label class="qld__control-input__text" for="3-rb-laptop">Laptop</label> </div> <!-- Radio option 2--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--error" type="radio" name="3-radio-ex" id="3-rb-phone" role="radio"> <label class="qld__control-input__text" for="3-rb-phone">Phone</label> </div> <!-- Radio option 3--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--error" type="radio" name="3-radio-ex" id="3-rb-tablet" role="radio"> <label class="qld__control-input__text" for="3-rb-tablet">Tablet</label> </div> </div> </fieldset> </div> </div> </div>`
+
+Disabled control inputs
+-----------------------
+
+Disabled control inputs can be used to indicate inputs that are no longer valid or expired.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Label
+
+Select an option
+
+Laptop
+
+Phone
+
+Tablet
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Start of the fieldset element--> <fieldset class="qld__fieldset" aria-describedby="radio-disabled-example-hint"> <!-- Fieldset legend describing the purpose of the radio buttons --> <legend class="qld__fieldset__legend" id="legend-disabled">Label</legend> <!-- Hint text providing instructions for the user --> <div class="qld__hint-text" id="radio-disabled-example-hint">Select an option</div> <!-- Start of the form field container with a qld custom class 'qld_form-field' --> <div class="qld_form-field qld__control-group"> <!-- Radio option 1--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" disabled type="radio" name="4-radio-ex" id="4-rb-laptop" role="radio" aria-disabled="true"> <label class="qld__control-input__text" for="4-rb-laptop">Laptop</label> </div> <!-- Radio option 2--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" disabled type="radio" name="4-radio-ex" id="4-rb-phone" role="radio" aria-disabled="true"> <label class="qld__control-input__text" for="4-rb-phone">Phone</label> </div> <!-- Radio option 3--> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" disabled type="radio" name="4-radio-ex" id="4-rb-tablet" role="radio" aria-disabled="true"> <label class="qld__control-input__text" for="4-rb-tablet">Tablet</label> </div> </div> </fieldset>`
+
+Usage guidelines
+----------------
+
+### When to use
+
+*   Use radio buttons when you want users to choose only one option from a set of 2 to 7 related, mutually exclusive options.
+*   Use radio buttons when the available options are static and don't change dynamically.
+*   Use radio buttons when you want to display all available options at once, making it easy for users to compare and choose.
+
+### When not to use
+
+*   Don't use radio buttons if users might need to select more than one option. In this case, you should use the checkboxes component instead.
+*   Don't use radio buttons if there's only one option, as it doesn't make sense for the user to choose between one option.
+*   Don't use radio buttons when the list of options is too long (more than 7). Use a dropdown menu or another selection method instead.
+
+### How to use
+
+#### Size
+
+Use the default-sized radios in most cases. However, smaller versions can be useful when you want to make them less visually prominent. For instance, on a search results page, using smaller radios can let users change search filters without distracting them from the main content.
+
+#### Include "None of the above"
+
+Users should be able to deselect an option if they change their mind. Therefore, it's essential to include a "None of the above" or "I do not know" option if they're valid choices.
+
+#### Don't preselect
+
+Don't pre-select an option for users, as it can confuse them and lead to incorrect answers. Let users choose for themselves.Setting a default value can influence user decisions or come across as pushy. Only use default selection if you have data to back it up.
+
+#### Group radio buttons
+
+Group radio buttons together using a `<fieldset>` with a `<legend>` that describes them. Make sure the grouping is meaningful and logical.
+
+#### Use label as target
+
+Make sure users can select either the text label or the radio button to choose an option.
+
+#### List items vertically
+
+Listing options vertically makes them easier to read than when they're listed horizontally, which can cause confusion.
+
+#### Use a logical order
+
+Organise the selection options in a meaningful way, such as alphabetical or most-frequent to least-frequent, to help users find what they're looking for quickly.
+
+#### Headings
+
+If you're asking one question per page, use the contents of the `<legend>` as the page heading. This is good practice, especially for screen readers, as it means users will only hear the contents once.
+
+For more guidelines on how to structure and lay out radio buttons see [Australian Government Style Manual.](https://www.stylemanual.gov.au/content-types/forms)
+
+Research and rationale
+----------------------
+
+Our design for radio buttons is based on the [GOV.UK](http://gov.uk "http://GOV.UK") (UK Government, 2023, Radio section) and [DTA](https://gold.designsystemau.org/components/accordion "https://gold.designsystemau.org/components/accordion/") (Digital Transformation Agency, 2018, Control input section).
+
+Our radio buttons are much larger than default browser inputs to provide larger hit/target areas for touchscreen devices or mobility impaired users. There's a smaller version available where this is not practical.
+
+Like all our form elements, our radio buttons used the border-alt colour to determine their border colours as this is designed for maximum contrast.
+
+For more information and our form designs and rationale see the [forms component](forms.html).
+
+Classes and utilities
+---------------------
+
+Name
+
+Description
+
+`qld__fieldset`
+
+Applies to fieldset element when radio are grouped.
+
+`qld__fieldset__legend`
+
+Defines the overarching description of the form group.
+
+`qld__hint-text`
+
+Consistent style for all hint text on form fields.
+
+`qld__control-group`
+
+Use to apply styles to a group radio buttons.
+
+`qld__control-input`
+
+Default class for all input controls fields.
+
+`qld__control-input--block`
+
+Class fro when input fields are listed vertically.
+
+`qld__control-input__text`
+
+Class that defines input field labels.
+
+`qld__input--valid`
+
+Applied to input element to style valid fields.
+
+`qld__input--error`
+
+Applied to input element to style invalid fields.
+
+`disabled`
+
+Added to input field to set disabled state.
+
+Accessible radio button requirements
+------------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.3.1 Info and Relationships
+
+Organise and structure the form in a logical and predictable manner. Use proper markup to convey the hierarchy and relationships between form elements, such as fieldsets and legends for grouping related fields.
+
+#### 2.4.6 Headings and Labels
+
+Provide clear and descriptive labels for form fields and headings for sections. This helps users understand the purpose of each field and the structure of the form.
+
+#### 2.1 Keyboard accessible
+
+Ensure that radio buttons are navigable and selectable using the keyboard (tab and spacebar).
+
+#### 2.4.7 Focus Visible
+
+Provide a visible focus indicator for radio buttons to help users with different input methods.
+
+#### 1.4.3 Contrast (Minimum)
+
+Ensure that the colour contrast between the text labels and background meets WCAG 2.1 Level AA requirements.
+
+#### 3.3.1 Error Identification
+
+Clearly identify and describe any errors that occur during form submission or input validation. Provide guidance on how to fix the errors.
+
+#### 3.3.2 Labels or Instructions
+
+##### Clear and descriptive labels
+
+Ensure that radio button labels are clear, concise, and provide enough context for screen reader users.
+
+#### 3.3.3 Error Suggestion
+
+If an input error is automatically detected, provide suggestions for correcting the error, where possible.
+
+#### 3.3.4 Error Prevention (Legal, Financial, Data)
+
+For forms that involve legal, financial, or sensitive data transactions, provide mechanisms to review and correct information before submission or allow users to confirm or reverse their actions.
+
+#### 4.1.2 Name, Role, Value
+
+Use the relevant HTML to ensure the radios and group of radios have the correct Names, Roles, and Values.
+
+In our examples we use the [`<fieldset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) and `<legend>` elements to group our controls. The `<fieldset>` element provides a container for related form controls, and the `<legend>` element acts as a heading to identify the group.
+
+When using this method it is not necessary to include aria roles and attributes.
+
+##### ARIA roles and attributes
+
+When it is not possible to use the HTML elements, ensure the correct ARIA Roles, States, and Properties are present.
+
+If you are not using `<fieldset>` and `<legend>` use `role="radiogroup"` for the container and `role="radio"` for each radio button.
+
+Use `aria-labelledby` to associate a visible label with the radio group and `aria-describedby` to provide additional information or instructions if needed.
+
+Consult the [Radio Pattern of ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/radio/) for the full list of WAI-ARIA Roles, States, and Properties.
+
+* * *
+
+References
+----------
+
+Digital Transformation Agency (2018) [Control input](https://gold.designsystemau.org/components/page-alerts "https://gold.designsystemau.org/components/page-alerts/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+[GOV.UK](https://gov.uk "http://GOV.UK") (n.d.) [Radios](https://design-system.service.gov.uk/components/radios "https://design-system.service.gov.uk/components/radios/"), _GOV.UK Design System_, accessed 27 April 2023.
+
+W3C Web Accessibility Initiative (2021) [ARIA Authoring Practices Guide (APG) Radio Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/radio "https://www.w3.org/WAI/ARIA/apg/patterns/radio/"), _ARIA Authoring Practices Guide_, W3C, accessed 27 April 2023.
+
+United States Web Design System (n.d.) [Radio buttons](https://designsystem.digital.gov/components/radio-buttons "https://designsystem.digital.gov/components/radio-buttons/"), _United States Web Design System_, accessed 27 April 2023.
+
+[//]: # (/\*Hides two of the colour options that are not available for this component \*/ .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;3&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;2&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-last-child&#40;1&#41; { display: none; })
+
+**Last updated:** May 2024

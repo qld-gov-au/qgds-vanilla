@@ -1,0 +1,17 @@
+{{! body example test wrapper }}
+<div class="qld__grid">
+    <main class="main" role="main">
+        <div class="col-xs-12 col-lg-8 col-xl-8" id="content">
+            <div class="container-fluid">
+                {{#if items}}
+                    {{#each items}}
+                        <!--  {{ component.type}}  -->
+                        {{> (lookup component "type") this }}
+                    {{/each}}
+                {{else}}
+                    {{> (lookup component "type") this }}
+                {{/if}}
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,258 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as ButtonStories from "./button.stories.js"
+import classTable from "./classesTable.md?raw"
+import variablesTable from "./variablesTable.md?raw"
+
+<Meta of={ButtonStories} />
+
+
+# Buttons
+
+May also be known as: ``Action button``
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395558&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+
+
+# Overview
+
+Buttons are a common interface element used in Design Systems to enable users to interact with digital products and services.
+
+Buttons are typically used to trigger an action, such as submitting a form, opening a menu, or initiating a search. They can also be used to navigate between pages or sections of a website or app. The use of consistent button styles helps to create a cohesive user experience and reduce cognitive load for users.
+
+Our Design System has 3 types of buttons, primary, secondary and tertiary.
+
+* * *
+
+## Primary buttons
+
+These buttons are designed to be the most prominent and visually distinct on a page or within a user interface. Primary buttons are typically used to indicate the primary action that a user is intended to take, such as submitting a form, initiating a purchase, or creating a new account.
+
+Example
+
+<Canvas additionalActions={[{ title: 'Primary', layout: 'centered' }]}
+        of={ButtonStories.PrimaryButtons} />
+
+
+### Usage guidelines
+
+They should always be used for the most important action on the screen. Primary buttons should be used when the user performs an action, and should describe what happens when pressed.
+
+Primary buttons should be for call-to-actions and are not intended as tools to navigating users to different pages or to another part within the same page, use a text link instead for these situations (Digital NSW, n.d.).
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+Primary buttons are a strongest button style and should be only used once on the page. Too many primary buttons can increase cognitive load because people must spend time comparing multiple likely options before making a choice (Apple Inc., 2022).
+
+**Do not assign a destructive action as the primary role to this button**, even if it seems like the most logical choice. People tend to select primary buttons without reading the label, so this could lead to accidentally losing content. Instead, assign the primary role to a nondestructive button to prevent this from happening (Google, 2022).
+
+* * *
+
+## Secondary buttons
+
+Secondary buttons are used to provide a visual hierarchy and allow users to perform secondary or less important actions. These buttons use an outlined style which is lower in visual weight in contrast compared to the primary button.
+
+Example
+<Canvas additionalActions={[{ title: 'Secondary', layout: 'centered' }]}
+        of={ButtonStories.SecondaryButtons } withToolbar={'true'}
+ />
+
+
+### Usage guidelines
+
+Use Secondary Buttons for Less Important Actions: Secondary buttons should be used for actions that are less important than the primary action, but still relevant (Google, 2022).
+
+* * *
+
+## Tertiary buttons
+
+Tertiary buttons provide users with a third option action that is less important than the primary and secondary actions. They're smaller and less visually prominent than primary and secondary buttons and are typically used in situations where a third option is needed.
+
+Example
+<Canvas additionalActions={[{ title: 'Tertiary', layout: 'centered' }]}
+        of={ButtonStories.TertiaryButtons} />
+
+
+### Usage guidelines
+
+Tertiary buttons should be used sparingly and only when necessary to avoid cluttering the user interface and confusing the user.
+
+They can be used as a "cancel" or "back" option in a multi-step process, to display a help menu or provide links to related content. Typically, it performs the opposite action to the secondary button (e.g. `Cancel` vs `Save`).
+
+* * *
+
+### Toggle buttons
+
+Example
+<Canvas additionalActions={[{ title: 'Toggle', layout: 'centered' }]}
+        of={ButtonStories.ToggleButtons} />
+
+* * *
+
+# Usage guidelines
+
+## General usage guidelines for buttons
+
+Use the appropriate button component for the appropriate action. Using the wrong button can lead to confusion and frustration for the user.
+
+### Success status icon Indicates a success state When to use
+
+Buttons are commonly used to encourage users to take an action, such as "Submit" or "Register".
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+Do not use buttons in place of text links for simple navigation or for linking to external content. Buttons should only be used when a more prominent call-to-action is needed.
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+#### **Do**
+
+*   Label buttons with what they do for users. The button should clearly show users what will happen when they click it. Use action words to describe the task, like ‘Create account’ for a button that lets users sign up. This way, users know what to expect after clicking the button.
+*   Put buttons where users can easily find them.
+*   Make the most important button look like it’s the most important one, try to use only one primary action button on a page so that it clearly stands out.
+
+#### **Do not:**
+
+*   Do not overuse buttons for links as makes them less noticeable.
+
+* * *
+
+## Guidelines for using icons in buttons
+
+Our buttons can include icons next to text labels to both clarify an action and call attention to a button. These icons either be trailing icons placed after the label or leading icons.
+
+### Guidelines for leading icons
+
+*   Use when the action or content is closely associated with the icon, and when the icon helps to reinforce the meaning of the label
+*   Place the icon to the left of the label to provide visual cues for users to scan and recognise the action or content
+*   Use simple, recognisable icons that are easy to understand
+
+### Guidelines for trailing icons
+
+*   Use when the action or content is not closely associated with the icon, and when the icon provides additional information or context
+*   Place the icon to the right of the label to avoid distracting users from the label text
+*   Use subtle, low-contrast icons that do not compete with the label text
+*   When the icon is directing the user to an action like an external page
+
+Don't place both a leading and a trailing icon (Google, 2022).
+
+* * *
+
+# Design
+
+## Research and rationale
+
+The design of our buttons follows patterns that were set out in the [DTA](https://gold.designsystemau.org/components/buttons "https://gold.designsystemau.org/components/buttons/"). Further research was conducted into the size and style of these buttons based on [NSW](https://digitalnsw.github.io/nsw-design-system/components/button/index.html "https://digitalnsw.github.io/nsw-design-system/components/button/index.html") and [Material design](https://m2.material.io/components/buttons#contained-button "https://m2.material.io/components/buttons#contained-button"). Using the DTA as a foundation we added active states, increased the height slightly and more colour options and the ability to add leading and trailing icons.
+
+### Button size
+
+Our Design System buttons use a height of 48px. There is no hard and fast rule that buttons must be exactly 48px in height, as the ideal button size can vary based on the context and design of the website or application. However, it is commonly recommend that you should use a minimum touch target size of 48px x 48px to ensure that buttons are easily clickable on both desktop and mobile devices (W3C, n.d.).
+
+Material Design guidelines recommend using a minimum height of 36dp (density-independent pixels), which is equivalent to 48px on a standard display density (Google, n.d). However, this guideline is intended as a starting point, and the ideal button size may need to be adjusted based on the specific needs of the website or application .
+
+### Colour
+
+Secondary buttons in our Design System can be coloured differently to primary buttons using the secondary action colour. We've done this as a way of being able to incorporate more brand colours into a design and to also align the web content accessibility guidelines which state that colour should be used to draw attention to important buttons and to create visual contrast between different types of buttons (W3C, 2018).
+
+### Style
+
+We chose to continue the use of style and not size that was set out by the DTA as a method of visually distinguish the preferred choice among multiple options. This is also supported by Apples material design guidelines which say that when you use buttons of the same size to offer 2 or more options, you signal that the options form a coherent set of choices. If you want to highlight the preferred or most likely option in a set, use a more prominent button style for that option and a less prominent style for the remaining ones. (Google, n.d). There are multiple variations of our button component that also allow for different variations of visual loudness which can assist a user with low literacy so they can use visual loudness to help complete a task.
+
+### Buttons as links
+
+Based on the recommendation from the DTA our buttons can also be implemented as links &#60;a> or as buttons &#60;button>. This gives users flexibility so they can make the most semantic markup possible. Using incorrect HTML in certain situations can cause accessibility issues (Digital Transformation Agency, 2018).
+
+### Underline on hover
+
+Buttons have an underline on hover in order to address WCAG2.0 Criterion 1.4.1.
+
+1.4.1 Use of Color: Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. (Level A)
+
+**Note:** Focus state isn't underlined as it’s conveyed using the global focus outline.
+
+### Round corners
+
+The DTA discovered during usability observation that the secondary button and text inputs could sometimes be mistaken for layout or design elements with borders. The border width was increased, and a border radius was added to interactive elements (Digital Transformation Agency, 2018). Due to this we've opted to maintain this stylistic approach for the design of our buttons.
+
+## Implementation
+
+### Classes
+
+<Markdown>
+    {classTable}
+</Markdown>
+
+### Variables
+
+<Markdown>
+    {variablesTable}
+</Markdown>
+
+* * *
+
+# Accessibility
+
+## Accessible button requirements
+
+Keep these considerations in mind if you are modifying the design system or creating a custom component.
+
+### General guidelines
+
+Ensure that the button is large enough to be easily clicked or tapped, with enough space around it to avoid accidental clicks. It's commonly recommended that you should use a minimum touch target size of 48px x 48px to ensure that buttons are easily clickable on both desktop and mobile devices.
+
+### WCAG guidelines  2.1
+
+#### 1.4.3 Contrast (Minimum)
+
+Ensure that there is sufficient contrast between the button background and text or icon on the button, to make it easy to read for users with low vision or colour blindness (W3C, 2018).
+
+#### 1.4.1 Use of Color
+
+Buttons should have an underline on hover so that colour alone is not the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element (W3C, 2018).
+
+#### 2.1 Keyboard Accessible
+
+Ensure that global alerts are operable by providing keyboard accessibility. Users should be able to navigate and interact with alerts using only a keyboard, without requiring a mouse or other pointing device. This includes ensuring that all interactive elements within the alert are keyboard accessible (W3C, 2018).
+
+#### 2.4.7 Focus Visible
+
+This guideline requires that all interactive elements, including buttons, have a visible focus indicator that is easy to see and identify. This allows users who navigate using a keyboard or other assistive technology to know where they are on the page (W3C, 2018).
+
+#### 4.1.2 Name, Role, Value
+
+Use semantic HTML markup for buttons, including the appropriate ``<button>`` element and the "type" attribute. Use descriptive names or labels for buttons, so that assistive technology can identify the button and its function (W3C, 2018).
+
+#### 4.1.3 Status Messages
+
+Use visual and/or auditory feedback to provide status messages to users, such as when a button is clicked or an action is taken (W3C, 2018).
+
+* * *
+
+# Related components
+
+
+[Forms](forms.html) FIXME
+
+[Call-to-actions](call-to-action-cta.html)
+
+# References
+
+Google (n.d.) [Buttons](https://m2.material.io/components/buttons#specs "https://m2.material.io/components/buttons#specs"), _Material Design 3_, accessed 11 April 2023.
+
+Babich, N (2016) [A Quick Guide for Designing Better Buttons](https://www.smashingmagazine.com/2016/11/a-quick-guide-for-designing-better-buttons "https://www.smashingmagazine.com/2016/11/a-quick-guide-for-designing-better-buttons/"), _Smashing Magazine_, accessed 11 April 2023.
+
+Roller, C (2012) [7 Basic Best Practices for Buttons](https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php "https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php"), UX Matters, accessed 11 April 2023.
+
+Digital Transformation Agency (2018) [Buttons](https://gold.designsystemau.org/components/buttons "https://gold.designsystemau.org/components/buttons/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+W3C (n.d.) [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html "https://www.w3.org/WAI/WCAG21/Understanding/target-size.html"), _Web Content Accessibility Guidelines_ (WCAG) 2.1, accessed 11 April 2023.
+
+Harley, A (2013) [Icon Usability](https://www.nngroup.com/articles/icon-usability "https://www.nngroup.com/articles/icon-usability/"), Nielsen Norman Group, accessed 11 April 2023.
+
+Digital NSW (n.d.) [Buttons](https://digitalnsw.github.io/nsw-design-system/components/button/index.html "https://digitalnsw.github.io/nsw-design-system/components/button/index.html"), _NSW Design System_, accessed 10 April 2023.
+
+**Last updated:** August 2023
+
+

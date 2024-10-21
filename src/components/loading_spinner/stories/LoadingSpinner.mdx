@@ -1,0 +1,238 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as stories from "./loadingSpinner.stories.js"
+
+[//]: # (import classTable from "./classesTable.md?raw")
+
+<Meta of={stories} />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Loading spinner
+===============
+
+May also be known as:
+
+progress spinner, activity indicator, indeterminate indicator, progress circle
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=49314%3A86609&mode=design&t=J2v5hT83NVNPPGSi-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+A loading spinner, also known as a loading indicator or simply spinner, is a small looped animation used to indicate that content is being loaded or processed.
+
+Its purpose is to provide feedback to the user that the system is working on their request and to manage user expectations during waiting periods. It helps reassure users that the system is active and has not frozen, thus improving the overall user experience during potentially frustrating wait times.
+
+There are three types of loading spinner, default, stacked and minimal.
+
+Default
+-------
+
+By default the loading spinner is left aligned with a label on the right which indicate the type action that is occurring.
+
+Example
+
+Uploading...
+
+Uploading...
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=49314%3A86609&mode=design&t=tg8qvWVwwCobdBrH-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Light: <div class="qld__loading_spinner"> Dark: <div class="qld__loading_spinner qld__loading_spinner--dark"> --> <section class="qld__body"> <div class="container-fluid"> <!-- Loading spinner container with accessibility role set to 'status' --> <div class="qld__loading_spinner qld__loading_spinner--landscape" role="status"> <!-- Visual representation of the spinner --> <span class="qld__loading_spinner-wheel"></span> <!-- Text label for the spinner, visible and text styled to md size via qld__display-md class --> <div class="qld__loading_spinner-label qld__display-md">Uploading...</div> </div> </div> </section> <section class="qld__body qld__body--dark"> <div class="container-fluid"> <!-- Loading spinner container in dark mode with accessibility role --> <div class="qld__loading_spinner qld__loading_spinner--landscape qld__loading_spinner--dark" role="status"> <!-- Visual representation of the spinner (same as above but styled for dark theme) --> <span class="qld__loading_spinner-wheel"></span> <!-- Text label for the spinner, visible and text styled to md size via qld__display-md class --> <div class="qld__loading_spinner-label qld__display-md">Uploading...</div> </div> </div> </section>`
+
+Stacked
+-------
+
+If required, you can horizontally centre the loading spinner to align with other layout elements or to fit space requirements.
+
+Example
+
+Uploading...
+
+Uploading...
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=49314%3A86609&mode=design&t=tg8qvWVwwCobdBrH-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Light: <div class="qld__loading_spinner"> Dark: <div class="qld__loading_spinner qld__loading_spinner--dark"> --> <section class="qld__body"> <div class="container-fluid"> <!-- Loading spinner container with accessibility role set to 'status' --> <div class="qld__loading_spinner" role="status"> <!-- Visual representation of the spinner --> <span class="qld__loading_spinner-wheel"></span> <!-- Text label for the spinner, visible and text styled to md size via qld__display-md class --> <div class="qld__loading_spinner-label qld__display-md">Uploading...</div> </div> </div> </section> <section class="qld__body qld__body--dark"> <div class="container-fluid"> <!-- Loading spinner container in dark mode with accessibility role --> <div class="qld__loading_spinner qld__loading_spinner--dark" role="status"> <!-- Visual representation of the spinner (same as above but styled for dark theme) --> <span class="qld__loading_spinner-wheel"></span> <!-- Text label for the spinner, visible and text styled to md size via qld__display-md class --> <div class="qld__loading_spinner-label qld__display-md">Uploading...</div> </div> </div> </section>`
+
+Minimal
+-------
+
+Use this option only when the spinner needs to be incorporated within other components or where space is restricted. Try to incorporate the label action somewhere else within the  component if possible.
+
+Example
+
+Uploading...
+
+Uploading...
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=49314%3A86609&mode=design&t=tg8qvWVwwCobdBrH-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Light: <div class="qld__loading_spinner qld__loading_spinner--icon_only"> Dark: <div class="qld__loading_spinner qld__loading_spinner--dark"> --> <section class="qld__body"> <div class="container-fluid"> <!-- Loading spinner container with accessibility role set to 'status' --> <div class="qld__loading_spinner qld__loading_spinner--icon_only" role="status"> <!-- Visual representation of the spinner --> <span class="qld__loading_spinner-wheel"></span> <!-- Text label for the spinner, visible and text styled to md size via qld__display-md class --> <div class="qld__loading_spinner-label qld__display-md">Uploading...</div> </div> </div> </section> <section class="qld__body qld__body--dark"> <div class="container-fluid"> <!-- Loading spinner container in dark mode with accessibility role --> <div class="qld__loading_spinner qld__loading_spinner--dark qld__loading_spinner--icon_only" role="status"> <!-- Visual representation of the spinner (same as above but styled for dark theme) --> <span class="qld__loading_spinner-wheel"></span> <!-- Text label for the spinner, visible and text styled to md size via qld__display-md class --> <div class="qld__loading_spinner-label qld__display-md">Uploading...</div> </div> </div> </section>`
+
+Usage guidelines
+----------------
+
+### Success status icon Indicates a success state When to use
+
+*   Use the small looped animation loading spinner for actions that typically take between 2 to 10 seconds to complete, such as fetching data from a server, processing user inputs, or performing calculations (Sherwin, 2014).
+*   Use the spinner to indicate that the system is actively working on the user's request and to provide visual feedback during waiting periods.
+*   Utilise the spinner in scenarios where users might otherwise perceive the application as unresponsive or stagnant.
+*   **After immediate actions:** Display after actions that trigger a delay, such as submitting a form or loading a new section of a website.
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+*   Consider using a different type of loading indicator, such as a progress bar or a message indicating the loading status, for actions that take significantly longer than 10 seconds to complete. A spinner may not be sufficient for longer loading times and could lead to user frustration (Sherwin, 2014).
+*   Avoid using the spinner for actions that are instantaneous or nearly instantaneous, as it may create unnecessary visual distraction and give the impression of unnecessary processing (Microsoft, n.d).
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+#### Do
+
+*   The loading spinner label should accurately explain the action that is occurring. For example, “Loading...”, “Submitting...”, “Saving...”, “Processing...” (Sherwin, 2014).
+*   Place the spinner strategically near the element or section of the interface that is being loaded to provide clear visual feedback to users about the action being performed. Typically, place the spinner centrally in the relevant area (or page) where the action is occurring to maintain visual balance and focus (IBM, n.d.).
+*   Introduce the spinner after a small delay (e.g., 200 milliseconds) to avoid flashing it for trivially short operations.
+*   Use one Spinner at a time (Microsoft, n.d.).
+*   The loading spinner can be scaled down to fit within a single item on page such as a button if the loading experience is contextual (IBM, n.d.).
+
+[//]: # (/\* This is just an update to the page to remove the padding inside code containers so that different coloured sections display better \*/ #content .qld\_\_code-preview-body.qld\_\_body { padding: 0px; } #content .qld\_\_body .qld\_\_code .qld\_\_code-toggle { background: var&#40;--QLD-color-dark\_\_background&#41;; })
+
+Research and rationale
+----------------------
+
+Our loading spinner is based on the [Bootstrap design](https://getbootstrap.com/docs/4.4/components/spinners/) already utilised in the Queensland government's [Single Website Experience (SWE)](https://www.forgov.qld.gov.au/information-and-communication-technology/communication-and-publishing/website-and-digital-publishing/website-standards-guidelines-and-templates/swe/components/loading-spinner).
+
+The choice to adopt this design stems from a few key considerations.
+
+Firstly, the decision was guided by our principle of leveraging established and proven design patterns. Circular styles spinners are perhaps the most ubiquitous (Kernaghan, 2023) and this bootstrap style is widely used. By using this design we benefit from the familiarity users already have with the loading spinners purpose and intent. Be adopting this style we are also maintaining consistency with what Queensland Government has done in the past and what users has experience already on our government websites.
+
+Secondly, the existing component was deemed lightweight, accessible, and versatile, with code and a design that was easy to adopt and incorporate into the design system. One change we did make was to included a new minimal version that was comprised of only the spinner. This was done so that component could be incorporated contextually into other components where necessary, this was an additional use case identified for the spinner during our comparative review.
+
+Finally the spinner’s minimalistic design, with its clean lines and simple shapes fit well the the visual language of our design system. Its unobtrusive appearance ensures that it complements rather than distracts from the other content on the page and its style matches other elements such as our line style iconography.
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__loading_spinner`Copy
+
+Container for spinner component
+
+`qld__loading_spinner-wheel`Copy
+
+Applied to a span elemented this class applied creates the spinner icon design via css animations and border styles.
+
+`qld__loading_spinner--dark`Copy
+
+This is a modifier class for spinners used on dark backgrounds.
+
+`qld__loading_spinner--icon_only`Copy
+
+Modifier classe that hides the label
+
+`qld__loading_spinner-label`Copy
+
+Styles the text used for the label.
+
+`qld__loading_spinner--landscape`Copy
+
+Modifier class that displayes text inline with the spinner icon.
+
+Accessible loading spinner requirements
+---------------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.1.1 Text alternatives
+
+Provide text alternatives for any non-text content so that it can be changed into other forms people need, such as large print, braille, speech, symbols, or simpler language
+
+#### 1.4.3 Minimum contrast
+
+Ensure that text elements (like "Loading...") meet the minimum contrast ratio of 4.5:1 against their background to aid users with visual impairments in seeing the spinner clearly W3C (2018). When integrated into another component, such as a button, make sure that the active indicator element provides visual contrast of at least 3:1 against the other component (Google, n.d).
+
+#### 2.3.1 Three flashes or below threshold
+
+For users sensitive to motion (such as those with vestibular disorders), ensure that the spinner's animation is smooth and does not include rapid or flashing movements. WCAG recommends avoiding anything that flashes more than three times per second W3C (2018).
+
+#### 4.1.3 Status messages
+
+Use ARIA roles to ensure the accessibility of status messages associated with loading processes. For instance, adding `role="status"` to a visually hidden text element that updates with "Loading..." or "Content is loading" during spinner activation makes these status updates perceivable to screen reader users without requiring user focus W3C (2018).
+
+#### Understanding WCAG guideline 2.2.2 Pause stop and hide
+
+A pre-loader animation is shown on a page which requires a certain percentage of a large file to be downloaded before playback can begin. The animation is the only content on the page and instructs the user to please wait while the video loads. Because the moving content is not presented in parallel with other content, no mechanism to pause, stop or hide it needs to be provided, even though the animation may run for more than 5 seconds for users with slower connections (W3C, 2023).
+
+* * *
+
+References
+----------
+
+Adobe (n.d.) [Progress circle](https://spectrum.adobe.com/page/progress-circle), _Adobe Spectrum_, accessed 12 April 2024.
+
+Bootstrap (n.d.) [Spinners](https://getbootstrap.com/docs/4.4/components/spinners), _Bootstrap Documentation_, accessed 12 April 2024.
+
+Google (n.d.) [Progress indicators](https://m3.material.io/components/progress-indicators/guidelines), _Material Design 3_, accessed 12 April 2024.
+
+IBM (n.d.) [Loading](https://carbondesignsystem.com/components/loading/style), _Carbon Design System_, accessed 12 April 2024.
+
+Sherwin, K (2014) [Progress Indicators Make a Slow System Less Insufferable](https://www.nngroup.com/articles/progress-indicators/), _Nielsen Norman Group_, accessed 12 April 2024.
+
+Microsoft (n.d.) [Spinner – Fluent UI](https://developer.microsoft.com/en-us/fluentui#/controls/web/spinner), _Fluent UI Documentation_, accessed 12 April 2024.
+
+Queensland Government (2022) [Loading spinner](https://www.forgov.qld.gov.au/information-and-communication-technology/communication-and-publishing/website-and-digital-publishing/website-standards-guidelines-and-templates/swe/components/loading-spinner), _Single Website Experience_, Queensland Online, accessed 12 April 2024.
+
+W3C (2023) [Understanding Success Criterion 4.1.3: Status Messages](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html), _WCAG 2.1 Understanding Docs_, Accessed 12 April 2024.
+
+W3C (2023) [Understanding Success Criterion 2.2.2: Pause, stop, hide](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html), _Understanding WCAG 2.0_, W3C, accessed 15 April 2024.
+
+US Government (2022) [File input](https://designsystem.digital.gov/components/file-input/ "https://designsystem.digital.gov/components/file-input/") , _USWDS (US Web Design System)_, accessed 10 April 2023.
+
+Kernaghan C (2023) [Loading spinners: Their purpose and alternatives for better UX](https://blog.logrocket.com/ux-design/loading-spinners-purpose-alternatives/), _LogRocket_, accessed 15 April 2024.
+
+Digital NSW (n.d.) [File upload](https://digitalnsw.github.io/nsw-design-system/components/file-upload/index.html "https://digitalnsw.github.io/nsw-design-system/components/file-upload/index.html"), _NSW Design System_, accessed 10 April 2023.
+
+Related
+-------
+
+[File upload](file-upload.html)
+
+**Last updated:** May 2024

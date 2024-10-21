@@ -1,0 +1,69 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+import LoadingSpinner from "./../../components/loading_spinner/stories/Loading-Spinner.png"
+import FileUpload from "./../../components/file_upload/stories/File-Upload.png"
+
+<Meta title="0. Versions/Pre QGDS-Vanilla/v4.1.0" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Release 4.1.0
+=============
+
+File upload, loading spinner and various bug fixes
+--------------------------------------------------
+
+This update introduces two new components and addressed some small bugs that were identified in the large major update.
+
+The primary goal of this update is to:
+
+*   add the new loading spinner component
+*   add the new file upload component
+*   fix some bugs that were identified during the last major update.
+
+Before you update we recommend
+------------------------------
+
+Before updating to the latest version of our design system, we recommend you **make a back up of your original file**. This update may reset content a variety of components including cards and action buttons.
+
+* * *
+
+Whats new
+---------
+
+### Component updates
+
+*   **New** loading spinner component
+*   **New** file upload component
+*   **Updated** border colours on all cards.
+*   **Updated** tertiary button active state to be consistent with other buttons.
+
+### Bug fixes
+
+*   The large tag component was missing a colour variant this has now been corrected
+*   Cards have been updated so that their border colours now correctly use either the border-alt or dark border-alt colours. This change was to align their to their current implementation within the code.
+
+* * *
+
+More about this update
+----------------------
+
+### The new loading spinner component
+
+Our loading spinner was designed based on the Bootstrap model used in the Queensland government's Single Website Experience (SWE). The choice to adopt this design stems from a few key considerations. Firstly, the decision was guided by our principle of leveraging established and proven design patterns that have been tested and in this case that users are already familiar with. Secondly our review of the spinner found it to be lightweight, accessible, and easily incorporate. Additionally its unobtrusive visual design works well with other elements, like our line style iconography and that it's unobtrusive appearance ensures that it complements rather than distracts from the other content on the page.
+
+<img src={LoadingSpinner} alt="Image of loading spinner component" />
+
+### The new file upload component
+
+The file upload component is commonly used within form layouts and allow users to select one or more files to upload to a specific location, it is also sometimes referred to as a drop zone as it support the ability for users to drag files into the region to be uploaded. 
+
+This design is based on patterns developed by the myQLD project and existing examples from the Agriculture and NSW design system. The design tries to maintain visual consistency with the existing Queensland government designs, it has only been updated where it needed to align more closely to the existing form components or where we found it differed from best practice in a comparative review.
+
+<img src={FileUpload} alt="Image of file upload component" />
+
+**Last updated:** April 2024

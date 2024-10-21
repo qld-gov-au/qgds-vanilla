@@ -1,0 +1,5 @@
+{{!-- image.hbs 0.0.1--}}
+<figure{{#if component.data.metadata.id_field.value}} id="{{component.data.metadata.id_field.value}}"{{/if}}{{#if component.data.rightAligned}} class="qld__right-aligned-img"{{/if}}>
+    <img src="{{component.data.src}}" alt="{{component.data.alt}}"{{#if component.data.responsive}} class="qld__responsive-media-img"{{/if}}/>
+    {{#if component.data.caption}}<figcaption>{{component.data.caption}}</figcaption>{{/if}}
+</figure>

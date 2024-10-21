@@ -1,0 +1,509 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+[//]: # (import * as stories from "./table.stories.js")
+
+import LabelAnatomy from "./label-anatomy.png"
+
+[//]: # (<Meta of={stories} name="Tables" />)
+<Meta title="Forms/Text box and Text Area" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Text box and text area
+======================
+
+May also be known as:
+
+text input fields, input boxes, text boxes or multi-line text box.
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395571&mode=design&t=pr8bqk7STapykkRl-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Text inputs are the fields used in forms. They allow a user to enter text in a structured format. Two common types of input fields are text boxes and text areas.
+
+A text box is a single-line input field that allows users to enter a short amount of text, such as a name, email address, or password. Text boxes typically have a limited character count and may include additional features such as auto-complete and input validation.
+
+A text area is a multi-line input field that allows users to enter longer blocks of text, such as comments, descriptions, or messages. Text areas typically have more space than text boxes and may include scrollbars to navigate through the text.
+
+Text boxes
+----------
+
+Text boxes are input fields typically used in forms that allow the user to enter text data in a structured format. Text inputs should always be accompanied by labels.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Label Hint text
+
+Label Hint text
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395571&mode=design&t=fmv8zWUrMp0h8IR8-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row"> <!-- Default style text field --> <div class="col-xs-6 col-lg-4"> <!-- Label for the first input field --> <label class="qld__label" for="example-1">Label</label> <!-- Hint text for the first input field --> <span class="qld__hint-text" id="example-1-hint">Hint text</span> <!-- First text input field, described by the hint text above --> <input type="text" class="qld__text-input qld__text-input--block" id="example-1" name="input1" aria-describedby="example-1-hint"> </div> <!-- Filled style text field --> <div class="col-xs-6 col-lg-4 qld__form-style-filled"> <!-- Label for the second input field --> <label class="qld__label" for="example-2">Label</label> <!-- Hint text for the second input field --> <span class="qld__hint-text" id="example-2-hint">Hint text</span> <!-- Second text input field, described by the hint text above --> <input type="text" class="qld__text-input qld__text-input--block" id="example-2" name="input2" aria-describedby="example-2-hint"> </div> </div>`
+
+Valid and invalid states
+------------------------
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Text-field label Error message
+
+Text-field label Error message
+
+Text-field label Hint text Success message
+
+Text-field label Hint text Success message
+
+Show more
+
+[Figma](https://figma.com)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row qld__row-gap-component"> <!-- Example: Error field --> <div class="co-xs-12 col-lg-4"> <label for="text-field-id" class="qld__label">Text-field label</label> <span id="example-1-error-message" class="qld__input--error"><svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg>Error message</span> <input type="text" id="text-field-id" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--error" aria-describedby="example-1-error-message"> </div> <!-- Example: Error field filled style --> <div class="qld__form-style-filled co-xs-12 col-lg-4"> <label for="text-field-id" class="qld__label">Text-field label</label> <span id="example-2-error-message" class="qld__input--error"><svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg>Error message</span> <input type="text" id="text-field-id" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--error" aria-describedby="example-2-error-message"> </div> </div> <div class="row qld__row-gap-component qld__form-group"> <!-- Example: Success field --> <div class="co-xs-12 col-lg-4" > <label for="text-field-id" class="qld__label">Text-field label</label> <span class="qld__hint-text" id="example-1-hint">Hint text</span> <span id="example-1-success-message" class="qld__input--success"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message</span> <input type="text" id="text-field-id" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--valid" aria-describedby="example-1-hint example-1-success-message"> </div> <!-- Example: Success field filled style --> <div class="qld__form-style-filled co-xs-12 col-lg-4"> <label for="text-field-id" class="qld__label">Text-field label</label> <span class="qld__hint-text" id="example-2-hint">Hint text</span> <span id="example-2-success-message" class="qld__input--success"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message</span> <input type="text" id="text-field-id" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--valid" aria-describedby="example-2-hint example-2-success-message"> </div> </div>`
+
+### Disabled
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Label Hint text
+
+Label Hint text
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395571&mode=design&t=pr8bqk7STapykkRl-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row"> <!-- Default style text field --> <div class="col-xs-6 col-lg-4 "> <!-- Label for the first input field --> <label class="qld__label" for="example-1">Label</label> <!-- Hint text for the first input field --> <span class="qld__hint-text" id="example-1-hint">Hint text</span> <!-- First text input field, described by the hint text above --> <input type="text" class="qld__text-input qld__text-input--block" id="example-1" name="input1" aria-describedby="example-1-hint" disabled> </div> <!-- Filled style text field --> <div class="col-xs-6 col-lg-4 qld__form-style-filled"> <!-- Label for the second input field --> <label class="qld__label" for="example-2">Label</label> <!-- Hint text for the second input field --> <span class="qld__hint-text" id="example-2-hint">Hint text</span> <!-- Second text input field, described by the hint text above --> <input type="text" class="qld__text-input qld__text-input--block" id="example-2" name="input2" aria-describedby="example-2-hint" disabled> </div> </div>`
+
+Usage guidelines for text boxes
+-------------------------------
+
+Below are general guidelines for text-area fields, please see our [form component](forms.html) for how to use text-boxes a more complete guide on how to structure and layout your forms. It's also recommended that you review the Australian Government style manual for more detailed advice on [form content](https://www.stylemanual.gov.au/content-types/forms "https://www.stylemanual.gov.au/content-types/forms").
+
+### When to use
+
+*   **When collecting short and specific information:** Text boxes are best suited for collecting short and specific information such as names, email addresses, and phone numbers
+*   **When only one answer is required:** Text boxes are ideal when only one answer is required from the user
+*   **When input validation is necessary:** Text boxes allow for input validation, which means that the user's input can be checked for errors before being submitted
+
+### When not to use
+
+*   **When long-form input is required:** Text boxes aren't ideal for collecting long-form input such as paragraphs use text area instead
+*   **When multiple answers are required:** Text boxes aren't the best option when multiple answers are required from the user
+*   **When the input needs to be limited**: Text boxes shouldn't be used when the input needs to be limited to a specific range or set of values, such as selecting a date from a calendar. Consider using check boxes, radio boxes or select fields
+
+Text area
+---------
+
+A text area lets users enter long form text which spans over multiple lines. Overflow text wraps onto a new line and expands the text area.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Required field
+
+
+\* Text-area label Hint text
+
+Optional field
+
+
+Text-area label (Optional) Hint text
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row qld__row-gap-component"> <div class="co-xs-12 col-lg-4"> <p>Required field</p><br> <!-- Example 1: Required field --> <label for="textarea-id" class="qld__label"> <!-- Required field indicator using aria-required attribute --> <abbr title="required">*</abbr> Text-area label </label> <span class="qld__hint-text" id="text-area-hint">Hint text</span> <textarea id="textarea-id" class="qld__text-input qld__text-input--block" aria-required="true" aria-describedby="text-area-hint"></textarea> </div> <div class="co-xs-12 col-lg-4"> <p>Optional field</p><br> <!-- Example 2: Optional field --> <label for="textarea-id-2" class="qld__label"> Text-area label <!-- Optional field indicator using aria-label attribute --> <span class="qld__label--optional"> (Optional)</span> </label> <span class="qld__hint-text" id="text-area-hint-2">Hint text</span> <textarea id="textarea-id-2" class="qld__text-input qld__text-input--block" aria-describedby="text-area-hint-2"></textarea> </div> </div>`
+
+### Valid and invalid states
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Text-area label Error message
+
+Text-area label Error message
+
+Text-area label Hint text Success message
+
+Text-area label Hint text Success message
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row qld__row-gap-component"> <!-- Example: Error field --> <div class="co-xs-12 col-lg-4"> <label for="textarea-id-error" class="qld__label">Text-area label</label> <span id="example-1-error-message" class="qld__input--error"><svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg>Error message</span> <textarea id="textarea-id-error" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--error" aria-describedby="example-1-error-message"></textarea> </div> <!-- Example: Error field filled style --> <div class="qld__form-style-filled co-xs-12 col-lg-4"> <label for="textarea-id-error-filled" class="qld__label">Text-area label</label> <span id="example-2-error-message" class="qld__input--error"><svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg>Error message</span> <textarea id="textarea-id-error-filled" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--error" aria-describedby="example-2-error-message"></textarea> </div> </div> <div class="row qld__row-gap-component qld__form-group"> <!-- Example: Success field --> <div class="co-xs-12 col-lg-4" > <label for="textarea-id-success" class="qld__label">Text-area label</label> <span class="example-1-hint" id="text-area-hint-success">Hint text</span> <span id="example-1-success-message" class="qld__input--success"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message</span> <textarea id="textarea-id-success" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--valid" aria-describedby="example-1-hint example-1-success-message"></textarea> </div> <!-- Example: Success field filled style --> <div class="qld__form-style-filled co-xs-12 col-lg-4"> <label for="textarea-id-success-filled" class="qld__label">Text-area label</label> <span class="example-2-hint" id="text-area-hint-success-filled">Hint text</span> <span id="example-2-success-message" class="qld__input--success"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message</span> <textarea id="textarea-id-success-filled" placeholder="placeholder text" class="qld__text-input qld__text-input--block qld__text-input--valid" aria-describedby="example-2-hint example-2-success-message"></textarea> </div> </div>`
+
+### Disabled
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Text-area label Hint text
+
+Text-area label Hint text
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395571&mode=design&t=pr8bqk7STapykkRl-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row qld__row-gap-component"> <div class="co-xs-12 col-lg-4"> <!-- Example 1: Required field --> <label for="textarea-id" class="qld__label"> Text-area label </label> <span class="qld__hint-text" id="text-area-hint">Hint text</span> <textarea id="textarea-id" class="qld__text-input qld__text-input--block" aria-required="true" aria-describedby="text-area-hint" disabled></textarea> </div> <div class="co-xs-12 col-lg-4"> <!-- Example 2: Optional field --> <label for="textarea-id-2" class="qld__label"> Text-area label </label> <span class="qld__hint-text" id="text-area-hint-2">Hint text</span> <textarea id="textarea-id-2" class="qld__text-input qld__text-input--block" aria-describedby="text-area-hint-2" disabled></textarea> </div> </div>`
+
+Usage guidelines
+----------------
+
+Below are general guidelines for text-area fields, please see our [form component](forms.html) for how to use text-boxes a more complete guide on how to structure and layout your forms. It's also recommended that you review the Australian Government style manual for more detailed advice on [form content](https://www.stylemanual.gov.au/content-types/forms "https://www.stylemanual.gov.au/content-types/forms").
+
+### When to use
+
+*   **When you need users to enter a large amount of text:** The text area input field is ideal when users need to enter a large amount of text, such as in a comment box or message field
+*   **When you need users to enter formatted text:** If you need users to enter formatted text, such as bold or italicised text, the text area input field is a good choice
+*   **When you need to collect user feedback:** The text area input field is an effective way to collect user feedback, as it allows users to provide detailed comments or suggestions
+
+### When not to use
+
+*   **When you need users to enter a small amount of text:** If you only need users to enter a small amount of text, such as a name or email address, a text area input field may be too large and take up unnecessary space on the page
+*   **When you need users to enter specific types of information:** If you need users to enter specific types of information, such as a date or phone number, a text area input field may not be the best choice. Instead, use a more specific input field, such as a date picker or phone number field
+*   **When you need to limit the amount of text users can enter:** If you need to limit the amount of text users can enter, such as in a Twitter post or comment field, a text area input field may not be the best choice. Instead, use a character limit or other form of input validation
+
+Input field anatomy
+-------------------
+
+The anatomy of input fields in our Design System consists of several elements:
+
+<img src={LabelAnatomy} alt="label field anatomy" />
+
+1.  **Labels:** Labels are headings that identify the purpose or context of the input field. For example, a label might say "First Name" to indicate that the user should enter their first name in the text field. Standard label alignment is left-aligned with the field underneath. **Labels are mandatory on all fields with some exceptions such as search fields used in the header.**
+2.  **Hint/Helper text:** Helper text conveys additional guidance about the input field, such as how it will be used. It should only take up a single line and be persistently visible.
+3.  **Required field indicators:** To indicate that a field is required, display an asterisk (\*) next to the label text and mention at the start of the form that asterisks indicate required fields.
+4.  **Optional field indicators:** Optional field indicators indicate that a field is optional. Clearly indicate optional fields by displaying the word ‘optional’ in parentheses next to the label text.
+5.  **Placeholder text:** Hints at what goes into a field. Placeholder text is optional. It should always be avoided unless communicating complex formatting requirements.
+6.  **Trailing icons:** Trailing icons are optional, they're often used to convey additional field functionality or options. This space should also be reserved to fit icons that some browsers might insert into the input (for example to show or generate a password) (UK.GOV n.d).
+7.  **Validation messages**
+*   Error messages: When text input isn't accepted, an error message can display instructions on how to fix it. Error messages are displayed above the input line.
+*   Success messages: When text input is accepted, a message can display to the inform the user. This is useful in situations like password generation where you can let the user know their password has met syntax requirements.
+
+* * *
+
+Research and rationale
+----------------------
+
+Like most of our components input fields started off using the [DTA](https://gold.designsystemau.org/components/text-inputs "https://gold.designsystemau.org/components/text-inputs/") designs as a base, as our Design System progressed, we saw a need to include additional styles with less visual weight as well as to investigate this pattern as a whole to understand why other designs systems had diverged from the original DTA patterns.
+
+For more information on our input text field design can be found in our [forms component](hhttps://www.design-system.health.qld.gov.au/components/forms).
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__form-style-filled`Copy
+
+Sets the form field style to use the filled variant. This must be applied to the enclosing div or form element.
+
+`qld__label`Copy
+
+This is applied to the `<label>` element applies the label styles for input fields.
+
+`qld__hint-text`Copy
+
+Applied to a `<span>` element below the label this styles the hint text for the form field.
+
+`qld__label--optional`Copy
+
+This styles the word "(optional)" when used in optional fields. Optional text must be placed directly after the label in a `<span>` element and before any hint text.
+
+`qld__body abbr` Copy
+
+This is the class styles required for the field indicator which is an asterisk. `<abbr title="required">\*</abbr>`
+
+`qld__text-input`Copy
+
+This class is required for all input 'text' fields and 'textarea' fields. It applies the default styles for these fields.
+
+`qld__text-input--number`Copy
+
+This is a utility class can be used to apply tabular numbers to input fields that contain only numerals.
+
+`qld__input--error`Copy
+
+This styles the error messages on form fields.
+
+`qld__input--success`Copy
+
+This styles the success messages on form fields.
+
+`qld__text-input--error`Copy
+
+This styles the error state on a form fields.
+
+`qld__text-input--valid`Copy
+
+This styles the valid/success state on a form fields.
+
+`qld__form-group`Copy
+
+This adds space between form elements when applied to a container div.
+
+`qld__fieldset`Copy
+
+Class applied to the `<fieldset>` element which is used to group related form fields.
+
+`qld__fieldset__legend`Copy
+
+This class applies default style for the `<legend>` element. This element provides a caption or a title for the fieldset, describing the purpose or meaning of the form elements within it.
+
+`qld__field-width--1-quarter`Copy
+
+Utility class applied to the form field that set the width to 1 quarter of the container.
+
+`qld__field-width--half`Copy
+
+Utility class applied to the form field that set the width to half the container.
+
+`qld__field-width--3-quarters`Copy
+
+Utility class applied to the form field that set the width to 3 quarters of the container.
+
+`qld__field-width--20char`Copy
+
+Utility class applied to the form field that set the width to approximately 20 characters.
+
+`qld__field-width--10char`Copy
+
+Utility class applied to the form field that set the width to approximately 10 characters.
+
+`qld__field-width--5char`Copy
+
+Utility class applied to the form field that set the width to approximately 5 characters.
+
+`qld__field-width--4cha`Copy
+
+Utility class applied to the form field that set the width to approximately 4 characters.
+
+`qld__field-width--3char`Copy
+
+Utility class applied to the form field that set the width to approximately 3 characters.
+
+`qld__field-width--2cha`Copy
+
+Utility class applied to the form field that set the width to approximately 2 characters.
+
+Accessible form requirements
+----------------------------
+
+Keep these considerations in mind if you're designing forms.
+
+### General guidelines
+
+Never disable a submit button, even if all of the required fields aren't filled in. Instead, describe what needs to be done using validation and error messages (Atlassian, n.d).
+
+For text fields with interactive trailing icons, the accessibility label should clarify its function (Google, n.d).
+
+If you have multiple inputs for a field, don’t auto tab between them. It causes users to make mistakes (Silver, 2019).
+
+Use `'autocapitalize="none"'`, `'autocorrect="off"'` and `'spellcheck="false"'` to stop browsers automatically changing user input on fields that expect grammatically incorrect data—like email addresses and passwords (Silver, 2019).
+`<input type="email" autocapitalize="none" autocorrect="off" spellcheck="false">`
+
+Use the `<fieldset>` and `<legend>` elements to group and associate related form controls (W3C,2019a).
+
+Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress (W3C,2019a).
+
+### WCAG guidelines
+
+Below details some of the guidelines for forms see the [WCAG website](https://www.w3.org/WAI/tutorials/forms/instructions) for a more detailed accessibility guidance for each specific form element.
+
+#### WCAG Guideline 1.3.5: Identify input purpose
+
+This a Level AA criterion that aims to make web content more accessible for people with disabilities by enabling user agents and assistive technologies to understand the purpose of input fields, like select boxes, collecting user information.
+
+To comply with this guideline, you need to ensure that:
+
+*   the input field serves a purpose listed in the '[Input Purposes for User Interface Components'](https://www.w3.org/TR/WCAG21/#input-purposes "https://www.w3.org/TR/WCAG21/#input-purposes") section of the WCAG 2.1 specification
+*   the content is created using web technologies that support identifying the expected meaning of the input field.
+
+Some browsers attempt to aid the user by automatically filling form controls rather than having the user reenter their information each time. For example, a field asking for the user's telephone number can be automatically filled with the user's phone number.
+
+#### 1.3.1, 4.1.2 Use appropriate input types
+
+Use the correct input type for the specific purpose of the text input, such as `email`, `tel`, `password`, or `number`. This helps with accessibility and provides appropriate input controls for different devices (WCAG, 2018).
+
+#### 1.4.1 Use of Colour
+
+Use icons alongside error messages so that colour alone isn't used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element (WCAG, 2018).
+
+#### 1.4.3 Contrast (Minimum)
+
+All border colours should be accessible and meet a 3:1 minimum colour contrast ratio to the background (WCAG, 2018).
+
+#### 2.1.1 Keyboard accessibility
+
+Ensure that users can interact with the text input using keyboard controls. By default, text inputs should be accessible with the `Tab` key to focus and the `Enter` or `Space` keys to submit the form (if applicable) (WCAG, 2018).
+
+#### 1.3.1, 3.3.2 Indicate Required Fields
+
+Clearly indicate required fields with an asterisk `(\*)` or other visual indicators, and add the required attribute to the text input. Additionally, provide textual information, such as "(required)," for screen reader users (WCAG, 2018).
+
+#### 3.3.1, 3.3.3 Implement Accessible Error Messages
+
+If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text. (Level A).
+
+When displaying error messages, ensure they're clear, concise, and accessible to all users. Use the 'aria-describedby' attribute to associate error messages with the corresponding input field (Level AA) (WCAG, 2018).
+
+#### **3.3.4 Error Prevention (Legal, Financial, Data)**
+
+For web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true: Reversible, Checked, Confirmed (Level AA) (WCAG, 2018).
+
+#### 3.3.2 Provide Clear Instructions
+
+Ensure that any instructions or guidelines for filling out the text input are clear and easily understandable. This helps users avoid mistakes and better understand the expected input format. This is commonly seen in the form of hint text that appears below the labe (W3C 2019b).
+
+* * *
+
+References
+----------
+
+IBM (n.d. a) [Forms: Optional vs. Required Fields](https://carbondesignsystem.com/patterns/forms-pattern/#optional-vs.-mandatory "https://carbondesignsystem.com/patterns/forms-pattern/#optional-vs.-mandatory") _IBM Carbon Design System,_ accessed March 7, 2023.
+
+IBM (n.d b) [Text input](https://carbondesignsystem.com/components/text-input/accessibility "https://carbondesignsystem.com/components/text-input/accessibility"), _IBM Carbon Design System,_ accessed March 7, 2023.
+
+MOD.UK (n.d.) [Forms](https://design-system.digital.mod.uk/patterns/forms "https://design-system.digital.mod.uk/patterns/forms/"), _MOD.UK Design System,_ Ministry of Defence, accessed March 7, 2023.
+
+GOV.UK (n.d a) [Text input](https://design-system.service.gov.uk/components/text-input "https://design-system.service.gov.uk/components/text-input/"), _GOV.UK Design System_, accessed March 9, 2023.
+
+GOV.UK (n.d b) [Error message](https://design-system.service.gov.uk/components/error-message), _GOV.UK Design System_, accessed 30 July 2023.
+
+Roselli A (2022) [Avoid messages under fields](https://adrianroselli.com/2017/01/avoid-messages-under-fields.html "https://adrianroselli.com/2017/01/avoid-messages-under-fields.html"), accessed March 9, 2023.
+
+Google (n.d) [Text fields](https://m2.material.io/components/text-fields "https://m2.material.io/components/text-fields"), _Material Design System 2_, accessed March 7, 2023.
+
+Whitenton K (2016) [Website Forms Usability: Top 10 Recommendations,](https://www.nngroup.com/articles/web-form-design "https://www.nngroup.com/articles/web-form-design/") Neilson and Norman group, accessed March 7, 2023.
+
+Babich N (2020) ‘[Best Practices: Structure, Inputs & Labels](https://xd.adobe.com/ideas/principles/web-design/best-practices-form-design "https://xd.adobe.com/ideas/principles/web-design/best-practices-form-design/")’, _Adobe XD Ideas,_ Adobe, accessed March 7, 2023.
+
+Kaplan K (2022) [Hostile Patterns in Error Messages](https://www.nngroup.com/articles/hostile-error-messages), Nielsen Norman Group, accessed 30 July 2023.
+
+Krause R (2019) [How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines), Nielsen Norman Group, accessed 30 July 2023.
+
+Adobe (2022) [Text-fields](https://spectrum.adobe.com/page/text-field "https://spectrum.adobe.com/page/text-field/"), _Adobe Spectrum Design System,_ accessed March 7, 2023.
+
+Atlassian (n.d) [Form usage](https://atlassian.design/components/form/usage "https://atlassian.design/components/form/usage"), _Atlassian Design System_, accessed March 7, 2023.
+
+Silver A (n.d) [Text box,](https://nostyle.onrender.com/components/text-box "https://nostyle.onrender.com/components/text-box") _No Style Design system,_ accessed 9 March 2023.
+
+Silver A (2019) [Form design from zero to hero all in one blog post](https://adamsilver.io/blog/form-design-from-zero-to-hero-all-in-one-blog-post "https://adamsilver.io/blog/form-design-from-zero-to-hero-all-in-one-blog-post/"), Adam Silver Website, accessed March 7, 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21)World Wide Web Consortium, accessed March 7, 2023.
+
+W3C (2019a) [Forms concepts](https://www.w3.org/WAI/tutorials/forms "https://www.w3.org/WAI/tutorials/forms/"), _Web accessibility tutorials_, World Wide Web Consortium, accessed March 7, 2023.
+
+W3C (2019b) [Form instructions](https://www.w3.org/WAI/tutorials/forms/instructions "https://www.w3.org/WAI/tutorials/forms/instructions/"), _Web accessibility tutorials_, World Wide Web Consortium, accessed March 7, 2023.
+
+W3C (2019c) [Understanding Success Criterion 1.4.11: Non-text Contrast,](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)World Wide Web Consortium, accessed March 7, 2023.
+
+W3C (2019d) [Contrast (Minimum) - Low Vision Accessibility Task Force](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum)) World Wide Web Consortium, accessed March 7, 2023.
+
+Bargas-Avila JA, Brenzikofer O, Roth SP, Tuch AN, Orsini S and Opwis K (2011) '[Simple but Crucial User Interfaces in the World Wide Web: Introducing 20 Guidelines for Usable Web Form Design](https://www.semanticscholar.org/paper/Simple-but-Crucial-User-Interfaces-in-the-World-20-Bargas-Avila-Brenzikofer/d8ced0119b872a02cefe62c5885403df72e231ad)', Semantic Scholar, University of Basel, Faculty of Psychology, Department of Cognitive Psychology and Methodology, Switzerland.
+
+Digital NSW (2022) [Forms](https://digitalnsw.github.io/nsw-design-system/components/form/index.html "https://digitalnsw.github.io/nsw-design-system/components/form/index.html"), _Components, NSW Government Design System,_ accessed March 7, 2023_._
+
+Digital Transformation Agency (2018) [Text-inputs](https://gold.designsystemau.org/components/text-inputs "https://gold.designsystemau.org/components/text-inputs/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+Microsoft (2022) [Forms](https://learn.microsoft.com/en-us/windows/apps/design/controls/forms "https://learn.microsoft.com/en-us/windows/apps/design/controls/forms") _Controls and patterns, Microsoft Fluent Design System_, accessed March 7, 2023.
+
+Birkett A (2019) [Form design: 13 empirically backed best practices](https://cxl.com/blog/form-design-best-practices "https://cxl.com/blog/form-design-best-practices/"), accessed 30 April 2020.
+
+[//]: # (/\*Hides two of the colour options that are not available for this component \*/ .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;3&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;2&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-last-child&#40;1&#41; { display: none; })
+
+**Last updated:** May 2024

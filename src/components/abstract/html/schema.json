@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Component",
+    "type": "object",
+    "properties": {
+        "component": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "type": "object",
+                    "properties": {
+                        "assetid": {
+                            "type": "string"
+                        },
+                        "content": {
+                            "type": "metadata_field_wysiwyg",
+                            "description": "Content to display",
+                            "friendly_name": "Content",
+                            "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "required": false,
+                            "editable": true
+                        },
+                        "metadata": {
+                            "type": "object",
+                            "properties": {
+                                "id_field": {
+                                    "type": "object",
+                                    "properties": {
+                                        "value": {
+                                            "type": "metadata_field_text",
+                                            "description": "",
+                                            "friendly_name": "Id field",
+                                            "value": "abstract-000",
+                                            "required": false,
+                                            "editable": true
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": [
+                        "content"
+                    ]
+                }
+            },
+            "required": [
+                "data"
+            ]
+        }
+    },
+    "required": [
+        "component"
+    ]
+}

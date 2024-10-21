@@ -1,0 +1,113 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as linkedList from "./linkList.stories.js"
+import classTable from "./classesTable.md?raw"
+
+<Meta of={linkedList} />
+
+
+# Linked List
+
+May also be known as: ``Lists`` ``li`` ``ul`` ``ol``
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395558&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+
+
+# Overview
+
+Linked Lists are a collection of items that are ordered in a sequence. They are used to group related items together and provide a clear visual hierarchy. Linked Lists are commonly used to display navigation menus, lists of items, or other types of content that need to be displayed in a structured way.
+
+* * *
+
+## Linked List
+
+These buttons are designed to be the most prominent and visually distinct on a page or within a user interface. Primary buttons are typically used to indicate the primary action that a user is intended to take, such as submitting a form, initiating a purchase, or creating a new account.
+
+Example
+
+<Canvas additionalActions={[{ title: 'Linked List', layout: 'centered' }]}
+        of={linkedList.Default} />
+
+## Linked List (Inline)
+
+<Canvas additionalActions={[{ title: 'Linked List (Inline)', layout: 'centered' }]}
+        of={linkedList.linkedListInline} />
+
+
+## Implementation
+
+### Classes
+
+<Markdown>
+    {classTable}
+</Markdown>
+
+
+* * *
+
+# Accessibility
+
+## Accessible button requirements
+
+Keep these considerations in mind if you are modifying the design system or creating a custom component.
+
+### General guidelines
+
+Ensure that the button is large enough to be easily clicked or tapped, with enough space around it to avoid accidental clicks. It's commonly recommended that you should use a minimum touch target size of 48px x 48px to ensure that buttons are easily clickable on both desktop and mobile devices.
+
+### WCAG guidelines  2.1
+
+#### 1.4.3 Contrast (Minimum)
+
+Ensure that there is sufficient contrast between the button background and text or icon on the button, to make it easy to read for users with low vision or colour blindness (W3C, 2018).
+
+#### 1.4.1 Use of Color
+
+Buttons should have an underline on hover so that colour alone is not the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element (W3C, 2018).
+
+#### 2.1 Keyboard Accessible
+
+Ensure that global alerts are operable by providing keyboard accessibility. Users should be able to navigate and interact with alerts using only a keyboard, without requiring a mouse or other pointing device. This includes ensuring that all interactive elements within the alert are keyboard accessible (W3C, 2018).
+
+#### 2.4.7 Focus Visible
+
+This guideline requires that all interactive elements, including buttons, have a visible focus indicator that is easy to see and identify. This allows users who navigate using a keyboard or other assistive technology to know where they are on the page (W3C, 2018).
+
+#### 4.1.2 Name, Role, Value
+
+Use semantic HTML markup for buttons, including the appropriate ``<button>`` element and the "type" attribute. Use descriptive names or labels for buttons, so that assistive technology can identify the button and its function (W3C, 2018).
+
+#### 4.1.3 Status Messages
+
+Use visual and/or auditory feedback to provide status messages to users, such as when a button is clicked or an action is taken (W3C, 2018).
+
+* * *
+
+# Related components
+
+
+[Forms](forms.html) FIXME
+
+[Call-to-actions](call-to-action-cta.html)
+
+# References
+
+Google (n.d.) [Buttons](https://m2.material.io/components/buttons#specs "https://m2.material.io/components/buttons#specs"), _Material Design 3_, accessed 11 April 2023.
+
+Babich, N (2016) [A Quick Guide for Designing Better Buttons](https://www.smashingmagazine.com/2016/11/a-quick-guide-for-designing-better-buttons "https://www.smashingmagazine.com/2016/11/a-quick-guide-for-designing-better-buttons/"), _Smashing Magazine_, accessed 11 April 2023.
+
+Roller, C (2012) [7 Basic Best Practices for Buttons](https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php "https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php"), UX Matters, accessed 11 April 2023.
+
+Digital Transformation Agency (2018) [Buttons](https://gold.designsystemau.org/components/buttons "https://gold.designsystemau.org/components/buttons/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+W3C (n.d.) [Understanding Success Criterion 2.5.5: Target Size](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html "https://www.w3.org/WAI/WCAG21/Understanding/target-size.html"), _Web Content Accessibility Guidelines_ (WCAG) 2.1, accessed 11 April 2023.
+
+Harley, A (2013) [Icon Usability](https://www.nngroup.com/articles/icon-usability "https://www.nngroup.com/articles/icon-usability/"), Nielsen Norman Group, accessed 11 April 2023.
+
+Digital NSW (n.d.) [Buttons](https://digitalnsw.github.io/nsw-design-system/components/button/index.html "https://digitalnsw.github.io/nsw-design-system/components/button/index.html"), _NSW Design System_, accessed 10 April 2023.
+
+**Last updated:** August 2023
+
+

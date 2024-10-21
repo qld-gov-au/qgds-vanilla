@@ -1,10 +1,17 @@
-(function () {
+import 'prismjs';
+// Load the languages you want to highlight
+// @see https://github.com/PrismJS/prism/tree/master/components for an overview of all languages
+import 'prismjs/components/prism-markup-templating';
+import 'prismjs/components/prism-php';
+import 'prismjs/components/prism-java';
+
+export default function (QLD) {
     /**
      * @module code
      */
     var code = {};
 
-    code.init = function() {
+    code.init = function () {
         const codes = document.querySelectorAll('code')
         const inlinecodes = document.querySelectorAll('code:not(.qld__code-body)')
         const copyButtons = document.querySelectorAll('.qld__code-copy--button')
@@ -12,13 +19,13 @@
         const colorButtons = document.querySelectorAll('.qld__code-preview-colours input[type=radio]')
 
         if (codes.length) {
-            codes.forEach(function(code) {
+            codes.forEach(function (code) {
                 code.innerHTML = Prism.highlight(code.innerText, Prism.languages.html, 'html')
             })
         }
 
         if (inlinecodes.length) {
-            inlinecodes.forEach(function(inlinecode){
+            inlinecodes.forEach(function (inlinecode) {
                 const codeWrap = document.createElement("div");
                 codeWrap.classList.add('qld__code--inline');
 
@@ -36,7 +43,7 @@
                     copyButtonAction(this);
                 })
 
-                inlinecode.addEventListener("keypress", function(event) {
+                inlinecode.addEventListener("keypress", function (event) {
                     if (event.key === "Enter") {
                         event.preventDefault();
                         copyButtonAction(this);
@@ -44,9 +51,9 @@
                 });
             })
         }
-        
+
         if (copyButtons.length) {
-            copyButtons.forEach(function(copyButton){
+            copyButtons.forEach(function (copyButton) {
                 copyButton.addEventListener('click', function () {
                     copyButtonAction(this);
                 })
@@ -54,7 +61,7 @@
         }
 
         if (showToggle.length) {
-            showToggle.forEach(function(showToggleButton){
+            showToggle.forEach(function (showToggleButton) {
                 const parent = showToggleButton.closest('.qld__code');
                 const target = parent.querySelector('code')
                 target.style.height = '120px'
@@ -80,17 +87,17 @@
         }
 
         if (colorButtons.length) {
-            colorButtons.forEach(function(colorButton){
+            colorButtons.forEach(function (colorButton) {
                 colorButton.addEventListener('change', function () {
                     const body = colorButton.closest('.qld__code').querySelector('.qld__code-preview-body')
-                    body.classList.remove('qld__body--light','qld__body--alt','qld__body--dark','qld__body--dark-alt')
-                    if (this.value){
+                    body.classList.remove('qld__body--light', 'qld__body--alt', 'qld__body--dark', 'qld__body--dark-alt')
+                    if (this.value) {
                         body.classList.add(this.value)
                     }
                     const toggle = colorButton.closest('.qld__code').querySelector('.qld__code-toggle')
-                    if (typeof(toggle)!=='undefined'){
-                        toggle.classList.remove('qld__body--light','qld__body--alt','qld__body--dark','qld__body--dark-alt')
-                        if (this.value){
+                    if (typeof (toggle) !== 'undefined') {
+                        toggle.classList.remove('qld__body--light', 'qld__body--alt', 'qld__body--dark', 'qld__body--dark-alt')
+                        if (this.value) {
                             toggle.classList.add(this.value)
                         }
                     }
@@ -100,7 +107,7 @@
     }
 
     function copyButtonAction(button) {
-        if (button.classList.contains('qld__code-copy--button')){
+        if (button.classList.contains('qld__code-copy--button')) {
             const parent = button.closest('.qld__code');
             copyTextToClipboard(parent.querySelector('code').innerText)
             button.classList.add('copied');
@@ -111,7 +118,7 @@
         } else {
             copyTextToClipboard(button.innerText);
             button.nextElementSibling.innerText = "Copied"
-            button.addEventListener('blur', function() {
+            button.addEventListener('blur', function () {
                 button.nextElementSibling.innerText = "Copy"
             });
         }
@@ -120,16 +127,16 @@
     function fallbackCopyTextToClipboard(text) {
         const textArea = document.createElement("textarea")
         textArea.value = text;
-        
+
         // Avoid scrolling to bottom
         textArea.style.top = "0"
         textArea.style.left = "0"
         textArea.style.position = "fixed"
-      
+
         document.body.appendChild(textArea)
         textArea.focus()
         textArea.select()
-      
+
         try {
             const successful = document.execCommand('copy')
             const msg = successful ? 'successful' : 'unsuccessful';
@@ -137,7 +144,7 @@
         } catch (err) {
             console.error('Fallback: Oops, unable to copy', err)
         }
-      
+
         document.body.removeChild(textArea)
     }
 
@@ -146,9 +153,9 @@
             fallbackCopyTextToClipboard(text)
             return;
         }
-        navigator.clipboard.writeText(text).then(function() {
+        navigator.clipboard.writeText(text).then(function () {
             console.log('Async: Copying to clipboard was successful!')
-        }, function(err) {
+        }, function (err) {
             console.error('Async: Could not copy text: ', err)
         });
     }
@@ -157,4 +164,5 @@
 
     // Init In Page Nav on document load
     document.addEventListener('DOMContentLoaded', QLD.code.init)
-}());
+}
+

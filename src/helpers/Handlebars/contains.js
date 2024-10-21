@@ -1,4 +1,4 @@
-module.exports = function(string, contains, options) {
+export default function(string, contains, options) {
     if(string.indexOf(contains) !== -1) {
         return options.fn(this);
     }

@@ -1,4 +1,4 @@
-(function () {
+export default function (QLD) {
     'use strict';
 
 
@@ -7,16 +7,16 @@
         function checkIfAzSelected() {
             var hash = window.location.hash;
 
-            if(hash) {
-                setTimeout(function() {
+            if (hash) {
+                setTimeout(function () {
                     var $servicesAZOptions = $('.qld__a-z_listing__options__item__link');
                     var $servicesAZHeaders = $('.qld__a-z_listing__list__item__header');
 
-                    $servicesAZOptions.each(function() {
+                    $servicesAZOptions.each(function () {
                         $(this).removeClass('active');
                     });
-        
-                    $servicesAZHeaders.each(function() {
+
+                    $servicesAZHeaders.each(function () {
                         $(this).removeClass('active');
                     });
 
@@ -36,17 +36,17 @@
             var target = $.attr(this, 'href');
             event.preventDefault();
 
-            $servicesAZOptions.each(function() {
+            $servicesAZOptions.each(function () {
                 $(this).removeClass('active');
             });
 
-            $servicesAZHeaders.each(function() {
+            $servicesAZHeaders.each(function () {
                 $(this).removeClass('active');
             });
 
             $(this).addClass('active');
             $(`.qld__a-z_listing__list__item__header ${target}`).parent().addClass('active');
-        
+
             $('html, body').animate({
                 scrollTop: $(target).offset().top - 20
             }, 400);
@@ -54,12 +54,12 @@
             window.location.hash = target;
         });
 
-        $(window).on('hashchange', function() {
+        $(window).on('hashchange', function () {
             checkIfAzSelected();
         });
 
         checkIfAzSelected();
 
     });
-    
-}());
+
+}

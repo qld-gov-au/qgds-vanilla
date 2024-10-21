@@ -1,4 +1,6 @@
-(function () {
+import 'datatables.net';
+
+export default function (QLD) {
     "use strict";
 
     /**
@@ -30,7 +32,7 @@
 
         if (tableLines.length > 0) {
             tableColumnHeads = tableLines.shift().split(","); //whatever is the first element is the header.
-            // if (tableLines?.length > 0) { //This allows us to have a separate footer to the header. 
+            // if (tableLines?.length > 0) { //This allows us to have a separate footer to the header.
             //     //If anything left then goes to the footer.
             //     tableFooterData = tableLines.pop().split(",");
             //     if (tableLines?.length > 0 && !tableFooterData[0]) {
@@ -48,7 +50,7 @@
 
     function getTableData(tableLines = [], tableColumnHeads) {
         let returnArray = [];
-        
+
         let tableLength = tableLines.length - 1;
 
         for (let i = 0; i < tableLength; i++) {
@@ -70,7 +72,7 @@
     }
 
     function dataTableCsv(tableDiv) {
-        
+
         let tableDivId = tableDiv.attr("id");
         tableDivId = '#' + tableDivId;
 
@@ -93,7 +95,7 @@
 
             // Defining variblers that are included in the table using the processed data from the functions.
             let tableColumns = tableColumnHeads.map((column) => {
-                return { data: column, title: column };
+                return {data: column, title: column};
             });
 
             let footerHasContent = false;
@@ -307,11 +309,10 @@
                 $("li.previous").addClass("prev"); //adding the appropriate class
 
 
-
             },
         });
 
-        $( // this line enforces the correct sorting class to the html table's first column's footer. 
+        $( // this line enforces the correct sorting class to the html table's first column's footer.
             tableDivId + " #qld_table_html tfoot tr th:first-child"
         ).addClass("sorting_1");
 
@@ -341,14 +342,15 @@
 
         const tableDivs = $(".qld__data-table");
 
-        for(let tableDiv of tableDivs) {
+        for (let tableDiv of tableDivs) {
             triggerFunctionBasedOnClass($(tableDiv));
         }
-        
+
     }
 
     QLD.dataTable = dataTable;
 
     document.addEventListener("DOMContentLoaded", QLD.dataTable.init);
 
-})();
+}
+

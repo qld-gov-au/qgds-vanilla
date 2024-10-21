@@ -1,0 +1,23 @@
+{{! modal.hbs v0.0.1 }}
+{{! For this to work, use must use a button to open the model which has a data_attributes "data-modaltarget" that has a value of the 'id' of the qld__modal }}
+<div id="{{component.data.metadata.id_field.value}}"  class="qld__modal " tabindex="-1">
+    <div class="qld__modal__underlay"></div>
+    <div class="qld__modal__inner">
+        <div class="qld__modal__header">
+            {{#if component.data.modal.header.icon.value}}<i class="qld__modal__header-icon qld__icon
+{{#if component.data.modal.header.icon.size}}qld__icon--{{ component.data.modal.header.icon.size}}{{/if}} {{component.data.modal.header.icon.value}}" aria-hidden="true"></i>{{/if}}
+            <span class="qld__modal__header-heading {{#if component.data.modal.header.size}} qld__display-{{ component.data.modal.header.size }}{{/if}}">{{{component.data.modal.header.value}}}</span>
+            <button class="qld__btn qld__btn--close" data-action="close">
+                <span class="sr-only"> Close modal </span>
+                <i class="fal fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="qld__modal__content">
+            {{{component.data.modal.content.value}}}
+        </div>
+        <div class="qld__modal__footer">
+            <hr class="qld__horizontal-rule qld__horizontal-rule--md">
+            {{{component.data.modal.footer.value}}}
+        </div>
+    </div>
+</div>

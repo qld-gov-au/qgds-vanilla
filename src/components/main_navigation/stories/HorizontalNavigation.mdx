@@ -1,0 +1,485 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+import * as Stories from "./mainNavigation.stories"
+
+import PrimaryNavigation from "./Primary-Navigation.png"
+import MegaMenu from "./Mega-Menu.png"
+import DesktopAnatomy from "./desktop-anatomy.png"
+import MobileAnatomy from "./mobile-anatomy.png"
+import Frame2578 from "./Frame-2578.png"
+import ActiveState from "./Active-state.png"
+import Hamburger from "./hamburger.png"
+import DropdownVsSequential from "./Dropdown-vs-sequential.png"
+
+
+<Meta of={Stories} name="Horizontal Navigation - Overview" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Horizontal navigation
+=====================
+
+May also be known as:
+
+Top navigation menu, Header menu, Main nav, Main menu, Site-wide navigation menu, Navbar (short for Navigation Bar), Top-level navigation, Primary navigation bar, Main navigation
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23781%3A307770&mode=design&t=rwHNqBNfxZIobW9s-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+The main navigation component is intended to be used as the primary means of navigation around the website. It typically accommodates the top level of the information architecture.
+
+Most sites will require some form of navigation to help users find the information they’re looking for. While a horizontal navigation bar is just one option for navigation design, it's one of the most visible and familiar ways of helping users navigate a site.
+
+The main navigation component is designed to work closely with the [header](header.html) component and collapses down to a conventional open/close menu button on smaller devices.
+
+Another important aspect of the primary navigation is the mega-menu. The mega-menu is an optional addition to the primary navigation. It offers a curated list of level 2 child pages for any of the links in the primary navigation bar.
+
+Horizontal navigation is limited to two colours either light or dark.
+
+Default example
+---------------
+
+Please note the horizontal navigation component is best [previewed in a new window.](navigation-horizontal-primary/tabs/horizontal-navigation.html) The live example is a replication of this site's current IA in the horizontal navigation format.
+
+Example
+
+###### Menu
+
+
+###### Menu
+
+##FIXME EXAMPLE
+
+`<!-- Main navigation bar --> <nav class="qld__main-nav qld__main-nav--mega" id="mainmenu"> <div class="container-fluid"> <!-- Main navigation content wrapper --> <div class="qld__main-nav__content" id="main-nav"> <!-- Navigation menu wrapper --> <div class="qld__main-nav__menu"> <!-- Inner navigation menu wrapper --> <div class="qld__main-nav__menu-inner"> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-top"></div> <!-- Navigation header which contains menu title and close button --> <div class="qld__main-nav__header"> <h6 class="qld__main-nav__menu-heading">Menu</h6> <!-- Close button for the menu --> <button aria-controls="main-nav" class="qld__main-nav__toggle qld__main-nav__toggle--close"> <!-- SVG icon for the close button --> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Close"> </use> </svg> <span class="qld__main-nav__toggle-text">Close</span> </button> </div> <!-- Navigation link list --> <ul class="qld__link-list qld__link-list--flex"> <!-- Here is a navigation item example --> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-home qld__main-nav__item-link" href="#"> <!-- SVG icon for the link --> <span class="qld__main-nav__item-icon"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Home"> </use> </svg> </span> <span class="qld__main-nav__item-text" data-name="">Home</span> </a> </div> </li> <li class="qld__main-nav__item active"> <!-- Active --> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link" href="#">Page 1 (active)</a> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link" href="#">Page 2</a> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link" href="#"> <!-- SVG icon for the link --> <span class="qld__main-nav__item-icon"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Settings"> </use> </svg> </span> Page 3 (with icon) </a> </div> </li> </ul> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-bottom"></div> </div> </div> <!-- Overlay element, which usually displayed when menu is open --> <div class="qld__main-nav__overlay" aria-controls="main-nav"></div> </div> </div> </nav> <br> <!-- Main navigation bar --> <nav class="qld__main-nav qld__main-nav--dark qld__main-nav--mega" id="mainmenu"> <div class="container-fluid"> <!-- Main navigation content wrapper --> <div class="qld__main-nav__content" id="main-nav"> <!-- Navigation menu wrapper --> <div class="qld__main-nav__menu"> <!-- Inner navigation menu wrapper --> <div class="qld__main-nav__menu-inner"> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-top"></div> <!-- Navigation header which contains menu title and close button --> <div class="qld__main-nav__header"> <h6 class="qld__main-nav__menu-heading">Menu</h6> <!-- Close button for the menu --> <button aria-controls="main-nav" class="qld__main-nav__toggle qld__main-nav__toggle--close"> <!-- SVG icon for the close button --> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Close"> </use> </svg> <span class="qld__main-nav__toggle-text">Close</span> </button> </div> <!-- Navigation link list --> <ul class="qld__link-list qld__link-list--flex"> <!-- Here is a navigation item example --> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-home qld__main-nav__item-link" href="#"> <!-- SVG icon for the link --> <span class="qld__main-nav__item-icon"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Home"> </use> </svg> </span> <span class="qld__main-nav__item-text" data-name="">Home</span> </a> </div> </li> <li class="qld__main-nav__item active"> <!-- Active --> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link" href="#">Page 1 (active)</a> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link" href="#">Page 2</a> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link" href="#"> <!-- SVG icon for the link --> <span class="qld__main-nav__item-icon"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Settings"> </use> </svg> </span> Page 3 (with icon) </a> </div> </li> </ul> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-bottom"></div> </div> </div> <!-- Overlay element, which usually displayed when menu is open --> <div class="qld__main-nav__overlay" aria-controls="main-nav"></div> </div> </div> </nav>`
+
+* * *
+
+Mega-menu
+---------
+
+Sites with large IA structure can opt to use the mega-menu. The mega-menu is an optional addition to the primary navigation. It offers a curated list of level 2 child pages for any of the links in the primary navigation bar.  Mega-menus are great choice for accommodating a large number of options or for revealing lower-level site pages at a glance.
+
+On Desktop the mega-menus only has two colour options a light or a dark theme.
+
+### Level 2 Descriptions
+
+Description text is an optional element that can turned on and off for all level 2 links.  **It is limited to 130 characters** so that it spans no more then 4 lines at its minimum width. If the text exceeds this length then the it will default to using ...  at the end of the sentence.  If descriptions are enabled there should only be a maximum of 9 level 2 links to avoid the design becoming to overwhelming.
+
+Please note the the mega menu component is best [previewed in a new window](navigation-horizontal-primary/tabs/horizontal-navigation.html).
+
+Example
+
+###### Menu
+
+## FIXME Example
+
+## FIXME example
+
+`<!-- Main navigation bar --> <nav class="qld__main-nav qld__main-nav--mega" id="mainmenu"> <div class="container-fluid"> <!-- Main navigation content wrapper --> <div class="qld__main-nav__content" id="main-nav"> <!-- Navigation menu wrapper --> <div class="qld__main-nav__menu"> <!-- Inner navigation menu wrapper --> <div class="qld__main-nav__menu-inner"> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-top"></div> <!-- Navigation header which contains menu title and close button --> <div class="qld__main-nav__header"> <h6 class="qld__main-nav__menu-heading">Menu</h6> <!-- Close button for the menu --> <button aria-controls="main-nav" class="qld__main-nav__toggle qld__main-nav__toggle--close"> <!-- SVG icon for the close button --> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--sm"> <use href="./?a=151118#icon-Close"></use> </svg> <span class="qld__main-nav__toggle-text">Close</span> </button> </div> <!-- Navigation link list --> <ul class="qld__link-list qld__link-list--flex"> <!-- Here is a navigation item example --> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-home qld__main-nav__item-link" href="#"> <!-- SVG icon for the link --> <span class="qld__main-nav__item-icon"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--sm"> <use href="./?a=151118#icon-Home"></use> </svg> </span> <span class="qld__main-nav__item-text" data-name="">Home</span> </a> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link qld__main-nav__item-link--desktop-hide" href="javascript:void(0)">Default example</a> <button class="qld__main-nav__item-toggle qld__accordion--closed" aria-controls="Default-1" aria-expanded="false" aria-selected="false" aria-label="Toggle navigation, Default example"> <span class="qld__main-nav__item-toggle-text" data-name="Default example">Defualt mega-menu style</span> <svg class="qld__icon qld__icon--sm"> <use href="./../svg-icons.svg#qld__icon__chevron-up"></use> </svg> </button> </div> <div class="qld__main-nav__menu-sub qld__accordion__body qld__accordion--closed" id="Default-1" style=""> <div class="qld__main-nav__menu-sub-inner"> <div class="qld__main-nav__sub-head"> <a class="qld__main-nav__sub-heading" href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text qld__display-lg">Default example</span> <svg class="qld__icon qld__icon--lg"> <use href="./?a=151118#icon__arrow-right"> </use> </svg> </a> </div> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <ul class="qld__link-columns qld__link-columns--3-col qld__link-list"> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Visiting someone in hospital</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Going to hospital</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Leaving hospital</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Aboriginal and Torres Strait Islander support</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Interpreter services</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Your health record</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Your healthcare rights and responsibilities</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Health costs, insurance and financial support</span> </a> </li> </ul> <div class="qld__main-nav__sub-footer"> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <a class="qld__cta-link qld__cta-link--view-all" href="javascript:void(0)">View all</a> </div> </div> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link qld__main-nav__item-link--desktop-hide" aria-current="page" href="javascript:void(0)">Description example</a> <button class="qld__main-nav__item-toggle qld__accordion--closed" aria-controls="Description-example" aria-expanded="false" aria-selected="false" aria-label="Toggle navigation, Description example"> <span class="qld__main-nav__item-toggle-text" data-name="Description example">Mega menu with descriptions</span> <svg class="qld__icon qld__icon--sm"> <use href="./../svg-icons.svg#qld__icon__chevron-up"></use> </svg> </button> </div> <div class="qld__main-nav__menu-sub qld__accordion__body qld__accordion--closed" id="Description-example" style=""> <div class="qld__main-nav__menu-sub-inner"> <div class="qld__main-nav__sub-head"> <a class="qld__main-nav__sub-heading" href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text qld__display-lg">Mega menu with descriptions</span> <svg class="qld__icon qld__icon--lg"> <use href="./?a=151118#icon__arrow-right"> </use> </svg> </a> </div> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <ul class="qld__link-columns qld__link-columns--3-col qld__link-list"> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Know your habits</span> </a> <p class="qld__main-nav__item-desc"> Learn what makes you feel like smoking, how you can avoid triggers, and change your habits. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">What to expect</span> </a> <p class="qld__main-nav__item-desc"> Learn how to manage withdrawal symptoms, stress and possible weight gain. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Use quit tools and apps</span> </a> <p class="qld__main-nav__item-desc"> Keep on track by using digital tools and apps for support, motivation and useful advice while quitting. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)m"> <span class="qld__main-nav__sub-item-text">Our support program</span> </a> <p class="qld__main-nav__item-desc"> My Quit Journey is our personalised email support program. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Get help from Quitline</span> </a> <p class="qld__main-nav__item-desc"> Quitline is a telephone service dedicated to helping Queenslanders quit smoking. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Nicotine Replacement Therapy</span> </a> <p class="qld__main-nav__item-desc"> Support from a health professional combined with the using nicotine products will give you the best chance of quitting. </p> </li> </ul> <div class="qld__main-nav__sub-footer"> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <a class="qld__cta-link qld__cta-link--view-all" href="javascript:void(0)">View all</a> </div> </div> </div> </li> </ul> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-bottom"></div> </div> </div> <!-- Overlay element, which usually displayed when menu is open --> <div class="qld__main-nav__overlay" aria-controls="main-nav"></div> </div> </div> </nav> <br> <!-- Main navigation bar --> <nav class="qld__main-nav qld__main-nav--dark qld__main-nav--mega" id="mainmenu"> <div class="container-fluid"> <!-- Main navigation content wrapper --> <div class="qld__main-nav__content" id="main-nav"> <!-- Navigation menu wrapper --> <div class="qld__main-nav__menu"> <!-- Inner navigation menu wrapper --> <div class="qld__main-nav__menu-inner"> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-top"></div> <!-- Navigation header which contains menu title and close button --> <div class="qld__main-nav__header"> <h6 class="qld__main-nav__menu-heading">Menu</h6> <!-- Close button for the menu --> <button aria-controls="main-nav" class="qld__main-nav__toggle qld__main-nav__toggle--close"> <!-- SVG icon for the close button --> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Close"></use> </svg> <span class="qld__main-nav__toggle-text">Close</span> </button> </div> <!-- Navigation link list --> <ul class="qld__link-list qld__link-list--flex"> <!-- Here is a navigation item example --> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-home qld__main-nav__item-link" href="#"> <!-- SVG icon for the link --> <span class="qld__main-nav__item-icon"> <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md"> <use href="./?a=151118#icon-Home"></use> </svg> </span> <span class="qld__main-nav__item-text" data-name="">Home</span> </a> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link qld__main-nav__item-link--desktop-hide" href="javascript:void(0)">Default example</a> <button class="qld__main-nav__item-toggle qld__accordion--closed" aria-controls="Default-2" aria-expanded="false" aria-selected="false" aria-label="Toggle navigation, Default example 2"> <span class="qld__main-nav__item-toggle-text" data-name="Default example 2">Default mega-menu style</span> <svg class="qld__icon qld__icon--sm"> <use href="./../svg-icons.svg#qld__icon__chevron-up"></use> </svg> </button> </div> <div class="qld__main-nav__menu-sub qld__accordion__body qld__accordion--closed" id="Default-2" style=""> <div class="qld__main-nav__menu-sub-inner"> <div class="qld__main-nav__sub-head"> <a class="qld__main-nav__sub-heading" href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text qld__display-lg">Default mega-menu style</span> <svg class="qld__icon qld__icon--lg"> <use href="./?a=151118#icon__arrow-right"> </use> </svg> </a> </div> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <ul class="qld__link-columns qld__link-columns--3-col qld__link-list"> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Visiting someone in hospital</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Going to hospital</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Leaving hospital</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Aboriginal and Torres Strait Islander support</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Interpreter services</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Your health record</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Your healthcare rights and responsibilities</span> </a> </li> <li class=""> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Health costs, insurance and financial support</span> </a> </li> </ul> <div class="qld__main-nav__sub-footer"> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <a class="qld__cta-link qld__cta-link--view-all" href="javascript:void(0)">View all</a> </div> </div> </div> </li> <li class="qld__main-nav__item"> <div class="qld__main-nav__item-title"> <a class="qld__main-nav__item-link qld__main-nav__item-link--desktop-hide" aria-current="page" href="javascript:void(0)">Description example</a> <button class="qld__main-nav__item-toggle qld__accordion--closed" aria-controls="Description-2" aria-expanded="false" aria-selected="false" aria-label="Toggle navigation, Description example 2"> <span class="qld__main-nav__item-toggle-text" data-name="Description exampl 2">Mega menu with descriptions</span> <svg class="qld__icon qld__icon--sm"> <use href="./../svg-icons.svg#qld__icon__chevron-up"></use> </svg> </button> </div> <div class="qld__main-nav__menu-sub qld__accordion__body qld__accordion--closed" id="Description-2" style=""> <div class="qld__main-nav__menu-sub-inner"> <div class="qld__main-nav__sub-head"> <a class="qld__main-nav__sub-heading" href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text qld__display-lg">Mega menu with descriptions</span> <svg class="qld__icon qld__icon--lg"> <use href="./?a=151118#icon__arrow-right"> </use> </svg> </a> </div> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <ul class="qld__link-columns qld__link-columns--3-col qld__link-list"> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Know your habits</span> </a> <p class="qld__main-nav__item-desc"> Learn what makes you feel like smoking, how you can avoid triggers, and change your habits. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">What to expect</span> </a> <p class="qld__main-nav__item-desc"> Learn how to manage withdrawal symptoms, stress and possible weight gain. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Use quit tools and apps</span> </a> <p class="qld__main-nav__item-desc"> Keep on track by using digital tools and apps for support, motivation and useful advice while quitting. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)m"> <span class="qld__main-nav__sub-item-text">Our support program</span> </a> <p class="qld__main-nav__item-desc"> My Quit Journey is our personalised email support program. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Get help from Quitline</span> </a> <p class="qld__main-nav__item-desc"> Quitline is a telephone service dedicated to helping Queenslanders quit smoking. </p> </li> <li class="qld__main-nav__item--has-desc"> <a href="javascript:void(0)"> <span class="qld__main-nav__sub-item-text">Nicotine Replacement Therapy</span> </a> <p class="qld__main-nav__item-desc"> Support from a health professional combined with the using nicotine products will give you the best chance of quitting. </p> </li> </ul> <div class="qld__main-nav__sub-footer"> <hr class="qld__horizontal-rule qld__horizontal-rule--lg" /> <a class="qld__cta-link qld__cta-link--view-all" href="javascript:void(0)">View all</a> </div> </div> </div> </li> </ul> <!-- Focus trap for accessibility purposes (keyboard navigation) --> <div class="qld__main-nav__focus-trap-bottom"></div> </div> </div> <!-- Overlay element, which usually displayed when menu is open --> <div class="qld__main-nav__overlay" aria-controls="main-nav"></div> </div> </div> </nav>`
+
+* * *
+
+Usage guidelines for primary navigation
+---------------------------------------
+
+<img src={PrimaryNavigation} alt="Example of primary horizontal navigation" />
+
+### Success status icon Indicates a success state When to use
+
+*   **When you have a limited number of top-level menu items:** Horizontal menus are most effective when there are only a few main categories or sections (typically between 5-7). This keeps the menu clean, simple, and easy to navigate for users
+*   **Corporate, news, or campaign sites:** Horizontal navigation is particularly suitable for corporate websites, news portals, and campaign sites, as these typically have well-structured content and require easy access to the most important sections
+*   **Sites that prioritise discoverability:** Websites that want to prioritise discoverability and help users easily find important sections or pages can benefit from horizontal navigation, as it prominently displays the main categories at the top of the page
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+*   **When you have a large number of top-level menu items:** If your website has numerous main categories or sections, a horizontal menu might become cluttered and difficult to navigate. In this case, consider using a [vertical navigation menu](navigation-vertical-primary.html) to accommodate more items
+*   **When you need to conserve horizontal space:** If your website has limited horizontal space due to a specific design or layout, a horizontal menu might not be the best choice
+*   **When the content hierarchy doesn't require a primary navigation:** If your website's content is simple and doesn't need a clear content hierarchy, a horizontal menu might not be necessary. In such cases, opt for simpler navigation options like in-page links, footer links and turning off the primary navigation completely
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+### Do
+
+*   **Show each choice only once:** Duplicating options makes users wonder whether the 2 occurrences are the same or different
+*   **Order the groups:** You can do this using an inherent order among the features (as for a workflow) or according to importance, putting the most important or frequently used group at the top. Higher-demand links should appear farther to the left, and lower-demand links should appear farther to the right
+*   **Consider the primacy effect:** Items at the beginning of a list are more easily remembered
+*   **Recency effect:** Items at the end of a list (or things that just happened) are more easily remembered
+*   **Keep navigation as simple as possible:** The more items in your navigation, the more difficult the information is to remember and process for your visitors, typically, 5-7 items are recommended for horizontal navigation
+*   **Keep words short and direct:** For example, the base form of verbs ("shop") is usually better than gerunds ("shopping")
+*   **Incorporate icons carefully:** Icons can help when there are a lot of links to call attention to important tasks or categories, on horizontal navigation it is not recommend to include a leading icon on links that open a mega-menu as it is visually cluttered, increases horizontal space and may impede usability.
+*   **Use descriptive, recognisable link labels:** Don’t label links with jargon or unfamiliar terms
+*   **Place important keywords** at the beginning of headlines and subheadings to make it easier for users to quickly determine what the content is about (Nielsen, J 2008).
+
+### Don't
+
+*   **Use generic labels:** Don't use labels like "More" or "Menu" for menu items. Instead, use specific, descriptive text that helps users understand the purpose of each item
+*   **Use vague or misleading labels:** Don't use labels that are vague or misleading (e.g. "Services" instead of "Web Design Services")
+*   **Overcrowd the navigation:** Avoid putting too many links in the primary navigation. This can make it difficult for users to find what they're looking for
+*   **Use obscure symbols or icons:** Avoid using symbols or icons that may be confusing to users. Stick to simple, easily recognisable icons if you must use them
+*   **Use inconsistent navigation throughout the site:** Make sure the layout and design of your primary navigation is consistent throughout the site. Don't make users have to re-learn how to navigate your site every time they visit a new page
+
+Usage guidelines for mega-menus
+-------------------------------
+
+<img src={MegaMenu} alt="Example of mega menu" />
+
+### Success status icon Indicates a success state When to use
+
+Mega menus are optional and the best approach is to think of mega menus as a method to enhance navigation. Mega menus shouldn't be integral to the navigation of a website.
+
+### Status cancel icon Cancel icon or warning icon When not to use:
+
+**Small websites**: If your website only has a few pages or sections, a mega menu might be overkill. A simple top-level navigation bar could be sufficient and less overwhelming for users.
+
+**User behaviour**: If your users typically come to your site knowing exactly what they're looking for, a mega menu might be unnecessary. For example, if users typically use the search function instead of browsing through menus, investing in a mega menu might not provide much value.
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+Sub-navigation follows much of the best practice as the primary navigation with a few additional considerations listed below:
+
+*   **Show each choice only once:** Duplicating options makes users wonder whether the 2 occurrences are the same or different. If you can't create a watertight case for its inclusion, you should remove it.
+*   **Consider the journey we want the user to take with sub-navigation.** Mega-menus should be curated space. In some cases mega menus can alter a user's journey. Consider if your menu item actually benefits from having a mega menu. For example mega menus can mean users skip important information if they're meant to follow a specific set of steps.
+*   **Order the groups.** You can do this using an inherent order among the features (as for a workflow) or according to importance, putting the most important or frequently used group in the top-left corner (assuming a left-to-right language like English).
+*   **Items should be grouped vertically.** A menu is not narrative text. It's scanned, not read. And scanning tends to proceed down a list in a vertical manner.
+
+[//]: # (#content .qld\_\_code-preview-body.qld\_\_body{ padding-left:0px; padding-right:0px; })
+
+On this page
+------------
+
+Anatomy
+-------
+
+### Desktop anatomy
+
+<img src={DesktopAnatomy} alt="desktop anatomy" />
+
+[//]: # (![]&#40;blob:https://qldhealth.atlassian.net/58cd21c2-d4d8-456a-a17d-d8fd4986fbc0#media-blob-url=true&id=202fd20b-4a90-4137-b7ce-b6e5ec3bad9f&collection=contentId-1404862510&contextId=1404862510&height=210&width=1643&alt=&#41;)
+
+1.  **Home icon:** Home icon replaces text to simplify the primary navigation, by reducing the number of perceived options, and reducing cognitive load on the user.
+2.  **Level 1 link:** This is the default level 1 link style. It typically represents the top level of the information architecture.
+3.  **Level 1 with sub-navigation (closed):** When a level 1 link has sub-navigation turned on, it's coupled with a drop-down icon. The entire link becomes a toggle for the drop-down menu and the link to the level 1 page is moved into the mega menu.
+4.  **Leading Icons:** Level 1 links can be coupled with Icons when appropriate. Icons help when there are a lot of links to call attention to important tasks or categories and should be used sparingly. It's generally not recommended to include them in the horizontal navigation pattern.
+5.  **Background:** The primary navigation uses a darker shade background colour to differentiate it from the header content area.
+6.  **Accent**: The accent colour allows designers to incorporate a brand colour into the header. This colour changes to the default action colours on hover.
+
+### Mobile anatomy
+
+Our mobile navigation has the ability to display 2 levels of navigation. It's a combination of the base DTA design coupled with the SA pattern. The primary adjustments from the DTA were the inclusion of a tablet size, added sub-navigation functionality, icon support and inclusion of site-wide CTAs.
+
+<img src={MobileAnatomy} alt="mobile anatomy" />
+
+
+[//]: # (![]&#40;blob:https://qldhealth.atlassian.net/ecee5ae3-6c81-476f-b645-6b95c6c63b24#media-blob-url=true&id=84e725a8-fe84-41e7-ba57-4cb6c68a9a36&collection=contentId-1404862510&contextId=1404862510&height=839&width=1131&alt=&#41;)
+
+1.  **Mobile menu header:** This is a fixed area that contains the close button, it also contains the title ‘Menu’ to further communicate the purpose of the component.
+2.  **Close button:** The close button is fixed to the top and appears in the same position as the original hamburger menu button.
+3.  **Home button:** The home button should always be placed with an icon and the first list item. Because there is adequate space the home button uses both text and the icon unlike the desktop menu which only uses the icon.
+4.  **Level 1 links:** These are the top level pages of a sites IA. Level 1 links can be coupled with an icon when necessary or an optional dropdown menu. These are styled to match the appearance of the desktop menu.
+5.  **Level 2 links:** Level 2 links are the child pages of the primary navigation. These can be a curated list. On desktop these can be coupled with a description however this is removed for the mobile and tablet designs.
+6.  **Leading icons**: Level 1 links can be coupled with Icons when appropriate. Icons help when there are a lot of links to call attention to important tasks or categories and should be used sparingly.
+7.  **Level 1 with sub-navigation (close)**: When a level 1 link has sub-navigation turned on, it's coupled with a drop-down button. All sub-navigation items are closed by default on open.
+8.  **Level 1 with sub-navigation (open):** When a level 1 link is opened, the design changes to have a tabbed appearance, this helps to create relationship between the level 1 parent and its child links. The colour of the text is also changed to the link colour to indicate that it is still a clickable link option.
+9.  **Toggle button:** This is a unique button that has been designed to float over the primary navigation link and appear as a separate clickable region.
+10.  **Global links and CTAs:** Any site-wide links that were located in the pre-header are moved into the mobile navigation. These links maintain the same colour and design as they had in the pre-header bar.
+11.  **Background overlay:** When the mobile navigation menu opens the background is darkened to help the user focus attention on the navigation links.
+
+### Mega menu anatomy
+
+Mega menus use a three column layout. Because the mega-menu acts in a similar way to cards its internal contents do not align to the page grid. However it still uses consistence spacing and vertical rhythm patterns. The mega menu has three rows containing link lists.
+
+<img src={Frame2578} alt="Example of mega menu anatomy" />
+
+1.  **Row 1:** Row one spans the whole width and contains the mandatory link to the primary category page as well and an optional descriptions.
+2.  **Row 2:** Row two houses a curated list of level 2 link list options. These are spaced across three columns.  You can choose to display only the level 2 links titles or level 2 links with their page descriptions. The mega-menu uses the existing [link list component](link-columns-link-list.html) to display to levels of links.
+3.  **Row 3:** Row three is used if there are too many level 2 links to included in the mega menu. It includes CTA view all link that helps to indicate to the user that there are more subpages that exist in the site other then what is displayed in the menu.
+
+* * *
+
+Research and rationale
+----------------------
+
+The design for the horizontal navigation was based on Digital Transformation Agency’s original layout. We expanded this design to be able to accommodate mega menu’s and iconography.
+
+Mega menus were added because for large websites, mega menus can assist users' journey by letting users preview lower-level content (Nielsen, 2017).
+
+Iconography was added because:
+
+*   icons are **fast to recognise** at a glance (if well designed) — particularly true for standard icons that people have seen and used before (Harley A, 2014)
+*   there is **no need to translate** icons for [international users](https://www.nngroup.com/topic/international-users "https://www.nngroup.com/topic/international-users/"), provided that the icons are mindful of cultural differences (for example, mailboxes look very different in various countries whereas envelopes look the same, therefore an envelope is a more international icon for an email program than a mailbox) (Harley A, 2014).
+
+### Best practice
+
+#### Menu only hidden on tablet
+
+Best practice guidance suggests that primary navigation should be prominent and never hidden on desktop screens (Nielsen, 2017). For this reason our primary navigation will only be hidden behind a hamburger menu once it reaches the tablet breakpoint.
+
+<img src={Hamburger} alt="Illustration of hamburger menu appearing at the tablet breakpoint" />
+
+#### Tell users ‘where’ the currently visible screen is located within the menu options
+
+'Where am I?' is one of the fundamental questions users need to answer to successfully navigate. Users rely on visual cues from menus to answer this critical question (Nielsen, 2017). To assist with this, we've followed the existing Digital Transformation Agency’s solution which removes the border below the current page.
+
+<img src={ActiveState} alt="This example shows the border being removed under the currently active link in the horizontal navigation" />
+
+#### **Menu links are designed to be easily clicked**
+
+Links that are too small or too close together are a huge source of frustration for mobile users, and also make large-screen designs unnecessarily difficult to use (Nielsen, 2017). We've designed our menu so that each link is easy to interact with, has generous padding and large hit targets.
+
+#### Our mobile icon should include a label
+
+In mobile (small) device layouts, the main navigation uses a ‘Hamburger’ icon which represents the menu. This follows a common convention in mobile interface design and is taken directly from the Digital Transformation Agency's implementation (Digital Transformation Agency, 2018).
+
+Despite this convention, not all users know that a hamburger means "navigation" or "menu" so we've added accompanying text ‘Menu’ to avoid assumed understanding of the icon.
+
+Mega menu research
+------------------
+
+We reviewed 14 different mega menu patterns from a number of different Design Systems as well as collated best practice research from leading experts.
+
+**Some of the key findings from this research was:**
+
+*   Mega menus were most often two-dimensional panels divided into groups of navigation options
+*   Mega menu patterns often change depending on the content and were often curated only showing important links and not necessarily every link under a primary navigation item
+*   Icons were often incorporated to help when there are a lot of links
+*   Indentation, heading colours and font weights often change with child links
+*   Chevrons were most commonly used for opening and closing menus
+*   Everything was visible at once there was never any scrolling
+*   People tend to scan vertically. A menu is not narrative text. It's scanned, not read. And scanning tends to proceed down a list in a vertical manner. (That's also why left-justifying navigation menus makes them easier to scan.)
+*   Not every primary navigation item needed a mega menu
+*   Best practice was to use an on click event and only hide the menu when the user clicks and that you should close a mega menu because the user’s cursor moves to a different part of the screen.
+
+We tried to factor all of these considerations into our mega menu design. For our final concept we were influenced by [NSW](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html "https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html") and by the work that had been done on the beta version of the MyGov website.
+
+Our final design uses a 3 column layout that supports a curated lists of level 2 pages listed vertically from left to right. It has a similar design to our cards for consistency and appears as a panel that animates out from our primary navigation. It's made visible via a click event and primary menu items that include a mega menu are indicated by a chevron icon.
+
+It's designed to be modular and can accommodate added link descriptions, initially we did develop patterns however we decided these patterns required further user testing as we were concerned about overcomplicating the design.
+
+The key challenges we faced with our mega menu design was ensuring that the user could still travel to the primary level 1 landing page and that if not all links under that category were displayed, they understood there were more links available. We resolved this issue by splitting our mega menu into 3 distinct rows, the row one spans the whole width and contains the link to the primary category page as well and an optional description. The second row houses a curated list of level 2 link list options. The third row was optional and is used if there are too many level 2 links to include in the mega menu. It includes CTA view all link that helps to indicate to the user that there are more subpages that exist in the site other than what's displayed in the menu.
+
+Mobile navigation research
+--------------------------
+
+Our sub-menu style uses the drop-down approach which is a common sub-navigation design pattern.
+
+Dropdown menus have a low interaction cost, good usability and is consistent with our desktop mega-menu experience.
+Our solution was influenced by the existing DTA left hand navigation styles and South Australia’s mobile menu design which enabled the users to click either a category links or drop-down toggle.
+
+Our solution ensures users can choose to travel to a category page or open sub-navigation this was accomplished by creating a new style of accordion open and close button specifically for mobile navigation. This new button floats on top of the primary navigation link using elevation to distinguish it as a separate clickable action item.
+
+To maintain visual consistency, we chose to base our design on the the existing DTA side navigation pattern which already included multi level links and a tab style aesthetic was incorporated to further help users identify child links with their associated category category links.
+
+### Drop-down menus vs sequential menus design
+
+<img src={DropdownVsSequential} alt="Example of dropdown navigation along side sequential navigation" />
+
+Accordions (drop-down) and sequential menus are popular options for implementing mobile sub-navigation. No best practice was found on which option performs better and both patterns have positive and negative attributes. A comparative analysis led to an even split across other government agencies and Design Systems. Because of these reasons we're conducting user testing to determine what the best option will be for the QH Design System.
+
+Overall both menu systems worked but the dropdown menu did have higher levels of direct success, however it should be noted that many users opted to navigate without using either pattern.
+
+Because there was no clear prominence of sequential menus over drop-downs we opted to go with drop-down menus over sequential menus for 2 reasons.
+
+1.  **Dropdown menus a safer option in terms of usability**
+
+Research from Nielsen Norman Group states
+
+> ‘users with low spatial ability (as measured by a spatial-ability test), however, seem to be less efficient with these menus than users with high spatial abilities. And unfortunately, on mobile devices, due to the increased probability of interruption, we are more likely to become disoriented and behave like users with poor spatial abilities.
+>
+> Sequential menus cause users to accidentally make mistakes, especially on Android phones (or in a browser) — often people are tempted to use the phone’s physical Back button or the browser’s Back button, and accidentally end up closing the menu and navigating to a different page instead of moving back to the higher-level menu.’
+
+2.  **Drop down menus create consistency without vertical navigation experience**
+
+In our design of lefthand side vertical navigation templates it was most common practice to use drop-down navigation. One of the benefits of vertical navigation is that the desktop and mobile navigation can use the pattern and components. For consistency it makes sense to use a drop-down navigation rather than a sequential pattern for our sub-menus on mobile.
+
+Examples of this can be seen in sites such as:
+
+[USWDS: The United States Web Design System](https://designsystem.digital.gov)
+
+[Material Design](https://m3.material.io)
+
+[Carbon Design System](https://carbondesignsystem.com)
+
+
+Classes
+-------
+
+### Primary navigation
+
+Name
+
+Description
+
+`qld__main-nav`
+
+Wrapper for the primary nav component applied to  `<nav>` element
+
+`qld__main-nav--mega`
+
+Applies the mega menu style to menu links that contain sub-navigation
+
+`qld__main-nav__content`
+
+Container for navigation links
+
+`qld__main-nav__menu-inner`
+
+Styles the main menu wrapper and its inner contents.
+
+`qld__main-nav__focus-trap-top`
+
+This class traps keyboard focus within the navigation when it's opened.
+
+`qld__main-nav__header`
+
+This styles the header of the navigation on mobile viewports.
+
+`qld__main-nav__menu-heading`
+
+Styles text within the the mobile navigation.
+
+`qld__main-nav__toggle qld__main-nav__toggle--close`
+
+Styles the header of the navigation, the toggle button, and its "close" state respectively.
+
+`qld__link-list`
+
+Defines the layout and position of menu navigation items
+
+`qld__main-nav__item`
+
+Class applied to `<li>` items.  This  class sets list items to appear vertically on mobile  and horizontally on desktop.
+
+`qld__main-nav__item-link`
+
+This is what creates the visual appearance of the primary level 1 menu links.
+
+`qld__main-nav__overlay`
+
+Sets the overlay  colour that applies across the screen when mobile menu  is toggled open.
+
+### Mega-menu sub-navigation
+
+Name
+
+Description
+
+`qld__main-nav__item-toggle`
+
+Class that controls style of mega menu toggle buttons in the primary nav.
+
+`qld__main-nav__menu-sub qld__main-nav__menu-sub qld__accordion__body`
+
+This class works with the accordion classes to style the submenu container. 
+
+`qld__main-nav__menu-sub-inner`
+
+Content container for sub-navigation items. This applies the padding
+
+`qld__main-nav__sub-head`
+
+Container for header section of mega menu which containers link to level 1 category.
+
+`qld__main-nav__sub-heading`
+
+Styles the heading of the submenu.
+
+`qld__main-nav__sub-footer`
+
+Used to style the footer of the submenu.
+
+Accessible horizontal navigation requirements
+---------------------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### General best practice guidance
+
+*   Offer multiple ways to access content, such as providing a search functionality and a sitemap
+*   If the primary navigation includes drop-down menus or other interactive elements, ensure they're accessible using both keyboard and screen reader interactions
+*   Make sure the navigation has appropriate colour contrast, meeting at least the AA level of WCAG 2.1 (4.5:1 for normal text and 3:1 for large text)
+*   Use clear and simple language for navigation labels, avoiding jargon or unfamiliar terms
+*   Provide an accessible close mechanism for menus, such as a "Close" button or an option to click outside the menu to close it, ensuring that users can easily dismiss the menu when needed
+
+### WCAG Guidelines
+
+#### 1.1.1: Non-text Content
+
+If any icons are used in the primary navigation, ensure that they have alternative text that describes the image for users with screen readers (W3C, 2018).
+
+#### 1.3 Adaptable
+
+Structure the navigation using appropriate HTML elements such as `<nav>` and `<ul>`, ensuring that the content can be presented in different ways without losing information or structure. This also makes it easier for screen readers to interpret the content.
+
+#### 2.1.1: Keyboard
+
+Ensure that users can navigate the primary navigation using the keyboard alone, as some users may not be able to use a mouse (W3C, 2018). Implement proper keyboard navigation for menus, including support for arrow keys to move between menu items, the Enter or Space key to activate links or expand submenus, and the Esc key to close submenus or the entire menu.
+
+#### 2.4.1: Bypass blocks
+
+Include a mechanism to bypass navigation for those.
+
+#### 2.4.7: Focus Visible
+
+Provide visible focus indicators for interactive elements, so keyboard users can easily identify which element is currently focused. (W3C, 2018).
+
+#### 3.2.4: Consistent Identification
+
+Maintain a consistent design, appearance, and placement for the back-to-top button across all pages of the website (W3C, 2018).
+
+#### 3.2: Predictable
+
+Maintain consistent navigation structure and appearance across all pages of the website to help users understand the interface and anticipate where they'll find navigation items.
+
+#### 2.4.4: Link Purpose
+
+Use descriptive labels for each link in the primary navigation, as this makes it easier for users with screen readers to understand what the link is for (W3C, 2018).
+
+#### 2.4.5: Multiple ways
+
+More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process.
+
+#### 2.4.6: Headings and labels
+
+Use clear and consistent headings to organise the links in the primary navigation and mega menu, as this makes it easier for users with screen readers to navigate the menu (W3C, 2018).
+
+#### 4.1.2: Name, Role, Value
+
+Use appropriate ARIA roles and attributes to describe menu components and their states. This helps assistive technologies understand the structure and functionality of the menu.
+
+* * *
+
+References
+----------
+
+Digital Transformation Agency (2018) [Main Nav](https://gold.designsystemau.org/components/main-nav/rationale "https://gold.designsystemau.org/components/main-nav/rationale/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+Digital NSW (n.d.) [Main navigation](https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html "https://digitalnsw.github.io/nsw-design-system/components/main-nav/index.html"), _NSW Design System_, accessed 10 April 2023.
+
+Nielsen J (2017) [Killing Global Navigation: One Trend to Avoid](https://www.nngroup.com/articles/killing-global-navigation-one-trend-avoid "https://www.nngroup.com/articles/killing-global-navigation-one-trend-avoid/"), Nielsen Norman Group, accessed 20 April 2023.
+
+Nielsen J (2008) [Mega Menus Work Well](https://www.nngroup.com/articles/mega-menus-work-well "https://www.nngroup.com/articles/mega-menus-work-well/"), Nielsen Norman Group, accessed 20 April 2023.
+
+Harley  A (2014) [Icon Usability](https://www.nngroup.com/articles/icon-usability "https://www.nngroup.com/articles/icon-usability/"), Nielsen Norman Group, accessed 20 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+Nielsen J (2011) [Mega Menus Gone Wrong](https://www.nngroup.com/articles/mega-menus-gone-wrong "https://www.nngroup.com/articles/mega-menus-gone-wrong/"), Nielsen Norman Group, accessed 20 April 2023.
+
+Budiu R (2011) [Mobile Subnavigation](https://www.nngroup.com/articles/mobile-subnavigation "https://www.nngroup.com/articles/mobile-subnavigation/") , Nielsen Norman Group, accessed 20 April 2023.
+
+Pernice K and Budiu R (2017) [Hamburger Menus and Hidden Navigation Hurt UX Metrics](https://www.nngroup.com/articles/hamburger-menus "https://www.nngroup.com/articles/hamburger-menus/"), Nielsen Norman Group, accessed 20 April 2023.
+
+Orbit Media Studios (n.d.) [Website Navigation Best Practices](https://www.orbitmedia.com/blog/website-navigation "https://www.orbitmedia.com/blog/website-navigation/"), Orbit Media Studios Blog, accessed 20 April 2023.
+
+**Last updated:** May 2024

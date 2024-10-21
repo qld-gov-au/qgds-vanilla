@@ -1,4 +1,4 @@
-(function () {
+export default function (QLD) {
     "use strict";
 
     /**
@@ -9,45 +9,45 @@
     var originalBreadCrumbUl = null;
 
     function getTheElements(resized = false) {
-            const bannerBreadCrumbsAll = document.querySelectorAll(
-                "nav.qld__banner__breadcrumbs--desktop"
-            );
+        const bannerBreadCrumbsAll = document.querySelectorAll(
+            "nav.qld__banner__breadcrumbs--desktop"
+        );
 
-            const bodyBreadCrumbsAll = document.querySelectorAll(
-                'section.qld__body--breadcrumb nav.qld__breadcrumbs'
-            );
+        const bodyBreadCrumbsAll = document.querySelectorAll(
+            'section.qld__body--breadcrumb nav.qld__breadcrumbs'
+        );
 
-            const bannerBreadCrumbArray = [...bannerBreadCrumbsAll, ...bodyBreadCrumbsAll];
-            const bannerBreadCrumb = bannerBreadCrumbArray.find(
-                (breadcrumb) => {
-                    return breadcrumb.offsetWidth > 0;
-                }
-            );
-
-            if(bannerBreadCrumb) {
-                const containerFluid = bannerBreadCrumb.closest('.container-fluid');
-
-                const containerFluidStyle = window.getComputedStyle(containerFluid);
-                
-                const paddings = parseFloat(containerFluidStyle.getPropertyValue('padding-right').replace(/[^\d.]/g, '')) + parseFloat(containerFluidStyle.getPropertyValue('padding-left').replace(/[^\d.]/g, ''));
-                bannerBreadCrumb.style.maxWidth = (containerFluid.offsetWidth - paddings) + 'px';
-                
-                if(!originalBreadCrumbUl) {
-                    originalBreadCrumbUl = bannerBreadCrumb.querySelector("ul.qld__link-list").cloneNode(true);
-                }
-    
-                if(resized) {
-                    bannerBreadCrumb.querySelector("ul.qld__link-list").innerHTML = originalBreadCrumbUl.innerHTML;
-                }
-    
-                const breadCrumbsUl = bannerBreadCrumb.querySelector("ul.qld__link-list");
-                breadCrumbsUl.style.maxWidth = (containerFluid.offsetWidth - paddings) + 'px';
-
-                return {
-                    bannerBreadCrumb,
-                    breadCrumbsUl,
-                };
+        const bannerBreadCrumbArray = [...bannerBreadCrumbsAll, ...bodyBreadCrumbsAll];
+        const bannerBreadCrumb = bannerBreadCrumbArray.find(
+            (breadcrumb) => {
+                return breadcrumb.offsetWidth > 0;
             }
+        );
+
+        if (bannerBreadCrumb) {
+            const containerFluid = bannerBreadCrumb.closest('.container-fluid');
+
+            const containerFluidStyle = window.getComputedStyle(containerFluid);
+
+            const paddings = parseFloat(containerFluidStyle.getPropertyValue('padding-right').replace(/[^\d.]/g, '')) + parseFloat(containerFluidStyle.getPropertyValue('padding-left').replace(/[^\d.]/g, ''));
+            bannerBreadCrumb.style.maxWidth = (containerFluid.offsetWidth - paddings) + 'px';
+
+            if (!originalBreadCrumbUl) {
+                originalBreadCrumbUl = bannerBreadCrumb.querySelector("ul.qld__link-list").cloneNode(true);
+            }
+
+            if (resized) {
+                bannerBreadCrumb.querySelector("ul.qld__link-list").innerHTML = originalBreadCrumbUl.innerHTML;
+            }
+
+            const breadCrumbsUl = bannerBreadCrumb.querySelector("ul.qld__link-list");
+            breadCrumbsUl.style.maxWidth = (containerFluid.offsetWidth - paddings) + 'px';
+
+            return {
+                bannerBreadCrumb,
+                breadCrumbsUl,
+            };
+        }
     }
 
     function createOverFlow() {
@@ -126,8 +126,8 @@
     function truncateLastLi(breadCrumbsUlLis) {
         breadCrumbsUlLis[breadCrumbsUlLis.length - 1].style.overflow = "hidden";
     }
-    
-    function appendOverflow( breadCrumbsUlLis, overflowMenu, breadcrumbUL) {
+
+    function appendOverflow(breadCrumbsUlLis, overflowMenu, breadcrumbUL) {
         breadCrumbsUlLis[1].innerHTML = "";
         breadCrumbsUlLis[1].className = "qld__overflow_menu--breadcrumbs";
         breadCrumbsUlLis[1].appendChild(overflowMenu);
@@ -136,36 +136,36 @@
 
     breadcrumb.init = function () {
         if (getTheElements()) {
-            const { breadCrumbsUl } = getTheElements();
+            const {breadCrumbsUl} = getTheElements();
 
             const breadCrumbsUlLis = breadCrumbsUl.querySelectorAll("li");
             if (breadCrumbsUlLis.length > 2 && breadCrumbsUlLis[0].offsetHeight > 0) {
                 const overflowMenu = createOverFlow();
                 let breadcrumbLisLength = breadCrumbsUlLis.length;
                 let i = 1;
-                
+
 
                 let totalLisOffsetWidth = 0;
-                
+
                 for (let i = 0; i < breadCrumbsUlLis.length; i++) {
                     totalLisOffsetWidth += breadCrumbsUlLis[i].offsetWidth;
                 }
 
-                if(breadcrumbLisLength > 5) {
+                if (breadcrumbLisLength > 5) {
                     insertOverFlowButton(overflowMenu, breadCrumbsUlLis[1]);
                     breadCrumbsUlLis[1].style.display = "none";
                     appendOverflow(breadCrumbsUlLis, overflowMenu, breadCrumbsUl);
                     i = 2;
 
-                    while(i < breadCrumbsUlLis.length - 2) {
+                    while (i < breadCrumbsUlLis.length - 2) {
                         insertOverFlowButton(overflowMenu, breadCrumbsUlLis[i]);
                         breadCrumbsUlLis[i].style.display = "none";
                         i++;
                     }
 
-                } else if((breadCrumbsUl.offsetHeight > (breadCrumbsUlLis[0].offsetHeight * 1.9))) {
+                } else if ((breadCrumbsUl.offsetHeight > (breadCrumbsUlLis[0].offsetHeight * 1.9))) {
 
-                    if(breadcrumbLisLength > 3) { 
+                    if (breadcrumbLisLength > 3) {
                         insertOverFlowButton(overflowMenu, breadCrumbsUlLis[1]);
                         breadCrumbsUlLis[1].style.display = "none";
                         appendOverflow(breadCrumbsUlLis, overflowMenu, breadCrumbsUl);
@@ -174,27 +174,27 @@
                     i = 2;
 
                     while ((breadCrumbsUl.offsetHeight > (breadCrumbsUlLis[0].offsetHeight * 1.9)) &&
-                    (i < breadcrumbLisLength - 2)
-                    ) {
+                        (i < breadcrumbLisLength - 2)
+                        ) {
 
                         insertOverFlowButton(overflowMenu, breadCrumbsUlLis[i]);
                         breadCrumbsUlLis[i].style.display = "none";
 
                         i++;
                     }
-                } else if(parseFloat(breadCrumbsUl.style.maxWidth.replace(/[^\d.]/g, '')) < totalLisOffsetWidth) {
-                    
-                    if(breadcrumbLisLength > 3) {
+                } else if (parseFloat(breadCrumbsUl.style.maxWidth.replace(/[^\d.]/g, '')) < totalLisOffsetWidth) {
+
+                    if (breadcrumbLisLength > 3) {
                         insertOverFlowButton(overflowMenu, breadCrumbsUlLis[1]);
                         breadCrumbsUlLis[1].style.display = "none";
                         appendOverflow(breadCrumbsUlLis, overflowMenu, breadCrumbsUl);
                     }
-                    
+
                     i = 2;
 
-                    while ((parseFloat(breadCrumbsUl.style.maxWidth.replace(/[^\d.]/g, ''))< totalLisOffsetWidth) &&
-                    (i < breadcrumbLisLength - 2)
-                    ) {
+                    while ((parseFloat(breadCrumbsUl.style.maxWidth.replace(/[^\d.]/g, '')) < totalLisOffsetWidth) &&
+                        (i < breadcrumbLisLength - 2)
+                        ) {
 
                         insertOverFlowButton(overflowMenu, breadCrumbsUlLis[i]);
                         breadCrumbsUlLis[i].style.display = "none";
@@ -214,10 +214,10 @@
         QLD.accordion.init('overflow');
     });
 
-    window.addEventListener('resize' , function() {
+    window.addEventListener('resize', function () {
         getTheElements(true);
         QLD.breadcrumb.init();
         QLD.accordion.init('overflow');
     });
 
-})();
+}

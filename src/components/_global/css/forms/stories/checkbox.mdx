@@ -1,0 +1,202 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+<Meta title="Forms/Checkbox" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/checkboxes
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Checkboxes
+==========
+
+May also be known as:
+
+control inputs, tick boxes and option buttons
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395569&mode=design&t=MVmEKDG9zUeDXsCh-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+These components help users select one or more items from multiple options.
+
+Checkboxes
+----------
+
+Checkboxes allow users to select one or more items.
+
+Example
+
+## FIXME
+
+`<!-- Start of checkbox control block --> <div class="qld__control-input qld__control-input--block"> <!-- Single checkbox with associated label --> <input class="qld__control-input__input" type="checkbox" name="checkbox-simple" id="Simple"> <label class="qld__control-input__text" for="Simple">Simple checkbox design</label> </div> <!-- End of checkbox control block --> <!-- Start of fieldset --> <fieldset class="qld__fieldset"> <!-- Legend for the fieldset with abbr tag for "required" --> <legend class="qld__fieldset__legend"> <abbr title="required">*</abbr>Checkbox list <span class="qld__label--optional">(Optional)</span> <!-- Corrected "lable" to "label" --> </legend> <!-- Hint text for the fieldset --> <div class="qld__hint-text">Select all that apply</div> <!-- Start of form group --> <div class="qld__control-group"> <!-- Checkbox 1 with associated label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox1" id="Phone"> <label class="qld__control-input__text" for="Phone">Phone</label> </div> <!-- Checkbox 2 with associated label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox2" id="Email"> <label class="qld__control-input__text" for="Email">Email</label> </div> <!-- Checkbox 3 with associated label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox3" id="Mail"> <label class="qld__control-input__text" for="Mail">Mail</label> </div> </div> <!-- End of form group --> </fieldset> <!-- End of fieldset -->`
+
+Valid and invalid states
+------------------------
+
+Add a border around the control inputs to indicate valid or invalid selections.
+
+Example
+# FIXME
+`<div class="container"> <div class="row"> <div class="col-xs-6"> <!-- Start fieldset --> <fieldset class="qld__fieldset"> <!-- Legend of the fieldset --> <legend class="qld__fieldset__legend"> <abbr title="required">*</abbr>Checkbox Invalid <span class="qld__label--optional">(Optional)</span> </legend> <!-- Error message with SVG icon --> <span id="text-field-error" class="qld__input--error"> <!-- Inline SVG as example --> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"> </svg>Please choose an option </span> <!-- Start control group --> <div class="qld__control-group"> <!-- Checkbox 1 with label and error class --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--error" type="checkbox" name="checkbox-example" id="Phone-1" aria-describedby="text-field-error"> <label class="qld__control-input__text" for="Phone-1">Phone</label> </div> <!-- Checkbox 2 with label and error class --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--error" type="checkbox" name="checkbox-example" id="Email-2" aria-describedby="text-field-error"> <label class="qld__control-input__text" for="Email-2">Email</label> </div> <!-- Checkbox 3 with label and error class --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--error" type="checkbox" name="checkbox-example" id="Mail-3" aria-describedby="text-field-error"> <label class="qld__control-input__text" for="Mail-3">Mail</label> </div> </div> </fieldset> </div> <div class="col-xs-6"> <!-- Start fieldset --> <fieldset class="qld__fieldset"> <!-- Legend of the fieldset --> <legend class="qld__fieldset__legend">Checkbox success</legend> <!-- Success message with SVG icon --> <span id="text-field-success" class="qld__input--success"> <!-- Inline SVG as example --> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"> </svg> Correct answer </span> <!-- Start control group --> <div class="qld__control-group"> <!-- Checkbox 1 with label and success class --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input qld__input--valid" type="checkbox" name="checkbox-example" id="Answer-1" aria-describedby="text-field-success"> <label class="qld__control-input__text" for="Answer-1">Answer 1</label> </div> <!-- Checkbox 2 with label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox-example" id="Answer-2"> <label class="qld__control-input__text" for="Answer-2">Answer 2</label> </div> <!-- Checkbox 3 with label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox-example" id="Answer-3"> <label class="qld__control-input__text" for="Answer-3">Answer 3</label> </div> </div> </fieldset> </div> </div>`
+
+Disabled control inputs
+-----------------------
+
+Disabled control inputs can be used to indicate inputs that are no longer valid or have expired.
+
+Example
+
+## FIXME
+
+`<!-- Start of fieldset --> <fieldset class="qld__fieldset"> <!-- Legend for the fieldset --> <legend class="qld__fieldset__legend">Checkbox disabled</legend> <!-- Hint text for the fieldset --> <div class="qld__hint-text">Select all that apply</div> <!-- Start of control group --> <div class="qld__control-group"> <!-- Disabled checkbox 1 with associated label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox7" id="Phone" disabled> <label class="qld__control-input__text" for="checkbox7">Phone</label> </div> <!-- Disabled checkbox 2 with associated label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox8" id="Email" disabled> <label class="qld__control-input__text" for="checkbox8">Email</label> </div> <!-- Disabled checkbox 3 with associated label --> <div class="qld__control-input qld__control-input--block"> <input class="qld__control-input__input" type="checkbox" name="checkbox9" id="Mail" disabled> <label class="qld__control-input__text" for="checkbox9">Mail</label> </div> </div> </fieldset>`
+
+Usage guidelines
+----------------
+
+### Success status icon Indicates a success state When to use this component
+
+Use the checkboxes component when you need to help users:
+
+*   select multiple options from a list
+*   toggle a single option on or off.
+
+### Status cancel icon Cancel icon or warning icon When not to use it
+
+Don't use the checkboxes component if users can only choose one option from a selection. In this case, use the [radio button](radio-buttons.html).
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use it
+
+When you see a radio button, you can only pick one choice. But when you see a checkbox, you can pick more than one choice. Don't think that people will know how many choices they can pick just by looking at the buttons. To help people, you can add a hint message that says "Select all that apply".
+
+#### Do
+
+*   put the choices in alphabetical order.
+*   group checkboxes together in a `<fieldset>` with a `<legend>` that describes them, as shown in the examples on this page. This is usually a question, like 'How would you like to be contacted?' (GOV.UK, n.d.).
+*   use hints to to provide help that's relevant to the majority of users (Agriculture Design System, 2023).
+
+#### Dont
+
+*   provide disabled options unless unavoidable
+*   choose an answer for people by ticking the checkbox beforehand. This can confuse them and they might pick the wrong answer or forget to answer the question.
+*   use a horizontal list of options unless unavoidable.
+*   use long paragraphs and lists in hint text, this can frustrate users who use screen readers (Agriculture Design System, 2023).
+
+#### Smaller checkboxes
+
+In most cases, standard-sized checkboxes are preferred, but on pages like search results, where the primary user need is to view results, smaller checkboxes can be employed to allow users to see and modify search filters without diverting their attention from the main content (GOV.UK, n.d.).
+
+### More guidance
+
+For more detailed guidelines on how to structure and lay out checkboxes see [Australian style manual.](https://www.stylemanual.gov.au/content-types/forms "Australian Style Manual")
+
+Research and rationale
+----------------------
+
+Our design for checkboxes are based on the GOV UK Design system [research](https://designnotes.blog.gov.uk/2016/11/30/weve-updated-the-radios-and-checkboxes-on-gov-uk/) and the original [DTA Checkbox design](https://gold.designsystemau.org/components/control-input/).
+
+The checkboxes in our Design System are much larger than default browser inputs to provide larger hit/target areas for touchscreen devices or mobility impaired users. There is a smaller version available where this isn't practical (Digital Transformation Agency, 2018).
+
+Much of the design of our checkboxes  was influenced by our research into forms which is covered in more detail in our [form component section](forms.html).
+
+Classes
+-------
+
+| Name | Description |
+|---|---|
+| `qld__fieldset` | Applies to fieldset element when checkboxes are grouped. |
+| `qld__fieldset__legend` | Defines the overarching description of the form group. |
+| `qld__hint-text` | Consistent style for all hint text on form fields. |
+| `qld__control-group` | Use margin top to groups of  checkboxes. |
+| `qld__control-input` | Default class for all input controls fields. |
+| `qld__control-input--block` | Class for when input fields are listed vertically. |
+| `qld__control-input__text` | Class that defines input field labels. |
+| `qld__input--valid` | Applied to input element to style valid fields. |
+| `qld__input--error` | Applied to input element to style invalid fields. |
+
+Accessible checkbox requirements
+--------------------------------
+
+Keep these considerations in mind if you are modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.3.1 Info and Relationships
+
+Organise and structure the form in a logical and predictable manner. Use proper markup to convey the hierarchy and relationships between form elements, such as fieldsets and legends for grouping related fields.
+
+#### 2.4.6 Headings and Labels
+
+Provide clear and descriptive labels for form fields and headings for sections. This helps users understand the purpose of each field and the structure of the form.
+
+#### 2.1 Keyboard Accessible
+
+Ensure that checkboxes are navigable and selectable using the keyboard (tab and spacebar).
+
+#### 2.4.7 Focus Visible
+
+Provide a visible focus indicator for checkboxes to help users with different input methods.
+
+#### 1.4.3 Contrast (Minimum)
+
+Ensure that the colour contrast between the text labels and background meets WCAG 2.1 Level AA requirements.
+
+#### 3.3.1 Error Identification
+
+Clearly identify and describe any errors that occur during form submission or input validation. Provide guidance on how to fix the errors.
+
+#### 3.3.2 Labels or Instructions
+
+Clear and descriptive labels: Ensure that checkbox labels are clear, concise, and provide enough context for screen reader users.
+
+#### 3.3.3 Error Suggestion
+
+If an input error is automatically detected, provide suggestions for correcting the error, where possible.
+
+#### 3.3.4 Error Prevention (Legal, Financial, Data)
+
+For forms that involve legal, financial, or sensitive data transactions, provide mechanisms to review and correct information before submission or allow users to confirm or reverse their actions.
+
+#### 4.1.2 Name, Role, Value
+
+Use the relevant HTML to ensure the checkboxes and group of checkboxes have the correct Names, Roles, and Values. See the Overview tab for details.
+
+In our exampels we use the [`<fieldset>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/fieldset) and `<legend>` elements to group our controls. The `<fieldset>` element provides a container for related form controls, and the `<legend>` element acts as a heading to identify the group.
+
+When using this method it is not necessary to include aria roles and attributes.
+
+##### ARIA roles and attributes
+
+When it is not possible to use the HTML elements, ensure the correct ARIA Roles, States, and Properties are present.
+
+If you are not using `<fieldset>` and `<legend>` use `role="group"` for the container and `role="checkbox"` for each checkbox button.
+
+Use `aria-labelledby` to associate a visible label with the checkbox group and `aria-describedby` to provide additional information or instructions if needed.
+
+Consult the [Checkbox Pattern of ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/") for the full list of WAI-ARIA Roles, States, and Properties.
+
+* * *
+
+References
+----------
+
+[GOV.UK](https://gov.uk "http://GOV.UK") (n.d.) [Chexboxes](https://design-system.service.gov.uk/components/checkboxes "https://design-system.service.gov.uk/components/checkboxes/"), [_GOV.UK_](https://gov.uk "http://GOV.UK") _Design System_, accessed 27 April 2023.
+
+Digital Transformation Agency (2018) [Control input](https://gold.designsystemau.org/components/page-alerts "https://gold.designsystemau.org/components/page-alerts/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+W3C Web Accessibility Initiative (2021) [ARIA Authoring Practices Guide (APG) Chexbox Pattern](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox "https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/"), _ARIA Authoring Practices Guide_, W3C, accessed 27 April 2023.
+
+Agriculture Design System (n.d.) [Checkbox | Agriculture Design System](https://design-system.agriculture.gov.au/components/checkbox), Agriculture Design System, accessed 12 July 2023.
+
+`/\*Hides two of the colour options that are not available for this component \*/ .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child(3), .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child(2), .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-last-child(1) { display: none; }`
+
+**Last updated:** May 2024

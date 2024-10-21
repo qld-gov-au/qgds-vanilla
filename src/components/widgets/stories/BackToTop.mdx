@@ -1,0 +1,125 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as Stories from "./widgets.stories"
+import backToTopPlacementImage from "./Back-to-top-placement.png"
+
+<Meta of={Stories} />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/back-to-top
+ [ ]: Fix tables
+ [ ]: Fix examples
+ [ ]: QA to original
+
+Back-to-top
+===========
+
+May also be known as:
+
+Scroll to top, top button or jump to top
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395564&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+'Back-to-top' button provides a convenient and efficient way for users to scroll back up to the top of long pages.
+
+The 'back-to-top' button, commonly found on Design System websites, is a small button placed at the bottom right of the page that allows users to quickly scroll back up to the top of the page. Its purpose is to provide a convenient and efficient way for users to navigate through long pages, without having to manually scroll all the way back to the top.
+
+Back-to-top
+-----------
+
+The back to top is a fixed floating element that located the bottom left corner of the page.
+
+<img src={backToTopPlacementImage} alt="Example of website with back-to-top button placed at the bottom right of the page"></img>
+
+
+Example
+
+[Back-to-top](back-to-top.html#)
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395564&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<a href="#" class="qld__btn qld__btn--floating qld__btn--back-to-top">Back-to-top</a>`
+
+Usage guidelines
+----------------
+
+### Success status icon Indicates a success state When to use
+
+*   Use when pages are long, and scrolling back to the top would be cumbersome. It is recommended for pages that are **longer than 4 screens** (Loranger, H 2017)
+*   Use when there is a lot of content on the page, such as articles, blogs, or listings
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+*   Don't use on pages that are short and can be easily scrolled through in one go
+*   Don't use if there is already a way to quickly navigate to the top of the page, such as a fixed in-page navigation menu
+*   Don't use if the 'back-to-top' button creates confusion or adds unnecessary clutter to the page design
+
+Research and rationale
+----------------------
+
+That design of our 'back-to-top' component is based on recommendations from the Nielson and Norman group which state that it should be visible but unobtrusive, easy to spot and not distract from the main content of the page. It's best to keep it small, but with a high contrast colour or icon that stands out. (Loranger, H 2017).
+
+Research also suggested that the meaning of the arrow icon alone is too obscure which is why our back to top button includes the words back-to-top as well as an icon (Loranger, H 2017).
+
+In terms of visual design, we incorporated our existing directional navigation links design into the button for consistency. We also added a drop shadow so that it had improved visual contrast from items below it and used a solid white colour which would provide good contrast over any background colour this uses the elevation based research completed for our elevation guidelines, much of this research was based on Googles Material Design guidelines. Although there is not specific back-to-top component we were inspired by Google’s guidelines for [floating fixed-action buttons](https://m3.material.io/components/extended-fab/guidelines "https://m3.material.io/components/extended-fab/guidelines") (Material Design 3, n.d.).
+
+Placement of this button is in the bottom right corner, this was the most consistent approach we found across websites that implement this component (Loranger, H 2017).
+
+Classes
+-------
+
+| Name                       | Description                              |
+|----------------------------|------------------------------------------|
+| `qld__btn--floating`   | Adds drop shadow.                        |
+| `qld__btn` | Default class for buttons.               |
+|  `qld__btn--back-to-top`    | Modifier that applies back-to-top style. |
+
+
+Accessible back-to-top button requirements
+------------------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.1.1 Non-text Content
+
+Provide a clear label for the button, such as "Back to Top," along with a recognisable icon, if necessary (W3C, 2018).
+
+#### 2.1.1 Keyboard
+
+Ensure the button is keyboard-accessible by making it focusable and providing a keyboard shortcut if necessary (W3C, 2018).
+
+#### 2.4.7 Focus Visible
+
+Make sure the button has a visible focus indicator when accessed using a keyboard (W3C, 2018).
+
+#### 3.2.4 Consistent Identification
+
+Maintain a consistent design, appearance, and placement for the back-to-top button across all pages of the website.
+
+* * *
+
+References
+----------
+
+Loranger H (2017) [Back-to-Top Button Design Guidelines](https://www.nngroup.com/articles/back-to-top "https://www.nngroup.com/articles/back-to-top/"), Nielsen Norman Group, accessed 10 April 2023.
+
+Material Design 3 (n.d.) [Extended FAB Overview](https://m3.material.io/components/extended-fab/overview "https://m3.material.io/components/extended-fab/overview"), Material Design, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** August 2023
+

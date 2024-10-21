@@ -1,0 +1,87 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+
+<Meta title="0. Versions/Pre QGDS-Vanilla/v3.1.0" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Release 3.1.0
+=============
+
+Core style update, Tabs and Tables:
+-----------------------------------
+
+Typography styles, font update, additional table styles, tabs component and minor bug fixes.
+
+In this update we have modified our font stack to use Noto Sans as the default font rather then Lato. During this update we also made minor text updates, bug fixes and cleaned many of the text styles throughout the file.
+
+We recommend
+------------
+
+Before updating to the latest version of our design system, we recommend you **make a back up of your original file**. As this was predominately a style update it should not break any components already in use however adjusting fonts and styles can cause text within components to reset to their default values.
+
+Whats new
+---------
+
+### Font updates
+
+*   **New** display styles with alterenative line heights to match classes in code
+*   **Updated** Font stack and all font styles to use Noto Sans
+*   **Updated** Font weights for headings from 700 to 600
+*   **Updated** Font size for body text from 17px (increased for lato) back to 16px
+
+### Table updates and improvements
+
+During the design of a recent website it was necessary to expand our table components to cater for more complex tables that could support figures, totals, multiple header structures and complex data. We exampled upon the existing tables adding new classes to improve upon the exisiting DTA table component.
+
+*   **New** contained table style
+*   **New** scrollable table style
+*   **New** table heading and font styles
+*   **Updated** table component design
+
+### New tab components
+
+To facilitate the design of our new design system website and for the development of the CHO report website we required a tab component. Our new tab design is based on the best practice research for tab design outlined by UK Gov Design system and recommendations from the Nielsen Norman Group.
+
+There are two styles of tabs section tabs and default tabs. Sections tabs are a form of in-page navigation and are placed at the top of a content pane displaying the main content destinations and default tabs. Default tabs also know as a contained style is where the tab is a self component component that sits with the content of a page and is used to further separate related content and establish hierarchy.
+
+*   **New** Section tab component
+*   **New** Default tab component
+
+About Noto Sans
+---------------
+
+### Why are we changing fonts?
+
+The Department of Premier and Cabinet (DPC) has been researching different typefaces. DPC’s goal was to find a typeface that could be used consistently across print and digital, improve digital legibility and minimise cost.
+
+After reviewing several fonts they’ve endorsed Noto Sans as a preferred typeface for Queensland Government websites.
+
+### Why Noto Sans font?
+
+Noto Sans was commissioned by Google. Noto Sans met a lot of the criteria DPC had including:
+
+*   suitable for print and digital
+*   open source – cheaper and more easily available for users
+*   distinct characters – uppercase I, lowercase l and 1 all look different
+*   multiple weights and styles – Noto font family has 72 weights
+*   1.2.2. resize text (Level AA) standard – text can be resized with assistive technology up to 200%
+*   large amount of languages supported.
+
+You can read more about [Noto sans](https://fonts.google.com/noto/specimen/Noto+Sans "https://fonts.google.com/noto/specimen/Noto+Sans") on the Google Fonts website.
+
+### Where does Meta fit in?
+
+Noto Sans will be the typeface of the design system, but we’ll still use Meta for site names or promotional text. This way we’ll still align a website’s brand elements with its traditional media such as print.
+
+### How we’ve tested it?
+
+We’ve been testing Noto Sans in comparison to Lato in the design system. We’ve found that the characters appear to be more legible in menus and data tables. The well differentiated letterforms and clear spacing also align better to our typographic grid system.
+
+The new font hasn’t affected any of the existing components, however we will continue to test and revise components based on feedback.
+
+**Last updated:** January 2024

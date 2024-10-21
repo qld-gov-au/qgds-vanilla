@@ -1,0 +1,41 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+import MultipleAlerts from "./3.1.1.Multiple-Alerts.png"
+
+<Meta title="0. Versions/Pre QGDS-Vanilla/v3.1.1" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Release 3.1.1
+=============
+
+Global alert update
+-------------------
+
+Small update to the usage guidelines for global alerts, and the global alert component.
+
+Based on user feedback our global alert components and guidlines needed to be updated to support multiple alerts. This caters for cases where separate messages on different critical issues are essential, a maximum of three global alerts is now permissible. However, it's still advisable to minimise their use, as global alerts can disrupt the user's workflow.
+
+Before you update we recommend
+------------------------------
+
+Before updating to this version of our design system, we recommend you **make a back up of your original file**. As this is a very small component updated it should not break any components in use, however it may reset any text within global alerts used on page layouts.
+
+Whats new
+---------
+
+### Component updates
+
+*   **Updated** Global alerts to allow up to 3 maximum global alerts
+*   **Updated** Global alerts components now have a border top that can be used to seperate out components when there is more then on of the same type used.
+*   **Bug fix** Global alerts had one incorrectly labeled variant on desktop this has now been fixed.
+
+### Global alert example
+
+<img src={MultipleAlerts} alt="Example of updated global alert component allowing for three alerts" />
+
+**Last updated:** January 2024
