@@ -1,5 +1,6 @@
-import { Meta, Markdown } from "@storybook/blocks";
+import { Meta, Markdown, Canvas } from "@storybook/blocks";
 
+import * as TypographyStories from "./../components/_global/css/body/stories/typography.stories.js"
 
 <Meta title="0.1. Brand Foundations/Where does my site fit in?" />
 
@@ -16,22 +17,15 @@ The first step in ensuring your digital service is branded correctly is working 
 
 A key thing to consider here is the brand architecture is not a process to determine whether your content is eligible for it's own website.  This process assumes the content has been approved for it's own website and you know need to determine the brand placement for this website.
 
-### Get advice early
-
-Choosing a brand is not always simple. If you would like advice or are seeking approval on the brand you have selected please contact your department’s corporate identity co-ordinator.
+> ### Get advice early
+>
+> Choosing a brand is not always simple. If you would like advice or are seeking approval on the brand you have selected please contact your department’s corporate identity co-ordinator.
 
 Choosing a brand category (planet)
 ----------------------------------
 
-Does your website represent an official department or a division, unit or branch of a department?
+<Canvas additionalActions={[{ title: 'Questionnaire'}]}
+        of={TypographyStories.brandSiteQuestionaire} />
 
-*   Yes
-*   No
-
-# FIX ME, this is a squiz form..
-
-[//]: # (var accum\_points=new Array&#40;&#41;; var curr\_id = 1; function get\_next\_step&#40;answer, question&#41; { if &#40;document.getElementById&#40;"q"+question&#41;.type == 'text'&#41;{ var result = decision\_tree\_validate\_numeric&#40;answer&#41;; if &#40;result == null&#41; { alert &#40;'You must enter a numeric answer'&#41;; return; } } //extract the form field number from the wrapper DIV so we can know where to place next form field var q\_element = document.getElementById&#40;"q"+question+"\_wrapper"&#41;; var req\_div = q\_element.parentNode; curr\_id = req\_div.id; curr\_id = curr\_id.substring&#40;1&#41;; curr\_id = parseInt&#40;curr\_id&#41;; try { xmlHttp=new XMLHttpRequest&#40;&#41;; } catch&#40;e&#41; { try { xmlHttp=new ActiveXObject&#40;"Microsoft.XMLHTTP"&#41;; } catch&#40;e&#41; { alert &#40;"Your browser does not support XMLHTTP!"&#41;; return; } } var points = calculate\_points&#40;question&#41;; var url = "https://www.designsystem.qld.gov.au/brand-foundations/where-does-my-site-fit/choosing-a-brand-category"; xmlHttp.onreadystatechange = question\_state\_changed; var data = url+'?a\_id='+answer+'&q\_id='+question+'&pts='+points; url= &#40;url&#41; ? data : data+'&a=156701'; xmlHttp.open&#40;"GET", url, true&#41;; xmlHttp.send&#40;null&#41;; } function question\_state\_changed&#40;&#41; { if &#40;xmlHttp.readyState==4 && xmlHttp.status==200&#41; { var q\_no = curr\_id; q\_no++; var nextdiv = document.getElementById&#40;"q"+q\_no&#41;; var response = xmlHttp.responseText; nextdiv.innerHTML=response; //create another question DIV after this one ready to store the next answer. q\_no++; var divIdName = "q"+q\_no; var newdiv = document.createElement&#40;'div'&#41;; newdiv.setAttribute&#40;"id",divIdName&#41;; nextdiv.appendChild&#40;newdiv&#41;; } } function calculate\_points&#40;question&#41; { var points = 0; var q\_no = curr\_id; var points\_element = document.getElementById&#40;"q"+question+"\_points"&#41;; var point\_val = 0; if &#40;points\_element != null&#41; point\_val = points\_element.value; accum\_points\[q\_no\] = parseFloat&#40;point\_val&#41;; for &#40;var i = 1; i <= q\_no; i++&#41; { points = points + accum\_points\[i\]; } return points; } function reset\_questions&#40;&#41; { get\_next\_step&#40;"EMPTY", 156745&#41;; var first\_q = document.getElementById&#40;"q156745"&#41;; if &#40;first\_q.type == "radio"&#41; { var radio\_boxes = document.getElementsByName&#40;first\_q.name&#41;; for &#40;var e = 0; e < radio\_boxes.length; e++&#41; { if &#40;radio\_boxes\[e\].type == "radio"&#41; { radio\_boxes\[e\].checked = false; } } } else if &#40;first\_q.type == "select-one"&#41; { first\_q.selectedIndex = "EMPTY"; } else if &#40;first\_q.type == "text"&#41; { first\_q.value = ""; } } function decision\_tree\_validate\_numeric&#40;answer&#41; { answer.replace&#40;/,/, ""&#41;; return answer.match&#40;/&#40;^$&#41;|&#40;^\[-+\]?\\d\*\\.?\\d+$&#41;/&#41;; })
-
-[//]: # (.sq\_question\_wrapper { margin: 45px 0px; } .sq\_question\_wrapper ul { list-style: none; })
 
 **Last updated:** August 2023

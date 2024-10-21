@@ -1,0 +1,339 @@
+{
+    "_id": "671602b677c4790f9631a0ac",
+    "title": "Choosing a brand category (planet)",
+    "name": "Choosing a brand category (planet)",
+    "path": "na",
+    "type": "form",
+    "display": "form",
+    "tags": [],
+    "components": [
+        {
+            "label": "Does your website represent an official statutory body, commercialised business unit.",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "tableView": false,
+            "values": [
+                {
+                    "label": "Yes",
+                    "value": "yes",
+                    "shortcut": ""
+                },
+                {
+                    "label": "No",
+                    "value": "no",
+                    "shortcut": ""
+                }
+            ],
+            "key": "doesYourWebsiteRepresentAnOfficialStatutoryBodyCommercialisedBusinessUnit",
+            "type": "radio",
+            "input": true
+        },
+        {
+            "label": "Does your website represent an official statutory body, commercialised business unit.",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "hidden": true,
+            "tableView": false,
+            "values": [
+                {
+                    "label": "Yes",
+                    "value": "yes",
+                    "shortcut": ""
+                },
+                {
+                    "label": "No",
+                    "value": "no",
+                    "shortcut": ""
+                }
+            ],
+            "key": "doesYourWebsiteRepresentAnOfficialStatutoryBodyCommercialisedBusinessUnit1",
+            "conditional": {
+                "show": true,
+                "conjunction": "all",
+                "conditions": [
+                    {
+                        "component": "doesYourWebsiteRepresentAnOfficialStatutoryBodyCommercialisedBusinessUnit",
+                        "operator": "isEqual",
+                        "value": "no"
+                    }
+                ]
+            },
+            "type": "radio",
+            "input": true
+        },
+        {
+            "label": "Is your website representing  a joint federal or joint  state initiative?",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "hidden": true,
+            "tableView": false,
+            "values": [
+                {
+                    "label": "Yes",
+                    "value": "yes",
+                    "shortcut": ""
+                },
+                {
+                    "label": "No",
+                    "value": "no",
+                    "shortcut": ""
+                }
+            ],
+            "key": "isYourWebsiteRepresentingAJointFederalOrJointStateInitiative",
+            "conditional": {
+                "show": true,
+                "conjunction": "all",
+                "conditions": [
+                    {
+                        "component": "doesYourWebsiteRepresentAnOfficialStatutoryBodyCommercialisedBusinessUnit1",
+                        "operator": "isEqual",
+                        "value": "no"
+                    }
+                ]
+            },
+            "type": "radio",
+            "input": true
+        },
+        {
+            "label": "Is your site part of a campaign with GACC approval or state-wide multi-agency initiative approved by Department of Premier and Cabinet?",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "hidden": true,
+            "tableView": false,
+            "values": [
+                {
+                    "label": "Yes",
+                    "value": "yes",
+                    "shortcut": ""
+                },
+                {
+                    "label": "No",
+                    "value": "no",
+                    "shortcut": ""
+                }
+            ],
+            "key": "isYourSitePartOfACampaignWithGaccApprovalOrStateWideMultiAgencyInitiativeApprovedByDepartmentOfPremierAndCabinet",
+            "conditional": {
+                "show": true,
+                "conjunction": "any",
+                "conditions": [
+                    {
+                        "component": "isYourWebsiteRepresentingAJointFederalOrJointStateInitiative",
+                        "operator": "isEqual",
+                        "value": "no"
+                    }
+                ]
+            },
+            "type": "radio",
+            "input": true
+        },
+        {
+            "label": "Does your stat body focus on providing independent advice or support?  (Tribunals, Auditors Commissions, Advisory, Reviewer and Courts)",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "hidden": true,
+            "tableView": false,
+            "values": [
+                {
+                    "label": "Yes",
+                    "value": "yes",
+                    "shortcut": ""
+                },
+                {
+                    "label": "No",
+                    "value": "no",
+                    "shortcut": ""
+                }
+            ],
+            "key": "doesYourStatBodyFocusOnProvidingIndependentAdviceOrSupportTribunalsAuditorsCommissionsAdvisoryReviewerAndCourts",
+            "conditional": {
+                "show": true,
+                "conjunction": "any",
+                "conditions": [
+                    {
+                        "component": "doesYourWebsiteRepresentAnOfficialStatutoryBodyCommercialisedBusinessUnit1",
+                        "operator": "isEqual",
+                        "value": "yes"
+                    }
+                ]
+            },
+            "type": "radio",
+            "input": true
+        },
+        {
+            "label": "Is your stat body a government corporation, company, charity or foundation?",
+            "optionsLabelPosition": "right",
+            "inline": false,
+            "hidden": true,
+            "tableView": false,
+            "values": [
+                {
+                    "label": "Yes",
+                    "value": "yes",
+                    "shortcut": ""
+                },
+                {
+                    "label": "No",
+                    "value": "no",
+                    "shortcut": ""
+                }
+            ],
+            "key": "isYourStatBodyAGovernmentCorporationCompanyCharityOrFoundation",
+            "conditional": {
+                "show": true,
+                "conjunction": "all",
+                "conditions": [
+                    {
+                        "component": "doesYourStatBodyFocusOnProvidingIndependentAdviceOrSupportTribunalsAuditorsCommissionsAdvisoryReviewerAndCourts",
+                        "operator": "isEqual",
+                        "value": "no"
+                    }
+                ]
+            },
+            "type": "radio",
+            "input": true
+        },
+        {
+            "html": "<br/><p ><strong>Master brand</strong></p><p >If your website has not fit into any of the previous categories your site must use the master brand.</p><p ><strong>Master brand exemptions</strong></p><p >It is very rare that master brand exemptions are made. To qualify for an exemption you must detail why the master brand will not meet the needs of your communication material with a business case and research to support your argument.</p><p >This is to be submitted to either your departments corp-id co-ordinator or to DPC for approval.</p><p ><a href=\"https://www.designsystem.qld.gov.au/brand-foundations/master-brand\"><strong>Learn more</strong></a></p>",
+            "label": "MasterBrand",
+            "refreshOnChange": false,
+            "hidden": true,
+            "key": "masterBrand",
+            "conditional": {
+                "show": true,
+                "conjunction": "any",
+                "conditions": [
+                    {
+                        "component": "isYourSitePartOfACampaignWithGaccApprovalOrStateWideMultiAgencyInitiativeApprovedByDepartmentOfPremierAndCabinet",
+                        "operator": "isEqual",
+                        "value": "no"
+                    }
+                ]
+            },
+            "type": "content",
+            "input": false,
+            "tableView": false
+        },
+        {
+            "html": "<br/><p ><strong>Sub-brand</strong></p><p >You are likely sub-brand. Sub-brands represent an official agency or department of the Queensland Government including all divisions and branches within that department.</p><p >If you are a division, unit or branch of an existing agency you must use your parent agency's brand, unless you are a commercialised business unit (which are then <a href=\"https://www.designsystem.qld.gov.au/brand-foundations/?external-uuid=b3a1bae9-a98d-4b54-b5c8-ddd6c7f3c490\">co-brand</a>).</p><p >You must still seek initial approval from your departments brand or corporate ID co-ordinator before you start designs.</p><p ><a href=\"https://www.designsystem.qld.gov.au/brand-foundations/sub-brand\"><strong>Learn more</strong></a></p>",
+            "label": "Sub-brand",
+            "refreshOnChange": false,
+            "hidden": true,
+            "key": "subBrand",
+            "conditional": {
+                "show": true,
+                "conjunction": "all",
+                "conditions": [
+                    {
+                        "component": "doesYourWebsiteRepresentAnOfficialStatutoryBodyCommercialisedBusinessUnit",
+                        "operator": "isEqual",
+                        "value": "yes"
+                    }
+                ]
+            },
+            "type": "content",
+            "input": false,
+            "tableView": false
+        },
+        {
+            "html": "<br/><p ><strong>Co-brand</strong></p><p >You are likely co-brand. Co-brand is the category for most statutory bodies created and operated by the Qld Government. Co-branding is also used for joint federal or state joint initiative.</p><p >The Stat bodies that fall into the co-brand category are those that benefits from the authority of Queensland Government such as Courts, Governing Bodies, Trusts and Boards.</p><p ><a href=\"https://www.designsystem.qld.gov.au/brand-foundations/stand-alone\"><strong>Learn more</strong></a></p>",
+            "label": "CoBrand",
+            "refreshOnChange": false,
+            "hidden": true,
+            "key": "coBrand",
+            "conditional": {
+                "show": true,
+                "conjunction": "any",
+                "conditions": [
+                    {
+                        "component": "isYourWebsiteRepresentingAJointFederalOrJointStateInitiative",
+                        "operator": "isEqual",
+                        "value": "yes"
+                    },
+                    {
+                        "component": "isYourStatBodyAGovernmentCorporationCompanyCharityOrFoundation",
+                        "operator": "isEqual",
+                        "value": "no"
+                    }
+                ]
+            },
+            "type": "content",
+            "input": false,
+            "tableView": false
+        },
+        {
+            "html": "<br/><p ><strong>Endorsed</strong></p><p >Your are likely endorsed. Endorsed sites represents a program, initiative or major public campaign that has Government Advertising and Communication Committee (GACC) approval.</p><p >You must still seek initial approval from your departments brand or corporate ID co-ordinator before you start designs.</p><p ><strong>Note</strong></p><p >If not an approved GACC campaign seek approval from DPC before you begin designs.</p><p ><a href=\"https://www.designsystem.qld.gov.au/brand-foundations/endorsed\"><strong>Learn more</strong></a></p>",
+            "label": "Endorsed",
+            "refreshOnChange": false,
+            "hidden": true,
+            "key": "endorsed",
+            "conditional": {
+                "show": true,
+                "conjunction": "any",
+                "conditions": [
+                    {
+                        "component": "isYourSitePartOfACampaignWithGaccApprovalOrStateWideMultiAgencyInitiativeApprovedByDepartmentOfPremierAndCabinet",
+                        "operator": "isEqual",
+                        "value": "yes"
+                    }
+                ]
+            },
+            "type": "content",
+            "input": false,
+            "tableView": false
+        },
+        {
+            "html": "<br/><p><strong>Stand alone</strong></p><p >Your site is likely stand-alone.</p><p >The stand-alone category is for stat-bodies created and operated by the Qld Government that:</p><ul><li>provide independent advice or</li><li>are a business or corporation or</li><li>need to appear separate from the Queensland Government for legislative reasons.</li></ul><p ><a href=\"https://www.designsystem.qld.gov.au/brand-foundations/stand-alone\"><strong>Learn more</strong></a></p>",
+            "label": "StandAlone",
+            "refreshOnChange": false,
+            "hidden": true,
+            "key": "standAlone",
+            "conditional": {
+                "show": true,
+                "conjunction": "any",
+                "conditions": [
+                    {
+                        "component": "doesYourStatBodyFocusOnProvidingIndependentAdviceOrSupportTribunalsAuditorsCommissionsAdvisoryReviewerAndCourts",
+                        "operator": "isEqual",
+                        "value": "yes"
+                    },
+                    {
+                        "component": "isYourStatBodyAGovernmentCorporationCompanyCharityOrFoundation",
+                        "operator": "isEqual",
+                        "value": "yes"
+                    }
+                ]
+            },
+            "type": "content",
+            "input": false,
+            "tableView": false
+        },
+        {
+            "html": "<br/>",
+            "label": "spacing",
+            "type": "content",
+            "refreshOnChange": false,
+            "hidden": false
+        },
+        {
+            "label": "Reset",
+            "action": "reset",
+            "showValidations": false,
+            "theme": "secondary",
+            "disableOnInvalid": true,
+            "tableView": false,
+            "key": "submit",
+            "type": "button",
+            "input": true
+        }
+    ],
+    "settings": {},
+    "properties": {},
+    "controller": "",
+    "revisions": "",
+    "submissionRevisions": "",
+    "_vid": 0,
+    "created": "2024-10-21T07:28:54.487Z",
+    "modified": "2024-10-21T07:44:10.166Z"
+}
+
