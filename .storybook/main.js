@@ -12,7 +12,22 @@ const config = {
     ], //Bring dist in statically instead of having it minified
     addons: [//Storybook addons
     //https://storybook.js.org/addons/
-    "@storybook/addon-a11y", "@storybook/addon-themes", "@storybook/addon-essentials", "@storybook/addon-interactions", "@storybook/addon-links", "@chromatic-com/storybook"],
+        "@storybook/addon-a11y",
+        "@storybook/addon-themes",
+        "@storybook/addon-essentials",
+        "@storybook/addon-interactions",
+        {
+            name: "@storybook/addon-storysource",
+            options: {
+                loaderOptions: {
+                    injectStoryParameters: true,
+                },
+            },
+        },
+        "@storybook/addon-links",
+        "@chromatic-com/storybook",
+        "@storybook/addon-designs"
+    ],
 
     framework: {
         //Build the storybook with html-vite rendered - faster than webpack
@@ -34,15 +49,6 @@ const config = {
 
     viteFinal: async (config, {configType}) => {
         config.root = './dist'
-        // config.plugins.push({
-        //     name: "html-transform",
-        //     transform(src, id) {
-        //         if (id.endsWith(".mustache") || id.endsWith(".html") || id.endsWith(".hbs")) {
-        //             // Transform your HTML files here (src is the file content as a string)
-        //             return src;
-        //         }
-        //     },
-        // });
 
         return config;
     },
