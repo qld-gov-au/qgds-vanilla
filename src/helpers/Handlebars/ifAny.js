@@ -1,4 +1,4 @@
-module.exports = function () {
+export default function () {
     var options = arguments[arguments.length - 1];
     for (var i = 0; i < arguments.length - 1; i++) {
         if (arguments[i]) {

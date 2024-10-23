@@ -1,0 +1,53 @@
+<div  class="qld__grid">
+    <main class="main" role="main">
+<div class="qld__body">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12 col-lg-8 col-xl-8" id="content">
+    <div class="qld__body">
+        <div class="container-fluid">
+            <h2>Default (Light)</h2>
+            {{#each items}}
+                    <!--  {{ component.data.value}} Button -->
+                    {{> (lookup component "type") this }}
+             {{/each}}
+            <p>Defaults</p>
+            <a href="#" class="qld__btn">primary btn</a>
+            <a href="#" class="qld__btn qld__btn--secondary">secondary btn</a>
+            <a href="#" class="qld__btn qld__btn--tertiary">tertiary btn</a>
+            <a href="#" class="qld__btn qld__btn--toggle">toggle btn<i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+    </div>
+    <div class="qld__body qld__body--alt">
+        <div class="container-fluid">
+            <h2>Alternative</h2>
+            {{#each items}}
+                <!--  {{ component.data.value}} Button -->
+                {{> (lookup component "type") this }}
+            {{/each}}
+        </div>
+    </div>
+    <div class="qld__body qld__body--dark">
+        <div class="container-fluid">
+            <h2>Dark</h2>
+            {{#each items}}
+                <!--  {{ component.data.value}} Button -->
+                {{> (lookup component "type") this }}
+            {{/each}}
+        </div>
+    </div>
+    <div class="qld__body qld__body--dark-alt">
+        <div class="container-fluid">
+            <h2>Dark Alternative</h2>
+            {{#each items}}
+                <!--  {{ component.data.value}} Button -->
+                {{> (lookup component "type") this }}
+            {{/each}}
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+    </main>
+</div>

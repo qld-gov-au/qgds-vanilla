@@ -1,4 +1,4 @@
-module.exports = function(selectValues, tags, options) {
+export default function(selectValues, tags, options) {
     let output = "";
     let splitSelectValues = [];
 
@@ -7,7 +7,7 @@ module.exports = function(selectValues, tags, options) {
         if(selectValues) {
             splitSelectValues = selectValues.replace(/_/g, ' ').split('; ');
         }
-    
+
         for(let selectValue in splitSelectValues) {
             if(splitSelectValues.hasOwnProperty(selectValue)) {
                 var key = splitSelectValues[selectValue].replace(/ /g, '_');

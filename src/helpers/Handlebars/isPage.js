@@ -1,4 +1,4 @@
-module.exports = function(pageType, options) {
+export default function(pageType, options) {
     if (pageType == 'page_standard' || pageType == 'page_redirect' || pageType == 'page_custom_form'|| pageType == 'page_decision_tree') {
         return options.fn(this)
     } else {

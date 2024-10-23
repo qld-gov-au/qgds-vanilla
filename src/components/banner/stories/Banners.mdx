@@ -1,0 +1,488 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as Stories from "./banner.stories"
+import  bannerImageAnatomy from "./banner-image-anatomy.png"
+import  ContainedBanner from "./Contained-Banner.png"
+
+<Meta of={Stories} />
+
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/banners
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+
+Banners
+=======
+
+May also be known as:
+
+Hero banner or simply hero
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395567&mode=design&t=x7Dyv8PSaIgWJgKU-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Banners are used to introduce a page, their content should reflect the goals, content and purpose of the page they're on.
+
+Our banners have been specifically designed to help communicate the information architecture of the website with different banners recommended for different page types.
+
+Banners in our Design System incorporate the positioning and styling of breadcrumbs, Heading 1 text, page descriptions, call to actions, images or illustrations and range of colour options.
+
+There are four types of standard page banners in our Design System:
+
+*   No banner
+*   Default banner
+*   Basic banner
+*   Advance banners
+
+There is also an alternative layout option for banners at XL screen sizes know as the contained banner layout.
+
+* * *
+
+No-banner
+---------
+
+The no banner is comprised of our breadcrumbs style located within a section container.
+
+The no banner style is used for pages where vertical height is an important consideration. This style includes the breadcrumbs only and the rest of the banner content is placed within the content of the page.
+
+Example
+
+## FIXME EXAMPLE STRIPPED
+
+### Usage guidelines
+
+#### Success status icon Indicates a success state When to use it
+
+*   Form pages
+*   Pages with only one heading
+*   Content and article pages
+
+#### Status cancel icon Cancel icon or warning icon When not to use it
+
+*   Home pages
+*   Primary category pages
+
+* * *
+
+Default banner
+--------------
+
+The default banner features breadcrumbs, a ``< h1 >`` page title and a background colour or background texture. This is the default banner for content pages in the Design System.
+
+Example
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Default banner
+
+Default banner
+==============
+
+## FIX ME EXAMPLE STRIPPED
+
+### Usage guidelines
+
+To ensure consistency, the banner displayed on each content page within the same hierarchy level should use the same background patterns or colours as other pages in that level.
+
+#### Success status icon Indicates a success state When to use it
+
+Default banners are best suited for content pages.
+
+#### Status cancel icon Cancel icon or warning icon When not to use it
+
+*   Home pages
+*   Category pages
+*   Landings pages
+
+* * *
+
+Basic banner
+------------
+
+This banner is designed for pages that benefit from a short introduction or abstract, it builds on the functionally within the default banner and adds the option for background images.
+
+Example
+
+# FIX ME BANNA  EXAMPLE REMOVED
+
+Banner Basic
+============
+
+Banner basic abstract text
+
+
+# FIX ME BANNA  EXAMPLE REMOVED
+
+### Usage guidelines
+
+#### Success status icon Indicates a success state When to use it
+
+*   Standard content pages, that benefit from a short introduction or abstract
+*   Standard content pages that require subtle graphics such as first nations pages
+*   Landing pages that aren't part of the primary navigation menu
+
+#### Status cancel icon Cancel icon or warning icon When not to use it
+
+*   Home pages
+*   Category pages
+
+* * *
+
+Advanced banner
+---------------
+
+The advance banner includes all the features of the other banners in the Design System with the addition of more advanced design options.
+
+**These include:**
+
+*   Icon navigation tiles
+*   Navigational arrow cards
+*   CTA buttons
+*   an alternative heading style and
+*   three hero image layouts.
+
+The advance banners are best used for home pages and primary category pages. The advance banner on the home page is the only banner that doesn't require breadcrumbs.
+
+Example
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Banner advanced
+
+Banner advanced
+===============
+
+
+# FIX ME BANNA  EXAMPLE REMOVED
+
+### Other examples
+
+## FIX ME CROSS LINKS
+
+*   Image options
+
+    *   [Right aligned image](banners/advance-banner-right-align-image.html "Right aligned image")
+    *   [Gird aligned image](banners/advance-banner-grid-aligned-image.html)
+    *   [Fixed ratio](banners/advance-banner-fixed-ration-image.html)
+    *   [Background image](banners/background-image.html)
+
+*   CTA options
+
+    *   [Buttons](banners/ctas-buttons.html)
+    *   [Cards](banners/ctas-cards.html)
+    *   [Tiles](banners/ctas-tiles.html)
+
+*   Heading options
+
+    *   [Default](banners/advance-banners.html)
+    *   [Block heading](banners/block-style-heading.html)
+
+
+### Usage guidelines
+
+#### Success status icon Indicates a success state When to use it
+
+*   Home pages
+*   Specialty pages
+*   Major category pages
+*   Landing pages
+*   Primary navigation pages
+
+#### Status cancel icon Cancel icon or warning icon When not to use it
+
+*   Content pages
+*   Form page
+*   Search pages
+
+* * *
+
+# Contained banner layout
+
+The contained banner (also known as curved banner) is an optional layout that alters the design of the banner and primary navigation components at extra large screen sizes (over 1599px).
+
+The purpose of this alternative layout  is to prevent images that scale within banners from becoming stretched or cropped too severely. The design also allows for more branding to be added into the background of pages on XL displays making use of otherwise under-utilised screen space.
+
+### The issue its fixes
+
+Below is an example of a default banner at 1920px wide. At extra large viewports some images set within banners can become cropped removing key details. This can often be resolved by alerting the image but sometimes when imagery is provided by external sources this is not always possible.
+
+ Example of default banner showing hero image cropped  https://www.designsystem.qld.gov.au/components/banners/tabs/overview/Default-Banner.png
+
+### What happens when its applied
+
+In the example below you can see layout changes that occur when the contained banner style is applied.
+
+*   The width of the banner is constrained to 1600px so that the hero image is no longer cropped and appears correctly.
+*   Curved edges and drop-shadows are applied to make the design more harmonious with he layout of the page and other component.
+*   A solid background colour has been set to fill the negative screen space created by banners smaller width. Background images, or textures can also be applied in the background as alternatives to a solid colour.
+
+<img src={ContainedBanner} alt="Example of contained banner showing hero image filling the space within the banner correctly"></img>
+
+The contained banner style is applied globally across a whole site and is not intended to be used on stand alone pages. It only appears on screen sizes above 1600px and is incompatible with vertical navigation layouts.
+
+The contained is applied globally to a site by adding a modifying class `qld__banner_contained` to the `<body>` element.
+
+Find our more about the contained banner style by viewing our [Figma file.](banners.html)
+
+You can view an example of the contained banner on the [Queensland Health Careers website](https://www.careers.health.qld.gov.au/).
+
+* * *
+
+General usage guidelines
+------------------------
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+#### Do
+
+##### Keep it simple
+
+A banner should be easy to understand and not cluttered. Avoid too much text, too many images, and too many colours. Keep it simple and visually appealing.
+
+##### Keep it brief
+
+The hero banner should be short and to the point. Avoid long paragraphs of text. Headings should ideal be 20-30 characters or fewer and not more than 60 characters. Abstract text should be no more than 160 characters.
+
+##### Use high-quality images
+
+The banner is often the first thing that people see when they arrive at your website, so it's important to make a good first impression. Use high-quality images that are relevant to your brand and message. Make sure you test your images and that they work correctly at each screen size. Follow our guidelines for hero images to ensure faces and people aren't cropped out unnecessarily.
+
+##### Use relevant images
+
+Use images of people who are clearly related to the content instead of using models or generic stock photos. People are naturally attracted to pictures, so it's important to avoid using irrelevant graphics that might distract users from important information.
+
+##### Keep the design consistent
+
+The banner should be consistent with the rest of your website's design. Colour and patterns should be used in meaningful way across the site. Pages that offer similar content should have banner patterns that are consistent and help orientate the user. More complex pages should often use larger banners and simpler pages should use basic banners.
+
+#### Don't
+
+##### Use too many calls-to-action
+
+Avoid including too many calls-to-action in your banner. Having multiple calls-to-action can be confusing and overwhelming for the reader. Instead, focus on one primary call-to-action that is clear and easy to understand.
+
+##### Use vague or unclear messaging
+
+Ensure that your message is specific and clearly communicates the value your site or the service provides. For abstract text make sure they're free of jargon and provide a clear description of the pages. For the home page banner make sure it provides a clear description of your sites primary purpose.
+
+### On the home page
+
+##### Focus on your unique value proposition
+
+Home page banners should highlight your unique value proposition and what sets your brand apart from competitors. Use messaging and imagery that effectively communicates your brand's value and what visitors can expect from your products or services.
+
+### FIX ME EXAMPLE STRIPPED
+
+On this page
+------------
+
+Banner anatomy
+--------------
+
+### Banner colours
+
+All banners can use the 5 primary background colours set within the Queensland Government Colour system. This includes a white, light, light alternate, dark and dark alternative options. In addition to the 5 colours light and dark background textures can also be applied.
+
+Example
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Default banner
+
+Default banner
+==============
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Default banner
+
+Default banner
+==============
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Default banner
+
+Default banner
+==============
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Default banner
+
+Default banner
+==============
+
+*   [Components](banners.html)
+
+*   [Home](banners.html)
+*   [Components](banners.html)
+*   Default banner
+
+Default banner
+==============
+
+### Feature headings (block style)
+
+Feature headings are an optional style that can be used in the advanced banners. These headings use a contained block design that distinguishes the heading 1 style from other pages. It useful for specialised pages that need to stand out. It's also useful for page tiles that include a subheading.
+
+Example
+
+Banner advanced
+===============
+
+Advance banner with feature style banner
+
+### Background patterns
+
+Background patterns can be used in banners as a way of incorporating decorative elements and website branding. Background patterns are based on a tiled background image. This tiled image needs to be designed so that it can repeat seamlessly both horizontally and vertically.
+
+Background patterns should be based on one of the four primary background colours of the websites colour palette. Background patterns use the same image for all screen sizes including mobile.
+
+The benefit of using background patterns is that the images used for these can be much smaller than other image types used for banners which can help increase the performance of the page.
+
+Care must be taken when designing background images and patterns to ensure they don't impact colour contrast for text.
+
+Example
+
+## Example removed, FIX ME
+
+Banner Basic
+============
+
+Banner with background pattern
+
+### Background images
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=23167%3A395567&t=vtsmIT1MbDpzn6eM-1 "https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=23167%3A395567&t=vtsmIT1MbDpzn6eM-1")
+
+Background images are recommended to be designed at 1600px 520px. This size best covers the majority of desktop screen sizes. On mobile displays the background image changes to a smaller branding strip (592x200px). This is because background images generally don't need the same screen real estate as other images.
+
+When designing background images for desktop it's important to factor in colour contrast and image placement. Imagery should only appear on the far right and a considered approach should be taken for any patterns or designs placed in regions where text will appear.
+
+Example
+
+##FIXME EXAMPLE STRIPPED
+
+Background image
+================
+
+Dark colour with background image
+
+### Banner hero image options
+
+There are 3 styles of images that can be used in advanced banners, grid aligned, right aligned and fixed ratio.
+
+[Grid aligned image](banners/advance-banner-grid-aligned-image.html)
+
+[Right aligned image](banners/advance-banner-right-align-image.html)
+
+[Fixed ratio image](https://www.design-system.health.qld.gov.au/components/accordions/accordion)
+
+#### Specifications for hero images
+
+Grid aligned and right aligned images should be designed at a size of 782px x 520px and care should be taken to ensure that the focal point is in the centre of the image as the outer sections will occasionally be clipped as the banner changes shape of different screen sizes. The Guidelines below indicate roughly where image clipping may occur.
+
+Image sizes for fixed ratio style banners utilise the same dimensions as all other banners above. They key difference is that no area of the image will be cropped as the screen changes size. Instead, the image will shrink to fit the area. This means that the images won't always be same height of the banner and padding will appear above and below the image. When utilising graphical options, it's best to take this into consideration when crafting the image. Making use of transparency is a good way to create a more seamless design.
+
+<img src={bannerImageAnatomy} alt="banner image anatomy" ></img>
+
+
+### Combining image styles
+
+Background images and patterns can be combined with hero images to create more complex designs. These styles default simpler patterns on mobile. The example below shows a background image combined with a fixed ratio image.
+
+Example
+
+## FIX ME EXAMPLE STRIPPLED
+
+Background image
+================
+
+Dark colour with background image
+
+* * *
+
+Research and rationale
+----------------------
+
+The design of our banners was inspired by the [NSW](https://digitalnsw.github.io/nsw-design-system/components/hero-banner/index.html "https://digitalnsw.github.io/nsw-design-system/components/hero-banner/index.html") Design System banners (Digital NSW, n.d.) and Mozilla’s Protocols split pattern (Mozilla Protocol, n.d.). The designs have gone through multiple refinements as we've sort to craft a solution that allows designers to communicate the hierarchy of a sites structure, incorporate unique branding, imagery and maintaining these elements responsively over multiple screen sizes.
+
+Our banner component allows more prominent pages such as home, landing and feature pages to use more advance banners that have a greater number of customisation options allowing them to appear distinct and important to the user. In contrast lower level pages in an IA can use simpler banner styles that take up less screen space and don't distract from the content of the page.
+
+We chose to incorporate multiple colour options to give designers the ability to use colour to create visual hierarchy in their designs, we wanted designers to be able to use colour to help distinguish different pages on the site.
+
+There are multiple hero-image and background-image options to allow for multiple graphic design approaches. We received feedback from stakeholders that finding images to fit banner designs often proves difficult especially when there is limited budget for photography or design. Our intention is that there are multiple options available for imagery and graphics will work with a variety of sizes and styles, this way users are not forced to source imagery.
+
+Much of the testing we've done has been into the way images and content respond across different displays. The design of our banner component ensures that imagery responds so that the images focal point is always visible.
+
+Classes
+-------
+
+| Name                       | Description                              |
+|----------------------------|------------------------------------------|
+| `qld__banner` | Default banner. |
+| `qld__banner__basic` | Basic banner. |
+| `qld__banner__advanced` | Advance banner. |
+| `qld__banner--alt` | Alt colour style. |
+| `qld__banner--dark` | Dark colour style. |
+| `qld__banner--dark-alt` | Dark alt style. |
+
+Accessible banner requirements
+------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.1.1 Non-text content
+
+For hero banners, it's important to provide alternative text for images to ensure that users who are visually impaired can understand the content. The alternative text should describe the content of the image in a concise and meaningful way W3C (2018).
+
+#### 1.4.3 Minimum contrast
+
+Banners should use appropriate contrast to ensure that all users, including those with low vision, can read the content. The text should have a minimum contrast ratio of 4.5:1 against the background W3C (2018).
+
+#### 2.1 Keyboard Accessible
+
+Hero banners should be accessible via keyboard navigation to ensure that users who cannot use a mouse can still access the content. All interactive elements should be operable by keyboard, and keyboard focus should be visible to users W3C (2018).
+
+#### 2.4.4 Use descriptive link text
+
+Any links within the banner should have descriptive link text that accurately describes the destination of the link. This helps users with screen readers and other assistive technologies to understand the content W3C (2018).
+
+* * *
+
+References
+----------
+
+Digital NSW (n.d.) [Hero Banner](https://digitalnsw.github.io/nsw-design-system/components/hero-banner/index.html "https://digitalnsw.github.io/nsw-design-system/components/hero-banner/index.html"), _NSW Design System_, accessed 10 April 2023.
+
+Mozilla Protocol (n.d.) [Split - Default](https://protocol.mozilla.org/components/detail/split--default.html "https://protocol.mozilla.org/components/detail/split--default.html"), _Mozilla Protocol_, accessed 10 April 2023.
+
+Nielsen J (2001) [113 Design Guidelines for Homepage Usability](https://www.nngroup.com/articles/113-design-guidelines-homepage-usability "https://www.nngroup.com/articles/113-design-guidelines-homepage-usability/"), Nielsen Norman Group, accessed 10 April 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** March 2024

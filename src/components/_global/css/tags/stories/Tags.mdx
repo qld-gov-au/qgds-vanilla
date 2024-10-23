@@ -1,0 +1,376 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+[//]: # (import * as stories from "./table.stories.js")
+
+
+[//]: # (<Meta of={stories} name="Tables" />)
+
+<Meta title="Components/Tags" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Tags
+====
+
+May also be known as:
+
+labels, tokens or chips
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395550&mode=design&t=CcCmg8BCM8jn0M0P-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Tags classify content using keywords or labels. They’re added to a web page, an asset or other content to help users search for and find related content quickly and easily.
+
+There are 4 types of tags in our Design System:
+
+*   Default tags
+*   Action tags
+*   Supplementary information tags
+*   Applied filter tags (removable tags).
+
+All tags are available in 2 sizes. Default and Large. Default tags are used for search results or in cards. Large tags are useful to tag sections of content such as articles and blogs posts.
+
+### Default tags
+
+This is the default style for tags, they're used to display a list of keywords or labels but aren't clickable.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+*   Babies
+*   Maternity
+*   General public
+
+*   Babies
+*   Maternity
+*   General public
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395550&mode=design&t=CcCmg8BCM8jn0M0P-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!--Tag list --> <ul class="qld__tag-list"> <li class="qld__tag">Babies</li> <li class="qld__tag">Maternity</li> <li class="qld__tag">General public</li> </ul> <!-- Tag list --> <ul class="qld__tag-list"> <li class="qld__tag qld__tag--large">Babies</li> <li class="qld__tag qld__tag--large">Maternity</li> <li class="qld__tag qld__tag--large">General public</li> </ul>`
+
+### Action tags
+
+Action tags are clickable links and are used when a tag needs to be interactive. In most cases this is when tags link to additional content related to that tagged topic.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+*   [Babies](javascript:void(0))
+*   [Maternity](javascript:void(0))
+*   [General public](javascript:void(0))
+
+*   [Babies](javascript:void(0))
+*   [Maternity](javascript:void(0))
+*   [General public](javascript:void(0))
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395550&mode=design&t=CcCmg8BCM8jn0M0P-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<ul class="qld__tag-list"> <li><a class="qld__tag qld__tag--link" role="link" href="javascript:void(0)">Babies</a></li> <li><a class="qld__tag qld__tag--link" role="link" href="javascript:void(0)">Maternity</a></li> <li><a class="qld__tag qld__tag--link" role="link" href="javascript:void(0)">General public</a></li> </ul> <ul class="qld__tag-list"> <li><a class="qld__tag qld__tag--large qld__tag--link" role="link" href="javascript:void(0)">Babies</a></li> <li><a class="qld__tag qld__tag--large qld__tag--link" role="link" href="javascript:void(0)">Maternity</a></li> <li><a class="qld__tag qld__tag--large qld__tag--link" role="link" href="javascript:void(0)">General public</a></li> </ul>`
+
+### Information tags
+
+Information tags convey additional data about a subject and are styled differently to tags that are topic based. These tags are most often used for content that is numerical such as read time, distance and file size. This style of tag is also used to indicate result numbers within our filterable search component.
+
+Information tags are similar but not the same as [badges](https://getbootstrap.com/docs/4.0/components/badge/). Badges usually contain numbers or icons and are used to indicate a status, notification count, or a very small piece of information attached to an item. Information tags similar to badges often contain numbers but don't sit within the component, are larger and convey more unique content.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+PDF 262 KB Read time: 2 minutes
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395550&mode=design&t=CcCmg8BCM8jn0M0P-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- Small info tag --> <span class="qld__tag qld__tag--info" role="note">PDF 262 KB</span> <!-- Large info tag --> <span class="qld__tag qld__tag--info qld__tag--large qld__tag--info" role="note">Read time: 2 minutes</span>`
+
+### Applied filter tags
+
+Applied filter tags are a unique variant of large clickable tags that are used to indicate applied filters or facets.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Filtered by:
+
+*   Policies and procedures Remove policies and procedures filter
+
+*   Publications Remove publications filter
+
+*   Clear filters
+
+Show more
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395550&mode=design&t=CcCmg8BCM8jn0M0P-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="qld__search__filters"> <!-- Filtered by title --> <span class="qld__search__filters-title">Filtered by:</span> <ul class="qld__search__filters-list qld__tag-list"> <li> <div class="qld__tag qld__tag--large qld__tag--filter"> <!-- Filter: Policies and procedures --> Policies and procedures <button class="qld__tag--filter-close" <span class="sr-only">Remove policies and procedures filter</span> </button> </div> </li> <li> <div class="qld__tag qld__tag--large qld__tag--filter"> <!-- Filter: Publications --> Publications <button class="qld__tag--filter-close"> <span class="sr-only">Remove publications filter</span> </button> </div> </li> <li> <button class="qld__btn qld__btn--tertiary">Clear filters</button> </li> </ul> </div>`
+
+Usage guidelines
+----------------
+
+### When to use
+
+Tags are versatile UI elements crucial for efficient navigation. Use tags to categorise content into groups, making it easier for users to find related items. Additionally, you can use tags to convey supplementary information such as reading time or file size and manage active filters in data sets.
+
+*   **Use default tags** to indicate contents categories or topics for easier discovery
+*   **Use supplementary information tags** to display data such as reading time, distance, or file size
+*   **Use action tags to link** to display additional content related to that tagged metadata topic or category
+*   **Use applied filter tags** to show and manage active filters on data sets
+
+### When not to use
+
+*   If you need to represent a hierarchy; tags are non-hierarchical
+*   Use as a status indicator
+*   To initiate an action, consider buttons. Try to avoid tags if they might appear alongside buttons as this may cause confusion
+*   Use to link to page content, consider text links, action tags should link to high level categories
+
+### How to use tags
+
+Here are some tips on how to use tags effectively.
+
+#### Do
+
+*   Use adjectives for non clickable tags. Using a verb might make a user think that clicking on them will do something (GOV.UK, n.d.)
+*   Group tags like words in a paragraph, not a vertical list. This keeps the group compact to improve scan-ability (IBM Primer, n.d.)
+*   Use short labels for easy scanning. Use two words only if necessary to describe the status and differentiate it from other tags (IBM Primer, n.d.)
+*   Use a heading level to introduce the purpose of the list of tags in body content. (Digital Transformation Agency, 2018)
+
+#### Don't
+
+*   Use multiple or single tags to categorise items (Carbon Design System, n.d.).
+*   Mix action tags and default tags. Once you establish a pattern for how tags behave in section try to be consistent with that application (USWDS, 2022)
+*   Use different sizes of tags next to each other
+
+Research and rationale
+----------------------
+
+### Classifying tags
+
+There is often some confusion around how the tag component is named and what function it serves. Through different Design Systems, components such as labels, tags, chips and badges all help to categorise elements but often have different design approaches and styles. For clarity in our Design System, it was important to work out what the correct purpose of tags should be for based on best practice and what style and function they should adopt.
+
+W3C’s [article](https://www.w3.org/2021/03/04-openui-minutes.html) helped provided advice specifically on this this topic, presenting the following 2 resolutions which we used to inform our choices:
+
+Badges and Tags are unique in their semantic usage, we will define the differences
+
+Chips and Pills are style-based naming conventions, these will fall under Tags
+
+For our Design System we reference to tags, pills, badges and chips in the following ways:
+
+**Tags**: Tags are usually used for categorisation and metadata. They're often simple, with a text label, and sometimes not interactive.
+
+**Pills**: Pills are stylised tags but usually have rounded edges. They're often used for labels, status, or filters, and can sometimes be interactive.
+
+**Chips** (Material Design term): Chips are versatile and can be used for input, selection, filters, or complex entities (such as contacts). They're more likely to be interactive and can contain an icon, a label, and a 'close' button.
+
+**Badges**: Badges usually contain numbers or icons and are used to indicate a status, notification count, or a small piece of information attached to an item.
+
+### Our tag types
+
+After defining exactly what tags were we chose to break up the tag component into 4 varieties: default tags, action tags, information tags, and applied filter tags.
+
+We chose to categorise our tags for the following reasons:
+
+*   **clarity and Purpose**: by clearly defining the types of tags, we ensure that each type of tag has a specific purpose and usage scenario. This reduces confusion and improves the consistency of the design
+*   **versatility**: our tags cover a broad spectrum of use cases from categorisation, interactivity, displaying metadata, to filtering - similar to what might be accomplished using a mix of tags, pills, and chips
+*   **simplicity**: by using the term "Tags" and categorising them based on their purpose, we avoid the confusion that might arise from using different terms like pills, badges, labels and chips. This simplicity makes it easier for designers and developers to understand and use the components effectively
+*   **we avoid using the words label and chips:** label is terminology that is already specific to forms so we wanted to avoid using this, chips also seemed to be specific to material design and we felt that its inclusion may add confusion
+*   **future state:** we have specifically tried to avoid using tags to convey information that would be more suited for badges as we see that as a separate and unique component to be designed in the future.
+
+### Style and design
+
+Our initial tag design is based on the Digital Transformation Agency's [tag component](https://gold.designsystemau.org/components/tags). However, we opted to used extremely rounded borders with our tags to create more visual distinctiveness and separate them further from standard links and buttons. This shape when associated with tags is often referred to as a pill or chip. The shape is more suited to our tag design as pills and chips are commonly associated with some of the other functionality our tags offer such as being links or applied filters.
+
+To further differentiate tags from primary or secondary buttons we also ensured our tags had a different border thickness, radius, and padding.
+
+### Sizes
+
+For our tags we added an additional large style variation. This gives designers the option to use different sizes to tags which is important when maintaining visual harmony with the other content on the screen or when you need to create a comfortable touch target for interactive tags. The large style tag also allows important metadata to stand out more within content.
+
+### Supplementary/Information tags
+
+During the design of our search component, we realised that we were consistently using tags to convey 2 distinct forms of content. In the body of the search result we were listing all the related metadata which were often topical, however in the top right we were listing secondary information such as file size, read time and distance. This secondary information was always data based.
+
+Because these 2 tags were positioned closely but convey different types of content, we wanted a way for users to easily be able to differentiate the content which would assist them when scanning the page. We opted to create a unique style for these secondary data tags, this style is labelled as supplementary or information tags.  
+
+These tags are similar but not the same as [badges](https://getbootstrap.com/docs/4.0/components/badge). Badges usually contain numbers or icons and are used to indicate a status, notification count, or a very small piece of information attached to an item. Information tags don't sit within the component, have longer content and unique information.
+
+Implementation
+--------------
+
+### Classes
+
+Name
+
+Description
+
+`qld__tag`
+
+Default class that applies the base style for tags.
+
+`qld__tag--large`
+
+Class that changes tag to use action style.
+
+`qld__tag--info`
+
+Class that changes tag to use supplementary information style.
+
+`qld__tag--filter`
+
+Class that changes tag to use applied filter style.
+
+`qld__tag-list`
+
+A unique list type for tags that ensures tags flow like words in a paragraph, not a vertical list.
+
+Accessible tag requirements
+---------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating custom tag components.
+
+### WCAG guidelines
+
+#### 1.4.3 Contrast (Minimum)
+
+Ensure that text in the tags has a contrast ratio of at least 4.5:1 against its background to comply with WCAG 2.1 AA.
+
+#### 2.1 Keyboard Accessible
+
+Ensure that tags, especially action tags and applied filter tags, are operable by providing keyboard accessibility. Users should be able to navigate and interact with tags using only a keyboard, without requiring a mouse or other pointing device. This includes ensuring that all interactive elements within the tags are keyboard accessible.
+
+#### 2.4.7 Focus Visible
+
+When a tag is in focus, it must have a visible focus outline. This ensures that keyboard-only users can perceive which element has the keyboard focus.
+
+#### 4.1.2 Name, Role, Value
+
+When necessary, use ARIA attributes to provide an accessible name, convey the correct role, and ensure the component can be operated by assistive technologies. However, if a native HTML element or attribute already has the required semantics and behaviour, use it instead of repurposing an element with added ARIA roles, states, or properties to make it accessible (W3C, n.d.)
+
+##### For action tags no aria label is necessary
+
+Action tags should use native html elements and do not require ARIA attributes.
+
+Example:
+
+`<a class="qld__tag qld__tag--link">Topic</a>`
+
+##### A close (remove) button within an applied filter tags
+
+When using a button to remove an applied filter (e.g., using an icon like the letter 'x'), the `aria-label` attribute should clearly indicate the button's purpose. This ensures that screen readers convey the correct information to users.
+
+Example:
+
+`<span class="qld__tag qld__tag--large qld__tag--filter">Filter: Price<button aria-label="Remove filter: Price" class="close-button">x</button></span>`
+
+##### Supplementary information tags
+
+Supplementary information tags should have a role="note". This helps assistive technologies identify these tags as providing additional context or information.
+
+Example:
+
+`<span role="note" class="qld__tag qld__tag--info">4 min read</span>`
+
+The `role="note"` is an ARIA landmark role that indicates non-essential content that provides additional context.
+
+* * *
+
+References
+----------
+
+Digital NSW (n.d.) [Tags](https://digitalnsw.github.io/nsw-design-system/components/tag/index.html), _NSW Design System_, accessed 6 July 2023.
+
+USWDS (2022) [Tag](https://designsystem.digital.gov/components/tag), _United States Web Design System_, accessed 6 July 2023.
+
+GOV.UK (n.d.) [Components](https://design-system.service.gov.uk/components), [_GOV.UK_](https://GOV.UK) _Design System_, accessed 6 July 2023.
+
+Material Design (n.d.) [Chips](https://m2.material.io/components/chips), _Material Design_, accessed 6 July 2023.
+
+IBM Primer (n.d.) [Token](https://primer.style/design/components/token), _Primer Design_, accessed 6 July 2023.
+
+Digital Transformation Agency (2018) [Tags](https://gold.designsystemau.org/components/tags), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+Agriculture Design System (n.d.) [Tags](https://design-system.agriculture.gov.au/components/tags/code), _Agriculture Design System_, accessed 6 July 2023.
+
+W3C (2021) [Open UI Telecon 02/25 – 04 March 2021](https://www.w3.org/2021/03/04-openui-minutes.html), [_www.w3.org_](http://www.w3.org), accessed 6 July 2023.
+
+Mozilla (n.d.) [ARIA: link role - Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Link_role), [http://developer.mozilla.org](http://developer.mozilla.org) , accessed 6 July 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21), World Wide Web Consortium, accessed 10 April 2023.
+
+Zlatkus A (2020) [Design Guide: Classifying items](https://blog.prototypr.io/design-guide-classifying-items-db5b121985d), _Prototypr_, accessed 6 July 2023.
+
+Bootstrap (n.d.) [Badges](https://getbootstrap.com/docs/4.0/components/badge), _Bootstrap_, accessed 6 July 2023.
+
+Carbon Design System (n.d.) [Tag](https://v10.carbondesignsystem.com/components/tag/usage), _Carbon Design System_, accessed 6 July 2023.
+
+W3C (n.d.) [Using ARIA in HTML](https://www.w3.org/TR/using-aria/#rule1), _WAI-ARIA Authoring Practices_, W3C, accessed 27 August 2024.
+
+**Last updated:** August 2024

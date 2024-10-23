@@ -1,0 +1,14 @@
+{{! linked_list.hbs v0.0.1 }}
+{{#if component.data.items}}
+    <ul{{#if component.data.metadata.id_field.value}} id="{{component.data.metadata.id_field.value}}"{{/if}} class="qld__link-columns{{#if component.data.type}} qld__link-columns--{{component.data.type}}{{/if}}">
+    {{#each component.data.items}}
+        <li  {{#if component.data.all_link }} class="qld__link-columns__all-link"{{/if}}>
+          {{#if component.type }}
+          {{> (lookup component "type") this }}
+          {{else}}
+          {{{ this }}}
+          {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

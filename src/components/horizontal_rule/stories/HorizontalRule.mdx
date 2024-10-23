@@ -1,0 +1,172 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+import * as Stories from "./horizontalRule.stories.js"
+
+
+import HorizontalRuleAnatomy from "./a76bf723-ee26-4d68-8e22-27921c1b3df3.png"
+
+
+<Meta of={Stories} name="Horizontal Rule (Dividers)" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Horizontal rule
+===============
+
+May also be known as:
+
+horizontal lines, dividers, separators, horizontal bars, or simply as lines.
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23945%3A372225&mode=design&t=NZkydKbL0aPnxoXw-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+A horizontal rule is a visual element used in web design and documents to separate or organise content. It typically appears as a horizontal line and serves as a divider between different sections, topics, or ideas. In HTML, horizontal rules are created using the `<hr>` element, which is a self-closing tag.
+
+In our Design System there are 3 classes for horizontal rules, Large, Medium and Small, each of these can be used on any background colour.
+
+### Horizontal rules example
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+* * *
+
+* * *
+
+* * *
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<hr class="qld__horizontal-rule"> <hr class="qld__horizontal-rule qld__horizontal-rule--md"> <hr class="qld__horizontal-rule qld__horizontal-rule--lg">`
+
+Usage guidelines
+----------------
+
+### Success status icon Indicates a success state When to use
+
+*   **To separate different sections:** Use horizontal rules when you want to visually distinguish between different sections of your content, such as separating chapters, articles, or different topics within a page. Using HR to break content into meaningful chunks, designers can improve the user experience, enhance readability, and increase the likelihood of users retaining the information (Nielsen Norman Group. n.d.).
+*   **To create a visual break:** If you have long passages of text or a dense layout, horizontal rules can provide some visual relief and give the reader a chance to pause and refocus.
+*   **To emphasise a change in context:** If the content shifts from one topic to another, using a horizontal rule can help signal the change and maintain a clear structure. Using background colours, horizontal rules, and white space can help users visually distinguish between what’s related and what isn’t (Nielsen Norman Group. n.d.).
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+*   **As a substitute for whitespace:** Overusing horizontal rules can make your design look cluttered. Instead, consider using whitespace (or padding and margins) to create separation and improve readability. Use white space when you want to create a more subtle separation between content chunks while maintaining a clean and uncluttered look. White space is suitable for separating smaller chunks of content, such as paragraphs or list items, where a horizontal rule might be too visually intrusive.
+*   **For purely decorative purposes:** Don't use horizontal rules if they don't serve a functional purpose. Unnecessary visual elements can be distracting and hinder the user experience.
+*   **When other elements are more appropriate:** In some cases, other design elements like headings, subheadings, or borders may be more effective in creating visual hierarchy and separation.
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+Our horizontal rules are designed to work in conjunction with the vertical rhythm guidelines of our Design System.
+
+The largest size is used to separate `<sections>` of content and matches the default size space between 2 sections of the same colour which is 64px.
+
+The medium size is used to separate content within a section and uses the same spacing that generally appears above a `<H2>` element of 48px.
+
+The small size is used to separate elements within a container or div and is based on the general spacing between components like buttons or cards which is 32px.
+
+Horizontal rule anatomy
+-----------------------
+
+To ensure the overall height of the HR rules align to our Design System's [grid system](../styles/layout-foundations.html) the total height including padding and line weight must always be divisible by 4.
+
+To achieve this the padding for each of the different horizontal rules is adjusted to factor in the height of the horizontal line.
+
+<img src={HorizontalRuleAnatomy} alt="Horizontal Rule Anatomy" />
+
+For consistency the colour for horizontal rules is determined by the the border colour variables.
+
+Research and rationale
+----------------------
+
+The `<hr>` element in HTML, was initially used to create a horizontal rule or line as a visual separator between different sections of content. In the past, the appearance of the horizontal rule was controlled using HTML attributes, which are presentational in nature (Mozilla Developer Network, n.d.).
+
+With the advent of modern web standards, the `<hr>` element has transitioned from being purely presentational to being semantic. This means that the `<hr>` element now conveys meaning about the structure of the content (i.e., it denotes a thematic break or a section break) rather than simply being a visual divider. Consequently, to maintain the separation of concerns between content (HTML) and presentation (CSS), it is now recommended to use CSS to style the appearance of the horizontal rule, rather than relying on HTML attributes (Mozilla Developer Network, n.d.).
+
+Due to this we've set default CSS styles for the HR element in CSS across our Design System. We created 3 responsive styles horizontal rules, each style has a different amount of white space. This way a design can ensure that it fits correctly in vertical rhythm of the currently layout.
+
+To ensure our horizontal rules have enough contrast with the background each horizontal rule is available in light-alternative and dark-alternative styles. These styles use a darker border colour for the horizontal rule line and can be useful for when horizontal rules aren't purely decorative.
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__horizontal-rule`
+
+Small style.
+
+`qld__horizontal-rule--md`
+
+Medium style.
+
+`qld__horizontal-rule--lg`
+
+Large style.
+
+Accessible horizontal rule requirements
+---------------------------------------
+
+Keep these considerations in mind if you are modifying the design system or creating a custom component.
+
+### Best practice
+
+#### Ensure sufficient contrast
+
+Make sure the colour of the horizontal rule has enough contrast with the background so that users with visual impairments can perceive it easily.
+
+#### Avoid using patterns or textures
+
+Use solid lines for horizontal rules to avoid potential issues for users with cognitive or visual impairments.
+
+#### Use appropriate spacing
+
+Ensure that there is sufficient whitespace around the horizontal rule to improve readability and avoid creating a cluttered layout (WAI, n.d.).
+
+#### Consider screen readers
+
+Keep in mind that screen readers may interpret the `<hr>` element as a "section break" or "thematic break"; ensure that its usage aligns with the intended meaning in the content structure. If `<hr>` tags are used for visual purposes only it doesn't need to be announced by a screen reader. Add the attribute `aria-hidden="true"` so screen readers will ignore the element. If the element _should_ be announced by a screen reader, the `aria-hidden` attribute can be removed (Digital Transformation Agency, 2018).="qld\_\_abstract">
+
+* * *
+
+References
+----------
+
+Mozilla Developer Network (2023) [`<hr>`: The Thematic Break (Horizontal Rule) element - HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/hr), Mozilla Developer Network, accessed 20 July 2023.
+
+W3Schools (n.d.) [HTML hr tag](https://www.w3schools.com/tags/tag_hr.asp), W3Schools, accessed 20 July 2023.
+
+Web Accessibility Initiative (2021) [All Supplemental Guidance](https://www.w3.org/WAI/WCAG2/supplemental), Web Accessibility Initiative (WAI), accessed 20 July 2023.
+
+W3C Web Accessibility Initiative (WAI) (n.d.) [Use White Spacing](https://www.w3.org/WAI/WCAG2/supplemental/patterns/o3p10-whitespace), Web Accessibility Initiative (WAI), accessed 20 July 2023.
+
+Moran K (2016) [How Chunking Helps Content Processing](https://www.nngroup.com/articles/chunking), _Nielsen Norman Group_, accessed 20 July 2023.
+
+Digital Transformation Agency (2018) [Body](https://gold.designsystemau.org/components/body/rationale/#horizontal-separator-tag "https://gold.designsystemau.org/components/main-nav/rationale/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+**Last updated:** August 2023

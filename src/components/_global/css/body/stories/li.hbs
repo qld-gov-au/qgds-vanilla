@@ -1,0 +1,15 @@
+{{! li.hbs v0.0.1 }}
+<li {{#if component.data.metadata.id_field.value}}id="{{component.data.metadata.id_field.value}}"{{/if}}>
+    {{#if component.data.items}}
+        {{#each component.data.items}}
+                {{#if component.type }}
+                    {{> (lookup component "type") this }}
+                {{else}}
+                    {{{ this }}}
+                {{/if}}
+        {{/each}}
+{{else}}
+        {{{ component.data.content.value }}}
+    {{/if}}
+    {{#if @partial-block}}{{> @partial-block }}{{/if}}
+</li>

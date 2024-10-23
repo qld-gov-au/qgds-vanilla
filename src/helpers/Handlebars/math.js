@@ -1,4 +1,4 @@
-module.exports = function(lvalue, operator, rvalue) {
+export default function(lvalue, operator, rvalue) {
     lvalue = parseFloat(lvalue);
     rvalue = parseFloat(rvalue);
     return {

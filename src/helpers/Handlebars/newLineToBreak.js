@@ -1,4 +1,4 @@
-module.exports = function (str) {
+export default function (str) {
     if(typeof str == 'string') {
         return str.replace(/\n/g, '<br />');
     }

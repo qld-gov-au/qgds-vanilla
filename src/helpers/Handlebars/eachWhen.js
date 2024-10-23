@@ -1,9 +1,9 @@
-module.exports = function(list, key, value, options) {
+export default function(list, key, value, options) {
     var result = "";
     var arr = [];
     var data = Handlebars.createFrame(options.data);
     var index = 0;
-    
+
     for(var i in list) {
         if(list[i][key] === value) {
             arr.push({

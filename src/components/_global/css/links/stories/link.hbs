@@ -1,0 +1,4 @@
+{{! link v0.0.2}}
+<a{{#if component.data.metadata.id_field.value}} id="{{component.data.metadata.id_field.value}}"{{/if}} class="qld__link{{#if component.data.display}} qld__display-{{component.data.display}}{{/if}}" href="{{component.data.url}}"{{#if component.data.disabled}} disabled="disabled"{{/if}}>
+    {{{component.data.value}}}{{{component.data.content.value}}}
+</a>

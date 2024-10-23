@@ -1,0 +1,1029 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+
+import stories from "./../components/_global/css/body/stories/typography.stories.js"
+
+<Meta of={stories} />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Typography
+==========
+
+Typography essentials, such as font, headings style, text classes and line heights.
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A306345&t=CRMvDW1T563jANY6-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+*   [Overview](#section__overview)
+*   [Headings](#section__headings)
+*   [Paragraphs](#section__paragraphs)
+*   [Text links](#section__text-links)
+*   [Lists](#section__lists)
+*   [Link lists](#section__link-lists)
+*   [Related](#section__related)
+*   [References](t#section__references)
+
+Overview
+--------
+
+The Queensland Government relies on Noto Sans as its primary web font for digital products and services, ensuring a consistent and distinctive visual identity. Noto Sans offers numerous advantages that make it an excellent choice for web typography.
+
+With its extensive character set, Noto Sans ensures optimal readability and accessibility, supporting multiple languages to cater to a diverse range of users. Its clean design, balanced proportions, and excellent legibility make it suitable for both headings and body copy. Furthermore, Noto Sans is freely available from [Google Fonts](https://fonts.google.com/noto/specimen/Noto+Sans?query=noto+), making it easily accessible for integration into web projects without incurring any additional costs.
+
+To ensure compatibility across different devices and operating systems, the Queensland Government has implemented a font stack that includes system fonts as fallback options. System fonts are a reliable choice for fallbacks as they're readily available on most devices, ensuring consistent rendering and maintaining a cohesive user experience.
+
+**The updated font stack for the Queensland Government's Design System is as follows:**
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A306345&t=CRMvDW1T563jANY6-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`body { font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }`
+
+By utilising Noto Sans as the primary font and including system fonts as fallback options, the Queensland Government ensures a visually appealing and inclusive design that priorities readability and accessibility across various platforms and devices.
+
+* * *
+
+Headings
+--------
+
+Headings help to structure content on a page using relative visual prominence. There are 6 levels of sections headings. `<h1>` is the highest section level and `<h6>` is the lowest. They're used for priority messaging and should reflect the organisation of the content of the page.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Heading 1
+=========
+
+Heading 2
+---------
+
+### Heading 3
+
+#### Heading 4
+
+##### Heading 5
+
+###### Heading 6
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23805%3A306345&mode=design&t=2NwtJXtJpL352qHk-1)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<h1>Heading 1</h1> <h2>Heading 2</h2> <h3>Heading 3</h3> <h4>Heading 4</h4> <h5>Heading 5</h5> <h6>Heading 6</h6>`
+
+* * *
+
+Paragraphs
+----------
+
+A paragraph on a webpage is a section created using the code `<p>` . In books or articles, you typically see paragraphs as chunks of text separated by blank spaces or a bit of indentation at the start. However, in web coding, a paragraph doesn't have to be just text. It can also group together related things like pictures or parts of a form.
+
+There are 3 styles of paragraph text in our Design System, abstract text, body text and caption text.
+
+### Abstract text
+
+The abstract also known as lead text is useful as a high level introduction used at the top of the page to briefly describe the content. This style of text should only be used once per page if possible.
+
+Abstract text is applied by using the class `qld__abstract`
+
+### Body text
+
+This is the default paragraph text used in the body content of a page. This is the style that's applied to any paragraph `<p>` element on the page.
+
+### Caption text
+
+This is a text style for copy used alongside informational images, hint text, footnotes and references.
+
+Caption text is applied by using the class `qld__caption`
+
+Example
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in vel leo at molestie. Tempor a feugiat dictum sit nisl, vitae dolor, nulla. Lectus sed urna pharetra id.
+
+Eget elit placerat a elit. Dignissim sapien non orci sed sit nam at. Augue turpis fermentum augue augue lectus rhoncus tortor sit. Sed amet, arcu et morbi dictumst lectus nunc. Aliquet a augue orci eu. Cras lectus tortor proin in.
+
+\*Nunc mollis augue sagittis massa nibh ridiculus libero adipiscing etiam. Eget orci nibh tristique sem blandit sollicitudin.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<p class="qld__abstract">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi in vel leo at molestie. Tempor a feugiat dictum sit nisl, vitae dolor, nulla. Lectus sed urna pharetra id.</p> <p>Eget elit placerat a elit. Dignissim sapien non orci sed sit nam at. Augue turpis fermentum augue augue lectus rhoncus tortor sit. Sed amet, arcu et morbi dictumst lectus nunc. Aliquet a augue orci eu. Cras lectus tortor proin in.</p> <p class="qld__caption">*Nunc mollis augue sagittis massa nibh ridiculus libero adipiscing etiam. Eget orci nibh tristique sem blandit sollicitudin.</p>`
+
+* * *
+
+Text links
+----------
+
+Text links are pieces of text on a webpage that you can click on to go to another webpage, file, email, or different spot on the same page. In web coding, we create these using the `<a>` tag and the href attribute. Whatever you put inside each `<a>` tag should give an idea of where the link will take you. .
+
+Links can be part of a paragraph or stand alone. Usually, they're shown in blue and have an underline. You can learn more about how we style links in our [underline guide](underlines.html).
+
+In our Design System there are 2 styles of text links, those that have visited states and those that don't. By default, it's best practice to always included visited states on thinks however there are some instances where it isn't helpful to distinguish between visited and unvisited states, for example when linking to pages with frequently-changing content such as the dashboard for an admin interface.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Elementum euismod fringilla vitae varius. Justo imperdiet justo tincidunt vestibulum venenatis morbi molestie dolor orci. [Risus sapien urna blandit eget.](typography.html#) Mi, nisl facilisis pellentesque bibendum. Gravida lobortis vel amet, ullamcorper vestibulum, in curabitur odio pulvinar.
+
+Example paragraph. [Internal link](typography.html#) and an [external link](typography.html#)
+
+[Link without visited state](typography.html#)
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<p>Elementum euismod fringilla vitae varius. Justo imperdiet justo tincidunt vestibulum venenatis morbi molestie dolor orci. <a href="#">Risus sapien urna blandit eget.</a> Mi, nisl facilisis pellentesque bibendum. Gravida lobortis vel amet, ullamcorper vestibulum, in curabitur odio pulvinar.</p> <p>Example paragraph. <a href="#">Internal link</a> and an <a href="#" rel="external">external link</a> </p> <p><a class="qld__text-link--no-visited" href="#">Link without visited state</a></p>`
+
+* * *
+
+Lists
+-----
+
+Use HTML list when you want to arrange chunks of information in an easy-to-read way. Styling, or the way these lists look by default, is controlled by the body part of the website code. You do not need to apply any additional classes to style these lists.
+
+There are 3 types of HTML lists:
+
+1.  **Ordered lists (`<ol>`)**: These are lists where the order of items matters, like steps in a recipe or a list of winners in a race. They're usually shown with numbers.
+2.  **Unordered lists (`<ul>`)**: Here, the order of items doesn't matter. You can think of this like a grocery shopping list, where it doesn't matter if you buy bread before or after milk. They're typically displayed with bullet points.
+3.  **Definition lists**: These are a bit different, as they're used to list terms and their definitions. They're handy when you have a set of words or concepts and you want to provide explanations for them.
+
+Please note we are currently reviewing our default list styles.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+### Ordered list
+
+1.  item 1
+2.  item 2
+3.  item 3
+
+### Stylised numbered list
+
+1.  item 1
+2.  item 2
+3.  item 3
+
+### Unordered list
+
+*   item 1
+*   item 1a
+*   item 1aa
+*   item 1ab
+*   item 1b
+*   item 2
+*   item 2a
+*   item 3
+
+### Unordered list with larger spacing
+
+*   item 1
+*   item 1a
+*   item 1aa
+*   item 1ab
+*   item 1b
+*   item 2
+*   item 2a
+*   item 3
+
+### Definition list
+
+Definition title
+
+Definition Definition
+
+Definition Definition
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<h3>Ordered list</h3> <!-- This is an ordered list, used when the order of items is important. By default, each item is numbered. --> <ol><li>item 1</li><li>item 2</li><li>item 3</li></ol> <h3>Stylised numbered list</h3><!-- This is a more stylised versison for when you want numbers to stand out, it does not support nested list items --><ol class="qld__numbered-list"><li>item 1</li><li>item 2</li><li>item 3</li></ol><h3>Unordered list</h3> <!-- This is an unordered list, often used for lists where order doesn't matter. It will typically display with bullet points. --> <ul><li>item 1 <ul><li>item 1a <ul><li>item 1aa</li><li>item 1ab</li></ul></li><li>item 1b</li></ul></li><li>item 2 <ul><li>item 2a</li></ul></li><li>item 3</li></ul> <h3>Unordered list with larger spacing</h3><ul class="qld__margin-t-li--lg qld__margin-t-text-element"><li>item 1 <ul><li>item 1a <ul><li>item 1aa</li><li>item 1ab</li></ul></li><li>item 1b</li></ul></li><li>item 2 <ul><li>item 2a</li></ul></li><li>item 3</li></ul><h3>Definition list</h3> <!-- This is a definition list, which is used to pair terms with their definitions. --> <dl> <dt>Definition title</dt> <dd>Definition Definition</dd> <dd>Definition Definition</dd> </dl>`
+
+Link lists
+----------
+
+The link list style uses a simple modifier that is applied to unordered lists to create a set of vertical or horizontal links. It's used to order information for users.
+
+Example
+
+*   [Options](typography.html#)
+*   [Help](typography.html#)
+*   [Sign Out](typography.html#)
+
+*   [Options](typography.html#)
+*   [Help](typography.html#)
+*   [Sign Out](typography.html#)
+
+[Github](https://github.com) [Figma](https://figma.com)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<ul class="qld__link-list"> <li><a href="#">Options</a></li> <li><a href="#">Help</a></li> <li><a href="#">Sign Out</a></li> </ul> <ul class="qld__link-list qld__link-list--inline"> <li><a href="#">Options</a></li> <li><a href="#">Help</a></li> <li><a href="#">Sign Out</a></li> </ul>`
+
+On this page
+------------
+
+*   [Changing text size, weight and line height](typography.html#section__changing-text-size,-weight-and-line-height)
+*   [Line spacing (line height)](typography.html#section__line-spacing-(line-height))
+*   [Research and rationale](typography.html#section__research-and-rationale)
+*   [Related](typography.html#section__related)
+*   [References](typography.html#section__references)
+
+Changing text size, weight and line height
+------------------------------------------
+
+You might need to adjust the font size or font weight of an element outside of the predefined heading and paragraph classes.
+
+For this you can use the font utility classes. There are 2 weights you can choose from, either display or default and 7 sizes ranging from xs to xxxl within each weight for adjusting font size.
+
+It's unlikely you'll need to adjust line spacing but if you do there are 3 options, default space, heading space and no space.
+
+### Display weight classes
+
+To help separate semantic meaning from visual appearance, utility classes can be applied to heading elements to change their size and weight. Utility classes that adjust or give the appearance of headings are known as 'display weight' classes. These classes can be applied to various elements such as heading, paragraph, span and div tags to give text the appearance of a heading.
+
+Basically these are the classes you use if you want to change the size of heading or make a paragraph tag look like a heading.
+
+Example
+
+#### Display weight
+
+* * *
+
+XXXL - heading 1
+================
+
+XXL - heading 1
+===============
+
+XL - heading 1
+==============
+
+LG - heading 1
+==============
+
+MD - heading 1
+==============
+
+SM - heading 1
+==============
+
+XS - heading 1
+==============
+
+* * *
+
+MD - display class appled to div
+
+MD - display class appled to paragraph tag
+
+[Figma](https://figma.com)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<h4>Display weight</h4> <hr> <h1 class="qld__display-xxxl">XXXL - heading 1</h1> <h1 class="qld__display-xxl">XXL - heading 1</h1> <h1 class="qld__display-xl">XL - heading 1</h1> <h1 class="qld__display-lg">LG - heading 1</h1> <h1 class="qld__display-md">MD - heading 1 </h1> <h1 class="qld__display-sm">SM - heading 1 </h1> <h1 class="qld__display-xs">XS - heading 1 </h1> <hr> <div class="qld__display-md">MD - display class appled to div</div> <p class="qld__display-md">MD - display class appled to paragraph tag </p>`
+
+### Default weight
+
+These utility classes adjust or give the appearance of body text, they are known as 'default weight' classes. These classes can also be applied to various elements such as heading, paragraph, span and div tags to give text the appearance of a heading.
+
+Basically, these are the classes you use if you want to change the size of paragraph or make a heading element look like normal body text. They're most often used when you want to adjust the font-size text within your content when abstract or caption text isn't appropriate.
+
+Example
+
+#### Default weight
+
+* * *
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+* * *
+
+MD - default class appled to div
+
+#### MD - default class applied to heading tag
+
+[Github](https://github.com) [Figma](https://figma.com)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<h4>Default weight</h4> <hr> <p class="qld__default-xxxl">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p class="qld__default-xxl">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p class="qld__default-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p class="qld__default-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p class="qld__default-md">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <p class="qld__default-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p> <p class="qld__default-xs">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> <hr> <div class="qld__default-md">MD - default class appled to div</div> <h4 class="qld__default-md">MD - default class applied to heading tag</h4>`
+
+Line spacing (line height)
+--------------------------
+
+Line spacing may also be known as line height. By default, all text elements will use the appropriate line height for their font size, this has been calculated using the Design System's base line grid system with all values being multiples of 4px. You can however apply utility classes which can apply alternative spacing values to either heading space which is slightly tighter or no space which sets the line height to match the font size.
+
+**Changing line height values isn't recommended**, however it can be useful to assist with vertical alignment of single-line text elements within a container. It may also be useful for some specific design contexts, for example you might want a more compact or dense look, and a line-height equal to the font size could achieve that. Adjusting line height should be done carefully and tested thoroughly to ensure it doesn't negatively impact readability.
+
+Example
+
+#### Default
+
+* * *
+
+XXXL
+
+XXL
+
+XL
+
+LG
+
+MD
+
+SM
+
+XS
+
+#### Heading
+
+* * *
+
+XXXL
+
+XXL
+
+XL
+
+LG
+
+MD
+
+SM
+
+XS
+
+#### Nospace
+
+* * *
+
+XXXL
+
+XXL
+
+XL
+
+LG
+
+MD
+
+SM
+
+XS
+
+[Figma](https://figma.com)
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row example-lineheight"> <div class="col-xs-4"> <h4>Default</h4><hr> <div class="qld__default-xxxl">XXXL</div> <div class="qld__default-xxl">XXL</div> <div class="qld__default-xl">XL</div> <div class="qld__default-lg">LG</div> <div class="qld__default-md">MD</div> <div class="qld__default-sm">SM</div> <div class="qld__default-xs">XS</div> </div> <div class="col-xs-4"> <h4>Heading</h4><hr> <div class="qld__default-xxxl qld__heading-space">XXXL</div> <div class="qld__default-xxl qld__heading-space">XXL</div> <div class="qld__default-xl qld__heading-space">XL</div> <div class="qld__default-lg qld__heading-space">LG</div> <div class="qld__default-md qld__heading-space">MD</div> <div class="qld__default-sm qld__heading-space">SM</div> <div class="qld__default-xs qld__heading-space">XS</div> </div> <div class="col-xs-4"> <h4>Nospace</h4><hr> <div class="qld__default-xxxl qld__no-space">XXXL</div> <div class="qld__default-xxl qld__no-space">XXL</div> <div class="qld__default-xl qld__no-space">XL</div> <div class="qld__default-lg qld__no-space">LG</div> <div class="qld__default-md qld__no-space">MD</div> <div class="qld__default-sm qld__no-space">SM</div> <div class="qld__default-xs qld__no-space">XS</div> </div> </div>`
+
+* * *
+
+Research and rationale
+----------------------
+
+### Font size
+
+Building on the research conducted by the DTA we chose to base our typography on the [font-grid system](https://gold.designsystemau.org/components/core/#typography) that they developed. A typographic scale was used to create a set of `font-size` and `line-height` values which have been designed for legibility and can be easily implemented by designers or developers with a predictable output (Digital Transformation Agency, 2018).
+
+Using the Design System's typography values means any object containing text is more likely to align with another element. This appearance of a baseline grid is created by automatically rounding the line-heights to the nearest grid value 4px, then converting them back to a unit-less value.
+
+Where we chose to deviate from the presets defined by the Digital Transformation Agency was in our mobile site design where we found the H1 and H2 were too large. We did this for 2 reasons.
+
+1.  **Improved Readability**: On a smaller screen, large text can appear overwhelming and may not fit well within the screen's width. Reducing the size of your headings can make your content easier to read and navigate.
+2.  **Better Use of Space**: Smaller headings take up less space, allowing more content to be visible on the screen at once. This can be especially important on mobile devices, where screen real estate is limited.
+
+When designing our fonts size, we also looked at the default size, letter spacing and font weights from Google's material design. Having developed the fonts, their type scale generator was a good baseline to compare our font sizes against.
+
+### Heading sizes
+
+All HTML standard heading levels are supported by the headings component when used within `.qld__body` .
+
+Similar to other Design Systems our H1 element doesn't use the largest font-size provided by the system which is `xxxl` as that size is intended for large promotions or splash-sections and is too large to be used in normal body copy (Digital Transformation Agency, 2018).
+
+### Modifier or utility classes
+
+We have added classes to modify font size and weight. These were provided to help separate semantic meaning from visual appearance in order to better support [WCAG2.0 Criterion 1.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html).
+
+1.3.2 Meaningful Sequence:
+
+When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined. (Level A)
+
+This means designers and developers using the Design System can continue to use the correct heading level for the page structure while retaining a style that doesn't interfere with visual comprehension. For example, having a H2 in a sidebar that looks as small as a H4. This was a solution that we inherited directly for the Digital Transformation Agency's core font system (Digital Transformation Agency, 2018).
+
+### Maximum width paragraphs
+
+Paragraphs are given a maximum width inside body to optimise readability across multiple lines of text. [The Web Content Accessibility Guidelines recommend](https://www.w3.org/WAI/tutorials/page-structure/styling) that lines of text don't exceed 80 characters in length (Digital Transformation Agency, 2018).
+
+[This option](https://github.com/designsystemau/design-system-components/blob/master/packages/core/src/sass/_globals.scss#L737) can be overwritten by changing the `.qld__max-width` however it isn't recommended.
+
+### Why Noto sans?
+
+Our reason to endorse Noto Sans as the typeface for the Design System is based on the the research conducted by the Department of Premiers and Cabinet. They conducted a review of multiple fonts, looking to create consistency across print and digital application, minimise cost, improve digital legibility and to ensure corporate identity could be easily adaptable for future communications technologies.
+
+**They reviewed different open source type face looking at their ability to meet the following criteria:**
+
+*   suitability for both print and online applications
+*   open-source (cheaper and available for all users)
+*   avoiding letter mirroring (to assist with dyslexia/ readability issues)
+*   distinct characters (e.g. capital I / 1, B / 8, O / 0, i / j)
+*   a strong tail on the Q to avoid confusion with O
+*   good spacing between letterforms
+*   multiple weights and styles, including condensed and italics
+*   variation in thick/thin strokes
+*   large x-height (assists in readability)
+*   works at all scales (e.g. for large format printing)
+*   distinct numerals
+*   good kerning and word spacing
+*   1.2.2 Resize text (Level AA) standard – text can be resized without assistive technology up to 200%.
+
+What they found was that the 2 best fonts were Noto Sans and Lato. Noto Sans was determined to be the best option however because it met more of the criteria and had the best multi-language support.
+
+Commissioned by Google, the Noto family is designed with the goal of achieving visual harmony (e.g. compatible heights and stroke thicknesses) across multiple languages/scripts.
+
+### Where does Meta fit in?
+
+While Nota Sans is the official typeface for the Design System, Meta having been the standard Queensland Government print font for many years is likely to still play a role in many sites branding. Unit Noto Sans is officially endorsed as the new standard for corporate ID, Meta should be used for headings and agency/site names.
+
+In our Design System we endorse the use of Meta only in situations such as promotional text and site names. This allows a site to use these prominent digital brand elements in a way to match their tradition media. Meta isn't approved for body copy, buttons or small text, as it isn't as legible as fonts designed specifically for the web.
+
+FF Meta is a version of Meta that's available from Adobe Typekit which can be used as a web font.
+
+### Why system fonts as a fallback
+
+Like the Digital Transformation Agency, we chose to use system fonts as a fallback in our font stack. The use of system fonts in government services enhances download speed and accessibility for all users, particularly those with low-end devices or remote internet connections, while also leveraging the improved aesthetics of modern typefaces in new operating systems (Digital Transformation Agency, 2018).
+
+Headings and paragraph style breakdown
+--------------------------------------
+
+Below is a breakdown of all our properties for the core heading and paragraph styles.
+
+### Desktop sizes (screen sizes larger then 992px)
+
+Element
+
+Weight
+
+Size
+
+Line height
+
+Margin top
+
+Heading 1
+=========
+
+`<h1>Heading 1</h1>`
+`<div class="qld__display-xxl">Heading 1</div>`
+
+600          
+
+2.5rem (40px)
+
+130% (52px)
+
+4rem (64px)
+
+Heading 2
+---------
+
+`<h2>Heading 2</h2>`
+`<div class="qld__display-xl">Heading 2</div>`
+
+600 
+
+2rem (32px)
+
+125% (40px)
+
+3rem (48px)
+
+### Heading 3
+
+`<h3>Heading 3</h3>`
+`<div class="qld__display-lg">Heading 3</div>`
+
+600 
+
+1.5rem (24px)
+
+133% (32px)
+
+2.25rem (36px)
+
+#### Heading 4
+
+`<h4>Heading 4</h4>`
+`<div class="qld__display-md">Heading 4</div>`
+
+600 
+
+1.25rem (20px)
+
+120% (24px)
+
+2 rem (32px)
+
+##### Heading 5
+
+`<h5>Heading 5</h5>`
+`<div class="qld__display-sm">Heading 5</div>`
+
+600 
+
+1rem (16px)
+
+125%(20px)
+
+1.5rem (24px)
+
+###### Heading 6
+
+`<h6>Heading 6</h6>`
+`<div class="qld__display-xs">Heading 6</div>`
+
+600 
+
+0.87rem (14px)
+
+114% (16px)
+
+1.5rem (24px)
+
+Abstract text
+
+`<p class="qld__abstract">Abstract text</p>`
+`<div class="default-lg">Abstract text</div>`
+
+400 
+
+1.5 (24px)
+
+133% (32px)
+
+1.5rem (24px)
+
+Body text
+
+`<p>Body text</p>`
+`<div class="default-sm">Body text</div>`
+
+400 
+
+1rem (16px)
+
+150%  (24px)
+
+1.5rem (24px)
+
+Caption text
+
+`<p class="qld__caption">Caption text</p>`
+`<div class="default-xs">Caption text</div>`
+
+400
+
+0.87rem (14px)
+
+140% (20px)
+
+1rem (16px)
+
+[Link text](typography.html#)
+
+`<a href="#">Link text</a>`
+`<div class="qld__link-text">Link text</div>`
+
+400 
+
+1rem (16px)
+
+150%  (24px)
+
+1.5rem (24px)
+
+Site title
+
+`<div class="qld__header__site-name">Site title</div>`
+
+600 
+
+1.25rem (20px)
+
+120% (25px)
+
+0
+
+### Mobile sizes (screen sizes below  992px)
+
+Changes are primarily to heading 1, 2, abstract text and site title sizes. Other than that, it's only margin top values that change at the mobile breakpoint.
+
+Element
+
+Weight
+
+Size
+
+Line height
+
+Margin top
+
+Heading 1
+=========
+
+`<h1>Heading 1</h1>`
+`<div class="qld__display-xxl">Heading 1</div>`
+
+600 
+
+2rem  (32px)
+
+130% (52px)
+
+2rem  (32px)
+
+Heading 2
+---------
+
+`<h2>Heading 2</h2>` `<div class="qld__display-xl">Heading 2</div>`
+
+600 
+
+1.75rem (28px) 
+
+125% (40px)
+
+2rem (32px)
+
+### Heading 3
+
+`<h3>Heading 3</h3>`
+`<div class="qld__display-lg">Heading 3</div>`
+
+600 
+
+1.5rem (24px)
+
+133% (32px)
+
+2rem  (32px)
+
+#### Heading 4
+
+`<h4>Heading 4</h4>`
+`<div class="qld__display-md">Heading 4</div>`
+
+600 
+
+1.25rem (20px)
+
+120% (24px)
+
+2rem (32px)
+
+##### Heading 5
+
+`<h5>Heading 5</h5>`
+`<div class="qld__display-sm">Heading 5</div>`
+
+600 
+
+1rem (16px)
+
+125%(20px)
+
+1.25rem (20px)
+
+###### Heading 6
+
+`<h6>Heading 6</h6>`
+`<div class="qld__display-xs">Heading 6</div>`
+
+600 
+
+0.87rem (14px)
+
+114% (16px)
+
+1.25rem  (20px)
+
+Abstract text
+
+`<p class="qld__abstract">Abstract text</p>`
+`<div class="default-lg">Abstract text</div>`
+
+400 
+
+1.5rem (24px)
+
+133% (32px)
+
+1.25rem  (20px)
+
+Body text
+
+`<p>Body text</p>`
+`<div class="default-sm">Body text</div>`
+
+400 
+
+1rem (16px) 
+
+150%  (24px)
+
+1.25rem (20px)
+
+Caption text
+
+`<p class="qld__caption">Caption text</p>`
+`<div class="default-xs">Caption text</div>`
+
+400 
+
+0.87rem (14px) 
+
+140% (20px)
+
+1rem (16px)
+
+[Link text](typography.html#)
+
+`<a href="#">Link text</a>`
+`<div class="qld__link-text">Link text</div>`
+
+400 
+
+1rem (16px)
+
+150%  (24px)
+
+1.25rem  (20px)
+
+Site title
+
+`<div class="qld__header__site-name">Site title</div>`
+
+600 
+
+1rem (16px)
+
+150%  (24px)
+
+0
+
+### Classes and variables
+
+Name
+
+Description
+
+`qld__display-xs`
+
+Class that sets element to extra-small font size and heading weight.
+
+`qld__display-sm`
+
+Class that sets element to small font size and heading weight.
+
+`qld__display-md`
+
+Class that sets element to medium font size and heading weight.
+
+`qld__display-lg`
+
+Class that sets element to large font size and heading weight.
+
+`qld__display-xl`
+
+Class that sets element to extra large font size and heading weight.
+
+`qld__display-xxl`
+
+Class that sets element to XX large font size and heading weight.
+
+`qld__display-xxxl`
+
+Class that sets element to XXX large font size and heading weight.
+
+`qld__default-xs`
+
+Class that sets element to extra-small font size and default text weight.
+
+`qld__default-sm`
+
+Class that sets element to small font size and default text weight.
+
+`qld__default-md`
+
+Class that sets element to medium font size and default text weight.
+
+`qld__default-lg`
+
+Class that sets elements to large font size and default text weight.
+
+`qld__default-xl`
+
+Class that sets element to extra large font size and default text weight.
+
+`qld__default-xxl`
+
+Class that sets element to XX large font size and default text weight.
+
+`qld__default-xxxl`
+
+Class that sets element to XX large font size and default text weight.
+
+`qld__link-text`
+
+Class that sets element to use link text style.
+
+`qld__heading-space`
+
+Class that sets element line height to heading style.
+
+`qld__no-space`
+
+Class that set elements line height to equal text size.
+
+`qld_abstract`
+
+Class that sets elements to use abstract style font size and weight.
+
+`qld__caption`
+
+Class that sets elements to use caption style font size and weight.
+
+`qld__max-width`
+
+Class that removes max-width from text elements.
+
+`--QLD-color-light-heading`
+
+Variable that defines light heading colours.
+
+`--QLD-color-light-text__muted`
+
+Variable that defines light muted text colours.
+
+`--QLD-color-light-text`
+
+Variable that defines light text colours.
+
+`--QLD-color-dark-heading`
+
+Variable that defines dark heading colours.
+
+`--QLD-color-dark-text__muted`
+
+Variable that defines dark muted text colours.
+
+`--QLD-color-light-text`
+
+Variable that defines text colours.
+
+Accessible text requirements
+----------------------------
+
+When it comes to accessibility, the Web Content Accessibility Guidelines (WCAG) 2.1 provide several guidelines related to typography.
+
+Our default text styles have already been designed to meet accessibility requirements however keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.4.3 Contrast (Minimum)
+
+The visual presentation of text and images of text has a contrast ratio of at least 4.5:1.
+
+#### 1.4.3 Resizes text
+
+Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.
+
+#### 1.4.5 Images of text
+
+If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for certain situations.
+
+#### 1.3.2 Meaningful Sequence
+
+When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined. (Level A)
+
+#### 1.4.12 Text spacing
+
+In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:
+
+*   line height (line spacing) to at least 1.5 times the font size
+*   spacing following paragraphs to at least 2 times the font size
+*   letter spacing (tracking) to at least 0.12 times the font size
+*   word spacing to at least 0.16 times the font size.
+
+#### 1.4.10 Reflow
+
+Content can be presented without loss of information or functionality, and without requiring scrolling in 2 dimensions for vertical scrolling content at a width equivalent to 320 CSS pixels; horizontal scrolling content at a height equivalent to 256 CSS pixels.
+
+* * *
+
+Related
+-------
+
+[Underlines](underlines.html)
+
+[Grids](layout-foundations.html)
+
+[Spacing](spacing.html)
+
+References
+----------
+
+GOV.UK (n.d.) [Typography](https://design-system.service.gov.uk/styles/typography), _GOV.UK Design System_, accessed 24 May 2023.
+
+Digital Transformation Agency (2018) [Body](https://gold.designsystemau.org/components/body/ "Body"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+Digital NSW (n.d.) [Typography](https://digitalnsw.github.io/nsw-design-system/core/typography/index.html "Typography"), _NSW Design System_, accessed 10 April 2023.
+
+MDN Web Docs (2023) [HTML reference - HTML: HyperText Markup Language](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference), _MDN Web Docs,_ accessed 24 May 2023.
+
+Nielsen, J (2004) [Guidelines for Visualizing Links](https://www.nngroup.com/articles/guidelines-for-visualizing-links), _Nielsen Norman Group_, accessed 24 May 2023.
+
+Google Fonts (n.d.) [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans), Google Fonts, accessed 24 May 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** June 2024

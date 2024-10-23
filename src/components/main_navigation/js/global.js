@@ -1,9 +1,9 @@
 /**
  * The mobile nav module
- * 
+ *
  * @module mobileNav
  */
-(function () {
+export default function (QLD) {
 
     var mobileNav = {};
     var mobileNavEvents = {};
@@ -11,7 +11,7 @@
 
     /**
      * IE8 compatible function for replacing classes on a DOM node
-     * 
+     *
      * @memberof module:mobileNav
      * @instance
      * @private
@@ -37,7 +37,7 @@
 
     /**
      * IE8 compatible function for removing a class
-     * 
+     *
      * @memberof module:mobileNav
      * @instance
      * @private
@@ -56,7 +56,7 @@
 
     /**
      * IE8 compatible function for adding a class
-     * 
+     *
      * @memberof module:mobileNav
      * @instance
      * @private
@@ -76,7 +76,7 @@
     /**
      * IE8 compatible function for adding an event
      * https://stackoverflow.com/questions/10149963/adding-event-listener-cross-browser
-     * 
+     *
      * @memberof module:mobileNav
      * @instance
      * @private
@@ -129,7 +129,7 @@
 
     /**
      * IE8 compatible function for removing an event
-     * 
+     *
      * @memberof module:mobileNav
      * @instance
      * @private
@@ -147,7 +147,7 @@
 
     /**
      * IE8 compatible function for getting elements style
-     * 
+     *
      * @memberof module:mobileNav
      * @instance
      * @private
@@ -158,15 +158,15 @@
     function getStyle(element, property) {
         return (
             typeof getComputedStyle !== 'undefined' ?
-            getComputedStyle(element, null) :
-            element.currentStyle
+                getComputedStyle(element, null) :
+                element.currentStyle
         )[property]; // avoid getPropertyValue altogether
     }
 
 
     /**
      * Toggle a mobileNav element
-     * 
+     *
      * @memberof module:mobileNav
      *
      * @param  {string}  element   - The toggle for the main nav
@@ -186,7 +186,8 @@
         try {
             window.event.cancelBubble = true;
             event.stopPropagation();
-        } catch (error) {}
+        } catch (error) {
+        }
 
 
         // check this once
@@ -244,7 +245,7 @@
                     }
                 },
                 postfunction: function () {
-                    if (state === 'opening' ) {
+                    if (state === 'opening') {
 
                         // Move the focus to the close button
                         closeButton.focus();
@@ -335,9 +336,9 @@
         })(target, speed);
     }
 
-   
+
     window.addEventListener('DOMContentLoaded', function () {
-        
+
         // Add toggle event to open mobile nav
         var navToggles = document.querySelectorAll('*[aria-controls="main-nav"]');
         navToggles.forEach(function (button) {
@@ -346,21 +347,21 @@
             });
         });
 
-         // Add toggle event listeners to accordion buttons
+        // Add toggle event listeners to accordion buttons
         var itemToggles = document.querySelectorAll('.qld__main-nav__item-toggle');
-        itemToggles.forEach(function(button) {
+        itemToggles.forEach(function (button) {
             button.addEventListener('click', function () {
 
-                if(button.className.split(' ').indexOf('qld__accordion--closed')>=0){
+                if (button.className.split(' ').indexOf('qld__accordion--closed') >= 0) {
 
                     button.parentNode.querySelector('.qld__main-nav__item-link').classList.add('qld__main-nav__item-link--open');
                     itemToggles.forEach(function (item) {
-                        if(item.className.split(' ').indexOf('qld__accordion--open')>=0){
+                        if (item.className.split(' ').indexOf('qld__accordion--open') >= 0) {
                             item.parentNode.querySelector('.qld__main-nav__item-link').classList.remove('qld__main-nav__item-link--open');
                             QLD.accordion.Close(item);
                         }
                     });
-                }else{
+                } else {
                     button.parentNode.querySelector('.qld__main-nav__item-link').classList.remove('qld__main-nav__item-link--open');
                 }
 
@@ -370,4 +371,4 @@
         });
     });
 
-}());
+}

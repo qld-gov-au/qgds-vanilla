@@ -1,7 +1,7 @@
 /**
  * Tab module TODO
  */
-(function (QLD) {
+export default function (QLD) {
 
     // For easy reference
     var keys = {
@@ -32,27 +32,28 @@
 
         /**
          * Initialise any tab components on the page
-         * 
+         *
          * @memberof module:tabs
          */
-        'init': function() {
+        'init': function () {
             tabs.buttons = QLD.utils.listToArray(document.querySelectorAll('[role="tab"]'));
 
             // Bind listeners
             for (var i = 0; i < tabs.buttons.length; i++) {
                 addListeners(i);
-            };
+            }
+            ;
         }
     };
 
     /**
      * Add event listeners for given tab
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {number} index 
+     *
+     * @param {number} index
      */
     function addListeners(index) {
         var tab = tabs.buttons[index];
@@ -66,12 +67,12 @@
 
     /**
      * When a tab is clicked, activateTab is fired to activate it
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Document.event} event 
+     *
+     * @param {Document.event} event
      */
     function clickEventListener(event) {
         var tab = event.target;
@@ -80,12 +81,12 @@
 
     /**
      * Handle keydown on tabs
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Document.event} event 
+     *
+     * @param {Document.event} event
      */
     function keydownEventListener(event) {
         var key = event.keyCode;
@@ -107,23 +108,24 @@
                 activateTab(firstTab);
                 break;
 
-                // Up and down are in keydown
-                // because we need to prevent page scroll >:)
+            // Up and down are in keydown
+            // because we need to prevent page scroll >:)
             case keys.up:
             case keys.down:
                 determineOrientation(event);
                 break;
-        };
+        }
+        ;
     };
 
     /**
      * Handle keyup on tabs
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Document.event} event 
+     *
+     * @param {Document.event} event
      */
     function keyupEventListener(event) {
         var key = event.keyCode;
@@ -133,19 +135,20 @@
             case keys.right:
                 determineOrientation(event);
                 break;
-        };
+        }
+        ;
     };
 
     /**
      * When a tablist's aria-orientation is set to vertical,
      * only up and down arrow should function.
      * In all other cases only left and right arrow function.
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Document.event} event 
+     *
+     * @param {Document.event} event
      */
     function determineOrientation(event) {
         var key = event.keyCode;
@@ -158,27 +161,31 @@
             if (key === keys.up || key === keys.down) {
                 event.preventDefault();
                 proceed = true;
-            };
+            }
+            ;
         } else {
             if (key === keys.left || key === keys.right) {
                 proceed = true;
-            };
-        };
+            }
+            ;
+        }
+        ;
 
         if (proceed) {
             switchTabOnArrowPress(event);
-        };
+        }
+        ;
     };
 
     /**
      * Either focus the next, previous, first, or last tab
      * depending on key pressed
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Document.event} event 
+     *
+     * @param {Document.event} event
      */
     function switchTabOnArrowPress(event) {
         var pressed = event.keyCode;
@@ -189,7 +196,8 @@
 
         for (var x = 0; x < siblingTabs.length; x++) {
             siblingTabs[x].addEventListener('focus', focusEventHandler);
-        };
+        }
+        ;
 
         if (direction[pressed]) {
             if (tab.index !== undefined) {
@@ -200,20 +208,23 @@
                     siblingTabs[0].focus()
                 } else if (pressed === keys.right || pressed == keys.down) {
                     siblingTabs[siblingTabs.length - 1].focus();
-                };
-            };
-        };
+                }
+                ;
+            }
+            ;
+        }
+        ;
     };
 
     /**
      * Activates any given tab panel
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Node} tab 
-     * @param {boolean} setFocus 
+     *
+     * @param {Node} tab
+     * @param {boolean} setFocus
      */
     function activateTab(tab, setFocus) {
         setFocus = setFocus || true;
@@ -235,12 +246,13 @@
         // Set focus when required
         if (setFocus) {
             tab.focus();
-        };
+        }
+        ;
     };
 
     /**
      * Deactivate all tabs and tab panels
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
@@ -259,17 +271,18 @@
             var controls = tab.getAttribute('aria-controls');
             var panel = document.getElementById(controls);
             panel.setAttribute('hidden', 'hidden');
-        };
+        }
+        ;
     };
 
     /**
      * Handle focus event on tab
-     * 
+     *
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Document.event} event 
+     *
+     * @param {Document.event} event
      */
     function focusEventHandler(event) {
         var target = event.target;
@@ -281,15 +294,16 @@
      * @memberof module:tabs
      * @instance
      * @private
-     * 
-     * @param {Node} target 
+     *
+     * @param {Node} target
      */
     function checkTabFocus(target) {
         var focused = document.activeElement;
 
         if (target === focused) {
             activateTab(target, false);
-        };
+        }
+        ;
     };
 
     // Add to global QLD module
@@ -302,4 +316,5 @@
         QLD.tabs.init()
     });
 
-}(window.QLD));
+}
+

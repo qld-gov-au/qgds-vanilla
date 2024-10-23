@@ -1,0 +1,180 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import * as linkedColumns from "./linkColumns.stories.js"
+import classTable from "./classesTable.md?raw"
+
+<Meta of={linkedColumns} />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Link columns (link list)
+========================
+
+May also be known as:
+
+Link lists or arrow links
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395563&mode=design&t=BxfztQlUD4IInBwD-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+========
+
+Our link columns component is a simple list of vertical links that can be used to group related links. It's useful when you want a group of links to stand out on a page as this style of list has more visual emphasis than a traditional link list.
+
+The link columns component consists of a single continuous list of links that can be styled across 1-3 columns.
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Related links
+-------------
+
+*   [Contact us](link-columns-link-list.html#)
+*   [About us](link-columns-link-list.html#)
+*   [Products](link-columns-link-list.html#)
+*   [FAQ](link-columns-link-list.html#)
+*   [Terms and conditions](link-columns-link-list.html#)
+*   [Privacy policy](link-columns-link-list.html#)
+*   [Blog](link-columns-link-list.html#)
+*   [Careers](link-columns-link-list.html#)
+*   [Press](link-columns-link-list.html#)
+*   [Resources](link-columns-link-list.html#)
+*   [Partners](link-columns-link-list.html#)
+*   [Support](link-columns-link-list.html#)
+*   [Events](link-columns-link-list.html#)
+*   [Community](link-columns-link-list.html#)
+*   [Sitemap](link-columns-link-list.html#)
+*   [View all](link-columns-link-list.html#)
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- 1 col: <ul class="qld__link-columns"> 2 col: <ul class="qld__link-columns qld__link-columns--2-col"> 3 col: <ul class="qld__link-columns qld__link-columns--3-col"> --> <h2>Related links</h2> <ul aria-label="Related links" class="qld__link-columns qld__link-columns--2-col"> <li><a href="#">Contact us</a></li> <li><a href="#">About us</a></li> <li><a href="#">Products</a></li> <li><a href="#">FAQ</a></li> <li><a href="#">Terms and conditions</a></li> <li><a href="#">Privacy policy</a></li> <li><a href="#">Blog</a></li> <li><a href="#">Careers</a></li> <li><a href="#">Press</a></li> <li><a href="#">Resources</a></li> <li><a href="#">Partners</a></li> <li role="listitem"><a href="#">Support</a></li> <li><a href="#">Events</a></li> <li><a href="#">Community</a></li> <li><a href="#">Sitemap</a></li> <li class="qld__link-columns__all-link"><a href="#" class="qld__cta-link qld__cta-link--view-all">View all</a></li> </ul>`
+
+Usage guidelines
+----------------
+
+The link columns component is a flexible, accessible list of links that can be used to provide users with additional navigation options or resources related to the current page or content.
+
+Vertical lists are useful for links because they provide a clear, organised, and easily scannable structure for users when navigating a website or application. They can help users quickly identify and access the information they need, resulting in a more user-friendly experience.
+
+The Nielsen Norman Group, a leading user experience research firm, has published an [article](https://www.nngroup.com/articles/vertical-nav/) highlighting the benefits of vertical lists for links, especially for navigation menus. The article explains how vertical lists improve usability by leveraging the natural scanning behaviour of users, making it easier to locate and select the desired link.
+
+### When to use
+
+*   On landing pages that don't include side navigation
+*   On landing pages where you want to group a list of related navigation links with more emphasis than traditional link lists
+
+### When not to use
+
+*   For lists of navigation that aren't related
+*   In transactional services or a forms
+*   To link to content on the same page, consider [in-page navigation](in-page-navigation.html)
+*   On pages that have [side-navigation](side-navigation.html) that duplicates links within the list
+
+### How to use
+
+#### Do
+
+*   Lists should be sorted in logical ways that make content easy to scan, such as alphabetical, numerical, chronological, or by user preference
+*   Lists should present icons, text, and actions in a consistent format
+*   Use descriptive and concise link text that accurately reflects the destination or purpose of the link
+*   Use a clear heading (e.g., "Related links") to label the list of links and provide context
+
+#### Don't
+
+*   Have link columns that span larger than about 46rem or approximately 60 characters, on large screens consider splitting the links into multiple columns as this will improve a user's ability to scan the content
+*   Don't include an excessive number of links, as this can be overwhelming for users and make it difficult to find the desired information
+*   Don't use this component for the primary site navigation or to replace a site-wide menu
+
+Research and rationale
+----------------------
+
+The development of this component was prompted by the need for a navigation component with more visual impact than a standard link list, yet not as large as a card group, specifically for landing pages. This component provides a balance between the two, with a design that offers more visual weight while still being compact and efficient. The aim was to create a navigation component that is both visually appealing and practical, helping users easily find and access relevant pages without being overwhelming.
+
+The design of our component was inspired by the NSW link list item and by the designs for the Australian Government MyGOV mega menu which used both link lists with background hover states broken up with divider lines supported by a trailing arrow icon.
+
+By combining these 2 designs we were able to create a component that was versatile enough to be used within the content of landing pages as well as for our mega menu navigation items. The use of an arrow icon to indicate navigation links was also consistent with the existing Design System for call-to-action (CTA) links and was something we wanted to repeat to maintain as a consistent visual cue for navigation throughout our designs.
+
+The pattern was also consistent with how other Design Systems such as material design approached list items. Material design also suggested that dividers could be used to separate larger list items and that they should contain primary and supplemental actions represented by icons and text (Google, n.d.).
+
+Based on Nielson and Norman’s article ['Guidelines for Visualizing Links'](https://www.nngroup.com/articles/guidelines-for-visualizing-links "https://www.nngroup.com/articles/guidelines-for-visualizing-links/") which recommended that we could safely eliminate underlines as they were unnecessary for navigation menus and other lists of links, our link column component only has underline on hover. This is consistent with all other navigation menus in our Design System (Nielson, 2004).
+
+Classes
+-------
+
+
+<Markdown>
+    {classTable}
+</Markdown>
+
+
+Accessible link column requirements
+-----------------------------------
+
+Keep these considerations in mind if you are modifying the design system or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.4.3 Contrast (Minimum)
+
+##### Ensure colour contrast meets minimum requirements
+
+The use of colour in the code snippet is minimal but it is important to ensure that any text and background colours meet minimum contrast requirements to ensure readability.
+
+#### 2.4.4 - Link purpose
+
+##### Provide clear and concise link text
+
+The text used for the links should be descriptive and accurately convey the purpose of the link. Avoid using phrases like "click here" or "read more" as link text.
+
+#### 2.4.4 Focus visible
+
+Users who navigate with the keyboard rely on visible focus indicators to understand where they are on the page. Use a visible focus indicator that meets the contrast requirements.
+
+#### **4.1.2 Name, Role, Value**
+
+##### Use Aria attributes to enhance accessibility
+
+Apply the `aria-label` attribute to enhance accessibility and provide additional context for screen readers.
+
+Use the `aria-label` attribute on the `<ul>` element to provide a descriptive label for the list (e.g., "Related links").="qld\_\_abstract">
+
+* * *
+
+References
+----------
+
+Google (n.d.) [Lists – Material Design 3](https://m3.material.io/components/lists/specs), _Material Design_, accessed 31 July 2023.
+
+Shopify (n.d.) [Listbox](https://polaris.shopify.com/components/lists/listbox), _Shopify Polaris_, accessed 31 July 2023.
+
+Nielsen J (2004) '[Guidelines for Visualizing Links](https://www.nngroup.com/articles/guidelines-for-visualizing-links)', Nielsen Norman Group, accessed 31 July 2023.
+
+Laubheimer P (2021) ['Left-Side Vertical Navigation on Desktop: Scalable, Responsive, and Easy to Scan'](https://www.nngroup.com/articles/vertical-nav), Nielsen Norman Group, accessed 31 July 2023.
+
+Digital NSW (n.d.) ['Link list'](https://digitalnsw.github.io/nsw-design-system/components/link-list/index.html), _NSW Government Design System_, NSW Government, accessed 31 July 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** August 2023

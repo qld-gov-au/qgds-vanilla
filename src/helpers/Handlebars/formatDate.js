@@ -1,4 +1,4 @@
-module.exports = function (datetime, formatStr) {
+export default function (datetime, formatStr) {
     var date = new Date(datetime);
 
     console.log(date);

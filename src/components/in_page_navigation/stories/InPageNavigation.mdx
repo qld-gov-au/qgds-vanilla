@@ -1,0 +1,203 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+import * as Stories from "./inPageNavigation.stories.js"
+
+
+
+<Meta of={Stories} name="Navigation (In-Page Navigation) " />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+In-page navigation
+==================
+
+May also be known as:
+
+anchor links or page contents
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395561&mode=design&t=NZkydKbL0aPnxoXw-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+In-page navigation is a vertical list of links that helps users scan the contents of a page and navigate to different sections of the page.
+
+The in-page navigation or page contents are placed above sections of a page. They provide navigation to individual anchor links located in those sections.
+
+Example
+-------
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+On this page
+------------
+
+*   [Visiting hours](in-page-navigation.html#visiting-hours)
+*   [What can I bring to hospital?](in-page-navigation.html#what-to-bring)
+*   [Hand hygiene](in-page-navigation.html#hand-hygiene)
+*   [If you're unwell](in-page-navigation.html#if-unwell)
+*   [Our hospitals, health centers, and residential aged care facilities](in-page-navigation.html#facilities)
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<!-- In-page navigation component --> <!-- Wrap the entire component in a <nav> element with a class and an aria-label attribute to describe its purpose --> <nav class="qld__inpage-nav-links" aria-label="In page navigation"> <!-- Add a heading to provide a label for the in-page navigation --> <h2 class="qld__inpage-nav-links__heading"> On this page </h2> <!-- Use an unordered list with a class for styling to list the navigation links --> <ul class="qld__link-list"> <!-- For each navigation link, create a list item with an anchor tag --> <li><a href="#visiting-hours">Visiting hours</a></li> <li><a href="#what-to-bring">What can I bring to hospital?</a></li> <li><a href="#hand-hygiene">Hand hygiene</a></li> <li><a href="#if-unwell">If you're unwell</a></li> <li><a href="#facilities">Our hospitals, health centers, and residential aged care facilities</a></li> </ul> </nav> <!-- End of in-page navigation component -->`
+
+Usage guidelines
+----------------
+
+### Success status icon Indicates a success state When to use
+
+*   Use this component when you have a large amount of related content that needs to be organised and easily accessible to users
+*   When you want to display navigational hierarchy with one to three levels
+*   Use this component when you want to provide users with a secondary navigation option that is separate from the main content area of the page
+*   **Content pages that are a part of multi-level navigation:** Pages that require multiple levels of navigation, such as those with subcategories can benefit from a side navigation component that allows users to drill down
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+*   **External links:** Don't use the component to link to external websites; use text links or list links instead
+*   **Short content pages:** Avoid using in-page navigation on pages with minimal content or a small number of sections, where scrolling isn't an issue
+*   **Separate pages:** Don't use the component to link to different pages within your site; consider using a site navigation menu, text links, or list links in these cases
+
+### Information status icon Indicates that information is required or toggles a tooltip How to use
+
+Position the in-page navigation component above the main content of the page to ensure visibility and easy access.
+
+Consider how your content is organised and what heading levels should be included in your in-page navigation. For example, if your content is primarily organized into sections with H2 headings and there are no significant subsections, then including only H2 headings in the in-page navigation might be sufficient.
+
+Generally, it's not recommended to include heading levels lower than H3 (such as H4, H5, or H6) in the in-page navigation, as this can make the navigation too complex and challenging to use.
+
+Research and rationale
+----------------------
+
+The design of the in-page navigation component is based on the [Digital Transformation Agency's component.](https://gold.designsystemau.org/components/inpage-nav/)
+
+This component is widely used and features in the [Department of Agriculture design system](https://design-system.agriculture.gov.au/components/inpage-nav/rationale), [NSW design system](https://digitalnsw.github.io/nsw-design-system/components/in-page-nav/index.html) and on prominent Australian government website like [mygov](https://my.gov.au/en/services/raising-kids/having-a-baby/before-you-re-pregnant/your-health-while-planning-for-a-baby).
+
+### Ease of navigation
+
+The in-page navigation component is designed to help users scan the contents of a page and navigate to different sections of the page easily. This is in line with the usability heuristic of "User control and freedom" by Jakob Nielsen, which emphasizes that users should be able to navigate freely and easily around the website (Nielson, 2020).
+
+### Visual hierarchy
+
+The use of a heading ("On this page") provides a clear label for the in-page navigation, establishing a visual hierarchy that helps users understand the structure of the content. This is consistent with the UX principle of creating a clear visual hierarchy to guide users through the interface (Gordon, 2020).
+
+### Consistency
+
+The design of the in-page navigation component is based on the DTA's in-page navigation, which ensures consistency across different parts of the website.
+
+### Styling
+
+The thick border on the left and the vertical listing of links provide a clear and distinct visual cue for users, helping them identify the navigation component easily. The in-page navigation is designed to be used in the body text of a page. The thick lefthand border visually separates the component from the content on a page while not drawing too much attention.
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__side-nav`
+
+Wrapper for vertical navigation.
+
+`qld__side-nav__toggle`
+
+Style of button used to toggle the mobile accordion version of the side navigation.
+
+`qld__side-nav__content`
+
+Governs the style of the content of contained within the `<Nav>` element.
+
+`qld__sidenav__title`
+
+Style for the primary level 1 category heading of the side navigation.
+
+`qld__link-list`
+
+Styling for side navigation link list.
+
+`qld__sidenav__link`
+
+Style for navigation link items.
+
+`active`
+
+Current page style.
+
+Automation
+----------
+
+TBC
+
+Accessible in page navigation requirements
+------------------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+In-page contents can be a useful way to skim the page by providing an outline for the user. Usually it should be contained in a navigation landmark, so it can be easily discovered.
+
+### WCAG Guidelines
+
+#### 2.1.1 Keyboard navigation
+
+All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes. The navigation component is fully operable using the keyboard.
+
+#### 2.4.1 bypass blocks
+
+In-page nav should be implemented within a `<nav>` element featuring an aria-label attribute to enhance discovery and comprehension by assistive technologies, thereby improving website accessibility.
+
+#### 2.4.3 focus order
+
+If a web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability. The links in the navigation component should receive focus in the order they appear.  After activating the link, the keyboard focus has moved to the main content.
+
+#### 2.4.4 link purpose (in context)
+
+The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context. The text of each link in the navigation component clearly describes the section it links to.
+
+#### 2.4.6 headings and labels
+
+Headings and labels describe topic or purpose. The heading "On this page" clearly describes the purpose of the navigation component.
+
+#### 4.1.2 name, role, value
+
+For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies. The `aria-label` attribute provides a name for the navigation component, and the role of the component is clear from the use of the `<nav>` element.
+
+* * *
+
+References
+----------
+
+World Wide Web Consortium (n.d.) '[In-Page Navigation](https://www.w3.org/WAI/tutorials/page-structure/in-page-navigation)', _Web Accessibility Tutorials_, [www.w3.org](http://www.w3.org), accessed 20 July 2023.
+
+Digital Transformation Agency (2018) [In-page navigation](https://gold.designsystemau.org/components/inpage-nav/), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+Nielsen J (1994) [10 Usability Heuristics for User Interface Design](https://www.nngroup.com/articles/ten-usability-heuristics), _Nielsen Norman Group_, accessed 20 July 2023.
+
+Gordon K (2020) [5 Principles of Visual Design in UX](https://www.nngroup.com/articles/principles-visual-design), _Nielsen Norman Group_, accessed 20 July 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** August 2023

@@ -1,4 +1,4 @@
-module.exports = function(obj,key,options) {
+export default function(obj,key,options) {
 
     var within = Object.keys(obj).some(function() {
         return obj[key] !== "";
@@ -6,7 +6,7 @@ module.exports = function(obj,key,options) {
 
 
     if(within) {
-        return options.fn(this); 
+        return options.fn(this);
     }
 
     return options.inverse(this);

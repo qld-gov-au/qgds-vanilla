@@ -1,0 +1,313 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+[//]: # (import * as stories from "./promoPanel.stories.js")
+
+[//]: # (<Meta of={stories} />)
+<Meta title="Forms/Select Box" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Select box
+==========
+
+May also be known as:
+
+drop-down lists, select menus or input-field (select)
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395571&mode=design&t=OlAcIxWWmCWpOS0s-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Select boxes, also known as dropdown lists, provide a space-saving and convenient way to present multiple choices to users while occupying minimal screen real estate.
+
+We currently only have one style of select box but like other forms components it is available in both the filled and outlined styles.
+
+Default outlined
+----------------
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Form label Hint text Please select Option 1 Option 2 Option 3
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<label for="select-example" class="qld__label">Form label</label> <span class="qld__hint-text" id="select-example-hint">Hint text</span> <select id="select-example" class="qld__select qld__field-width--1-quarter qld__text-input--block" aria-describedby="select-example-hint"> <option value="">Please select</option> <option value="1">Option 1</option> <option value="2">Option 2</option> <option value="3">Option 3</option> </select>`
+
+Default filled
+--------------
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Form labelHint text Please select Option 1 Option 2 Option 3
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="qld__form-style-filled"> <label for="select-example-2" class="qld__label">Form label</label><span class="qld__hint-text" id="select-example-hint-2">Hint text</span> <select id="select-example-2" class="qld__select qld__field-width--1-quarter qld__text-input--block" aria-describedby="select-example-hint-2"> <option value="">Please select</option> <option value="1">Option 1</option> <option value="2">Option 2</option> <option value="3">Option 3</option> </select></div>`
+
+Valid and invalid states
+------------------------
+
+Example
+
+Theme
+
+*    White
+*    Light
+*    Alt
+*    Dark
+*    Dark-alt
+
+Selecct label Error message Please select Option 1 Option 2 Option 3
+
+Select label Error message Please select Option 1 Option 2 Option 3
+
+Select labelHint text Success message Please select Option 1 Option 2 Option 3
+
+Select labelHint text Success message Please select Option 1 Option 2 Option 3
+
+Show more
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<div class="row"> <!-- Example: Error field --> <div class="co-xs-12 col-lg-4"> <label for="select-example-3" class="qld__label">Selecct label</label> <span id="text-field-success" class="qld__input--error"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg>Error message </span> <select id="select-example-3" class="qld__select qld__text-input--block qld__text-input--error"> <option value="">Please select</option> <option value="1">Option 1</option> <option value="2">Option 2</option> <option value="3">Option 3</option> </select> </div> <!-- Example: Error field filled style --> <div class="qld__form-style-filled co-xs-12 col-lg-4"> <label for="select-example-4" class="qld__label">Select label</label> <span id="text-field-success" class="qld__input--error"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Error: "> <use href="./?a=151118#icon-Status-Error"></use> </svg>Error message </span> <select id="select-example-4" class="qld__select qld__text-input--block qld__text-input--error"> <option value="">Please select</option> <option value="1">Option 1</option> <option value="2">Option 2</option> <option value="3">Option 3</option> </select> </div> </div> <div class="row qld__form-group"> <!-- Example: Success field --> <div class="co-xs-12 col-lg-4"> <label for="select-example-6" class="qld__label">Select label</label><span class="qld__hint-text" id="select-example-5">Hint text</span> <span id="text-field-success" class="qld__input--success"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message </span> <select id="select-example-5" class="qld__select qld__text-input--block qld__text-input--valid" aria-describedby="select-example-hint-5"> <option value="">Please select</option> <option value="1">Option 1</option> <option value="2">Option 2</option> <option value="3">Option 3</option> </select> </div> <!-- Example: Success field filled style --> <div class="qld__form-style-filled co-xs-12 col-lg-4"> <label for="select-example-6" class="qld__label">Select label</label><span class="qld__hint-text" id="select-example-6">Hint text</span> <span id="text-field-success" class="qld__input--success"> <svg class="qld__icon qld__icon--lead qld__icon--sm" role="img" aria-label="Success: "> <use href="./?a=151118#icon-Status-Success"></use> </svg>Success message </span> <select id="select-example-6" class="qld__select qld__text-input--block qld__text-input--valid" aria-describedby="select-example-hint-6"> <option value="">Please select</option> <option value="1">Option 1</option> <option value="2">Option 2</option> <option value="3">Option 3</option> </select> </div> </div>`
+
+Usage guidelines
+----------------
+
+Select boxes are commonly used in user interfaces when the user needs to choose one option from a list of available options. However, there are situations when other components might be more suitable.
+
+[Select boxes should be a last resort](https://www.youtube.com/watch?v=CUkMCQR4TpY "https://www.youtube.com/watch?v=CUkMCQR4TpY") because they’re hard to use. Try radio buttons instead. Or use an autocomplete, if there’s a long list of options (Silver, 2019).
+
+According to the DTA now known as Gold Design System some of the reasons why select boxes should be avoided is that they have several inherent disadvantages:
+
+*   they're implemented inconsistently on various devices
+*   they hide content from the user by default
+*   they present usability difficulties for users with low digital literacy.
+
+### When to use
+
+*   **When the user is required to make a single choice from the list:** Select components are designed for situations where the user can only pick one option
+*   **When the list of options is relatively long (more than 5 options):** In this case, a select component provides a more efficient and compact way to display the choices
+*   **When the list of options is dynamic or may change:** Select components can easily accommodate changes to the list of options without causing significant layout shifts
+*   **When space is limited:** Select components are ideal when you need to save screen real estate because they only display the selected option when not in use
+
+### When not to use
+
+*   **When there are fewer than 5 options:** In this case, using radio buttons or checkboxes can make it easier for the user to see all options at once and make a decision
+*   **When multiple selections are allowed:** If the user needs to choose more than one option, consider using checkboxes or a multi-select component instead
+*   **When each option requires additional context or explanation**
+*   **When immediate action is required upon selection:** If selecting an option should trigger an immediate action or change in the interface, consider using a different component like a group of buttons
+
+### How to use
+
+*   When including a listbox or dropdown list in your design, always display the options in a logical order
+*   Have a default option selected whenever possible or use “Select” as a placeholder option only if there’s no logical default option (Polaris n.d.)
+
+Research and rationale
+----------------------
+
+The design of the select field is intended to match the text-inputs. This way forms benefit from the same research and maintain aesthetic consistency with other form fields. The component itself is also build on the HTML select element and has limited styling, the visual appearance of the list items is determined by the browser.
+
+### Iconography
+
+Like the original DTA style we chose to remove the default browser styles for select-boxes and use a background image for the icon so we could maintain design consistency across browsers. We used the same chevron icon that we have established as our indicator of an interactive field in other components such as the accordion, mega menu and open and close buttons.
+
+### Styling the list box
+
+One of the main features to consider when designing a select box is how the list of items appear when the user clicks on the component. There's a lot to consider here and we could either take the approach of designing a custom list box or using the browsers default appearance. The pros and cons as outlined in the article ‘[Striking a balance between native and custom select elements](https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements "https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements/")’ (Pereira, 2020) are outline below.
+
+#### Native select elements
+
+*   Pros: Native selects are accessible, well-supported across browsers and devices, and come with built-in keyboard and screen reader support. They are also easy to implement and maintain
+*   Cons: They have limited styling capabilities, and the appearance of native selects can vary between browsers and operating systems, making it challenging to achieve a consistent look
+
+#### Custom select elements
+
+*   Pros: Custom selects offer greater flexibility in styling and functionality, allowing designers to create consistent, visually appealing interfaces across browsers and devices. They can also include additional features not available in native selects, such as search functionality, image support, or multi-selection
+*   Cons: Building a custom select element can be time-consuming and may require more effort to maintain accessibility and cross-browser compatibility. It may also increase the size of the project's codebase and negatively impact performance
+
+For the time being we have chosen to use the native select list box component as they offer better accessibility out of the box, with built-in keyboard navigation, screen reader support, and focus management. This was also reinforced by a [study](https://www.24a11y.com/2019/select-your-poison-part-2 "https://www.24a11y.com/2019/select-your-poison-part-2/") completed by Higley (2019) which found the native `<select>` element had the most understandable and usable experience across every platform for single selection. This was the same approach taken by [IBM Carbon (Select)](https://carbondesignsystem.com/components/select/usage "https://carbondesignsystem.com/components/select/usage/"), the original DTA (Now Gold) Design System and [UK.GOV (Select)](https://design-system.service.gov.uk/components/select "https://design-system.service.gov.uk/components/select/") Design System.
+
+More research and a review will be done when we move into the implementation and design of [combo boxes](https://www.w3.org/TR/wai-aria-1.2/#combobox "https://www.w3.org/TR/wai-aria-1.2/#combobox"), editable combo boxes and multi-select boxes.
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__form-style-filled`
+
+Sets the form field style to use the filled variant. This must be applied to the enclosing div or form element.
+
+`qld__label`
+
+This is applied to the `<label>` element applies the label styles for input fields.
+
+`qld__hint-text`
+
+Applied to a `<span>` element below the label this styles the hint text for the form field.
+
+`qld__label--optional`
+
+This styles the word "(optional)" when used in optional fields. Optional text must be placed directly after the label in a `<span>` element and before any hint text.
+
+`qld__body abbr`
+
+This is the class styles required for the field indicator which is an asterisk. `<abbr title="required">\*</abbr>`
+
+`qld__select`
+
+This class is required for all 'Select' fields. It applies the default styles for these fields
+
+`qld__form-group`
+
+This adds space between form elements when applied to a container div.
+
+`qld__input--error`
+
+This styles the error messages on form fields.
+
+`qld__input--success`
+
+This styles the error messages on form fields.
+
+`qld__label--optional`
+
+This styles the success messages on form fields.
+
+`qld__text-input--error`
+
+This styles the valid/success state on a form fields.
+
+`qld__text-input--valid`
+
+This styles the valid/success state on a form fields.
+
+Accessible select box requirements
+----------------------------------
+
+Keep these considerations in mind if you're modifying the Design System or creating a custom component.
+
+### WCAG guidelines
+
+#### 1.3.5 Identify Input Purpose
+
+"Identify Input Purpose," is a Level AA criterion that aims to make web content more accessible for people with disabilities by enabling user agents and assistive technologies to understand the purpose of input fields, like select boxes, collecting user information.
+
+To comply with this guideline, you need to ensure that:
+
+1.  The input field serves a purpose listed in the ["Input Purposes for User Interface Components"](https://www.w3.org/TR/WCAG21/#input-purposes "https://www.w3.org/TR/WCAG21/#input-purposes") section of the WCAG 2.1 specification.
+2.  The content is created using web technologies that support identifying the expected meaning of the input field.
+
+Some browsers attempt to aid the user by automatically filling form controls rather than having the user re-enter their information each time. For example, a field asking for the user's telephone number can be automatically filled with the user's phone number.
+
+To help the user agent with this, the `autocomplete` attribute can be used to describe the field's purpose.
+
+#### 2.1 Keyboard accessible
+
+Support keyboard input to navigate within a dropdown. Dropdowns (both menus and boxes) should support not only mouse input, but keys as well. In dropdown menus, access keys should enable users to quickly select a visible option without using the mouse. In a dropdown box, users should be able to type a letter and quickly navigate to options starting with that letter.
+
+#### 3.3.2 Labels or Instructions:
+
+##### Add a descriptive label
+
+Use the `<label>` element to associate a clear and descriptive label with the `<select>` element. Make sure to use the `for` attribute on the label to link it to the `id` attribute of the select box. This provides context for screen reader users and makes the form control accessible.
+
+### Other best practice
+
+#### Include a default option
+
+Add a default option, such as "Select an option" or "Choose one," with an empty value attribute to guide users and encourage them to make a selection.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<select id="options" name="options"> <option value="">Select an option</option> <option value="option1">Option 1</option> <option value="option2">Option 2</option> </select>`
+
+#### Group related options
+
+Use the `<optgroup>` element to group related options within a select box. This helps users navigate through the list of options and improves the overall organization of your form.
+
+Copy
+
+Copied
+
+Copy Copied
+
+`<select id="options" name="options"> <optgroup label="Group 1"> <option value="option1">Option 1</option> <option value="option2">Option 2</option> </optgroup> <optgroup label="Group 2"> <option value="option3">Option 3</option> <option value="option4">Option 4</option> </optgroup> </select>`
+
+* * *
+
+References
+----------
+
+Silver A (2019) ‘[Form design from zero to hero all in one blog post](https://adamsilver.io/blog/form-design-from-zero-to-hero-all-in-one-blog-post "https://adamsilver.io/blog/form-design-from-zero-to-hero-all-in-one-blog-post/")’, _Adam Silver Website_, accessed March 7, 2023.
+
+Birkett A (2019) ‘[Form design: 13 empirically backed best practices](https://cxl.com/blog/form-design-best-practices "https://cxl.com/blog/form-design-best-practices/")’, Digital Marketing Training Delivered by The Best  blog, accessed 30 April 2020.
+
+Pereir S (2020) ‘[Striking a Balance Between Native and Custom Select Elements](https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements "https://css-tricks.com/striking-a-balance-between-native-and-custom-select-elements/")’, CSS-TRICKS website. Accessed March 7, 2023.
+
+Higley S (2019) ‘[`<select>` your poison](https://www.24a11y.com/2019/select-your-poison "https://www.24a11y.com/2019/select-your-poison")', 24 Accessibility website. accessed 30 April 2020.
+
+Anna, K (2020) '[Dropdowns: Design Guidelines](https://www.nngroup.com/articles/listbox-dropdown)', Nielsen Norman Group, accessed 1 August 2023
+
+Digital Transformation Agency (2018) [Select](https://gold.designsystemau.org/components/select/rationale/ "https://gold.designsystemau.org/components/page-alerts/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+
+GOV.UK (n.d.). '[Select Component](https://design-system.service.gov.uk/components/select)', GOV.UK Design System, accessed 1 August 2023.
+
+Carbon Design System. (2023). '[Text Input: Accessibility](https://carbondesignsystem.com/components/text-input/accessibility)', Carbon Design System, accessed 1 August 2023.
+
+Silver A (n.d.) [Select](https://nostyle.onrender.com/components/select-box), NoStyle Design System, accessed 1 August 2023.
+
+Shopify Polaris (n.d.) '[Select](https://polaris.shopify.com/components/selection-and-input/select)', Shopify Polaris, accessed 1 August 2023.
+
+[//]: # (/\*Hides two of the colour options that are not available for this component \*/ .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;3&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;2&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-last-child&#40;1&#41; { display: none; })
+
+**Last updated:** May 2024

@@ -1,4 +1,4 @@
-module.exports = function(name,req) {
+export default function(name,req) {
     name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
     var regexS = "[\\?&]"+name+"=([^&#]*)";
     var regex = new RegExp( regexS );

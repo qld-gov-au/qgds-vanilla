@@ -1,0 +1,161 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+import Before from "./4.2.0.Before.png"
+import After from "./4.2.0.After.png"
+import Breadcrumbs from "./4.2.0.Breadcrumbs.png"
+
+<Meta title="0. Versions/Pre QGDS-Vanilla/v4.2.0" />
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+Release 4.2.0
+=============
+
+This release includes component enhancements, spacing tokens and new Figma guidelines.
+
+On this page
+------------
+
+Acknowledgement of Country
+--------------------------
+
+The Acknowledgement of Country (AoC) has been repositioned in the footer so it’s more visible. We’ve also enhanced the [footer component](https://www.design-system.health.qld.gov.au/components/footer) in Figma so it's easier to use.
+
+Breadcrumbs update
+------------------
+
+The [breadcrumbs component](https://www.design-system.health.qld.gov.au/components/breadcrumbs) has been optimised to better handle long breadcrumb trails. This prevents links from wrapping over multiple lines, which can disrupt and clutter designs in small spaces.
+
+New tokens and variables
+------------------------
+
+We’ve made a number of improvements to our tokens and variables in our design system file to support Figma's new [variable features.](https://help.figma.com/hc/en-us/articles/15339657135383-Guide-to-variables-in-Figma)
+
+We added and refined our [spacing variables](https://www.design-system.health.qld.gov.au/styles/spacing) to support logical naming conventions, and included new underline, border width and radius variables.
+
+This update is part of a broader initiative to align our Figma file with our CSS variables, so the correct values are being used. We've also incorporated the BEM (Block Element Modifier) methodology for a unified design-to-development workflow.
+
+These tokens now match the CSS variables our code and can be used as a foundation when updating or creating new components.
+
+New Figma guidelines
+--------------------
+
+We’ve updated our [guidelines and documents](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/branch/bk9GAqQgpN7Yz4q4TsAvGV/QLD-GOV-DDS?m=auto&node-id=55762-43999&t=gKqHvrswGUsp0tJa-1) to make it easier for you to use and customise the QGDS components in Figma.
+
+Before you update
+-----------------
+
+The updates to the footer and breadcrumb components are designed to be backwards compatible. Before updating to the latest version of our design system, **we recommend duplicating your original file and testing the update in that version first**.
+
+What's new
+----------
+
+### Core styles
+
+We have new spacing tokens in Figma to match the variables in our code.
+
+These include new:
+
+*   spacing tokens
+*   underline tokens
+*   border width tokens
+*   border radius tokens
+
+We’ve also updated layout styles and descriptions
+
+### Component updates
+
+#### **Updated footer component**
+
+*   Added a heading above the AoC message.
+*   Repositioned the AoC above the Queensland Government Coat of Arms and copyright text.
+*   Optimised component in Figma, so the site name, AoC message, and copyright text can be updated in the component property panel.
+
+#### Updated breadcrumbs behaviour
+
+We've added a variant called Overflow to the breadcrumbs component,so they now collapse into an overflow menu when there isn't enough room to display all links on one line.
+
+When there isn’t enough space, page titles will be shortened with an ellipsis (…) to show they’ve been cut off. And an overflow menu will be used for additional items, preventing the title from wrapping onto multiple lines.
+
+#### **New overflow menu component**
+
+We’ve added a new overflow menu component to the design system, but it can only be used with breadcrumbs. It’ll be expanded to be a separate and reusable component in a future release.
+
+#### **Quotes and promo panels** 
+
+We’ve moved quotes and promo panels from the Figma page structure to core components. They’re now included in the core release and their position in the Figma file structure has changed to reflect this.
+
+### Figma guidelines
+
+#### Getting started section
+
+We’ve expanded our [Getting Started](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=55762-43904&t=YzUhyo8FsEM0xIhz-1) section, and introduced the following 2 new sections to help you get up and running in Figma.
+
+*   [Guidelines for customising components](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=55762-43904&t=YzUhyo8FsEM0xIhz-1)
+*   [Component usage guidelines](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=55762-43999&t=YzUhyo8FsEM0xIhz-1)
+
+#### Foundational pattern documents
+
+We’ve added to our foundational documents for the following 3 patterns.
+
+*   [Typography](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=58880-54175&t=YzUhyo8FsEM0xIhz-1)
+*   [Grids](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=58167-17346&t=YzUhyo8FsEM0xIhz-1)
+*   [Spacing](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=58167-30151&t=YzUhyo8FsEM0xIhz-1)
+
+#### Figma components
+
+The [Component library](https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?m=auto&node-id=6247-38705&t=YzUhyo8FsEM0xIhz-1) in Figma now includes guidelines for Figma components, with links to more resources and instructions on editing components.
+
+#### Properties panel
+
+Thedesign system components now have documents in the properties panel. You can find them by clicking the 'show more' link when you hover over 'about this component'. These guidelines have a brief overview of each component, its variants, and links to more documents on our design system website and in Figma.
+
+### Bug fixes
+
+*   The code syntax for some colour variables has been updated, and we’ve removed duplicated colour variables.
+*   The corner radius on the promo panels, and corner radius documents have been updated to align with the XL value in code of 40px.
+
+* * *
+
+More about this update
+----------------------
+
+### Component guidelines
+
+Our Figma file is always evolving and incorporating new features, such as enhanced variants, auto-layouts, and more recently, tokens and variables.
+
+We’re committed to improving our Figma components to take advantage of these new capabilities. As a result, some components are still in legacy formats, which may need different editing steps.
+
+We’ve created detailed guidelines to help you use and edit our components. If you need more support, email [QGDesignSystem@qld.gov.au](mailto:QGDesignSystem@chde.qld.gov.au).
+
+If you’d like more information about this update, you can [read our research and design documents in Figma](https://www.figma.com/design/kfvtLlhv68CzLmdSBpZJY1/Design-System-guidance-update?node-id=1-14&t=yhsZBb3N0o7Pxbgz-1).
+
+### Acknowledgement of country
+
+We received feedback that the placement of the AoC wasn’t prominent enough. And its position between the Queensland Government Coat Of Arms and the copyright text might undermine its significance. To address this, we’ve added a header to the AoC and repositioned it away from the coat of arms and copyright.
+
+If you’d like more information about this update, you can [read our research and design documents in Figma](https://www.figma.com/design/Iq9NVLgnD5Tf8MkUnaoYY4/AOC-Design-from-Research?node-id=1-14&t=KxuYxn7EB5ZYKQcf-1).
+
+#### Before
+
+<img src={Before} alt="Example fo footer where the Acknowledgement of Country sits below the Queensland Government Coat of Arms" />
+
+#### After
+
+<img src={After} alt="Example of new footer design where Acknowledgement of Country now has a title and sits above the Queensland Government Coat of Arms" />
+
+### Breadcrumb behaviour
+
+As government agencies, we often have large websites with deep content. This can result in long breadcrumbs that break over multiple lines, taking up vertical space and adding to cognitive load.
+
+After considering various options, we found that an overflow menu provides the best user experience. It manages space well and keeps the interface clean and easy to navigate.
+
+The overflow menu pattern is intuitive, accessible, and user friendly. It’s used by IBM Carbon Design system, Atlassian Design system, Microsoft Fluent 2 and Material Design. The menu pattern will be expanded to be a separate and reusable component in a future release.
+
+<img src={Breadcrumbs} alt="An example of breadcrumbs with links collapsed into an overflow menu. " />
+
+**Last updated:** August 2024

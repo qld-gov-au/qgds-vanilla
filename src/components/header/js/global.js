@@ -1,7 +1,7 @@
 /**
  * @module header
  */
-(function () {
+export default function (QLD) {
 
     // Search toggle button
     var searchToggle = document.querySelector('.qld__main-nav__toggle-search');
@@ -26,7 +26,7 @@
 
     /**
      * Check if honeypot field is empty
-     * 
+     *
      * @memberof module:header
      * @instance
      * @private
@@ -35,7 +35,7 @@
         var honeypot = searchForm.querySelector('.qld__text-input--validation');
         honeypot.value = '';
 
-        searchForm.addEventListener('submit', function(event) {
+        searchForm.addEventListener('submit', function (event) {
             // Prevent form submission if the honeypot field is filled
             if (honeypot.value !== '') {
                 event.preventDefault(); // Stop the form submission
@@ -44,9 +44,10 @@
             }
         });
     }
+
     /**
      * Toggle the header search on mobile/tablet
-     * 
+     *
      * @memberof module:header
      * @instance
      * @private
@@ -67,16 +68,16 @@
             searchToggle.classList.add('qld__main-nav__toggle-search--close');
             searchToggle.querySelector('.qld__main-nav__toggle-text').innerHTML = 'Close';
             target.style.display = "block";
-            
+
             // Wait for display: block, and then add class to open smoothly
-            setTimeout(function() {
+            setTimeout(function () {
                 target.classList.add('qld__main-nav__search--open');
                 target.querySelector('.qld__text-input').focus();
 
                 // Close header search on click outside
-                headerSearchEvents.background = addEvent(document, 'click', function() {
+                headerSearchEvents.background = addEvent(document, 'click', function () {
                     var event = event || window.event;
-    
+
                     if (!target.contains(event.target)) {
                         console.log('toggling');
                         toggleHeaderSearch();
@@ -89,31 +90,31 @@
             focustrapBottom.setAttribute('tabindex', 0);
 
             // Add focus listeners
-            headerSearchEvents.focusTop = addEvent(focustrapTop, 'focus', function() {
+            headerSearchEvents.focusTop = addEvent(focustrapTop, 'focus', function () {
                 target.querySelector('button').focus();
             });
-            headerSearchEvents.focusBottom = addEvent(focustrapBottom, 'focus', function() {
+            headerSearchEvents.focusBottom = addEvent(focustrapBottom, 'focus', function () {
                 target.querySelector('input').focus();
             });
 
             // Close header search if burger menu opened
             var menuToggle = document.querySelector('button[aria-controls="main-nav"]');
-            headerSearchEvents.menu = addEvent(menuToggle, 'click', function() {
+            headerSearchEvents.menu = addEvent(menuToggle, 'click', function () {
                 toggleHeaderSearch();
             });
-            
+
             // Add key listener
-            headerSearchEvents.escKey = addEvent(document, 'keyup', function() {
+            headerSearchEvents.escKey = addEvent(document, 'keyup', function () {
                 var event = event || window.event;
 
                 // Check the menu is open and visible and the escape key is pressed
-                if (event.keyCode === 27 ) {
+                if (event.keyCode === 27) {
                     toggleHeaderSearch();
                 }
             });
-            
 
-        // Close menu
+
+            // Close menu
         } else {
 
             searchToggle.setAttribute('aria-expanded', false);
@@ -139,7 +140,7 @@
 
     /**
      * Object representing an event listener
-     * 
+     *
      * @typedef {Object} event
      * @property {Node} element             Element the event is attached to
      * @property {function} handler         Event handler function
@@ -148,11 +149,11 @@
 
     /**
      * Add event listener
-     * 
+     *
      * @memberof module:header
      * @instance
      * @private
-     * 
+     *
      * @param {Node} element            DOM element to add event to
      * @param {document#event} event    The event to listen for
      * @param {function} rawHandler     The raw handler function
@@ -200,11 +201,11 @@
 
     /**
      * Remove event listener
-     * 
+     *
      * @memberof module:header
      * @instance
      * @private
-     * 
+     *
      * @param {event} token     The event to remove
      */
     function removeEvent(token) {
@@ -214,5 +215,5 @@
             token.element.detachEvent('on' + token.event, token.handler);
         }
     }
-    
-})();
+
+}

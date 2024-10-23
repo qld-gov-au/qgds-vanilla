@@ -1,0 +1,9 @@
+{{! table example test wrapper }}
+{{#if items ~}}
+    {{#each items ~}}
+<!--  {{ component.type}}  -->
+{{> (lookup component "type") this }}
+    {{/each ~}}
+{{else ~}}
+{{> (lookup component "type") this }}
+{{/if ~}}

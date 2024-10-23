@@ -1,0 +1,154 @@
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+
+import * as Stories from "./directionLink.stories"
+
+<Meta of={Stories} name="Links (Direction links)" />
+
+
+
+# TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/direction-links
+* [ ]: Fix tables
+* [ ]: Fix examples
+* [ ]: Fix links
+* [ ]: QA to original
+
+
+Direction links
+===============
+
+May also be known as:
+
+Arrow links, jump links
+
+[Figma](https://www.figma.com/file/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?type=design&node-id=23167%3A395565&mode=design&t=MVmEKDG9zUeDXsCh-1)
+
+Overview Design Implementation Accessibility
+
+On this page
+------------
+
+Overview
+--------
+
+Direction links are accompanied by arrows to help users move quickly to other parts of the page or through a process.
+
+Use direction links to indicate a physical direction, such as:
+
+*   linking 'up' or 'down' within the page
+*   going 'back' to a parent page
+*   showing the 'next' or 'previous' pages.
+
+Example
+-------
+
+Example
+
+`<a href="#" class="qld__direction-link qld__direction-link--up">Up</a> <a href="#" class="qld__direction-link qld__direction-link--down">Down</a> <a href="#" class="qld__direction-link qld__direction-link--left">Left</a> <a href="#" class="qld__direction-link qld__direction-link--right">Right</a>`
+
+Usage guidelines
+----------------
+
+Directional cues such as these components give a visual hint on specific interaction or content to let the user see it faster and easier.
+
+### Success status icon Indicates a success state When to use
+
+*   Link within a page - for example, Back to top
+*   Use to guide users back to a parent page
+*   Use to show pages that are part of sequential task, ie next or previous step
+
+### Status cancel icon Cancel icon or warning icon When not to use
+
+*   Use a link in place of a button
+*   Use in place of a CTA link
+
+Research and rationale
+----------------------
+
+### Arrow icon
+
+This component comes directly from the [DTA](https://gold.designsystemau.org/components/direction-links "https://gold.designsystemau.org/components/direction-links/") which states that arrow icons are used for direction links, rather than chevrons or triangles because they better articulate their purpose and separate the direction links from other elements that use chevron icons such as accordions or call to action links (Digital Transformation Agency, 2018).
+
+One of the most popular direction cues comes directly from the physical world. Perhaps, there is no more obvious and universal way to show the direction than with an arrow.
+
+### Applying arrows as pseudo elements
+
+If someone used a screen reader (a tool that speaks out what's on the screen for those who can't see well), it would announce something like, "\[Link\] skip to footer down arrow".
+
+The arrow is more of a visual hint for those who can see it, and not something crucial for a screen reader to announce (Digital Transformation Agency, 2018).
+
+So, we've updated how we insert the arrow, to separate the arrow (a supporting element) from the core content of the link, we've also started using a CSS `::before` pseudo-element.
+
+The benefit is that screen readers typically skip content in these pseudo-elements, focusing only on the important text. This method ensures that screen readers concentrate on the text which carries the primary action or information, rather than the visual hint (the arrow).
+
+Classes
+-------
+
+Name
+
+Description
+
+`qld__direction-link--up`
+
+Arrow up.
+
+`qld__direction-link--down`
+
+Arrow down.
+
+`qld__direction-link--left`
+
+Arrow on the left.
+
+`qld__direction-link--right`
+
+Arrow on the right.
+
+Accessible direction link requirements
+--------------------------------------
+
+Keep these considerations in mind if you are modifying the Design System or creating a custom component.
+
+### General best practice
+
+**Simplicity**: The design of the arrows should be simple and clear. They should immediately convey their purpose to the user. Overly complex or stylised arrows can confuse users.
+
+**Consistency**: The arrows should have a consistent design throughout the entire system. This includes consistent size, color, and style. Consistency helps users understand and predict how the system works.
+
+**Size and Spacing**: The arrows should be large enough to be easily clickable, especially for users on touch devices. There should also be enough space around the arrows to prevent accidental clicks on nearby elements.
+
+### WCAG guidelines
+
+#### 1.4.3 Contrast (Minimum)
+
+Ensure that the colour of the arrow and the background meet the contrast ratio of at least 4.5:1. You can use online tools to check the contrast ratio.
+
+#### 2.4.7 Focus visible
+
+Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible. This ensures that users can see which arrow link they're interacting with when using a keyboard.
+
+#### 1.3.3 Sensory characteristics
+
+Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, colour, size, visual location, orientation, or sound.
+
+While “top” and “bottom”, “back”, “next” and “previous” are allowed, other directions like “left” and “right” are not. Users who are blind or low vision need instructions that are not visual.
+
+#### 4.1.2 Name, Role, Value
+
+The role of the link is inherently determined by the `<a>` tag. For the name, ensure that the link has accessible text.
+
+`<a href="#" class="qld__direction-link qld__direction-link--up">Go Up</a>`
+
+In this example, "Go Up" is the accessible name of the link.
+
+* * *
+
+References
+----------
+
+Digital Transformation Agency. (2018). DTA Design System. Retrieved from [https://designsystem.gov.au/components/accordion/](https://designsystem.gov.au "https://designsystem.gov.au/")
+
+Agriculture Design System (n.d.) [Direction links](https://design-system.agriculture.gov.au/components/direction-link "Arrow links"), _Agriculture Design System_, accessed 12 July 2023.
+
+W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
+
+**Last updated:** August 2023

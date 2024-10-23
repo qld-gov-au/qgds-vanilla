@@ -1,4 +1,4 @@
-module.exports = function (metadata, options) {
+export default function (metadata, options) {
     var accordions = "";
     var accNum = Number(metadata.accordion_num.value);
     var accordion = {"title": "", "content": "", "fieldid":""};
@@ -6,7 +6,7 @@ module.exports = function (metadata, options) {
     for (var property in metadata) {
         var accIndex = property.replace('title_','').replace('content_','');
         accIndex = Number(accIndex);
-        
+
         if (property.indexOf('title_') > -1) {
             if (accNum >= accIndex) {
                 accordion.title = metadata[property].value;

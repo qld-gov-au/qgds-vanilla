@@ -1,0 +1,80 @@
+{
+    "site": {
+        "metadata": {
+            "defaultBannerColour": {
+                "value": "alternate"
+            },
+            "defaultBannerType": {
+                "value": "texture"
+            },
+            "defaultBannerTexture": {
+                "value": "path/to/texture/image.jpg"
+            }
+        }
+    },
+    "current": {
+        "data": {
+            "metadata": {
+                "displayBreadcrumbs": {
+                    "value": "true"
+                },
+                "background": {
+                    "type": "metadata_field_select",
+                    "description": "",
+                    "friendly_name": "Card background",
+                    "value": "qld__body--dark",
+                    "options": {
+                        "": "White",
+                        "qld__body--light": "Light",
+                        "qld__body--dark": "Dark",
+                        "qld__body--alt": "Alternate",
+                        "qld__body--dark-alt": "Dark Alternate"
+                    },
+                    "required": false,
+                    "editable": true
+                },
+                "body_width": {
+                    "type": "metadata_field_select",
+                    "description": "",
+                    "friendly_name": "Body width",
+                    "value": "qld__body--full-width",
+                    "options": {
+                        "qld__body--half-width": "Half-width",
+                        "qld__body--full-width": "Full-width"
+                    },
+                    "required": false,
+                    "editable": true
+                },
+                "id_field": {
+                    "type": "metadata_field_text",
+                    "description": "",
+                    "friendly_name": "Id field",
+                    "value": "unique-id",
+                    "required": false,
+                    "editable": true
+                }
+            },
+            "name": "Sample Banner"
+        },
+        "lineage": [
+            {
+                "asset_type_code": "folder",
+                "asset_url": "/home",
+                "asset_short_name": "Home",
+                "asset_is_site_asset": "1"
+            },
+            {
+                "asset_type_code": "page",
+                "asset_url": "/section",
+                "asset_short_name": "Section",
+                "asset_is_site_asset": "0"
+            },
+            {
+                "asset_type_code": "page",
+                "asset_url": "/section/subsection",
+                "asset_short_name": "Subsection",
+                "asset_is_site_asset": "0"
+            }
+        ]
+    }
+}
