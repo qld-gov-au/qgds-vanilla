@@ -1,0 +1,5 @@
+<table class="qld__table qld__table__col-2-left-border qld__table__color-example qld__table__col-3-left-border" id="table03526"><thead><tr><th class="qld__table__header--width-33" id="table03526r1c1"> Colour description</th><th class="qld__table__header--width-40" id="table03526r1c2">Variable</th><th class="qld__table__header--width-20" id="table03526r1c3">Value</th></tr></thead><tbody><tr><td headers="table03526r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#6BBE27" stroke="transparent" stroke-width="1"></circle></svg>
+           Light accent
+        </td><td headers="table03526r1c2">--QLD-color-light-designAccent</td><td headers="table03526r1c3">#6BBE27</td></tr><tr><td headers="table03526r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#6BBE27" stroke="transparent" stroke-width="1"></circle></svg>
+           Dark accent
+        </td><td headers="table03526r1c2">--QLD-color-dark-designAccent</td><td headers="table03526r1c3"> #6BBE27</td></tr></tbody></table>

@@ -1,0 +1,81 @@
+{{#> layout_html_head }}
+    <title>Queensland Design System</title>
+{{/layout_html_head}}
+
+
+{{> layout_body_pre}}
+
+
+{{> header header }}
+<!--noindex-->
+<!--${require('../components/header/html/component.hbs')({-->
+<!--"site":require('/src/data/site.json')-->
+<!--})}-->
+
+{{>mega_main_navigation navigation}}
+<!--endnoindex-->
+<!--${require('../components/mega_main_navigation/html/component.hbs')({-->
+<!--"site":require('/src/data/site.json')-->
+<!--})}-->
+
+{{#> layout_body }}
+    {{#>layout_main }}
+
+
+{{#> grid_section class_options="qld__body qld__body--breadcrumb" }}
+    {{#> div class="container-fluid" }}
+        {{>breadcrumbs breadcrumbs}}
+<!--        <div class="container-fluid">-->
+
+<!--            ${require('../components/breadcrumbs/html/component.hbs')({-->
+<!--            "site":require('/src/data/site.json'),-->
+<!--            "current":require('/src/data/current.json'),-->
+<!--            })}-->
+<!--        </div>-->
+    {{/ div}}
+{{/ grid_section}}
+            {{#> grid_row }}
+             {{#> grid_col col_options="col-xs-12 col-lg-4 col-xl-3"}}
+
+                    <!-- INTERNAL NAVIGATION -->
+                    {{>internal_navigation  internal_navigation }}
+<!--                    ${require('../components/internal_navigation/html/component.hbs')({-->
+<!--                    "site":require('/src/data/site.json'),-->
+<!--                    "current":require('/src/data/current.json')-->
+<!--                    })}-->
+             {{/grid_col}}
+
+             {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-8" col_id="content"}}
+
+<p></p>
+                  <p> CONTENT GOES IN HERE 222</p>
+                  <p></p>
+
+
+             {{/grid_col}}
+            {{/grid_row}}
+
+
+    {{/layout_main}}
+
+
+<!-- WIDGETS -->
+    {{>widgets widgets }}
+<!--${require('../components/widgets/html/component.hbs')({-->
+<!--"site":require('/src/data/site.json'),-->
+<!--"current":require('/src/data/current.json')-->
+<!--})}-->
+
+<!-- FOOTER-->
+    {{> footer footer }}
+<!--${require('../components/footer/html/component.hbs')({-->
+<!--"site":require('/src/data/site.json')-->
+<!--})}-->
+
+<!--<div class="footer-scripts" id="footer_js" style="display: none !important;">-->
+<!--    ${require('../components/_global/html/scripts.html')}-->
+<!--</div>-->
+
+    {{> layout_footer_scripts footer_scripts }}
+    {{/layout_body}}
+{{>layout_html_post}}

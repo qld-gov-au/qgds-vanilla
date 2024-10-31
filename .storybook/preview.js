@@ -98,7 +98,7 @@ const preview = {
             const selectedThemeName = themeOverride || currentTheme || themeData.defaultTheme ;
             const classes = themeData.themes[selectedThemeName];
             return `
-<div class="${classes}" ><!-- end theme override -->
+<div class="${classes} qld__grid" ><!-- end theme override -->
 ${Story()}
 </div><!-- theme override close div -->
 `;

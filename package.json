@@ -1,6 +1,6 @@
 {
   "name": "@qld-gov-au/qgds-vanilla",
-  "version": "1.0.0",
+  "version": "0.0.15",
   "description": "",
   "main": "index.js",
   "licence": "MIT",
@@ -18,7 +18,10 @@
     "test:integration": "echo 'no test:integration exist'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build --webpack-stats-json ",
-    "package-docs": "npm run build-storybook && rm -rf docs/storybook && mv storybook-static docs/storybook"
+    "package-docs": "npm run build-storybook && rm -rf docs/storybook && mv storybook-static docs/storybook",
+    "lint:js": "eslint \"./src/**/*.js\"",
+    "lint:styles": "stylelint \"./src/**/*.css\" \"./src/**/*.scss\" \"!./src/**/*.min.css\" \"!./src/**/custom.css\"",
+    "lint": "npm run lint:js && npm run lint:styles"
   },
   "keywords": [],
   "author": "",
@@ -60,9 +63,9 @@
     "handlebars": "^4.7.8",
     "jsdoc": "^4.0.2",
     "sass": "^1.63.6",
-    "stylelint": "^15.9.0",
-    "stylelint-config-standard": "^33.0.0",
-    "stylelint-scss": "^5.0.1"
+    "stylelint": "^16.10.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-scss": "^6.8.1"
   },
   "dependencies": {
     "bloodhound-js": "^1.2.3",

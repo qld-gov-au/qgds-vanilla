@@ -1,0 +1,11 @@
+<table class="qld__table qld__table__col-2-left-border qld__table__color-example qld__table__col-3-left-border" id="table52279"><thead><tr><th class="qld__table__header--width-33" id="table52279r1c1"> Colour description</th><th class="qld__table__header--width-40" id="table52279r1c2">Variable</th><th class="qld__table__header--width-20" id="table52279r1c3">Value</th></tr></thead><tbody><tr><td headers="table52279r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#03213F" stroke="transparent" stroke-width="1"></circle></svg>
+           Light heading colour
+        </td><td headers="table52279r1c2">--QLD-color-light__heading</td><td headers="table52279r1c3">#03213F</td></tr><tr><td headers="table52279r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#414141" stroke="transparent" stroke-width="1"></circle></svg>
+           Light foreground text
+        </td><td headers="table52279r1c2">--QLD-color-light__text</td><td headers="table52279r1c3">#414141</td></tr><tr><td headers="table52279r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#636363" stroke="transparent" stroke-width="1"></circle></svg>
+           Light foreground text lighter</td><td headers="table52279r1c2">--QLD-color-light__text--lighter</td><td headers="table52279r1c3">#636363</td></tr><tr><td headers="table52279r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#FFFFFF" stroke="#7A7A7A" stroke-width="1"></circle></svg>
+           Dark heading colour
+        </td><td headers="table52279r1c2">--QLD-color-dark__heading</td><td headers="table52279r1c3">#FFFFFF</td></tr><tr><td headers="table52279r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#FFFFFF" stroke="#7A7A7A" stroke-width="1"></circle></svg>
+           Dark foreground text
+        </td><td headers="table52279r1c2">--QLD-color-dark__text</td><td headers="table52279r1c3">#FFFFFF</td></tr><tr><td headers="table52279r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#DEEBF9" stroke="transparent" stroke-width="1"></circle></svg>
+           Dark foreground text lighter</td><td headers="table52279r1c2">--QLD-color-dark__text--lighter</td><td headers="table52279r1c3"> #DEEBF9</td></tr></tbody></table>

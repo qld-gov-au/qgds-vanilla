@@ -11,6 +11,7 @@ import QGDSrawLoader from "./.esbuild/plugins/qgds-plugin-raw-loader.js";
 import QDGScleanFolders from "./.esbuild/plugins/qgds-plugin-clean-output-folders.js";
 import QDGSbuildLog from "./.esbuild/plugins/qgds-plugin-build-log.js";
 import QDGScopy from "./.esbuild/plugins/qgds-plugin-copy-assets.js";
+import { esBuildHandlebarsEmbedSvgPlugin } from  './.esbuild/plugins/handlebarsEmbedSvgPlugin.js'
 
 //Open source ESBUILD PLUGINS
 import { sassPlugin } from "esbuild-sass-plugin";
@@ -58,6 +59,7 @@ const buildConfig = {
     plugins: [
         QgdsPluginHandlebarPartialBuilder(),
         QgdsPluginHandlebarHelpersRollup(),
+        esBuildHandlebarsEmbedSvgPlugin(),
         QgdsPluginSassGlobBuilder(),
         QgdsPluginGlobalJsRollup(),
         QDGScopy(),
@@ -103,6 +105,7 @@ const buildNodeConfig = {
     plugins: [
         QgdsPluginHandlebarPartialBuilder(),
         QgdsPluginHandlebarHelpersRollup(),
+        esBuildHandlebarsEmbedSvgPlugin(),
         QDGScopy(),
         QGDSrawLoader(),
         handlebarsPlugin(),
@@ -125,6 +128,7 @@ async function StartBuild() {
         //done
     } else {
         await Promise.all([ctxNode.rebuild(), ctx.rebuild(), ctxDev.rebuild()]);
+        //await Promise.all([ctxNode.rebuild()]);
     }
     await ctx.dispose();
     await ctxDev.dispose();

@@ -1,3 +1,7 @@
+const { mergeConfig } = require('vite');
+const customViteConfig = require('../vite.config.js'); // Adjust the path as needed
+
+
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
     stories: [
@@ -9,6 +13,10 @@ const config = {
     ],
     staticDirs: [
         { from: '../src/', to: '/' },
+        { from: '../dist/assets/css', to: '/assets/css' },
+        { from: '../dist/assets/js', to: '/assets/js' },
+        { from: '../dist/assets/helpers', to: '/assets/helpers' },
+        { from: '../src/img', to: '/assets/img' },
     ], //Bring dist in statically instead of having it minified
     addons: [//Storybook addons
     //https://storybook.js.org/addons/
@@ -43,14 +51,12 @@ const config = {
     },
 
 
-    //Each component's JS module, for example Alert.js, imports a HTML string to use for it's template.
-    //We add a plugin to handle these .hbs extensions. (Or .mustache, .html etc)
-    //https://storybook.js.org/docs/api/main-config-vite-final
 
-    viteFinal: async (config, {configType}) => {
-        config.root = './dist'
-
-        return config;
+    // https://storybook.js.org/docs/api/main-config-vite-final
+    // Use the Vite configuration from the main project (yes this is a esbuild project but storybook uses vite)
+    async viteFinal(config) {
+        // Merge custom Vite configuration
+        return mergeConfig(config, customViteConfig);
     },
 };
 
