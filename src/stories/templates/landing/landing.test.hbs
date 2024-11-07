@@ -1,0 +1,49 @@
+{{#> layout_html_head }}
+    <title>Queensland Design System</title>
+{{/layout_html_head}}
+
+{{> layout_body_pre}}
+
+{{> header header }}
+
+{{>mega_main_navigation mega_main_navigation}}
+
+{{#> layout_body }}
+    {{#>layout_main }}
+
+        {{>banner_intermediate  banner_intermediate }}
+
+        {{#> grid_section class_options="qld__body qld__body--breadcrumb" }}
+            {{#> div class="container-fluid" }}
+                {{>breadcrumbs breadcrumbs}}
+            {{/ div}}
+        {{/ grid_section}}
+
+        {{#> div class="container-fluid" }}
+            {{#> grid_row }}
+                {{#> grid_col col_options="col-xs-12 col-lg-4 col-xl-3"}}
+                    {{>internal_navigation  internal_navigation }}
+                {{/grid_col}}
+                {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-8" col_id="content"}}
+
+                    {{>abstract abstract}}
+
+                    {{>accordion accordion}}
+
+                    {{>callout callout}}
+
+                {{/grid_col}}
+            {{/grid_row}}
+        {{/ div}}
+
+    {{/layout_main}}
+
+    <!-- WIDGETS -->
+    {{>widgets widgets }}
+
+    <!-- FOOTER-->
+    {{> footer footer }}
+
+    {{> layout_footer_scripts footer_scripts }}
+    {{/layout_body}}
+{{>layout_html_post}}

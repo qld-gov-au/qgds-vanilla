@@ -38,6 +38,7 @@ const preview = {
                 //"1200px": {viewport: 1200}, //original non-modes based baseline
             },
         },
+        layout: 'fullscreen',
         viewport: {
             viewports: { //QLD-media Breakpoints
                 small: {name: "Small", styles: {width: "400px", height: "800px"}},
@@ -70,11 +71,9 @@ const preview = {
                 theme: themes.light,
             }, // 👈 Enables the table of contents,
             source: {
-
                 language: "html",
             },
         },
-
         options: {
             storySort: {
                 method: 'alphabetical',
