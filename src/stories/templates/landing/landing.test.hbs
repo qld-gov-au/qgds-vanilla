@@ -13,28 +13,80 @@
 
         {{>banner_intermediate  banner_intermediate }}
 
-        {{#> grid_section class_options="qld__body qld__body--breadcrumb" }}
+        <section class="qld__body">
+
             {{#> div class="container-fluid" }}
-                {{>breadcrumbs breadcrumbs}}
+
+                {{#> grid_row }}
+
+                    {{#> grid_col col_options="col-xs-12 col-lg-4 col-xl-3"}}
+
+                        {{>internal_navigation  internal_navigation }}
+
+                    {{/grid_col}}
+
+                    {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-9" col_id="content"}}
+
+                        {{>in_page_navigation in_page_navigation}}
+
+                        {{>accordion accordion}}
+
+                        {{>callout callout}}
+
+                        <section class="qld__body">
+
+                            {{#> div class="container-fluid" }}
+
+                                <ul class="qld__link-list qld__link-list--inline">
+                                    <li><a href="#" class="qld__btn">primary btn</a></li>
+                                    <li><a href="#" class="qld__btn qld__btn--secondary">secondary btn</a></li>
+                                    <li><a href="#" class="qld__btn qld__btn--tertiary">tertiary btn</a></li>
+                                </ul>
+
+                            {{/ div}}
+
+                        </section>
+
+                        <section class="qld__body">
+
+                            {{#> div class="container-fluid" }}
+
+                                {{#> grid_row }}
+
+                                    {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-6" }}
+
+                                        <ul class="qld__link-columns">
+                                            <li><a href="#">List item 1</a></li>
+                                            <li><a href="#">List item 2</a></li>
+                                            <li><a href="#">List item 3</a></li>
+                                        </ul>
+
+                                    {{/grid_col}}
+
+                                    {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-6" }}
+
+                                        <ul class="qld__link-columns">
+                                            <li><a href="#">List item 1</a></li>
+                                            <li><a href="#">List item 2</a></li>
+                                            <li><a href="#">List item 3</a></li>
+                                            <li class="qld__link-columns__all-link"><a class="qld__cta-link qld__cta-link--view-all" href="#">View all</a></li>
+                                        </ul>
+
+                                    {{/grid_col}}
+
+                                {{/grid_row}}
+
+                            {{/ div}}
+
+                        </section>
+
+                    {{/grid_col}}
+
+                {{/grid_row}}
+
             {{/ div}}
-        {{/ grid_section}}
 
-        {{#> div class="container-fluid" }}
-            {{#> grid_row }}
-                {{#> grid_col col_options="col-xs-12 col-lg-4 col-xl-3"}}
-                    {{>internal_navigation  internal_navigation }}
-                {{/grid_col}}
-                {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-8" col_id="content"}}
-
-                    {{>abstract abstract}}
-
-                    {{>accordion accordion}}
-
-                    {{>callout callout}}
-
-                {{/grid_col}}
-            {{/grid_row}}
-        {{/ div}}
+        </section>
 
     {{/layout_main}}
 

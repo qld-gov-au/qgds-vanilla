@@ -18,6 +18,7 @@ import breadcrumbs from "./landing-breadcrumbs.json";
 import abstract from "./landing-abstract.json";
 import accordion from "./landing-accordion.json";
 import callout from "./landing-callout.json";
+import button from "./landing-button.json";
 import internal_navigation from "./landing-internal_navigation.json";
 import widgets from "./landing-widgets.json";
 import banner_intermediate from "./landing-banner_intermediate.json";
@@ -32,7 +33,6 @@ let site = {
             },
         }
     }
-
 
 let json_data = {
     current: {
@@ -56,9 +56,11 @@ let json_data = {
     abstract: abstract,
     accordion: accordion,
     callout: callout,
+    button: button,
     widgets: widgets,
     footer: footer,
-    footer_scripts: footer_scripts }
+    footer_scripts: footer_scripts
+}
 
 export default {
     title: "Landing",
