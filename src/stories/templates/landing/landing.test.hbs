@@ -29,19 +29,13 @@
 
                         {{>in_page_navigation in_page_navigation}}
 
-                        {{>accordion accordion}}
-
-                        {{>callout callout}}
-
                         <section class="qld__body">
 
                             {{#> div class="container-fluid" }}
 
-                                <ul class="qld__link-list qld__link-list--inline">
-                                    <li><a href="#" class="qld__btn">primary btn</a></li>
-                                    <li><a href="#" class="qld__btn qld__btn--secondary">secondary btn</a></li>
-                                    <li><a href="#" class="qld__btn qld__btn--tertiary">tertiary btn</a></li>
-                                </ul>
+                                <h2>Intro heading</h2>
+
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                             {{/ div}}
 
@@ -50,6 +44,8 @@
                         <section class="qld__body">
 
                             {{#> div class="container-fluid" }}
+
+                                <h2>Cards heading</h2>
 
                                 {{#> grid_row }}
 
@@ -80,6 +76,69 @@
 
                         </section>
 
+                        {{>card_multi_action card_multi_action}}
+
+                        {{>accordion accordion}}
+
+                        {{>callout callout}}
+
+                        <section class="qld__body">
+
+                            {{#> div class="container-fluid" }}
+
+                                <ul class="qld__link-list qld__link-list--inline">
+                                    <li><a href="#" class="qld__btn">primary btn</a></li>
+                                    <li><a href="#" class="qld__btn qld__btn--secondary">secondary btn</a></li>
+                                    <li><a href="#" class="qld__btn qld__btn--tertiary">tertiary btn</a></li>
+                                </ul>
+
+                                <hr class="qld__horizontal-rule">
+
+                            {{/ div}}
+
+                        </section>
+
+                        <section class="qld__body">
+
+                            {{#> div class="container-fluid" }}
+
+                                <nav class="hidden-print qld__search-pagination" aria-label="pagination">
+                                    <h2 class="sr-only">Pagination</h2>
+                                    <ul class="qld__search-pagination__list">
+                                        <li class="num active">
+                                            <a class="qld__search-pagination_link" href="?&amp;start_rank&#x3D;1">1</a></li>
+                                        </li>
+                                        <li class="num">
+                                            <a class="qld__search-pagination_link" href="?&amp;start_rank&#x3D;4">2</a></li>
+                                        </li>
+                                        <li class="num">
+                                            <a class="qld__search-pagination_link" href="?&amp;start_rank&#x3D;7">3</a></li>
+                                        </li>
+                                        <li class="num">
+                                            <a class="qld__search-pagination_link" href="?&amp;start_rank&#x3D;10">4</a></li>
+                                        </li>
+                                        <li class="num">
+                                            <a class="qld__search-pagination_link" href="?&amp;start_rank&#x3D;13">5</a></li>
+                                        </li>
+                                        <li class="ellipsis">
+                                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--lg"><use href="#qld__icon__ellipsis"></use></svg>
+                                        </li>
+                                        <li class="last">
+                                            <a class="qld__search-pagination_link" href="?&amp;start_rank&#x3D;22">8</a></li>
+                                        </li>
+                                        <li class="next">
+                                            <a href="?&amp;start_rank&#x3D;4" rel="next" aria-label="Next page of results" class="qld__search-pagination_link">
+                                            <span>Next</span>
+                                            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--sm"><use href="#qld__icon__arrow-right"></use></svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            {{/ div}}
+
+                        </section>
+
                     {{/grid_col}}
 
                 {{/grid_row}}
@@ -94,8 +153,8 @@
     {{>widgets widgets }}
 
     <!-- FOOTER-->
-    {{> footer footer }}
+    {{>footer footer }}
 
-    {{> layout_footer_scripts footer_scripts }}
+    {{>layout_footer_scripts footer_scripts }}
     {{/layout_body}}
 {{>layout_html_post}}
