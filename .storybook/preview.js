@@ -1,7 +1,7 @@
 
 //load global styles and js
 import "../src/js/main.js";
-import "../src/css/main.scss";
+import "../src/css/main-light.scss";
 
 import { themes } from '@storybook/theming';
 import {withThemeByClassName, DecoratorHelpers} from '@storybook/addon-themes';

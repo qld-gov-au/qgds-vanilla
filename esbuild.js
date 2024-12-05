@@ -38,8 +38,12 @@ const buildConfig = {
             out: "./assets/js/main.min",
         },
         {
-            in: "./src/css/main.scss",
-            out: "./assets/css/main.min",
+            in: "./src/css/main-light.scss",
+            out: "./assets/css/main-light.min",
+        },
+        {
+            in: "./src/css/main-dark.scss",
+            out: "./assets/css/main-dark.min",
         }
     ],
 
