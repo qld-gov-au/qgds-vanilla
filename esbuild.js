@@ -33,17 +33,30 @@ const buildConfig = {
     external: ["fs", "path", "handlebars", "../img/*"],
 
     entryPoints: [
+        //This needs to be dynamically generated based off the tokens theme's
         {
             in: "./src/js/main.js",
             out: "./assets/js/main.min",
         },
         {
-            in: "./src/css/main-light.scss",
-            out: "./assets/css/main-light.min",
+            in: "./src/css/main-invert.scss",
+            out: "./assets/css/main-invert.min",
         },
         {
-            in: "./src/css/main-dark.scss",
-            out: "./assets/css/main-dark.min",
+            in: "./src/css/main-campaign-neon.scss",
+            out: "./assets/css/main-campaign-neon.min",
+        },
+        {
+            in: "./src/css/main-campaign-neon-invert.scss",
+            out: "./assets/css/main-campaign-neon-invert.min",
+        },
+        {
+            in: "./src/css/main-qld-maroon.scss",
+            out: "./assets/css/main-qld-maroon.min",
+        },
+        {
+            in: "./src/css/main-qld-maroon-invert.scss",
+            out: "./assets/css/main-qld-maroon-invert.min",
         }
     ],
 
