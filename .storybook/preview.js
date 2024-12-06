@@ -2,6 +2,15 @@
 //load global styles and js
 import "../src/js/main.js";
 import "../src/css/main.scss";
+//import "../src/css/main-invert.scss";
+//import "../src/css/main-qld-maroon.scss";
+//import "../src/css/main-qld-maroon-invert.scss";
+//import "../src/css/main-qld-corporate.scss";
+//import "../src/css/main-qld-corporate-invert.scss";
+//import "../src/css/main-qld-high-constrast.scss";
+//import "../src/css/main-qld-high-constrast-invert.scss";
+//import "../src/css/main-campaign-neon.scss";
+//import "../src/css/main-campaign-neon-invert.scss";
 
 import { themes } from '@storybook/theming';
 import {withThemeByClassName, DecoratorHelpers} from '@storybook/addon-themes';
@@ -38,6 +47,7 @@ const preview = {
                 //"1200px": {viewport: 1200}, //original non-modes based baseline
             },
         },
+        layout: 'fullscreen',
         viewport: {
             viewports: { //QLD-media Breakpoints
                 small: {name: "Small", styles: {width: "400px", height: "800px"}},
@@ -70,11 +80,9 @@ const preview = {
                 theme: themes.light,
             }, // 👈 Enables the table of contents,
             source: {
-
                 language: "html",
             },
         },
-
         options: {
             storySort: {
                 method: 'alphabetical',
@@ -98,7 +106,7 @@ const preview = {
             const selectedThemeName = themeOverride || currentTheme || themeData.defaultTheme ;
             const classes = themeData.themes[selectedThemeName];
             return `
-<div class="${classes}" ><!-- end theme override -->
+<div class="${classes} qld__grid" ><!-- end theme override -->
 ${Story()}
 </div><!-- theme override close div -->
 `;

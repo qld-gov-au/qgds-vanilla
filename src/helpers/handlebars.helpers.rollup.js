@@ -17,6 +17,7 @@ import eachDS from "./Handlebars/eachDS.js";
 import eachFrom from "./Handlebars/eachFrom.js";
 import eachUpTo from "./Handlebars/eachUpTo.js";
 import eachWhen from "./Handlebars/eachWhen.js";
+import embedSvg from "./Handlebars/embedSvg.js";
 import formatDate from "./Handlebars/formatDate.js";
 import generateDates from "./Handlebars/generateDates.js";
 import getDistance from "./Handlebars/getDistance.js";
@@ -81,6 +82,7 @@ export default function handlebarsHelpersRollup(handlebars) {
   handlebars.registerHelper("eachFrom", eachFrom);
   handlebars.registerHelper("eachUpTo", eachUpTo);
   handlebars.registerHelper("eachWhen", eachWhen);
+  handlebars.registerHelper("embedSvg", embedSvg);
   handlebars.registerHelper("formatDate", formatDate);
   handlebars.registerHelper("generateDates", generateDates);
   handlebars.registerHelper("getDistance", getDistance);

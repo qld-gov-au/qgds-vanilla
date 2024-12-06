@@ -34,7 +34,7 @@
             &:hover, &:focus {
                 opacity: 0.5;
             }
-            
+
             svg {
                 height: pxToRem(13);
                 width: pxToRem(13);
@@ -51,7 +51,7 @@
     }
 
     .calendar-toggle {
-        background-color: $QLD-color-neutral--white;
+        background-color: var(--QLD-color-light__background);
         border-radius: 0px pxToRem(4) pxToRem(4) 0px;
         border-color: $QLD-color-light__border--alt;
         color: $QLD-color-light__action--secondary;
@@ -83,7 +83,7 @@
 }
 
 .flatpickr-calendar {
-    background-color: $QLD-color-neutral--white;
+    background-color: var(--QLD-color-light__background);
     box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
     border: 1px solid $QLD-color-neutral--lighter;
     margin-top: pxToRem(8);
@@ -98,7 +98,7 @@
     .flatpickr-months {
         align-items: center;
 
-        .flatpickr-next-month, 
+        .flatpickr-next-month,
         .flatpickr-prev-month {
             border-radius: pxToRem(4);
             fill: $QLD-color-light__action--secondary;
@@ -121,7 +121,7 @@
         .flatpickr-next-month {
             right: pxToRem(16);
         }
-        
+
         .flatpickr-prev-month {
             left: pxToRem(16);
         }
@@ -135,7 +135,7 @@
             height: auto;
         }
     }
-    
+
     .flatpickr-current-month {
         display: inline-flex;
         justify-content: center;
@@ -275,7 +275,7 @@
             }
         }
     }
-    
+
     &::before, &::after {
         display: none;
     }

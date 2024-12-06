@@ -1,4 +1,6 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
+import { viteHandlebarsEmbedSvgPlugin } from  './.esbuild/plugins/handlebarsEmbedSvgPlugin.js'
+
 
 export default defineConfig({
   root: './dist',
@@ -12,5 +14,6 @@ export default defineConfig({
         }
       },
     },
+      viteHandlebarsEmbedSvgPlugin()
   ],
 });
