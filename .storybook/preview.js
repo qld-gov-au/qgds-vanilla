@@ -2,6 +2,15 @@
 //load global styles and js
 import "../src/js/main.js";
 import "../src/css/main.scss";
+//import "../src/css/main-invert.scss";
+//import "../src/css/main-qld-maroon.scss";
+//import "../src/css/main-qld-maroon-invert.scss";
+//import "../src/css/main-qld-corporate.scss";
+//import "../src/css/main-qld-corporate-invert.scss";
+//import "../src/css/main-qld-high-constrast.scss";
+//import "../src/css/main-qld-high-constrast-invert.scss";
+//import "../src/css/main-campaign-neon.scss";
+//import "../src/css/main-campaign-neon-invert.scss";
 
 import { themes } from '@storybook/theming';
 import {withThemeByClassName, DecoratorHelpers} from '@storybook/addon-themes';
