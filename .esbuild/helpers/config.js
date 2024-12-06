@@ -48,7 +48,7 @@ fs.readdirSync(THEMES_FOLDER).forEach((file) => {
         themesMap[`${theme}-invert`] = {
             'paletteFile': file,
             'scss' : theme !== 'qld-default' ? `main-${theme}-invert` : 'main-invert',
-            'variables': 'variables-invert.scss";'
+            'variables': 'variables-invert.scss'
         };
     }
 });
