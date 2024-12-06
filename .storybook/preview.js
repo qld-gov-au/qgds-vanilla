@@ -1,8 +1,11 @@
 
 //load global styles and js
 import "../src/js/main.js";
-import "../src/css/main-light.scss";
-import "../src/css/main-dark.scss";
+import "../src/css/main.scss";
+//import "../src/css/main-qld-corporate.scss";
+//import "../src/css/main-qld-high-contrast.scss";
+//import "../src/css/main-qld-maroon.scss";
+//import "../src/css/main-campaign-neon.scss";
 
 import { themes } from '@storybook/theming';
 import {withThemeByClassName, DecoratorHelpers} from '@storybook/addon-themes';
