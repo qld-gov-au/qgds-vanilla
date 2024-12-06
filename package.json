@@ -9,7 +9,8 @@
     "url": "https://github.com/qld-gov-au/qgds-vanilla"
   },
   "scripts": {
-    "prepare": "npm run build",
+    "config": "node .esbuild/helpers/config.js",
+    "prepare": "npm run config && npm run build",
     "build": "node esbuild.js",
     "watch": "node esbuild.js --watch",
     "serve": "node esbuild.js --serve",
