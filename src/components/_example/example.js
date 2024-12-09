@@ -6,28 +6,28 @@
  */
 
 export default {
-    init() {
-        console.log("The Example component was initialised.");
+  init() {
+    // Initiate JS logic needed by within the component, pinned to DOMContentLoaded event
+    document.addEventListener("DOMContentLoaded", () => {
+      // Handle clicks
+      this.handleClick(".qld__page-alerts a");
 
-        // Initiate some event listening within the component
-        document.addEventListener("DOMContentLoaded", () => {
-            const scope = ".qld__page-alerts a";
-            this.handleClick(scope);
-        });
-    },
+      // Others here...
+    });
+  },
 
-    /**
-     * Attach a click event handler to a button.
-     * @param {HTMLElement} element - The button element to handle.
-     */
-    handleClick(scope) {
-        let nodes = document.querySelectorAll(scope);
+  /**
+   * Example: Attach a click event handler on the supplied element.
+   * @param {HTMLElement} element - A DOM element to handle.
+   */
+  handleClick(scope) {
+    let nodes = document.querySelectorAll(scope);
 
-        //Iterate over each matching nodes in the document and attach an event listener
-        nodes.forEach((node) => {
-            node.addEventListener("click", () => {
-                console.log(`A link was clicked within the Example component.`);
-            });
-        });
-    },
+    //Iterate over each matching nodes in the document and attach an event listener
+    nodes.forEach((node) => {
+      node.addEventListener("click", (event) => {
+        console.log(`A link was clicked within the Example component.`);
+      });
+    });
+  },
 };

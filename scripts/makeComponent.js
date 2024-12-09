@@ -14,7 +14,8 @@ function createComponent(name) {
     // Check if __dirname is supported, otherwise use process.cwd()
     const currentDir =
         typeof __dirname !== "undefined" ? __dirname : process.cwd();
-    const baseDir = path.join(currentDir, "../src/components", name);
+    
+        const baseDir = path.join(currentDir, "../src/components", name);
 
     const files = [
         "index.js",

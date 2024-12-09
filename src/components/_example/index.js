@@ -1,14 +1,35 @@
+/**
+ * @file index.js
+ * @description Example Component entry file (index.js).
+ * @module example
+ */
+
+// Imports QGDS Component utility:
 import QGDSComponent from "./../../js/QGDSComponent.js";
 
-import template from "./example.hbs?raw";
-import componentJS from "./example.js";
-import componentData from "./example.data.json";
+// Imports resources needed to nake our "Example" component:
+import hbstemplate from "./example.hbs?raw";
+import logic from "./example.js";
+import meta from "./version.json";
 
-export default class Example {
-    constructor(data = componentData) {
-        componentJS.init();
+/**
+ * @function Example
+ * @description The Example component.
+ * @param {object} data - The data to be used in the template.
+ * @param {string} template - The template to render.
+ * @returns {object} - A new instance of the QGDSComponent class, contained properties: template, meta, htmlstring, node.
+ */
 
-        // Create a new instance via the QGDSComponent class
-        return new QGDSComponent("Example", template, data);
-    }
+export default function Example({ data, template = hbstemplate }) {
+  logic.init();
+
+  //Minimum required fields for the component to function
+  const props = {
+    data,
+    template,
+    required: ["title", "description"],
+    meta: meta || {},
+  };
+
+  return new QGDSComponent("Example", props);
 }
