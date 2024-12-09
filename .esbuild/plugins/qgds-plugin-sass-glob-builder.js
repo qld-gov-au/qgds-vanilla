@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const COMPONENTS_DIR = path.resolve(__dirname, './../../src/components');
-const PARTIALS_JS_FILE = path.resolve(__dirname, '../../src/css/components.scss');
+const PARTIALS_JS_FILE = path.resolve(__dirname, '../../src/css/imports/components.scss');
 
 
 function getAllFiles(dirPath, arrayOfFiles) {

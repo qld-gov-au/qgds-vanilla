@@ -1,18 +1,20 @@
-const { mergeConfig } = require('vite');
-const customViteConfig = require('../vite.config.js'); // Adjust the path as needed
-
+import { mergeConfig } from 'vite';
+import customViteConfig from '../vite.config.js'; // Adjust the path as needed
 
 /** @type { import('@storybook/html-vite').StorybookConfig } */
 const config = {
+    core: {
+        disableTelemetry: true,
+    },
     stories: [
-        "../src/stories/Introduction.mdx",
+        //"../src/stories/Introduction.mdx",
         // Include all stories found under the src/components directory ( For example: alert/alert.stories.js )
         // Exlude any stories starting with an underscore ( For example: _exludeme.stories.js )
         "../src/**/!(*_)*.mdx",
         "../src/**/!(*_)*.stories.js",
     ],
     staticDirs: [
-        { from: '../src/', to: '/' },
+        //{ from: '../src/', to: '/' },
         { from: '../dist/assets/css', to: '/assets/css' },
         { from: '../dist/assets/js', to: '/assets/js' },
         { from: '../dist/assets/helpers', to: '/assets/helpers' },
@@ -56,7 +58,8 @@ const config = {
     // Use the Vite configuration from the main project (yes this is a esbuild project but storybook uses vite)
     async viteFinal(config) {
         // Merge custom Vite configuration
-        return mergeConfig(config, customViteConfig);
+        //console.log(JSON.stringify(mergeConfig(config, customViteConfig.default)));
+        return mergeConfig(config, customViteConfig.default);
     },
 };
 

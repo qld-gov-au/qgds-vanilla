@@ -90,15 +90,15 @@ Object.entries(themesMap).forEach(([theme, { paletteFile, scss, variables }]) =>
     } else {
         // Verify the @import statement
         const content = fs.readFileSync(filePath, 'utf8');
-        if (!content.includes(`@import "@qld-gov-au/qgds-tokens/dist/scss/styles/${paletteFile}";`)
+        if (!content.includes(`@qld-gov-au/qgds-tokens/dist/scss/styles/${paletteFile}`)
             || !content.includes(`@import "imports\/${variables}";`)) {
             console.error(`Invalid @import in file: ${scssFile}`);
             // Optionally fix the file
             const updatedContent = content.replace(
-                /@import "@qld-gov-au\/qgds-tokens\/.*?palette\.scss";/,
-                `@import "@qld-gov-au/qgds-tokens/dist/scss/styles/${paletteFile}";`
+                /@import "..\/..\/node_modules\/@qld-gov-au\/qgds-tokens\/.*?palette\.scss";/,
+                `@import "..\/..\/node_modules\/@qld-gov-au/qgds-tokens/dist/scss/styles/${paletteFile}";`
             ).replace(
-                /@import "imports\/.*\.scss";/,
+                /@import "imports\/variables.*\.scss";/,
                 `@import "imports\/${variables}";`
             );
             fs.writeFileSync(filePath, updatedContent);
@@ -148,3 +148,22 @@ if (entryMatch) {
     fs.writeFileSync(ESBUILD_FILE, esbuildContent);
     console.log('Updated esbuild.js with dynamic SCSS entries.');
 }
+
+const STORYBOOK_PREVIEW = '.storybook/preview.js';
+
+const content = fs.readFileSync(STORYBOOK_PREVIEW, 'utf8');
+
+//convert themesMap to value: sacs, title: space separated
+const themeValues=Object.keys(themesMap).map((themeKey) => {
+    return { value: themesMap[themeKey].scss, title: themeKey
+            .replace(/-/g, ' ')// Replace hyphens with spaces for readability
+            .replace(/\b\w/g, (char) => char.toUpperCase()) // Capitalize the first letter of each word
+        };
+});
+
+
+const updatedContent = content.replace(
+    /const brandToolbarItems.*/,
+    `const brandToolbarItems=${JSON.stringify(themeValues)};`
+);
+fs.writeFileSync(STORYBOOK_PREVIEW, updatedContent);

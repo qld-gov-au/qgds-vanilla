@@ -1,9 +1,17 @@
-import { defineConfig } from 'vite';
 import { viteHandlebarsEmbedSvgPlugin } from  './.esbuild/plugins/handlebarsEmbedSvgPlugin.js'
 
-
-export default defineConfig({
-  root: './dist',
+/** @type {import('vite').UserConfig} */
+export default {
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler',
+            },
+            sass: {
+                 silenceDeprecations: ['imports'],
+            },
+        },
+    },
   plugins: [
     {
       name: "html-transform",
@@ -14,6 +22,6 @@ export default defineConfig({
         }
       },
     },
-      viteHandlebarsEmbedSvgPlugin()
+      viteHandlebarsEmbedSvgPlugin(),
   ],
-});
+};
