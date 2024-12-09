@@ -8,8 +8,6 @@ $QLD-main-nav-z-index: 200 !default;
 $QLD-header-sm: 52px;
 $QLD-header-md: 72px;
 
-
-
 .qld__main-nav {
     @include QLD-fontgrid(sm);
     border-bottom: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
@@ -19,7 +17,7 @@ $QLD-header-md: 72px;
         border-bottom-width: $QLD-border-width-extra-thick;
     }
 
-    .qld__main-nav__no-desktop{
+    .qld__main-nav__no-desktop {
         @include QLD-media(lg) {
             border: 0;
             clip: rect(1px, 1px, 1px, 1px);
@@ -114,6 +112,7 @@ $QLD-header-md: 72px;
                 @include QLD-media(lg) {
                     // border-bottom-color: transparent;
                     border-bottom: solid $QLD-border-width-extra-thick $QLD-color-neutral--lightest;
+
                     @include QLD-space(margin-bottom, -.5unit);
                 }
 
@@ -141,18 +140,18 @@ $QLD-header-md: 72px;
         }
 
 
-        & .qld__main-nav__cta-wrapper{
+        & .qld__main-nav__cta-wrapper {
 
-            .qld__main-nav__item--cta{
+            .qld__main-nav__item--cta {
 
-                .qld__main-nav__item-title::before{
+                .qld__main-nav__item-title::before {
                     background-color: $QLD-color-neutral--lighter;
                     top: 0;
                     bottom: auto;
                     left: 0;
                 }
 
-                .qld__main-nav__item-link{
+                .qld__main-nav__item-link {
                     color: var(--QLD-color-light__link);
                     border: none;
 
@@ -236,9 +235,9 @@ $QLD-header-md: 72px;
                 background-color: var(--QLD-color-light__background--alt);
                 border-left: $QLD-border-width-thick solid var(--QLD-color-light__action--primary);
 
-
                 @include QLD-media(lg) {
-                    border-bottom: $QLD-border-width-extra-thick solid var(--QLD-color-light__action--primary-hover);
+                    border-bottom: $QLD-border-width-extra-thick solid var(--QLD-color-light__design-on-accent); //main-nav hover non-active
+
                     border-left: none;
                     @include QLD-space(margin-bottom, -0.5unit);
 
