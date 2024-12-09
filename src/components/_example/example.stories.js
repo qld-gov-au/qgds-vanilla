@@ -8,10 +8,7 @@
 // - the QGDS object containing all components
 // - data you need to populate the component for rendering
 import { QGDS } from "../../js/index.js";
-import data from "./example.data.json";
-
-//Create instance of the component
-const Example = new QGDS.Example(data);
+import mockupData from "./example.data.json";
 
 /* ========= STORIES 👇 ===== */
 
@@ -23,13 +20,12 @@ export default {
   title: "Components / _Example",
   render: (args) => {
     try {
-      return new QGDS.Example(args).htmlstring;
+      return new QGDS.Example({ data: args }).htmlstring;
     } catch (e) {
-      console.log(e);
       return JSON.stringify(e) + JSON.stringify(args);
     }
   },
-  args: data,
+  args: mockupData,
   //Allow user to change the "type" property with a dropdown in the Storybook UI
   argTypes: {
     type: {
@@ -39,46 +35,30 @@ export default {
   },
 };
 
-/**
- * Info variant <code>.qld__page-alerts--info</code>
- */
-
 export const Info = {
   args: {
-    data,
-    ...{ type: "info" },
+    ...mockupData, // Spread mockupData directly here
+    type: "info", // Override the `type` for this variant
   },
 };
 
-/**
- * Success variant <code>.qld__page-alerts--success</code>
- */
+export const Success = {
+  args: {
+    ...mockupData,
+    type: "success",
+  },
+};
 
-// export const Success = {
-//   args: {
-//     data,
-//     ...{ type: "success" },
-//   },
-// };
+export const Warning = {
+  args: {
+    ...mockupData,
+    type: "warning",
+  },
+};
 
-/**
- * Warning variant: <code>.qld__page-alerts--warning</code>
- */
-
-// export const Warning = {
-//   args: {
-//     data,
-//     ...{ type: "warning" },
-//   },
-// };
-
-/**
- * Error variant <code>.qld__page-alerts--error</code>
- */
-
-// export const Error = {
-//   args: {
-//     data,
-//     ...{ type: "error" },
-//   },
-// };
+export const Error = {
+  args: {
+    ...mockupData,
+    type: "error",
+  },
+};

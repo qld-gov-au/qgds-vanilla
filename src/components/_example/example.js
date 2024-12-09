@@ -1,18 +1,15 @@
 /**
- * Example component that demonstrates handling events.  Every component in Vanilla UI
- * library shares the QLD namespace and has access to global functions within
- * this namespace.
+ * Example component logic attached to an init() function.
+ * This logic is imported by the component's entry file (index.js) and ships with the component.
  * @namespace QLD
  */
 
 export default {
   init() {
-    // Initiate JS logic needed by within the component, pinned to DOMContentLoaded event
+    // Mockup only:
+    // Once DOM is loaded, bind some click events (via local function) to specific DOM node
     document.addEventListener("DOMContentLoaded", () => {
-      // Handle clicks
       this.handleClick(".qld__page-alerts a");
-
-      // Others here...
     });
   },
 
@@ -20,6 +17,7 @@ export default {
    * Example: Attach a click event handler on the supplied element.
    * @param {HTMLElement} element - A DOM element to handle.
    */
+
   handleClick(scope) {
     let nodes = document.querySelectorAll(scope);
 

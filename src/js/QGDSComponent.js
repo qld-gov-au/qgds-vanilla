@@ -3,79 +3,92 @@ import Handlebars from "handlebars";
 export default class Component {
   /**
    * Creates a new instance of the Component class.
-   * @param {string} template - The template to render.
-   * @param {object} data - The data to be used in the template.
-   *
+   * @param {string} componentName - Name of the component.
+   * @param {object} props - Component properties.
+   * @param {string} props.template - Handlebars template for rendering.
+   * @param {object} props.data - Data for populating the template.
+   * @param {object} [props.meta] - Optional metadata for the component.
    */
 
   constructor(componentName, props) {
+    if (!componentName || typeof componentName !== "string") {
+      throw new Error("Component name must be a non-empty string.");
+    }
+    if (!props || typeof props !== "object") {
+      throw new Error("Props must be a valid object.");
+    }
+    if (!props.template || typeof props.template !== "string") {
+      throw new Error("A valid template string is required.");
+    }
+    if (!props.data || typeof props.data !== "object") {
+      throw new Error("A valid data object is required.");
+    }
+
     try {
-      console.log("Component constructor request:\n", componentName, props);
+      //Each instance of the component will have these properties
       this.componentName = componentName;
-
       this.template = props.template;
-      this.meta = props.meta;
+      this.meta = props.meta || {};
       this.htmlstring = "";
-      this.node = false;
+      this.node = null;
 
-      //Basic validation of the data needed by the component
-      this.checkData(props);
+      //Basic validation checks on component data
+      this.validateData(props.data);
 
-      // We pass data directly to the function, rather than as a property of the class
-      // This is to keep the class as lightweight as possible
+      //Compiled our HTML string (via Handlebars) and a DOM node (via a cloned template.innerHTML method)
       this.setupHTML(props.data);
-      this.setupNode(props.data);
+      this.setupNode();
 
-      console.log("Component constructor response:\n", this);
-
-      //...
+      console.log(`New ${componentName} component initiated:`);
+      console.log(this);
     } catch (error) {
-      throw new Error(`${this.componentName} error: An error occurred while creating the component: ${error}`);
+      //Logging
+      throw new Error(`${this.componentName} error: ${error.message}`);
     }
   }
+
+  /**
+   * @description Compiles the Handlebars template with the supplied data.
+   * @param {object} data - Data object to populate the template
+   */
 
   setupHTML(data) {
     try {
       this.htmlstring = Handlebars.compile(this.template)(data);
     } catch (error) {
-      throw new Error(`${this.componentName} error: A handlebars template could not be compiled. ${error}`);
+      throw new Error(`${this.componentName} error: Template compilation failed. ${error.message}`);
     }
   }
 
-  setupNode(data) {
+  /**
+   * @description Creates a DOM node from the HTML string.
+   */
+
+  setupNode() {
     try {
-      // Convert the HTML string into a DOM Node fragment
       const container = document.createElement("template");
       container.innerHTML = this.htmlstring;
       this.node = container.content.cloneNode(true);
     } catch (error) {
-      throw new Error(`${this.componentName} error: A handlebars template could not be compiled. ${error}`);
+      throw new Error(`${this.componentName} error: Failed to create a DOM node. ${error.message}`);
     }
   }
 
-  checkData(data, requiredfields = []) {
-    //Check for the data object
-    if (!data || data.length === 0) {
-      throw new Error(
-        `${this.componentName} error: The data object is missing or invalid. The data object is ${JSON.stringify(data)}`,
-      );
+  /**
+   * @description Validates the data object to ensure it has some basic required fields.
+   * @param {object} data - Data object to validate.
+   * @param {array} requiredfields - Array of required fields.
+   * @throws {Error} Throws an error if the data object is missing or invalid.
+   */
+
+  validateData(data, requiredfields = []) {
+    if (!data || Object.keys(data).length === 0) {
+      throw new Error(`${this.componentName} error: Data object is missing or invalid.`);
     }
 
-    //Check for expected values in the data object; if any are missing, log an error
-    if (requiredfields.length > 0) {
-      let missing = [];
-
-      for (const key of required) {
-        if (!data.hasOwnProperty(key)) {
-          missing.push(key);
-        }
-      }
-
-      if (missing.length > 0) {
-        throw new Error(
-          `${this.componentName} error: The source data is missing these required fields: ${missing.join(", ")}`,
-        );
-      }
+    const missing = requiredfields.filter((key) => !data.hasOwnProperty(key));
+    if (missing.length > 0) {
+      throw new Error(`${this.componentName} error: Missing required fields: ${missing.join(", ")}`);
     }
   }
 }

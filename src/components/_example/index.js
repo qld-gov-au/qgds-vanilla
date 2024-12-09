@@ -25,8 +25,8 @@ export default function Example({ data, template = hbstemplate }) {
 
   //Minimum required fields for the component to function
   const props = {
-    data,
-    template,
+    data: data,
+    template: template,
     required: ["title", "description"],
     meta: meta || {},
   };
