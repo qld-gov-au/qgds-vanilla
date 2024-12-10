@@ -20,115 +20,121 @@ import handlebarsPlugin from "esbuild-plugin-handlebars";
 import minimist from "minimist";
 const argv = minimist(process.argv.slice(2));
 
-
 // https://esbuild.github.io/getting-started/#build-scripts
 const buildConfig = {
-    bundle: true,
-    minify: true,
-    sourcemap: true,
-    target: ["es6"],
-    logLevel: "info",
-    outdir: "./dist/",
-    external: ["fs", "path", "handlebars", "../img/*"],
+  bundle: true,
+  minify: true,
+  sourcemap: true,
+  target: ["es6"],
+  logLevel: "info",
+  outdir: "./dist/",
+  external: ["fs", "path", "handlebars", "../img/*"],
 
-    entryPoints: [
-        {
-            in: "./src/js/main.js",
-            out: "./assets/js/main.min",
-        },
-        {
-            in: "./src/css/main.scss",
-            out: "./assets/css/main.min",
-        }
-    ],
-
-    loader: {
-        ".html": "text",
-        ".hbs": "text",
-        ".js": "jsx",
-        ".jpg": "file",
-        ".png": "file",
-        ".gif": "file",
-        ".svg": "file",
-        ".eot": "file",
-        ".woff": "file",
-        ".ttf": "file",
+  entryPoints: [
+    {
+      in: "./src/js/main.js",
+      out: "./assets/js/main.min",
     },
+    {
+      in: "./src/css/main.scss",
+      out: "./assets/css/main.min",
+    },
+  ],
 
-    plugins: [
-        QgdsPluginHandlebarPartialBuilder(),
-        QgdsPluginHandlebarHelpersRollup(),
-        QgdsPluginSassGlobBuilder(),
-        QgdsPluginGlobalJsRollup(),
-        QDGScopy(),
-        QGDSrawLoader(),
-        handlebarsPlugin(),
-        sassPlugin(),
-        QDGSbuildLog(),
-    ],
+  loader: {
+    ".html": "text",
+    ".hbs": "text",
+    ".js": "jsx",
+    ".jpg": "file",
+    ".png": "file",
+    ".gif": "file",
+    ".svg": "file",
+    ".eot": "file",
+    ".woff": "file",
+    ".ttf": "file",
+  },
+
+  plugins: [
+    QgdsPluginHandlebarPartialBuilder(),
+    QgdsPluginHandlebarHelpersRollup(),
+    QgdsPluginSassGlobBuilder(),
+    QgdsPluginGlobalJsRollup(),
+    QDGScopy(),
+    QGDSrawLoader(),
+    handlebarsPlugin(),
+    sassPlugin(),
+    QDGSbuildLog(),
+  ],
 };
 
 const buildDevConfig = {
-    ...buildConfig,
-    entryPoints: buildConfig.entryPoints.map(entry => ({
-        ...entry,
-        out: entry.out.replace('.min', '') // Replaces '.min' with an empty string
-    })),
-    // plugins: buildConfig.plugins.filter((plugin) => {
-    //     // Assuming QDGScleanFolders is a named function:
-    //     return plugin.name !== "qgds-clean-output-folders";
-    // }),
-    minify: false,
-    sourcemap: true
+  ...buildConfig,
+  entryPoints: buildConfig.entryPoints.map((entry) => ({
+    ...entry,
+    out: entry.out.replace(".min", ""), // Replaces '.min' with an empty string
+  })),
+  // plugins: buildConfig.plugins.filter((plugin) => {
+  //     // Assuming QDGScleanFolders is a named function:
+  //     return plugin.name !== "qgds-clean-output-folders";
+  // }),
+  minify: false,
+  sourcemap: true,
 };
 
 const buildNodeConfig = {
-    loader: buildConfig.loader,
-    bundle: true,
-    minify: false,
-    sourcemap: true,
-    minifyIdentifiers: false,
-    logLevel: buildConfig.logLevel,
-    outdir: buildConfig.outdir,
-    external: buildConfig.external,
-    platform: "node",
-    target: ["node20"],
-    format: 'esm',
-    entryPoints: [
-        {
-            in: "./src/helpers/handlebars.init.cjs",
-            out: "./assets/helpers/handlebars.init.min",
-        },
-    ],
-    plugins: [
-        QgdsPluginHandlebarPartialBuilder(),
-        QgdsPluginHandlebarHelpersRollup(),
-        QDGScopy(),
-        QGDSrawLoader(),
-        handlebarsPlugin(),
-        QDGSbuildLog(),
-    ],
-}
+  loader: buildConfig.loader,
+  bundle: true,
+  minify: false,
+  sourcemap: true,
+  minifyIdentifiers: false,
+  logLevel: buildConfig.logLevel,
+  outdir: buildConfig.outdir,
+  external: buildConfig.external,
+  platform: "node",
+  target: ["node20"],
+  format: "esm",
+  entryPoints: [
+    {
+      in: "./src/helpers/handlebars.init.cjs",
+      out: "./assets/helpers/handlebars.init.min",
+    },
+  ],
+  plugins: [
+    QgdsPluginHandlebarPartialBuilder(),
+    QgdsPluginHandlebarHelpersRollup(),
+    QDGScopy(),
+    QGDSrawLoader(),
+    handlebarsPlugin(),
+    QDGSbuildLog(),
+  ],
+};
 async function StartBuild() {
-    let ctx = await esbuild.context(buildConfig);
-    let ctxDev = await esbuild.context(buildDevConfig);
-    let ctxNode = await esbuild.context(buildNodeConfig);
+  let ctx = await esbuild.context(buildConfig);
+  let ctxDev = await esbuild.context(buildDevConfig);
+  let ctxNode = await esbuild.context(buildNodeConfig);
 
-    //clean
-    await esbuild.build({plugins: [QDGScleanFolders()]});
+  //clean
+  await esbuild.build({ plugins: [QDGScleanFolders()] });
 
-    if (argv.watch === true) {
-        // "npm run watch"
-        await Promise.all([ctx.watch(), ctxDev.watch(), ctxNode.watch(), new Promise(resolve => { /* never resolve */
-        })]);
-    } else if (argv.clean === true) {
-        //done
-    } else {
-        await Promise.all([ctxNode.rebuild(), ctx.rebuild(), ctxDev.rebuild()]);
-    }
-    await ctx.dispose();
-    await ctxDev.dispose();
-    await ctxNode.dispose();
+  if (argv.watch === true) {
+    // "npm run watch"
+    await Promise.all([
+      ctx.watch(),
+      ctxDev.watch(),
+      ctxNode.watch(),
+      // eslint-disable-next-line no-unused-vars
+      new Promise((resolve) => {
+        /* never resolve */
+      }),
+    ]);
+  } else if (argv.clean === true) {
+    //done
+  } else {
+    await Promise.all([ctxNode.rebuild(), ctx.rebuild(), ctxDev.rebuild()]);
+  }
+  await ctx.dispose();
+  await ctxDev.dispose();
+  await ctxNode.dispose();
 }
 
 //Initate the project build...
