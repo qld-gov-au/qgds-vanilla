@@ -31,7 +31,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: $QLD-color-neutral--white;
+        background-color: var(--QLD-color-light__background);
         padding: 1.5rem;
         border: $QLD-border-width-thin solid $QLD-color-neutral--lighter;
         border-radius: $QLD-border-radius-sm;
@@ -85,7 +85,7 @@
         border-radius: 50%;
         height: 2rem;
         width: 2rem;
-        background-color: $QLD-color-neutral--lightest;
+        background-color: var(--QLD-color-light__background--shade); //here
         border-color: $QLD-color-neutral--lightest;
 
         &:hover{
@@ -119,7 +119,7 @@
 
     &__body__content{
         @include QLD-space(padding, 1.5unit  0);
-        
+
         ul li a {
             text-decoration: none;
             color: var(--QLD-color-light__link--on-action);
@@ -130,7 +130,7 @@
         }
 
     }
-   
+
 	.qld__modal__body {
         min-width: pxToRem(360);
         max-width: pxToRem(654);
@@ -152,7 +152,7 @@
         .qld__modal__body__header {
             display: flex;
             justify-content: space-between;
-            
+
         }
         .qld__modal__close {
             position: absolute;

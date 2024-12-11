@@ -1,7 +1,7 @@
 {{! div.hbs v0.0.1 }}
 <div
         {{#if component.data.metadata.id_field.value~}}id="{{component.data.metadata.id_field.value}}"{{/if ~}}
-        {{#if component.data.class ~}} class="{{component.data.class}}"{{/if ~}} >
+        {{#if component.data.class ~}} class="{{component.data.class}}"{{/if ~}} {{#if class ~}} class="{{class}}"{{/if ~}} >
     {{#if component.data.items ~}}
         {{#each component.data.items}}
             {{#if component.type  ~}}

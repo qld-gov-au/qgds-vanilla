@@ -2,7 +2,10 @@
 // GLOBAL VARIABLES
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-@import "figma.scss";
+//QGDS Tokens: Design System Tokens + Typography
+@use "sass:map";
+
+
 /**
  * QLD-pixelfallback enable pixel fallbacks
  */
@@ -17,28 +20,28 @@ $QLD-media-lg: 992px;
 $QLD-media-xl: 1312px;
 $QLD-media-xxl: 1599px;
 $QLD-main-nav-breakpoint: lg;
- 
+
  /**
   * QLD-rem value used for REM calculation
   */
 $QLD-rem: 16 !default;
- 
+
  /**
   * QLD-unit used for all type and grid calculations
   */
 $QLD-unit: 4 !default;
- 
+
  /**
   * QLD-font stack
   * QLD-font-monospace stack
   */
-$QLD-font: "Noto Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$QLD-font: $typographyMobileBodyFontFamily,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
-$QLD-font-monospace: "Roboto Mono", Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
-$QLD-font-heading: "ff-meta-web-pro", "Noto Sans", -apple-system, BlinkMacSystemFont,
+$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
+$QLD-font-heading: $typographyMobileH1FontFamily, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol";
- 
+
  /**
   * QLD-fontsize-map
   *
@@ -57,7 +60,7 @@ $QLD-fontsize-map: (
 // Base font
 $base-font-scale: 1; // The font scale multiplier (e.g. 2 = 32px/2em/2rem)
 $base-font-pixel: 16; // Used for font size calculations & conversions
- 
+
 /**
   * QLD-maxwidth for line lengths (the ‘measure’)
   */
@@ -73,7 +76,7 @@ $QLD-font-size-desktop-md: 1.25rem;
 $QLD-font-size-desktop-lg: 1.5rem;
 $QLD-font-size-desktop-xl: 2rem;
 $QLD-font-size-desktop-xxl: 2.5rem;
-$QLD-font-size-desktop-xxxl: 3rem;
+$QLD-font-size-desktop-xxxl: $typographyDesktopH1FontSize;
 
 $QLD-font-size-mobile-xs: .875rem;
 $QLD-font-size-mobile-sm: 1rem;
@@ -82,10 +85,10 @@ $QLD-font-size-mobile-lg: 1.5rem;
 $QLD-font-size-mobile-xl: 1.75rem;
 $QLD-font-size-mobile-xxl: 2rem;
 $QLD-font-size-mobile-xxxl: 2.5rem;
- 
+
  /**
   * QLD-lineheight-map
-  * 
+  *
   * Predetermined lineheight mapped to keyword
   */
 
@@ -121,7 +124,7 @@ $QLD-lineheight-map: (
     13: 80,
     14: 96,
     15: 128,
-    16: 160 
+    16: 160
 ) !default;
 
 
@@ -133,7 +136,7 @@ $QLD-grid__gutter--media-md: 6;
 $QLD-grid__gutter--media-lg: 7;
 $QLD-grid__gutter--media-xl: 7;
 
-/** 
+/**
 Gutter - space between columns in the grid for vertical navigation
 */
 $QLD-grid__gutter--media-portal-lg: 6;
@@ -202,7 +205,7 @@ $QLD-margin__p--mobile: 4;
 
 /* Close spacing between list items */
 $QLD-margin__li-close--desktop: 2;
-$QLD-margin__li-close--mobile: 2; 
+$QLD-margin__li-close--mobile: 2;
 
 /* Wide spacing between list items */
 $QLD-margin__li-wide--desktop: 3;
@@ -220,18 +223,18 @@ $QLD-border-width-thin: 1px;
 $QLD-border-width-default: 2px;
 $QLD-border-width-medium: 3px;
 $QLD-border-width-thick: 4px;
-$QLD-border-width-extra-thick: 8px; 
+$QLD-border-width-extra-thick: 8px;
 
 
 /**
 * QLD border-radius values
 */
-$QLD-border-radius-xs: map-get( $QLD-space-map, 1 ) + px;
-$QLD-border-radius-sm: map-get( $QLD-space-map, 3 ) + px;
-$QLD-border-radius-md: map-get( $QLD-space-map, 4 ) + px;
-$QLD-border-radius-lg: map-get( $QLD-space-map, 7 ) + px;
-$QLD-border-radius-xl: map-get( $QLD-space-map, 9 ) + px;
-$QLD-border-radius-xxl: map-get( $QLD-space-map, 12 ) + px;
+$QLD-border-radius-xs: map.get( $QLD-space-map, 1 ) + px;
+$QLD-border-radius-sm: map.get( $QLD-space-map, 3 ) + px;
+$QLD-border-radius-md: map.get( $QLD-space-map, 4 ) + px;
+$QLD-border-radius-lg: map.get( $QLD-space-map, 7 ) + px;
+$QLD-border-radius-xl: map.get( $QLD-space-map, 9 ) + px;
+$QLD-border-radius-xxl: map.get( $QLD-space-map, 12 ) + px;
 
 /**
 * QLD underline-thickness values
@@ -262,19 +265,19 @@ $QLD-fixed-width__char-4: 6.125rem;
 $QLD-fixed-width__char-5: 7.125rem;
 $QLD-fixed-width__char-10: 12.1875rem;
 $QLD-fixed-width__char-20: 22.375rem;
-    
-/*  
-QLD form input DTA defaults 
+
+/*
+QLD form input DTA defaults
 */
-    
+
 $QLD-form-input__width-xs: 4.3rem;
 $QLD-form-input__width-sm: 6.3rem;
 $QLD-form-input__width-md: 10rem;
 $QLD-form-input__width-lg: 18rem;
 $QLD-form-input__width-xl: 24rem;
 
-/*  QLD 
-Fluid Widths 
+/*  QLD
+Fluid Widths
 */
 $QLD-fluid-width__full: 100%;
 $QLD-fluid-width__3-quarters: 75%;
@@ -321,102 +324,105 @@ $QLD-icon-search: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
 /**
   *  QLD-color-neutral  colours
   */
-$QLD-color-neutral--black:#131212;
-$QLD-color-neutral--darkest: #222020;
-$QLD-color-neutral--darker: #444444;
-$QLD-color-neutral--dark: #78797E;
-$QLD-color-neutral--light: #E0E0E0;
-$QLD-color-neutral--lighter: #EBEBEB;
-$QLD-color-neutral--lightest: #F5F5F5;
-$QLD-color-neutral--white: #FFFFFF;
+$QLD-color-neutral--black: $qgdsColorNeutralWhiteDefault;
+$QLD-color-neutral--darkest: $qgdsColorNeutralDarkestDefault;
+$QLD-color-neutral--darker: $qgdsColorNeutralDarkerDefault;
+$QLD-color-neutral--dark: $qgdsColorNeutralDarkDefault;
+$QLD-color-neutral--light: $qgdsColorNeutralLightDefault;
+$QLD-color-neutral--lighter: $qgdsColorNeutralLighterDefault;
+$QLD-color-neutral--lightest: $qgdsColorNeutralLightestDefault;
+$QLD-color-neutral--white: $qgdsColorNeutralWhiteDefault;
 
 /**
  QLD-color-neutral  opacity
 */
 
-$QLD-color-neutral--white__opacity-10: rgba(255, 255, 255, 0.10);
-$QLD-color-neutral--light__opacity-10: rgba(244, 244, 244, 0.10);
-$QLD-color-neutral--darkest__opacity-10: rgba(34, 32, 32, 0.10);
-$QLD-color-neutral--black__opacity-10: rgba(19, 18, 18, 0.10);
+$QLD-color-neutral--white__opacity-10: $qgdsColorNeutralWhiteOpacityLow;
+$QLD-color-neutral--light__opacity-10: $qgdsColorNeutralLightOpacityLow;
+$QLD-color-neutral--darkest__opacity-10: $qgdsColorNeutralDarkestOpacityLow;
+$QLD-color-neutral--black__opacity-10: $qgdsColorNeutralBlackOpacityLow;
 
 /**
   * QLD-color- status styles
   */
-$QLD-color-status__error: #E22339 !default;
-$QLD-color-status__error--lightest: #FFF6F6 !default;
-$QLD-color-status__error--lighter: #FDF0F0 !default;
-$QLD-color-status__error--darker: #8A1220 !default;
+$QLD-color-status__error: $themeColorReservedErrorDefault !default;
+$QLD-color-status__error--lightest: $themeColorReservedErrorLightest !default;
+$QLD-color-status__error--lighter: $themeColorReservedErrorLighter!default;
+$QLD-color-status__error--darker: $themeColorReservedErrorDarker !default;
 
-$QLD-color-status__success: #339D37 !default;
-$QLD-color-status__success--lightest: #F7FBF8 !default;
-$QLD-color-status__success--lighter: #F2FAF4 !default;
-$QLD-color-status__success--darker: #0A690D !default;
+$QLD-color-status__info: $themeColorReservedInformationDefault !default;
+$QLD-color-status__info--lightest: $themeColorReservedInformationLightest !default;
+$QLD-color-status__info--lighter: $themeColorReservedInformationLighter!default;
+$QLD-color-status__info--darker: $themeColorReservedInformationDarker !default;
 
-$QLD-color-status__caution: #FFCC2C !default;
-$QLD-color-status__caution--lightest: #FFFAEA !default;
-$QLD-color-status__caution--lighter: #FFF2C9 !default;
-$QLD-color-status__caution--darker: #B38800 !default;
+$QLD-color-status__success: $themeColorReservedSuccessDefault !default;
+$QLD-color-status__success--lightest: $themeColorReservedSuccessLightest !default;
+$QLD-color-status__success--lighter: $themeColorReservedSuccessLighter !default;
+$QLD-color-status__success--darker: $themeColorReservedSuccessDarker !default;
 
-$QLD-color-status__info: #0085B3 !default;
-$QLD-color-status__info--lighter: #E5EEF5 !default;
-$QLD-color-status__info--lightest: #EFF4F9 !default;
-$QLD-color-status__info--darker: #006A8F !default;
+$QLD-color-status__caution: $themeColorReservedAlertDefault !default;
+$QLD-color-status__caution--lightest: $themeColorReservedAlertLightest !default;
+$QLD-color-status__caution--lighter: $themeColorReservedAlertLighter !default;
+$QLD-color-status__caution--darker: $themeColorReservedAlertDarker !default;
+
 
  /**
   * QLD-color-light styles
   */
-$QLD-color-light__site-title: #022A50 !default;
-$QLD-color-light__design-accent:#6BBE27 !default;
-$QLD-color-light__heading: #04284C !default;
-$QLD-color-light__text: #414141 !default;
-$QLD-color-light__text--lighter:#636363 !default;
-$QLD-color-light__link: #09549F !default;
-$QLD-color-light__link--visited: #551A8B !default;
-$QLD-color-light__link--on-action: #FFFFFF !default;
-$QLD-color-light__action--primary: #09549F !default;
-$QLD-color-light__action--primary-hover:#003E7D !default;
-$QLD-color-light__action--secondary: #008733 !default;
-$QLD-color-light__action--secondary-hover: #005B23 !default;
-$QLD-color-light__focus: #0085B3 !default;
-$QLD-color-light__border: #CCDDEE !default;
-$QLD-color-light__background: #EFF4F9 !default;
-$QLD-color-light__background--shade: #E5EEF5 !default;
+$QLD-color-light__site-title: $paletteBrightTypographySiteTitleDefault !default;
+$QLD-color-light__design-accent:$paletteBrightAccentDefault !default;
+$QLD-color-light__design-on-accent:$paletteBrightAccentOnAccent !default;
+$QLD-color-light__heading: $paletteBrightTypographyHeadingDefault !default;
+$QLD-color-light__text: $paletteBrightTypographyBodyDefault !default;
+$QLD-color-light__text--lighter: $paletteBrightTypographyBodyVariant !default;
+$QLD-color-light__link: $paletteBrightActionLinkDefaultColor !default;
+$QLD-color-light__link--visited: $paletteBrightActionLinkVisitedColor !default;
+$QLD-color-light__link--on-action: $paletteBrightActionButtonPrimaryDefaultText !default;
+$QLD-color-light__action--primary: $paletteBrightActionButtonPrimaryDefaultBackground !default;
+$QLD-color-light__action--primary-hover: $paletteBrightActionButtonPrimaryHoverBackground !default;
+$QLD-color-light__action--secondary: $paletteBrightActionButtonSecondaryDefaultBorder !default;
+$QLD-color-light__action--secondary-hover: $paletteBrightActionButtonSecondaryHoverBorder !default;
+$QLD-color-light__focus: $paletteBrightFocusOutlineColor !default;
+$QLD-color-light__border: $paletteBrightBorderDefault !default;
+$QLD-color-light__background: $paletteBrightBackground !default;
+$QLD-color-light__background--shade: $paletteBrightShade !default;
 
 
  /**
   * QLD-color-light-alt styles
   */
 
-$QLD-color-light__border--alt: #7A7A7A !default; 
-$QLD-color-light__background--alt: #E8E8E8 !default;
-$QLD-color-light__background--alt-shade: #E0E0E0 !default;
+$QLD-color-light__border--alt: $paletteAltBorderDefault !default;
+$QLD-color-light__background--alt: $paletteAltBackground !default;
+$QLD-color-light__background--alt-shade: $paletteAltShade !default;
 
  /**
   * QLD-color-dark styles
   */
-$QLD-color-dark__site-title: #FFFFFF !default;
-$QLD-color-dark__design-accent:#6BBE27 !default;
-$QLD-color-dark__heading: #FFFFFF !default;
-$QLD-color-dark__text: #FFFFFF !default;
-$QLD-color-dark__text--lighter:#DEEBF9 !default;
-$QLD-color-dark__link: #FFFFFF !default;
-$QLD-color-dark__link--visited: #E1BBEE !default;
-$QLD-color-dark__link--on-action: #121940 !default;
-$QLD-color-dark__action--primary: #78BA00 !default;
-$QLD-color-dark__action--primary-hover:#ADD33F !default;
-$QLD-color-dark__action--secondary: #FFE500 !default;
-$QLD-color-dark__action--secondary-hover: #FFEF60 !default;
-$QLD-color-dark__focus: #01B0E5 !default;
-$QLD-color-dark__border: #1D9AC6 !default;
-$QLD-color-dark__background: #09549F !default;
-$QLD-color-dark__background--shade: #04498F !default;
+$QLD-color-dark__site-title: $paletteBoldTypographySiteTitleDefault !default;
+$QLD-color-dark__design-accent: $paletteBoldAccentDefault !default;
+$QLD-color-dark__design-on-accent:$paletteBoldAccentOnAccent !default;
+$QLD-color-dark__heading: $paletteBoldTypographyHeadingDefault !default;
+$QLD-color-dark__text: $paletteBoldTypographyBodyDefault !default;
+$QLD-color-dark__text--lighter: $paletteBoldTypographyBodyVariant !default;
+$QLD-color-dark__link: $paletteBoldActionLinkDefaultColor !default;
+$QLD-color-dark__link--visited: $paletteBoldActionLinkVisitedColor !default;
+$QLD-color-dark__link--on-action: $paletteBoldActionButtonPrimaryDefaultText !default;
+$QLD-color-dark__action--primary: $paletteBoldActionButtonPrimaryDefaultBackground !default;
+$QLD-color-dark__action--primary-hover: $paletteBoldActionButtonPrimaryHoverBackground !default;
+$QLD-color-dark__action--secondary: $paletteBoldActionButtonSecondaryDefaultBorder !default;
+$QLD-color-dark__action--secondary-hover: $paletteBoldActionButtonSecondaryHoverBorder !default;
+$QLD-color-dark__focus: $paletteBoldFocusOutlineColor !default;
+$QLD-color-dark__border: $paletteBoldBorderDefault !default;
+$QLD-color-dark__background: $paletteBoldBackground !default;
+$QLD-color-dark__background--shade: $paletteBoldShade !default;
 
  /**
   * QLD-color-alt-dark styles
   */
-$QLD-color-dark__border--alt: #09ACFE !default;
-$QLD-color-dark__background--alt: #05325F !default;
-$QLD-color-dark__background--alt-shade: #052C53 !default;
+$QLD-color-dark__border--alt: $paletteStrongBorderDefault !default;
+$QLD-color-dark__background--alt: $paletteStrongBackground !default;
+$QLD-color-dark__background--alt-shade: $paletteStrongShade !default;
 
 
  /**
@@ -427,20 +433,20 @@ $QLD-border-radius: $QLD-unit + 0px !default;
 /**
 * QLD underline-color values
 */
-$QLD-color-status__light-underline: rgba(255, 255, 255, 0.72) !default;
-$QLD-color-light__underline: #3F7AB4 !default;
-$QLD-color-light__underline--hover: #{$QLD-color-light__link} !default; 
-$QLD-color-light__underline--visited: #8B63B0 !default;
-$QLD-color-light__underline--hover-visited: #{$QLD-color-light__link--visited} !default;
+$QLD-color-status__light-underline: $transparencyWhiteMd !default;
+$QLD-color-light__underline: $paletteBrightActionLinkDefaultTextDecorationColor !default;
+$QLD-color-light__underline--hover: $paletteBrightActionLinkHoverTextDecorationColor !default;
+$QLD-color-light__underline--visited: $paletteBrightActionLinkVisitedTextDecorationColor !default;
+$QLD-color-light__underline--hover-visited: $paletteBrightActionLinkVisitedTextDecorationColor !default;
 $QLD-color-status__dark-underline: rgba(3, 33, 63, 0.72) !default;
-$QLD-color-dark__underline: #B5CCE2 !default;
-$QLD-color-dark__underline--hover: #{$QLD-color-dark__link} !default;
-$QLD-color-dark__underline--visited: #E1C2FF !default;
-$QLD-color-dark__underline--hover-visited: #{$QLD-color-dark__link--visited} !default;
+$QLD-color-dark__underline: $paletteBoldActionLinkDefaultTextDecorationColor !default;
+$QLD-color-dark__underline--hover: $paletteBoldActionLinkHoverTextDecorationColor !default;
+$QLD-color-dark__underline--visited: $paletteBoldActionLinkVisitedTextDecorationColor !default;
+$QLD-color-dark__underline--hover-visited: $paletteBoldActionLinkVisitedTextDecorationColor !default;
 
 
 /**
-* QLD Line height variables 
+* QLD Line height variables
 */
 
 $QLD-default-mobile-xs: 14px;
@@ -479,6 +485,7 @@ $QLD-color-contained-layout__background: #EFF4F9;
 ::before {
   --QLD-color-light__site-title: #{$QLD-color-light__site-title};
   --QLD-color-light__design-accent:#{$QLD-color-light__design-accent};
+  --QLD-color-light__design-on-accent:#{$QLD-color-light__design-on-accent};
   --QLD-color-light__heading: #{$QLD-color-light__heading};
   --QLD-color-light__text: #{$QLD-color-light__text};
   --QLD-color-light__text--lighter:#{$QLD-color-light__text--lighter};
@@ -498,12 +505,13 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-color-light__underline--hover-visited: #{$QLD-color-light__underline--hover-visited};
   --QLD-color-light__action--secondary: #{$QLD-color-light__action--secondary};
   --QLD-color-light__action--secondary-hover: #{$QLD-color-light__action--secondary-hover};
-  --QLD-color-light__border--alt: #{$QLD-color-light__border--alt}; 
+  --QLD-color-light__border--alt: #{$QLD-color-light__border--alt};
   --QLD-color-light__background--alt: #{$QLD-color-light__background--alt};
   --QLD-color-light__background--alt-shade: #{$QLD-color-light__background--alt-shade};
 
   --QLD-color-dark__site-title: #{$QLD-color-dark__site-title};
   --QLD-color-dark__design-accent:#{$QLD-color-dark__design-accent};
+  --QLD-color-dark__design-on-accent:#{$QLD-color-dark__design-on-accent};
   --QLD-color-dark__heading: #{$QLD-color-dark__heading};
   --QLD-color-dark__text: #{$QLD-color-dark__text};
   --QLD-color-dark__text--lighter: #{$QLD-color-dark__text--lighter};
@@ -546,7 +554,7 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-border-width-thick: #{$QLD-border-width-thick};
   --QLD-border-width-extra-thick: #{$QLD-border-width-extra-thick};
 
-  
+
   --QLD-default-mobile-xs: #{$QLD-default-mobile-xs};
   --QLD-default-mobile-sm: #{$QLD-default-mobile-sm};
   --QLD-default-mobile-md: #{$QLD-default-mobile-md};
@@ -572,3 +580,8 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-heading-space-xxxl: #{$QLD-heading-space-xxxl};
   --QLD-color-contained-layout__background: #{$QLD-color-contained-layout__background};
 }
+
+/*
+@import "@qld-gov-au/qgds-tokens/dist/css/styles/qgds-qld-high-contrast-palette.css";
+@import "@qld-gov-au/qgds-tokens/dist/css/styles/qgds.css";
+*/

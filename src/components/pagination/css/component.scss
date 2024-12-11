@@ -58,11 +58,11 @@
                     @include QLD-media(lg) {
                         width: auto;
                     }
-                    
+
                     &:hover{
                         span {
                             text-decoration: underline;
-                        }  
+                        }
                     }
 
                     &:active,
@@ -70,7 +70,7 @@
                         text-decoration: underline;
                     }
                 }
-                
+
                 span{
                     @include QLD-sronly();
                     @include QLD-media(lg) {
@@ -117,7 +117,7 @@
             background-color: transparent;
             border-radius: $QLD-border-radius-xs;
             color: var(--QLD-color-light__link);
-            background-color: $QLD-color-neutral--white;
+            background-color: var(--QLD-color-light__background);
             display: inline-flex;
             justify-content: center;
             @include QLD-space(line-height, 1.25unit);
@@ -166,7 +166,7 @@
                     background-color: var(--QLD-color-dark__action--primary-hover);
                     // border-color: var(--QLD-color-dark__action--primary-hover);
                     box-shadow: inset 0 0 0 $QLD-border-width-thin var(--QLD-color-dark__action--primary-hover);
-                    
+
                 }
             }
 
@@ -215,5 +215,5 @@
             color: var(--QLD-color-dark__link);
         }
     }
-        
+
 }
