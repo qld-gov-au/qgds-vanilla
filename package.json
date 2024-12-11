@@ -12,7 +12,7 @@
     "config": "node .esbuild/helpers/config.js",
     "prepare": "npm run config && npm run build",
     "build": "node esbuild.js",
-    "lint": "eslint . --fix",
+    "lint": "npm run lint:js && npm run lint:styles",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
     "watch": "node esbuild.js --watch",
@@ -24,8 +24,7 @@
     "build-storybook": "storybook build --webpack-stats-json ",
     "package-docs": "npm run build-storybook && rm -rf docs/storybook && mv storybook-static docs/storybook",
     "lint:js": "eslint \"./src/**/*.js\"",
-    "lint:styles": "stylelint \"./src/**/*.css\" \"./src/**/*.scss\" \"!./src/**/*.min.css\" \"!./src/**/custom.css\"",
-    "lint": "npm run lint:js && npm run lint:styles"
+    "lint:styles": "stylelint \"./src/**/*.css\" \"./src/**/*.scss\" \"!./src/**/*.min.css\" \"!./src/**/custom.css\""
   },
   "keywords": [],
   "author": "",
@@ -70,6 +69,8 @@
     "globals": "^15.13.0",
     "handlebars": "^4.7.8",
     "jsdoc": "^4.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "sass": "^1.82.0",
     "stylelint": "^15.9.0",
     "stylelint-config-standard": "^33.0.0",
