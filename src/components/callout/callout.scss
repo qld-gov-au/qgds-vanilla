@@ -1,0 +1,134 @@
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Callout
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+.qld__callout {
+    --default-spacing: 1rem;
+    // @include QLD-space(padding, 1.5unit 1unit 1.5unit 1.5unit);
+    padding: calc(var(--default-spacing) * 1.5);
+    padding-inline-end: var(--default-spacing);
+    word-wrap: break-word;
+    background-color: var(--QLD-color-light__background--shade);
+    color: var(--QLD-color-light__text);
+    border-inline-start: var(--QLD-border-width-thick) solid var(--QLD-color-light__design-accent);
+    @include QLD-space(max-width, $QLD-font-maxwidth);
+
+    & &__heading{
+        margin: 0;
+        color: var(--QLD-color-light__heading);
+
+        &.qld__callout__heading--sronly {
+            @include QLD-sronly();
+
+            & + * {
+                margin-block-start: 0;
+            }
+        }
+    }
+
+    p {
+	    margin: 0;
+	}
+
+    a{
+        color: var(--QLD-color-light__link);
+        &:hover{
+            color: var(--QLD-color-light__link);
+        }
+    }
+
+    * + p {
+        margin-block-start: var(--default-spacing);
+	    // @include QLD-space( margin-block-start, 1unit );
+	}
+
+    #content > &{
+        margin-block-start:0;
+        // @include QLD-space( margin-block-start, 0unit );
+    }
+
+    * + & {
+        margin-block-start: calc(var(--default-spacing) * 1.5);
+	    // @include QLD-space( margin-block-start, 1.5unit );
+        @include QLD-media(lg) {
+            margin-block-start: calc(var(--default-spacing) * 2);
+            // @include QLD-space( margin-block-start, 2unit );
+        }
+	}
+
+    // Visual treatment for paragraphs following callout
+	& + p {
+        margin-block-start: calc(var(--default-spacing) * 2);
+	    // @include QLD-space( margin-block-start, 2unit );
+	}
+
+    //Event callout
+    &--calendar-event{
+        .qld__callout--calendar-event__lede {
+            @include QLD-fontgrid( sm, nospace );
+            margin: 0;
+        }
+
+        .qld__callout--calendar-event__time,
+        .qld__callout--calendar-event__name {
+            @include QLD-fontgrid( xl, heading );
+        }
+
+        .qld__callout--calendar-event__time {
+            font-weight: var(--font-weight-bold); //bold;
+        }
+
+        .qld__callout--calendar-event__lede,
+        .qld__callout--calendar-event__time,
+        .qld__callout--calendar-event__name {
+            display: block; // overrides body, depending on markup (eg. using `p`).
+        }
+
+        * + .qld__callout--calendar-event__time,
+        * + .qld__callout--calendar-event__name,
+        * + .qld__callout--calendar-event__lede {
+            color: var(--font-colour);
+            margin-block-start:calc(var(--default-spacing) * 0.5);
+            //@include QLD-space( margin-block-start, 0.5unit ); // overrides body, to allow for var. text markup.
+        }
+    }
+
+    &--light,
+    .qld__body--light & {
+        --none:0; // Place holder as this and default are the same
+	}
+
+    &--alt,
+    .qld__body--alt & {
+        --QLD-color-light__background--shade: var(--QLD-color-light__background--alt-shade);
+	}
+
+    &--dark,
+    .qld__body--dark & {
+        --QLD-color-light__design-accent: var(--QLD-color-dark__design-accent);
+        --QLD-color-light__background--shade: var(--QLD-color-dark__background--shade);
+        --QLD-color-light__text: var(--QLD-color-dark__text);
+        --QLD-color-light__heading: var(--QLD-color-dark__heading);
+        --QLD-color-light__link: var(--QLD-color-dark__link);
+        --QLD-color-light__link: var(--QLD-color-dark__text);
+    }
+
+    &--dark-alt,
+    .qld__body--dark-alt & {
+        --QLD-color-light__design-accent: var(--QLD-color-dark__design-accent);
+        --QLD-color-light__background--shade: var(--QLD-color-dark__background--alt-shade);
+        --QLD-color-light__text: var(--QLD-color-dark__text);
+        --QLD-color-light__heading: var(--QLD-color-dark__heading);
+        --QLD-color-light__link: var(--QLD-color-dark__link);
+        --QLD-color-light__link: var(--QLD-color-dark__text);
+    }
+}
+
+// Print styles
+@media print {
+	.qld__callout {
+        --QLD-color-light__text: var(--color-black);
+        --QLD-color-light__design-accent: var(--color-black);
+        --QLD-border-width-thick: var(--QLD-border-width-thick); //This need to be converted to pt
+	}
+}

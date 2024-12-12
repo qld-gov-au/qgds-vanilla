@@ -4,13 +4,15 @@
  * @module callout.stories
  */
 
-import example1 from "../html/example1.json";
-import example1template from "./../html/example1.test.hbs?raw";
-
+// import example1 from "../html/example1.json";
+// import example1template from "./../html/example1.test.hbs?raw";
+import callout from "./callout.data.json";
+import calloutTemplate from "./callout.test.hbs?raw";
 
 // load helpers handlebars
 import Handlebars from "handlebars";
-import handlebarsInit from "../../../helpers/handlebars.init.js";
+import handlebarsInit from "../../helpers/handlebars.init.js";
+// import handlebarsInit from "../../../helpers/handlebars.init.js";
 
 
 export default {
@@ -18,13 +20,13 @@ export default {
     render: ( args) => {
         handlebarsInit(Handlebars)
         try {
-            return Handlebars.compile(example1template)(args)
+            return Handlebars.compile(calloutTemplate)(args)
         } catch (e) {
             console.log(e)
             return JSON.stringify(e) + JSON.stringify(args);
         }
     },
-    args: example1,
+    args: callout,
 
 
     /**
@@ -47,10 +49,11 @@ export default {
                 name: "QGDS Figma Reference",
                 type: "figma",
                 url: "https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=7229-112138",
-            },{
-            name: "dark xl",
-            type: "figma",
-            url: "https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=10865-242473",
+            },
+            {
+                name: "dark xl",
+                type: "figma",
+                url: "https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=10865-242473",
         }],
     },
 };
