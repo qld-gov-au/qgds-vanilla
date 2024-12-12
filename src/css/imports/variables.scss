@@ -14,11 +14,11 @@ $QLD-pixelfallback: true !default;
  /**
   * QLD-media Breakpoints
   */
-$QLD-media-sm: 400px;
-$QLD-media-md: 699px;
-$QLD-media-lg: 992px;
-$QLD-media-xl: 1312px;
-$QLD-media-xxl: 1599px;
+$QLD-media-sm: $qgdsMediaQuerySm; //400px
+$QLD-media-md: $qgdsMediaQueryMd; //699px
+$QLD-media-lg: $qgdsMediaQueryLg; //992px
+$QLD-media-xl: $qgdsMediaQueryXl; //1312px
+$QLD-media-xxl: $qgdsMediaQueryXxl; //1599px
 $QLD-main-nav-breakpoint: lg;
 
  /**
@@ -45,16 +45,16 @@ $QLD-font-heading: $typographyMobileH1FontFamily, -apple-system, BlinkMacSystemF
  /**
   * QLD-fontsize-map
   *
-  * Predetermined pixel sizes from a 1.25 typescale rounded to the nearest $QLD-unit (vertical grid)
+  * Predetermined pixel sizes
   */
 $QLD-fontsize-map: (
-    xs:   14,
-    sm:   16,
-    md:   20,
-    lg:   24,
-    xl:   32,
-    xxl:  40,
-    xxxl: 52
+    xs:   $qgdsFontSizeMapDesktopXs,
+    sm:   $qgdsFontSizeMapDesktopSm,
+    md:   $qgdsFontSizeMapDesktopMd,
+    lg:   $qgdsFontSizeMapDesktopLg,
+    xl:   $qgdsFontSizeMapDesktopXxl,
+    xxl:  $qgdsFontSizeMapDesktopXxxl,
+    xxxl: $qgdsFontSizeMapDesktopXxxxl
 ) !default;
 
 // Base font
@@ -68,23 +68,23 @@ $base-font-pixel: 16; // Used for font size calculations & conversions
 
   /**
   * QLD typography sizes
-  *
   */
-$QLD-font-size-desktop-xs: .875rem;
-$QLD-font-size-desktop-sm: 1rem;
-$QLD-font-size-desktop-md: 1.25rem;
-$QLD-font-size-desktop-lg: 1.5rem;
-$QLD-font-size-desktop-xl: 2rem;
-$QLD-font-size-desktop-xxl: 2.5rem;
-$QLD-font-size-desktop-xxxl: $typographyDesktopH1FontSize;
 
-$QLD-font-size-mobile-xs: .875rem;
-$QLD-font-size-mobile-sm: 1rem;
-$QLD-font-size-mobile-md: 1.25rem;
-$QLD-font-size-mobile-lg: 1.5rem;
-$QLD-font-size-mobile-xl: 1.75rem;
-$QLD-font-size-mobile-xxl: 2rem;
-$QLD-font-size-mobile-xxxl: 2.5rem;
+$QLD-font-size-desktop-xs: $typographyDesktopSmFontSize; //12.18px
+$QLD-font-size-desktop-sm: $typographyDesktopBodyFontSize; //16px
+$QLD-font-size-desktop-md: $typographyDesktopH5FontSize; //19.2px
+$QLD-font-size-desktop-lg: $typographyDesktopH4FontSize; //23.04px
+$QLD-font-size-desktop-xl: $typographyDesktopH3FontSize; //27.648px
+$QLD-font-size-desktop-xxl: $typographyDesktopH2FontSize; //33.1776px
+$QLD-font-size-desktop-xxxl: $typographyDesktopH1FontSize; //39.8131px
+
+$QLD-font-size-mobile-xs: $typographyMobileSmFontSize; //12.18px
+$QLD-font-size-mobile-sm: $typographyMobileBodyFontSize; //16px
+$QLD-font-size-mobile-md: $typographyMobileH5FontSize; //19.2px
+$QLD-font-size-mobile-lg: $typographyMobileH4FontSize; //23.04px
+$QLD-font-size-mobile-xl: $typographyMobileH3FontSize; //27.648px
+$QLD-font-size-mobile-xxl: $typographyMobileH2FontSize; //33.1776px
+$QLD-font-size-mobile-xxxl: $typographyMobileH1FontSize; //39.8131px
 
  /**
   * QLD-lineheight-map
@@ -108,10 +108,10 @@ $QLD-lineheight-map: (
   * Predetermined standard spacing mapped to keyword
   */
   $QLD-space-map: (
-    0: 0,
-    1: 4,
-    2: 8,
-    3: 12,
+    0: $spacing0,
+    1: $spacing1,
+    2: $spacing2,
+    3: $spacing3,
     4: 16,
     5: 20,
     6: 24,
@@ -127,36 +127,32 @@ $QLD-lineheight-map: (
     16: 160
 ) !default;
 
-
-
-
 /* Gutters - Space between cols in the grid  */
 $QLD-grid__gutter--media-sm: 4;
 $QLD-grid__gutter--media-md: 6;
 $QLD-grid__gutter--media-lg: 7;
-$QLD-grid__gutter--media-xl: 7;
+$QLD-grid__gutter--media-xl: 7; // not used
 
 /**
 Gutter - space between columns in the grid for vertical navigation
 */
-$QLD-grid__gutter--media-portal-lg: 6;
-$QLD-grid__gutter--media-portal-xl: 7;
+$QLD-grid__gutter--media-portal-lg: 6; // not used
+$QLD-grid__gutter--media-portal-xl: 7; // not used
 
 /* Outer page margins (defined by padding on the container-fluid class)  */
 $QLD-grid__inner-padding--media-xs: 4;
-$QLD-grid__inner-padding--media-sm: 4;
-$QLD-grid__inner-padding--media-md: 7;
+$QLD-grid__inner-padding--media-sm: 4; // not used
+$QLD-grid__inner-padding--media-md: 7; // not used
 $QLD-grid__inner-padding--media-lg: 7;
-$QLD-grid__inner-padding--media-xl: 7;
+$QLD-grid__inner-padding--media-xl: 7; // not used
 
 /* Outer page margins (defined by padding on the container-fluid class) for vertical navigation   */
-$QLD-grid__inner-padding--media-portal-lg: calc(48px + (100vw - 992px) * (128 - 48) / (1312 - 992));
-$QLD-grid__inner-padding--media-portal-xl: calc(72px + (100vw - 1312px) *(128 - 72) / (1600 - 1312));
+$QLD-grid__inner-padding--media-portal-lg: calc(48px + (100vw - 992px) * (128 - 48) / (1312 - 992)); // not used
+$QLD-grid__inner-padding--media-portal-xl: calc(72px + (100vw - 1312px) *(128 - 72) / (1600 - 1312)); // not used
 
 
 /* Max-width of content area   */
 $QLD-grid__maxwidth: 86rem;
-
 
 /*** Padding values for sections - ony veritcal spacing value that does not use margin top*/
 $QLD-padding__section--mobile: 9;
@@ -166,7 +162,6 @@ $QLD-padding__section--desktop: 12;
 /* Spacing between <section> containers */
 $QLD-margin__section--desktop: 12;
 $QLD-margin__section--mobile: 9;
-
 
 /* Spacing beteen content containers, ie div within a <section> */
 $QLD-margin__content-block--desktop: 10;
@@ -384,6 +379,7 @@ $QLD-color-light__action--secondary: $paletteBrightActionButtonSecondaryDefaultB
 $QLD-color-light__action--secondary-hover: $paletteBrightActionButtonSecondaryHoverBorder !default;
 $QLD-color-light__focus: $paletteBrightFocusOutlineColor !default;
 $QLD-color-light__border: $paletteBrightBorderDefault !default;
+$QLD-color-light__border--variant: $paletteBrightBorderVariant !default;
 $QLD-color-light__background: $paletteBrightBackground !default;
 $QLD-color-light__background--shade: $paletteBrightShade !default;
 
@@ -414,6 +410,7 @@ $QLD-color-dark__action--secondary: $paletteBoldActionButtonSecondaryDefaultBord
 $QLD-color-dark__action--secondary-hover: $paletteBoldActionButtonSecondaryHoverBorder !default;
 $QLD-color-dark__focus: $paletteBoldFocusOutlineColor !default;
 $QLD-color-dark__border: $paletteBoldBorderDefault !default;
+$QLD-color-dark__border--variant: $paletteBoldBorderVariant !default;
 $QLD-color-dark__background: $paletteBoldBackground !default;
 $QLD-color-dark__background--shade: $paletteBoldShade !default;
 
@@ -438,7 +435,8 @@ $QLD-color-light__underline: $paletteBrightActionLinkDefaultTextDecorationColor 
 $QLD-color-light__underline--hover: $paletteBrightActionLinkHoverTextDecorationColor !default;
 $QLD-color-light__underline--visited: $paletteBrightActionLinkVisitedTextDecorationColor !default;
 $QLD-color-light__underline--hover-visited: $paletteBrightActionLinkVisitedTextDecorationColor !default;
-$QLD-color-status__dark-underline: rgba(3, 33, 63, 0.72) !default;
+
+$QLD-color-status__dark-underline: $transparencyBlackMd !default;
 $QLD-color-dark__underline: $paletteBoldActionLinkDefaultTextDecorationColor !default;
 $QLD-color-dark__underline--hover: $paletteBoldActionLinkHoverTextDecorationColor !default;
 $QLD-color-dark__underline--visited: $paletteBoldActionLinkVisitedTextDecorationColor !default;
@@ -496,6 +494,7 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-color-light__action--primary-hover: #{$QLD-color-light__action--primary-hover};
   --QLD-color-light__focus: #{$QLD-color-light__focus};
   --QLD-color-light__border: #{$QLD-color-light__border};
+  --QLD-color-light__border--variant: #{$QLD-color-light__border--variant};
   --QLD-color-light__background: #{$QLD-color-light__background};
   --QLD-color-light__background--shade: #{$QLD-color-light__background--shade};
   --QLD-color-status__light-underline: #{$QLD-color-status__light-underline};
@@ -522,6 +521,7 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-color-dark__action--primary-hover: #{$QLD-color-dark__action--primary-hover};
   --QLD-color-dark__focus: #{$QLD-color-dark__focus};
   --QLD-color-dark__border: #{$QLD-color-dark__border};
+  --QLD-color-dark__border--variant: #{$QLD-color-dark__border--variant};
   --QLD-color-dark__background: #{$QLD-color-dark__background};
   --QLD-color-dark__background--shade: #{$QLD-color-dark__background--shade};
   --QLD-color-status__dark-underline: #{$QLD-color-status__dark-underline};
