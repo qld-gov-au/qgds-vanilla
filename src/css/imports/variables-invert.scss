@@ -13,11 +13,11 @@ $QLD-pixelfallback: true !default;
  /**
   * QLD-media Breakpoints
   */
-$QLD-media-sm: 400px;
-$QLD-media-md: 699px;
-$QLD-media-lg: 992px;
-$QLD-media-xl: 1312px;
-$QLD-media-xxl: 1599px;
+$QLD-media-sm: $qgdsMediaQuerySm; //400px
+$QLD-media-md: $qgdsMediaQueryMd; //699px
+$QLD-media-lg: $qgdsMediaQueryLg; //992px
+$QLD-media-xl: $qgdsMediaQueryXl; //1312px
+$QLD-media-xxl: $qgdsMediaQueryXxl; //1599px
 $QLD-main-nav-breakpoint: lg;
 
  /**
@@ -44,16 +44,16 @@ $QLD-font-heading: $typographyMobileH1FontFamily, -apple-system, BlinkMacSystemF
  /**
   * QLD-fontsize-map
   *
-  * Predetermined pixel sizes from a 1.25 typescale rounded to the nearest $QLD-unit (vertical grid)
+  * Predetermined pixel sizes
   */
 $QLD-fontsize-map: (
-    xs:   14,
-    sm:   16,
-    md:   20,
-    lg:   24,
-    xl:   32,
-    xxl:  40,
-    xxxl: 52
+    xs:   $qgdsFontSizeMapDesktopXs,
+    sm:   $qgdsFontSizeMapDesktopSm,
+    md:   $qgdsFontSizeMapDesktopMd,
+    lg:   $qgdsFontSizeMapDesktopLg,
+    xl:   $qgdsFontSizeMapDesktopXxl,
+    xxl:  $qgdsFontSizeMapDesktopXxxl,
+    xxxl: $qgdsFontSizeMapDesktopXxxxl
 ) !default;
 
 // Base font
@@ -67,23 +67,23 @@ $base-font-pixel: 16; // Used for font size calculations & conversions
 
   /**
   * QLD typography sizes
-  *
   */
-$QLD-font-size-desktop-xs: .875rem;
-$QLD-font-size-desktop-sm: 1rem;
-$QLD-font-size-desktop-md: 1.25rem;
-$QLD-font-size-desktop-lg: 1.5rem;
-$QLD-font-size-desktop-xl: 2rem;
-$QLD-font-size-desktop-xxl: 2.5rem;
-$QLD-font-size-desktop-xxxl: 3rem;
 
-$QLD-font-size-mobile-xs: .875rem;
-$QLD-font-size-mobile-sm: 1rem;
-$QLD-font-size-mobile-md: 1.25rem;
-$QLD-font-size-mobile-lg: 1.5rem;
-$QLD-font-size-mobile-xl: 1.75rem;
-$QLD-font-size-mobile-xxl: 2rem;
-$QLD-font-size-mobile-xxxl: 2.5rem;
+$QLD-font-size-desktop-xs: $typographyDesktopSmFontSize; //12.18px
+$QLD-font-size-desktop-sm: $typographyDesktopBodyFontSize; //16px
+$QLD-font-size-desktop-md: $typographyDesktopH5FontSize; //19.2px
+$QLD-font-size-desktop-lg: $typographyDesktopH4FontSize; //23.04px
+$QLD-font-size-desktop-xl: $typographyDesktopH3FontSize; //27.648px
+$QLD-font-size-desktop-xxl: $typographyDesktopH2FontSize; //33.1776px
+$QLD-font-size-desktop-xxxl: $typographyDesktopH1FontSize; //39.8131px
+
+$QLD-font-size-mobile-xs: $typographyMobileSmFontSize; //12.18px
+$QLD-font-size-mobile-sm: $typographyMobileBodyFontSize; //16px
+$QLD-font-size-mobile-md: $typographyMobileH5FontSize; //19.2px
+$QLD-font-size-mobile-lg: $typographyMobileH4FontSize; //23.04px
+$QLD-font-size-mobile-xl: $typographyMobileH3FontSize; //27.648px
+$QLD-font-size-mobile-xxl: $typographyMobileH2FontSize; //33.1776px
+$QLD-font-size-mobile-xxxl: $typographyMobileH1FontSize; //39.8131px
 
  /**
   * QLD-lineheight-map

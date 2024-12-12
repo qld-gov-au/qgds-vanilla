@@ -155,11 +155,11 @@ table {
     }
 
     .qld__table__cell-left-border {
-        border-left: 1px solid $QLD-color-neutral--lighter;
+        border-left: 1px solid var(--QLD-color-light__border);
     }
 
     .qld__table__cell-right-border {
-        border-right: 1px solid $QLD-color-neutral--lighter;
+        border-right: 1px solid var(--QLD-color-light__border);
     }
 
     &.qld__table__col-1-left-border tr td:nth-child(1),
@@ -172,7 +172,7 @@ table {
     &.qld__table__col-8-left-border tr td:nth-child(8),
     &.qld__table__col-9-left-border tr td:nth-child(9),
     &.qld__table__col-10-left-border tr td:nth-child(10) {
-        border-left: 1px solid $QLD-color-neutral--lighter;
+        border-left: 1px solid var(--QLD-color-light__border);
     }
 
     &.qld__table__col-1-right-border tr td:nth-child(1),
@@ -185,7 +185,7 @@ table {
     &.qld__table__col-8-right-border tr td:nth-child(8),
     &.qld__table__col-9-right-border tr td:nth-child(9),
     &.qld__table__col-10-right-border tr td:nth-child(10) {
-        border-right: 1px solid $QLD-color-neutral--lighter;
+        border-right: 1px solid var(--QLD-color-light__border);
     }
 
     .qld__body--dark &,
@@ -322,7 +322,7 @@ table {
 .qld__table--contained {
     width: 100%;
     overflow: auto;
-    border: 1px solid $QLD-color-neutral--lighter;
+    border: 1px solid var(--QLD-color-light__border);
 
     .qld__body--dark &,
     .qld__body--dark-alt & {
@@ -331,7 +331,7 @@ table {
 }
 
 .qld__table--scroll {
-    border: 1px solid $QLD-color-neutral--lighter;
+    border: 1px solid var(--QLD-color-light__border);
     border-radius: $QLD-border-radius-sm;
     max-height: 640px;
     /* Max height for mobile devices based on average available screen space on mobile devices */
