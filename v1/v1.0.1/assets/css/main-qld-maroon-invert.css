@@ -1,59 +1,59 @@
 @charset "UTF-8";
 
-/* src/css/main-qld-corporate.scss */
+/* src/css/main-qld-maroon-invert.scss */
 :root,
 ::after,
 ::before {
-  --QLD-color-light__site-title: #001028;
-  --QLD-color-light__design-accent:#c48c33;
-  --QLD-color-light__design-on-accent:#a06a00;
-  --QLD-color-light__heading: #001028;
-  --QLD-color-light__text: #444444;
-  --QLD-color-light__text--lighter:#606060;
-  --QLD-color-light__link: #315870;
+  --QLD-color-light__site-title: #ffffff;
+  --QLD-color-light__design-accent: #9a0037;
+  --QLD-color-light__design-on-accent: #d87085;
+  --QLD-color-light__heading: #ffffff;
+  --QLD-color-light__text: #ffffff;
+  --QLD-color-light__text--lighter: #fafafa;
+  --QLD-color-light__link: #ffffff;
   --QLD-color-light__link--visited: #551a8b;
-  --QLD-color-light__link--on-action: #ffffff;
-  --QLD-color-light__action--primary: #c48c33;
-  --QLD-color-light__action--primary-hover: #a06a00;
-  --QLD-color-light__focus: #0085b3;
-  --QLD-color-light__border: #e5e5e5;
-  --QLD-color-light__background: #ffffff;
-  --QLD-color-light__background--shade: #f5f5f5;
+  --QLD-color-light__link--on-action: #430001;
+  --QLD-color-light__action--primary: #ffffff;
+  --QLD-color-light__action--primary-hover: #f9dbdf;
+  --QLD-color-light__focus: #a7e5ff;
+  --QLD-color-light__border: #e594a2;
+  --QLD-color-light__background: #232323;
+  --QLD-color-light__background--shade: #141414;
   --QLD-color-status__light-underline: rgba(255, 255, 255, 0.72);
-  --QLD-color-light__underline: rgba(49, 88, 112, 0.8);
-  --QLD-color-light__underline--hover: rgba(49, 88, 112, 0.8);
+  --QLD-color-light__underline: rgba(255, 255, 255, 0.8);
+  --QLD-color-light__underline--hover: rgba(255, 255, 255, 0.8);
   --QLD-color-light__underline--visited: rgba(85, 26, 139, 0.8);
   --QLD-color-light__underline--hover-visited: rgba(85, 26, 139, 0.8);
-  --QLD-color-light__action--secondary: #c48c33;
-  --QLD-color-light__action--secondary-hover: #a06a00;
-  --QLD-color-light__border--alt: #e2c59e;
-  --QLD-color-light__background--alt: #f9f3ec;
-  --QLD-color-light__background--alt-shade: #f6ecdf;
+  --QLD-color-light__action--secondary: #ffffff;
+  --QLD-color-light__action--secondary-hover: #f9dbdf;
+  --QLD-color-light__border--alt: #606060;
+  --QLD-color-light__background--alt: #b80b4d;
+  --QLD-color-light__background--alt-shade: #9a0037;
   --QLD-color-dark__site-title: #ffffff;
-  --QLD-color-dark__design-accent:#c48c33;
-  --QLD-color-dark__design-on-accent:#d9b27e;
+  --QLD-color-dark__design-accent: #9a0037;
+  --QLD-color-dark__design-on-accent:#d87085;
   --QLD-color-dark__heading: #ffffff;
   --QLD-color-dark__text: #ffffff;
-  --QLD-color-dark__text--lighter: #b5b5b5;
+  --QLD-color-dark__text--lighter: #fafafa;
   --QLD-color-dark__link: #ffffff;
   --QLD-color-dark__link--visited: #551a8b;
-  --QLD-color-dark__link--on-action: #00041b;
-  --QLD-color-dark__action--primary: #c48c33;
-  --QLD-color-dark__action--primary-hover: #ce9f5b;
+  --QLD-color-dark__link--on-action: #430001;
+  --QLD-color-dark__action--primary: #ffffff;
+  --QLD-color-dark__action--primary-hover: #f9dbdf;
   --QLD-color-dark__focus: #a7e5ff;
-  --QLD-color-dark__border: #a06a00;
-  --QLD-color-dark__background: #023a55;
-  --QLD-color-dark__background--shade: #002c46;
+  --QLD-color-dark__border: #606060;
+  --QLD-color-dark__background: #000c19;
+  --QLD-color-dark__background--shade: #000510;
   --QLD-color-status__dark-underline: rgba(3, 33, 63, 0.72);
   --QLD-color-dark__underline: rgba(255, 255, 255, 0.8);
   --QLD-color-dark__underline--hover: rgba(255, 255, 255, 0.8);
   --QLD-color-dark__underline--visited: rgba(85, 26, 139, 0.8);
   --QLD-color-dark__underline--hover-visited: rgba(85, 26, 139, 0.8);
-  --QLD-color-dark__action--secondary: #c48c33;
-  --QLD-color-dark__action--secondary-hover: #ce9f5b;
-  --QLD-color-dark__border--alt: #7c4900;
-  --QLD-color-dark__background--alt: #011c2a;
-  --QLD-color-dark__background--alt-shade: #001421;
+  --QLD-color-dark__action--secondary: #ffffff;
+  --QLD-color-dark__action--secondary-hover: #f9dbdf;
+  --QLD-color-dark__border--alt: #606060;
+  --QLD-color-dark__background--alt: #000c19;
+  --QLD-color-dark__background--alt-shade: #000510;
   --QLD-underline__thickness-thin: 0.5px;
   --QLD-underline__thickness-thick: 2px;
   --QLD-underline__offset: 0.3em;
@@ -14688,7 +14688,7 @@ select:focus {
 .qld__body--light .sq-form-question-datetime select,
 .qld__body--light .qld__select,
 .qld__body--light select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23c48c33' d='M4.251 181.1C7.392 177.7 11.69 175.1 16 175.1c3.891 0 7.781 1.406 10.86 4.25l197.1 181.1l197.1-181.1c6.5-6 16.64-5.625 22.61 .9062c6 6.5 5.594 16.59-.8906 22.59l-208 192c-6.156 5.688-15.56 5.688-21.72 0l-208-192C-1.343 197.7-1.749 187.6 4.251 181.1z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='%23ffffff' d='M4.251 181.1C7.392 177.7 11.69 175.1 16 175.1c3.891 0 7.781 1.406 10.86 4.25l197.1 181.1l197.1-181.1c6.5-6 16.64-5.625 22.61 .9062c6 6.5 5.594 16.59-.8906 22.59l-208 192c-6.156 5.688-15.56 5.688-21.72 0l-208-192C-1.343 197.7-1.749 187.6 4.251 181.1z'/%3E%3C/svg%3E");
 }
 .qld__body--dark .qld__form-style-filled .sq-form-question-select select,
 .qld__body--dark .qld__form-style-filled .sq-form-question-datetime select,
@@ -14699,7 +14699,7 @@ select:focus {
   background-color: var(--QLD-color-dark__background--shade);
   border-color: var(--QLD-color-dark__border--alt);
   color: var(--QLD-color-dark__text);
-  background-image: url("data:image/svg+xml,%3Csvg fill='%23c48c33' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E%3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E%3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E%3C/svg%3E");
 }
 .qld__body--dark .qld__form-style-filled .sq-form-question-select select:hover:not(:focus),
 .qld__body--dark .qld__form-style-filled .sq-form-question-datetime select:hover:not(:focus),
@@ -14829,7 +14829,7 @@ select:focus {
   background-color: var(--QLD-color-dark__background--shade);
   border-color: var(--QLD-color-dark__border--alt);
   color: var(--QLD-color-dark__text);
-  background-image: url("data:image/svg+xml,%3Csvg fill='%23c48c33' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E%3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg fill='%23ffffff' width='1.5em' height='auto' viewBox='0 0 28 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.9 1.1L8 7.2l6.1-6.1L16 2.9l-8 8-8-8 1.9-1.8z'/%3E%3Cpath fill='none' d='M2-5.8h24v24H2v-24z'/%3E%3C/svg%3E");
 }
 .qld__form-style-filled .sq-form-question-select select.qld__text-input--valid,
 .qld__form-style-filled .sq-form-question-datetime select.qld__text-input--valid,
@@ -19769,7 +19769,7 @@ div.sq-form-question-error select:not(:focus) {
   .qld__card .qld__display-xxxl,
   .qld__banner .qld__display-xxxl,
   .qld__main-nav .qld__display-xxxl {
-    font-size: 39.8131px;
+    font-size: 3rem;
   }
 }
 .qld__header .qld__display-xxl,
@@ -24357,7 +24357,7 @@ i.qld__icon--trail {
 .qld__modal__body__content ul li a {
   text-decoration: none;
   color: var(--QLD-color-light__link--on-action);
-  background-color: var(-- #c48c33);
+  background-color: var(-- #ffffff);
 }
 .qld__modal__body__content ul li a:hover {
   background-color: var(--QLD-color-light__action--primary-hover);
@@ -30701,8 +30701,8 @@ table.dataTable.no-footer {
 .flatpickr .calendar-toggle {
   background-color: var(--QLD-color-light__background);
   border-radius: 0px 0.25rem 0.25rem 0px;
-  border-color: #e2c59e;
-  color: #c48c33;
+  border-color: #606060;
+  color: #ffffff;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -30712,13 +30712,13 @@ table.dataTable.no-footer {
 }
 .flatpickr .calendar-toggle:hover {
   background: #f5f5f5;
-  border-color: #a06a00;
+  border-color: #f9dbdf;
 }
 .flatpickr .calendar-toggle:hover i {
-  color: #a06a00;
+  color: #f9dbdf;
 }
 .flatpickr .calendar-toggle:focus {
-  outline: 0.1875rem solid #0085b3;
+  outline: 0.1875rem solid #a7e5ff;
   outline-offset: 0.125rem;
 }
 .flatpickr .calendar-toggle i {
@@ -30744,7 +30744,7 @@ table.dataTable.no-footer {
 .flatpickr-calendar .flatpickr-months .flatpickr-next-month,
 .flatpickr-calendar .flatpickr-months .flatpickr-prev-month {
   border-radius: 0.25rem;
-  fill: #c48c33;
+  fill: #ffffff;
   height: 2.5rem;
   top: 1.125rem;
   width: 2.5rem;
@@ -30755,11 +30755,11 @@ table.dataTable.no-footer {
 }
 .flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover svg,
 .flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover svg {
-  fill: #a06a00;
+  fill: #f9dbdf;
 }
 .flatpickr-calendar .flatpickr-months .flatpickr-next-month:focus,
 .flatpickr-calendar .flatpickr-months .flatpickr-prev-month:focus {
-  outline: 2px solid #0085b3;
+  outline: 2px solid #a7e5ff;
 }
 .flatpickr-calendar .flatpickr-months .flatpickr-next-month {
   right: 1rem;
@@ -30784,7 +30784,7 @@ table.dataTable.no-footer {
 .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {
   appearance: none;
   background: url('data:image/svg+xml,<svg width="13" height="6" viewBox="0 0 13 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.617443 0.160356C0.456644 0.320713 0.456644 0.587973 0.644242 0.74833L6.2186 5.87973C6.3794 6.04009 6.6206 6.04009 6.7814 5.87973L12.3558 0.74833C12.5434 0.587973 12.5434 0.320713 12.3826 0.160356C12.2218 -0.0267261 11.9538 -0.0267261 11.793 0.13363L6.4866 4.99777L1.20704 0.13363C1.12664 0.0534521 1.01944 0 0.91224 0C0.805041 0 0.697842 0.0534521 0.617443 0.160356Z" fill="%23008635"/></svg>') no-repeat right 14px center;
-  border: 0.125rem solid #e2c59e;
+  border: 0.125rem solid #606060;
   border-radius: 0.25rem;
   height: 2.75rem;
   font-size: 0.875rem;
@@ -30795,10 +30795,10 @@ table.dataTable.no-footer {
 }
 .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months:hover {
   background-color: #f5f5f5;
-  border-color: #a06a00;
+  border-color: #f9dbdf;
 }
 .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months:focus {
-  border-color: #0085b3;
+  border-color: #a7e5ff;
 }
 .flatpickr-calendar .flatpickr-month {
   height: 2.75rem;
@@ -30806,14 +30806,14 @@ table.dataTable.no-footer {
 }
 .flatpickr-calendar .flatpickr-weekday {
   align-items: center;
-  color: #001028;
+  color: #ffffff;
   display: inline-flex;
   justify-content: center;
   height: 2.75rem;
 }
 .flatpickr-calendar .numInputWrapper {
   height: 2.75rem;
-  border: 0.125rem solid #e2c59e;
+  border: 0.125rem solid #606060;
   border-radius: 0.25rem;
   padding: 0 1.875rem 0 0.75rem;
   min-width: 5rem;
@@ -30843,7 +30843,7 @@ table.dataTable.no-footer {
   bottom: 0.75rem;
 }
 .flatpickr-calendar .numInputWrapper:hover {
-  border-color: #a06a00;
+  border-color: #f9dbdf;
   background-color: #f5f5f5;
 }
 .flatpickr-calendar .flatpickr-days {
@@ -30856,7 +30856,7 @@ table.dataTable.no-footer {
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span {
   border-radius: 0.25rem;
-  color: #315870;
+  color: #ffffff;
   display: inline-flex;
   align-items: center;
   font-size: 1rem;
@@ -30865,7 +30865,7 @@ table.dataTable.no-footer {
   width: 2.75rem;
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span.today {
-  border-color: #e2c59e;
+  border-color: #606060;
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span:hover {
   background-color: #f5f5f5;
@@ -30873,15 +30873,15 @@ table.dataTable.no-footer {
   text-decoration: underline;
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span:focus {
-  outline: 2px solid #0085b3;
+  outline: 2px solid #a7e5ff;
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span.selected {
-  color: #ffffff;
-  background-color: #315870;
+  color: #430001;
+  background-color: #ffffff;
   border: 0;
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span.selected:focus {
-  outline: 2px solid #0085b3;
+  outline: 2px solid #a7e5ff;
   outline-offset: 0.0625rem;
 }
 .flatpickr-calendar .flatpickr-days .dayContainer span.nextMonthDay {
@@ -32145,7 +32145,7 @@ table.dataTable.no-footer {
   transform: translateX(4px);
 }
 .qld__global-alert .qld__global-alert__action a:focus {
-  outline: 3px solid #001421;
+  outline: 3px solid #000510;
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -32191,7 +32191,7 @@ table.dataTable.no-footer {
   transform: scale(1.3);
 }
 .qld__global-alert .qld__global-alert__close button:focus {
-  outline: 3px solid #001421;
+  outline: 3px solid #000510;
   outline-offset: 2px;
 }
 @media (min-width: 699px) {
@@ -35483,7 +35483,7 @@ hr.qld__horizontal-rule.qld__horizontal-rule--lg {
 .qld__overflow_menu--breadcrumbs .qld__overflow_menu_wrapper .qld__overflow_menu.qld__accordion--open,
 .qld__overflow_menu_wrapper .qld__overflow_menu.qld__accordion--open {
   display: block;
-  border-bottom: 4px solid #c48c33;
+  border-bottom: 4px solid #9a0037;
   border-radius: 4px;
   height: auto;
 }
@@ -38038,4 +38038,4 @@ body a.qld__btn.qld__btn--floating.qld__btn--back-to-top:active::after {
   Current colors taken from GitHub's CSS
 */
 /*! @gov.au/grid-12 v2.1.0 */
-/*# sourceMappingURL=main-qld-corporate.css.map */
+/*# sourceMappingURL=main-qld-maroon-invert.css.map */
