@@ -65,11 +65,15 @@
   $fade-time: 300ms,
   $glowing-effect-color: blue
 ) {
-  -webkit-transition: -webkit-box-shadow $fade-time,
+  -webkit-transition:
+    -webkit-box-shadow $fade-time,
     border-color $fade-time ease-in-out;
-  -moz-transition: -moz-box-shadow $fade-time,
+  -moz-transition:
+    -moz-box-shadow $fade-time,
     border-color $fade-time ease-in-out;
-  transition: box-shadow $fade-time, border-color $fade-time ease-in-out;
+  transition:
+    box-shadow $fade-time,
+    border-color $fade-time ease-in-out;
 
   &:#{$selector} {
     @include sq-box-shadow(0 0 5px $glowing-effect-color);
@@ -490,13 +494,52 @@
         (map.get($QLD-lineheight-map, $lineheight-key) * $fontsize-px) /
           $QLD-unit
       )
-    ) * $QLD-unit;
+    ) *
+    $QLD-unit;
   $lineheight: calc($lineheight-pixel / $fontsize-px);
 
   // Mixin output
   font-size: $fontsize-px + 0px; // Pixel fallback for non-rem support
   font-size: $fontsize-rem + 0rem; // REM size
   line-height: $lineheight;
+}
+
+/**
+ * QLD-fontgrid Mixin for setting font-size and line-height that snaps to the grid.
+ *
+ * @param  {keywords} $fontsize-key   -  Either one of the following keywords: xs, sm, md, lg, xl, xxl, xxxl
+ * @param  {keywords} $lineheight-key -  Either one of the following keywords: heading, nospace, default
+ *
+ * @return {string}                   - The code; fontsize in REM, with PX fallback, and unitless line-height which matches vertical grid
+*/
+@mixin QLD-fontgrid-tokens($fontsize-key, $lineheight-key: "default") {
+  @if meta.type-of($fontsize-key) != "string" {
+    @error "Going somewhere, Solo?; the QLD-fontgrid mixin fontsize key takes a string!";
+  }
+
+  @if meta.type-of($lineheight-key) != "string" {
+    @error "Tell Jabba I've got his money; the QLD-fontgrid mixin lineheight key takes a string!";
+  }
+
+  @if not map.has-key($QLD-fontsize-map, $fontsize-key) {
+    @error "You shall not pass; the QLD-fontgrid mixin only takes the following fontsize keys strings: " + map-keys( $QLD-fontsize-map );
+  }
+
+  @if not map.has-key($QLD-lineheight-map, $lineheight-key) {
+    @error "There's a snake in my boot; the QLD-fontgrid mixin only takes the following lineheight keys strings: " + map-keys( $QLD-lineheight-map );
+  }
+
+  @if ($fontsize-key == "xxl" && $lineheight-key == "heading") {
+    // Mixin output
+    font-size: $typographyDesktopH1FontSize;
+    line-height: $typographyDesktopH1LineHeight;
+    //line-height: 5;
+  } @else {
+    // Mixin output
+    font-size: "16px";
+    line-height: 3;
+    pedro: "here";
+  }
 }
 
 /**
