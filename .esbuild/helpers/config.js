@@ -174,6 +174,6 @@ const themeValues = Object.keys(themesMap).map((themeKey) => {
 
 const updatedContent = content.replace(
   /const brandToolbarItems.*/,
-  `const brandToolbarItems=${JSON.stringify(themeValues, null, 4)};`,
+  `const brandToolbarItems=${JSON.stringify(themeValues)};`,
 );
 fs.writeFileSync(STORYBOOK_PREVIEW, updatedContent);
