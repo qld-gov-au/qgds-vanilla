@@ -338,13 +338,22 @@ form {
 
 .qld__body,
 .qld__footer {
-  @include QLD-fontgrid(sm);
+  //@include QLD-fontgrid(sm);
+  font-size: $typographyMobileBodyFontSize;
+  font-weight: $typographyMobileBodyFontWeight;
+  line-height: $typographyMobileBodyLineHeight;
+
+  @include QLD-media(lg) {
+    font-size: $typographyDesktopBodyFontSize;
+    font-weight: $typographyDesktopBodyFontWeight;
+    line-height: $typographyDesktopBodyLineHeight;
+  }
+
   margin: 0;
   text-size-adjust: 100%;
   font-family: $QLD-font;
   color: var(--QLD-color-light__text);
   background-color: var(--QLD-color-light__background);
-  letter-spacing: 0.009rem;
 
   a {
     color: var(--QLD-color-light__link);
@@ -362,7 +371,6 @@ form {
   p {
     margin: 0;
     max-width: $QLD-font-maxwidth;
-    line-height: 1.75;
   }
 
   *:not([type="hidden"]):not(p) {
@@ -565,9 +573,11 @@ form {
       position: relative;
       @include QLD-space(padding-left, 2.5unit);
       @include QLD-space(max-width, 75ch);
+      /*
       font-size: 1.094rem;
       line-height: 1.75rem;
       letter-spacing: 0.02rem;
+      */
       padding-top: 0.4rem;
     }
 
@@ -585,7 +595,7 @@ form {
       align-items: center;
       position: absolute;
       left: 0;
-      font-size: 1em;
+      //font-size: 1em;
       font-variant-numeric: proportional-nums;
     }
   }
