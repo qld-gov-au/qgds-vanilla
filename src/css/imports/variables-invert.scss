@@ -10,50 +10,69 @@
  */
 $QLD-pixelfallback: true !default;
 
- /**
+/**
   * QLD-media Breakpoints
   */
-$QLD-media-sm: 400px;
-$QLD-media-md: 699px;
-$QLD-media-lg: 992px;
-$QLD-media-xl: 1312px;
-$QLD-media-xxl: 1599px;
+$QLD-media-sm: $qgdsMediaQuerySm; //400px
+$QLD-media-md: $qgdsMediaQueryMd; //699px
+$QLD-media-lg: $qgdsMediaQueryLg; //992px
+$QLD-media-xl: $qgdsMediaQueryXl; //1312px
+$QLD-media-xxl: $qgdsMediaQueryXxl; //1599px
 $QLD-main-nav-breakpoint: lg;
 
- /**
+/**
   * QLD-rem value used for REM calculation
   */
 $QLD-rem: 16 !default;
 
- /**
+/**
   * QLD-unit used for all type and grid calculations
   */
 $QLD-unit: 4 !default;
 
- /**
+/**
   * QLD-font stack
   * QLD-font-monospace stack
   */
-$QLD-font: $typographyMobileBodyFontFamily,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+$QLD-font:
+  $typographyMobileBodyFontFamily,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Helvetica,
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol";
 
-$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
-$QLD-font-heading: $typographyMobileH1FontFamily, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol";
+$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas,
+  "Liberation Mono", Menlo, Courier, monospace !default;
+$QLD-font-heading:
+  $typographyMobileH1FontFamily,
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Helvetica,
+  Arial,
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol";
 
- /**
+/**
   * QLD-fontsize-map
   *
-  * Predetermined pixel sizes from a 1.25 typescale rounded to the nearest $QLD-unit (vertical grid)
+  * Predetermined pixel sizes
   */
 $QLD-fontsize-map: (
-    xs:   14,
-    sm:   16,
-    md:   20,
-    lg:   24,
-    xl:   32,
-    xxl:  40,
-    xxxl: 52
+  xs: $qgdsFontSizeMapDesktopXs,
+  sm: $qgdsFontSizeMapDesktopSm,
+  md: $qgdsFontSizeMapDesktopMd,
+  lg: $qgdsFontSizeMapDesktopLg,
+  xl: $qgdsFontSizeMapDesktopXxl,
+  xxl: $qgdsFontSizeMapDesktopXxxl,
+  xxxl: $qgdsFontSizeMapDesktopXxxxl,
 ) !default;
 
 // Base font
@@ -63,29 +82,29 @@ $base-font-pixel: 16; // Used for font size calculations & conversions
 /**
   * QLD-maxwidth for line lengths (the ‘measure’)
   */
-  $QLD-font-maxwidth: 80ch; // Answer to life, the universe, and everything (keeps things readable on wide viewports).
+$QLD-font-maxwidth: 80ch; // Answer to life, the universe, and everything (keeps things readable on wide viewports).
 
-  /**
+/**
   * QLD typography sizes
-  *
   */
-$QLD-font-size-desktop-xs: .875rem;
-$QLD-font-size-desktop-sm: 1rem;
-$QLD-font-size-desktop-md: 1.25rem;
-$QLD-font-size-desktop-lg: 1.5rem;
-$QLD-font-size-desktop-xl: 2rem;
-$QLD-font-size-desktop-xxl: 2.5rem;
-$QLD-font-size-desktop-xxxl: 3rem;
 
-$QLD-font-size-mobile-xs: .875rem;
-$QLD-font-size-mobile-sm: 1rem;
-$QLD-font-size-mobile-md: 1.25rem;
-$QLD-font-size-mobile-lg: 1.5rem;
-$QLD-font-size-mobile-xl: 1.75rem;
-$QLD-font-size-mobile-xxl: 2rem;
-$QLD-font-size-mobile-xxxl: 2.5rem;
+$QLD-font-size-desktop-xs: $typographyDesktopSmFontSize; //12.18px
+$QLD-font-size-desktop-sm: $typographyDesktopBodyFontSize; //16px
+$QLD-font-size-desktop-md: $typographyDesktopH5FontSize; //19.2px
+$QLD-font-size-desktop-lg: $typographyDesktopH4FontSize; //23.04px
+$QLD-font-size-desktop-xl: $typographyDesktopH3FontSize; //27.648px
+$QLD-font-size-desktop-xxl: $typographyDesktopH2FontSize; //33.1776px
+$QLD-font-size-desktop-xxxl: $typographyDesktopH1FontSize; //39.8131px
 
- /**
+$QLD-font-size-mobile-xs: $typographyMobileSmFontSize; //12.18px
+$QLD-font-size-mobile-sm: $typographyMobileBodyFontSize; //16px
+$QLD-font-size-mobile-md: $typographyMobileH5FontSize; //19.2px
+$QLD-font-size-mobile-lg: $typographyMobileH4FontSize; //23.04px
+$QLD-font-size-mobile-xl: $typographyMobileH3FontSize; //27.648px
+$QLD-font-size-mobile-xxl: $typographyMobileH2FontSize; //33.1776px
+$QLD-font-size-mobile-xxxl: $typographyMobileH1FontSize; //39.8131px
+
+/**
   * QLD-lineheight-map
   *
   * Predetermined lineheight mapped to keyword
@@ -95,39 +114,36 @@ $QLD-lineheight-map: (
   nospace: 1,
   heading: 1.25,
   default: 1.5,
-  h3: calc(4/3),
+  h3: calc(4 / 3),
   h4: 1.2,
-  h6: calc(8/7),
+  h6: calc(8 / 7),
   small: 1.4,
 );
 
- /**
+/**
   * QLD-spacing-map
   *
   * Predetermined standard spacing mapped to keyword
   */
-  $QLD-space-map: (
-    0: 0,
-    1: 4,
-    2: 8,
-    3: 12,
-    4: 16,
-    5: 20,
-    6: 24,
-    7: 32,
-    8: 36,
-    9: 40,
-    10: 48,
-    11: 56,
-    12: 64,
-    13: 80,
-    14: 96,
-    15: 128,
-    16: 160
+$QLD-space-map: (
+  0: 0,
+  1: 4,
+  2: 8,
+  3: 12,
+  4: 16,
+  5: 20,
+  6: 24,
+  7: 32,
+  8: 36,
+  9: 40,
+  10: 48,
+  11: 56,
+  12: 64,
+  13: 80,
+  14: 96,
+  15: 128,
+  16: 160,
 ) !default;
-
-
-
 
 /* Gutters - Space between cols in the grid  */
 $QLD-grid__gutter--media-sm: 4;
@@ -149,23 +165,23 @@ $QLD-grid__inner-padding--media-lg: 7;
 $QLD-grid__inner-padding--media-xl: 7;
 
 /* Outer page margins (defined by padding on the container-fluid class) for vertical navigation   */
-$QLD-grid__inner-padding--media-portal-lg: calc(48px + (100vw - 992px) * (128 - 48) / (1312 - 992));
-$QLD-grid__inner-padding--media-portal-xl: calc(72px + (100vw - 1312px) *(128 - 72) / (1600 - 1312));
-
+$QLD-grid__inner-padding--media-portal-lg: calc(
+  48px + (100vw - 992px) * (128 - 48) / (1312 - 992)
+);
+$QLD-grid__inner-padding--media-portal-xl: calc(
+  72px + (100vw - 1312px) * (128 - 72) / (1600 - 1312)
+);
 
 /* Max-width of content area   */
 $QLD-grid__maxwidth: 86rem;
-
 
 /*** Padding values for sections - ony veritcal spacing value that does not use margin top*/
 $QLD-padding__section--mobile: 9;
 $QLD-padding__section--desktop: 12;
 
-
 /* Spacing between <section> containers */
 $QLD-margin__section--desktop: 12;
 $QLD-margin__section--mobile: 9;
-
 
 /* Spacing beteen content containers, ie div within a <section> */
 $QLD-margin__content-block--desktop: 10;
@@ -175,7 +191,6 @@ $QLD-margin__content-block--mobile: 7;
 $QLD-margin__component--desktop: 7;
 $QLD-margin__component--mobile: 6;
 
-
 /* Heading, text and paragraph spacing   */
 
 /* Space above an H1 */
@@ -183,7 +198,7 @@ $QLD-margin__h1--desktop: 11;
 $QLD-margin__h1--mobile: 7;
 
 /* Space above an H2 */
-$QLD-margin__h2--desktop:10;
+$QLD-margin__h2--desktop: 10;
 $QLD-margin__h2--mobile: 7;
 
 /* Space above an H3 */
@@ -214,7 +229,6 @@ $QLD-margin__li-wide--mobile: 3;
 $QLD-margin__lables--desktop: 2;
 $QLD-margin__lables--mobile: 2;
 
-
 /**
 * QLD border-width values
 */
@@ -224,16 +238,15 @@ $QLD-border-width-medium: 3px;
 $QLD-border-width-thick: 4px;
 $QLD-border-width-extra-thick: 8px;
 
-
 /**
 * QLD border-radius values
 */
-$QLD-border-radius-xs: map.get( $QLD-space-map, 1 ) + px;
-$QLD-border-radius-sm: map.get( $QLD-space-map, 3 ) + px;
-$QLD-border-radius-md: map.get( $QLD-space-map, 4 ) + px;
-$QLD-border-radius-lg: map.get( $QLD-space-map, 7 ) + px;
-$QLD-border-radius-xl: map.get( $QLD-space-map, 9 ) + px;
-$QLD-border-radius-xxl: map.get( $QLD-space-map, 12 ) + px;
+$QLD-border-radius-xs: map.get($QLD-space-map, 1) + px;
+$QLD-border-radius-sm: map.get($QLD-space-map, 3) + px;
+$QLD-border-radius-md: map.get($QLD-space-map, 4) + px;
+$QLD-border-radius-lg: map.get($QLD-space-map, 7) + px;
+$QLD-border-radius-xl: map.get($QLD-space-map, 9) + px;
+$QLD-border-radius-xxl: map.get($QLD-space-map, 12) + px;
 
 /**
 * QLD underline-thickness values
@@ -249,10 +262,19 @@ $QLD-underline__offset: 0.3em;
 /**
 * QLD box shadow values
 */
-$QLD-box-shaddow-level-one: 0px 1px 2px rgba(0, 0, 0, 0.2), 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
-$QLD-box-shaddow-level-two: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-$QLD-box-shaddow-level-three: 0px 4px 8px 3px rgba(0, 0, 0, 0.1), 0px 1px 3px rgba(0, 0, 0, 0.2);
-$QLD-box-shaddow-level-four: 7px 6px 13px rgba(0, 0, 0, 0.02), 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 13px 20px rgba(0, 0, 0, 0.1);
+$QLD-box-shaddow-level-one:
+  0px 1px 2px rgba(0, 0, 0, 0.2),
+  0px 1px 3px 1px rgba(0, 0, 0, 0.1);
+$QLD-box-shaddow-level-two:
+  0px 1px 2px rgba(0, 0, 0, 0.3),
+  0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+$QLD-box-shaddow-level-three:
+  0px 4px 8px 3px rgba(0, 0, 0, 0.1),
+  0px 1px 3px rgba(0, 0, 0, 0.2);
+$QLD-box-shaddow-level-four:
+  7px 6px 13px rgba(0, 0, 0, 0.02),
+  0px 2px 5px rgba(0, 0, 0, 0.1),
+  0px 13px 20px rgba(0, 0, 0, 0.1);
 
 /***
 QLD Fixed widths
@@ -299,7 +321,7 @@ $QLD-font-size__feature-lg: 8rem;
 /**
 * QLD default icons
 */
-$QLD-icon-arrow-up: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M379.8 225.7C376.7 229.3 372.3 231.1 368 231.1c-3.844 0-7.703-1.426-10.77-4.31L208 86.12v377.3c0 9.171-7.156 16.59-15.1 16.59S176 472.6 176 463.4V86.12l-149.2 140.7C20.25 232.1 10.14 232.5 4.156 225.7C-1.781 218.9-1.297 208.4 5.234 202.2l176-165.9c6.094-5.768 15.44-5.768 21.53 0l176 165.9C385.3 208.4 385.8 218.9 379.8 225.7z"/></svg>' ;
+$QLD-icon-arrow-up: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M379.8 225.7C376.7 229.3 372.3 231.1 368 231.1c-3.844 0-7.703-1.426-10.77-4.31L208 86.12v377.3c0 9.171-7.156 16.59-15.1 16.59S176 472.6 176 463.4V86.12l-149.2 140.7C20.25 232.1 10.14 232.5 4.156 225.7C-1.781 218.9-1.297 208.4 5.234 202.2l176-165.9c6.094-5.768 15.44-5.768 21.53 0l176 165.9C385.3 208.4 385.8 218.9 379.8 225.7z"/></svg>';
 $QLD-icon-arrow-right: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"/></svg>';
 $QLD-icon-arrow-down: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M378.8 309.8l-176 165.9C199.7 478.6 195.9 480 192 480s-7.719-1.426-10.77-4.31l-176-165.9C-1.297 303.6-1.781 293.1 4.156 286.3c5.953-6.838 16.09-7.259 22.61-1.134L176 425.9V48.59c0-9.171 7.156-16.59 15.1-16.59S208 39.42 208 48.59v377.3l149.2-140.7c6.516-6.125 16.66-5.704 22.61 1.134C385.8 293.1 385.3 303.6 378.8 309.8z"/></svg>';
 $QLD-icon-arrow-left: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"/></svg>';
@@ -346,12 +368,12 @@ $QLD-color-neutral--black__opacity-10: $qgdsColorNeutralBlackOpacityLow;
   */
 $QLD-color-status__error: $themeColorReservedErrorDefault !default;
 $QLD-color-status__error--lightest: $themeColorReservedErrorLightest !default;
-$QLD-color-status__error--lighter: $themeColorReservedErrorLighter!default;
+$QLD-color-status__error--lighter: $themeColorReservedErrorLighter !default;
 $QLD-color-status__error--darker: $themeColorReservedErrorDarker !default;
 
 $QLD-color-status__info: $themeColorReservedInformationDefault !default;
 $QLD-color-status__info--lightest: $themeColorReservedInformationLightest !default;
-$QLD-color-status__info--lighter: $themeColorReservedInformationLighter!default;
+$QLD-color-status__info--lighter: $themeColorReservedInformationLighter !default;
 $QLD-color-status__info--darker: $themeColorReservedInformationDarker !default;
 
 $QLD-color-status__success: $themeColorReservedSuccessDefault !default;
@@ -364,13 +386,12 @@ $QLD-color-status__caution--lightest: $themeColorReservedAlertLightest !default;
 $QLD-color-status__caution--lighter: $themeColorReservedAlertLighter !default;
 $QLD-color-status__caution--darker: $themeColorReservedAlertDarker !default;
 
-
- /**
+/**
   * QLD-color-light styles
   */
 $QLD-color-light__site-title: $paletteDarkTypographySiteTitleDefault !default;
-$QLD-color-light__design-accent:$paletteDarkAccentDefault !default;
-$QLD-color-light__design-on-accent:$paletteDarkAccentOnAccent !default;
+$QLD-color-light__design-accent: $paletteDarkAccentDefault !default;
+$QLD-color-light__design-on-accent: $paletteDarkAccentOnAccent !default;
 $QLD-color-light__heading: $paletteDarkTypographyHeadingDefault !default;
 $QLD-color-light__text: $paletteDarkTypographyBodyDefault !default;
 $QLD-color-light__text--lighter: $paletteDarkTypographyBodyVariant !default;
@@ -386,8 +407,7 @@ $QLD-color-light__border: $paletteDarkBorderDefault !default;
 $QLD-color-light__background: $paletteDarkBackground !default;
 $QLD-color-light__background--shade: $paletteDarkShade !default;
 
-
- /**
+/**
   * QLD-color-light-alt styles
   */
 
@@ -395,14 +415,14 @@ $QLD-color-light__border--alt: $paletteBoldBorderDefault !default;
 $QLD-color-light__background--alt: $paletteBoldBackground !default;
 $QLD-color-light__background--alt-shade: $paletteBoldShade !default;
 
- /**
+/**
   * QLD-color-dark styles
   */
 $QLD-color-dark__site-title: $paletteStrongTypographySiteTitleDefault !default;
 $QLD-color-dark__design-accent: $paletteStrongAccentDefault !default;
-$QLD-color-dark__design-on-accent:$paletteStrongAccentOnAccent !default;
+$QLD-color-dark__design-on-accent: $paletteStrongAccentOnAccent !default;
 $QLD-color-dark__heading: $paletteStrongTypographyHeadingDefault !default;
-$QLD-color-dark__text:  $paletteStrongTypographyBodyDefault !default;
+$QLD-color-dark__text: $paletteStrongTypographyBodyDefault !default;
 $QLD-color-dark__text--lighter: $paletteStrongTypographyBodyVariant !default;
 $QLD-color-dark__link: $paletteStrongActionLinkDefaultColor !default;
 $QLD-color-dark__link--visited: $paletteStrongActionLinkVisitedColor !default;
@@ -416,15 +436,14 @@ $QLD-color-dark__border: $paletteStrongBorderDefault !default;
 $QLD-color-dark__background: $paletteStrongBackground !default;
 $QLD-color-dark__background--shade: $paletteStrongShade !default;
 
- /**
+/**
   * QLD-color-alt-dark styles
   */
 $QLD-color-dark__border--alt: $paletteStrongBorderDefault !default;
 $QLD-color-dark__background--alt: $paletteStrongBackground !default;
 $QLD-color-dark__background--alt-shade: $paletteStrongShade !default;
 
-
- /**
+/**
   * QLD-border-radius styles
   */
 $QLD-border-radius: $QLD-unit + 0px !default;
@@ -442,7 +461,6 @@ $QLD-color-dark__underline: $paletteStrongActionLinkDefaultTextDecorationColor !
 $QLD-color-dark__underline--hover: $paletteStrongActionLinkHoverTextDecorationColor !default;
 $QLD-color-dark__underline--visited: $paletteStrongActionLinkVisitedTextDecorationColor !default;
 $QLD-color-dark__underline--hover-visited: $paletteStrongActionLinkVisitedTextDecorationColor !default;
-
 
 /**
 * QLD Line height variables
@@ -472,9 +490,7 @@ $QLD-heading-space-xl: 40px;
 $QLD-heading-space-xxl: 52px;
 $QLD-heading-space-xxxl: 60px;
 
-
-$QLD-color-contained-layout__background: #EFF4F9;
-
+$QLD-color-contained-layout__background: #eff4f9;
 
 /**
 * QLD custom properties (CSS variables) - defaults
@@ -510,7 +526,7 @@ $QLD-color-contained-layout__background: #EFF4F9;
 
   --QLD-color-dark__site-title: #{$QLD-color-dark__site-title};
   --QLD-color-dark__design-accent: #{$QLD-color-dark__design-accent};
-  --QLD-color-dark__design-on-accent:#{$QLD-color-dark__design-on-accent};
+  --QLD-color-dark__design-on-accent: #{$QLD-color-dark__design-on-accent};
   --QLD-color-dark__heading: #{$QLD-color-dark__heading};
   --QLD-color-dark__text: #{$QLD-color-dark__text};
   --QLD-color-dark__text--lighter: #{$QLD-color-dark__text--lighter};
@@ -528,7 +544,6 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-color-dark__underline--hover: #{$QLD-color-dark__underline--hover};
   --QLD-color-dark__underline--visited: #{$QLD-color-dark__underline--visited};
   --QLD-color-dark__underline--hover-visited: #{$QLD-color-dark__underline--hover-visited};
-
 
   --QLD-color-dark__action--secondary: #{$QLD-color-dark__action--secondary};
   --QLD-color-dark__action--secondary-hover: #{$QLD-color-dark__action--secondary-hover};
@@ -552,7 +567,6 @@ $QLD-color-contained-layout__background: #EFF4F9;
   --QLD-border-width-medium: #{$QLD-border-width-medium};
   --QLD-border-width-thick: #{$QLD-border-width-thick};
   --QLD-border-width-extra-thick: #{$QLD-border-width-extra-thick};
-
 
   --QLD-default-mobile-xs: #{$QLD-default-mobile-xs};
   --QLD-default-mobile-sm: #{$QLD-default-mobile-sm};

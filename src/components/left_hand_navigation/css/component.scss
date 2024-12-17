@@ -53,7 +53,7 @@
 
     .qld__left-nav {
         background-color: var(--QLD-color-light__background--shade); //here
-        border-right: $QLD-border-width-default solid $QLD-color-neutral--lighter;
+        border-right: $QLD-border-width-default solid var(--QLD-color-light__border);
         display: block;
         min-width: pxToRem(280);
         max-width: pxToRem(280);
@@ -82,7 +82,7 @@
         }
 
         .qld__left-nav__content {
-            border-bottom: $QLD-border-width-thin solid $QLD-color-neutral--lighter;
+            border-bottom: $QLD-border-width-thin solid var(--QLD-color-light__border);
         }
 
         ul {
@@ -91,7 +91,7 @@
             padding-bottom: 0px;
 
             li {
-                border-top: $QLD-border-width-thin solid $QLD-color-neutral--lighter;
+                border-top: $QLD-border-width-thin solid var(--QLD-color-light__border);
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
