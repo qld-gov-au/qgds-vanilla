@@ -66,6 +66,10 @@ const stylelintFormatter = {
     const errorLog = path.resolve(reportsDir, "stylelint-error-report.json");
     const warningLog = path.resolve(reportsDir, "stylelint-warning-report.json");
 
+    //Remove cwd from path before showing on console or logs
+    const errorLogRelative = errorLog.replace(process.cwd(), "");
+    const warningLogRelative = warningLog.replace(process.cwd(), "");
+
     try {
       //Create reports directory if it doesn't exist
       fs.mkdirSync(reportsDir, { recursive: true });
@@ -79,7 +83,7 @@ const stylelintFormatter = {
       fs.writeFileSync(warningLog, JSON.stringify(warnings, null, 2), "utf8");
 
       //Update console
-      log("black", `\nLogs:\n${errorLog}\n${warningLog}`);
+      log("black", `\nLogs:\n    ${errorLog.replace(process.cwd(), "")}\n    ${warningLog.replace(process.cwd(), "")}`);
     } catch (err) {
       log("red", `Error writing reports: ${err} \n\n`);
     }
