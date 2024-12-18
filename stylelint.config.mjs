@@ -1,9 +1,9 @@
 /** @type {import('stylelint').Config} */
 
-//https://stylelint.io/user-guide/rules/
+// Stylelint rules: https://stylelint.io/user-guide/rules/
 
-// Basic formatter for stylelint for QGDS project. SP.
-import formatresults from "./src/js/stylelint.formatter.js";
+// Basic stylelint handler for QGDS project
+import stylelintFormatter from "./src/js/stylelint.formatter.js";
 
 export default {
   defaultSeverity: "warning",
@@ -14,7 +14,7 @@ export default {
   quiet: false,
   plugins: ["stylelint-scss"],
   formatter: function (results) {
-    formatresults(results);
+    stylelintFormatter.formatResults(results);
   },
   rules: {
     "alpha-value-notation": ["number"],
@@ -33,7 +33,7 @@ export default {
     "declaration-block-no-redundant-longhand-properties": [true],
     "declaration-block-no-shorthand-property-overrides": [true],
     "declaration-empty-line-before": ["always", { except: ["after-comment"] }],
-    "function-name-case": ["lower"], //note, lower also accepts camelCase function names. e.g. getColor()
+    "function-name-case": ["lower"], // "lower" accepts camelCase e.g. getColor()
     "function-no-unknown": [null],
     "import-notation": ["string", { severity: "warning" }],
     "length-zero-no-unit": [true, { severity: "warning" }],
