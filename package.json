@@ -24,7 +24,7 @@
     "build-storybook": "storybook build --webpack-stats-json ",
     "package-docs": "npm run build-storybook && rm -rf docs/storybook && mv storybook-static docs/storybook",
     "lint:js": "eslint \"./src/**/*.js\"",
-    "lint:styles": "stylelint \"./src/**/*.css\" \"./src/**/*.scss\" \"!./src/**/*.min.css\" \"!./src/**/custom.css\" --formatter json > stylelint-report.json"
+    "lint:styles": "stylelint \"./src/**/*.{css,scss}\""
   },
   "keywords": [],
   "author": "",
