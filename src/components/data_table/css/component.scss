@@ -336,11 +336,11 @@ table.qld__data-table, table.dataTable { // the table needs to be used for this 
     }
 
     .qld__data-table__cell-left-border {
-        border-left: 1px solid $QLD-color-neutral--lighter;
+        border-left: 1px solid var(--QLD-color-light__border);
     }
 
     .qld__data-table__cell-right-border {
-        border-right: 1px solid $QLD-color-neutral--lighter;
+        border-right: 1px solid var(--QLD-color-light__border);
     }
 
     &.qld__data-table__col-1-left-border tr td:nth-child(1), //needs to go after merging with tables
@@ -353,7 +353,7 @@ table.qld__data-table, table.dataTable { // the table needs to be used for this 
     &.qld__data-table__col-8-left-border tr td:nth-child(8),
     &.qld__data-table__col-9-left-border tr td:nth-child(9),
     &.qld__data-table__col-10-left-border tr td:nth-child(10) {
-        border-left: 1px solid $QLD-color-neutral--lighter;
+        border-left: 1px solid var(--QLD-color-light__border);
     }
 
     &.qld__data-table__col-1-right-border tr td:nth-child(1), //needs to go after merging with tables
@@ -374,7 +374,7 @@ table.qld__data-table, table.dataTable { // the table needs to be used for this 
     &.qld__data-table__col-8-right-border tr td:nth-child(8),
     &.qld__data-table__col-9-right-border tr td:nth-child(9),
     &.qld__data-table__col-10-right-border tr td:nth-child(10) {
-        border-right: 1px solid $QLD-color-neutral--lighter;
+        border-right: 1px solid var(--QLD-color-light__border);
     }
 
         border-radius: $QLD-border-radius-sm;
@@ -387,7 +387,7 @@ table.qld__data-table, table.dataTable { // the table needs to be used for this 
 
 
     &.qld__data-table--scroll { //needs to go after tables come in place or if Kenny asks for non scroll
-        border: 1px solid $QLD-color-neutral--lighter;
+        border: 1px solid var(--QLD-color-light__border);
         border-radius: $QLD-border-radius-sm;
         max-height: 640px;
         /* Max height for mobile devices based on average available screen space on mobile devices */
@@ -439,7 +439,7 @@ table.qld__data-table, table.dataTable { // the table needs to be used for this 
     & {
         width: 100%;
         overflow: auto;
-        border: 1px solid $QLD-color-neutral--lighter;
+        border: 1px solid var(--QLD-color-light__border);
         border-radius: $QLD-border-radius-sm;
         overflow-x: hidden;
 
