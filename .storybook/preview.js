@@ -1,13 +1,17 @@
 
 //load global styles and js
 import "../src/js/main.js";
-import "../src/css/main.scss";
 
 import { themes } from '@storybook/theming';
 import {withThemeByClassName, DecoratorHelpers} from '@storybook/addon-themes';
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
 
-// import { withQGDSTheme } from './theme.decorator';
+//this variable is updated by esbuild on what 'brands' we have
+const brandToolbarItems=[{"value":"main-campaign-neon","title":"Campaign Neon"},{"value":"main-campaign-neon-invert","title":"Campaign Neon Invert"},{"value":"main-qld-corporate","title":"Qld Corporate"},{"value":"main-qld-corporate-invert","title":"Qld Corporate Invert"},{"value":"main","title":"Qld Default"},{"value":"main-invert","title":"Qld Default Invert"},{"value":"main-qld-high-contrast","title":"Qld High Contrast"},{"value":"main-qld-high-contrast-invert","title":"Qld High Contrast Invert"},{"value":"main-qld-maroon","title":"Qld Maroon"},{"value":"main-qld-maroon-invert","title":"Qld Maroon Invert"}];
+
+//glob all css to make it amr updatable
+//const modules = import.meta.glob('../src/css/main-*.scss')
+
 
 const themeData = {
     themes: {
@@ -38,6 +42,7 @@ const preview = {
                 //"1200px": {viewport: 1200}, //original non-modes based baseline
             },
         },
+        layout: 'fullscreen',
         viewport: {
             viewports: { //QLD-media Breakpoints
                 small: {name: "Small", styles: {width: "400px", height: "800px"}},
@@ -70,11 +75,9 @@ const preview = {
                 theme: themes.light,
             }, // 👈 Enables the table of contents,
             source: {
-
                 language: "html",
             },
         },
-
         options: {
             storySort: {
                 method: 'alphabetical',
@@ -89,8 +92,46 @@ const preview = {
             },
         },
     },
-
+    globalTypes: {
+        brand: {
+            name: 'Brand',
+             defaultValue: 'main',
+            description: 'Global brand for components',
+            toolbar: {
+                icon: 'switchalt',
+                // The items represent your brand styles
+                items: brandToolbarItems,
+                dynamicTitle: true
+            },
+        },
+    },
     decorators: [
+        (Story, context) => {
+            // Get the brand from the global context provided by the Controls addon
+            const brand = context.globals.brand;
+
+            // Try dynamic import of the SCSS
+            if (brand) {
+                console.log(brand);
+                //for (const path in modules) {
+                    //modules[path]().then((mod) => {
+                        //if (path.includes(brand)) {
+                           // console.log(path, mod)
+                            import(`../src/css/${brand}.scss`).catch((e) => {
+                                return `
+<link rel="stylesheet" href="./assets/css/${brand}.css" >
+${Story()}
+`
+                            });
+
+                        //}
+
+                    //})
+                //}
+            }
+
+            return Story();
+        },
         (Story, context) => {
             //This is for theme injection so that viewport changes shows correctly, withThemeByClassName is not retriggered if viewport is altered (re-rendered)
             const currentTheme = DecoratorHelpers.pluckThemeFromContext(context)
@@ -98,7 +139,7 @@ const preview = {
             const selectedThemeName = themeOverride || currentTheme || themeData.defaultTheme ;
             const classes = themeData.themes[selectedThemeName];
             return `
-<div class="${classes}" ><!-- end theme override -->
+<div class="${classes} qld__grid" ><!-- end theme override -->
 ${Story()}
 </div><!-- theme override close div -->
 `;

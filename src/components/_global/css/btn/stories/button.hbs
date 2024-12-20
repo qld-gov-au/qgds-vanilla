@@ -2,7 +2,7 @@
 
 {{#if component.data.url ~}}<a {{else}}<button {{/if ~}}
     {{#if component.data.metadata.id_field.value ~}} id="{{component.data.metadata.id_field.value}}" {{/if ~}}
-   {{#if component.data.url ~}} href="{{ component.data.url}}" {{else}} type="button" {{/if ~}}
+    {{#if component.data.url ~}} href="{{ component.data.url}}" {{else}} type="button" {{/if ~}}
     class="qld__btn {{#ifCond component.data.type '==' 'secondary'  ~}} qld__btn--secondary {{/ifCond ~}}
     {{#ifCond component.data.type '==' 'tertiary'  ~}} qld__btn--tertiary {{/ifCond ~}}
     {{#ifCond component.data.type '==' 'toggle'  ~}} qld__btn--toggle {{/ifCond ~}}

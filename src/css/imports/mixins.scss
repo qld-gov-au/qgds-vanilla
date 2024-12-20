@@ -1,3 +1,8 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:math';
+
 // REM font sizing with pixel fall back
 // This technique will allow external font sizes to be set for html and respected
 // if REMs are supported (everything but IE8 and older).
@@ -229,8 +234,8 @@
     );
 
     @each $ext in $exts {
-        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $extmod: if(map.has-key($extmods, $ext), $ext + map.get($extmods, $ext), $ext);
+        $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
         $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
     }
 
@@ -259,27 +264,27 @@
 	$fallback: ();
 	$has_fallback: false;
 
-	@if type-of( $property ) != 'string' {
+	@if meta.type-of( $property ) != 'string' {
 	@error "I’m sorry Dave, I can’t do that; the QLD-space function only takes a string as first argument!";
 	}
 
 	// Loop through the $values list
 	@each $value in $values {
 	// This is a pixel on unitless unit. Let’s convert it to rems
-	@if type-of( $value ) == 'number' and unit( $value ) == 'unit' {
+	@if meta.type-of( $value ) == 'number' and math.unit( $value ) == 'unit' {
 		$value: calc($value / 1unit); // This is to remove the unit value
 		$rem: calc($value / ( calc($value / $unit) * 0 + 1 ));
 
-		$fallback: join( $fallback, round( $value * ( $unit * $unit ) ) + 0px );
-		$output: join( $output, #{ $rem }rem );
+		$fallback: list.join( $fallback, round( $value * ( $unit * $unit ) ) + 0px );
+		$output: list.join( $output, #{ $rem }rem );
 
 		$has_fallback: true;
 	}
 
         // We don’t know what this is so we don’t change it.
         @else {
-            $fallback: join( $fallback, $value );
-            $output: join( $output, $value );
+            $fallback: list.join( $fallback, $value );
+            $output: list.join( $output, $value );
         }
 	}
 
@@ -305,30 +310,30 @@
 	$fallback: ();
 	$has_fallback: false;
 
-	@if type-of( $property ) != 'string' {
+	@if meta.type-of( $property ) != 'string' {
 	@error "I’m sorry Dave, I can’t do that; the QLD-space function only takes a string as first argument!";
 	}
-    
+
 	// Loop through the $values list
 	@each $value in $values {
 	// This is a pixel on unitless unit. Let’s convert it to rems
-	@if type-of( $value ) == 'number' {
+	@if meta.type-of( $value ) == 'number' {
         //Map number input to the space map
-        $value: map-get( $QLD-space-map, $value );
+        $value: map.get( $QLD-space-map, $value );
 
         // Get the value from supplied key for pixel and calculate the rem value
         $rem: calc($value / $QLD-rem);
-        
-        $fallback: join( $fallback, $value + 0px );
-		$output: join( $output, #{ $rem }rem );
+
+        $fallback: list.join( $fallback, $value + 0px );
+		$output: list.join( $output, #{ $rem }rem );
 
 		$has_fallback: true;
 	}
 
         // We don’t know what this is so we don’t change it.
         @else {
-            $fallback: join( $fallback, $value );
-            $output: join( $output, $value );
+            $fallback: list.join( $fallback, $value );
+            $output: list.join( $output, $value );
         }
 	}
 
@@ -452,28 +457,28 @@
 */
 @mixin QLD-fontgrid( $fontsize-key, $lineheight-key: 'default' ) {
 
-	@if type-of( $fontsize-key ) != 'string' {
+	@if meta.type-of( $fontsize-key ) != 'string' {
 	@error "Going somewhere, Solo?; the QLD-fontgrid mixin fontsize key takes a string!";
 	}
 
-	@if type-of( $lineheight-key ) != 'string' {
+	@if meta.type-of( $lineheight-key ) != 'string' {
 	@error "Tell Jabba I've got his money; the QLD-fontgrid mixin lineheight key takes a string!";
 	}
 
-	@if not map-has-key( $QLD-fontsize-map, $fontsize-key ) {
+	@if not map.has-key( $QLD-fontsize-map, $fontsize-key ) {
 	@error "You shall not pass; the QLD-fontgrid mixin only takes the following fontsize keys strings: " + map-keys( $QLD-fontsize-map );
 	}
 
-	@if not map-has-key( $QLD-lineheight-map, $lineheight-key ) {
+	@if not map.has-key( $QLD-lineheight-map, $lineheight-key ) {
 	@error "There's a snake in my boot; the QLD-fontgrid mixin only takes the following lineheight keys strings: " + map-keys( $QLD-lineheight-map );
 	}
 
 	// Get the value from supplied key for pixel and calculate the rem value
-	$fontsize-px: map-get( $QLD-fontsize-map, $fontsize-key );
+	$fontsize-px: map.get( $QLD-fontsize-map, $fontsize-key );
 	$fontsize-rem: calc($fontsize-px / $QLD-rem);
 
 	// Change the lineheight if it doesn't hit a QLD-unit e.g. 40px font size with 1.5 lineheight = 50px should be 52px
-	$lineheight-pixel: round( calc((map-get( $QLD-lineheight-map, $lineheight-key ) * $fontsize-px ) / $QLD-unit) ) * $QLD-unit;
+	$lineheight-pixel: round( calc((map.get( $QLD-lineheight-map, $lineheight-key ) * $fontsize-px ) / $QLD-unit) ) * $QLD-unit;
 	$lineheight: calc($lineheight-pixel / $fontsize-px);
 
 	// Mixin output
@@ -483,11 +488,11 @@
 }
 
 /**
- * QLD-container-padding - Select which level of padding 
+ * QLD-container-padding - Select which level of padding
  *
- * @param  {keywords} $values - Either one of the following 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 
+ * @param  {keywords} $values - Either one of the following 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
 * @param  {keywords} $verHoz - vertical option sets top and bottom padding. horizontal option sets left and right padding
-* @param  {keywords} $option - Extra option for !important 
+* @param  {keywords} $option - Extra option for !important
  *
  */
  @mixin QLD-container-padding($values, $verHoz: 'vertical', $option: '') {
@@ -495,9 +500,9 @@
     // Loop through the $values list
 	@each $value in $values {
         // This is a pixel on unitless unit. Let’s convert it to rems
-        @if type-of( $value ) == 'number' {
+        @if meta.type-of( $value ) == 'number' {
             // Get the value from supplied key for pixel and calculate the rem value
-            $padding-px: map-get( $QLD-space-map, $value );
+            $padding-px: map.get( $QLD-space-map, $value );
             $padding-rem: calc($padding-px / $QLD-rem);
 
             @if $verHoz == 'vertical'{
@@ -512,22 +517,22 @@
                 padding-right: $padding-px + px + $option;   // Pixel fallback for non-rem support
                 padding-right: $padding-rem + rem + $option; // REM size
             }
-            
 
-            $output: join( $output, $value );
+
+            $output: list.join( $output, $value );
         }
     }
-    // Mixin output 
+    // Mixin output
     $output:$output;
 }
 
 /**
-* QLD-container-margin - Select which level of margins 
+* QLD-container-margin - Select which level of margins
 *
-* @param  {keywords} $values - Either one of the following 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16 
+* @param  {keywords} $values - Either one of the following 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
 * @param  {keywords} $posNeg - pos option sets positive values, neg option sets negitive values
 * @param  {keywords} $verHoz - vertical option sets top and bottom margin. horizontal option sets left and right margin
-* @param  {keywords} $option - Extra option for !important 
+* @param  {keywords} $option - Extra option for !important
 *
 */
  @mixin QLD-container-margin($values,$posNeg, $verHoz: 'vertical', $option: '') {
@@ -536,18 +541,18 @@
     // Loop through the $values list
 	@each $value in $values {
         // This is a pixel on unitless unit. Let’s convert it to rems
-        @if type-of( $value ) == 'number' {
+        @if meta.type-of( $value ) == 'number' {
             // Get the value from supplied key for pixel and calculate the rem value
-            $padding-px: map-get( $QLD-space-map, $value );
+            $padding-px: map.get( $QLD-space-map, $value );
             $padding-rem: calc($padding-px / $QLD-rem);
-            
+
             @if $posNeg == 'pos'{
                 $padding-px:($padding-px);
                 $padding-rem:($padding-rem);
             } @else if $posNeg == 'neg'{
                 $padding-px:(-#{$padding-px});
                 $padding-rem:(-#{$padding-rem});
-            } 
+            }
 
             @if $verHoz == 'vertical'{
                 margin-top: $padding-px + px + $option;   // Pixel fallback for non-rem support
@@ -562,10 +567,10 @@
                 margin-right: $padding-rem + rem + $option; // REM size
             }
 
-            $output: join( $output, $value );
+            $output: list.join( $output, $value );
         }
     }
-    // Mixin output 
+    // Mixin output
     $output:$output;
 }
 
@@ -653,13 +658,13 @@
         box-shadow: $QLD-box-shaddow-level-three;
     } @else if $level==4 {
         box-shadow: $QLD-box-shaddow-level-four;
-    } 
+    }
 }
 
 /**
  * QLD-webkit-text-underline        - Applies webkit underline to the underline
  *
- * @param 
+ * @param
  *
  * @return {string}                 - Returns the underline and web kit underline
  */
@@ -671,7 +676,7 @@
 /**
  * QLD-webkit-text-decoration-none        - Applies webkit none to the none
  *
- * @param 
+ * @param
  *
  * @return {string}                 - Returns the none and web kit none
  */
@@ -689,10 +694,10 @@
  *
  * @param  {keywords} $buttonTextColor  - 'buttonText' for when you need to use $QLD-color-light__link--on-action or $QLD-color-dark__link--on-action
   *
- * @param  {keywords} $visitedState  - 'noVisited' for when you need to remove the visited state 
+ * @param  {keywords} $visitedState  - 'noVisited' for when you need to remove the visited state
  *
  * @return {string}                 - Returns the underline color and style of the link.
- */ 
+ */
  @mixin QLD-underline($colorScheme: 'light', $defaultUnderline: 'underline', $buttonTextColor: 'default', $visitedState: 'hasVisited') {
     //Whoevern inheriting this work, please get rid of this mixin approach as soon as possible. :-)
     //the colorScheme refers to the color of the body that contains the element. So, colorShcheme of the element itself is managed within this mixin.
@@ -706,11 +711,11 @@
             text-decoration-color: var(--QLD-color-light__underline);
             text-underline-offset: var(--QLD-underline__offset);
             text-decoration-skip-ink: auto;
-    
+
             &:hover,
             &:focus {
                 text-decoration-color: var(--QLD-color-light__underline--hover);
-                text-decoration-thickness: var(--QLD-underline__thickness-thick); 
+                text-decoration-thickness: var(--QLD-underline__thickness-thick);
             }
 
             @if $visitedState == "hasVisited"{
@@ -719,7 +724,7 @@
                     color: var(--QLD-color-light__link--visited);
                     text-decoration-color: var(--QLD-color-light__underline--visited);
                 }
-        
+
                 &:hover:visited {
                     color: var(--QLD-color-light__link--visited);
                     text-decoration-color: var(--QLD-color-light__underline--hover-visited);
@@ -737,7 +742,7 @@
                     text-decoration-thickness: var(--QLD-underline__thickness-thick);
                 }
             }
-            
+
             &:disabled,
             &[disabled]{
                 @include QLD-webkit-text-decoration-none();
@@ -755,30 +760,30 @@
             &:hover,
             &:focus {
                 @include QLD-webkit-text-underline();
-                
+
                 text-decoration-thickness: var(--QLD-underline__thickness-thick);
                 @if $buttonTextColor == "buttonText"{
                     text-decoration-color: var(--QLD-color-light__link--on-action);
                 }@else{
                     text-decoration-color: var(--QLD-color-light__underline--hover);
                 }
-                
+
             }
-            
+
             @if $visitedState == "hasVisited"{
 
                 &:visited {
                     // @include QLD-webkit-text-underline();
-                    
+
                     text-decoration-color: var(--QLD-color-light__underline--visited);
                     @if $buttonTextColor == "buttonText"{
                         color: var(--QLD-color-light__link--visited);
-                        
+
                     }@else{
                         text-decoration-color: var(--QLD-color-light__underline--hover);
                     }
                 }
-    
+
                 &:hover:visited {
                     // @include QLD-webkit-text-underline();
                     // color: var(--QLD-color-light__underline--hover-visited);
@@ -798,7 +803,7 @@
             &[disabled]{
                 @include QLD-webkit-text-decoration-none();
             }
-        }       
+        }
     }
 
     @else if $colorScheme== "dark" {
@@ -862,16 +867,16 @@
             &:hover,
             &:focus {
                 @include QLD-webkit-text-underline();
-                
+
                 text-decoration-thickness: var(--QLD-underline__thickness-thick);
 
                 @if $buttonTextColor == "buttonText"{
-                    text-decoration-color: var(--QLD-color-dark__link--on-action); 
+                    text-decoration-color: var(--QLD-color-dark__link--on-action);
                 }@else{
                     text-decoration-color: var(--QLD-color-dark__underline--hover);
                 }
 
-                
+
             }
 
             @if $visitedState == "hasVisited"{

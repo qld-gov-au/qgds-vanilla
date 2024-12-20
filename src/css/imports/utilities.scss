@@ -1,3 +1,4 @@
+@use "sass:map";
 // Screen Hidden Content
 .visuallyhidden {
     @extend %screen-hide;
@@ -127,7 +128,7 @@ img.pull-right {
 }
 
 .capitalised:first-letter {
-    text-transform: uppercase; 
+    text-transform: uppercase;
 }
 
 .breakout {
@@ -174,134 +175,134 @@ a.qld__max-width {
     .qld__default-xxxl {
       font-weight: 400;
     }
-  
+
     .qld__no-space {
       line-height: 1 !important;
     }
-  
+
     .qld__default-xs {
       font-size: var(--QLD-default-mobile-xs);
       line-height: 20px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-xs);
       }
     }
-  
+
     .qld__default-sm {
       font-size: var(--QLD-default-mobile-sm);
       line-height: 24px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-sm);
       }
     }
-  
+
     .qld__default-md {
       font-size: var(--QLD-default-mobile-md);
       line-height: 32px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-md);
       }
     }
-  
+
     .qld__default-lg {
       font-size: var(--QLD-default-mobile-lg);
       line-height: 36px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-lg);
       }
     }
-  
+
     .qld__default-xl {
       font-size: var(--QLD-default-mobile-xl);
       line-height: 36px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-xl);
       }
     }
-  
+
     .qld__default-xxl {
       font-size: var(--QLD-default-mobile-xxl);
       line-height: 48px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-xxl);
       }
     }
-  
+
     .qld__default-xxxl {
       font-size: var(--QLD-default-mobile-xxxl);
       line-height: 60px;
-  
+
       &.qld__heading-space {
         line-height: var(--QLD-heading-space-xxxl);
       }
     }
-  
+
     @include QLD-media(lg)  {
       .qld__default-xs {
         font-size: var(--QLD-default-desktop-xs);
         line-height: 20px;
       }
-  
+
       .qld__default-sm {
         font-size: var(--QLD-default-desktop-sm);
         line-height: 24px;
       }
-  
+
       .qld__default-md {
         font-size: var(--QLD-default-desktop-md);
         line-height: 32px;
       }
-  
+
       .qld__default-lg {
         font-size: var(--QLD-default-desktop-lg);
         line-height: 36px;
       }
-  
+
       .qld__default-xl {
         font-size: var(--QLD-default-desktop-xl);
         line-height: 48px;
       }
-  
+
       .qld__default-xxl {
         font-size: var(--QLD-default-desktop-xxl);
         line-height: 60px;
       }
-  
+
       .qld__default-xxxl {
         font-size: var(--QLD-default-desktop-xxxl);
         line-height: 72px;
       }
-  
+
       .qld__default-xs.qld__heading-space {
         line-height: var(--QLD-heading-space-xs);
       }
-  
+
       .qld__default-sm.qld__heading-space {
         line-height: var(--QLD-heading-space-sm);
       }
-  
+
       .qld__default-md.qld__heading-space {
         line-height: var(--QLD-heading-space-md);
       }
-  
+
       .qld__default-lg.qld__heading-space {
         line-height: var(--QLD-heading-space-lg);
       }
-  
+
       .qld__default-xl.qld__heading-space {
         line-height: var(--QLD-heading-space-xl);
       }
-  
+
       .qld__default-xxl.qld__heading-space {
         line-height: var(--QLD-heading-space-xxl);
       }
-  
+
       .qld__default-xxxl.qld__heading-space {
         line-height: var(--QLD-heading-space-xxxl);
       }
@@ -344,70 +345,70 @@ a.qld__max-width {
 
 }
 
-/** 
+/**
   Spacing utility classes
 */
 .qld__margin-t-section {
-  
-  margin-top: map-get( $QLD-space-map, $QLD-margin__section--mobile ) + px !important;
+
+  margin-top: map.get( $QLD-space-map, $QLD-margin__section--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, $QLD-margin__section--desktop ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__section--desktop ) + px !important;
   }
 
 }
 
 .qld__margin-t-content-block {
-  
-  margin-top: map-get( $QLD-space-map, $QLD-margin__content-block--mobile ) + px !important;
+
+  margin-top: map.get( $QLD-space-map, $QLD-margin__content-block--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, $QLD-margin__content-block--desktop ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__content-block--desktop ) + px !important;
   }
 
 }
 
 .qld__margin-t-component {
-  
-  margin-top: map-get( $QLD-space-map, $QLD-margin__component--mobile) + px !important;
+
+  margin-top: map.get( $QLD-space-map, $QLD-margin__component--mobile) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, $QLD-margin__component--desktop ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__component--desktop ) + px !important;
   }
 
 }
 
 .qld__margin-t-text-element {
-  
-  margin-top: map-get( $QLD-space-map, $QLD-margin__text-element--mobile ) + px !important;
+
+  margin-top: map.get( $QLD-space-map, $QLD-margin__text-element--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, $QLD-margin__text-element--desktop ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__text-element--desktop ) + px !important;
   }
 
 }
 
 .qld__margin-t-p {
-  
-  margin-top: map-get( $QLD-space-map, $QLD-margin__p--mobile ) + px !important;
+
+  margin-top: map.get( $QLD-space-map, $QLD-margin__p--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, $QLD-margin__p--desktop ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__p--desktop ) + px !important;
   }
 
 }
 
 .qld__margin-t-li--sm {
-  
+
   margin: 0;
   padding: 0;
 
   li, ol, ul {
 
-    margin-top: map-get( $QLD-space-map, $QLD-margin__li-close--mobile ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__li-close--mobile ) + px !important;
 
     @include QLD-media(lg) {
-      margin-top: map-get( $QLD-space-map, $QLD-margin__li-close--desktop ) + px !important;
+      margin-top: map.get( $QLD-space-map, $QLD-margin__li-close--desktop ) + px !important;
     }
 
   }
@@ -418,13 +419,13 @@ a.qld__max-width {
 
   margin: 0;
   padding: 0;
-  
+
   li, ol, ul {
 
-    margin-top: map-get( $QLD-space-map, $QLD-margin__li-wide--mobile ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__li-wide--mobile ) + px !important;
 
     @include QLD-media(lg) {
-      margin-top: map-get( $QLD-space-map, $QLD-margin__li-wide--desktop ) + px !important;
+      margin-top: map.get( $QLD-space-map, $QLD-margin__li-wide--desktop ) + px !important;
     }
 
   }
@@ -432,150 +433,150 @@ a.qld__max-width {
 }
 
 .qld__margin-t-label {
-  
-  margin-top: map-get( $QLD-space-map, $QLD-margin__lables--mobile ) + px !important;
+
+  margin-top: map.get( $QLD-space-map, $QLD-margin__lables--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, $QLD-margin__lables--desktop ) + px !important;
+    margin-top: map.get( $QLD-space-map, $QLD-margin__lables--desktop ) + px !important;
   }
 
 }
 
 
 .qld__margin-t-none {
-  
-  margin-top: map-get( $QLD-space-map, 0 ) + px !important;
+
+  margin-top: map.get( $QLD-space-map, 0 ) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map-get( $QLD-space-map, 0 ) + px !important;
+    margin-top: map.get( $QLD-space-map, 0 ) + px !important;
   }
 
 }
 
 .qld__padding-t-none {
-  
-  padding-top: map-get( $QLD-space-map, 0 ) + px !important;
+
+  padding-top: map.get( $QLD-space-map, 0 ) + px !important;
 
 }
 
-/** 
+/**
   Spacing flex utility row classes
 */
 .qld__row-gap-content-block {
-  row-gap: map-get( $QLD-space-map, $QLD-margin__content-block--mobile ) + px !important;
+  row-gap: map.get( $QLD-space-map, $QLD-margin__content-block--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    row-gap: map-get( $QLD-space-map, $QLD-margin__content-block--desktop ) + px !important;
+    row-gap: map.get( $QLD-space-map, $QLD-margin__content-block--desktop ) + px !important;
   }
 
 }
 
 .qld__row-gap-component {
-  row-gap: map-get( $QLD-space-map, $QLD-margin__component--mobile ) + px !important;
+  row-gap: map.get( $QLD-space-map, $QLD-margin__component--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    row-gap: map-get( $QLD-space-map, $QLD-margin__component--desktop ) + px !important;
+    row-gap: map.get( $QLD-space-map, $QLD-margin__component--desktop ) + px !important;
   }
 
 }
 
 .qld__row-gap-text-element {
-  row-gap: map-get( $QLD-space-map, $QLD-margin__text-element--mobile ) + px !important;
+  row-gap: map.get( $QLD-space-map, $QLD-margin__text-element--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    row-gap: map-get( $QLD-space-map, $QLD-margin__text-element--desktop ) + px !important;
+    row-gap: map.get( $QLD-space-map, $QLD-margin__text-element--desktop ) + px !important;
   }
 
 }
 
 .qld__row-gap-p {
-  row-gap: map-get( $QLD-space-map, $QLD-margin__p--mobile ) + px !important;
+  row-gap: map.get( $QLD-space-map, $QLD-margin__p--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    row-gap: map-get( $QLD-space-map, $QLD-margin__p--desktop ) + px !important;
+    row-gap: map.get( $QLD-space-map, $QLD-margin__p--desktop ) + px !important;
   }
 
 }
 
 .qld__row-gap-li--sm {
-  row-gap: map-get( $QLD-space-map, $QLD-margin__li-close--mobile ) + px !important;
+  row-gap: map.get( $QLD-space-map, $QLD-margin__li-close--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    row-gap: map-get( $QLD-space-map, $QLD-margin__li-close--desktop ) + px !important;
+    row-gap: map.get( $QLD-space-map, $QLD-margin__li-close--desktop ) + px !important;
   }
 
 }
 
 .qld__row-gap-li--lg {
-  row-gap: map-get( $QLD-space-map, $QLD-margin__li-wide--mobile ) + px !important;
+  row-gap: map.get( $QLD-space-map, $QLD-margin__li-wide--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    row-gap: map-get( $QLD-space-map, $QLD-margin__li-wide--desktop ) + px !important;
+    row-gap: map.get( $QLD-space-map, $QLD-margin__li-wide--desktop ) + px !important;
   }
 
 }
 
-/** 
+/**
   Spacing flex utility column classes
 */
 
 .qld__col-gap-content-block {
-  column-gap: map-get( $QLD-space-map, $QLD-margin__content-block--mobile ) + px !important;
+  column-gap: map.get( $QLD-space-map, $QLD-margin__content-block--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map-get( $QLD-space-map, $QLD-margin__content-block--desktop ) + px !important;
+    column-gap: map.get( $QLD-space-map, $QLD-margin__content-block--desktop ) + px !important;
   }
 
 }
 
 .qld__col-gap-component {
-  column-gap: map-get( $QLD-space-map, $QLD-margin__component--mobile ) + px !important;
+  column-gap: map.get( $QLD-space-map, $QLD-margin__component--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map-get( $QLD-space-map, $QLD-margin__component--desktop ) + px !important;
+    column-gap: map.get( $QLD-space-map, $QLD-margin__component--desktop ) + px !important;
   }
 
 }
 
 .qld__col-gap-text-element {
-  column-gap: map-get( $QLD-space-map, $QLD-margin__text-element--mobile ) + px !important;
+  column-gap: map.get( $QLD-space-map, $QLD-margin__text-element--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map-get( $QLD-space-map, $QLD-margin__text-element--desktop ) + px !important;
+    column-gap: map.get( $QLD-space-map, $QLD-margin__text-element--desktop ) + px !important;
   }
 
 }
 
 .qld__col-gap-p {
-  column-gap: map-get( $QLD-space-map, $QLD-margin__p--mobile ) + px !important;
+  column-gap: map.get( $QLD-space-map, $QLD-margin__p--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map-get( $QLD-space-map, $QLD-margin__p--desktop ) + px !important;
+    column-gap: map.get( $QLD-space-map, $QLD-margin__p--desktop ) + px !important;
   }
 
 }
 
 .qld__col-gap-li--sm {
-  column-gap: map-get( $QLD-space-map, $QLD-margin__li-close--mobile ) + px !important;
+  column-gap: map.get( $QLD-space-map, $QLD-margin__li-close--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map-get( $QLD-space-map, $QLD-margin__li-close--desktop ) + px !important;
+    column-gap: map.get( $QLD-space-map, $QLD-margin__li-close--desktop ) + px !important;
   }
 
 }
 
 .qld__col-gap-li--lg {
-  column-gap: map-get( $QLD-space-map, $QLD-margin__li-wide--mobile ) + px !important;
+  column-gap: map.get( $QLD-space-map, $QLD-margin__li-wide--mobile ) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map-get( $QLD-space-map, $QLD-margin__li-wide--desktop ) + px !important;
+    column-gap: map.get( $QLD-space-map, $QLD-margin__li-wide--desktop ) + px !important;
   }
 
 }
 
 /*   New Classes that apply the form sizes variables
   ----------------------------------------------------------------------------------------------------------
-      
+
 New classes to dictate field size, this applied variables that affec thte max-width of a for inpout field
 
 ---------------------------------------------------------------------------------------------------------- */

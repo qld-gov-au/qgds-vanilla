@@ -27,13 +27,12 @@
                                     <span class="qld__main-nav__item-text" data-name="{{{asset_short_name}}}">Home</span>
                                 </a>
                             </div>
-
                         </li>
                         {{/if}}
-                        {{#each site.children}} 
+                        {{#each site.children}}
                             <li class="qld__main-nav__item {{#ifCond asset_assetid '==' ../current.data.assetid}}active{{/ifCond}} {{#ifCond asset_assetid '==' ../current.top.asset_assetid}}active{{/ifCond}}">
                                 <div class="qld__main-nav__item-title">
-                                    {{#ifCond ../site.metadata.mainNavMegaMenuShow.value '!=' 'true'}} 
+                                    {{#ifCond ../site.metadata.mainNavMegaMenuShow.value '!=' 'true'}}
                                         <a {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{asset_assetid}}" data-name="{{{asset_short_name}}}" class="qld__main-nav__item-link">{{{renderSpecialChar asset_short_name}}}</a>
                                     {{/ifCond}}
                                     {{#ifCond ../site.metadata.mainNavMegaMenuShow.value '==' 'true'}}
@@ -47,7 +46,6 @@
                                                     </button>
                                                 {{/if}}
                                         {{/arrayWith}}
-
                                     {{/ifCond}}
                                 </div>
                                 {{#ifCond ../site.metadata.mainNavMegaMenuShow.value '==' 'true'}}
@@ -66,14 +64,13 @@
                                                             {{/if}}
                                                         {{/ifCond}}
                                                     </div>
-                                                    
                                                     <hr class="qld__horizontal-rule qld__horizontal-rule--lg">
                                                         <ul class="qld__link-columns qld__link-columns--3-col qld__link-list">
-                                                        {{#each this}}                                                   
+                                                        {{#each this}}
                                                             {{#ifCond asset_assetid '!=' @root.current.data.assetid}}
                                                             <li class="{{#ifCond @root.site.metadata.mainNavPageDescLevelTwo.value '==' 'true'}}{{#if asset_metadata_shortDescription}}qld__main-nav__item--has-desc{{/if}}{{/ifCond}}">
                                                                 <a href="{{asset_url}}">
-                                                                    <span class="qld__main-nav__sub-item-text">{{{asset_short_name}}}</span> 
+                                                                    <span class="qld__main-nav__sub-item-text">{{{asset_short_name}}}</span>
                                                                 </a>
                                                             {{/ifCond}}
                                                             {{#ifCond asset_assetid '==' @root.current.data.assetid}}
@@ -92,7 +89,7 @@
                                                         <div class="qld__main-nav__sub-footer">
                                                             <hr class="qld__horizontal-rule qld__horizontal-rule--lg">
                                                             <a class="qld__cta-link qld__cta-link--view-all" href="./?a={{../this.asset_assetid}}">View all</a>
-                                                         </div>
+                                                    </div>
                                                     {{/ifCond}}
                                                 </div>
                                             </div>
