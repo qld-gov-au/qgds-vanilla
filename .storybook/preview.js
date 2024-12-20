@@ -9,7 +9,7 @@ import {
 } from "@storybook/addon-themes";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-//this variable is updated by esbuild on what 'brands' we have
+//this variable is updated by esbuild on what 'brands' we have something
 // prettier-ignore
 const brandToolbarItems=[{"value":"main-campaign-neon","title":"Campaign Neon"},{"value":"main-campaign-neon-invert","title":"Campaign Neon Invert"},{"value":"main-qld-corporate","title":"Qld Corporate"},{"value":"main-qld-corporate-invert","title":"Qld Corporate Invert"},{"value":"main","title":"Qld Default"},{"value":"main-invert","title":"Qld Default Invert"},{"value":"main-qld-high-contrast","title":"Qld High Contrast"},{"value":"main-qld-high-contrast-invert","title":"Qld High Contrast Invert"},{"value":"main-qld-maroon","title":"Qld Maroon"},{"value":"main-qld-maroon-invert","title":"Qld Maroon Invert"}];
 

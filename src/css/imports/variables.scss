@@ -46,8 +46,7 @@ $QLD-font:
   "Segoe UI Emoji",
   "Segoe UI Symbol";
 
-$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas,
-  "Liberation Mono", Menlo, Courier, monospace !default;
+$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 $QLD-font-heading:
   $typographyMobileH1FontFamily,
   -apple-system,
@@ -130,19 +129,19 @@ $QLD-space-map: (
   1: $spacing1,
   2: $spacing2,
   3: $spacing3,
-  4: 16,
-  5: 20,
-  6: 24,
-  7: 32,
-  8: 36,
-  9: 40,
-  10: 48,
-  11: 56,
-  12: 64,
-  13: 80,
-  14: 96,
-  15: 128,
-  16: 160,
+  4: $spacing4,
+  5: $spacing5,
+  6: $spacing6,
+  7: $spacing7,
+  8: $spacing8,
+  9: $spacing9,
+  10: $spacing10,
+  11: $spacing11,
+  12: $spacing12,
+  13: $spacing13,
+  14: $spacing14,
+  15: $spacing15,
+  16: $spacing16,
 ) !default;
 
 /* Gutters - Space between cols in the grid  */
@@ -165,12 +164,8 @@ $QLD-grid__inner-padding--media-lg: 7;
 $QLD-grid__inner-padding--media-xl: 7; // not used
 
 /* Outer page margins (defined by padding on the container-fluid class) for vertical navigation   */
-$QLD-grid__inner-padding--media-portal-lg: calc(
-  48px + (100vw - 992px) * (128 - 48) / (1312 - 992)
-); // not used
-$QLD-grid__inner-padding--media-portal-xl: calc(
-  72px + (100vw - 1312px) * (128 - 72) / (1600 - 1312)
-); // not used
+$QLD-grid__inner-padding--media-portal-lg: calc(48px + (100vw - 992px) * (128 - 48) / (1312 - 992)); // not used
+$QLD-grid__inner-padding--media-portal-xl: calc(72px + (100vw - 1312px) * (128 - 72) / (1600 - 1312)); // not used
 
 /* Max-width of content area   */
 $QLD-grid__maxwidth: 86rem;
@@ -194,20 +189,20 @@ $QLD-margin__component--mobile: 6;
 /* Heading, text and paragraph spacing   */
 
 /* Space above an H1 */
-$QLD-margin__h1--desktop: 11;
-$QLD-margin__h1--mobile: 7;
+//$QLD-margin__h1--desktop: 11; //deprecated
+//$QLD-margin__h1--mobile: 7; //deprecated
 
 /* Space above an H2 */
-$QLD-margin__h2--desktop: 10;
-$QLD-margin__h2--mobile: 7;
+//$QLD-margin__h2--desktop: 10; //deprecated
+//$QLD-margin__h2--mobile: 7; //deprecated
 
 /* Space above an H3 */
-$QLD-margin__h3--desktop: 8;
-$QLD-margin__h3--mobile: 7;
+//$QLD-margin__h3--desktop: 8; //deprecated
+//$QLD-margin__h3--mobile: 7; //deprecated
 
 /* Space above an H4-h6 */
-$QLD-margin__h4-h6--desktop: 7;
-$QLD-margin__h4-h6--mobile: 5;
+//$QLD-margin__h4-h6--desktop: 7; //deprecated
+//$QLD-margin__h4-h6--mobile: 5; //deprecated
 
 /* Space between different and text elements (ul,li,p,a,dl) example (h1 + p) */
 $QLD-margin__text-element--desktop: 6;
@@ -241,23 +236,24 @@ $QLD-border-width-extra-thick: 8px;
 /**
 * QLD border-radius values
 */
-$QLD-border-radius-xs: map.get($QLD-space-map, 1) + px;
-$QLD-border-radius-sm: map.get($QLD-space-map, 3) + px;
-$QLD-border-radius-md: map.get($QLD-space-map, 4) + px;
-$QLD-border-radius-lg: map.get($QLD-space-map, 7) + px;
-$QLD-border-radius-xl: map.get($QLD-space-map, 9) + px;
-$QLD-border-radius-xxl: map.get($QLD-space-map, 12) + px;
+$QLD-border-radius-none: $borderRadiusNone;
+$QLD-border-radius-xs: $borderRadiusXs;
+$QLD-border-radius-sm: $borderRadiusSm;
+$QLD-border-radius-md: $borderRadiusMd;
+$QLD-border-radius-lg: $borderRadiusLg;
+$QLD-border-radius-xl: $borderRadiusXl;
+$QLD-border-radius-xxl: $borderRadiusXxl;
 
 /**
 * QLD underline-thickness values
 */
-$QLD-underline__thickness-thin: 0.5px;
-$QLD-underline__thickness-thick: 2px;
+$QLD-underline__thickness-thin: $textDecorationThicknessThin;
+$QLD-underline__thickness-thick: $textDecorationThicknessThick;
 
 /**
 * QLD underline-offset value
 */
-$QLD-underline__offset: 0.3em;
+$QLD-underline__offset: $textDecorationOffsetNear;
 
 /**
 * QLD box shadow values
@@ -448,7 +444,7 @@ $QLD-color-dark__background--alt-shade: $paletteStrongShade !default;
 /**
   * QLD-border-radius styles
   */
-$QLD-border-radius: $QLD-unit + 0px !default;
+$QLD-border-radius: $QLD-unit + 0px !default; //one place only
 
 /**
 * QLD underline-color values
@@ -493,7 +489,7 @@ $QLD-heading-space-xl: 40px;
 $QLD-heading-space-xxl: 52px;
 $QLD-heading-space-xxxl: 60px;
 
-$QLD-color-contained-layout__background: #eff4f9;
+$QLD-color-contained-layout__background: #eff4f9; //deprecated
 
 /**
 * QLD custom properties (CSS variables) - defaults

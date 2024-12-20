@@ -628,7 +628,16 @@ form {
 	 * `small`: for less important information (not stylistic purposes).
 	 */
   small {
-    @include QLD-fontgrid(xs, small);
+    //@include QLD-fontgrid(xs, small);
+    font-size: $typographyMobileSmFontSize;
+    font-weight: $typographyMobileSmFontWeight;
+    line-height: $typographyMobileSmLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopSmFontSize;
+      font-weight: $typographyDesktopSmFontWeight;
+      line-height: $typographyDesktopSmLineHeight;
+    }
   }
 
   /**
@@ -702,9 +711,19 @@ form {
 	 */
   sub,
   sup {
-    @include QLD-fontgrid(xs, nospace);
     position: relative;
     vertical-align: baseline;
+
+    //@include QLD-fontgrid(xs, nospace);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
   }
 
   sub {
@@ -721,7 +740,17 @@ form {
 	 */
   kbd,
   samp {
-    @include QLD-fontgrid(xs);
+    //@include QLD-fontgrid(xs);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
+
     @include QLD-space(line-height, 1.25unit);
     @include QLD-space(padding, 0.125unit 0.25unit);
     @include QLD-space(margin, 0unit 0.125unit);
@@ -807,12 +836,32 @@ form {
 
   blockquote,
   .qld__block-quote {
-    @include QLD-fontgrid(md, small);
+    //@include QLD-fontgrid(md, small);
+    font-size: $typographyMobileQuoteFontSize;
+    font-weight: $typographyMobileQuoteFontWeight;
+    line-height: $typographyMobileQuoteLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopQuoteFontSize;
+      font-weight: $typographyDesktopQuoteFontWeight;
+      line-height: $typographyDesktopQuoteLineHeight;
+    }
+
     color: var(--QLD-color-light__heading);
     font-weight: 600;
 
     .qld__quote-source {
-      @include QLD-fontgrid(xs, small);
+      //@include QLD-fontgrid(xs, small);
+      font-size: $typographyMobileSmFontSize;
+      font-weight: $typographyMobileSmFontWeight;
+      line-height: $typographyMobileSmLineHeight;
+
+      @include QLD-media(lg) {
+        font-size: $typographyDesktopSmFontSize;
+        font-weight: $typographyDesktopSmFontWeight;
+        line-height: $typographyDesktopSmLineHeight;
+      }
+
       color: var(--QLD-color-light__text--lighter);
       margin-top: 0.625rem;
     }
@@ -837,7 +886,17 @@ form {
   }
 
   .qld__caption {
-    @include QLD-fontgrid(xs);
+    //@include QLD-fontgrid(xs);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
+
     font-weight: 400;
     color: var(--QLD-color-light__text--lighter);
   }
