@@ -46,8 +46,7 @@ $QLD-font:
   "Segoe UI Emoji",
   "Segoe UI Symbol";
 
-$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas,
-  "Liberation Mono", Menlo, Courier, monospace !default;
+$QLD-font-monospace: $typographyMobileCodeFontFamily, Consolas, "Liberation Mono", Menlo, Courier, monospace !default;
 $QLD-font-heading:
   $typographyMobileH1FontFamily,
   -apple-system,
@@ -165,12 +164,8 @@ $QLD-grid__inner-padding--media-lg: 7;
 $QLD-grid__inner-padding--media-xl: 7; // not used
 
 /* Outer page margins (defined by padding on the container-fluid class) for vertical navigation   */
-$QLD-grid__inner-padding--media-portal-lg: calc(
-  48px + (100vw - 992px) * (128 - 48) / (1312 - 992)
-); // not used
-$QLD-grid__inner-padding--media-portal-xl: calc(
-  72px + (100vw - 1312px) * (128 - 72) / (1600 - 1312)
-); // not used
+$QLD-grid__inner-padding--media-portal-lg: calc(48px + (100vw - 992px) * (128 - 48) / (1312 - 992)); // not used
+$QLD-grid__inner-padding--media-portal-xl: calc(72px + (100vw - 1312px) * (128 - 72) / (1600 - 1312)); // not used
 
 /* Max-width of content area   */
 $QLD-grid__maxwidth: 86rem;
@@ -258,7 +253,7 @@ $QLD-underline__thickness-thick: $textDecorationThicknessThick;
 /**
 * QLD underline-offset value
 */
-$QLD-underline__offset: 0.6em;
+$QLD-underline__offset: $textDecorationOffsetNear;
 
 /**
 * QLD box shadow values
