@@ -1,7 +1,7 @@
 /**
  * @file back_to_top.stories.js
  * @description Storybook configuration file for the Back To Top component.
- * @module back_to_top.stories
+ * @module back-to-top.stories
  */
 
 // Imports:
@@ -13,7 +13,7 @@ import mockupData from "./back-to-top.data.json";
 /* ========= STORIES 👇 ===== */
 
 export default {
-  title: "Components / Back To Top",
+  title: "Components / Back to Top",
   render: (args) => {
     try {
       return new QGDS.BackToTop({ data: args }).htmlstring;
