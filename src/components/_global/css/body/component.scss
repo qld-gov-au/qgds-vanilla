@@ -155,11 +155,7 @@ form {
 
     //Align the body when within a two col layout/ content page
     #content[class^="col-"] > .qld__body {
-      @include QLD-container-margin(
-        $QLD-grid__gutter--media-sm,
-        neg,
-        horizontal
-      );
+      @include QLD-container-margin($QLD-grid__gutter--media-sm, neg, horizontal);
       @include QLD-container-padding($QLD-padding__section--mobile);
 
       &.qld__tab-section {
@@ -169,11 +165,7 @@ form {
       }
 
       @include QLD-media(md) {
-        @include QLD-container-margin(
-          $QLD-grid__gutter--media-md,
-          neg,
-          horizontal
-        );
+        @include QLD-container-margin($QLD-grid__gutter--media-md, neg, horizontal);
         @include QLD-container-padding($QLD-grid__gutter--media-sm, horizontal);
       }
 
@@ -216,29 +208,18 @@ form {
         &.qld__body--alt,
         &.qld__body--dark,
         &.qld__body--dark-alt {
-          @include QLD-container-padding(
-            $QLD-padding__section--mobile,
-            !important
-          );
+          @include QLD-container-padding($QLD-padding__section--mobile, !important);
 
           @include QLD-media(lg) {
-            @include QLD-container-padding(
-              $QLD-padding__section--desktop !important
-            );
+            @include QLD-container-padding($QLD-padding__section--desktop !important);
           }
         }
       }
 
       .container-fluid {
-        @include QLD-container-padding(
-          $QLD-grid__inner-padding--media-xs,
-          horizontal
-        );
+        @include QLD-container-padding($QLD-grid__inner-padding--media-xs, horizontal);
         @include QLD-media(lg) {
-          @include QLD-container-padding(
-            $QLD-grid__inner-padding--media-lg,
-            horizontal
-          );
+          @include QLD-container-padding($QLD-grid__inner-padding--media-lg, horizontal);
         }
       }
 
@@ -629,14 +610,14 @@ form {
 	 */
   small {
     //@include QLD-fontgrid(xs, small);
-    font-size: $typographyMobileSmFontSize;
-    font-weight: $typographyMobileSmFontWeight;
-    line-height: $typographyMobileSmLineHeight;
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
 
     @include QLD-media(lg) {
-      font-size: $typographyDesktopSmFontSize;
-      font-weight: $typographyDesktopSmFontWeight;
-      line-height: $typographyDesktopSmLineHeight;
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
     }
   }
 
@@ -829,8 +810,7 @@ form {
 
   .qld__block-quote {
     padding-left: 1.375rem;
-    border-left: $QLD-border-width-thick solid
-      var(--QLD-color-light__design-accent);
+    border-left: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
     margin: 0;
   }
 
@@ -852,14 +832,14 @@ form {
 
     .qld__quote-source {
       //@include QLD-fontgrid(xs, small);
-      font-size: $typographyMobileSmFontSize;
-      font-weight: $typographyMobileSmFontWeight;
-      line-height: $typographyMobileSmLineHeight;
+      font-size: $typographyMobileXsFontSize;
+      font-weight: $typographyMobileXsFontWeight;
+      line-height: $typographyMobileXsLineHeight;
 
       @include QLD-media(lg) {
-        font-size: $typographyDesktopSmFontSize;
-        font-weight: $typographyDesktopSmFontWeight;
-        line-height: $typographyDesktopSmLineHeight;
+        font-size: $typographyDesktopXsFontSize;
+        font-weight: $typographyDesktopXsFontWeight;
+        line-height: $typographyDesktopXsLineHeight;
       }
 
       color: var(--QLD-color-light__text--lighter);

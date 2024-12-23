@@ -33,9 +33,7 @@
 
 // 2D rotation with IE support
 @mixin sq-rotate($deg) {
-  $msRotVal: (
-    ((360 + $deg) % 360) / 90
-  ); // Modulo lets us handle negative values.
+  $msRotVal: (((360 + $deg) % 360) / 90); // Modulo lets us handle negative values.
 
   @include sq-transform(rotate($deg + deg));
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$msRotVal}); /* stylelint-disable-line */
@@ -60,11 +58,7 @@
 }
 
 // Glow effect taken from foundation
-@mixin sq-block-glowing-effect(
-  $selector: focus,
-  $fade-time: 300ms,
-  $glowing-effect-color: blue
-) {
+@mixin sq-block-glowing-effect($selector: focus, $fade-time: 300ms, $glowing-effect-color: blue) {
   -webkit-transition:
     -webkit-box-shadow $fade-time,
     border-color $fade-time ease-in-out;
@@ -226,13 +220,7 @@
 }
 
 // Font face
-@mixin font-face(
-  $name,
-  $path,
-  $weight: null,
-  $style: null,
-  $exts: eot woff2 woff ttf svg
-) {
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
   $src: null;
 
   $extmods: (
@@ -246,17 +234,9 @@
   );
 
   @each $ext in $exts {
-    $extmod: if(
-      map.has-key($extmods, $ext),
-      $ext + map.get($extmods, $ext),
-      $ext
-    );
+    $extmod: if(map.has-key($extmods, $ext), $ext + map.get($extmods, $ext), $ext);
     $format: if(map.has-key($formats, $ext), map.get($formats, $ext), $ext);
-    $src: append(
-      $src,
-      url(quote($path + "." + $extmod)) format(quote($format)),
-      comma
-    );
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
   }
 
   @font-face {
@@ -489,13 +469,7 @@
   $fontsize-rem: calc($fontsize-px / $QLD-rem);
 
   // Change the lineheight if it doesn't hit a QLD-unit e.g. 40px font size with 1.5 lineheight = 50px should be 52px
-  $lineheight-pixel: round(
-      calc(
-        (map.get($QLD-lineheight-map, $lineheight-key) * $fontsize-px) /
-          $QLD-unit
-      )
-    ) *
-    $QLD-unit;
+  $lineheight-pixel: round(calc((map.get($QLD-lineheight-map, $lineheight-key) * $fontsize-px) / $QLD-unit)) * $QLD-unit;
   $lineheight: calc($lineheight-pixel / $fontsize-px);
 
   // Mixin output
@@ -523,22 +497,14 @@
       $padding-rem: calc($padding-px / $QLD-rem);
 
       @if $verHoz == "vertical" {
-        padding-top: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        padding-top: $padding-px + px + $option; // Pixel fallback for non-rem support
         padding-top: $padding-rem + rem + $option; // REM size
-        padding-bottom: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        padding-bottom: $padding-px + px + $option; // Pixel fallback for non-rem support
         padding-bottom: $padding-rem + rem + $option; // REM size
       } @else if $verHoz == "horizontal" {
-        padding-left: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        padding-left: $padding-px + px + $option; // Pixel fallback for non-rem support
         padding-left: $padding-rem + rem + $option; // REM size
-        padding-right: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        padding-right: $padding-px + px + $option; // Pixel fallback for non-rem support
         padding-right: $padding-rem + rem + $option; // REM size
       }
 
@@ -558,12 +524,7 @@
 * @param  {keywords} $option - Extra option for !important
 *
 */
-@mixin QLD-container-margin(
-  $values,
-  $posNeg,
-  $verHoz: "vertical",
-  $option: ""
-) {
+@mixin QLD-container-margin($values, $posNeg, $verHoz: "vertical", $option: "") {
   $output: ();
 
   // Loop through the $values list
@@ -583,22 +544,14 @@
       }
 
       @if $verHoz == "vertical" {
-        margin-top: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        margin-top: $padding-px + px + $option; // Pixel fallback for non-rem support
         margin-top: $padding-rem + rem + $option; // REM size
-        margin-bottom: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        margin-bottom: $padding-px + px + $option; // Pixel fallback for non-rem support
         margin-bottom: $padding-rem + rem + $option; // REM size
       } @else if $verHoz == "horizontal" {
-        margin-left: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        margin-left: $padding-px + px + $option; // Pixel fallback for non-rem support
         margin-left: $padding-rem + rem + $option; // REM size
-        margin-right: $padding-px +
-          px +
-          $option; // Pixel fallback for non-rem support
+        margin-right: $padding-px + px + $option; // Pixel fallback for non-rem support
         margin-right: $padding-rem + rem + $option; // REM size
       }
 
@@ -619,12 +572,7 @@
  *
  * @return {string}           - The code; background image containing the encoded SVG
 */
-@mixin QLD-getControlShape(
-  $kind,
-  $part,
-  $color1: transparent,
-  $color2: transparent
-) {
+@mixin QLD-getControlShape($kind, $part, $color1: transparent, $color2: transparent) {
   $start: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">';
   $end: "</svg>";
 
@@ -660,19 +608,11 @@
  *
  * @return {number}          - The indented menu items
  */
-@mixin QLD-side-nav-indent(
-  $depth: $QLD-side-nav-depth,
-  $element: "a",
-  $indent-size: 1
-) {
+@mixin QLD-side-nav-indent($depth: $QLD-side-nav-depth, $element: "a", $indent-size: 1) {
   $chain: $element;
   @for $i from 1 to $depth + 1 {
     $chain: "ul " + $chain;
-    $indent: if(
-      $i < 2,
-      ($indent-size * $i + 1) * 1unit,
-      ($indent-size * $i + 1) * 1.25unit
-    );
+    $indent: if($i < 2, ($indent-size * $i + 1) * 1unit, ($indent-size * $i + 1) * 1.25unit);
 
     & #{$chain} {
       @include QLD-space(padding-left, $indent);
@@ -767,9 +707,7 @@
 
         &:hover:visited {
           color: var(--QLD-color-light__link--visited);
-          text-decoration-color: var(
-            --QLD-color-light__underline--hover-visited
-          );
+          text-decoration-color: var(--QLD-color-light__underline--hover-visited);
           text-decoration-thickness: var(--QLD-underline__thickness-thick);
         }
       } @else {
@@ -825,9 +763,7 @@
         &:hover:visited {
           // @include QLD-webkit-text-underline();
           // color: var(--QLD-color-light__underline--hover-visited);
-          text-decoration-color: var(
-            --QLD-color-light__underline--hover-visited
-          );
+          text-decoration-color: var(--QLD-color-light__underline--hover-visited);
           text-decoration-thickness: var(--QLD-underline__thickness-thick);
           @if $buttonTextColor == "buttonText" {
             color: var(--QLD-color-light__link--on-action);
@@ -868,9 +804,7 @@
 
         &:hover:visited {
           color: var(--QLD-color-dark__link--visited);
-          text-decoration-color: var(
-            --QLD-color-dark__underline--hover-visited
-          );
+          text-decoration-color: var(--QLD-color-dark__underline--hover-visited);
           text-decoration-thickness: var(--QLD-underline__thickness-thick);
         }
       } @else {
@@ -938,9 +872,7 @@
             text-decoration-color: var(--QLD-color-dark__link--on-action);
           } @else {
             color: var(--QLD-color-dark__underline--hover-visited);
-            text-decoration-color: var(
-              --QLD-color-dark__underline--hover-visited
-            );
+            text-decoration-color: var(--QLD-color-dark__underline--hover-visited);
           }
         }
       }

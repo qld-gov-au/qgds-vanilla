@@ -5,10 +5,19 @@
 @use "sass:map";
 
 .qld__footer {
-  @include QLD-fontgrid(xs);
+  //@include QLD-fontgrid(xs);
+  font-size: $typographyMobileXsFontSize;
+  font-weight: $typographyMobileXsFontWeight;
+  line-height: $typographyMobileXsLineHeight;
+
+  @include QLD-media(lg) {
+    font-size: $typographyDesktopXsFontSize;
+    font-weight: $typographyDesktopXsFontWeight;
+    line-height: $typographyDesktopXsLineHeight;
+  }
+
   @include QLD-space(padding-bottom, 2.5unit);
-  border-top: $QLD-border-width-thick solid
-    var(--QLD-color-light__design-accent);
+  border-top: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
   background-color: $QLD-color-neutral--lightest;
   color: var(--QLD-color-light__text);
 
@@ -70,12 +79,22 @@
   & &__heading {
     // double & & to increase specificity because of clash
     color: var(--QLD-color-light__heading);
-    @include QLD-fontgrid(sm, heading);
-    font-weight: 700;
+
+    //@include QLD-fontgrid(sm, heading);
+    //font-weight: 700;
+    //@include QLD-media(md) {
+    //@include QLD-fontgrid(md, heading);
+    //}
+    font-size: $typographyMobileH5FontSize;
+    font-weight: $typographyMobileH5FontWeight;
+    line-height: $typographyMobileH5LineHeight;
 
     @include QLD-media(md) {
-      @include QLD-fontgrid(md, heading);
+      font-size: $typographyDesktopH5FontSize;
+      font-weight: $typographyDesktopH5FontWeight;
+      line-height: $typographyDesktopH5LineHeight;
     }
+
     @include QLD-media(xl) {
       margin-bottom: 0;
     }
@@ -92,8 +111,7 @@
   }
 
   & &__row {
-    border-bottom: $QLD-border-width-thin solid
-      var(--QLD-color-light__border--alt);
+    border-bottom: $QLD-border-width-thin solid var(--QLD-color-light__border--alt);
     .qld__footer__column:last-of-type {
       border-top: none;
       @include QLD-space(margin-top, 0unit);
@@ -275,8 +293,7 @@
       align-items: flex-start;
       @include QLD-space(padding-top, 0unit);
       height: 100%;
-      border-right: $QLD-border-width-default solid
-        var(--QLD-color-light__border);
+      border-right: $QLD-border-width-default solid var(--QLD-color-light__border);
     }
     &__label {
       @include QLD-media(lg, "down") {
@@ -328,8 +345,7 @@
       height: 100%;
       @include QLD-space(padding-top, 0unit);
       @include QLD-space(padding-right, 2unit);
-      border-right: $QLD-border-width-default solid
-        var(--QLD-color-light__border);
+      border-right: $QLD-border-width-default solid var(--QLD-color-light__border);
     }
     .qld__footer__heading {
       @include QLD-media(xl) {
@@ -354,20 +370,14 @@
 
   * + .qld__footer__logo {
     img {
-      @include QLD-space(
-        margin-top,
-        map.get($QLD-space-map, $QLD-margin__text-element--mobile) + px
-      );
+      @include QLD-space(margin-top, map.get($QLD-space-map, $QLD-margin__text-element--mobile) + px);
     }
   }
 
   @include QLD-media(md) {
     * + .qld__footer__logo {
       img {
-        @include QLD-space(
-          margin-top,
-          map.get($QLD-space-map, $QLD-margin__text-element--desktop) + px
-        );
+        @include QLD-space(margin-top, map.get($QLD-space-map, $QLD-margin__text-element--desktop) + px);
       }
     }
   }
