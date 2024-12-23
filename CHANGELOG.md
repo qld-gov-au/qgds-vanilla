@@ -2,15 +2,16 @@
 ## [Unreleased]
 
 
-<a name="v1.0.1"></a>
-## [v1.0.1] - 2024-12-16
+<a name="v1.0.2"></a>
+## [v1.0.2] - 2024-12-23
 ### Reverts
 - 1.0.0
   - 1.0.1
   - fixing in production QHWT-608
   
   ### Pull Requests
-- Merge pull request [#178](https://github.com/qld-gov-au/qgds-vanilla/issues/178) from qld-gov-au/develop
+- Merge pull request [#179](https://github.com/qld-gov-au/qgds-vanilla/issues/179) from qld-gov-au/update-changelog
+  - Merge pull request [#178](https://github.com/qld-gov-au/qgds-vanilla/issues/178) from qld-gov-au/develop
   - Merge pull request [#181](https://github.com/qld-gov-au/qgds-vanilla/issues/181) from qld-gov-au/feature/QGDS-76-typography
   - Merge pull request [#161](https://github.com/qld-gov-au/qgds-vanilla/issues/161) from qld-gov-au/dependabot/npm_and_yarn/develop/vitejs/plugin-vue-5.2.1
   - Merge pull request [#165](https://github.com/qld-gov-au/qgds-vanilla/issues/165) from qld-gov-au/dependabot/npm_and_yarn/develop/sass-1.82.0
@@ -190,6 +191,9 @@
   - Merge pull request [#6](https://github.com/qld-gov-au/qgds-vanilla/issues/6) from Qld-Health-Online-Team/digihealth-luke-patch-1
   
   
+<a name="v1.0.1"></a>
+## [v1.0.1] - 2024-12-16
+
 <a name="v1.0.0"></a>
 ## [v1.0.0] - 2024-12-09
 
@@ -360,7 +364,8 @@
 <a name="v0.0.6"></a>
 ## v0.0.6 - 2024-08-21
 
-[Unreleased]: https://github.com/qld-gov-au/qgds-vanilla/compare/v1.0.1...HEAD
+[Unreleased]: https://github.com/qld-gov-au/qgds-vanilla/compare/v1.0.2...HEAD
+[v1.0.2]: https://github.com/qld-gov-au/qgds-vanilla/compare/v1.0.1...v1.0.2
 [v1.0.1]: https://github.com/qld-gov-au/qgds-vanilla/compare/v1.0.0...v1.0.1
 [v1.0.0]: https://github.com/qld-gov-au/qgds-vanilla/compare/v0.0.21...v1.0.0
 [v0.0.21]: https://github.com/qld-gov-au/qgds-vanilla/compare/v0.0.20...v0.0.21
