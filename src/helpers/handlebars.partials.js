@@ -1,6 +1,7 @@
 /* global Handlebars */
 /** THIS IS A GENERATED FILE **/
 
+import example from "../components/_example/example.hbs?raw";
 import blockquote from "../components/_global/css/body/stories/blockquote.hbs?raw";
 import div from "../components/_global/css/body/stories/div.hbs?raw";
 import figcaption from "../components/_global/css/body/stories/figcaption.hbs?raw";
@@ -95,6 +96,7 @@ import widgets from "../components/widgets/html/component.hbs?raw";
  * @returns {void} Result of the helper operation
  */
 export default function handlebarsPartials(handlebars) {
+  handlebars.registerPartial("example", example);
   handlebars.registerPartial("blockquote", blockquote);
   handlebars.registerPartial("div", div);
   handlebars.registerPartial("figcaption", figcaption);

@@ -22,6 +22,35 @@
 .qld__card,
 .qld__banner,
 .qld__main-nav {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .qld__display-xxxl,
+  .qld__display-xxl,
+  .qld__display-xl,
+  .qld__display-lg,
+  .qld__display-md,
+  .qld__display-sm,
+  .qld__display-xs {
+    font-family: $QLD-font;
+    font-weight: 600;
+    margin: 0;
+    color: var(--QLD-color-light__heading);
+  }
+
+  &.qld__body--dark,
+  &.qld__body--dark-alt,
+  &.qld__footer--dark,
+  &.qld__footer--dark-alt,
+  &.qld__banner--dark,
+  &.qld__banner--dark-alt,
+  &.qld__card--dark,
+  &.qld__card--dark-alt,
+  &.qld__header__main--dark,
+  &.qld__header__main--dark-alt {
     h1,
     h2,
     h3,
@@ -34,203 +63,225 @@
     .qld__display-lg,
     .qld__display-md,
     .qld__display-sm,
-    .qld__display-xs{
-        font-family: $QLD-font;
-        font-weight: 600;
-        margin: 0;
-        color: var(--QLD-color-light__heading);
+    .qld__display-xs {
+      color: var(--QLD-color-dark__heading);
     }
+  }
 
-    &.qld__body--dark,
-    &.qld__body--dark-alt,
-    &.qld__footer--dark,
-    &.qld__footer--dark-alt,
-    &.qld__banner--dark,
-    &.qld__banner--dark-alt,
-    &.qld__card--dark,
-    &.qld__card--dark-alt,
-    &.qld__header__main--dark,
-    &.qld__header__main--dark-alt {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .qld__display-xxxl,
-        .qld__display-xxl,
-        .qld__display-xl,
-        .qld__display-lg,
-        .qld__display-md,
-        .qld__display-sm,
-        .qld__display-xs{
-           color: var(--QLD-color-dark__heading);
-        }
-    }
-
-    /**
+  /**
     * Typographic spacing for QLD-body only
     * Larger space for larger headings has been added to improve legibility in large blocks of text.
     * This provides area's of eye-rest and uses spacing to create visual sections
     * Also ref. https://github.com/govau/design-system-components/issues/282
     */
 
-    h1{
-        @include QLD-fontgrid(xl, heading);
+  h1 {
+    //@include QLD-fontgrid(xl, heading);
+    font-size: $typographyMobileH1FontSize;
+    font-weight: $typographyMobileH1FontWeight;
+    letter-spacing: $typographyMobileH1LetterSpacing;
+    line-height: $typographyMobileH1LineHeight;
 
-        @include QLD-media(lg) {
-            @include QLD-fontgrid(xxl, heading);
-        }
+    @include QLD-media(lg) {
+      //@include QLD-fontgrid(xxl, heading);
+      font-size: $typographyDesktopH1FontSize;
+      font-weight: $typographyDesktopH1FontWeight;
+      letter-spacing: $typographyDesktopH1LetterSpacing;
+      line-height: $typographyDesktopH1LineHeight;
     }
+  }
 
-    h2{
-        @include QLD-space(font-size, 1.75unit); 
-        @include QLD-space(line-height, 2.25unit);
+  h2 {
+    font-size: $typographyMobileH2FontSize;
+    font-weight: $typographyMobileH2FontWeight;
+    letter-spacing: $typographyMobileH2LetterSpacing;
+    line-height: $typographyMobileH2LineHeight;
 
-        @include QLD-media(lg) {
-            @include QLD-fontgrid(xl, heading);
-        }
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopH2FontSize;
+      font-weight: $typographyDesktopH2FontWeight;
+      letter-spacing: $typographyDesktopH2LetterSpacing;
+      line-height: $typographyDesktopH2LineHeight;
     }
+  }
 
-    h3{
-        @include QLD-fontgrid(lg, heading);
-    }
+  h3 {
+    font-size: $typographyMobileH3FontSize;
+    font-weight: $typographyMobileH3FontWeight;
+    letter-spacing: $typographyMobileH3LetterSpacing;
+    line-height: $typographyMobileH3LineHeight;
 
-    h4{
-        @include QLD-fontgrid(md, heading);
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopH3FontSize;
+      font-weight: $typographyDesktopH3FontWeight;
+      letter-spacing: $typographyDesktopH3LetterSpacing;
+      line-height: $typographyDesktopH3LineHeight;
     }
+  }
 
-    h5{
-        @include QLD-fontgrid(sm, heading);
-    }
+  h4 {
+    font-size: $typographyMobileH4FontSize;
+    font-weight: $typographyMobileH4FontWeight;
+    letter-spacing: $typographyMobileH4LetterSpacing;
+    line-height: $typographyMobileH4LineHeight;
 
-    h6{
-        @include QLD-fontgrid(xs, heading);
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopH4FontSize;
+      font-weight: $typographyDesktopH4FontWeight;
+      letter-spacing: $typographyDesktopH4LetterSpacing;
+      line-height: $typographyDesktopH4LineHeight;
     }
+  }
 
-    .qld__display-xxxl{
-        font-size: $QLD-font-size-mobile-xxxl;
-    
-        @include QLD-media(lg) {
-            font-size: $QLD-font-size-desktop-xxxl;
-        }
-    }
-    
-    .qld__display-xxl{
-        font-size: $QLD-font-size-mobile-xxl;
-    
-        @include QLD-media(lg) {
-            font-size: $QLD-font-size-desktop-xxl;
-        }
-    }
-    
-    .qld__display-xl{
-        font-size: $QLD-font-size-mobile-xl;
-    
-        @include QLD-media(lg) {
-            font-size: $QLD-font-size-desktop-xl;
-        }
-    }
-    
-    .qld__display-lg{
-        font-size: $QLD-font-size-mobile-lg;
-    
-        @include QLD-media(lg) {
-            font-size: $QLD-font-size-desktop-lg;
-        }
-    }
-    
-    .qld__display-md{
-        font-size: $QLD-font-size-mobile-md;
-    
-        @include QLD-media(lg) {
-            font-size: $QLD-font-size-desktop-md; 
-        }
-    }
-    
-    .qld__display-sm{
-        font-size: $QLD-font-size-mobile-sm;
-    
-        @include QLD-media(lg) {
-            font-size: $QLD-font-size-desktop-sm;
-        }
-    }
-    
-    .qld__display-xs{
-       font-size: $QLD-font-size-mobile-xs;
-    
-       @include QLD-media(lg) {
-        font-size: $QLD-font-size-desktop-xs;
-        }
-    
-    }
+  h5 {
+    font-size: $typographyMobileH5FontSize;
+    font-weight: $typographyMobileH5FontWeight;
+    letter-spacing: $typographyMobileH5LetterSpacing;
+    line-height: $typographyMobileH5LineHeight;
 
-    /**
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopH5FontSize;
+      font-weight: $typographyDesktopH5FontWeight;
+      letter-spacing: $typographyDesktopH5LetterSpacing;
+      line-height: $typographyDesktopH5LineHeight;
+    }
+  }
+
+  h6 {
+    font-size: $typographyMobileH6FontSize;
+    font-weight: $typographyMobileH6FontWeight;
+    letter-spacing: $typographyMobileH6LetterSpacing;
+    line-height: $typographyMobileH6LineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopH6FontSize;
+      font-weight: $typographyDesktopH6FontWeight;
+      letter-spacing: $typographyDesktopH6LetterSpacing;
+      line-height: $typographyDesktopH6LineHeight;
+    }
+  }
+
+  .qld__display-xxxl {
+    font-size: $QLD-font-size-mobile-xxxl;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-xxxl;
+    }
+  }
+
+  .qld__display-xxl {
+    font-size: $QLD-font-size-mobile-xxl;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-xxl;
+    }
+  }
+
+  .qld__display-xl {
+    font-size: $QLD-font-size-mobile-xl;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-xl;
+    }
+  }
+
+  .qld__display-lg {
+    font-size: $QLD-font-size-mobile-lg;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-lg;
+    }
+  }
+
+  .qld__display-md {
+    font-size: $QLD-font-size-mobile-md;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-md;
+    }
+  }
+
+  .qld__display-sm {
+    font-size: $QLD-font-size-mobile-sm;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-sm;
+    }
+  }
+
+  .qld__display-xs {
+    font-size: $QLD-font-size-mobile-xs;
+
+    @include QLD-media(lg) {
+      font-size: $QLD-font-size-desktop-xs;
+    }
+  }
+
+  /**
     * Default margin-top
     */
 
-    *:not([type="hidden"]){
-        + .qld__display-xxxl{
-            @include QLD-space(margin-top, 2.5unit);
+  *:not([type="hidden"]) {
+    + .qld__display-xxxl {
+      @include QLD-space(margin-top, 2.5unit);
 
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 4unit);
-            }
-        }
-
-        + .qld__display-xxl {
-            @include QLD-space(margin-top, 2.5unit);
-
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 3.5unit);
-            }
-        }
-
-        + h1,
-        + .qld__display-xl{
-            @include QLD-space(margin-top, 2unit);
-
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 3unit);
-            }
-        }
-
-        + .qld__display-lg,
-        + h2{
-            @include QLD-space(margin-top, 2unit);
-
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 3unit);
-            }
-        }
-
-        + .qld__display-md,
-        + h3{
-            @include QLD-space(margin-top, 2unit);
-
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 2.25unit);
-            }
-        }
-
-        + .qld__display-sm,
-        + h4{
-            @include QLD-space(margin-top, 1.25unit);
-
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 2unit);
-            }
-        }
-
-        + .qld__display-xs,
-        + h5,
-        + h6{
-            @include QLD-space(margin-top, 1.25unit);
-
-            @include QLD-media(lg) {
-                @include QLD-space(margin-top, 1.5unit);
-            }
-        }
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 4unit);
+      }
     }
-}
 
+    + .qld__display-xxl {
+      @include QLD-space(margin-top, 2.5unit);
+
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 3.5unit);
+      }
+    }
+
+    + h1,
+    + .qld__display-xl {
+      @include QLD-space(margin-top, 2unit);
+
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 3unit);
+      }
+    }
+
+    + .qld__display-lg,
+    + h2 {
+      @include QLD-space(margin-top, 2unit);
+
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 3unit);
+      }
+    }
+
+    + .qld__display-md,
+    + h3 {
+      @include QLD-space(margin-top, 2unit);
+
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 2.25unit);
+      }
+    }
+
+    + .qld__display-sm,
+    + h4 {
+      @include QLD-space(margin-top, 1.25unit);
+
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 2unit);
+      }
+    }
+
+    + .qld__display-xs,
+    + h5,
+    + h6 {
+      @include QLD-space(margin-top, 1.25unit);
+
+      @include QLD-media(lg) {
+        @include QLD-space(margin-top, 1.5unit);
+      }
+    }
+  }
+}

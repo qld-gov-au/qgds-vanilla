@@ -36,7 +36,7 @@ const config = {
         },
         "@storybook/addon-links",
         "@chromatic-com/storybook",
-        "@storybook/addon-designs"
+        // "@storybook/addon-designs" //re-introduce once its not causing peerDependancy errors
     ],
 
     framework: {
