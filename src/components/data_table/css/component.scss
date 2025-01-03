@@ -212,7 +212,7 @@ table.dataTable {
         color: var(--QLD-color-light__underline--hover);
         padding: 1.25rem 0.75rem 1.25rem 0.75rem;
 
-        box-shadow: inset 0 0 -$QLD-border-width-default 0 var(--QLD-color-light__border--alt);
+        box-shadow: inset 0 0 (-($QLD-border-width-default)) 0 var(--QLD-color-light__border--alt);
 
         //font-weight: bold;
         //@include QLD-fontgrid(md, heading);
@@ -307,7 +307,7 @@ table.dataTable {
   td {
     @include QLD-standard-space(padding, 3);
     padding: 12px 12px 12px 12px;
-    box-shadow: inset 0 0 -$QLD-border-width-thin 0 $QLD-color-neutral--lighter;
+    box-shadow: inset 0 0 (-($QLD-border-width-thin)) 0 $QLD-color-neutral--lighter;
 
     &.qld__data-table__cell--numeric {
       text-align: right;
@@ -590,7 +590,7 @@ table.dataTable {
     .qld__data-table__cell,
     td {
       //needs to stayl
-      box-shadow: inset 0 0 -$QLD-border-width-thin 0 var(--QLD-color-dark__border);
+      box-shadow: inset 0 0 (-($QLD-border-width-thin)) 0 var(--QLD-color-dark__border);
       &.sorting_1 {
         background-color: var(--QLD-color-dark__background--shade);
       }
@@ -598,7 +598,7 @@ table.dataTable {
 
     .qld__data-table__header,
     th {
-      box-shadow: inset 0 0 -$QLD-border-width-default 0 var(--QLD-color-dark__border--alt);
+      box-shadow: inset 0 0 (-($QLD-border-width-default)) 0 var(--QLD-color-dark__border--alt);
       color: var(--QLD-color-dark__heading);
       background-color: var(--QLD-color-dark__background);
 
@@ -659,7 +659,7 @@ table.dataTable {
 
     .qld__data-table__cell,
     td {
-      box-shadow: inset 0 0 -$QLD-border-width-thin 0 var(--QLD-color-dark__border);
+      box-shadow: inset 0 0 (-($QLD-border-width-thin)) 0 var(--QLD-color-dark__border);
     }
 
     caption,
@@ -770,7 +770,7 @@ table.dataTable {
 
     .qld__data-table__header,
     th {
-      box-shadow: inset 0 0 -$QLD-border-width-default 0 var(--QLD-color-dark__border);
+      box-shadow: inset 0 0 (-($QLD-border-width-default)) 0 var(--QLD-color-dark__border);
       color: var(--QLD-color-dark__heading);
       background-color: var(--QLD-color-dark__background--alt);
 
@@ -783,7 +783,7 @@ table.dataTable {
 
     .qld__data-table__header,
     th {
-      box-shadow: inset 0 0 -$QLD-border-width-default 0 var(--QLD-color-dark__border);
+      box-shadow: inset 0 0 (-($QLD-border-width-default)) 0 var(--QLD-color-dark__border);
       color: var(--QLD-color-dark__heading);
       background-color: var(--QLD-color-dark__background--alt);
     }

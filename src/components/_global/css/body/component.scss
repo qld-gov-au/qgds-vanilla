@@ -324,17 +324,17 @@ form {
   font-weight: $typographyMobileBodyFontWeight;
   line-height: $typographyMobileBodyLineHeight;
 
-  @include QLD-media(lg) {
-    font-size: $typographyDesktopBodyFontSize;
-    font-weight: $typographyDesktopBodyFontWeight;
-    line-height: $typographyDesktopBodyLineHeight;
-  }
-
   margin: 0;
   text-size-adjust: 100%;
   font-family: $QLD-font;
   color: var(--QLD-color-light__text);
   background-color: var(--QLD-color-light__background);
+
+  @include QLD-media(lg) {
+    font-size: $typographyDesktopBodyFontSize;
+    font-weight: $typographyDesktopBodyFontWeight;
+    line-height: $typographyDesktopBodyLineHeight;
+  }
 
   a {
     color: var(--QLD-color-light__link);
