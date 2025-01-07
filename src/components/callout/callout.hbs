@@ -1,0 +1,57 @@
+<!-- Callout -->
+<section class="qld__body {{background}}" id="{{id}}">
+
+  {{#ifCond type "==" "callout"}}
+
+    {{#ifCond calloutType "==" "default"}}
+      <div class="qld__callout">
+        {{#if show_heading}}
+          <h3 class="qld__callout__heading">{{heading}}</h3>
+        {{else}}
+          <h3
+            class="qld__callout__heading qld__callout__heading--sronly"
+          >{{heading}}</h3>
+        {{/if}}
+
+        {{{content}}}
+      </div>
+    {{/ifCond}}
+
+    {{#ifCond calloutType "==" "event"}}
+      <div class="qld__callout qld__callout--calendar-event">
+        <h3
+          class="qld__callout__heading qld__callout__heading--sronly"
+        >{{heading}}</h3>
+        <p class="qld__callout--calendar-event__lede">
+          {{event.intro}}
+        </p>
+        <time
+          class="qld__callout--calendar-event__time"
+          datetime="{{event.dateTime}}"
+        >
+          {{#formatDate event.dateTime ""}}{{/formatDate}}
+        </time>
+        <span class="qld__callout--calendar-event__name">
+          {{event.name}}
+        </span>
+      </div>
+    {{/ifCond}}
+  {{/ifCond}}
+
+  {{#ifCond type "==" "quote"}}
+    <figure class="qld__block-quote">
+
+      <!-- The blockquote tag is used for a longer quotation, 
+            and the cite attribute is used to provide the URL of the source of the quote. -->
+      <blockquote cite="{{quote.cite}}">
+        {{quote.quote}}
+      </blockquote>
+
+      <!-- The figcaption tag is used to provide a caption for the figure. In this case, it's the name of the author of the quote. -->
+      <figcaption class="qld__quote-source">
+        {{quote.source}}
+      </figcaption>
+
+    </figure>
+  {{/ifCond}}
+</section>

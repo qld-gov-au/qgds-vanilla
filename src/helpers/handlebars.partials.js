@@ -53,6 +53,7 @@ import _template from "../components/_template/html/component.hbs?raw";
 import az_listing from "../components/a-z_listing/html/component.hbs?raw";
 import abstract from "../components/abstract/html/component.hbs?raw";
 import accordion from "../components/accordion/html/component.hbs?raw";
+import backtotop from "../components/back_to_top/back-to-top.hbs?raw";
 import banner from "../components/banner/html/component.hbs?raw";
 import banner_advanced from "../components/banner_advanced/html/component.hbs?raw";
 import banner_basic from "../components/banner_basic/html/component.hbs?raw";
@@ -60,7 +61,7 @@ import banner_intermediate from "../components/banner_intermediate/html/componen
 import basic_search from "../components/basic_search/html/component.hbs?raw";
 import body from "../components/body/html/component.hbs?raw";
 import breadcrumbs from "../components/breadcrumbs/html/component.hbs?raw";
-import callout from "../components/callout/html/component.hbs?raw";
+import callout from "../components/callout/callout.hbs?raw";
 import card_feature from "../components/card_feature/html/component.hbs?raw";
 import card_multi_action from "../components/card_multi_action/html/component.hbs?raw";
 import card_no_action from "../components/card_no_action/html/component.hbs?raw";
@@ -88,7 +89,6 @@ import search_box from "../components/search_box/html/component.hbs?raw";
 import tab from "../components/tab/html/component.hbs?raw";
 import updated_date from "../components/updated_date/html/component.hbs?raw";
 import widgets from "../components/widgets/html/component.hbs?raw";
-
 
 /**
  * Registers Handlebars Partials
@@ -148,6 +148,7 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("a-z_listing", az_listing);
   handlebars.registerPartial("abstract", abstract);
   handlebars.registerPartial("accordion", accordion);
+  handlebars.registerPartial("back-to-top", backtotop);
   handlebars.registerPartial("banner", banner);
   handlebars.registerPartial("banner_advanced", banner_advanced);
   handlebars.registerPartial("banner_basic", banner_basic);
@@ -183,11 +184,10 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("tab", tab);
   handlebars.registerPartial("updated_date", updated_date);
   handlebars.registerPartial("widgets", widgets);
-
 }
 
 // For commonJS usage -- Does not run in 'Module' mode.
 // In 'Module' mode, you need to init yourself, it will not self initialize.
-if(typeof(Handlebars) !== 'undefined') {
+if (typeof Handlebars !== "undefined") {
   handlebarsPartials(Handlebars);
 }
