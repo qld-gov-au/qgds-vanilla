@@ -15,8 +15,7 @@
   padding-inline-end: var(--spacing);
   background-color: var(--QLD-color-light__background--shade);
   color: var(--QLD-color-light__text);
-  border-inline-start: var(--border-width) solid
-    var(--QLD-color-light__design-accent);
+  border-inline-start: var(--border-width) solid var(--QLD-color-light__design-accent);
   word-wrap: break-word;
   max-width: $QLD-font-maxwidth;
 
@@ -105,17 +104,13 @@
 
   &.alt,
   .qld__body--alt & {
-    --QLD-color-light__background--shade: var(
-      --QLD-color-light__background--alt-shade
-    );
+    --QLD-color-light__background--shade: var(--QLD-color-light__background--alt-shade);
   }
 
   &.dark,
   .qld__body--dark & {
     --QLD-color-light__design-accent: var(--QLD-color-dark__design-accent);
-    --QLD-color-light__background--shade: var(
-      --QLD-color-dark__background--shade
-    );
+    --QLD-color-light__background--shade: var(--QLD-color-dark__background--shade);
     --QLD-color-light__text: var(--QLD-color-dark__text);
     --QLD-color-light__heading: var(--QLD-color-dark__heading);
     --QLD-color-light__link: var(--QLD-color-dark__link);
@@ -126,9 +121,7 @@
   &.dark-alt,
   .qld__body--dark-alt & {
     --QLD-color-light__design-accent: var(--QLD-color-dark__design-accent);
-    --QLD-color-light__background--shade: var(
-      --QLD-color-dark__background--alt-shade
-    );
+    --QLD-color-light__background--shade: var(--QLD-color-dark__background--alt-shade);
     --QLD-color-light__text: var(--QLD-color-dark__text);
     --QLD-color-light__heading: var(--QLD-color-dark__heading);
     --QLD-color-light__link: var(--QLD-color-dark__link);
