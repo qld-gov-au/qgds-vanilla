@@ -53,6 +53,7 @@ import _template from "../components/_template/html/component.hbs?raw";
 import az_listing from "../components/a-z_listing/html/component.hbs?raw";
 import abstract from "../components/abstract/html/component.hbs?raw";
 import accordion from "../components/accordion/html/component.hbs?raw";
+import backtotop from "../components/back_to_top/back-to-top.hbs?raw";
 import banner from "../components/banner/html/component.hbs?raw";
 import banner_advanced from "../components/banner_advanced/html/component.hbs?raw";
 import banner_basic from "../components/banner_basic/html/component.hbs?raw";
@@ -148,6 +149,7 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("a-z_listing", az_listing);
   handlebars.registerPartial("abstract", abstract);
   handlebars.registerPartial("accordion", accordion);
+  handlebars.registerPartial("back-to-top", backtotop);
   handlebars.registerPartial("banner", banner);
   handlebars.registerPartial("banner_advanced", banner_advanced);
   handlebars.registerPartial("banner_basic", banner_basic);

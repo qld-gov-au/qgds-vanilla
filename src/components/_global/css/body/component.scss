@@ -155,11 +155,7 @@ form {
 
     //Align the body when within a two col layout/ content page
     #content[class^="col-"] > .qld__body {
-      @include QLD-container-margin(
-        $QLD-grid__gutter--media-sm,
-        neg,
-        horizontal
-      );
+      @include QLD-container-margin($QLD-grid__gutter--media-sm, neg, horizontal);
       @include QLD-container-padding($QLD-padding__section--mobile);
 
       &.qld__tab-section {
@@ -169,11 +165,7 @@ form {
       }
 
       @include QLD-media(md) {
-        @include QLD-container-margin(
-          $QLD-grid__gutter--media-md,
-          neg,
-          horizontal
-        );
+        @include QLD-container-margin($QLD-grid__gutter--media-md, neg, horizontal);
         @include QLD-container-padding($QLD-grid__gutter--media-sm, horizontal);
       }
 
@@ -216,29 +208,18 @@ form {
         &.qld__body--alt,
         &.qld__body--dark,
         &.qld__body--dark-alt {
-          @include QLD-container-padding(
-            $QLD-padding__section--mobile,
-            !important
-          );
+          @include QLD-container-padding($QLD-padding__section--mobile, !important);
 
           @include QLD-media(lg) {
-            @include QLD-container-padding(
-              $QLD-padding__section--desktop !important
-            );
+            @include QLD-container-padding($QLD-padding__section--desktop !important);
           }
         }
       }
 
       .container-fluid {
-        @include QLD-container-padding(
-          $QLD-grid__inner-padding--media-xs,
-          horizontal
-        );
+        @include QLD-container-padding($QLD-grid__inner-padding--media-xs, horizontal);
         @include QLD-media(lg) {
-          @include QLD-container-padding(
-            $QLD-grid__inner-padding--media-lg,
-            horizontal
-          );
+          @include QLD-container-padding($QLD-grid__inner-padding--media-lg, horizontal);
         }
       }
 
@@ -343,17 +324,17 @@ form {
   font-weight: $typographyMobileBodyFontWeight;
   line-height: $typographyMobileBodyLineHeight;
 
-  @include QLD-media(lg) {
-    font-size: $typographyDesktopBodyFontSize;
-    font-weight: $typographyDesktopBodyFontWeight;
-    line-height: $typographyDesktopBodyLineHeight;
-  }
-
   margin: 0;
   text-size-adjust: 100%;
   font-family: $QLD-font;
   color: var(--QLD-color-light__text);
   background-color: var(--QLD-color-light__background);
+
+  @include QLD-media(lg) {
+    font-size: $typographyDesktopBodyFontSize;
+    font-weight: $typographyDesktopBodyFontWeight;
+    line-height: $typographyDesktopBodyLineHeight;
+  }
 
   a {
     color: var(--QLD-color-light__link);
@@ -628,7 +609,16 @@ form {
 	 * `small`: for less important information (not stylistic purposes).
 	 */
   small {
-    @include QLD-fontgrid(xs, small);
+    //@include QLD-fontgrid(xs, small);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
   }
 
   /**
@@ -702,9 +692,19 @@ form {
 	 */
   sub,
   sup {
-    @include QLD-fontgrid(xs, nospace);
     position: relative;
     vertical-align: baseline;
+
+    //@include QLD-fontgrid(xs, nospace);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
   }
 
   sub {
@@ -721,7 +721,17 @@ form {
 	 */
   kbd,
   samp {
-    @include QLD-fontgrid(xs);
+    //@include QLD-fontgrid(xs);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
+
     @include QLD-space(line-height, 1.25unit);
     @include QLD-space(padding, 0.125unit 0.25unit);
     @include QLD-space(margin, 0unit 0.125unit);
@@ -800,25 +810,40 @@ form {
 
   .qld__block-quote {
     padding-left: 1.375rem;
-    border-left: $QLD-border-width-thick solid
-      var(--QLD-color-light__design-accent);
+    border-left: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
     margin: 0;
   }
 
   blockquote,
   .qld__block-quote {
-    @include QLD-fontgrid(md, small);
-    color: var(--QLD-color-light__heading);
-    font-weight: 600;
+    //@include QLD-fontgrid(md, small);
+    font-size: $typographyMobileQuoteFontSize;
+    font-weight: $typographyMobileQuoteFontWeight;
+    line-height: $typographyMobileQuoteLineHeight;
 
-    .qld__quote-source {
-      @include QLD-fontgrid(xs, small);
-      color: var(--QLD-color-light__text--lighter);
-      margin-top: 0.625rem;
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopQuoteFontSize;
+      font-weight: $typographyDesktopQuoteFontWeight;
+      line-height: $typographyDesktopQuoteLineHeight;
     }
 
-    *:not([type="hidden"]) + & {
-      margin-top: 1.5rem;
+    color: var(--QLD-color-light__heading);
+    margin-top: 1.5rem;
+
+    .qld__quote-source {
+      //@include QLD-fontgrid(xs, small);
+      font-size: $typographyMobileXsFontSize;
+      font-weight: $typographyMobileXsFontWeight;
+      line-height: $typographyMobileXsLineHeight;
+
+      @include QLD-media(lg) {
+        font-size: $typographyDesktopXsFontSize;
+        font-weight: $typographyDesktopXsFontWeight;
+        line-height: $typographyDesktopXsLineHeight;
+      }
+
+      color: var(--QLD-color-light__text--lighter);
+      margin-top: 0.625rem;
     }
   }
 
@@ -837,7 +862,17 @@ form {
   }
 
   .qld__caption {
-    @include QLD-fontgrid(xs);
+    //@include QLD-fontgrid(xs);
+    font-size: $typographyMobileXsFontSize;
+    font-weight: $typographyMobileXsFontWeight;
+    line-height: $typographyMobileXsLineHeight;
+
+    @include QLD-media(lg) {
+      font-size: $typographyDesktopXsFontSize;
+      font-weight: $typographyDesktopXsFontWeight;
+      line-height: $typographyDesktopXsLineHeight;
+    }
+
     font-weight: 400;
     color: var(--QLD-color-light__text--lighter);
   }

@@ -3,13 +3,10 @@
 import "../src/js/main.js";
 
 import { themes } from "@storybook/theming";
-import {
-  withThemeByClassName,
-  DecoratorHelpers,
-} from "@storybook/addon-themes";
+import { withThemeByClassName, DecoratorHelpers } from "@storybook/addon-themes";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-//this variable is updated by esbuild on what 'brands' we have
+//this variable is updated by esbuild on what 'brands' we have something
 // prettier-ignore
 const brandToolbarItems=[{"value":"main-campaign-neon","title":"Campaign Neon"},{"value":"main-campaign-neon-invert","title":"Campaign Neon Invert"},{"value":"main-qld-corporate","title":"Qld Corporate"},{"value":"main-qld-corporate-invert","title":"Qld Corporate Invert"},{"value":"main","title":"Qld Default"},{"value":"main-invert","title":"Qld Default Invert"},{"value":"main-qld-high-contrast","title":"Qld High Contrast"},{"value":"main-qld-high-contrast-invert","title":"Qld High Contrast Invert"},{"value":"main-qld-maroon","title":"Qld Maroon"},{"value":"main-qld-maroon-invert","title":"Qld Maroon Invert"}];
 
@@ -151,11 +148,10 @@ ${Story()}
       //This is for theme injection so that viewport changes shows correctly, withThemeByClassName is not retriggered if viewport is altered (re-rendered)
       const currentTheme = DecoratorHelpers.pluckThemeFromContext(context);
       const { themeOverride } = DecoratorHelpers.useThemeParameters();
-      const selectedThemeName =
-        themeOverride || currentTheme || themeData.defaultTheme;
+      const selectedThemeName = themeOverride || currentTheme || themeData.defaultTheme;
       const classes = themeData.themes[selectedThemeName];
       return `
-<div class="${classes} qld__grid" ><!-- end theme override -->
+<div class="${classes} qld__grid" style="min-height: 120px"><!-- end theme override -->
 ${Story()}
 </div><!-- theme override close div -->
 `;
