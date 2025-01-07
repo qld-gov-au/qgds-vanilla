@@ -9,7 +9,7 @@ import QGDSComponent from "./../../js/QGDSComponent.js";
 
 // Imports resources needed to nake our "Breadcrumbs" component:
 import hbstemplate from "./breadcrumbs.hbs?raw";
-import breadcrumbsHelper from "./breadcrumbsHelper.js";
+import breadcrumbsLogic from "./breadcrumbs.js";
 import meta from "./version.json";
 
 /**
@@ -22,7 +22,7 @@ import meta from "./version.json";
 
 export default function Breadcrumbs({ data, template = hbstemplate }) {
   // Initialise Breadcrumbs JS logic
-  const BreadcrumbsLogic = new breadcrumbsHelper();
+  const BreadcrumbsLogic = new breadcrumbsLogic();
 
   window.addEventListener("DOMContentLoaded", () => {
     BreadcrumbsLogic.init();

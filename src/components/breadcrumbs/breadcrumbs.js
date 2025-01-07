@@ -1,213 +1,187 @@
 /**
- * Breadcrumbs component logic attached to an init() function.
- * This logic is bundled and exported with the component's entry file (index.js) and ships with the component.
- * @namespace QLD
+ * Breadcrumbs Component Helper Class.
+ * Encapsulates breadcrumb logic and state in a class for reusability and maintainability.
  */
 
-const breadcrumb = {
-  originalBreadCrumbUl: null,
+export default class BreadcrumbsLogic {
+  // Static constants for configuration
+  static HEIGHT_RATIO = 1.9;
+  static MIN_ITEMS = 5;
+  static START_IDX = 2;
+  static CLS = {
+    WRAPPER: "qld__overflow_menu_wrapper",
+    BTN: "qld__overflow_menu__btn",
+    LIST: "qld__overflow_menu_list",
+    LINK_LIST: "qld__link-list",
+  };
+
+  constructor() {
+    this.originalUL = null; // Original breadcrumb list
+  }
 
   init() {
-    if (this.getTheElements()) {
-      const { breadCrumbsUl } = this.getTheElements();
-      const breadCrumbsUlLis = breadCrumbsUl.querySelectorAll("li");
+    //Get breadcrumbs element
+    let crumbsData = {};
 
-      if (breadCrumbsUlLis.length > 2 && breadCrumbsUlLis[0].offsetHeight > 0) {
-        const overflowMenu = this.createOverFlow();
-        let breadcrumbLisLength = breadCrumbsUlLis.length;
-        let totalLisOffsetWidth = Array.from(breadCrumbsUlLis).reduce(
-          (acc, li) => acc + li.offsetWidth,
-          0,
-        );
+    crumbsData.element = this.getBreadcrumbs();
+    if (!crumbsData.element) return;
 
-        if (breadcrumbLisLength > 5) {
-          this.handleOverflow(
-            breadCrumbsUlLis,
-            overflowMenu,
-            breadCrumbsUl,
-            2,
-            breadcrumbLisLength,
-          );
-        } else if (
-          breadCrumbsUl.offsetHeight >
-          breadCrumbsUlLis[0].offsetHeight * 1.9
-        ) {
-          this.handleOverflow(
-            breadCrumbsUlLis,
-            overflowMenu,
-            breadCrumbsUl,
-            2,
-            breadcrumbLisLength,
-          );
-        } else if (
-          parseFloat(breadCrumbsUl.style.maxWidth.replace(/[^\d.]/g, "")) <
-          totalLisOffsetWidth
-        ) {
-          this.handleOverflow(
-            breadCrumbsUlLis,
-            overflowMenu,
-            breadCrumbsUl,
-            2,
-            breadcrumbLisLength,
-          );
-        }
+    crumbsData.ul = crumbsData.element.ul;
+    crumbsData.items = crumbsData.ul.querySelectorAll("li") || false;
+    crumbsData.menu = this.createMenu();
+    crumbsData.itemCount = crumbsData.items?.length || 0;
+    crumbsData.totalWidth = this.calcTotalWidth(crumbsData.items);
 
-        this.truncateLastLi(breadCrumbsUlLis);
-      }
+    console.log(`Crumbsdata is ${crumbsData}`);
+
+    if (!crumbsData || !crumbsData.items || !crumbsData.itemCount) {
+      return;
     }
-  },
 
-  getTheElements(resized = false) {
-    const bannerBreadCrumbsAll = document.querySelectorAll(
-      "nav.qld__banner__breadcrumbs--desktop",
-    );
-    const bodyBreadCrumbsAll = document.querySelectorAll(
-      "section.qld__body--breadcrumb nav.qld__breadcrumbs",
-    );
+    if (crumbsData.items.length <= 2 || crumbsData.items[0].offsetHeight <= 0) {
+      return;
+    }
 
-    const bannerBreadCrumbArray = [
-      ...bannerBreadCrumbsAll,
-      ...bodyBreadCrumbsAll,
+    this.handleOverflow(crumbsData);
+
+    this.truncateLast(items);
+  }
+
+  getBreadcrumbs(resized = false) {
+    const crumbs = [
+      ...document.querySelectorAll("nav.qld__banner__breadcrumbs--desktop"),
+      ...document.querySelectorAll(
+        "section.qld__body--breadcrumb nav.qld__breadcrumbs",
+      ),
     ];
-    const bannerBreadCrumb = bannerBreadCrumbArray.find(
-      (breadcrumb) => breadcrumb.offsetWidth > 0,
-    );
 
-    if (bannerBreadCrumb) {
-      const containerFluid = bannerBreadCrumb.closest(".container-fluid");
-      const containerFluidStyle = window.getComputedStyle(containerFluid);
-      const paddings =
-        parseFloat(
-          containerFluidStyle
-            .getPropertyValue("padding-right")
-            .replace(/[^\d.]/g, ""),
-        ) +
-        parseFloat(
-          containerFluidStyle
-            .getPropertyValue("padding-left")
-            .replace(/[^\d.]/g, ""),
-        );
+    const activeCrumb = crumbs.find((el) => el.offsetWidth > 0);
+    if (!activeCrumb) return null;
 
-      bannerBreadCrumb.style.maxWidth =
-        containerFluid.offsetWidth - paddings + "px";
+    const container = activeCrumb.closest(".container-fluid");
+    const padding = this.calcPadding(container);
+    const maxW = container.offsetWidth - padding;
 
-      if (!this.originalBreadCrumbUl) {
-        this.originalBreadCrumbUl = bannerBreadCrumb
-          .querySelector("ul.qld__link-list")
-          .cloneNode(true);
-      }
+    activeCrumb.style.maxWidth = `${maxW}px`;
 
-      if (resized) {
-        bannerBreadCrumb.querySelector("ul.qld__link-list").innerHTML =
-          this.originalBreadCrumbUl.innerHTML;
-      }
-
-      const breadCrumbsUl = bannerBreadCrumb.querySelector("ul.qld__link-list");
-      breadCrumbsUl.style.maxWidth =
-        containerFluid.offsetWidth - paddings + "px";
-
-      return { bannerBreadCrumb, breadCrumbsUl };
+    if (!this.originalUl) {
+      this.originalUl = activeCrumb
+        .querySelector(`ul.${BreadcrumbsLogic.CLS.LINK_LIST}`)
+        .cloneNode(true);
     }
-  },
 
-  createOverFlow() {
-    const overFlowWrapper = document.createElement("div");
-    overFlowWrapper.className = "qld__overflow_menu_wrapper";
+    if (resized) {
+      activeCrumb.querySelector(
+        `ul.${BreadcrumbsLogic.CLS.LINK_LIST}`,
+      ).innerHTML = this.originalUl.innerHTML;
+    }
 
-    const button = document.createElement("button");
-    button.className =
-      "qld__btn qld__btn--toggle qld__overflow_menu__btn qld__accordion--closed";
-    button.setAttribute("href", "#");
-    button.setAttribute("aria-controls", "overflow-menu--");
-    button.setAttribute("aria-expanded", "false");
+    const ul = activeCrumb.querySelector(
+      `ul.${BreadcrumbsLogic.CLS.LINK_LIST}`,
+    );
+    ul.style.maxWidth = `${maxW}px`;
 
+    return { activeCrumb, ul };
+  }
+
+  createMenu() {
+    const wrapper = document.createElement("div");
+    wrapper.className = BreadcrumbsLogic.CLS.WRAPPER;
+
+    const btn = document.createElement("button");
+    btn.className = BreadcrumbsLogic.CLS.BTN;
+    btn.setAttribute("aria-controls", "menu");
+    btn.setAttribute("aria-expanded", "false");
+
+    const svg = this.createIcon();
+    btn.appendChild(svg);
+
+    const list = document.createElement("div");
+    list.className = BreadcrumbsLogic.CLS.LIST;
+    list.setAttribute("id", "menu");
+
+    wrapper.appendChild(btn);
+    wrapper.appendChild(list);
+
+    return wrapper;
+  }
+
+  createIcon() {
     const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     svg.classList.add("qld__icon", "qld__icon--lg");
-    svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
     svg.setAttribute("viewBox", "0 0 448 512");
-    svg.setAttribute("aria-hidden", "true");
-    svg.setAttribute("focusable", "false");
-    svg.setAttribute("width", "24");
-    svg.setAttribute("height", "32");
-    svg.setAttribute("role", "img");
-
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("fill", "currentColor");
     path.setAttribute(
       "d",
       "M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z",
     );
-
     svg.appendChild(path);
-    button.appendChild(svg);
-    overFlowWrapper.appendChild(button);
+    return svg;
+  }
 
-    const div = document.createElement("div");
-    div.className = "qld__overflow_menu qld__accordion--closed";
-    div.setAttribute("id", "overflow-menu--");
+  isOverflowByCount(count) {
+    return count > BreadcrumbsLogic.MIN_ITEMS;
+  }
 
-    const ul = document.createElement("ul");
-    ul.className = "qld__overflow_menu_list";
-    ul.setAttribute("aria-label", "qld__overflow_menu qld__link-columns");
+  isOverflowByHeight(ul, items) {
+    return (
+      ul.offsetHeight > items[0].offsetHeight * BreadcrumbsLogic.HEIGHT_RATIO
+    );
+  }
 
-    div.appendChild(ul);
-    overFlowWrapper.appendChild(div);
+  isOverflowByWidth(ul, totalWidth) {
+    const maxW = parseFloat(ul.style.maxWidth.replace(/[^\d.]/g, ""));
+    return maxW < totalWidth;
+  }
 
-    return overFlowWrapper;
-  },
+  calcPadding(container) {
+    const styles = window.getComputedStyle(container);
+    return (
+      parseFloat(styles.getPropertyValue("padding-left")) +
+      parseFloat(styles.getPropertyValue("padding-right"))
+    );
+  }
 
-  insertOverFlowButton(overFlowWrapper, element) {
-    const newElement = document.createElement("div");
-    newElement.className = "qld__overflow_menu_list-item";
+  calcTotalWidth(items) {
+    if (!items) return;
+    return Array.from(items).reduce((acc, el) => acc + el.offsetWidth, 0);
+  }
 
-    const link = element.querySelector("a");
-    link.classList.add("qld__overflow_menu_list-item-link");
-    link.setAttribute("tabindex", "0");
+  handleOverflow({ items, menu, ul, itemCount }) {
+    this.addMenuItem(menu, items[1]);
+    items[1].style.display = "none";
 
-    newElement.appendChild(link);
-    overFlowWrapper.querySelector("ul").appendChild(newElement);
-
-    return overFlowWrapper;
-  },
-
-  truncateLastLi(breadCrumbsUlLis) {
-    breadCrumbsUlLis[breadCrumbsUlLis.length - 1].style.overflow = "hidden";
-  },
-
-  appendOverflow(breadCrumbsUlLis, overflowMenu, breadcrumbUL) {
-    breadCrumbsUlLis[1].innerHTML = "";
-    breadCrumbsUlLis[1].className = "qld__overflow_menu--breadcrumbs";
-    breadCrumbsUlLis[1].appendChild(overflowMenu);
-    breadCrumbsUlLis[1].style.display = "flex";
-  },
-
-  handleOverflow(
-    breadCrumbsUlLis,
-    overflowMenu,
-    breadCrumbsUl,
-    startIndex,
-    breadcrumbLisLength,
-  ) {
-    this.insertOverFlowButton(overflowMenu, breadCrumbsUlLis[1]);
-    breadCrumbsUlLis[1].style.display = "none";
-    this.appendOverflow(breadCrumbsUlLis, overflowMenu, breadCrumbsUl);
-
-    for (let i = startIndex; i < breadcrumbLisLength - 2; i++) {
-      this.insertOverFlowButton(overflowMenu, breadCrumbsUlLis[i]);
-      breadCrumbsUlLis[i].style.display = "none";
+    for (let i = START_IDX; i < itemCount - 2; i++) {
+      this.addMenuItem(menu, items[i]);
+      items[i].style.display = "none";
     }
-  },
-};
 
-QLD.breadcrumb = breadcrumb;
+    this.appendMenu(menu, items);
+  }
 
-window.addEventListener("DOMContentLoaded", function () {
-  QLD.breadcrumb.init();
-  QLD.accordion.init("overflow");
-});
+  addMenuItem(menu, item) {
+    const wrapper = document.createElement("div");
+    wrapper.className = "qld__overflow_menu_list-item";
 
-window.addEventListener("resize", function () {
-  QLD.breadcrumb.getTheElements(true);
-  QLD.breadcrumb.init();
-  QLD.accordion.init("overflow");
-});
+    const link = item.querySelector("a");
+    if (link) {
+      link.classList.add("qld__overflow_menu_list-item-link");
+      wrapper.appendChild(link);
+      menu.querySelector(`.${Breadcrumbs.CLS.LIST}`).appendChild(wrapper);
+    }
+  }
+
+  appendMenu(menu, items) {
+    const container = items[1];
+    container.innerHTML = "";
+    container.className = "qld__overflow_menu--breadcrumbs";
+    container.appendChild(menu);
+    container.style.display = "flex";
+  }
+
+  truncateLast(items) {
+    const last = items[items.length - 1];
+    if (last) last.style.overflow = "hidden";
+  }
+}
