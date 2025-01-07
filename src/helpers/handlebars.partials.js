@@ -90,6 +90,7 @@ import tab from "../components/tab/html/component.hbs?raw";
 import updated_date from "../components/updated_date/html/component.hbs?raw";
 import widgets from "../components/widgets/html/component.hbs?raw";
 
+
 /**
  * Registers Handlebars Partials
  * @param {Handlebars} handlebars Templating engine
@@ -184,10 +185,11 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("tab", tab);
   handlebars.registerPartial("updated_date", updated_date);
   handlebars.registerPartial("widgets", widgets);
+
 }
 
 // For commonJS usage -- Does not run in 'Module' mode.
 // In 'Module' mode, you need to init yourself, it will not self initialize.
-if (typeof Handlebars !== "undefined") {
+if(typeof(Handlebars) !== 'undefined') {
   handlebarsPartials(Handlebars);
 }
