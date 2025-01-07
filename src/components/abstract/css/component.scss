@@ -6,12 +6,24 @@
 .qld__abstract > p,
 p.qld__abstract {
   @include QLD-space(font-size, 1.25unit);
-  line-height: 1.5;
+
   max-width: 46rem;
+
+  //line-height: 1.5;
+  //@include QLD-media(lg) {
+  //@include QLD-fontgrid(lg, h3);
+  //line-height: 1.5;
+  //}
+  font-size: $typographyMobileAbstractFontSize;
+  font-weight: $typographyMobileAbstractFontWeight;
+  line-height: $typographyMobileAbstractLineHeight;
+
   @include QLD-media(lg) {
-    @include QLD-fontgrid(lg, h3);
-    line-height: 1.5;
+    font-size: $typographyDesktopAbstractFontSize;
+    font-weight: $typographyDesktopAbstractFontWeight;
+    line-height: $typographyDesktopAbstractLineHeight;
   }
+
   form & {
     margin-top: 0;
     @include QLD-space(margin-bottom, 2unit);
