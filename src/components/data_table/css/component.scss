@@ -164,7 +164,7 @@ table.dataTable {
     font-size: 20px;
     line-height: 32px;
     color: var(--QLD-color-status__dark-underline);
-    box-shadow: inset 0 -1px 0 $QLD-color-neutral--lighter;
+    box-shadow: inset 0 -1px 0 var(--QLD-color-neutral--lighter);
 
     .qld__caption {
       font-style: normal;
@@ -307,7 +307,7 @@ table.dataTable {
   td {
     @include QLD-standard-space(padding, 3);
     padding: 12px 12px 12px 12px;
-    box-shadow: inset 0 0 (-($QLD-border-width-thin)) 0 $QLD-color-neutral--lighter;
+    box-shadow: inset 0 0 (-($QLD-border-width-thin)) 0 var(--QLD-color-neutral--lighter);
 
     &.qld__data-table__cell--numeric {
       text-align: right;
@@ -331,7 +331,7 @@ table.dataTable {
 
   tfoot {
     background-color: var(--QLD-color-light__background);
-    box-shadow: 0 1px 0 $QLD-color-neutral--lighter;
+    box-shadow: 0 1px 0 var(--QLD-color-neutral--lighter);
 
     &.qld__data-table-footer,
     tr {
@@ -373,7 +373,7 @@ table.dataTable {
     &.qld__data-table__col-3-right-border tr td:nth-child(3),
     .qld__data-table__header {
     color: var(--QLD-color-status__dark-underline);
-    box-shadow: inset 0 -1px 0 $QLD-color-neutral--lighter;
+    box-shadow: inset 0 -1px 0 var(--QLD-color-neutral--lighter);
     .qld__display-md {
       font-size: 1rem;
     }
@@ -485,7 +485,7 @@ table.dataTable {
 
   .top {
     //needs to stay
-    box-shadow: inset 0 -1px 0 $QLD-color-neutral--lighter;
+    box-shadow: inset 0 -1px 0 var(--QLD-color-neutral--lighter);
   }
 
   .dataTables_length > label > select {
@@ -507,7 +507,7 @@ table.dataTable {
   .dataTables_wrapper {
     //needs to stay
     .qld__data-table-item-numbers {
-      color: $QLD-color-neutral--darker;
+      color: var(--QLD-color-neutral--darker);
 
       &-total {
         font-weight: 700;

@@ -17,11 +17,11 @@
   }
 
   &.qld__global-alert--critical {
-    background-color: $QLD-color-status__error;
-    color: $QLD-color-neutral--white;
+    background-color: var(--QLD-color-status__error);
+    color: var(--QLD-color-neutral--white);
     font-size: pxToEm(13);
     & + & {
-      border-top: 1px solid #8a1220;
+      border-top: 1px solid #8a1220; // todo: var
     }
     a {
       text-decoration-line: solid;
@@ -29,39 +29,39 @@
       text-underline-offset: var(--QLD-underline__offset);
       text-decoration-skip-ink: auto;
 
-      color: $QLD-color-neutral--white;
-      text-decoration-color: $QLD-color-neutral--white;
+      color: var(--QLD-color-neutral--white);
+      text-decoration-color: var(--QLD-color-neutral--white);
       span {
-        color: $QLD-color-neutral--white;
-        text-decoration-color: $QLD-color-neutral--white;
+        color: var(--QLD-color-neutral--white);
+        text-decoration-color: var(--QLD-color-neutral--white);
         &:hover,
         &:visited {
-          color: $QLD-color-neutral--white;
-          text-decoration-color: $QLD-color-neutral--white;
+          color: var(--QLD-color-neutral--white);
+          text-decoration-color: var(--QLD-color-neutral--white);
         }
       }
 
       &:hover,
       &:visited {
-        text-decoration-color: $QLD-color-neutral--white;
+        text-decoration-color: var(--QLD-color-neutral--white);
         text-decoration-thickness: var(--QLD-underline__thickness-thick);
         .qld__icon {
-          color: $QLD-color-neutral--white;
+          color: var(--QLD-color-neutral--white);
         }
       }
     }
 
     .qld__icon {
-      color: $QLD-color-neutral--white;
+      color: var(--QLD-color-neutral--white);
     }
   }
 
   &.qld__global-alert--default {
-    background-color: $QLD-color-status__caution;
-    color: $QLD-color-neutral--darkest;
+    background-color: var(--QLD-color-status__caution);
+    color: var(--QLD-color-neutral--darkest);
     font-size: pxToEm(14);
     & + & {
-      border-top: 1px solid #b38800;
+      border-top: 1px solid #b38800; //todo: var
     }
     a {
       text-decoration-line: solid;
@@ -69,37 +69,37 @@
       text-underline-offset: var(--QLD-underline__offset);
       text-decoration-skip-ink: auto;
 
-      color: $QLD-color-neutral--darkest;
-      text-decoration-color: $QLD-color-neutral--darkest;
+      color: var(--QLD-color-neutral--darkest);
+      text-decoration-color: var(--QLD-color-neutral--darkest);
       span {
-        color: $QLD-color-neutral--darkest;
-        text-decoration-color: $QLD-color-neutral--darkest;
+        color: var(--QLD-color-neutral--darkest);
+        text-decoration-color: var(--QLD-color-neutral--darkest);
         &:hover,
         &:visited {
-          color: $QLD-color-neutral--darkest;
-          text-decoration-color: $QLD-color-neutral--darkest;
+          color: var(--QLD-color-neutral--darkest);
+          text-decoration-color: var(--QLD-color-neutral--darkest);
         }
       }
       &:hover,
       &:visited {
-        text-decoration-color: $QLD-color-neutral--darkest;
+        text-decoration-color: var(--QLD-color-neutral--darkest);
         text-decoration-thickness: var(--QLD-underline__thickness-thick);
         .qld__icon {
-          color: $QLD-color-neutral--darkest;
+          color: var(--QLD-color-neutral--darkest);
         }
       }
     }
     .qld__icon {
-      color: $QLD-color-neutral--darkest;
+      color: var(--QLD-color-neutral--darkest);
     }
   }
 
   &.qld__global-alert--general {
-    background-color: $QLD-color-status__info--lighter;
-    color: $QLD-color-neutral--darkest;
+    background-color: var(--QLD-color-status__info--lighter);
+    color: var(--QLD-color-neutral--darkest);
     font-size: pxToEm(14);
     & + & {
-      border-top: 1px solid #5c94c0;
+      border-top: 1px solid #5c94c0; // todo: var
     }
     a {
       text-decoration-line: solid;
@@ -107,30 +107,30 @@
       text-underline-offset: var(--QLD-underline__offset);
       text-decoration-skip-ink: auto;
 
-      color: $QLD-color-neutral--darkest;
-      text-decoration-color: $QLD-color-neutral--darkest;
+      color: var(--QLD-color-neutral--darkest);
+      text-decoration-color: var(--QLD-color-neutral--darkest);
       span {
-        color: $QLD-color-neutral--darkest;
-        text-decoration-color: $QLD-color-neutral--darkest;
+        color: var(--QLD-color-neutral--darkest);
+        text-decoration-color: var(--QLD-color-neutral--darkest);
         &:hover,
         &:visited {
-          color: $QLD-color-neutral--darkest;
-          text-decoration-color: $QLD-color-neutral--darkest;
+          color: var(--QLD-color-neutral--darkest);
+          text-decoration-color: var(--QLD-color-neutral--darkest);
         }
       }
 
       &:hover,
       &:visited {
-        text-decoration-color: $QLD-color-neutral--darkest;
+        text-decoration-color: var(--QLD-color-neutral--darkest);
         text-decoration-thickness: var(--QLD-underline__thickness-thick);
         .qld__icon {
-          color: $QLD-color-neutral--darkest;
+          color: var(--QLD-color-neutral--darkest);
         }
       }
     }
 
     .qld__icon {
-      color: $QLD-color-neutral--darkest;
+      color: var(--QLD-color-neutral--darkest);
     }
   }
 

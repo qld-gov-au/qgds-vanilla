@@ -8,5 +8,11 @@
 @import "../../node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles/qgds-qld-maroon-palette.scss";
 @import "./../../node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles/primitive";
 @import "./../../node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles/qgds";
-@import "imports/variables.scss";
+@import "imports/variables-root.scss";
+@media (prefers-color-scheme: light) {
+  @import "imports/variables-light.scss";
+}
+@media (prefers-color-scheme: dark) {
+  @import "imports/variables-dark.scss";
+}
 @import "imports/defaults.scss";

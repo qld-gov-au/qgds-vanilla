@@ -23,8 +23,7 @@
     text-decoration: none;
 
     border-radius: $QLD-border-radius-xs;
-    border: $QLD-border-width-medium solid
-      var(--QLD-color-light__action--primary);
+    border: $QLD-border-width-medium solid var(--QLD-color-light__action--primary);
     text-align: center;
     @include QLD-space(min-width, 8.75unit);
 
@@ -45,7 +44,7 @@
 
     &:focus:active {
       background-color: var(--QLD-color-light__background--shade); //here
-      border-color: $QLD-color-neutral--lightest;
+      border-color: var(--QLD-color-neutral--lightest);
       color: var(--QLD-color-light__heading);
       @include QLD-box-shadow(1);
       text-decoration: none;
@@ -128,7 +127,7 @@
       &:focus:active {
         background-color: var(--QLD-color-light__background--shade); //here
         color: var(--QLD-color-light__heading);
-        border-color: $QLD-color-neutral--lightest;
+        border-color: var(--QLD-color-neutral--lightest);
         text-decoration: none;
 
         i {
@@ -139,7 +138,7 @@
       // &:active:focus {
       // 	background-color: var(--QLD-color-light__background--shade); //here
       // 	color: var(--QLD-color-light__heading);
-      // 	border-color: $QLD-color-neutral--lightest;
+      // 	border-color: var(--QLD-color-neutral--lightest;
       // 	text-decoration: none;
 
       // 	i{
@@ -150,12 +149,7 @@
       &:disabled,
       &[disabled] {
         cursor: not-allowed;
-        background-color: rgba(
-          224,
-          224,
-          224,
-          0.1
-        ); // var(--QLD-color-light__background--alt-shade); with 10% opacity
+        background-color: rgba(224, 224, 224, 0.1); // var(--QLD-color-light__background--alt-shade); with 10% opacity
         color: var(--QLD-color-dark__text--lighter);
         box-shadow: none;
         border-color: transparent;
@@ -199,7 +193,7 @@
 
     &:focus:active {
       background-color: var(--QLD-color-light__background--shade); //here
-      border-color: $QLD-color-neutral--lightest;
+      border-color: var(--QLD-color-neutral--lightest);
       color: var(--QLD-color-light__heading);
       box-shadow: none;
       text-decoration: none;
@@ -264,7 +258,7 @@
 
       &:focus:active {
         background-color: var(--QLD-color-light__background--shade); //here
-        border-color: $QLD-color-neutral--lightest;
+        border-color: var(--QLD-color-neutral--lightest);
         color: var(--QLD-color-light__heading);
 
         box-shadow: none;
@@ -320,7 +314,7 @@
     }
 
     &:hover {
-      background-color: $QLD-color-neutral--black__opacity-10;
+      background-color: var(--QLD-color-neutral--black__opacity-10);
 
       i {
         color: var(--QLD-color-light__action--secondary);
@@ -339,7 +333,7 @@
     }
 
     &:focus {
-      background-color: $QLD-color-neutral--black__opacity-10;
+      background-color: var(--QLD-color-neutral--black__opacity-10);
 
       i {
         color: var(--QLD-color-light__action--secondary);
@@ -382,7 +376,7 @@
       }
 
       &:hover {
-        background-color: $QLD-color-neutral--black__opacity-10;
+        background-color: var(--QLD-color-neutral--black__opacity-10);
 
         i {
           color: var(--QLD-color-dark__action--secondary-hover);
@@ -399,7 +393,7 @@
       }
 
       &:focus {
-        background-color: $QLD-color-neutral--black__opacity-10;
+        background-color: var(--QLD-color-neutral--black__opacity-10);
 
         i {
           color: var(--QLD-color-dark__action--secondary-hover);
@@ -454,7 +448,7 @@
   .qld__btn.qld__btn--toggle,
   a.qld__btn.qld__btn--toggle,
   a.qld__btn.qld__btn--toggle:visited {
-    background-color: $QLD-color-neutral--black__opacity-10;
+    background-color: var(--QLD-color-neutral--black__opacity-10);
     color: var(--QLD-color-light__link);
     border-color: transparent;
     box-shadow: none;
@@ -492,7 +486,7 @@
     .qld__btn.qld__btn--toggle,
     a.qld__btn.qld__btn--toggle,
     a.qld__btn.qld__btn--toggle:visited {
-      background-color: $QLD-color-neutral--black__opacity-10;
+      background-color: var(--QLD-color-neutral--black__opacity-10);
       color: var(--QLD-color-dark__link);
       border-color: transparent;
       box-shadow: none;
@@ -594,7 +588,7 @@ a.qld__btn.qld__btn--close:visited {
   width: 2rem;
   min-width: auto;
   background-color: var(--QLD-color-light__background--shade); //here
-  border-color: $QLD-color-neutral--lightest;
+  border-color: var(--QLD-color-neutral--lightest);
   position: relative;
   &:hover {
     background-color: var(--QLD-color-light__background--alt-shade);
@@ -603,7 +597,7 @@ a.qld__btn.qld__btn--close:visited {
 
   i,
   svg {
-    color: $QLD-color-neutral--black;
+    color: var(--QLD-color-neutral--black);
     position: absolute;
     top: 50%;
     left: 50%;
