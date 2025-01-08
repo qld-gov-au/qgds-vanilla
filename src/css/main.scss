@@ -6,5 +6,23 @@
 @import "../../node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles/qgds-qld-default-palette.scss";
 @import "./../../node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles/primitive";
 @import "./../../node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles/qgds";
-@import "imports/variables.scss";
+@import "imports/variables-root.scss";
+@media (prefers-color-scheme: light) {
+  :root:not(.light):not(.dark) {
+    --background-primary: #fff;
+    @import "imports/variables-light.scss";
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    --background-primary: #000;
+    @import "imports/variables-dark.scss";
+  }
+}
+
 @import "imports/defaults.scss";
+
+body {
+  background-color: yellow;
+  background-color: var(--background-primary);
+}
