@@ -19,8 +19,3 @@ test("Example component exists", () => {
   const ExampleComponent = Example({ data: MockData });
   expect(ExampleComponent).toBeDefined();
 });
-
-test("Example component similate failure, missing class name", () => {
-  const ExampleComponent = Example({ data: MockData });
-  expect(ExampleComponent.htmlstring).not.toContain("qgds-example");
-});
