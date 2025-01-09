@@ -42,40 +42,20 @@ const buildConfig = {
             out: "./assets/css/main-campaign-neon.min",
         },
         {
-            in: "./src/css/main-campaign-neon-invert.scss",
-            out: "./assets/css/main-campaign-neon-invert.min",
-        },
-        {
             in: "./src/css/main-qld-corporate.scss",
             out: "./assets/css/main-qld-corporate.min",
-        },
-        {
-            in: "./src/css/main-qld-corporate-invert.scss",
-            out: "./assets/css/main-qld-corporate-invert.min",
         },
         {
             in: "./src/css/main.scss",
             out: "./assets/css/main.min",
         },
         {
-            in: "./src/css/main-invert.scss",
-            out: "./assets/css/main-invert.min",
-        },
-        {
             in: "./src/css/main-qld-high-contrast.scss",
             out: "./assets/css/main-qld-high-contrast.min",
         },
         {
-            in: "./src/css/main-qld-high-contrast-invert.scss",
-            out: "./assets/css/main-qld-high-contrast-invert.min",
-        },
-        {
             in: "./src/css/main-qld-maroon.scss",
             out: "./assets/css/main-qld-maroon.min",
-        },
-        {
-            in: "./src/css/main-qld-maroon-invert.scss",
-            out: "./assets/css/main-qld-maroon-invert.min",
         }
     ],
 
