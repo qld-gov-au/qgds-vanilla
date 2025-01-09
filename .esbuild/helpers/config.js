@@ -48,8 +48,6 @@ fs.readdirSync(THEMES_FOLDER).forEach((file) => {
   }
 });
 
-//console.log("Themes Map:", themesMap);
-
 const CSS_FOLDER = "src/css";
 
 Object.entries(themesMap).forEach(([theme, { paletteFile, scss, variables }]) => {
