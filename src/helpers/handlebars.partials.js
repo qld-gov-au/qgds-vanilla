@@ -82,7 +82,7 @@ import main_navigation from "../components/main_navigation/html/component.hbs?ra
 import mega_main_navigation from "../components/mega_main_navigation/html/component.hbs?raw";
 import multi_column from "../components/multi_column/html/component.hbs?raw";
 import overflow_menu from "../components/overflow_menu/html/component.hbs?raw";
-import page_alert from "../components/page_alert/html/component.hbs?raw";
+import pagealert from "../components/page_alert/page-alert.hbs?raw";
 import pagination from "../components/pagination/html/component.hbs?raw";
 import promo_panel from "../components/promo_panel/html/component.hbs?raw";
 import search_box from "../components/search_box/html/component.hbs?raw";
@@ -178,7 +178,7 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("mega_main_navigation", mega_main_navigation);
   handlebars.registerPartial("multi_column", multi_column);
   handlebars.registerPartial("overflow_menu", overflow_menu);
-  handlebars.registerPartial("page_alert", page_alert);
+  handlebars.registerPartial("page-alert", pagealert);
   handlebars.registerPartial("pagination", pagination);
   handlebars.registerPartial("promo_panel", promo_panel);
   handlebars.registerPartial("search_box", search_box);
