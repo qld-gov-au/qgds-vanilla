@@ -72,19 +72,19 @@ img.pull-right {
 }
 
 .text-error {
-  color: $QLD-color-status__error;
+  color: var(--QLD-color-status__error);
 }
 
 .text-success {
-  color: $QLD-color-status__success;
+  color: var(--QLD-color-status__success);
 }
 
 .text-warning {
-  color: $QLD-color-status__caution;
+  color: var(--QLD-color-status__caution);
 }
 
 .text-info {
-  color: $QLD-color-status__info;
+  color: var(--QLD-color-status__info);
 }
 
 .text-center {
@@ -356,8 +356,7 @@ a.qld__max-width {
   margin-top: map.get($QLD-space-map, $QLD-margin__content-block--mobile) + px !important;
 
   @include QLD-media(lg) {
-    margin-top: map.get($QLD-space-map, $QLD-margin__content-block--desktop) +
-      px !important;
+    margin-top: map.get($QLD-space-map, $QLD-margin__content-block--desktop) + px !important;
   }
 }
 
@@ -494,8 +493,7 @@ a.qld__max-width {
   column-gap: map.get($QLD-space-map, $QLD-margin__content-block--mobile) + px !important;
 
   @include QLD-media(lg) {
-    column-gap: map.get($QLD-space-map, $QLD-margin__content-block--desktop) +
-      px !important;
+    column-gap: map.get($QLD-space-map, $QLD-margin__content-block--desktop) + px !important;
   }
 }
 

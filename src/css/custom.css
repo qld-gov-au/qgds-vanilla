@@ -1,24 +1,24 @@
 /* 20241021 Copied from https://www.designsystem.qld.gov.au/__data/assets/css_file/0024/136923/Custom.css?0.1.58   */
 .qld__body ol.qld__numbered-list ol {
-    padding-left: 0;
+  padding-left: 0;
 }
 
 .qld__body ol.qld__numbered-list ol li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .qld__body ol.qld__numbered-list ul {
-    padding-left: 1.5rem;
+  padding-left: 1.5rem;
 }
 
 .qld__body ol.qld__numbered-list ul li {
-    list-style-type: disc;
-    list-style-type: disc;
-    padding-left: 0.5rem;
+  list-style-type: disc;
+  list-style-type: disc;
+  padding-left: 0.5rem;
 }
 
-.qld__body ol.qld__numbered-list ul li:before{
-    display:none;
+.qld__body ol.qld__numbered-list ul li:before {
+  display: none;
 }
 
 /*   Code component fixes
@@ -29,19 +29,19 @@ This changes the behaviour for the code component so that text does not wrap whe
 ---------------------------------------------------------------------------------------------------------- */
 
 .qld__body .qld__code.multiline:not(.show_less) code {
-    overflow-x: auto;
-    white-space: pre;
+  overflow-x: auto;
+  white-space: pre;
 }
 
 /*   Small fix for when previewing banners inside code component */
 
 @media (min-width: 992px) {
-    .qld__code-preview-body .qld__banner .container-fluid {
-        padding-left: 48px;
-        padding-left: 3rem;
-        padding-right: 48px;
-        padding-right: 3rem;
-    }
+  .qld__code-preview-body .qld__banner .container-fluid {
+    padding-left: 48px;
+    padding-left: 3rem;
+    padding-right: 48px;
+    padding-right: 3rem;
+  }
 }
 
 /*   New Text link styles
@@ -53,33 +53,31 @@ QLD text links, these allow you to add icons before or after text
 
 .qld__text-link.qld__text-link--icon-trail i,
 a.qld__text-link.qld__text-link--icon-trail i {
-    margin-left: 8px;
-    margin-left: 0.5rem;
-
+  margin-left: 8px;
+  margin-left: 0.5rem;
 }
 
 .qld__text-link.qld__text-link--icon-lead i,
 a.qld__text-link.qld__text-link--icon-lead i {
-    margin-right: 8px;
-    margin-right: 0.5rem;
-
+  margin-right: 8px;
+  margin-right: 0.5rem;
 }
 
 .qld__banner--dark a.qld__text-link,
 .qld__banner--dark-alt a.qld__text-link {
-    color: var(--QLD-color-dark__link) !important;
-    text-underline-offset: var(--QLD-underline__offset);
-    -webkit-text-decoration-color: var(--QLD-color-dark__underline);
-    text-decoration-color: var(--QLD-color-dark__underline);
-    text-decoration-thickness: var(--QLD-underline__thickness-thin);
+  color: var(--QLD-color-dark__link) !important;
+  text-underline-offset: var(--QLD-underline__offset);
+  -webkit-text-decoration-color: var(--QLD-color-dark__underline);
+  text-decoration-color: var(--QLD-color-dark__underline);
+  text-decoration-thickness: var(--QLD-underline__thickness-thin);
 }
 
 .qld__banner--dark a.qld__text-link:hover,
 .qld__banner--dark-alt a.qld__text-link:hover {
-    text-underline-offset: var(--QLD-underline__offset);
-    -webkit-text-decoration-color: var(--QLD-color-dark__underline--hover);
-    text-decoration-color: var(--QLD-color-dark__underline--hover);
-    text-decoration-thickness: var(--QLD-underline__thickness-thick);
+  text-underline-offset: var(--QLD-underline__offset);
+  -webkit-text-decoration-color: var(--QLD-color-dark__underline--hover);
+  text-decoration-color: var(--QLD-color-dark__underline--hover);
+  text-decoration-thickness: var(--QLD-underline__thickness-thick);
 }
 
 .qld__body .qld__text-link:hover i,
@@ -94,7 +92,7 @@ a.qld__text-link.qld__text-link--icon-lead i {
 .qld__banner--alt a.qld__text-link:hover i,
 .qld__footer a.qld__text-link:hover i,
 .qld__footer--alt a.qld__text-link:hover i {
-    color: var(--QLD-color-light__action--secondary-hover);
+  color: var(--QLD-color-light__action--secondary-hover);
 }
 
 .qld__body .qld__text-link i,
@@ -109,7 +107,7 @@ a.qld__text-link.qld__text-link--icon-lead i {
 .qld__banner--alt a.qld__text-link i,
 .qld__footer a.qld__text-link i,
 .qld__footer--alt a.qld__text-link i {
-    color: var(--QLD-color-light__action--secondary);
+  color: var(--QLD-color-light__action--secondary);
 }
 
 .qld__body--dark .qld__text-link i,
@@ -124,7 +122,7 @@ a.qld__text-link.qld__text-link--icon-lead i {
 .qld__banner--dark-alt a.qld__text-link i,
 .qld__footer--dark a.qld__text-link i,
 .qld__footer--dark-alt a.qld__text-link i {
-    color: var(--QLD-color-dark__action--secondary);
+  color: var(--QLD-color-dark__action--secondary);
 }
 
 .qld__body--dark .qld__text-link:hover i,
@@ -139,7 +137,7 @@ a.qld__text-link.qld__text-link--icon-lead i {
 .qld__banner--dark-alt a.qld__text-link:hover i,
 .qld__footer--dark a.qld__text-link:hover i,
 .qld__footer--dark-alt a.qld__text-link:hover i {
-    color: var(--QLD-color-dark__action--secondary-hover);
+  color: var(--QLD-color-dark__action--secondary-hover);
 }
 
 /*   Missing text style and variables
@@ -149,29 +147,31 @@ This updates text styles to include missing utilities and variables
 
 ---------------------------------------------------------------------------------------------------------- */
 
-.qld__text-link{
-    font-size:1rem;
+.qld__text-link {
+  font-size: 1rem;
 }
 
 /* Thumbnail style */
 
 .qld__body .qld__thumbnail {
-    background: #f5f5f5;
-    margin-top: 32px;
-    border-radius: 8px;
-    border: 1px solid #ebebeb;
-    overflow: hidden;
-    display: inline-block;
-    max-width: 500px;
+  background: #f5f5f5;
+  margin-top: 32px;
+  border-radius: 8px;
+  border: 1px solid #ebebeb;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 500px;
 }
 
 .qld__thumbnail:hover {
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3), 0px 2px 6px 2px rgba(0, 0, 0, 0.15);
+  box-shadow:
+    0px 1px 2px rgba(0, 0, 0, 0.3),
+    0px 2px 6px 2px rgba(0, 0, 0, 0.15);
 }
 
 .qld__thumbnail p.qld__thumbnail-description {
-    padding: 1rem;
-    margin: 0px;
+  padding: 1rem;
+  margin: 0px;
 }
 
 /*   Design system site specific CSS
@@ -181,8 +181,6 @@ This code is specific to the design system website and is used for unique compoe
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-
-
 /*   Classes used for Design system example page layots
 ----------------------------------------------------------------------------------------------------------
 
@@ -191,54 +189,53 @@ These are samll classes used to create specifc example pay layouts
 ---------------------------------------------------------------------------------------------------------- */
 
 .example-col [class^="col-"] {
-    background-color: var(--QLD-color-dark__background);
-    margin-bottom: 0.25rem;
-    border: 3px solid white;
-    text-align: center;
-    line-height: 3rem;
-    color: var(--QLD-color-dark__text);
+  background-color: var(--QLD-color-dark__background);
+  margin-bottom: 0.25rem;
+  border: 3px solid white;
+  text-align: center;
+  line-height: 3rem;
+  color: var(--QLD-color-dark__text);
 }
 
 .example-lineheight [class^="col-"] div {
-    background-color: #f5f5f5;
-    margin-bottom: 0.25rem;
+  background-color: #f5f5f5;
+  margin-bottom: 0.25rem;
 }
 
 .qld__example__container {
-    background-color: #f5f5f5;
-    border: solid #ebebeb 1px;
-    border: solid #ebebeb 0.0625rem;
-    padding: 0.375rem 0.5rem;
+  background-color: #f5f5f5;
+  border: solid #ebebeb 1px;
+  border: solid #ebebeb 0.0625rem;
+  padding: 0.375rem 0.5rem;
 }
 
 * + .qld__example__container {
-    margin-top:0.5rem;
+  margin-top: 0.5rem;
 }
 
 .example-flex {
-    background-color: var(--QLD-color-dark__background);
-    border: 1px solid white;
-    text-align: center;
-    padding: 0.5rem;
-    line-height: 2rem;
-    color: var(--QLD-color-dark__text);
+  background-color: var(--QLD-color-dark__background);
+  border: 1px solid white;
+  text-align: center;
+  padding: 0.5rem;
+  line-height: 2rem;
+  color: var(--QLD-color-dark__text);
 }
 
-
 .qld__code-preview .qld__main-nav {
-    display: block;
+  display: block;
 }
 
 .qld__header.horizontal-example {
-    box-shadow: none;
+  box-shadow: none;
 }
 
 .qld__table__color-example svg {
-    float: left;
+  float: left;
 }
 
 .qld__table__color-example tr td:nth-child(1) {
-    line-height: 40px;
+  line-height: 40px;
 }
 
 /*   Banner classes
@@ -250,13 +247,13 @@ These are two unique classes for the design system site to style the other name'
 
 /* Unique classes for the DS Website */
 .qld__banner .qld__banner__content .other-names {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1rem;
 }
 
 /* Unique classes for the DS Website */
-.qld__body .qld__banner__content .qld__abstract>p {
-    line-height: 1.5;
+.qld__body .qld__banner__content .qld__abstract > p {
+  line-height: 1.5;
 }
 
 /*   Two Col text class
@@ -267,30 +264,29 @@ This is a new utility class that just makes any text col div two cols
 ---------------------------------------------------------------------------------------------------------- */
 
 .col-2-text {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 @media screen and (min-width: 992px) {
-    .col-2-text {
-        column-count: 2;
-        column-gap: 2rem;
-        margin-top: 1.5rem;
-    }
+  .col-2-text {
+    column-count: 2;
+    column-gap: 2rem;
+    margin-top: 1.5rem;
+  }
 
-    .col-2-text h1,
-    .col-2-text h2,
-    .col-2-text h3,
-    .col-2-text h4,
-    .col-2-text h5,
-    .col-2-text h6 {
-        break-after: avoid;
-    }
+  .col-2-text h1,
+  .col-2-text h2,
+  .col-2-text h3,
+  .col-2-text h4,
+  .col-2-text h5,
+  .col-2-text h6 {
+    break-after: avoid;
+  }
 
-    .keep-together {
-        display: inline-block;
-        width: 100%;
-    }
-
+  .keep-together {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 /*   Card updates and new styles
@@ -303,76 +299,73 @@ Added list styles for cards
 /* New content card style */
 
 .qld__content_card {
-    display: flex;
-    flex-direction: column;
-    padding: 1.5rem;
-    max-width: 46rem;
-    border-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  max-width: 46rem;
+  border-color: #ebebeb;
 }
 
 * + .qld__content_card {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .qld__content_card.qld__content_card--default {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 }
 
 .qld__content_card.qld__content_card--light {
-    background-color: var(--QLD-color-light__background--shade);
+  background-color: var(--QLD-color-light__background--shade);
 }
 
 .qld__content_card.qld__content_card--alt {
-    background-color: var(--QLD-color-light__background--alt-shade);
+  background-color: var(--QLD-color-light__background--alt-shade);
 }
 
 .qld__content_card.qld__content_card--dark {
-    background-color: var(--QLD-color-dark__background--shade);
+  background-color: var(--QLD-color-dark__background--shade);
 }
 
 .qld__content_card.qld__content_card--dark-alt {
-    background-color: var(--QLD-color-dark__background--alt-shade);
+  background-color: var(--QLD-color-dark__background--alt-shade);
 }
 
 /* This is for the card example pages */
 
 .qld__card-list--row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .qld__card-list--col {
-    display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
 }
 
 .qld__card-list--matchheight .qld__card {
-    display: flex;
-    flex-grow: 1;
+  display: flex;
+  flex-grow: 1;
 }
 
-.qld__card-list.qld__card-list--col li+li,
-.qld__card-list--col div.qld__card+div.qld__card {
-    margin-top: 24px;
+.qld__card-list.qld__card-list--col li + li,
+.qld__card-list--col div.qld__card + div.qld__card {
+  margin-top: 24px;
 }
 
 @media (min-width: 992px) {
-
-    .qld__card-list.qld__card-list--col li+li,
-    .qld__card-list--col div.qld__card+div.qld__card {
-        margin-top: 32px;
-    }
-
+  .qld__card-list.qld__card-list--col li + li,
+  .qld__card-list--col div.qld__card + div.qld__card {
+    margin-top: 32px;
+  }
 }
 
 @media (min-width: 1312px) {
-
-    .qld__body .qld__card-list .col-xl-4:nth-of-type(-n+3),
-    .qld__banner .qld__card-list .col-xl-4:nth-of-type(-n+3) {
-        margin-top: 0px;
-    }
+  .qld__body .qld__card-list .col-xl-4:nth-of-type(-n + 3),
+  .qld__banner .qld__card-list .col-xl-4:nth-of-type(-n + 3) {
+    margin-top: 0px;
+  }
 }
 
 /*   Custom inpage nav fix
@@ -382,33 +375,33 @@ This is a custom inpage nav for use as an example, the javascript will not apply
 
 ---------------------------------------------------------------------------------------------------------- */
 
-*+.qld__inpage-nav-links--custom {
-    margin-top: 37px;
-    margin-top: 2.3125rem;
+* + .qld__inpage-nav-links--custom {
+  margin-top: 37px;
+  margin-top: 2.3125rem;
 }
 
 .qld__inpage-nav-links--custom {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.5;
-    padding-left: 24px;
-    padding-left: 1.5rem;
-    border-left: 4px solid var(--QLD-color-light__link);
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 24px;
+  padding-left: 1.5rem;
+  border-left: 4px solid var(--QLD-color-light__link);
 }
 
 .qld__inpage-nav-links--custom .qld__inpage-nav-links__heading {
-    font-size: 16px;
-    font-size: 1rem;
-    line-height: 1.25;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
 }
 
-.qld__body .qld__inpage-nav-links--custom>ul li {
-    margin-top: 8px;
-    margin-left: 0px;
+.qld__body .qld__inpage-nav-links--custom > ul li {
+  margin-top: 8px;
+  margin-left: 0px;
 }
 
 .qld__inpage-nav-links--custom ul.qld__link-list {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 /*   These classes fix our 'Brand form'
@@ -418,42 +411,42 @@ They apply fixes to a padding issue that is caused by the sq wrapper, they also 
 
 ---------------------------------------------------------------------------------------------------------- */
 
-.qld__body .sq_question_wrapper *+ul:not([class]) {
-    padding-left: 0px;
+.qld__body .sq_question_wrapper * + ul:not([class]) {
+  padding-left: 0px;
 }
 
-input[type=reset] {
-    text-decoration: underline;
-    text-decoration-thickness: var(--QLD-underline__thickness-thin);
-    text-decoration-color: var(--QLD-color-light__underline);
-    text-underline-offset: var(--QLD-underline__offset);
-    background-color: #f5f5f5;
-    text-decoration-skip-ink: auto;
-    border-color: transparent;
-    box-shadow: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: 0.625rem 1.5rem;
-    /* equal to 10px 24px */
-    color: var(--QLD-color-light__link);
-    border-radius: 4px;
-    text-align: center;
-    min-width: 8.75rem;
-    /* equal to 140px */
-    margin-top: 2rem;
+input[type="reset"] {
+  text-decoration: underline;
+  text-decoration-thickness: var(--QLD-underline__thickness-thin);
+  text-decoration-color: var(--QLD-color-light__underline);
+  text-underline-offset: var(--QLD-underline__offset);
+  background-color: #f5f5f5;
+  text-decoration-skip-ink: auto;
+  border-color: transparent;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.625rem 1.5rem;
+  /* equal to 10px 24px */
+  color: var(--QLD-color-light__link);
+  border-radius: 4px;
+  text-align: center;
+  min-width: 8.75rem;
+  /* equal to 140px */
+  margin-top: 2rem;
 }
 
-input[type=reset]:hover {
-    text-decoration: underline;
-    text-decoration-thickness: var(--QLD-underline__thickness-thick);
-    text-decoration-color: var(--QLD-color-light__underline);
-    text-underline-offset: var(--QLD-underline__offset);
-    background-color: var(--QLD-color-light__background--alt);
+input[type="reset"]:hover {
+  text-decoration: underline;
+  text-decoration-thickness: var(--QLD-underline__thickness-thick);
+  text-decoration-color: var(--QLD-color-light__underline);
+  text-underline-offset: var(--QLD-underline__offset);
+  background-color: var(--QLD-color-light__background--alt);
 }
 
-input[type=reset]:focus:focus {
-    outline: 3px solid var(--QLD-color-light__focus);
-    outline-offset: 2px;
+input[type="reset"]:focus:focus {
+  outline: 3px solid var(--QLD-color-light__focus);
+  outline-offset: 2px;
 }
 
 /*   Remove Tab focus Active
@@ -464,7 +457,7 @@ This removes the active focus state that was surround the whole pages on tab sec
 ---------------------------------------------------------------------------------------------------------- */
 
 .qld__tab-section div.qld__tab-content.active:focus {
-    outline: none;
+  outline: none;
 }
 
 /*   Style for colour swatch cards
@@ -476,35 +469,32 @@ complext table designs
 ---------------------------------------------------------------------------------------------------------- */
 
 .qld__card.qld__card-swatch {
-    width: 192px;
-    height: auto;
-    box-sizing: border-box;
-    margin-top: 24px;
-    margin-right: 20px;
-    display: inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border: 1px solid #ebebeb;
+  width: 192px;
+  height: auto;
+  box-sizing: border-box;
+  margin-top: 24px;
+  margin-right: 20px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 1px solid #ebebeb;
 }
 
 .color-swatch {
-    width: 100%;
-    height: 140px;
-    border-bottom: 1px solid #ebebeb;
+  width: 100%;
+  height: 140px;
+  border-bottom: 1px solid #ebebeb;
 }
 
 .color-name {
-    padding: 12px;
-    font-weight: 600;
+  padding: 12px;
+  font-weight: 600;
 }
 
 .color-code {
-    font-size: 14px;
-    font-weight: 400;
-
+  font-size: 14px;
+  font-weight: 400;
 }
-
-
 
 /* Define styles for different margin-top values
 
@@ -515,329 +505,330 @@ These styles are used to help show how vertical space works
 
 ---------------------------------------------------------------------------------------------------------- */
 
-.example-section-space, .example-content-block-space, .example-heading-2-space, .example-heading-3-space, .example-heading-4-space, .example-component-space, .example-text-element-space, .example-paragraph-space, .example-list-itmes-wide-space, .example-list-itmes-close-space, .example-labels-space{
-    position:relative;
+.example-section-space,
+.example-content-block-space,
+.example-heading-2-space,
+.example-heading-3-space,
+.example-heading-4-space,
+.example-component-space,
+.example-text-element-space,
+.example-paragraph-space,
+.example-list-itmes-wide-space,
+.example-list-itmes-close-space,
+.example-labels-space {
+  position: relative;
 }
 
-
-
 .example-section-space::before {
-    content: "40px margin-top";
-    position: absolute;
-    top: -41px;
-    left: -1px;
-    right: -1px;
-    text-align: center;
-    color: #0094FF;
-    font-size: 0.8rem;
-    height: 40px;
-    background-color: rgba(0, 148, 255, 0.07);
-    padding:  calc((40px / 1.6) - 0.8rem);
-    font-weight:bold;
+  content: "40px margin-top";
+  position: absolute;
+  top: -41px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #0094ff;
+  font-size: 0.8rem;
+  height: 40px;
+  background-color: rgba(0, 148, 255, 0.07);
+  padding: calc((40px / 1.6) - 0.8rem);
+  font-weight: bold;
 }
 
 .example-content-block-space::before {
-    content: "32px margin-top";
-    position: absolute;
-    top: -33px;
-    left: -1px;
-    right: -1px;
-    text-align: center;
-    color: #7AB941;
-    font-size: 0.8rem;
-    height: 32px;
-    background-color: rgba(122, 185, 65, 0.12);
-    padding:  calc((32px / 1.6) - 0.8rem);
-    font-weight:bold;
+  content: "32px margin-top";
+  position: absolute;
+  top: -33px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #7ab941;
+  font-size: 0.8rem;
+  height: 32px;
+  background-color: rgba(122, 185, 65, 0.12);
+  padding: calc((32px / 1.6) - 0.8rem);
+  font-weight: bold;
 }
 
-
 .example-heading-2-space::before {
-    content: "32px margin-top";
-    position: absolute;
-    top: -33px;
-    left: -1px;
-    right: -1px;
-    text-align: center;
-    color: #7AB941;
-    font-size: 0.8rem;
-    height: 32px;
-    background-color: rgba(122, 185, 65, 0.12);
-    padding:  0;
-    font-weight:bold;
+  content: "32px margin-top";
+  position: absolute;
+  top: -33px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #7ab941;
+  font-size: 0.8rem;
+  height: 32px;
+  background-color: rgba(122, 185, 65, 0.12);
+  padding: 0;
+  font-weight: bold;
 }
 
 .example-heading-3-space::before {
+  content: "32px margin-top";
+  position: absolute;
+  top: -33px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #7ab941;
+  font-size: 0.8rem;
+  height: 32px;
+  background-color: rgba(122, 185, 65, 0.08);
+  padding: 8px;
+  font-weight: bold;
+}
+
+.example-heading-4-space::before {
+  content: "20px margin-top";
+  position: absolute;
+  top: -21px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #7ab941;
+  font-size: 0.8rem;
+  height: 20px;
+  background-color: rgba(122, 185, 65, 0.05);
+  padding: 0;
+  font-weight: bold;
+}
+
+.example-component-space::before {
+  content: "24px margin-top";
+  position: absolute;
+  top: -25px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #ecbf20;
+  font-size: 0.8rem;
+  height: 24px;
+  background-color: rgba(236, 191, 32, 0.17);
+  padding: calc((24px / 1.6) - 0.8rem);
+  font-weight: bold;
+}
+
+.example-text-element-space::before {
+  content: "20px margin-top";
+  position: absolute;
+  top: -21px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #cf99dc;
+  font-size: 0.8rem;
+  height: 20px;
+  background-color: rgba(207, 153, 220, 0.17);
+  padding: calc((20px / 1.6) - 0.8rem);
+  font-weight: bold;
+}
+
+.example-paragraph-space::before {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #c53368;
+  font-size: 0.8rem;
+  height: 16px;
+  background-color: rgba(197, 51, 104, 0.17);
+  font-weight: bold;
+}
+
+.example-list-itmes-wide-space::before {
+  content: "";
+  position: absolute;
+  top: -13px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #551a8b;
+  font-size: 0.5rem;
+  height: 12px;
+  background-color: rgba(85, 26, 139, 0.16);
+  font-weight: bold;
+}
+
+.example-list-itmes-close-space::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #551a8b;
+  font-size: 0.3rem;
+  height: 8px;
+  background-color: rgba(85, 26, 139, 0.1);
+  font-weight: bold;
+}
+
+.example-labels-space::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -1px;
+  right: -1px;
+  text-align: center;
+  color: #c0d7ec;
+  font-size: 0.3rem;
+  height: 8px;
+  background-color: rgba(38, 105, 212, 0.1);
+}
+
+@media (min-width: 992px) {
+  .example-section-space::before {
+    content: "64px margin-top";
+    position: absolute;
+    top: -65px;
+    left: -1px;
+    right: -1px;
+    text-align: center;
+    color: #0094ff;
+    font-size: 0.8rem;
+    height: 64px;
+    background-color: rgba(0, 148, 255, 0.07);
+    padding: calc((64px / 1.6) - 0.8rem);
+  }
+
+  .example-content-block-space::before {
+    content: "48px margin-top";
+    position: absolute;
+    top: -49px;
+    left: -1px;
+    right: -1px;
+    text-align: center;
+    color: #7ab941;
+    font-size: 0.8rem;
+    height: 48px;
+    background-color: rgba(122, 185, 65, 0.12);
+    padding: calc((48px / 1.6) - 0.8rem);
+  }
+
+  .example-heading-2-space::before {
+    content: "48px margin-top";
+    position: absolute;
+    top: -49px;
+    left: -1px;
+    right: -1px;
+    text-align: center;
+    color: #7ab941;
+    font-size: 0.8rem;
+    height: 48px;
+    background-color: rgba(122, 185, 65, 0.12);
+    padding: calc((48px / 1.6) - 0.8rem);
+  }
+
+  .example-heading-3-space::before {
+    content: "36px margin-top";
+    position: absolute;
+    top: -37px;
+    left: -1px;
+    right: -1px;
+    text-align: center;
+    color: #7ab941;
+    font-size: 0.8rem;
+    height: 36px;
+    background-color: rgba(122, 185, 65, 0.08);
+    padding: calc((32px / 1.6) - 0.8rem);
+  }
+
+  .example-heading-4-space::before {
     content: "32px margin-top";
     position: absolute;
     top: -33px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #7AB941;
+    color: #7ab941;
     font-size: 0.8rem;
     height: 32px;
-    background-color: rgba(122, 185, 65, 0.08);
-    padding: 8px;
-    font-weight:bold;
-}
+    background-color: rgba(122, 185, 65, 0.05);
+    padding: calc((32px / 1.6) - 0.8rem);
+  }
 
-.example-heading-4-space::before {
-    content: "20px margin-top";
+  .example-component-space::before {
+    content: "32px margin-top";
     position: absolute;
-    top: -21px;
+    top: -33px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #7AB941;
+    color: #ecbf20;
     font-size: 0.8rem;
-    height: 20px;
-    background-color: rgba(122, 185, 65, 0.05);
-    padding: 0;
-    font-weight:bold;
-}
+    height: 32px;
+    background-color: rgba(236, 191, 32, 0.17);
+    padding: calc((32px / 1.6) - 0.8rem);
+  }
 
-.example-component-space::before {
+  .example-text-element-space::before {
     content: "24px margin-top";
     position: absolute;
     top: -25px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #ecbf20;
+    color: #cf99dc;
     font-size: 0.8rem;
     height: 24px;
-    background-color: rgba(236, 191, 32, 0.17);
-    padding: calc((24px / 1.6) - 0.8rem);
-    font-weight:bold;
-}
-
-.example-text-element-space::before {
-    content: "20px margin-top";
-    position: absolute;
-    top: -21px;
-    left: -1px;
-    right: -1px;
-    text-align: center;
-    color: #CF99DC;
-    font-size: 0.8rem;
-    height: 20px;
     background-color: rgba(207, 153, 220, 0.17);
-    padding: calc((20px / 1.6) - 0.8rem);
-    font-weight:bold;
-}
+    padding: calc((24px / 1.6) - 0.8rem);
+  }
 
-
-.example-paragraph-space::before {
+  .example-paragraph-space::before {
     content: "";
     position: absolute;
     top: -17px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #C53368;
+    color: #c53368;
     font-size: 0.8rem;
     height: 16px;
     background-color: rgba(197, 51, 104, 0.17);
-    font-weight:bold;
-}
+  }
 
-.example-list-itmes-wide-space::before {
+  .example-list-itmes-wide-space::before {
     content: "";
     position: absolute;
     top: -13px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #551A8B;
+    color: #551a8b;
     font-size: 0.5rem;
     height: 12px;
     background-color: rgba(85, 26, 139, 0.16);
-    font-weight:bold;
-}
+  }
 
-.example-list-itmes-close-space::before {
+  .example-list-itmes-close-space::before {
     content: "";
     position: absolute;
     top: -9px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #551A8B;
+    color: #551a8b;
     font-size: 0.3rem;
     height: 8px;
-    background-color: rgba(85, 26, 139, 0.10);
-    font-weight:bold;
-}
+    background-color: rgba(85, 26, 139, 0.1);
+  }
 
-.example-labels-space::before {
+  .example-labels-space::before {
     content: "";
     position: absolute;
     top: -9px;
     left: -1px;
     right: -1px;
     text-align: center;
-    color: #C0D7EC;
+    color: #c0d7ec;
     font-size: 0.3rem;
     height: 8px;
-    background-color: rgba(38, 105, 212, 0.10);
-}
-
-
-@media (min-width: 992px) {
-
-    .example-section-space::before {
-        content: "64px margin-top";
-        position: absolute;
-        top: -65px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #0094FF;
-        font-size: 0.8rem;
-        height: 64px;
-        background-color: rgba(0, 148, 255, 0.07);
-        padding: calc((64px / 1.6) - 0.8rem);
-    }
-
-    .example-content-block-space::before {
-        content: "48px margin-top";
-        position: absolute;
-        top: -49px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #7AB941;
-        font-size: 0.8rem;
-        height: 48px;
-        background-color: rgba(122, 185, 65, 0.12);
-        padding:  calc((48px / 1.6) - 0.8rem);
-    }
-
-    .example-heading-2-space::before {
-        content: "48px margin-top";
-        position: absolute;
-        top: -49px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #7AB941;
-        font-size: 0.8rem;
-        height: 48px;
-        background-color: rgba(122, 185, 65, 0.12);
-        padding:  calc((48px / 1.6) - 0.8rem);
-    }
-
-    .example-heading-3-space::before {
-        content: "36px margin-top";
-        position: absolute;
-        top: -37px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #7AB941;
-        font-size: 0.8rem;
-        height: 36px;
-        background-color: rgba(122, 185, 65, 0.08);
-        padding:  calc((32px / 1.6) - 0.8rem);
-    }
-
-    .example-heading-4-space::before {
-        content: "32px margin-top";
-        position: absolute;
-        top: -33px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #7AB941;
-        font-size: 0.8rem;
-        height: 32px;
-        background-color: rgba(122, 185, 65, 0.05);
-        padding: calc((32px / 1.6) - 0.8rem);
-    }
-
-    .example-component-space::before {
-        content: "32px margin-top";
-        position: absolute;
-        top: -33px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #ecbf20;
-        font-size: 0.8rem;
-        height: 32px;
-        background-color: rgba(236, 191, 32, 0.17);
-        padding: calc((32px / 1.6) - 0.8rem);
-    }
-
-    .example-text-element-space::before {
-        content: "24px margin-top";
-        position: absolute;
-        top: -25px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #CF99DC;
-        font-size: 0.8rem;
-        height: 24px;
-        background-color: rgba(207, 153, 220, 0.17);
-        padding: calc((24px / 1.6) - 0.8rem);
-    }
-
-    .example-paragraph-space::before {
-        content: "";
-        position: absolute;
-        top: -17px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #C53368;
-        font-size: 0.8rem;
-        height: 16px;
-        background-color: rgba(197, 51, 104, 0.17);
-    }
-
-
-    .example-list-itmes-wide-space::before {
-        content: "";
-        position: absolute;
-        top: -13px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #551A8B;
-        font-size: 0.5rem;
-        height: 12px;
-        background-color: rgba(85, 26, 139, 0.16);
-    }
-
-    .example-list-itmes-close-space::before {
-        content: "";
-        position: absolute;
-        top: -9px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #551A8B;
-        font-size: 0.3rem;
-        height: 8px;
-        background-color: rgba(85, 26, 139, 0.10);
-    }
-
-    .example-labels-space::before {
-        content: "";
-        position: absolute;
-        top: -9px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #C0D7EC;
-        font-size: 0.3rem;
-        height: 8px;
-        background-color: rgba(38, 105, 212, 0.10);
-    }
-
-
+    background-color: rgba(38, 105, 212, 0.1);
+  }
 }
 
 /*   Promo panel fixes - to be merged into core
@@ -848,7 +839,7 @@ This removes the active focus state that was surround the whole pages on tab sec
 ---------------------------------------------------------------------------------------------------------- */
 
 .qld__promo-panel .qld__promo-panel__container-icon {
-    margin-top: 0rem !important;
+  margin-top: 0rem !important;
 }
 
 /*
@@ -876,32 +867,28 @@ This removes the active focus state that was surround the whole pages on tab sec
 }
  */
 
-.qld__promo-panel.qld__body--dark  .qld__promo-panel__container-icon {
-    background-color: var(--QLD-color-dark__background--shade);
+.qld__promo-panel.qld__body--dark .qld__promo-panel__container-icon {
+  background-color: var(--QLD-color-dark__background--shade);
 }
-
 
 @media (min-width: 992px) {
-    .example--promo-section-space::before {
-        content: "This section has margin-top of -64px and the padding-top has been increased to 128px";
-        position: absolute;
-        bottom: -64px;
-        left: -1px;
-        right: -1px;
-        text-align: center;
-        color: #000000;
-        font-size: 1rem;
-        height: 128px;
-        background-color: rgb(206 203 203 / 25%);
-        padding-top: 80px;
-        border-bottom: 1px dashed var(--QLD-color-dark__border);
-        border-top: 1px dashed var(--QLD-color-dark__border);
-    }
+  .example--promo-section-space::before {
+    content: "This section has margin-top of -64px and the padding-top has been increased to 128px";
+    position: absolute;
+    bottom: -64px;
+    left: -1px;
+    right: -1px;
+    text-align: center;
+    color: #000000;
+    font-size: 1rem;
+    height: 128px;
+    background-color: rgb(206 203 203 / 25%);
+    padding-top: 80px;
+    border-bottom: 1px dashed var(--QLD-color-dark__border);
+    border-top: 1px dashed var(--QLD-color-dark__border);
+  }
 
-    .example--promo-section-space{
-        position:relative;
-    }
+  .example--promo-section-space {
+    position: relative;
+  }
 }
-
-
-

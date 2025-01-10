@@ -9,7 +9,7 @@
   font-weight: $typographyDesktopSmFontWeight;
   line-height: $typographyDesktopSmLineHeight;
   position: relative;
-  border: solid $QLD-border-width-default $QLD-color-status__info;
+  border: solid $QLD-border-width-default var(--QLD-color-status__info);
   @include QLD-space(border-left-width, 3unit);
   border-radius: $QLD-border-radius-xs;
   word-wrap: break-word;
@@ -46,7 +46,7 @@
 	* Page alert success
 	*/
   &.qld__page-alerts--success {
-    border-color: $QLD-color-status__success;
+    border-color: var(--QLD-color-status__success);
 
     &::before {
       background-color: var(--QLD-color-light__background);
@@ -58,10 +58,10 @@
 	* Page alert warning.
 	*/
   &.qld__page-alerts--warning {
-    border-color: $QLD-color-status__caution;
+    border-color: var(--QLD-color-status__caution);
 
     &::before {
-      background-color: $QLD-color-neutral--black;
+      background-color: var(--QLD-color-neutral--black);
       mask-image: QLD-svguri($QLD-icon-warning);
     }
   }
@@ -70,7 +70,7 @@
 	* Page alert error.
 	*/
   &.qld__page-alerts--error {
-    border-color: $QLD-color-status__error;
+    border-color: var(--QLD-color-status__error);
 
     &::before {
       background-color: var(--QLD-color-light__background);

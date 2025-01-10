@@ -1,16 +1,16 @@
-import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
-import * as Stories from "./callout.stories"
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks";
+import * as Stories from "./callout.stories";
 
-<Meta of={Stories} name="Callouts and Quotes"/>
+<Meta of={Stories} name="Callouts and Quotes" />
 
 # TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/callouts
-* [ ]: Fix tables
-* [ ]: Fix examples
-* [ ]: Fix links
-* [ ]: QA to original
+
+- [ ]: Fix tables
+- [ ]: Fix examples
+- [ ]: Fix links
+- [ ]: QA to original
 
 # Callouts and quotes
-
 
 May also be known as:
 
@@ -48,11 +48,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 ### Title of the callout
 
@@ -64,19 +64,19 @@ Use a calendar callout to alert a user to important dates and events.
 
 A calendar callout has:
 
-*   introduction text (optional)
-*   date
-*   date name.
+- introduction text (optional)
+- date
+- date name.
 
 Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 # Description of the callout
 
@@ -92,36 +92,35 @@ Some users don’t notice callouts. Therefore, don't use a callout for important
 
 ### Success status icon Indicates a success state When to use
 
-*   Call attention to important pieces of information
-*   Supplement a point in the main text
-*   For quotes and important dates
-*   Link to a relevant resource or supply additional important information
-*   Summaries
-*   Checklists
-*   Examples
-*   Case studies
-*   Definitions
+- Call attention to important pieces of information
+- Supplement a point in the main text
+- For quotes and important dates
+- Link to a relevant resource or supply additional important information
+- Summaries
+- Checklists
+- Examples
+- Case studies
+- Definitions
 
 ### Status cancel icon Cancel icon or warning icon When not to use
 
-*   Too many callouts can be overwhelming and actually detract from the user experience, use them sparingly and only when necessary
-*   Don't use callouts for block quotes or figures
+- Too many callouts can be overwhelming and actually detract from the user experience, use them sparingly and only when necessary
+- Don't use callouts for block quotes or figures
 
 ### Information status icon Indicates that information is required or toggles a tooltip How to use
 
 Read more about when to use text boxes and callouts in the [Australian Government Style Manual.](https://www.stylemanual.gov.au/structuring-content/text-boxes-and-callouts "https://www.stylemanual.gov.au/structuring-content/text-boxes-and-callouts")
 
-* * *
+---
 
-Quote example
--------------
+## Quote example
 
 Use the quote callout component for block quotations of longer than about 30 words.
 
 A quote callout component has:
 
-*   quote text
-*   reference (for cited quotations only).
+- quote text
+- reference (for cited quotations only).
 
 Example
 
@@ -131,13 +130,13 @@ Example
 
 ### Success status icon Indicates a success state When to use
 
-*   show direct speech and the quoted work of other writers
-*   enclose the title of certain works
-*   draw attention to a word you’re defining.
+- show direct speech and the quoted work of other writers
+- enclose the title of certain works
+- draw attention to a word you’re defining.
 
 ### Status cancel icon Cancel icon or warning icon When not to use
 
-*   For pull-quotes
+- For pull-quotes
 
 ### Information status icon Indicates that information is required or toggles a tooltip How to use quotes
 
@@ -165,24 +164,24 @@ We follow the Australian Government Style Manual which states that you shouldn't
 
 # Classes
 
-| Name | Description |
-|------|-------------|
-| `qld__callout` | Default style, can be applied to divs, span or paragraph tags. |
-| `qld__callout__heading` | Class for callout headings. |
-| `qld__callout__heading--sronly` | Class to remove headings so they appear only for screen readers. |
-| `qld__callout--calendar-event` | Modifying class used to style calander events |
-| `qld__callout--calendar-event__lede` | Applies text styles for the 'lead (intro)' text on the date callout component |
-| `qld__callout--calendar-event__time` | Applies text styles for the 'time' text on the date callout component |
-| `qld__callout--calendar-event__time` | Applies text styles for the 'event name' text on the date callout component |
-| `qld__block-quote` | Style applied to `<figcaption>` applies the  quote style in conjunction with the `blockquote>` element. |
-| `qld__quote-source` | Determines the look of quote source text. |
+| Name                                 | Description                                                                                            |
+| ------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `qld__callout`                       | Default style, can be applied to divs, span or paragraph tags.                                         |
+| `qld__callout__heading`              | Class for callout headings.                                                                            |
+| `qld__callout__heading--sronly`      | Class to remove headings so they appear only for screen readers.                                       |
+| `qld__callout--calendar-event`       | Modifying class used to style calander events                                                          |
+| `qld__callout--calendar-event__lede` | Applies text styles for the 'lead (intro)' text on the date callout component                          |
+| `qld__callout--calendar-event__time` | Applies text styles for the 'time' text on the date callout component                                  |
+| `qld__callout--calendar-event__time` | Applies text styles for the 'event name' text on the date callout component                            |
+| `qld__block-quote`                   | Style applied to `<figcaption>` applies the quote style in conjunction with the `blockquote>` element. |
+| `qld__quote-source`                  | Determines the look of quote source text.                                                              |
 
 # Variables
 
-| Name | Description |
-|------|-------------|
-| `$QLD-color-light-designAccent` | Colour of design accent used on light backgrounds for callouts,  and other decorative borders. |
-| `$QLD-color-dark-designAccent` | Colour of design accent used on dark backgrounds for callouts,  and other decorative borders. |
+| Name                                 | Description                                                                                   |
+| ------------------------------------ | --------------------------------------------------------------------------------------------- |
+| `var(--QLD-color-light-designAccent` | Colour of design accent used on light backgrounds for callouts, and other decorative borders. |
+| `var(--QLD-color-dark-designAccent`  | Colour of design accent used on dark backgrounds for callouts, and other decorative borders.  |
 
 # Accessible callout requirements
 
@@ -193,7 +192,6 @@ Keep these considerations in mind if you're modifying the Design System or creat
 You can also use the `<role=“complementary”>` attribute to define an ARIA complementary landmark. Use this when it sits outside the `<main>` content.
 
 Example of a callout outside the main content, using `role="complementary"`
-
 
 `< div role="complementary"> <p>This is a callout that provides complementary information. It can be understood even when separated from the main content.< /p> < /div>`
 
@@ -227,13 +225,13 @@ Ensure that the text colour and background colour of the quote have a contrast r
 
 If the quote is part of a larger section or article, use clear and descriptive headings to help users navigate through the content.
 
-* * *
+---
 
 # References
 
 Digital NSW (n.d.) [Callout](https://digitalnsw.github.io/nsw-design-system/components/callout/index.html "https://digitalnsw.github.io/nsw-design-system/components/callout/index.html"), _NSW Design System_, accessed 10 April 2023.
 
-W3C Design System. (2023). [Quote component](https://design-system.w3.org/components/quote.html "https://design-system.w3.org/components/quote.html"), _W3C Design System_, accessed  April 11 202.
+W3C Design System. (2023). [Quote component](https://design-system.w3.org/components/quote.html "https://design-system.w3.org/components/quote.html"), _W3C Design System_, accessed April 11 202.
 
 Google (n.d.) [Consistency](https://material.io/design/consistency "https://material.io/design/consistency"), _Material Design_, accessed 11 April 2023.
 
