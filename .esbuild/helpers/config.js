@@ -119,8 +119,8 @@ if (entryMatch) {
     const scssPath = `./src/css/${scss}.scss`;
     const outputPath = `./assets/css/${scss}.min`;
     return `{
-            in: "${scssPath}",
-            out: "${outputPath}",
+          in: "${scssPath}",
+          out: "${outputPath}",
         }`;
   });
 
