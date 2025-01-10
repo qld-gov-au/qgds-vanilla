@@ -60,7 +60,7 @@ import banner_basic from "../components/banner_basic/html/component.hbs?raw";
 import banner_intermediate from "../components/banner_intermediate/html/component.hbs?raw";
 import basic_search from "../components/basic_search/html/component.hbs?raw";
 import body from "../components/body/html/component.hbs?raw";
-import breadcrumbs from "../components/breadcrumbs/html/component.hbs?raw";
+import breadcrumbs from "../components/breadcrumbs/breadcrumbs.hbs?raw";
 import callout from "../components/callout/html/component.hbs?raw";
 import card_feature from "../components/card_feature/html/component.hbs?raw";
 import card_multi_action from "../components/card_multi_action/html/component.hbs?raw";

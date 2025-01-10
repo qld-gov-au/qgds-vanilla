@@ -122,7 +122,9 @@ const preview = {
 
       // Try dynamic import of the SCSS
       if (brand) {
-        console.log(brand);
+        console.log(
+          `Storybook preview has dynamically imported CSS brand: ${brand}`,
+        );
         //for (const path in modules) {
         //modules[path]().then((mod) => {
         //if (path.includes(brand)) {

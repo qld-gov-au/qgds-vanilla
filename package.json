@@ -18,7 +18,8 @@
     "watch": "node esbuild.js --watch",
     "serve": "node esbuild.js --serve",
     "add-component": "bash scripts/add_component.sh",
-    "test": "echo 'no tests exist'",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
     "test:integration": "echo 'no test:integration exist'",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build --webpack-stats-json ",
@@ -50,6 +51,7 @@
     "@storybook/theming": "^8.4.7",
     "@stylistic/eslint-plugin-js": "2.12.1",
     "@vitejs/plugin-vue": "5.2.1",
+    "@vitest/ui": "^2.1.8",
     "@whitespace/storybook-addon-html": "^6.1.1",
     "autoprefixer": "^10.4.14",
     "chromatic": "^11.22.0",
@@ -68,12 +70,14 @@
     "globals": "^15.14.0",
     "handlebars": "^4.7.8",
     "jsdoc": "^4.0.2",
+    "jsdom": "^25.0.1",
     "postcss-scss": "^4.0.9",
     "sass": "^1.83.1",
     "storybook": "^8.4.7",
     "stylelint": "^16.11.0",
     "stylelint-config-standard": "^36.0.1",
-    "stylelint-scss": "^6.10.0"
+    "stylelint-scss": "^6.10.0",
+    "vitest": "^2.1.8"
   },
   "dependencies": {
     "bloodhound-js": "^1.2.3",
