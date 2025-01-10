@@ -8,7 +8,6 @@ import tabs from "./../components/_global/js/tabs/global.js";
 import az_listing from "./../components/a-z_listing/js/global.js";
 import accordion from "./../components/accordion/js/global.js";
 import basic_search from "./../components/basic_search/js/global.js";
-import breadcrumbs from "./../components/breadcrumbs/js/global.js";
 import card_multi_action from "./../components/card_multi_action/js/global.js";
 import code from "./../components/code/js/global.js";
 import data_table from "./../components/data_table/js/global.js";
@@ -33,7 +32,6 @@ export default function init(QLD) {
     az_listing(QLD);
     accordion(QLD);
     basic_search(QLD);
-    breadcrumbs(QLD);
     card_multi_action(QLD);
     code(QLD);
     data_table(QLD);
