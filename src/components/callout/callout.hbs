@@ -17,7 +17,11 @@
 
     {{#ifCond calloutType "==" "event"}}
       <div class="qld__callout qld__callout--calendar-event">
-        <h3 class="qld__callout__heading qld__callout__heading--sronly">{{heading}}</h3>
+        {{#if show_heading}}
+          <h3 class="qld__callout__heading">{{heading}}</h3>
+        {{else}}
+          <h3 class="qld__callout__heading qld__callout__heading--sronly">{{heading}}</h3>
+        {{/if}}
         <p class="qld__callout--calendar-event__lede">
           {{event.intro}}
         </p>
