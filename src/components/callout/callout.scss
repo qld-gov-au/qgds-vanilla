@@ -1,0 +1,141 @@
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Callout
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------
+.sb-story > div {
+  padding: 1rem;
+  height: auto;
+}
+.qld__callout {
+  --spacing: 1rem;
+  --colour-link-hover: var(--QLD-color-light__link);
+  --border-width: #{$QLD-border-width-thick};
+  --calendar-event-colour: var(--QLD-color-light__text);
+
+  padding: calc(var(--spacing) * 1.5);
+  padding-inline-end: var(--spacing);
+  background-color: var(--QLD-color-light__background--shade);
+  color: var(--QLD-color-light__text);
+  border-inline-start: var(--border-width) solid var(--QLD-color-light__design-accent);
+  word-wrap: break-word;
+  max-width: $QLD-font-maxwidth;
+
+  & &__heading {
+    margin: 0;
+    color: var(--QLD-color-light__heading);
+
+    &.qld__callout__heading--sronly {
+      @include QLD-sronly();
+
+      & + * {
+        margin-top: 0 !important;
+      }
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: var(--QLD-color-light__link);
+    text-decoration-color: var(--QLD-color-light__link);
+    &:hover {
+      color: var(--colour-link-hover);
+      text-decoration-color: var(--colour-link-hover);
+    }
+  }
+
+  * + p {
+    margin-block-start: calc(var(--spacing) * 1.5) !important;
+  }
+
+  #content > & {
+    margin-block-start: 0;
+  }
+
+  * + & {
+    margin-block-start: calc(var(--spacing) * 1.5);
+    @include QLD-media(lg) {
+      margin-block-start: calc(var(--spacing) * 2);
+    }
+  }
+
+  // Visual treatment for paragraphs following callout
+  & + p {
+    margin-block-start: calc(var(--spacing) * 2);
+  }
+
+  //Event callout
+  &--calendar-event {
+    .qld__callout--calendar-event__lede {
+      @include QLD-fontgrid(sm, nospace);
+      margin: 0;
+      color: var(--calendar-event-colour);
+    }
+
+    .qld__callout--calendar-event__time,
+    .qld__callout--calendar-event__name {
+      @include QLD-fontgrid(xl, heading);
+    }
+
+    .qld__callout--calendar-event__time {
+      font-weight: bold;
+    }
+
+    .qld__callout--calendar-event__lede,
+    .qld__callout--calendar-event__time,
+    .qld__callout--calendar-event__name {
+      // overrides body, depending on markup (eg. using `p`).
+      display: block;
+    }
+
+    * + .qld__callout--calendar-event__time,
+    * + .qld__callout--calendar-event__name,
+    * + .qld__callout--calendar-event__lede {
+      // overrides body, to allow for var. text markup.
+      margin-block-start: calc(var(--spacing) * 0.5);
+    }
+  }
+
+  &.light,
+  .qld__body--light & {
+    --spacing: 1rem; //needed as qld__body--light and none are the same
+  }
+
+  &.alt,
+  .qld__body--alt & {
+    --QLD-color-light__background--shade: var(--QLD-color-light__background--alt-shade);
+  }
+
+  &.dark,
+  .qld__body--dark & {
+    --QLD-color-light__design-accent: var(--QLD-color-dark__design-accent);
+    --QLD-color-light__background--shade: var(--QLD-color-dark__background--shade);
+    --QLD-color-light__text: var(--QLD-color-dark__text);
+    --QLD-color-light__heading: var(--QLD-color-dark__heading);
+    --QLD-color-light__link: var(--QLD-color-dark__link);
+    --colour-link-hover: var(--QLD-color-dark__text);
+    --calendar-event-colour: var(--QLD-color-dark__text);
+  }
+
+  &.dark-alt,
+  .qld__body--dark-alt & {
+    --QLD-color-light__design-accent: var(--QLD-color-dark__design-accent);
+    --QLD-color-light__background--shade: var(--QLD-color-dark__background--alt-shade);
+    --QLD-color-light__text: var(--QLD-color-dark__text);
+    --QLD-color-light__heading: var(--QLD-color-dark__heading);
+    --QLD-color-light__link: var(--QLD-color-dark__link);
+    --colour-link-hover: var(--QLD-color-dark__text);
+    --calendar-event-colour: var(--QLD-color-dark__text);
+  }
+}
+
+// Print styles
+@media print {
+  .qld__callout {
+    --colour: #000;
+    border: 0.75pt solid var(--colour) !important;
+    border-inline-start-width: 12pt !important;
+    color: var(--colour) !important;
+  }
+}
