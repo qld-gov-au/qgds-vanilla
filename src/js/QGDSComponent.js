@@ -1,5 +1,9 @@
 import Handlebars from "handlebars";
 
+//Helpers for custom handlebars functions
+import handlebarsHelpersRollup from "../helpers/handlebars.helpers.rollup";
+handlebarsHelpersRollup(Handlebars);
+
 export default class Component {
   /**
    * Creates a new instance of the Component class.
@@ -38,9 +42,6 @@ export default class Component {
       //Compiled our HTML string (via Handlebars) and a DOM node (via a cloned template.innerHTML method)
       this.setupHTML(props.data);
       this.setupNode();
-
-      console.log(`New ${componentName} component initiated:`);
-      console.log(this);
     } catch (error) {
       //Logging
       throw new Error(`${this.componentName} error: ${error.message}`);
@@ -56,7 +57,10 @@ export default class Component {
     try {
       this.htmlstring = Handlebars.compile(this.template)(data);
     } catch (error) {
-      throw new Error(`${this.componentName} error: Template compilation failed. ${error.message}`);
+      let errorString = `${this.componentName} error: Template compilation failed. ${error.message}`;
+
+      console.error(errorString);
+      throw new Error(errorString);
     }
   }
 
@@ -70,7 +74,9 @@ export default class Component {
       container.innerHTML = this.htmlstring;
       this.node = container.content.cloneNode(true);
     } catch (error) {
-      throw new Error(`${this.componentName} error: Failed to create a DOM node. ${error.message}`);
+      throw new Error(
+        `${this.componentName} error: Failed to create a DOM node. ${error.message}`,
+      );
     }
   }
 
@@ -83,12 +89,16 @@ export default class Component {
 
   validateData(data, requiredfields = []) {
     if (!data || Object.keys(data).length === 0) {
-      throw new Error(`${this.componentName} error: Data object is missing or invalid.`);
+      throw new Error(
+        `${this.componentName} error: Data object is missing or invalid.`,
+      );
     }
 
     const missing = requiredfields.filter((key) => !data.hasOwnProperty(key));
     if (missing.length > 0) {
-      throw new Error(`${this.componentName} error: Missing required fields: ${missing.join(", ")}`);
+      throw new Error(
+        `${this.componentName} error: Missing required fields: ${missing.join(", ")}`,
+      );
     }
   }
 }

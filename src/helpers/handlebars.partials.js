@@ -60,7 +60,7 @@ import banner_basic from "../components/banner_basic/html/component.hbs?raw";
 import banner_intermediate from "../components/banner_intermediate/html/component.hbs?raw";
 import basic_search from "../components/basic_search/html/component.hbs?raw";
 import body from "../components/body/html/component.hbs?raw";
-import breadcrumbs from "../components/breadcrumbs/html/component.hbs?raw";
+import breadcrumbs from "../components/breadcrumbs/breadcrumbs.hbs?raw";
 import callout from "../components/callout/callout.hbs?raw";
 import card_feature from "../components/card_feature/html/component.hbs?raw";
 import card_multi_action from "../components/card_multi_action/html/component.hbs?raw";
@@ -89,7 +89,6 @@ import search_box from "../components/search_box/html/component.hbs?raw";
 import tab from "../components/tab/html/component.hbs?raw";
 import updated_date from "../components/updated_date/html/component.hbs?raw";
 import widgets from "../components/widgets/html/component.hbs?raw";
-
 
 /**
  * Registers Handlebars Partials
@@ -185,11 +184,10 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("tab", tab);
   handlebars.registerPartial("updated_date", updated_date);
   handlebars.registerPartial("widgets", widgets);
-
 }
 
 // For commonJS usage -- Does not run in 'Module' mode.
 // In 'Module' mode, you need to init yourself, it will not self initialize.
-if(typeof(Handlebars) !== 'undefined') {
+if (typeof Handlebars !== "undefined") {
   handlebarsPartials(Handlebars);
 }

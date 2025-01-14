@@ -1,23 +1,23 @@
-import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks";
 
-[//]: # (import * as Stories from "./footer.stories")
+[//]: # 'import * as Stories from "./footer.stories"'
 
-import LabelAnatomy from "./label-anatomy.png"
-import Label from "./label.png"
-import Label2 from "./label2.png"
+import LabelAnatomy from "./label-anatomy.png";
+import Label from "./label.png";
+import Label2 from "./label2.png";
 
-[//]: # (<Meta of={Stories} name="Footer" />)
+[//]: # '<Meta of={Stories} name="Footer" />'
+
 <Meta title="Forms/!Overview" />
 
-
 # TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/components/footer
-* [ ]: Fix tables
-* [ ]: Fix examples
-* [ ]: Fix links
-* [ ]: QA to original
 
-Forms
-=====
+- [ ]: Fix tables
+- [ ]: Fix examples
+- [ ]: Fix links
+- [ ]: QA to original
+
+# Forms
 
 The section details elements used across all forms.
 
@@ -25,29 +25,26 @@ The section details elements used across all forms.
 
 Overview Design Implementation Accessibility
 
-On this page
-------------
+## On this page
 
-Overview
---------
+## Overview
 
 Forms are an essential element within our Design System, serving as vital interactive components to gather user information and facilitate various digital tasks, including user registration, data entry, search queries, and settings configuration.
 
 **Key form elements in design systems typically include:**
 
-*   [Text fields:](input-fields-text-box-and-area.html) the most common elements, used to gather short, textual user inputs like names or email addresses
-*   [Textarea:](input-fields-text-box-and-area.html) a multi-line text field for collecting longer form text input like comments or descriptions
-*   [Radio buttons](radio-buttons.html) and [Checkboxes:](checkboxes.html) used for selecting one or many options from a list respectively
-*   [Select boxes](input-fields-select-box.html): useful for presenting multiple options in a constrained space
-*   [Buttons:](buttons.html) primarily used to submit the form
-*   [Labels:](forms.html#Labels) provide descriptions to the corresponding input fields, enhancing usability and accessibility
-*   [Helper or Hint text:](forms.html#Hint-Text) additional descriptive text that guides users in filling out a form
-*   [Validation Messages:](forms.html#Validation) provide immediate feedback to users, guiding them to complete the form correctly.
+- [Text fields:](input-fields-text-box-and-area.html) the most common elements, used to gather short, textual user inputs like names or email addresses
+- [Textarea:](input-fields-text-box-and-area.html) a multi-line text field for collecting longer form text input like comments or descriptions
+- [Radio buttons](radio-buttons.html) and [Checkboxes:](checkboxes.html) used for selecting one or many options from a list respectively
+- [Select boxes](input-fields-select-box.html): useful for presenting multiple options in a constrained space
+- [Buttons:](buttons.html) primarily used to submit the form
+- [Labels:](forms.html#Labels) provide descriptions to the corresponding input fields, enhancing usability and accessibility
+- [Helper or Hint text:](forms.html#Hint-Text) additional descriptive text that guides users in filling out a form
+- [Validation Messages:](forms.html#Validation) provide immediate feedback to users, guiding them to complete the form correctly.
 
-* * *
+---
 
-Labels
-------
+## Labels
 
 Labels help users understand what to enter into the field.
 
@@ -55,14 +52,13 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 Label for a text input (‘Email’)
-
 
 Email
 
@@ -84,19 +80,18 @@ Write labels without a colon at the end. Otherwise, follow the normal rules for 
 
 #### Do
 
-*   Position labels above the text input they refer to.
-*   Keep labels short, direct and written in sentence case.
-*   Best practice suggest labels should be up to 5 words (MOD.UK, n.d).
+- Position labels above the text input they refer to.
+- Keep labels short, direct and written in sentence case.
+- Best practice suggest labels should be up to 5 words (MOD.UK, n.d).
 
 #### Don't
 
-*   Use colons at the end of labels.
-*   Use all caps or the form will be harder to scan and read (Babich, 2020).
+- Use colons at the end of labels.
+- Use all caps or the form will be harder to scan and read (Babich, 2020).
 
-* * *
+---
 
-Hint text
----------
+## Hint text
 
 Hint text can be helpful in forms to provide additional information or context to users as they fill out the form.
 
@@ -104,14 +99,13 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 Help text for entering a tax file number
-
 
 What is your tax file number (TFN)? Tax file numbers are 9 digits
 
@@ -129,20 +123,19 @@ Hint text can be helpful in forms to provide additional information or context t
 
 ### Do
 
-*   **Use hint text for additional information.** Hint text can be used to provide additional information for form fields, such as providing examples of what could be entered in the field.
-*   **Keep hint text short and clear.** Hint text should be brief and to the point, so that users can quickly read and understand the information it provides.
-*   Only use helper text when truly necessary to avoid overloading the user (IMB, n.d).
+- **Use hint text for additional information.** Hint text can be used to provide additional information for form fields, such as providing examples of what could be entered in the field.
+- **Keep hint text short and clear.** Hint text should be brief and to the point, so that users can quickly read and understand the information it provides.
+- Only use helper text when truly necessary to avoid overloading the user (IMB, n.d).
 
 ### Don't
 
-*   **Don't use long paragraphs** and lists in hint text. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long (UK.GOV, n.d.).
-*   **Don't include links within hint text.** While screen readers will read out the link text when describing the field, they won't tell users that the text is a link (UK.GOV, n.d.).
-*   Helper text shouldn't run longer than the input area (IMB, n.d).
+- **Don't use long paragraphs** and lists in hint text. Screen readers read out the entire text when users interact with the form element. This could frustrate users if the text is long (UK.GOV, n.d.).
+- **Don't include links within hint text.** While screen readers will read out the link text when describing the field, they won't tell users that the text is a link (UK.GOV, n.d.).
+- Helper text shouldn't run longer than the input area (IMB, n.d).
 
-* * *
+---
 
-Required and optional fields
-----------------------------
+## Required and optional fields
 
 You should indicate to users that a field is mandatory by placing a red asterisk at the beginning of the label.
 
@@ -152,19 +145,17 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 Required field
-
 
 \* Text-field label Hint text
 
 Optional field
-
 
 Text-field label (Optional) Hint text
 
@@ -202,8 +193,7 @@ Try to avoid using optional fields in your forms but if you do, always indicate 
 
 While it's best to incorporate optional and required fields whenever possible there are instances where it may not be necessary. These include forms that are limited to only one field and lLogin forms which are commonly composed of only two fields: the username and the password, both of which are always required (Budiu, 2019).
 
-Validation states and messages
-------------------------------
+## Validation states and messages
 
 ### Success
 
@@ -217,11 +207,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 Text-field labelHint text Success message
 
@@ -245,11 +235,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 Text-field label Error message
 
@@ -281,8 +271,8 @@ Success indicators can be used when users have correctly filled out complex fiel
 
 #### Status cancel icon Cancel icon or warning icon When not to use
 
-*   **Don't use validation messages to communicate issues that aren't related to the user's input.** For example, if a user isn't eligible or doesn't have permission to do something, or if there's a lack of capacity or other problem with the service, this shouldn't be communicated through a validation message (GOV.UK, 2023).
-*   **Validation messages shouldn't be used to communicate non-critical information.** They should be reserved for important system-status messages that are meant to disrupt the user's workflow and draw attention to an issue that needs to be addressed (Nielsen Norman Group, 2020).
+- **Don't use validation messages to communicate issues that aren't related to the user's input.** For example, if a user isn't eligible or doesn't have permission to do something, or if there's a lack of capacity or other problem with the service, this shouldn't be communicated through a validation message (GOV.UK, 2023).
+- **Validation messages shouldn't be used to communicate non-critical information.** They should be reserved for important system-status messages that are meant to disrupt the user's workflow and draw attention to an issue that needs to be addressed (Nielsen Norman Group, 2020).
 
 #### Information status icon Indicates that information is required or toggles a tooltip How to use
 
@@ -290,31 +280,30 @@ In order for validation messages to be effective, people need to see them, under
 
 ##### Do
 
-*   Display error or validation messages after the error has been made. Wait until a user moves on from a field to display an error message related to an appropriate format (Kaplan, 2022).
-*   Summarise the errors inside of a [Page alert](https://design-system.agriculture.gov.au/components/page-alert) above the form.
-*   Make error messages easy to notice and understand (Nielsen Norman Group, 2021).
-*   Make error messages easy to memorise the instructions for fixing the error (Nielsen Norman Group, 2021).
-*   Be clear and concise: for error messages describe what has happened and tell them how to fix it. The message must be in plain English, use positive language and get to the point (GOV.UK, 2023).
-*   Use the same message next to the field and in the [error summary](forms.html#) so they look, sound and mean the same and make sense out of context. This reduces the cognitive effort needed to understand issue has occurred. (GOV.UK, 2023).
-*   Retain the users input after an unsuccessful form submission.
+- Display error or validation messages after the error has been made. Wait until a user moves on from a field to display an error message related to an appropriate format (Kaplan, 2022).
+- Summarise the errors inside of a [Page alert](https://design-system.agriculture.gov.au/components/page-alert) above the form.
+- Make error messages easy to notice and understand (Nielsen Norman Group, 2021).
+- Make error messages easy to memorise the instructions for fixing the error (Nielsen Norman Group, 2021).
+- Be clear and concise: for error messages describe what has happened and tell them how to fix it. The message must be in plain English, use positive language and get to the point (GOV.UK, 2023).
+- Use the same message next to the field and in the [error summary](forms.html#) so they look, sound and mean the same and make sense out of context. This reduces the cognitive effort needed to understand issue has occurred. (GOV.UK, 2023).
+- Retain the users input after an unsuccessful form submission.
 
 ##### Don't
 
-*   Go overboard with success indicators. Success indicators shouldn’t distract users from filling out forms and should only be used when the additional context helps complete the form faster or more accurately (Nielsen Norman Group, 2021).
-*   Use technical jargon like ‘form post error’, ‘unspecified error’ and ‘error 0x0000000643’ (GOV.UK, 2023).
-*   Use words like ‘forbidden’, ‘illegal’, ‘you forgot’ and ‘prohibited’ (GOV.UK, 2023).
-*   Use ‘please’ because it implies a choice (GOV.UK, 2023).
-*   Use ‘sorry’ because it doesn't help fix the problem (GOV.UK, 2023).
-*   Use ‘valid’ and ‘invalid’ because they don't add anything to the message (GOV.UK, 2023).
-*   Use humorous, informal language like ‘oops’ (GOV.UK, 2023).
-*   Give an example in the error message if there's an example on the screen such as within the existing hint text (GOV.UK, 2023).
+- Go overboard with success indicators. Success indicators shouldn’t distract users from filling out forms and should only be used when the additional context helps complete the form faster or more accurately (Nielsen Norman Group, 2021).
+- Use technical jargon like ‘form post error’, ‘unspecified error’ and ‘error 0x0000000643’ (GOV.UK, 2023).
+- Use words like ‘forbidden’, ‘illegal’, ‘you forgot’ and ‘prohibited’ (GOV.UK, 2023).
+- Use ‘please’ because it implies a choice (GOV.UK, 2023).
+- Use ‘sorry’ because it doesn't help fix the problem (GOV.UK, 2023).
+- Use ‘valid’ and ‘invalid’ because they don't add anything to the message (GOV.UK, 2023).
+- Use humorous, informal language like ‘oops’ (GOV.UK, 2023).
+- Give an example in the error message if there's an example on the screen such as within the existing hint text (GOV.UK, 2023).
 
 Be conscious if you notice repeated errors (3 or more times) occurring when testing your form, this may indicate a UI issue. Your error messages may not be clear enough, or the design might not meet users' needs. Remember, if users make mistakes, it's likely the design's fault.
 
-* * *
+---
 
-Form groups
------------
+## Form groups
 
 Used to group form controls and provide structure and consistent spacing within a form. The form group class defines the spacing between form elements. Spacing between from elements is 32px or 2rem.
 
@@ -322,11 +311,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 \* First Name
 
@@ -342,10 +331,9 @@ Copy Copied
 
 `<!-- The qld__form-group class form group applies spacing between the following two elements --> <!-- Example 1: Required field --> <div class="qld__form-group"> <label for="text-field-spacing-example-1" class="qld__label"> <!-- Required field indicator using aria-required attribute --> <abbr title="required">*</abbr> First Name </label> <input type="text" id="text-field-spacing-example-1" class="qld__text-input qld__text-input--block qld__field-width--half" aria-required="true"> </div> <!-- Example 2: Required field --> <div class="qld__form-group"> <label for="text-field-spacing-example-2" class="qld__label"> <!-- Required field indicator using aria-required attribute --> <abbr title="required">*</abbr> Surname </label> <input type="text" id="text-field-spacing-example-2" class="qld__text-input qld__text-input--block qld__field-width--half" aria-required="true"> </div>`
 
-* * *
+---
 
-Fieldset
---------
+## Fieldset
 
 Fieldset is used to associate a number of related form fields as well as labels within a form. The legend provides an association and caption for the form fields in the fieldset.
 
@@ -355,14 +343,13 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
-What is your address?
-=====================
+# What is your address?
 
 \* Address line 1
 
@@ -386,18 +373,17 @@ Copy Copied
 
 #### When to Use
 
-*   If your form has multiple related controls, such as a set of radio buttons or checkboxes, you should use `<fieldset>` . The `<legend>` element can then be used to provide a caption or title for the group.
-*   In complex forms with many inputs, `<fieldset>` can be used to divide the form into logical sections. This can make the form easier to understand and navigate, particularly for screen reader users.
+- If your form has multiple related controls, such as a set of radio buttons or checkboxes, you should use `<fieldset>` . The `<legend>` element can then be used to provide a caption or title for the group.
+- In complex forms with many inputs, `<fieldset>` can be used to divide the form into logical sections. This can make the form easier to understand and navigate, particularly for screen reader users.
 
 #### When not to use
 
-*   If your form only contains a single control (like a search box), there's no need to use `<fieldset>` . A simple `<label>` and `<input>` would suffice.
-*   If your form contains unrelated controls, it's not appropriate to group them together with `<fieldset>` .
+- If your form only contains a single control (like a search box), there's no need to use `<fieldset>` . A simple `<label>` and `<input>` would suffice.
+- If your form contains unrelated controls, it's not appropriate to group them together with `<fieldset>` .
 
-* * *
+---
 
-Form example
-------------
+## Form example
 
 The HTML `<form>` element is used to create a HTML form for user input. The `<form>` element is a container for different types of input elements, such as text fields, checkboxes, radio buttons, submit buttons, etc. Below is a simple example of how you can structure a form using some of the form components above.
 
@@ -405,18 +391,17 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
-Simple form
------------
+## Simple form
 
 Introductory paragraph providing context for this form.
 
-* * *
+---
 
 ### Section heading
 
@@ -424,11 +409,11 @@ Introductory paragraph providing context for this form.
 
 \* Related text field heading Hint text
 
-* * *
+---
 
 Stand alone field (Optional) Hint text
 
-* * *
+---
 
 Show more
 
@@ -440,10 +425,9 @@ Copy Copied
 
 `<h2>Simple form</h2> <p>Introductory paragraph providing context for this form.</p> <hr class="qld__horizontal-rule--lg"> <form> <fieldset class="qld__fieldset"> <legend class="qld__fieldset__legend"> <h3 class="qld__display-md">Section heading</h3> </legend> <!-- Example 1: Related Required field --> <div class="qld__form-group"> <label for="related-text-field-example-1" class="qld__label"> <abbr title="required">*</abbr> Related text field heading </label> <span class="qld__hint-text" id="related-text-field-example-1-hint">Hint text</span> <input type="text" id="related-text-field-example-1" class="qld__text-input qld__text-input--block qld__field-width--half" aria-required="true" aria-describedby="related-text-field-example-1"> </div> <!-- Example 2: Related Required field --> <div class="qld__form-group"> <label for="related-text-field-example-2" class="qld__label"> <abbr title="required">*</abbr> Related text field heading </label> <span class="qld__hint-text" id="related-text-field-example-2-hint">Hint text</span> <input type="text" id="related-text-field-example-2" class="qld__text-input qld__text-input--block qld__field-width--half" aria-required="true" aria-describedby="related-text-field-example-2-hint"> </div> </fieldset> <hr class="qld__horizontal-rule--lg"> <!-- Example 3: Isolated Optional field --> <div class="qld__form-group"> <label for="isolated-text-field-example" class="qld__label"> Stand alone field <!-- Optional field indicator using aria-label attribute --> <span class="qld__label--optional"> (Optional)</span> </label> <span class="qld__hint-text" id="isolated-text-field-example-hint">Hint text</span> <input type="text" id="isolated-text-field-example" class="qld__text-input qld__text-input--block qld__field-width--half" aria-describedby="isolated-text-field-example-hint"> </div> <hr class="qld__horizontal-rule--lg"> <!-- Submit button --> <div> <input type="submit" class="qld__btn" name="submit" value="submit"> </div> </form>`
 
-* * *
+---
 
-General usage guidelines
-------------------------
+## General usage guidelines
 
 Below are general guidelines for forms. It's also recommended that you review the Australian Government Style Manual for more detailed advice on [form content](https://www.stylemanual.gov.au/content-types/forms "https://www.stylemanual.gov.au/content-types/forms").
 
@@ -453,12 +437,12 @@ Forms are used to capture data from users.
 
 You might design a form for a user to:
 
-*   create and account or login
-*   register for a service
-*   configure settings
-*   fill in a survey and provide feedback
-*   purchase a product
-*   search for something.
+- create and account or login
+- register for a service
+- configure settings
+- fill in a survey and provide feedback
+- purchase a product
+- search for something.
 
 ### Status cancel icon Cancel icon or warning icon When Not to Use Forms:
 
@@ -470,16 +454,16 @@ Don't use forms to display information. Forms are for collecting input, not disp
 
 #### Do
 
-*   Try to keep forms to one column, multiple columns easily disrupt a user’s vertical momentum (Digital NSW, 2022).
-*   Use the right sized text inputs. Make sure the text boxes match the expected content size for what they need to write. This will help convey to them that what they're inputting is correct ([UK.GOV](https://design-system.service.gov.uk/components/text-input "https://design-system.service.gov.uk/components/text-input/") n.d.)
-*   Group Related Fields. If your form has many fields, group related fields together using subheadings or fieldset elements to make the form easier to navigate and understand.
+- Try to keep forms to one column, multiple columns easily disrupt a user’s vertical momentum (Digital NSW, 2022).
+- Use the right sized text inputs. Make sure the text boxes match the expected content size for what they need to write. This will help convey to them that what they're inputting is correct ([UK.GOV](https://design-system.service.gov.uk/components/text-input "https://design-system.service.gov.uk/components/text-input/") n.d.)
+- Group Related Fields. If your form has many fields, group related fields together using subheadings or fieldset elements to make the form easier to navigate and understand.
 
 #### Don't
 
-*   Mix the outlined style and filled style of a text field in the same form.
-*   Use all caps for labels, validation messages or hint text.
-*   Disable copy and paste. Users often need to copy and paste information into a text input, so don't stop them from doing this ([UK.GOV](http://uk.gov "http://UK.GOV") n.d).
-*   Ask for Unnecessary Information**.** Only include fields that are absolutely necessary. Each additional field increases the effort required to fill out the form and can deter users.
+- Mix the outlined style and filled style of a text field in the same form.
+- Use all caps for labels, validation messages or hint text.
+- Disable copy and paste. Users often need to copy and paste information into a text input, so don't stop them from doing this ([UK.GOV](http://uk.gov "http://UK.GOV") n.d).
+- Ask for Unnecessary Information**.** Only include fields that are absolutely necessary. Each additional field increases the effort required to fill out the form and can deter users.
 
 ### Other best practice
 
@@ -497,9 +481,9 @@ It's recommended where possible to use white backgrounds for long forms. White b
 
 Research completed by [GOV.UK](https://gov.uk "http://GOV.UK") (n.d.) and research from [Nielsen and Norman group](https://www.nngroup.com/articles/form-design-placeholders "https://www.nngroup.com/articles/form-design-placeholders/") (2018) suggests that you shouldn't use placeholder text in place of a label, or for hints or examples, as:
 
-*   it vanishes when the user starts typing, which can cause problems for users with memory conditions or when reviewing answers
-*   not all screen readers read it out
-*   its browser default styles often don't meet [minimum contrast requirements](https://www.w3.org/TR/WCAG22/#contrast-minimum "https://www.w3.org/TR/WCAG22/#contrast-minimum").
+- it vanishes when the user starts typing, which can cause problems for users with memory conditions or when reviewing answers
+- not all screen readers read it out
+- its browser default styles often don't meet [minimum contrast requirements](https://www.w3.org/TR/WCAG22/#contrast-minimum "https://www.w3.org/TR/WCAG22/#contrast-minimum").
 
 The only time that you may need placeholder text is to indicate unconventional formatting that a user may be unfamiliar with. Placeholder text provides hints or examples of what to enter (e.g. YYYY-MM-DD). However, since placeholder text disappears once the user begins to input data, it should never contain crucial information.
 
@@ -511,11 +495,9 @@ If you’re asking the user to enter a whole number, set the `inputmode` attribu
 
 Don't use `<input type="number">` unless your user research shows that there’s a need for it. With `<input type="number">` there’s a risk of users accidentally incrementing a number when they’re trying to do something else - for example, scroll up or down the page ([UK.GOV,](https://design-system.service.gov.uk/components/text-input/#avoid-using-inputs-with-a-type-of-number "http://UK.GOV") n.d).
 
-On this page
-------------
+## On this page
 
-Input field anatomy
--------------------
+## Input field anatomy
 
 The anatomy of input fields in our design system consists of several elements:
 
@@ -528,10 +510,10 @@ The anatomy of input fields in our design system consists of several elements:
 5.  **Placeholder text:** Hints at what goes into a field. Placeholder text is optional. It should always be avoided unless communicating complex formatting requirements.
 6.  **Trailing icons:** Trailing icons are optional, they're often used to convey additional field functionality or options. This space should also be reserved to fit icons that some browsers might insert into the input (for example to show or generate a password) (UK.GOV n.d).
 7.  **Validation messages**
-1.  Error messages: When text input isn't accepted, an error message can display instructions on how to fix it. Error messages are displayed above the input line.
-2.  Success messages: When text input is accepted, a message can display to the inform the user. This is useful in situations like password generation where you can let the user know their password has met syntax requirements.
+8.  Error messages: When text input isn't accepted, an error message can display instructions on how to fix it. Error messages are displayed above the input line.
+9.  Success messages: When text input is accepted, a message can display to the inform the user. This is useful in situations like password generation where you can let the user know their password has met syntax requirements.
 
-* * *
+---
 
 ### Visual style
 
@@ -549,10 +531,9 @@ Outlined text fields have more visual emphasis than filled text fields, making t
 
 Filled text fields have less visual emphasis than outlined text fields. They work best where there are many text fields that are placed together to reduce the visual weight of complex forms.
 
-* * *
+---
 
-Input field sizes
------------------
+## Input field sizes
 
 Use the width of a text input field to suggest the length of information it should contain. It provides a visual guide for users. For instance, a postcode input field should be narrower than an email field.
 
@@ -616,10 +597,9 @@ Copy Copied
 
 `<!-- 20 Characters: <input class="qld__text-input--block qld__field-width--20char"> 10 Characters: <input class="au-text-input qld__field-width--10char"> 5 Characters: <input class="au-text-input qld__field-width--5charf"> 4 Characters: <input class="au-text-input qld__field-width--4char"> 3 Characters: <input class="au-text-input qld__field-width--3char"> 2 Characters: <input class="au-text-input qld__field-width--2char"> --> <!-- 20 Characters --> <div class="qld__form-group"> <label for="text-field-id-1" class="qld__label"> <abbr title="required">*</abbr> Text-field label </label> <span class="qld__hint-text" id="text-field-hint-1">Hint text</span> <input type="text" id="text-field-id-1" class="qld__text-input qld__text-input--block qld__field-width--20char" aria-required="true" aria-describedby="text-field-hint-1"> </div> <!-- 10 Characters --> <div class="qld__form-group"> <label for="text-field-id-2" class="qld__label"> <abbr title="required">*</abbr> Text-field label </label> <span class="qld__hint-text" id="text-field-hint-2">Hint text</span> <input type="text" id="text-field-id-1" class="qld__text-input qld__text-input--block qld__field-width--10char" aria-required="true" aria-describedby="text-field-hint-2"> </div> <!-- 5 Characters --> <div class="qld__form-group"> <label for="text-field-id-3" class="qld__label"> <abbr title="required">*</abbr> Text-field label </label> <span class="qld__hint-text" id="text-field-hint-3">Hint text</span> <input type="text" id="text-field-id-3" class="qld__text-input qld__text-input--block qld__field-width--5char" aria-required="true" aria-describedby="text-field-hint-3"> </div> <!-- 4 Characters --> <div class="qld__form-group"> <label for="text-field-id-4" class="qld__label"> <abbr title="required">*</abbr> Text-field label </label> <span class="qld__hint-text" id="text-field-hint-4">Hint text</span> <input type="text" id="text-field-id-4" class="qld__text-input qld__text-input--block qld__field-width--4char" aria-required="true" aria-describedby="text-field-hint-4"> </div> <!-- 3 Characters --> <div class="qld__form-group"> <label for="text-field-id-5" class="qld__label"> <abbr title="required">*</abbr> Text-field label </label> <span class="qld__hint-text" id="text-field-hint-4">Hint text</span> <input type="text" id="text-field-id-5" class="qld__text-input qld__text-input--block qld__field-width--3char" aria-required="true" aria-describedby="text-field-hint-5"> </div> <!-- 2 Characters --> <div class="qld__form-group"> <label for="text-field-id-6" class="qld__label"> <abbr title="required">*</abbr> Text-field label </label> <span class="qld__hint-text" id="text-field-hint-6">Hint text</span> <input type="text" id="text-field-id-6" class="qld__text-input qld__text-input--block qld__field-width--2char" aria-required="true" aria-describedby="text-field-hint-6"> </div>`
 
-* * *
+---
 
-Research and rationale
-----------------------
+## Research and rationale
 
 Like most of our components input fields started off using the [DTA](https://gold.designsystemau.org/components/text-inputs "https://gold.designsystemau.org/components/text-inputs/") designs as a base. As our Design System progressed, we saw a need to include additional styles with less visual weight as well as to investigate this pattern as a whole to understand why other Designs Systems had diverged from the original DTA patterns.
 
@@ -627,18 +607,18 @@ To inform our design choices we collated best practice research from a number of
 
 We also conducted a comparative review of forms patterns, looking at widths, heights, layout and features used by:
 
-*   [UK.GOV](http://uk.gov "http://UK.GOV")
-*   [IBM Carbon](https://carbondesignsystem.com/components/text-input/accessibility "https://carbondesignsystem.com/components/text-input/accessibility")
-*   [Material Design](https://m3.material.io/components/text-fields/overview "https://m3.material.io/components/text-fields/overview")
-*   [Adobe spectrum](https://spectrum.adobe.com/page/text-field "https://spectrum.adobe.com/page/text-field/")
-*   [NSW Design System](https://digitalnsw.github.io/nsw-design-system/components/form/index.html "https://digitalnsw.github.io/nsw-design-system/components/form/index.html")
-*   [Atlassian](https://atlassian.design/components/form/usage "https://atlassian.design/components/form/usage")
-*   [Microsoft Fluent](https://learn.microsoft.com/en-us/windows/apps/design/controls/forms "https://learn.microsoft.com/en-us/windows/apps/design/controls/forms")
-*   [MOD.UK](https://design-system.digital.mod.uk/patterns/forms "https://design-system.digital.mod.uk/patterns/forms").
+- [UK.GOV](http://uk.gov "http://UK.GOV")
+- [IBM Carbon](https://carbondesignsystem.com/components/text-input/accessibility "https://carbondesignsystem.com/components/text-input/accessibility")
+- [Material Design](https://m3.material.io/components/text-fields/overview "https://m3.material.io/components/text-fields/overview")
+- [Adobe spectrum](https://spectrum.adobe.com/page/text-field "https://spectrum.adobe.com/page/text-field/")
+- [NSW Design System](https://digitalnsw.github.io/nsw-design-system/components/form/index.html "https://digitalnsw.github.io/nsw-design-system/components/form/index.html")
+- [Atlassian](https://atlassian.design/components/form/usage "https://atlassian.design/components/form/usage")
+- [Microsoft Fluent](https://learn.microsoft.com/en-us/windows/apps/design/controls/forms "https://learn.microsoft.com/en-us/windows/apps/design/controls/forms")
+- [MOD.UK](https://design-system.digital.mod.uk/patterns/forms "https://design-system.digital.mod.uk/patterns/forms").
 
 ### Borders
 
-Based on research and advice from a third party accessibility audit of our components we chose to continue to use thick borders for our input boxes as seen in the DTA, borders must use the secondary-alt border colour which is crafted to meet a 3:1 minimum colour contrast ratio, [W3C guidelines.](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum) "https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum)") Graphical objects that are very thin are harder to perceive, therefore have a higher contrast requirement of 4.5:1. Graphical objects that are thicker or are solid shapes have a lower requirement of 3:1. 1px is considered thin and 3px is considered thick. Because our forms are using 2px borders we opted to ensure our contrast ration actually closer to 4.5.
+Based on research and advice from a third party accessibility audit of our components we chose to continue to use thick borders for our input boxes as seen in the DTA, borders must use the secondary-alt border colour which is crafted to meet a 3:1 minimum colour contrast ratio, [W3C guidelines.](<https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum)> "https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum)") Graphical objects that are very thin are harder to perceive, therefore have a higher contrast requirement of 4.5:1. Graphical objects that are thicker or are solid shapes have a lower requirement of 3:1. 1px is considered thin and 3px is considered thick. Because our forms are using 2px borders we opted to ensure our contrast ration actually closer to 4.5.
 
 ### Outlined and filled styles
 
@@ -676,9 +656,9 @@ According to Material Design (n.d) best practice for hint messages is that they 
 
 [Research](https://www.semanticscholar.org/paper/Simple-but-Crucial-User-Interfaces-in-the-World-20-Bargas-Avila-Brenzikofer/d8ced0119b872a02cefe62c5885403df72e231ad "https://www.semanticscholar.org/paper/Simple-but-Crucial-User-Interfaces-in-the-World-20-Bargas-Avila-Brenzikofer/d8ced0119b872a02cefe62c5885403df72e231ad") informing guidelines for forms (Bargas-Avila et al. 2009) points to the best positioning for labels is to be above the text field as this results in a number of advantages:
 
-*   label length doesn't affect form field placement
-*   faster completion rates
-*   reduces the number of fixations (easier to scan).
+- label length doesn't affect form field placement
+- faster completion rates
+- reduces the number of fixations (easier to scan).
 
 The only adjustments we made from the original DTA source however was to increase the font-weight of these labels, enabling them to stand out better on the page which was in line with best practice of other Design Systems.
 
@@ -694,9 +674,9 @@ For optional fields we chose to follow [IBM Carbon (2023)](https://carbondesigns
 
 Error and validation messages are positioned above the text field. This is because placing error messages under fields is problematic. Adrian Roselli (2017) author several books on web design offers the following simple arguments in his [article](https://adrianroselli.com/2017/01/avoid-messages-under-fields.html "https://adrianroselli.com/2017/01/avoid-messages-under-fields.html") on message positioning for why:
 
-*   auto-complete features in browsers obscure them
-*   on-screen keyboards can obscure them
-*   depending on how you programmatically associate this text with form fields, it may be an anti-pattern to announce afterward in screen readers.
+- auto-complete features in browsers obscure them
+- on-screen keyboards can obscure them
+- depending on how you programmatically associate this text with form fields, it may be an anti-pattern to announce afterward in screen readers.
 
 We've also chosen to adopt Nielsen and Norman group's [recommendations](https://www.nngroup.com/articles/errors-forms-design-guidelines "https://www.nngroup.com/articles/errors-forms-design-guidelines/") (Krause, 2019) that colour is used to help validations states stand out and that a transparent background shade of the same colour be added to the error field to make it salient on a page that includes many fields.
 
@@ -704,21 +684,19 @@ We've also chosen to adopt Nielsen and Norman group's [recommendations](https://
 
 In our comparative review we found that icons were commonly included with error and validation messages. We chose to follow this convention and include icons in a validation messages. The incorporation of icons was also supported by Nielsen and Norman Group’s article on [website form usability](https://www.nngroup.com/articles/web-form-design "https://www.nngroup.com/articles/web-form-design/") which states that [Errors should be signaled](https://www.nngroup.com/articles/error-message-guidelines "https://www.nngroup.com/articles/error-message-guidelines/") through a variety of cues, not solely through colour and WCAG Level A requirements which state colour isn't used as the only means of conveying information. The article [how to report errors](https://www.nngroup.com/articles/errors-forms-design-guidelines "https://www.nngroup.com/articles/errors-forms-design-guidelines/") (Krause, 2019) states that together with colour, using icons to the left of your error message will draw attention to the error and help users that are colour blind.
 
-Planned improvements and research
----------------------------------
+## Planned improvements and research
 
 There are a number of proposed features based on common functionality we noted in our comparative review that we intend to review as improvements to this component.
 
 These include:
 
-*   use of tool tips in forms to replace placeholder text or provide additional context
-*   prefix and suffixes to help users enter things like currencies and measurements
-*   use of the Character Countdown component to inform users of how many characters they have left while typing in text fields
-*   autocomplete styling
-*   trailing icons such as show and hide options for password fields.
+- use of tool tips in forms to replace placeholder text or provide additional context
+- prefix and suffixes to help users enter things like currencies and measurements
+- use of the Character Countdown component to inform users of how many characters they have left while typing in text fields
+- autocomplete styling
+- trailing icons such as show and hide options for password fields.
 
-Classes
--------
+## Classes
 
 Name
 
@@ -840,26 +818,25 @@ Utility class applied to the form field that set the width to approximately 3 ch
 
 Utility class applied to the form field that set the width to approximately 2 characters.
 
-Variables
----------
+## Variables
 
 Name
 
 Description
 
-`$QLD-color-error`
+`var(--QLD-color-error`
 
 Colour for warning elements. This is a global system colour.
 
-`$QLD-color-error__light`
+`var(--QLD-color-error__light`
 
 Colour for warning elements backgrounds.
 
-`$QLD-color-error__shade`
+`var(--QLD-color-error__shade`
 
 Darker shade for warning elements backgrounds and hover states.
 
-`$QLD-color-success__shade`
+`var(--QLD-color-success__shade`
 
 Colour for success elements. This is a global system colour.
 
@@ -911,8 +888,7 @@ Defines % for 1/2 width (This may occasionally need to be adjusted to factor i
 
 Defines % for 31/4 width (This may occasionally need to be adjusted to factor in column gaps and padding).
 
-Accessible form requirements
-----------------------------
+## Accessible form requirements
 
 Keep these considerations in mind if you're designing forms.
 
@@ -941,8 +917,8 @@ This a Level AA criterion that aims to make web content more accessible for peop
 
 To comply with this guideline, you need to ensure that:
 
-*   the input field serves a purpose listed in the '[Input Purposes for User Interface Components'](https://www.w3.org/TR/WCAG21/#input-purposes "https://www.w3.org/TR/WCAG21/#input-purposes") section of the WCAG 2.1 specification
-*   the content is created using web technologies that support identifying the expected meaning of the input field.
+- the input field serves a purpose listed in the '[Input Purposes for User Interface Components'](https://www.w3.org/TR/WCAG21/#input-purposes "https://www.w3.org/TR/WCAG21/#input-purposes") section of the WCAG 2.1 specification
+- the content is created using web technologies that support identifying the expected meaning of the input field.
 
 Some browsers attempt to aid the user by automatically filling form controls rather than having the user reenter their information each time. For example, a field asking for the user's telephone number can be automatically filled with the user's phone number.
 
@@ -980,16 +956,15 @@ For web pages that cause legal commitments or financial transactions for the use
 
 Ensure that any instructions or guidelines for filling out the text input are clear and easily understandable. This helps users avoid mistakes and better understand the expected input format. This is commonly seen in the form of hint text that appears below the labe (W3C 2019b).
 
-* * *
+---
 
-References
-----------
+## References
 
 IBM (n.d. a) [Forms: Optional vs. Required Fields](https://carbondesignsystem.com/patterns/forms-pattern/#optional-vs.-mandatory "https://carbondesignsystem.com/patterns/forms-pattern/#optional-vs.-mandatory") _IBM Carbon Design System,_ accessed March 7, 2023.
 
 IBM (n.d b) [Text input](https://carbondesignsystem.com/components/text-input/accessibility "https://carbondesignsystem.com/components/text-input/accessibility"), _IBM Carbon Design System,_ accessed March 7, 2023.
 
-MOD.UK (n.d.) [Forms](https://design-system.digital.mod.uk/patterns/forms "https://design-system.digital.mod.uk/patterns/forms/"), _MOD.UK Design System,_ Ministry of Defence, accessed March 7, 2023.
+MOD.UK (n.d.) [Forms](https://design-system.digital.mod.uk/patterns/forms "https://design-system.digital.mod.uk/patterns/forms/"), *MOD.UK Design System,* Ministry of Defence, accessed March 7, 2023.
 
 GOV.UK (n.d a) [Text input](https://design-system.service.gov.uk/components/text-input "https://design-system.service.gov.uk/components/text-input/"), _GOV.UK Design System_, accessed March 9, 2023.
 
@@ -1017,23 +992,22 @@ Silver A (2019) [Form design from zero to hero all in one blog post](https://ad
 
 W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21)World Wide Web Consortium, accessed March 7, 2023.
 
-W3C (2019a) [Forms concepts](https://www.w3.org/WAI/tutorials/forms "https://www.w3.org/WAI/tutorials/forms/"), _Web accessibility tutorials_, World Wide Web Consortium, accessed March 7, 2023.
+W3C (2019a) [Forms concepts](https://www.w3.org/WAI/tutorials/forms "https://www.w3.org/WAI/tutorials/forms/"), *Web accessibility tutorials*, World Wide Web Consortium, accessed March 7, 2023.
 
-W3C (2019b) [Form instructions](https://www.w3.org/WAI/tutorials/forms/instructions "https://www.w3.org/WAI/tutorials/forms/instructions/"), _Web accessibility tutorials_, World Wide Web Consortium, accessed March 7, 2023.
+W3C (2019b) [Form instructions](https://www.w3.org/WAI/tutorials/forms/instructions "https://www.w3.org/WAI/tutorials/forms/instructions/"), *Web accessibility tutorials*, World Wide Web Consortium, accessed March 7, 2023.
 
 W3C (2019c) [Understanding Success Criterion 1.4.11: Non-text Contrast,](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)World Wide Web Consortium, accessed March 7, 2023.
 
-W3C (2019d) [Contrast (Minimum) - Low Vision Accessibility Task Force](https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum)) World Wide Web Consortium, accessed March 7, 2023.
+W3C (2019d) [Contrast (Minimum) - Low Vision Accessibility Task Force](<https://www.w3.org/WAI/GL/low-vision-a11y-tf/wiki/Contrast_(Minimum)>) World Wide Web Consortium, accessed March 7, 2023.
 
 Bargas-Avila JA, Brenzikofer O, Roth SP, Tuch AN, Orsini S and Opwis K (2011) '[Simple but Crucial User Interfaces in the World Wide Web: Introducing 20 Guidelines for Usable Web Form Design](https://www.semanticscholar.org/paper/Simple-but-Crucial-User-Interfaces-in-the-World-20-Bargas-Avila-Brenzikofer/d8ced0119b872a02cefe62c5885403df72e231ad)', Semantic Scholar, University of Basel, Faculty of Psychology, Department of Cognitive Psychology and Methodology, Switzerland.
 
-Digital NSW (2022) [Forms](https://digitalnsw.github.io/nsw-design-system/components/form/index.html "https://digitalnsw.github.io/nsw-design-system/components/form/index.html"), _Components, NSW Government Design System,_ accessed March 7, 2023_._
+Digital NSW (2022) [Forms](https://digitalnsw.github.io/nsw-design-system/components/form/index.html "https://digitalnsw.github.io/nsw-design-system/components/form/index.html"), *Components, NSW Government Design System,* accessed March 7, 2023*.*
 
-Digital Transformation Agency (2018) [Text-inputs](https://gold.designsystemau.org/components/text-inputs "https://gold.designsystemau.org/components/text-inputs/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
+Digital Transformation Agency (2018) [Text-inputs](https://gold.designsystemau.org/components/text-inputs "https://gold.designsystemau.org/components/text-inputs/"), *Gold Design System (Formerly DTA)*, accessed 10 April 2023.
 
 Microsoft (2022) [Forms](https://learn.microsoft.com/en-us/windows/apps/design/controls/forms "https://learn.microsoft.com/en-us/windows/apps/design/controls/forms") _Controls and patterns, Microsoft Fluent Design System_, accessed March 7, 2023.
 
 Birkett A (2019) [Form design: 13 empirically backed best practices](https://cxl.com/blog/form-design-best-practices "https://cxl.com/blog/form-design-best-practices/"), accessed 30 April 2020.
-
 
 **Last updated:** May 2024

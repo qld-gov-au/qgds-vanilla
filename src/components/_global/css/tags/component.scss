@@ -30,7 +30,7 @@
 
   .qld__card .qld__card__footer & {
     color: var(--QLD-color-light__text--lighter);
-    border-color: $QLD-color-neutral--lighter;
+    border-color: var(--QLD-color-neutral--lighter);
   }
 
   .qld__body--light &,
@@ -171,7 +171,7 @@ a.qld__tag,
 .qld__tag.qld__tag--info,
 .qld__card__footer .qld__tag.qld__tag--info {
   color: var(--QLD-color-light__text--lighter);
-  border-color: $QLD-color-neutral--lightest;
+  border-color: var(--QLD-color-neutral--lightest);
   background-color: var(--QLD-color-light__background--shade); //here
 
   .qld__body--light &,
@@ -206,7 +206,7 @@ a.qld__tag,
 .qld__tag.qld__tag--filter,
 .qld__card__footer .qld__tag.qld__tag--filter {
   color: var(--QLD-color-light__text);
-  border-color: $QLD-color-neutral--lighter;
+  border-color: var(--QLD-color-neutral--lighter);
   background-color: transparent;
   //@include QLD-fontgrid(sm);
   font-size: $typographyMobileBodyFontSize;
@@ -228,7 +228,7 @@ a.qld__tag,
   &:hover {
     color: var(--QLD-color-light__text);
     background-color: transparent;
-    border-color: $QLD-color-neutral--lighter;
+    border-color: var(--QLD-color-neutral--lighter);
     text-decoration: none;
   }
 

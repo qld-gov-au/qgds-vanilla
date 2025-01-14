@@ -118,7 +118,7 @@ $QLD-header-md: 72px;
 
         @include QLD-media(lg) {
           // border-bottom-color: transparent;
-          border-bottom: solid $QLD-border-width-extra-thick $QLD-color-neutral--lightest;
+          border-bottom: solid $QLD-border-width-extra-thick var(--QLD-color-neutral--lightest);
 
           @include QLD-space(margin-bottom, -0.5unit);
         }
@@ -149,7 +149,7 @@ $QLD-header-md: 72px;
     & .qld__main-nav__cta-wrapper {
       .qld__main-nav__item--cta {
         .qld__main-nav__item-title::before {
-          background-color: $QLD-color-neutral--lighter;
+          background-color: var(--QLD-color-neutral--lighter);
           top: 0;
           bottom: auto;
           left: 0;
@@ -209,7 +209,7 @@ $QLD-header-md: 72px;
         bottom: 0;
         left: 4px;
         right: 0;
-        background-color: $QLD-color-neutral--lighter;
+        background-color: var(--QLD-color-neutral--lighter);
 
         @include QLD-media(lg) {
           @include QLD-space(height, 0);
@@ -261,7 +261,7 @@ $QLD-header-md: 72px;
       &:active {
         color: var(--QLD-color-light__text);
         background-color: var(--QLD-color-light__background);
-        border-left-color: $QLD-color-neutral--lightest;
+        border-left-color: var(--QLD-color-neutral--lightest);
         font-weight: bold;
 
         .qld__main-nav__item-icon {
@@ -531,7 +531,7 @@ $QLD-header-md: 72px;
     align-items: center;
     color: var(--QLD-color-light__link);
     @include QLD-focus();
-    border-left: solid $QLD-border-width-thin $QLD-color-neutral--lighter;
+    border-left: solid $QLD-border-width-thin var(--QLD-color-neutral--lighter);
 
     &:hover {
       background-color: var(--QLD-color-light__background--shade); //here

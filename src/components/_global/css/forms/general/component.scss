@@ -100,7 +100,7 @@ label {
 }
 
 .qld__input--error {
-  color: $QLD-color-status__error;
+  color: var(--QLD-color-status__error);
 }
 
 .qld__hint-text,
@@ -149,7 +149,7 @@ label {
 
   // Error state for form group
   &--invalid {
-    border-left: solid 5px $QLD-color-status__error;
+    border-left: solid 5px var(--QLD-color-status__error);
     padding-left: 15px;
   }
 
@@ -258,11 +258,11 @@ form {
 }
 
 .qld__input--error {
-  color: $QLD-color-status__error;
+  color: var(--QLD-color-status__error);
 
   .qld__body--dark &,
   .qld__body--dark-alt & {
-    color: $QLD-color-status__error--lightest;
+    color: var(--QLD-color-status__error--lightest);
   }
 }
 
@@ -271,7 +271,7 @@ form {
   abbr[title="required"] {
     float: left;
     @include QLD-space(margin-right, 0.25unit);
-    color: $QLD-color-status__error;
+    color: var(--QLD-color-status__error);
     font-size: 1rem;
     border: 0;
     text-decoration: none;
@@ -321,7 +321,7 @@ span.qld__input--error p.sq-form-error {
     line-height: $typographyDesktopBodyLineHeight;
   }
 
-  color: $QLD-color-status__error;
+  color: var(--QLD-color-status__error);
   display: block;
 
   * + & {
@@ -356,6 +356,6 @@ span.qld__input--error p.sq-form-error {
   p.qld__input--error,
   span.qld__input--error,
   p.sq-form-error {
-    color: $QLD-color-status__error--lightest;
+    color: var(--QLD-color-status__error--lightest);
   }
 }
