@@ -24,11 +24,12 @@ $QLD-side-nav-breakpoint: lg !default;
   line-height: $typographyDesktopSmLineHeight;
   font-family: $QLD-font;
   background-color: var(--QLD-color-light__background--shade); //here
-  border-radius: $QLD-border-radius;
+  border-radius: $QLD-border-radius-xs;
   overflow: hidden;
   @include QLD-space(margin-bottom, 2.5unit);
 
   @include QLD-media(lg) {
+    border-radius: $QLD-border-radius-md;
     @include QLD-space(margin-bottom, 0unit);
     // @include QLD-space(margin-right, 1unit);
     border: 0;

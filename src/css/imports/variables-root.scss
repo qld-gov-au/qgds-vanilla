@@ -227,11 +227,11 @@ $QLD-margin__lables--mobile: 2;
 /**
 * QLD border-width values
 */
-$QLD-border-width-thin: 1px;
-$QLD-border-width-default: 2px;
-$QLD-border-width-medium: 3px;
-$QLD-border-width-thick: 4px;
-$QLD-border-width-extra-thick: 8px;
+$QLD-border-width-thin: $borderWidthThin;
+$QLD-border-width-default: $borderWidthDefault;
+$QLD-border-width-medium: $borderWidthMedium;
+$QLD-border-width-thick: $borderWidthThick;
+$QLD-border-width-extra-thick: $borderWidthExtraThick;
 
 /**
 * QLD border-radius values
@@ -257,20 +257,55 @@ $QLD-underline__offset: $textDecorationOffsetNear;
 
 /**
 * QLD box shadow values
+
+Example with "key: value" from QLD Design Tokens
+
+$boxShadowThree1X: 0px;
+$boxShadowThree1Y: 4px;
+$boxShadowThree1Blur: 8px;
+$boxShadowThree1Spread: 3px;
+$boxShadowThree1Color: rgba(0, 0, 0, 0.1);
+$boxShadowThree1Type: dropShadow;
+$boxShadowThree2X: 0px;
+$boxShadowThree2Y: 1px;
+$boxShadowThree2Blur: 3px;
+$boxShadowThree2Spread: 0;
+$boxShadowThree2Color: rgba(0, 0, 0, 0.2);
+$boxShadowThree2Type: dropShadow;
+
+$boxShadowFour1X: 7px;
+$boxShadowFour1Y: 6px;
+$boxShadowFour1Blur: 13px;
+$boxShadowFour1Spread: 0;
+$boxShadowFour1Color: rgba(0, 0, 0, 0.2);
+$boxShadowFour1Type: dropShadow;
+$boxShadowFour2X: 0px;
+$boxShadowFour2Y: 2px;
+$boxShadowFour2Blur: 5px;
+$boxShadowFour2Spread: 0;
+$boxShadowFour2Color: rgba(0, 0, 0, 0.1);
+$boxShadowFour2Type: dropShadow;
+$boxShadowFour3X: 0px;
+$boxShadowFour3Y: 13px;
+$boxShadowFour3Blur: 20px;
+$boxShadowFour3Spread: 0;
+$boxShadowFour3Color: rgba(0, 0, 0, 0.1);
+$boxShadowFour3Type: dropShadow;
+
 */
-$QLD-box-shaddow-level-one:
-  0px 1px 2px rgba(0, 0, 0, 0.2),
-  0px 1px 3px 1px rgba(0, 0, 0, 0.1);
-$QLD-box-shaddow-level-two:
-  0px 1px 2px rgba(0, 0, 0, 0.3),
-  0px 2px 6px 2px rgba(0, 0, 0, 0.15);
-$QLD-box-shaddow-level-three:
-  0px 4px 8px 3px rgba(0, 0, 0, 0.1),
-  0px 1px 3px rgba(0, 0, 0, 0.2);
-$QLD-box-shaddow-level-four:
-  7px 6px 13px rgba(0, 0, 0, 0.02),
-  0px 2px 5px rgba(0, 0, 0, 0.1),
-  0px 13px 20px rgba(0, 0, 0, 0.1);
+$QLD-box-shadow-level-one:
+  $boxShadowOne1X $boxShadowOne1Y $boxShadowOne1Blur $boxShadowOne1Spread $boxShadowOne1Color,
+  $boxShadowOne2X $boxShadowOne2Y $boxShadowOne2Blur $boxShadowOne2Spread $boxShadowOne2Color;
+$QLD-box-shadow-level-two:
+  $boxShadowTwo1X $boxShadowTwo1Y $boxShadowTwo1Blur $boxShadowTwo1Spread $boxShadowTwo1Color,
+  $boxShadowTwo2X $boxShadowTwo2Y $boxShadowTwo2Blur $boxShadowTwo2Spread $boxShadowTwo2Color;
+$QLD-box-shadow-level-three:
+  $boxShadowThree1X $boxShadowThree1Y $boxShadowThree1Blur $boxShadowThree1Spread $boxShadowThree1Color,
+  $boxShadowThree2X $boxShadowThree2Y $boxShadowThree2Blur $boxShadowThree2Spread $boxShadowThree2Color;
+$QLD-box-shadow-level-four:
+  $boxShadowFour1X $boxShadowFour1Y $boxShadowFour1Blur $boxShadowFour1Spread $boxShadowFour1Color,
+  $boxShadowFour2X $boxShadowFour2Y $boxShadowFour2Blur $boxShadowFour2Spread $boxShadowFour2Color,
+  $boxShadowFour3X $boxShadowFour3Y $boxShadowFour3Blur $boxShadowFour3Spread $boxShadowFour3Color;
 
 /***
 QLD Fixed widths
@@ -383,12 +418,32 @@ $QLD-color-status__caution--lighter: $themeColorReservedAlertLighter !default;
 $QLD-color-status__caution--darker: $themeColorReservedAlertDarker !default;
 
 /**
-  * QLD-border-radius styles
-  */
-$QLD-border-radius: $QLD-unit + 0px !default; //one place only
-
-/**
 * QLD Line height variables
+Original
+$QLD-default-mobile-xs: 14px;
+$QLD-default-mobile-sm: 16px;
+$QLD-default-mobile-md: 20px;
+$QLD-default-mobile-lg: 24px;
+$QLD-default-mobile-xl: 28px;
+$QLD-default-mobile-xxl: 32px;
+$QLD-default-mobile-xxxl: 40px;
+
+$QLD-default-desktop-xs: 14px;
+$QLD-default-desktop-sm: 16px;
+$QLD-default-desktop-md: 20px;
+$QLD-default-desktop-lg: 24px;
+$QLD-default-desktop-xl: 32px;
+$QLD-default-desktop-xxl: 40px;
+$QLD-default-desktop-xxxl: 48px;
+
+$QLD-heading-space-xs: 16px;
+$QLD-heading-space-sm: 20px;
+$QLD-heading-space-md: 24px;
+$QLD-heading-space-lg: 32px;
+$QLD-heading-space-xl: 40px;
+$QLD-heading-space-xxl: 52px;
+$QLD-heading-space-xxxl: 60px;
+
 */
 
 $QLD-default-mobile-xs: 14px;
@@ -415,7 +470,7 @@ $QLD-heading-space-xl: 40px;
 $QLD-heading-space-xxl: 52px;
 $QLD-heading-space-xxxl: 60px;
 
-$QLD-color-contained-layout__background: #eff4f9; //deprecated
+//$QLD-color-contained-layout__background: #eff4f9; //deprecated
 
 /**
 * QLD custom properties (CSS variables) - defaults
@@ -496,5 +551,4 @@ $QLD-color-contained-layout__background: #eff4f9; //deprecated
   --QLD-heading-space-xl: #{$QLD-heading-space-xl};
   --QLD-heading-space-xxl: #{$QLD-heading-space-xxl};
   --QLD-heading-space-xxxl: #{$QLD-heading-space-xxxl};
-  --QLD-color-contained-layout__background: #{$QLD-color-contained-layout__background};
 }
