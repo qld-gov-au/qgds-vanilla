@@ -3,9 +3,9 @@
         {{#if metadata.promo_image.value}}
         <section class="qld__body {{metadata.type.value}} qld__promo-panel {{metadata.body_background.value}} {{metadata.image_alignment.value}}" id="{{#if metadata.id_field.value}}{{{metadata.id_field.value}}}{{else}}promo-panel-{{assetid}}{{/if}}">
             <div class="container-fluid">
-                <div class="qld__promo-panel__container row" {{#ifCond metadata.type.value '==' 'qld__body--full-image'}}style="background-image: url(./?a={{metadata.promo_image.value}}); background-repeat: no-repeat; background-size: cover;"{{/ifCond}}>
+                <div class="qld__promo-panel__container row" {{#ifCond metadata.type.value '==' 'qld__body--full-image'}}style="background-image: url({{metadata.promo_image.value}}); background-repeat: no-repeat; background-size: cover;"{{/ifCond}}>
                     <div class="qld__promo-panel__container-image">
-                        <div class="qld__promo-panel__image" {{#ifCond metadata.type.value '==' 'qld__body--full-image'}}style="background: transparent"{{else}}style="background-image: url(./?a={{metadata.promo_image.value}})"{{/ifCond}}></div>
+                        <div class="qld__promo-panel__image" {{#ifCond metadata.type.value '==' 'qld__body--full-image'}}style="background: transparent"{{else}}style="background-image: url({{metadata.promo_image.value}})"{{/ifCond}}></div>
                     </div>
                     <div class="qld__promo-panel__container-content">
                         <div class="qld__promo-panel__container-inner">
@@ -29,26 +29,26 @@
                             {{#ifCond metadata.link_type.value '==' 'cta'}}
                                 <div>
                                 {{#if metadata.cta_link.value}}
-                                    <a class="qld__cta-link" href="./?a={{metadata.cta_link.value}}">{{metadata.cta_link_title.value}}</a>
+                                    <a class="qld__cta-link" href="{{metadata.cta_link.value}}">{{metadata.cta_link_title.value}}</a>
                                 {{/if}}
                                 </div>
                             {{/ifCond}}
                             {{#ifCond metadata.link_type.value '==' 'button'}}
                                 {{#ifAny metadata.primary_link_title.value metadata.secondary_link_title.value}}
                                 <ul class="qld__promo-panel__container-btn qld__banner__content--cta qld__link-list">
-                                
+
                                     {{#if metadata.primary_link_title.value}}
                                         <li>
-                                        <a class="qld__promo-panel__btn qld__btn qld__btn--primary" data-type="class" href="./?a={{metadata.primary_link.value}}" >{{metadata.primary_link_title.value}}</a>
+                                        <a class="qld__promo-panel__btn qld__btn qld__btn--primary" data-type="class" href="{{metadata.primary_link.value}}" >{{metadata.primary_link_title.value}}</a>
                                         </li>
-                                        
+
                                     {{/if}}
 
                                     {{#if metadata.secondary_link_title.value}}
                                     <li>
-                                        <a class="qld__promo-panel__btn qld__btn qld__btn--secondary" data-type="class" href="./?a={{metadata.secondary_link.value}}" >{{metadata.secondary_link_title.value}}</a>
+                                        <a class="qld__promo-panel__btn qld__btn qld__btn--secondary" data-type="class" href="{{metadata.secondary_link.value}}" >{{metadata.secondary_link_title.value}}</a>
                                     </li>
-                                        
+
                                     {{/if}}
                                 </ul>
                                 {{/ifAny}}
@@ -78,16 +78,16 @@
                             {{#ifCond metadata.link_type.value '==' 'cta'}}
                                 <div>
                                 {{#if metadata.cta_link.value}}
-                                    <a class="qld__cta-link" href="./?a={{metadata.cta_link.value}}">{{metadata.cta_link_title.value}}</a>
+                                    <a class="qld__cta-link" href="{{metadata.cta_link.value}}">{{metadata.cta_link_title.value}}</a>
                                 {{/if}}
                                 </div>
                             {{/ifCond}}
                             {{#ifCond metadata.link_type.value '==' 'button'}}
                                 {{#if metadata.primary_link.value}}
-                                    <a class="qld__promo-panel__btn qld__btn" href="./?a={{metadata.primary_link.value}}">{{metadata.primary_link_title.value}}</a>
+                                    <a class="qld__promo-panel__btn qld__btn" href="{{metadata.primary_link.value}}">{{metadata.primary_link_title.value}}</a>
                                 {{/if}}
                                 {{#if metadata.secondary_link.value}}
-                                    <a class="qld__promo-panel__btn qld__btn qld__btn--secondary" href="./?a={{metadata.secondary_link.value}}">{{metadata.secondary_link_title.value}}</a>
+                                    <a class="qld__promo-panel__btn qld__btn qld__btn--secondary" href="{{metadata.secondary_link.value}}">{{metadata.secondary_link_title.value}}</a>
                                 {{/if}}
                             {{/ifCond}}
                         </div>

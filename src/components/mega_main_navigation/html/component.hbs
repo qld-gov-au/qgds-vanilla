@@ -22,7 +22,7 @@
                         {{#if site.metadata.mainNavHomeIconShow.value}}
                         <li class="qld__main-nav__item {{#if current.home}}active{{/if}}">
                             <div class="qld__main-nav__item-title">
-                                <a class="qld__main-nav__item-home qld__main-nav__item-link" {{#if current.home}}aria-current="page"{{/if}} href="./?a={{site.data.assetid}}">
+                                <a class="qld__main-nav__item-home qld__main-nav__item-link" {{#if current.home}}aria-current="page"{{/if}} href="{{site.data.assetid}}">
                                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--sm"><use href="{{@root.site.metadata.siteDefaultIcons.value}}#qld__icon__home"></use></svg>
                                     <span class="qld__main-nav__item-text" data-name="{{{asset_short_name}}}">Home</span>
                                 </a>
@@ -33,12 +33,12 @@
                             <li class="qld__main-nav__item {{#ifCond asset_assetid '==' ../current.data.assetid}}active{{/ifCond}} {{#ifCond asset_assetid '==' ../current.top.asset_assetid}}active{{/ifCond}}">
                                 <div class="qld__main-nav__item-title">
                                     {{#ifCond ../site.metadata.mainNavMegaMenuShow.value '!=' 'true'}}
-                                        <a {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{asset_assetid}}" data-name="{{{asset_short_name}}}" class="qld__main-nav__item-link">{{{renderSpecialChar asset_short_name}}}</a>
+                                        <a {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{asset_assetid}}" data-name="{{{asset_short_name}}}" class="qld__main-nav__item-link">{{{renderSpecialChar asset_short_name}}}</a>
                                     {{/ifCond}}
                                     {{#ifCond ../site.metadata.mainNavMegaMenuShow.value '==' 'true'}}
 
                                         <a class="qld__main-nav__item-link {{#arrayWith children 'asset_metadata_showInMegaNav' 'true'}}{{#if this}} qld__main-nav__item-link--desktop-hide{{/if}}{{/arrayWith}}"
-                                            {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{asset_assetid}}">{{{asset_short_name}}}</a>
+                                            {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{asset_assetid}}">{{{asset_short_name}}}</a>
                                             {{#arrayWith children 'asset_metadata_showInMegaNav' 'true'}}
                                                 {{#if this}}
                                                     <button class="qld__main-nav__item-toggle qld__accordion--closed" aria-controls="mega-nav-{{../this.asset_assetid}}" aria-expanded="false" aria-selected="false" aria-label="Toggle navigation, {{../asset_short_name}}"  ><span class="qld__main-nav__item-toggle-text" data-name="{{{../asset_short_name}}}">{{{../asset_short_name}}}</span>
@@ -54,7 +54,7 @@
                                             <div class="qld__main-nav__menu-sub qld__accordion--closed qld__accordion__body" id="mega-nav-{{../this.asset_assetid}}" style="display: none;">
                                                 <div class="qld__main-nav__menu-sub-inner">
                                                     <div class="qld__main-nav__sub-head">
-                                                        <a class="qld__main-nav__sub-heading " href="./?a={{../this.asset_assetid}}">
+                                                        <a class="qld__main-nav__sub-heading " href="{{../this.asset_assetid}}">
                                                             <span class="qld__main-nav__sub-item-text qld__display-lg">{{{../this.asset_name}}}</span>
                                                             <svg class="qld__icon qld__icon--sm"><use href="{{@root.site.metadata.siteDefaultIcons.value}}#qld__icon__arrow-right"></use></svg>
                                                         </a>
@@ -88,7 +88,7 @@
                                                     {{#ifCond @root.site.metadata.mainNavViewAllShow.value '==' 'true'}}
                                                         <div class="qld__main-nav__sub-footer">
                                                             <hr class="qld__horizontal-rule qld__horizontal-rule--lg">
-                                                            <a class="qld__cta-link qld__cta-link--view-all" href="./?a={{../this.asset_assetid}}">View all</a>
+                                                            <a class="qld__cta-link qld__cta-link--view-all" href="{{../this.asset_assetid}}">View all</a>
                                                     </div>
                                                     {{/ifCond}}
                                                 </div>
@@ -112,7 +112,7 @@
                         {{#if site.metadata.mainNavCtaOne.value}}
                             <li class="qld__main-nav__item qld__main-nav__item--cta {{#ifCond site.metadata.mainNavCtaOne.value '==' ../current.data.assetid}}active{{/ifCond}}">
                                 <div class="qld__main-nav__item-title">
-                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaOne.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{site.metadata.mainNavCtaOne.value}}" >
+                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaOne.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{site.metadata.mainNavCtaOne.value}}" >
                                         {{#if site.metadata.mainNavCtaOneIcon.value}}
                                             <i class="qld__icon qld__icon--sm {{site.metadata.mainNavCtaOneIcon.value}}"></i>
                                         {{/if}}
@@ -124,7 +124,7 @@
                             {{#if site.metadata.mainNavCtaTwo.value}}
                             <li class="qld__main-nav__item qld__main-nav__item--cta {{#ifCond site.metadata.mainNavCtaTwo.value '==' ../current.data.assetid}}active{{/ifCond}}">
                                 <div class="qld__main-nav__item-title">
-                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaTwo.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{site.metadata.mainNavCtaTwo.value}}" >
+                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaTwo.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{site.metadata.mainNavCtaTwo.value}}" >
                                         {{#if site.metadata.mainNavCtaTwoIcon.value}}
                                             <i class="qld__icon qld__icon--sm {{site.metadata.mainNavCtaTwoIcon.value}}"></i>
                                         {{/if}}

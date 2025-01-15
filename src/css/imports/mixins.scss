@@ -371,23 +371,23 @@
   $adjustment: if($direction== "up", 0, -1);
 
   @if $size==sm {
-    @media ($property: $QLD-media-sm + $adjustment) {
+    @media (#{$property}: #{$QLD-media-sm + $adjustment}) {
       @content;
     }
   } @else if $size==md {
-    @media ($property: $QLD-media-md + $adjustment) {
+    @media (#{$property}: #{$QLD-media-md + $adjustment}) {
       @content;
     }
   } @else if $size==lg {
-    @media ($property: $QLD-media-lg + $adjustment) {
+    @media (#{$property}: #{$QLD-media-lg + $adjustment}) {
       @content;
     }
   } @else if $size==xl {
-    @media ($property: $QLD-media-xl + $adjustment) {
+    @media (#{$property}: #{$QLD-media-xl + $adjustment}) {
       @content;
     }
   } @else if $size==xxl {
-    @media ($property: $QLD-media-xxl + $adjustment) {
+    @media (#{$property}: #{$QLD-media-xxl + $adjustment}) {
       @content;
     }
   }
@@ -630,13 +630,13 @@
  */
 @mixin QLD-box-shadow($level) {
   @if $level==1 {
-    box-shadow: $QLD-box-shaddow-level-one;
+    box-shadow: $QLD-box-shadow-level-one;
   } @else if $level==2 {
-    box-shadow: $QLD-box-shaddow-level-two;
+    box-shadow: $QLD-box-shadow-level-two;
   } @else if $level==3 {
-    box-shadow: $QLD-box-shaddow-level-three;
+    box-shadow: $QLD-box-shadow-level-three;
   } @else if $level==4 {
-    box-shadow: $QLD-box-shaddow-level-four;
+    box-shadow: $QLD-box-shadow-level-four;
   }
 }
 
