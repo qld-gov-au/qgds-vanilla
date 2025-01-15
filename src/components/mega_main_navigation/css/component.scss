@@ -45,7 +45,7 @@
         @include QLD-media(lg) {
           box-shadow: none;
           background-color: var(--QLD-color-light__background--alt);
-          border-bottom: $QLD-border-width-extra-thick solid var(--QLD-color-light__design-on-accent); //main-nav hover active
+          border-bottom: var(--QLD-border-width-extra-thick) solid var(--QLD-color-light__design-on-accent); //main-nav hover active
 
           @include QLD-space(margin-bottom, -0.5unit);
         }
@@ -70,7 +70,7 @@
         @include QLD-media(lg) {
           z-index: 2;
           background-color: var(--QLD-color-light__background);
-          border-bottom: $QLD-border-width-extra-thick solid var(--QLD-color-neutral--white);
+          border-bottom: var(--QLD-border-width-extra-thick) solid var(--QLD-color-neutral--white);
           @include QLD-space(margin-bottom, -0.5unit);
           text-decoration: none;
 
@@ -283,7 +283,7 @@
           margin: 0;
           background-color: transparent;
           color: var(--QLD-color-light__link);
-          border-left: solid $QLD-border-width-thick var(--QLD-color-light__background--alt);
+          border-left: solid var(--QLD-border-width-thick) var(--QLD-color-light__background--alt);
           width: 100%;
 
           @include QLD-media(lg) {
@@ -312,7 +312,7 @@
           font-size: $typographyMobileXsFontSize;
           font-weight: $typographyMobileXsFontWeight;
           line-height: $typographyMobileXsLineHeight;
-          border-bottom: solid $QLD-border-width-thin var(--QLD-color-neutral--lighter);
+          border-bottom: solid var(--QLD-border-width-thin) var(--QLD-color-neutral--lighter);
           @include QLD-media(md) {
             //@include QLD-fontgrid(sm);
             font-size: $typographyMobileBodyFontSize;
@@ -405,7 +405,7 @@
 
           .qld__main-nav__sub-item-text {
             color: var(--QLD-color-light__link);
-            border-bottom: solid $QLD-border-width-thin var(--QLD-color-neutral--lighter);
+            border-bottom: solid var(--QLD-border-width-thin) var(--QLD-color-neutral--lighter);
           }
         }
       }
@@ -419,7 +419,7 @@
         @include QLD-space(padding, 0.875unit 1unit 0.9375unit 1.5unit);
         @include QLD-space(font-size, 0.875unit);
         @include QLD-space(line-height, 1.5unit);
-        border-left: solid $QLD-border-width-thick var(--QLD-color-light__background--alt);
+        border-left: solid var(--QLD-border-width-thick) var(--QLD-color-light__background--alt);
 
         @include QLD-media(lg) {
           color: var(--QLD-color-light__link);
@@ -536,7 +536,7 @@
           }
         }
         .qld__main-nav__sub-footer {
-          border-bottom: solid $QLD-border-width-default var(--QLD-color-dark__background);
+          border-bottom: solid var(--QLD-border-width-default) var(--QLD-color-dark__background);
           .qld__cta-link {
             background-color: var(--QLD-color-dark__background);
             border-color: var(--QLD-color-dark__background--shade);

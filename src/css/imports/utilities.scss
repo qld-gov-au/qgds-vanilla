@@ -96,6 +96,7 @@ img.pull-right {
 }
 
 .text-right {
+  -ms-text-align-last: right; /* IE */
   text-align: right;
 }
 
@@ -120,6 +121,7 @@ img.pull-right {
 }
 
 .order-first {
+  -ms-order: -1;
   order: -1;
 }
 
@@ -314,30 +316,30 @@ a.qld__max-width {
 */
 
 .qld__border-radius--xs {
-  border-radius: $QLD-border-radius-xs;
+  border-radius: var(--QLD-border-radius-xs);
 }
 
 .qld__border-radius--sm {
-  border-radius: $QLD-border-radius-sm;
+  border-radius: var(--QLD-border-radius-sm);
 }
 
 .qld__border-radius--md {
-  border-radius: $QLD-border-radius-md;
+  border-radius: var(--QLD-border-radius-md);
 }
 
 .qld__border-radius--lg {
-  border-radius: $QLD-border-radius-md;
+  border-radius: var(--QLD-border-radius-md);
 
   @include QLD-media(lg) {
-    border-radius: $QLD-border-radius-lg;
+    border-radius: var(--QLD-border-radius-lg);
   }
 }
 
 .qld__border-radius--lg {
-  border-radius: $QLD-border-radius-lg;
+  border-radius: var(--QLD-border-radius-lg);
 
   @include QLD-media(lg) {
-    border-radius: $QLD-border-radius-xl;
+    border-radius: var(--QLD-border-radius-xl);
   }
 }
 

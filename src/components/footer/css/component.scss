@@ -17,7 +17,7 @@
   }
 
   @include QLD-space(padding-bottom, 2.5unit);
-  border-top: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
+  border-top: var(--QLD-border-width-thick) solid var(--QLD-color-light__design-accent);
   background-color: var(--QLD-color-neutral--lightest);
   color: var(--QLD-color-light__text);
 
@@ -111,7 +111,7 @@
   }
 
   & &__row {
-    border-bottom: $QLD-border-width-thin solid var(--QLD-color-light__border--alt);
+    border-bottom: var(--QLD-border-width-thin) solid var(--QLD-color-light__border--alt);
     .qld__footer__column:last-of-type {
       border-top: none;
       @include QLD-space(margin-top, 0unit);
@@ -175,7 +175,7 @@
 
   &__cta {
     @include QLD-space(padding-top, 1.5unit);
-    border-top: $QLD-border-width-thin solid var(--QLD-color-light__border--alt);
+    border-top: var(--QLD-border-width-thin) solid var(--QLD-color-light__border--alt);
     @include QLD-media(md) {
       @include QLD-space(padding-top, 2unit);
     }
@@ -208,7 +208,7 @@
 
   &__social,
   &__navigation {
-    border-top: $QLD-border-width-thin solid var(--QLD-color-light__border);
+    border-top: var(--QLD-border-width-thin) solid var(--QLD-color-light__border);
     @include QLD-media(lg) {
       border-top: none;
     }
@@ -293,7 +293,7 @@
       align-items: flex-start;
       @include QLD-space(padding-top, 0unit);
       height: 100%;
-      border-right: $QLD-border-width-default solid var(--QLD-color-light__border);
+      border-right: var(--QLD-border-width-default) solid var(--QLD-color-light__border);
     }
     &__label {
       @include QLD-media(lg, "down") {
@@ -345,7 +345,7 @@
       height: 100%;
       @include QLD-space(padding-top, 0unit);
       @include QLD-space(padding-right, 2unit);
-      border-right: $QLD-border-width-default solid var(--QLD-color-light__border);
+      border-right: var(--QLD-border-width-default) solid var(--QLD-color-light__border);
     }
     .qld__footer__heading {
       @include QLD-media(xl) {

@@ -30,7 +30,7 @@
 
   > li {
     @include QLD-space(padding, 1unit 0.25unit 1unit 0.25unit);
-    box-shadow: 0 $QLD-border-width-thin 0 var(--QLD-color-neutral--lighter);
+    box-shadow: 0 var(--QLD-border-width-thin) 0 var(--QLD-color-neutral--lighter);
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -92,7 +92,7 @@
       }
 
       justify-content: flex-end;
-      box-shadow: inset 0 0 - $QLD-border-width-thin 0 transparent;
+      box-shadow: inset 0 0 - var(--QLD-border-width-thin) 0 transparent;
       flex: 0 0 100% !important;
 
       &::after {
@@ -131,10 +131,10 @@
 
   .qld__body--light & {
     > li {
-      box-shadow: 0 $QLD-border-width-thin 0 var(--QLD-color-light__border);
+      box-shadow: 0 var(--QLD-border-width-thin) 0 var(--QLD-color-light__border);
 
       &.qld__link-columns__all-link {
-        box-shadow: 0 $QLD-border-width-thin 0 transparent;
+        box-shadow: 0 var(--QLD-border-width-thin) 0 transparent;
 
         &::after {
           display: none;
@@ -145,10 +145,10 @@
 
   .qld__body--alt & {
     > li {
-      box-shadow: 0 $QLD-border-width-thin 0 var(--QLD-color-light__border--alt);
+      box-shadow: 0 var(--QLD-border-width-thin) 0 var(--QLD-color-light__border--alt);
 
       &.qld__link-columns__all-link {
-        box-shadow: 0 $QLD-border-width-thin 0 transparent;
+        box-shadow: 0 var(--QLD-border-width-thin) 0 transparent;
 
         &::after {
           display: none;
@@ -160,7 +160,7 @@
   .qld__body--dark &,
   .qld__main-nav--dark & {
     > li {
-      box-shadow: 0 $QLD-border-width-thin 0 var(--QLD-color-dark__border);
+      box-shadow: 0 var(--QLD-border-width-thin) 0 var(--QLD-color-dark__border);
       a {
         @include QLD-underline("dark", "noUnderline");
       }
@@ -180,7 +180,7 @@
       }
 
       &.qld__link-columns__all-link {
-        box-shadow: 0 $QLD-border-width-thin 0 transparent;
+        box-shadow: 0 var(--QLD-border-width-thin) 0 transparent;
 
         &::after {
           display: none;
@@ -192,7 +192,7 @@
   .qld__body--dark-alt &,
   .qld__main-nav--dark-alt & {
     > li {
-      box-shadow: 0 $QLD-border-width-thin 0 var(--QLD-color-dark__border--alt);
+      box-shadow: 0 var(--QLD-border-width-thin) 0 var(--QLD-color-dark__border--alt);
 
       a {
         @include QLD-underline("dark", "noUnderline");
@@ -214,7 +214,7 @@
       }
 
       &.qld__link-columns__all-link {
-        box-shadow: 0 $QLD-border-width-thin 0 transparent;
+        box-shadow: 0 var(--QLD-border-width-thin) 0 transparent;
 
         &::after {
           display: none;

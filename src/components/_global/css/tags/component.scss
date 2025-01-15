@@ -21,7 +21,7 @@
   @include QLD-space(line-height, 1.5unit);
   color: var(--QLD-color-light__text--lighter);
   border: 1px solid var(--QLD-color-light__border);
-  border-radius: $QLD-border-radius-md;
+  border-radius: var(--QLD-border-radius-md);
   @include QLD-space(margin, 0);
   @include QLD-focus();
   // white-space: nowrap;
@@ -73,7 +73,7 @@
 
     @include QLD-space(font-size, 1unit);
     @include QLD-space(padding, 0.5unit 1unit);
-    border-radius: $QLD-border-radius-lg;
+    border-radius: var(--QLD-border-radius-lg);
   }
 }
 
@@ -221,7 +221,7 @@ a.qld__tag,
 
   @include QLD-space(font-size, 1unit);
   @include QLD-space(padding, 0.5unit 1unit);
-  border-radius: $QLD-border-radius-lg;
+  border-radius: var(--QLD-border-radius-lg);
   text-decoration: none;
   @include QLD-underline("light", "noUnderline", "default");
 
