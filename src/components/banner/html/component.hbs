@@ -12,7 +12,7 @@
     "
 
     {{#ifCond site.metadata.defaultBannerType.value '==' 'texture'}}
-    style="background-image: url(./?a={{site.metadata.defaultBannerTexture.value}});"
+    style="background-image: url({{site.metadata.defaultBannerTexture.value}});"
     {{/ifCond}}
 
 >

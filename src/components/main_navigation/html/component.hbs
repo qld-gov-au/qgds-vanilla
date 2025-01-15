@@ -19,7 +19,7 @@
                         {{#if site.metadata.mainNavHomeIconShow.value}}
                         <li class="{{#if current.home}}active{{/if}} qld__main-nav__item">
                             <div class="qld__main-nav__item-title">
-                                <a class="qld__main-nav__item-link" {{#if current.home}}aria-current="page"{{/if}} href="./?a={{site.data.assetid}}">
+                                <a class="qld__main-nav__item-link" {{#if current.home}}aria-current="page"{{/if}} href="{{site.data.assetid}}">
                                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--md "><use href="{{@root.site.metadata.siteDefaultIcons.value}}#qld__icon__home"></use></svg>
                                     <span class="qld__main-nav__item-text" data-name="{{{asset_short_name}}}">Home</span>
                                 </a>
@@ -29,13 +29,13 @@
                         {{#each site.children}}
                         <li class="qld__main-nav__item {{#ifCond asset_assetid '==' ../current.data.assetid}}active{{/ifCond}}{{#ifCond asset_assetid '==' ../current.top.asset_assetid}}active{{/ifCond}}">
                             <div class="qld__main-nav__item-title">
-                                <a class="qld__main-nav__item-link" {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{asset_assetid}}" >
+                                <a class="qld__main-nav__item-link" {{#ifCond asset_assetid '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{asset_assetid}}" >
                                     <span class="qld__main-nav__item-text" data-name="{{{asset_short_name}}}">{{{asset_short_name}}}</span>
                                 </a>
                             </div>
                         </li>
                         {{/each}}
-                        
+
                     </ul>
                     {{#ifCond site.metadata.mainNavCtaOne.value '||' site.metadata.mainNavCtaTwo.value}}
                         {{#ifCond site.metadata.mainNavCtaOne.value '&&' site.metadata.mainNavCtaTwo.value}}
@@ -50,7 +50,7 @@
                         {{#if site.metadata.mainNavCtaOne.value}}
                             <li class="qld__main-nav__item qld__main-nav__item--cta {{#ifCond site.metadata.mainNavCtaOne.value '==' ../current.data.assetid}}active{{/ifCond}}">
                                 <div class="qld__main-nav__item-title">
-                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaOne.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{site.metadata.mainNavCtaOne.value}}" >
+                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaOne.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{site.metadata.mainNavCtaOne.value}}" >
                                         {{#if site.metadata.mainNavCtaOneIcon.value}}
                                             <i class="qld__icon qld__icon--sm {{site.metadata.mainNavCtaOneIcon.value}}"></i>
                                         {{/if}}
@@ -62,7 +62,7 @@
                             {{#if site.metadata.mainNavCtaTwo.value}}
                             <li class="qld__main-nav__item qld__main-nav__item--cta {{#ifCond site.metadata.mainNavCtaTwo.value '==' ../current.data.assetid}}active{{/ifCond}}">
                                 <div class="qld__main-nav__item-title">
-                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaTwo.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="./?a={{site.metadata.mainNavCtaTwo.value}}" >
+                                    <a class="qld__main-nav__item-link" {{#ifCond site.metadata.mainNavCtaTwo.value '==' ../current.data.assetid}}aria-current="page"{{/ifCond}} href="{{site.metadata.mainNavCtaTwo.value}}" >
                                         {{#if site.metadata.mainNavCtaTwoIcon.value}}
                                             <i class="qld__icon qld__icon--sm {{site.metadata.mainNavCtaTwoIcon.value}}"></i>
                                         {{/if}}
@@ -74,7 +74,7 @@
                         </ul>
                     </div>
                     {{/ifCond}}
-                    
+
                     <div class="qld__main-nav__focus-trap-bottom"></div>
                 </div>
             </div>
