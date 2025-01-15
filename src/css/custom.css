@@ -154,10 +154,10 @@ This updates text styles to include missing utilities and variables
 /* Thumbnail style */
 
 .qld__body .qld__thumbnail {
-  background: #f5f5f5;
+  background: var(--QLD-color-light__background);
   margin-top: 32px;
   border-radius: 8px;
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--QLD-color-light__border);
   overflow: hidden;
   display: inline-block;
   max-width: 500px;
@@ -198,14 +198,14 @@ These are samll classes used to create specifc example pay layouts
 }
 
 .example-lineheight [class^="col-"] div {
-  background-color: #f5f5f5;
+  background-color: var(--QLD-color-light__background);
   margin-bottom: 0.25rem;
 }
 
 .qld__example__container {
-  background-color: #f5f5f5;
-  border: solid #ebebeb 1px;
-  border: solid #ebebeb 0.0625rem;
+  background-color: var(--QLD-color-light__background);
+  border: solid var(--QLD-color-light__border) 1px;
+  border: solid var(--QLD-color-light__border) 0.0625rem;
   padding: 0.375rem 0.5rem;
 }
 
@@ -303,7 +303,7 @@ Added list styles for cards
   flex-direction: column;
   padding: 1.5rem;
   max-width: 46rem;
-  border-color: #ebebeb;
+  border-color: var(--QLD-color-light__border);
 }
 
 * + .qld__content_card {
@@ -311,7 +311,7 @@ Added list styles for cards
 }
 
 .qld__content_card.qld__content_card--default {
-  background-color: #f5f5f5;
+  background-color: var(--QLD-color-light__background);
 }
 
 .qld__content_card.qld__content_card--light {
@@ -420,7 +420,7 @@ input[type="reset"] {
   text-decoration-thickness: var(--QLD-underline__thickness-thin);
   text-decoration-color: var(--QLD-color-light__underline);
   text-underline-offset: var(--QLD-underline__offset);
-  background-color: #f5f5f5;
+  background-color: var(--QLD-color-light__background);
   text-decoration-skip-ink: auto;
   border-color: transparent;
   box-shadow: none;
@@ -477,13 +477,13 @@ complext table designs
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
-  border: 1px solid #ebebeb;
+  border: 1px solid var(--QLD-color-light__border);
 }
 
 .color-swatch {
   width: 100%;
   height: 140px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--QLD-color-light__border);
 }
 
 .color-name {
