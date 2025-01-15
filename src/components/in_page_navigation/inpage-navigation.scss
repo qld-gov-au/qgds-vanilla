@@ -18,16 +18,17 @@
     line-height: $typographyDesktopH6LineHeight;
   }
 
-  * + & {
+  *+& {
     @include QLD-space(margin-top, 2.3125unit);
   }
+
   a {
     @include QLD-underline("light", "underline", "default", "noVisited");
   }
 
-  .qld__body & > ul,
-  .qld__body & > ol {
-    @include QLD-space(margin-top, 0.75unit);
+  .qld__body &>ul,
+  .qld__body &>ol {
+    @include QLD-space(margin-top, 0.75unit); // Consider using a variable for 0.75unit
     list-style-type: none;
     padding: 0;
 
@@ -35,17 +36,19 @@
       margin: 0;
     }
 
-    * + li {
+    *+li {
       margin-left: 0;
     }
-    li + li {
-      @include QLD-space(margin-top, 0.5unit);
+
+    li+li {
+      @include QLD-space(margin-top, 0.5unit); // Consider using a variable for 0.5unit
     }
   }
 
   .qld__body--dark &,
   .qld__body--dark-alt & {
     border-color: var(--QLD-color-dark__action--primary);
+
     a {
       @include QLD-underline("dark", "underline", "default", "noVisited");
     }

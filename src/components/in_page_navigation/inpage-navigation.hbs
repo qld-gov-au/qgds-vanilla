@@ -1,0 +1,22 @@
+<nav class="qld__inpage-nav-links" aria-label="In page navigation" data-headingType="{{headingType}}" id="{{id}}"
+    data-component="{{component}}">
+
+    <h2 class="qld__inpage-nav-links__heading">
+        {{{title}}}
+    </h2>
+
+    <ul class="qld__link-list">
+        {{#ifCond source '==' 'static'}}
+        {{#each links}}
+        <li class="qld__link-list__item">
+            <a href="{{href}}">{{{title}}}</a>
+        </li>
+        {{/each}}
+        {{/ifCond}}
+
+        {{#ifCond source '==' 'dynamic'}}
+        {{!-- LI > A links will be injected by the component's JS --}}
+        {{/ifCond}}
+
+    </ul>
+</nav>
