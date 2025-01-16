@@ -70,7 +70,7 @@ table {
   th {
     // @include QLD-standard-space(padding, 5 4 5 4);
     padding: 1.25rem 0.75rem 1.25rem 0.75rem;
-    box-shadow: inset 0 0 (-($QLD-border-width-default)) 0 var(--QLD-color-light__design-accent);
+    box-shadow: inset 0 0 calc(-1 * var(--QLD-border-width-default)) 0 var(--QLD-color-light__design-accent);
     color: var(--QLD-color-light__heading);
 
     //font-weight: bold;
@@ -143,7 +143,7 @@ table {
   .qld__table__cell,
   td {
     @include QLD-standard-space(padding, 3);
-    box-shadow: inset 0 (-($QLD-border-width-thin)) 0 var(--QLD-color-neutral--lighter);
+    box-shadow: inset 0 calc(-1 * var(--QLD-border-width-thin)) 0 var(--QLD-color-neutral--lighter);
 
     &.qld__table__cell--numeric {
       text-align: right;
@@ -168,7 +168,7 @@ table {
       box-shadow: none;
       font-weight: 600;
       &:first-of-type {
-        border-radius: 0 0 $QLD-border-radius-sm 0;
+        border-radius: 0 0 var(--QLD-border-radius-sm) 0;
       }
     }
   }
@@ -221,9 +221,8 @@ table {
     .qld__table__header,
     th {
       color: var(--QLD-color-dark__heading);
-      // box-shadow: inset 0 0 (-($QLD)-border-width-default)) 0 var(--QLD-color-dark__border);
-      -webkit-box-shadow: inset 0 -2px 0 var(---QLD-color-dark__design-accent);
-      box-shadow: inset 0 -2px 0 var(--QLD-color-dark__design-accent);
+      -webkit-box-shadow: inset 0 calc(-1 * var(--QLD-border-width-default)) 0 var(---QLD-color-dark__design-accent);
+      box-shadow: inset 0 calc(-1 * var(--QLD-border-width-default)) 0 var(--QLD-color-dark__design-accent);
 
       tr {
         &:nth-child(2) {
@@ -234,7 +233,7 @@ table {
 
     .qld__table__cell,
     td {
-      box-shadow: inset 0 0 (-($QLD-border-width-thin)) 0 var(--QLD-color-dark__border);
+      box-shadow: inset 0 0 calc(-1 * var(--QLD-border-width-thin)) 0 var(--QLD-color-dark__border);
     }
 
     caption,
@@ -253,7 +252,7 @@ table {
         box-shadow: none;
 
         &:first-of-type {
-          border-radius: 0 0 $QLD-border-radius-sm 0;
+          border-radius: 0 0 var(--QLD-border-radius-sm) 0;
         }
       }
     }
@@ -331,7 +330,7 @@ table {
 
 .qld__table--contained,
 .qld__table--scroll {
-  border-radius: $QLD-border-radius-sm;
+  border-radius: var(--QLD-border-radius-sm);
 }
 
 .qld__table--contained {
@@ -347,7 +346,7 @@ table {
 
 .qld__table--scroll {
   border: 1px solid var(--QLD-color-light__border);
-  border-radius: $QLD-border-radius-sm;
+  border-radius: var(--QLD-border-radius-sm);
   max-height: 640px;
   /* Max height for mobile devices based on average available screen space on mobile devices */
   overflow-y: auto;

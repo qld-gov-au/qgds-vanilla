@@ -728,7 +728,7 @@ form {
 
     font-family: $QLD-font-monospace;
     display: inline-block;
-    border-radius: $QLD-border-radius-xs;
+    border-radius: var(--QLD-border-radius-xs);
     background-color: var(--QLD-color-light__background--shade);
     color: var(--QLD-color-light__text);
     @include QLD-space(line-height, 1.25unit);
@@ -810,7 +810,7 @@ form {
 
   .qld__block-quote {
     padding-left: 1.375rem;
-    border-left: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
+    border-left: var(--QLD-border-width-thick) solid var(--QLD-color-light__design-accent);
     margin: 0;
   }
 

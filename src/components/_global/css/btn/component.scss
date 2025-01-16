@@ -22,8 +22,8 @@
     color: var(--QLD-color-light__link--on-action);
     text-decoration: none;
 
-    border-radius: $QLD-border-radius-xs;
-    border: $QLD-border-width-medium solid var(--QLD-color-light__action--primary);
+    border-radius: var(--QLD-border-radius-xs);
+    border: var(--QLD-border-width-medium) solid var(--QLD-color-light__action--primary);
     text-align: center;
     @include QLD-space(min-width, 8.75unit);
 
@@ -513,7 +513,7 @@
     position: relative;
     min-width: 0;
     @include QLD-space(padding, 0.875unit 0.875unit 0.875unit 0.875unit);
-    border-width: $QLD-border-width-default;
+    border-width: var(--QLD-border-width-default);
 
     @include QLD-media(lg) {
       @include QLD-space(padding, 0.75unit 1.5unit);

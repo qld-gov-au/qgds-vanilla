@@ -19,11 +19,11 @@ $QLD-header-md: 72px;
     font-weight: $typographyDesktopBodyFontWeight;
     line-height: $typographyDesktopBodyLineHeight;
   }
-  border-bottom: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
+  border-bottom: var(--QLD-border-width-thick) solid var(--QLD-color-light__design-accent);
 
   @include QLD-media(lg) {
     background-color: var(--QLD-color-light__background--shade);
-    border-bottom-width: $QLD-border-width-extra-thick;
+    border-bottom-width: var(--QLD-border-width-extra-thick);
   }
 
   .qld__main-nav__no-desktop {
@@ -118,7 +118,7 @@ $QLD-header-md: 72px;
 
         @include QLD-media(lg) {
           // border-bottom-color: transparent;
-          border-bottom: solid $QLD-border-width-extra-thick var(--QLD-color-neutral--lightest);
+          border-bottom: solid var(--QLD-border-width-extra-thick) var(--QLD-color-neutral--lightest);
 
           @include QLD-space(margin-bottom, -0.5unit);
         }
@@ -220,7 +220,7 @@ $QLD-header-md: 72px;
     & .qld__main-nav__item-link {
       width: 100%;
       @include QLD-space(padding, 1unit 1unit 1unit 0.75unit);
-      border-left: solid $QLD-border-width-thick var(--QLD-color-light__design-accent);
+      border-left: solid var(--QLD-border-width-thick) var(--QLD-color-light__design-accent);
       display: flex;
       align-items: center;
       &:visited {
@@ -244,10 +244,10 @@ $QLD-header-md: 72px;
       &:hover {
         color: var(--QLD-color-light__link);
         background-color: var(--QLD-color-light__background--alt);
-        border-left: $QLD-border-width-thick solid var(--QLD-color-light__action--primary);
+        border-left: var(--QLD-border-width-thick) solid var(--QLD-color-light__action--primary);
 
         @include QLD-media(lg) {
-          border-bottom: $QLD-border-width-extra-thick solid var(--QLD-color-light__design-on-accent); //main-nav hover non-active
+          border-bottom: var(--QLD-border-width-extra-thick) solid var(--QLD-color-light__design-on-accent); //main-nav hover non-active
 
           border-left: none;
           @include QLD-space(margin-bottom, -0.5unit);
@@ -531,7 +531,7 @@ $QLD-header-md: 72px;
     align-items: center;
     color: var(--QLD-color-light__link);
     @include QLD-focus();
-    border-left: solid $QLD-border-width-thin var(--QLD-color-neutral--lighter);
+    border-left: solid var(--QLD-border-width-thin) var(--QLD-color-neutral--lighter);
 
     &:hover {
       background-color: var(--QLD-color-light__background--shade);
@@ -595,7 +595,7 @@ $QLD-header-md: 72px;
     &--close {
       background-color: transparent;
       @include QLD-media(md) {
-        border-width: $QLD-border-width-default;
+        border-width: var(--QLD-border-width-default);
       }
 
       &:active {

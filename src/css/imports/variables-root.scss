@@ -87,7 +87,7 @@ $QLD-font-maxwidth: 80ch; // Answer to life, the universe, and everything (keeps
   * QLD typography sizes
   */
 
-$QLD-font-size-desktop-xs: $typographyDesktopSmFontSize; //12.18px
+$QLD-font-size-desktop-xs: $typographyDesktopSmFontSize; //14px
 $QLD-font-size-desktop-sm: $typographyDesktopBodyFontSize; //16px
 $QLD-font-size-desktop-md: $typographyDesktopH5FontSize; //19.2px
 $QLD-font-size-desktop-lg: $typographyDesktopH4FontSize; //23.04px
@@ -95,13 +95,49 @@ $QLD-font-size-desktop-xl: $typographyDesktopH3FontSize; //27.648px
 $QLD-font-size-desktop-xxl: $typographyDesktopH2FontSize; //33.1776px
 $QLD-font-size-desktop-xxxl: $typographyDesktopH1FontSize; //39.8131px
 
-$QLD-font-size-mobile-xs: $typographyMobileSmFontSize; //12.18px
+$QLD-font-size-mobile-xs: $typographyMobileSmFontSize; //14px
 $QLD-font-size-mobile-sm: $typographyMobileBodyFontSize; //16px
 $QLD-font-size-mobile-md: $typographyMobileH5FontSize; //19.2px
 $QLD-font-size-mobile-lg: $typographyMobileH4FontSize; //23.04px
 $QLD-font-size-mobile-xl: $typographyMobileH3FontSize; //27.648px
 $QLD-font-size-mobile-xxl: $typographyMobileH2FontSize; //33.1776px
 $QLD-font-size-mobile-xxxl: $typographyMobileH1FontSize; //39.8131px
+
+/**
+* QLD default and heading for utility classes
+*/
+
+$QLD-default-mobile-xs: $QLD-font-size-mobile-xs;
+$QLD-default-mobile-sm: $QLD-font-size-mobile-sm;
+$QLD-default-mobile-md: $QLD-font-size-mobile-md;
+$QLD-default-mobile-lg: $QLD-font-size-mobile-lg;
+$QLD-default-mobile-xl: $QLD-font-size-mobile-xl;
+$QLD-default-mobile-xxl: $QLD-font-size-mobile-xxl;
+$QLD-default-mobile-xxxl: $QLD-font-size-mobile-xxxl;
+
+$QLD-heading-space-mobile-xs: $typographyMobileSmLineHeight;
+$QLD-heading-space-mobile-sm: $typographyMobileBodyLineHeight;
+$QLD-heading-space-mobile-md: $typographyMobileH5LineHeight;
+$QLD-heading-space-mobile-lg: $typographyMobileH4LineHeight;
+$QLD-heading-space-mobile-xl: $typographyMobileH3LineHeight;
+$QLD-heading-space-mobile-xxl: $typographyMobileH2LineHeight;
+$QLD-heading-space-mobile-xxxl: $typographyMobileH1LineHeight;
+
+$QLD-default-desktop-xs: $QLD-font-size-desktop-xs;
+$QLD-default-desktop-sm: $QLD-font-size-desktop-sm;
+$QLD-default-desktop-md: $QLD-font-size-desktop-md;
+$QLD-default-desktop-lg: $QLD-font-size-desktop-lg;
+$QLD-default-desktop-xl: $QLD-font-size-desktop-xl;
+$QLD-default-desktop-xxl: $QLD-font-size-desktop-xxl;
+$QLD-default-desktop-xxxl: $QLD-font-size-desktop-xxxl;
+
+$QLD-heading-space-desktop-xs: $typographyDesktopSmLineHeight;
+$QLD-heading-space-desktop-sm: $typographyDesktopBodyLineHeight;
+$QLD-heading-space-desktop-md: $typographyDesktopH5LineHeight;
+$QLD-heading-space-desktop-lg: $typographyDesktopH4LineHeight;
+$QLD-heading-space-desktop-xl: $typographyDesktopH3LineHeight;
+$QLD-heading-space-desktop-xxl: $typographyDesktopH2LineHeight;
+$QLD-heading-space-desktop-xxxl: $typographyDesktopH1LineHeight;
 
 /**
   * QLD-lineheight-map
@@ -417,59 +453,6 @@ $QLD-color-status__caution--lightest: $themeColorReservedAlertLightest !default;
 $QLD-color-status__caution--lighter: $themeColorReservedAlertLighter !default;
 $QLD-color-status__caution--darker: $themeColorReservedAlertDarker !default;
 
-/**
-* QLD Line height variables
-Original
-$QLD-default-mobile-xs: 14px;
-$QLD-default-mobile-sm: 16px;
-$QLD-default-mobile-md: 20px;
-$QLD-default-mobile-lg: 24px;
-$QLD-default-mobile-xl: 28px;
-$QLD-default-mobile-xxl: 32px;
-$QLD-default-mobile-xxxl: 40px;
-
-$QLD-default-desktop-xs: 14px;
-$QLD-default-desktop-sm: 16px;
-$QLD-default-desktop-md: 20px;
-$QLD-default-desktop-lg: 24px;
-$QLD-default-desktop-xl: 32px;
-$QLD-default-desktop-xxl: 40px;
-$QLD-default-desktop-xxxl: 48px;
-
-$QLD-heading-space-xs: 16px;
-$QLD-heading-space-sm: 20px;
-$QLD-heading-space-md: 24px;
-$QLD-heading-space-lg: 32px;
-$QLD-heading-space-xl: 40px;
-$QLD-heading-space-xxl: 52px;
-$QLD-heading-space-xxxl: 60px;
-
-*/
-
-$QLD-default-mobile-xs: 14px;
-$QLD-default-mobile-sm: 16px;
-$QLD-default-mobile-md: 20px;
-$QLD-default-mobile-lg: 24px;
-$QLD-default-mobile-xl: 28px;
-$QLD-default-mobile-xxl: 32px;
-$QLD-default-mobile-xxxl: 40px;
-
-$QLD-default-desktop-xs: 14px;
-$QLD-default-desktop-sm: 16px;
-$QLD-default-desktop-md: 20px;
-$QLD-default-desktop-lg: 24px;
-$QLD-default-desktop-xl: 32px;
-$QLD-default-desktop-xxl: 40px;
-$QLD-default-desktop-xxxl: 48px;
-
-$QLD-heading-space-xs: 16px;
-$QLD-heading-space-sm: 20px;
-$QLD-heading-space-md: 24px;
-$QLD-heading-space-lg: 32px;
-$QLD-heading-space-xl: 40px;
-$QLD-heading-space-xxl: 52px;
-$QLD-heading-space-xxxl: 60px;
-
 //$QLD-color-contained-layout__background: #eff4f9; //deprecated
 
 /**
@@ -536,6 +519,14 @@ $QLD-heading-space-xxxl: 60px;
   --QLD-default-mobile-xxl: #{$QLD-default-mobile-xxl};
   --QLD-default-mobile-xxxl: #{$QLD-default-mobile-xxxl};
 
+  --QLD-heading-space-mobile-xs: #{$QLD-heading-space-mobile-xs};
+  --QLD-heading-space-mobile-sm: #{$QLD-heading-space-mobile-sm};
+  --QLD-heading-space-mobile-md: #{$QLD-heading-space-mobile-md};
+  --QLD-heading-space-mobile-lg: #{$QLD-heading-space-mobile-lg};
+  --QLD-heading-space-mobile-xl: #{$QLD-heading-space-mobile-xl};
+  --QLD-heading-space-mobile-xxl: #{$QLD-heading-space-mobile-xxl};
+  --QLD-heading-space-mobile-xxxl: #{$QLD-heading-space-mobile-xxxl};
+
   --QLD-default-desktop-xs: #{$QLD-default-desktop-xs};
   --QLD-default-desktop-sm: #{$QLD-default-desktop-sm};
   --QLD-default-desktop-md: #{$QLD-default-desktop-md};
@@ -544,11 +535,11 @@ $QLD-heading-space-xxxl: 60px;
   --QLD-default-desktop-xxl: #{$QLD-default-desktop-xxl};
   --QLD-default-desktop-xxxl: #{$QLD-default-desktop-xxxl};
 
-  --QLD-heading-space-xs: #{$QLD-heading-space-xs};
-  --QLD-heading-space-sm: #{$QLD-heading-space-sm};
-  --QLD-heading-space-md: #{$QLD-heading-space-md};
-  --QLD-heading-space-lg: #{$QLD-heading-space-lg};
-  --QLD-heading-space-xl: #{$QLD-heading-space-xl};
-  --QLD-heading-space-xxl: #{$QLD-heading-space-xxl};
-  --QLD-heading-space-xxxl: #{$QLD-heading-space-xxxl};
+  --QLD-heading-space-desktop-xs: #{$QLD-heading-space-desktop-xs};
+  --QLD-heading-space-desktop-sm: #{$QLD-heading-space-desktop-sm};
+  --QLD-heading-space-desktop-md: #{$QLD-heading-space-desktop-md};
+  --QLD-heading-space-desktop-lg: #{$QLD-heading-space-desktop-lg};
+  --QLD-heading-space-desktop-xl: #{$QLD-heading-space-desktop-xl};
+  --QLD-heading-space-desktop-xxl: #{$QLD-heading-space-desktop-xxl};
+  --QLD-heading-space-desktop-xxxl: #{$QLD-heading-space-desktop-xxxl};
 }
