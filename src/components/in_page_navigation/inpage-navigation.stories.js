@@ -27,7 +27,7 @@ export default {
   decorators: [
     (Story) => {
       return `
-      <section class="qld__body" style="margin: 4rem 1rem;">
+      <section class="qld__body" style="margin: 1rem 1rem;">
         <div class="container-fluid">
         ${Story()}
         </div>
