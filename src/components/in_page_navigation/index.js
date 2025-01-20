@@ -31,7 +31,10 @@ export default function InpageNavigation({ data, template = hbstemplate }) {
         logic.init();
       }
     } catch (error) {
-      console.error(`InpageNavigation error: ${error.message}`);
+      console.error(`InpageNavigation error in function 'init': ${error.message}`, {
+        functionName: "init",
+        errorDetails: error,
+      });
     }
   });
 

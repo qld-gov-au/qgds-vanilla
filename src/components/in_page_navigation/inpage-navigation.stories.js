@@ -8,7 +8,6 @@
 // - the QGDS object containing all components
 // - data you need to populate the component for rendering
 import { QGDS } from "../../js/index.js";
-
 import mockupData from "./inpage-navigation.data.json";
 
 /* ========= STORIES 👇 ===== */
