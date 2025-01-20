@@ -45,6 +45,12 @@
                     <span class="qld__header__cta-link-text">{{site.metadata.mainNavCtaTwoText.value}}</span>
                 </a>
                 {{/if}}
+                {{#if site.metadata.themeSwitcher.value}}
+                <span class="qld__header__cta-link">
+                  <p>hi</p>
+                  {{>theme_switcher theme_switcher }}
+                </span>
+                {{/if}}
             </div>
 
             <div class="qld__header__main-nav-controls">

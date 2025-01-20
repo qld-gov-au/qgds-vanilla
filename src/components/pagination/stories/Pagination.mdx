@@ -1,18 +1,18 @@
-import { Canvas, Meta, Story, Markdown } from "@storybook/blocks"
-import * as stories from "./pageination.stories.js"
+import { Canvas, Meta, Story, Markdown } from "@storybook/blocks";
+import * as stories from "./pagination.stories.js";
 
-[//]: # (import classTable from "./classesTable.md?raw")
+[//]: # 'import classTable from "./classesTable.md?raw"'
 
 <Meta of={stories} />
 
 # TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
-* [ ]: Fix tables
-* [ ]: Fix examples
-* [ ]: Fix links
-* [ ]: QA to original
 
-Pagination
-==========
+- [ ]: Fix tables
+- [ ]: Fix examples
+- [ ]: Fix links
+- [ ]: QA to original
+
+# Pagination
 
 May also be known as:
 
@@ -22,47 +22,43 @@ Paging or page navigation
 
 Overview Design Implementation Accessibility
 
-On this page
-------------
+## On this page
 
-Overview
---------
+## Overview
 
 Pagination is used to divide large amounts of content into a series of pages. This allows users to navigate through the content more easily, with controls for moving to the next or previous page, and an option to jump to a specific page. Whether it's search results or product catalogues, pagination helps users browse through the content in a more organised and manageable way.
 
 ### Pagination component features
 
-*   The component features a maximum of 7 slots for numbers and ellipses (overflow indicator)
-*   The first slot is always the first page of the set
-*   If there are fewer than 7 pages in the set, show only that number of slots
-*   The component always shows the first page and current page
-*   Next page, previous page, First page and Last page only appear if those pages exist
+- The component features a maximum of 7 slots for numbers and ellipses (overflow indicator)
+- The first slot is always the first page of the set
+- If there are fewer than 7 pages in the set, show only that number of slots
+- The component always shows the first page and current page
+- Next page, previous page, First page and Last page only appear if those pages exist
 
-Default
--------
+## Default
 
 Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
-Pagination
-----------
+## Pagination
 
-*   [Previous](pagination.html#)
-*   [1](pagination.html#)
-*   [2](pagination.html#)
-*   [3](pagination.html#)
-*   [4](pagination.html#)
-*   [5](pagination.html#)
+- [Previous](pagination.html#)
+- [1](pagination.html#)
+- [2](pagination.html#)
+- [3](pagination.html#)
+- [4](pagination.html#)
+- [5](pagination.html#)
 
-*   [8](pagination.html#)
-*   [Next](pagination.html#)
+- [8](pagination.html#)
+- [Next](pagination.html#)
 
 Show more
 
@@ -74,8 +70,7 @@ Copy Copied
 
 `<!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> <!-- Previous page button label --> <span>Previous</span> </a> </li> <!-- First number slot --> <li> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second slot (active) --> <li class="active"> <a class="qld__search-pagination_link" aria-current="page" href="#">2</a> </li> <!-- Third number slot --> <li> <a class="qld__search-pagination_link" href="#">3</a> </li> <!-- Fourth number slot --> <li> <a class="qld__search-pagination_link" href="#">4</a> </li> <!-- Fifth number slot --> <li> <a class="qld__search-pagination_link" href="#">5</a> </li> <!-- Sixth number slot (Ellipsis button) --> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Sevenths number slot (Last button) --> <li class="last"> <a href="#">8</a> </li> <!-- Next page button --> <li class="next"> <a class="qld__search-pagination_link" href="#" rel="next" aria-label="Next page of results"> <!-- Previous page label --> <span>Next</span> <!-- Next page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="16" height="16" role="img"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"></path></svg> </a> </li> </ul> </nav>`
 
-Example fewer than 7 pages
---------------------------
+## Example fewer than 7 pages
 
 If there are fewer than 7 pages in the set, you should show all numbers and not use overflow indicators.
 
@@ -83,23 +78,22 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
-Pagination
-----------
+## Pagination
 
-*   [Previous](pagination.html#)
-*   [1](pagination.html#)
-*   [2](pagination.html#)
-*   [3](pagination.html#)
-*   [4](pagination.html#)
-*   [5](pagination.html#)
-*   [6](pagination.html#)
-*   [Next](pagination.html#)
+- [Previous](pagination.html#)
+- [1](pagination.html#)
+- [2](pagination.html#)
+- [3](pagination.html#)
+- [4](pagination.html#)
+- [5](pagination.html#)
+- [6](pagination.html#)
+- [Next](pagination.html#)
 
 Show more
 
@@ -111,8 +105,7 @@ Copy Copied
 
 `<!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> <!-- Previous page button label --> <span>Previous</span> </a> </li> <!-- First number slot --> <li> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second slot (active) --> <li class="num active"> <a class="qld__search-pagination_link" href="#">2</a> </li> <!-- Third number slot --> <li> <a class="qld__search-pagination_link" href="#">3</a> </li> <!-- Fourth number slot --> <li> <a class="qld__search-pagination_link" href="#">4</a> </li> <!-- Fifth number slot --> <li> <a class="qld__search-pagination_link" href="#">5</a> </li> <!-- Sixth number slot (Last button) --> <li class="last"> <a href="#">6</a> </li> <!-- Next page button --> <li class="next"> <a class="qld__search-pagination_link" href="#" rel="next" aria-label="Next page of results"> <!-- Previous page label --> <span>Next</span> <!-- Next page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"></path></svg> </a> </li> </ul> </nav>`
 
-Example First and last pages
-----------------------------
+## Example First and last pages
 
 Don't show the previous page link on the first page and don't show the next page link on the last page.
 
@@ -120,41 +113,35 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### First page example
 
+## Pagination
 
-
-Pagination
-----------
-
-*   [1](pagination.html#)
-*   [2](pagination.html#)
-*   [3](pagination.html#)
-*   [4](pagination.html#)
-*   [5](pagination.html#)
-*   [6](pagination.html#)
-*   [Next](https://www.darlingdowns.health.qld.gov.au/search?query=test&start_rank=16)
+- [1](pagination.html#)
+- [2](pagination.html#)
+- [3](pagination.html#)
+- [4](pagination.html#)
+- [5](pagination.html#)
+- [6](pagination.html#)
+- [Next](https://www.darlingdowns.health.qld.gov.au/search?query=test&start_rank=16)
 
 #### Last page example
 
+## Pagination
 
-
-Pagination
-----------
-
-*   [Previous](pagination.html#)
-*   [1](pagination.html#)
-*   [2](pagination.html#)
-*   [3](pagination.html#)
-*   [4](pagination.html#)
-*   [5](pagination.html#)
-*   [6](pagination.html#)
+- [Previous](pagination.html#)
+- [1](pagination.html#)
+- [2](pagination.html#)
+- [3](pagination.html#)
+- [4](pagination.html#)
+- [5](pagination.html#)
+- [6](pagination.html#)
 
 Show more
 
@@ -166,68 +153,58 @@ Copy Copied
 
 `<h4>First page example</h4> <br> <!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- First number slot --> <li class="active"> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second slot (active) --> <li> <a class="qld__search-pagination_link" href="#">2</a> </li> <!-- Third number slot --> <li> <a class="qld__search-pagination_link" href="#">3</a> </li> <!-- Fourth number slot --> <li> <a class="qld__search-pagination_link" href="#">4</a> </li> <!-- Fifth number slot --> <li> <a class="qld__search-pagination_link" href="#">5</a> </li> <!-- Sixth number slot (Last button) --> <li class="last"> <a href="#">6</a> </li> <!-- Next page button --> <li class="next"> <a class="qld__search-pagination_link" href="https://www.darlingdowns.health.qld.gov.au/search?query=test&amp;start_rank=16" rel="next" aria-label="Next page of results"> <!-- Previous page label --> <span>Next</span> <!-- Next page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"></path></svg> </a> </li> </ul> </nav> <h4>Last page example</h4> <br> <!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> <!-- Previous page button label --> <span>Previous</span> </a> </li> <!-- First number slot --> <li> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second slot (active) --> <li> <a class="qld__search-pagination_link" href="#">2</a> </li> <!-- Third number slot --> <li> <a class="qld__search-pagination_link" href="#">3</a> </li> <!-- Fourth number slot --> <li> <a class="qld__search-pagination_link" href="#">4</a> </li> <!-- Fifth number slot --> <li> <a class="qld__search-pagination_link" href="#">5</a> </li> <!-- Sixth number slot (Last button) --> <li class="last active"> <a href="#">6</a> </li> </ul> </nav>`
 
-Overflow indicators small screens
----------------------------------
+## Overflow indicators small screens
 
 Show only a maximum 1-3 pages at once, depending on the number of pages in your list these might include:
 
-*   the current page
-*   previous and next buttons
-*   first and last pages.
+- the current page
+- previous and next buttons
+- first and last pages.
 
 Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Secondary page example
 
+## Pagination
 
+- [](pagination.html#)
+- [1](pagination.html#)
+- [2](pagination.html#)
+- [3](pagination.html#)
 
-Pagination
-----------
-
-*   [](pagination.html#)
-*   [1](pagination.html#)
-*   [2](pagination.html#)
-*   [3](pagination.html#)
-
-*   [8](pagination.html#)
-*   [](pagination.html#)
+- [8](pagination.html#)
+- [](pagination.html#)
 
 #### Middle page example
 
+## Pagination
 
+- [](pagination.html#)
+- [1](pagination.html#)
 
-Pagination
-----------
+- [4](pagination.html#)
 
-*   [](pagination.html#)
-*   [1](pagination.html#)
-
-*   [4](pagination.html#)
-
-*   [8](pagination.html#)
-*   [](pagination.html#)
+- [8](pagination.html#)
+- [](pagination.html#)
 
 #### Last page example
 
+## Pagination
 
+- [](pagination.html#)
+- [1](pagination.html#)
 
-Pagination
-----------
-
-*   [](pagination.html#)
-*   [1](pagination.html#)
-
-*   [6](pagination.html#)
-*   [7](pagination.html#)
-*   [8](pagination.html#)
+- [6](pagination.html#)
+- [7](pagination.html#)
+- [8](pagination.html#)
 
 Show more
 
@@ -239,38 +216,36 @@ Copy Copied
 
 `<h4>Secondary page example</h4> <br> <!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> </a> </li> <!-- First number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second number slot --> <li class="num active" > <a class="qld__search-pagination_link" href="#">2</a> </li> <!-- Third number slot --> <li class="num" > <a class="qld__search-pagination_link" href="#">3</a> </li> <!-- Fourth number slot (Ellipsis button) --> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Fith number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">8</a> </li> <!-- Next page button --> <li class="next"> <a class="qld__search-pagination_link" href="#" rel="next" aria-label="Next page of results"> <!-- Next page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"></path></svg> </a> </li> </ul> </nav> <h4>Middle page example</h4> <br> <!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> </a> </li> <!-- First number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second number slot (Ellipsis button)--> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Third number slot --> <li class="num active" > <a class="qld__search-pagination_link" href="#">4</a> </li> <!-- Fourth number slot (Ellipsis button) --> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Fith number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">8</a> </li> <!-- Next page button --> <li class="next"> <a class="qld__search-pagination_link" href="#" rel="next" aria-label="Next page of results"> <!-- Next page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"></path></svg> </a> </li> </ul> </nav> <h4>Last page example</h4> <br> <!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> </a> </li> <!-- First number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second number slot (Ellipsis button)--> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Third number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">6</a> </li> <!-- Fourth number slot --> <li class="num"> <a class="qld__search-pagination_link" href="#">7</a> </li> <!-- Fifth number slot --> <li class="num active"> <a class="qld__search-pagination_link" href="#">8</a> </li> </ul> </nav>`
 
-Overflow indicators large screens
----------------------------------
+## Overflow indicators large screens
 
 On larger screens with more pages, show:
 
-*   the current page
-*   at least one page immediately before and after the current page
-*   first and last pages
-*   previous and next buttons.
+- the current page
+- at least one page immediately before and after the current page
+- first and last pages
+- previous and next buttons.
 
 Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
-Pagination
-----------
+## Pagination
 
-*   [Previous](pagination.html#)
-*   [1](pagination.html#)
+- [Previous](pagination.html#)
+- [1](pagination.html#)
 
-*   [6](pagination.html#)
-*   [7](pagination.html#)
-*   [8](pagination.html#)
+- [6](pagination.html#)
+- [7](pagination.html#)
+- [8](pagination.html#)
 
-*   [12](pagination.html#)
-*   [Next](pagination.html#)
+- [12](pagination.html#)
+- [Next](pagination.html#)
 
 Show more
 
@@ -282,8 +257,7 @@ Copy Copied
 
 `<!-- Paginaiton navigation container --> <nav class="text-center hidden-print qld__search-pagination qld__search-pagination--outline" aria-label="pagination"> <!-- Accessible heading for pagination --> <h2 class="sr-only">Pagination</h2> <!-- Pagination list container --> <ul class="qld__search-pagination__list"> <!-- Previous page button --> <li class="prev"> <a class="qld__search-pagination_link" href="#" rel="prev" aria-label="Previous page of results"> <!-- Previous page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M448 256C448 264.8 440.6 272 431.4 272H54.11l140.7 149.3c6.157 6.531 5.655 16.66-1.118 22.59C190.5 446.6 186.5 448 182.5 448c-4.505 0-9.009-1.75-12.28-5.25l-165.9-176c-5.752-6.094-5.752-15.41 0-21.5l165.9-176c6.19-6.562 16.69-7 23.45-1.094c6.773 5.938 7.275 16.06 1.118 22.59L54.11 240h377.3C440.6 240 448 247.2 448 256z"></path></svg> <!-- Previous page button label --> <span>Previous</span> </a> </li> <!-- First number slot --> <li> <a class="qld__search-pagination_link" href="#">1</a> </li> <!-- Second number slot --> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Third number slot --> <li> <a class="qld__search-pagination_link" href="#">6</a> </li> <!-- Fourth number slot --> <li class="active"> <a class="qld__search-pagination_link" href="#">7</a> </li> <!-- Fifth number slot --> <li> <a class="qld__search-pagination_link" href="#">8</a> </li> <!-- Sixth number slot (Ellipsis button) --> <li class="ellipsis"> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="24" height="32" role="img"> <path fill="currentColor" d="M352 256C352 238.3 366.3 224 384 224C401.7 224 416 238.3 416 256C416 273.7 401.7 288 384 288C366.3 288 352 273.7 352 256zM192 256C192 238.3 206.3 224 224 224C241.7 224 256 238.3 256 256C256 273.7 241.7 288 224 288C206.3 288 192 273.7 192 256zM96 256C96 273.7 81.67 288 64 288C46.33 288 32 273.7 32 256C32 238.3 46.33 224 64 224C81.67 224 96 238.3 96 256z"></path> </svg> </li> <!-- Sevenths number slot (Last button) --> <li class="last"> <a href="#">12</a> </li> <!-- Next page button --> <li class="next"> <a class="qld__search-pagination_link" href="#" rel="next" aria-label="Next page of results"> <!-- Previous page label --> <span>Next</span> <!-- Next page button icon --> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true" focusable="false" width="16" height="16" role="img"><path fill="currentColor" d="M443.7 266.8l-165.9 176C274.5 446.3 269.1 448 265.5 448c-3.986 0-7.988-1.375-11.16-4.156c-6.773-5.938-7.275-16.06-1.118-22.59L393.9 272H16.59c-9.171 0-16.59-7.155-16.59-15.1S7.421 240 16.59 240h377.3l-140.7-149.3c-6.157-6.531-5.655-16.66 1.118-22.59c6.789-5.906 17.27-5.469 23.45 1.094l165.9 176C449.4 251.3 449.4 260.7 443.7 266.8z"></path></svg> </a> </li> </ul>`
 
-Usage guidelines
-----------------
+## Usage guidelines
 
 ### When to use
 
@@ -293,13 +267,13 @@ Pagination is a useful feature for displaying listings on websites, such as ecom
 
 **Consider using pagination when:**
 
-*   showing all the content on a single page makes the page take too long to load (UK.GOV n.d.).
-*   most users only need the content on the first page or first few pages (UK.GOV n.d.).
+- showing all the content on a single page makes the page take too long to load (UK.GOV n.d.).
+- most users only need the content on the first page or first few pages (UK.GOV n.d.).
 
 ### When not to use
 
-*   Don't use pagination when displaying a small set of content that can be easily displayed on a single page, as pagination can add unnecessary complexity and inconvenience for users. Avoid using the ‘infinite scroll’ technique to automatically load content when the user approaches the bottom of the page. This causes problems for keyboard users.
-*   Don't use this Pagination component for linear journeys — for example, where you’re asking the user to complete a form. Instead, use the [Button component](buttons.html) (usually a ‘Continue’ button) to let the user move to the next page — and a back link to let them move to the previous page (UK.GOV. n.d.).
+- Don't use pagination when displaying a small set of content that can be easily displayed on a single page, as pagination can add unnecessary complexity and inconvenience for users. Avoid using the ‘infinite scroll’ technique to automatically load content when the user approaches the bottom of the page. This causes problems for keyboard users.
+- Don't use this Pagination component for linear journeys — for example, where you’re asking the user to complete a form. Instead, use the [Button component](buttons.html) (usually a ‘Continue’ button) to let the user move to the next page — and a back link to let them move to the previous page (UK.GOV. n.d.).
 
 **Meaningful page groupings:** If you have long content split meaningfully, or grouped by subject or theme, use conventional navigation like [Side navigation](side-navigation.html). (US Design system n.d.).
 
@@ -327,14 +301,13 @@ When determining the optimal number of list items to display per page, consider 
 
 Some general recommendations for the number of list items in pagination are:
 
-*   for search results: 10-20 items per page is a common recommendation
-*   for e-commerce products: 20-50 items per page can provide a good balance between user experience and performance
-*   for content-heavy websites (e.g., news articles, blog posts): 5-15 items per page is often suggested.
+- for search results: 10-20 items per page is a common recommendation
+- for e-commerce products: 20-50 items per page can provide a good balance between user experience and performance
+- for content-heavy websites (e.g., news articles, blog posts): 5-15 items per page is often suggested.
 
 Remember that these are just general guidelines, and it's essential to test and gather user feedback to determine the best number of list items for your specific website or application.
 
-Research and rationale
-----------------------
+## Research and rationale
 
 The design of our pagination component was inspired by research conducted by UK.GOV design system team and by the guidelines set out by the USA Design system.
 
@@ -352,8 +325,7 @@ We found that using 7 slots for pagination strikes a balance between usability, 
 
 The UK.GOV design system offered some good guidelines for mobile devices as well where it suggested limiting the number of slots to 5. This helps ensure pagination doesn't stack when there is less screen space.
 
-Classes
--------
+## Classes
 
 Name
 
@@ -387,8 +359,7 @@ Hides content on print.
 
 Centres text.
 
-Accessible pagination requirements
-----------------------------------
+## Accessible pagination requirements
 
 Keep these considerations in mind if you are modifying the design system or creating a custom component.
 
@@ -440,10 +411,9 @@ Apply aria-current="page" to the current page's link item for proper screen read
 
 Even though it may seem counterintuitive, include a link to the current page in your Pagination component. This ensures that screen readers voice the current page, whether the user navigates by element or by tabbing.
 
-* * *
+---
 
-References
-----------
+## References
 
 Nielsen J (2011) [View All Items](https://www.nngroup.com/articles/item-list-view-all "https://www.nngroup.com/articles/item-list-view-all/"), Nielsen Norman Group, accessed 24 April 2023.
 
@@ -455,6 +425,6 @@ U.S. Web Design System (n.d.) [Pagination](https://designsystem.digital.gov/comp
 
 GOV.UK (n.d.) [Pagination](https://design-system.service.gov.uk/components "https://design-system.service.gov.uk/components/"), _GOV.UK Design System_, accessed 24 April 2023.
 
-[//]: # (/\*Hides two of the colour options that are not available for this component \*/ .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-child&#40;2&#41;, .qld\_\_body .qld\_\_code .qld\_\_code-preview-colours ul li:nth-last-child&#40;1&#41; { display: none; })
+[//]: # "/*Hides two of the colour options that are not available for this component */ .qld__body .qld__code .qld__code-preview-colours ul li:nth-child(2), .qld__body .qld__code .qld__code-preview-colours ul li:nth-last-child(1) { display: none; }"
 
 **Last updated:** August 2023
