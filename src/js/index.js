@@ -3,9 +3,11 @@ import Breadcrumbs from "../components/breadcrumbs/index.js";
 // import Button from "../components/button/index.js";
 import BackToTop from "../components/back_to_top/index.js";
 // import Dropdown from "../components/dcropdown/index.js";
+import Accordion from "../components/accordion/index.js";
 
 export const QGDS = {
   Example,
   Breadcrumbs,
   BackToTop,
+  Accordion,
 };
