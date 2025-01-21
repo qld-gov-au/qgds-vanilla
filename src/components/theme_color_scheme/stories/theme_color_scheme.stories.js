@@ -34,23 +34,7 @@ export default {
    * @property {string} design.url - URL of the design parameter.
    */
   parameters: {
-    design: [
-      {
-        name: "Link",
-        type: "link",
-        url: "https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=7229-112138",
-      },
-      {
-        name: "QGDS Figma Reference",
-        type: "figma",
-        url: "https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=7229-112138",
-      },
-      {
-        name: "dark xl",
-        type: "figma",
-        url: "https://www.figma.com/design/qKsxl3ogIlBp7dafgxXuCA/QLD-GOV-DDS?node-id=10865-242473",
-      },
-    ],
+    design: [],
   },
 };
 
