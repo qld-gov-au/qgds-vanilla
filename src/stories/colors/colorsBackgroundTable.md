@@ -1,7 +1,7 @@
 <div class="qld__table--contained"><table class="qld__table qld__table__col-2-left-border qld__table__color-example qld__table__col-3-left-border" id="table03796"><thead><tr><th class="qld__table__header--width-33" id="table03796r1c1"> Colour description</th><th class="qld__table__header--width-40" id="table03796r1c2">Variable</th><th class="qld__table__header--width-20" id="table03796r1c3">Value</th></tr></thead><tbody><tr>
 <td headers="table03796r1c1">
 <svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#FFFFFF" stroke="#7A7A7A" stroke-width="1"></circle></svg> Default (White)</td>
-<td headers="table03796r1c2"><div class="qld__code--inline"><code tabindex="0">var(--QLD-color-neutral--white)</code></div></td><td headers="table03796r1c3">#FFFFFF</td></tr><tr><td headers="table03796r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#f5f5f5" stroke="transparent" stroke-width="1"></circle></svg>
+<td headers="table03796r1c2"><div class="qld__code--inline"><code tabindex="0">var(--QLD-color-neutral--white)</code></div></td><td headers="table03796r1c3">#FFFFFF</td></tr><tr><td headers="table03796r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="var(--QLD-color-light__background)" stroke="transparent" stroke-width="1"></circle></svg>
            Default shade (Neutral lightest)
         </td><td headers="table03796r1c2"><div class="qld__code--inline"><code tabindex="0">var(--QLD-color-neutral--lightest)</code></div></td><td headers="table03796r1c3">#F5F5F5</td></tr><tr><td headers="table03796r1c1"><svg width="40" height="40"><circle cx="20" cy="20" r="12" fill="#EFF4F9" stroke="transparent" stroke-width="1"></circle></svg>
            Light background

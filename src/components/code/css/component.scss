@@ -36,7 +36,7 @@
     }
 
     &.copied {
-      background-color: var(--QLD-color-light__background--shade); //here
+      background-color: var(--QLD-color-light__background--shade);
       border-color: var(--QLD-color-neutral--lightest);
       color: var(--QLD-color-light__text);
 
@@ -74,7 +74,7 @@
 
   .qld__code-header {
     background-color: var(--QLD-color-dark__background--alt-shade);
-    border-radius: $QLD-border-radius-xs $QLD-border-radius-xs 0 0;
+    border-radius: var(--QLD-border-radius-xs) var(--QLD-border-radius-xs) 0 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -87,7 +87,7 @@
 
       a {
         display: inline-block;
-        border-radius: $QLD-border-radius-xs;
+        border-radius: var(--QLD-border-radius-xs);
         @include QLD-space("margin-right", 1.25unit);
 
         i {
@@ -138,7 +138,7 @@
     &-button {
       background-color: var(--QLD-color-dark__background--alt-shade);
       border: 0;
-      border-radius: $QLD-border-radius-xs $QLD-border-radius-xs 0 0;
+      border-radius: var(--QLD-border-radius-xs) var(--QLD-border-radius-xs) 0 0;
       color: var(--QLD-color-dark__text);
       cursor: pointer;
       @include QLD-space("padding", 0.75unit 1unit);
@@ -157,13 +157,13 @@
     }
 
     + .qld__code-header {
-      border-radius: $QLD-border-radius-xs 0 0 0;
+      border-radius: var(--QLD-border-radius-xs) 0 0 0;
     }
 
     &:not(.qld__code-preview ~ .qld__code-toggle) {
       justify-content: flex-start;
       + .qld__code-header {
-        border-radius: 0 $QLD-border-radius-xs 0 0;
+        border-radius: 0 var(--QLD-border-radius-xs) 0 0;
       }
       .qld__code-toggle-button {
         -webkit-box-shadow: none;
@@ -186,8 +186,8 @@
 
     &-colours {
       align-items: center;
-      background-color: var(--QLD-color-light__background--shade); //here
-      border-radius: 0 $QLD-border-radius-xs 0 0;
+      background-color: var(--QLD-color-light__background--shade);
+      border-radius: 0 var(--QLD-border-radius-xs) 0 0;
       color: var(--QLD-color-light__text);
       width: 100%;
       @include QLD-space("padding", 1.0625unit 0.875unit);
@@ -230,7 +230,7 @@
 
     &-tab {
       background-color: var(--QLD-color-dark__background--alt-shade);
-      border-radius: $QLD-border-radius-xs $QLD-border-radius-xs 0 0;
+      border-radius: var(--QLD-border-radius-xs) var(--QLD-border-radius-xs) 0 0;
       bottom: 100%;
       color: var(--QLD-color-dark__text);
       font-weight: 600;
@@ -244,13 +244,13 @@
 
   // Single line type
   &.singleline {
-    border-radius: $QLD-border-radius-xs;
+    border-radius: var(--QLD-border-radius-xs);
     display: flex;
     width: 100%;
     @include QLD-box-shadow(2);
 
     code {
-      border-radius: $QLD-border-radius-xs 0 0 $QLD-border-radius-xs;
+      border-radius: var(--QLD-border-radius-xs) 0 0 var(--QLD-border-radius-xs);
       flex-grow: 1;
       white-space: nowrap;
       overflow: hidden;
@@ -259,7 +259,7 @@
     }
 
     .qld__code-copy--button {
-      border-radius: 0 $QLD-border-radius-xs $QLD-border-radius-xs 0;
+      border-radius: 0 var(--QLD-border-radius-xs) var(--QLD-border-radius-xs) 0;
     }
   }
 
@@ -274,7 +274,7 @@
     &.with-preview {
       display: inline-grid;
       background-color: var(--QLD-color-light__background);
-      border-radius: $QLD-border-radius-xs;
+      border-radius: var(--QLD-border-radius-xs);
       @include QLD-box-shadow(2);
       @include QLD-space("margin-top", 1.5unit);
     }
@@ -288,7 +288,7 @@
     }
 
     code {
-      border-radius: 0 0 $QLD-border-radius-xs $QLD-border-radius-xs;
+      border-radius: 0 0 var(--QLD-border-radius-xs) var(--QLD-border-radius-xs);
       overflow: hidden;
       position: relative;
       transition: max-height 0.5s ease-in-out;
@@ -328,11 +328,11 @@
 
   code {
     border: 0;
-    border-radius: $QLD-border-radius-xs;
+    border-radius: var(--QLD-border-radius-xs);
     cursor: pointer;
     display: inline-block;
     text-align: left;
-    background-color: var(--QLD-color-light__background--shade); //here
+    background-color: var(--QLD-color-light__background--shade);
     color: var(--QLD-color-light__text);
     @include QLD-space("padding", 0.125unit 0.5unit);
 
@@ -386,7 +386,7 @@
 .qld__code-tooltip {
   display: none;
   background: var(--QLD-color-light__background);
-  border-radius: $QLD-border-radius-xs;
+  border-radius: var(--QLD-border-radius-xs);
   position: absolute;
   bottom: calc(100% + 5px);
   left: 50%;

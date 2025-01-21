@@ -28,7 +28,7 @@ input[type="checkbox"],
       background-repeat: no-repeat;
       z-index: 9;
       @include QLD-space(left, 0unit);
-      border: $QLD-border-width-default solid transparent;
+      border: var(--QLD-border-width-default) solid transparent;
       top: 0;
 
       .qld__control-input--small & {
@@ -56,7 +56,7 @@ input[type="checkbox"],
   // hover
   &:hover:not([disabled]) {
     + label:before {
-      background-color: var(--QLD-color-light__background--shade); //here
+      background-color: var(--QLD-color-light__background--shade);
     }
   }
 
@@ -195,7 +195,7 @@ input[type="radio"],
       background-repeat: no-repeat;
       z-index: 100;
       @include QLD-space(left, 0unit);
-      border: $QLD-border-width-default solid transparent;
+      border: var(--QLD-border-width-default) solid transparent;
       border-radius: 50%;
       top: 0;
 
@@ -226,7 +226,7 @@ input[type="radio"],
   // hover
   &:hover {
     + label:before {
-      background-color: var(--QLD-color-light__background--shade); //here
+      background-color: var(--QLD-color-light__background--shade);
     }
   }
 

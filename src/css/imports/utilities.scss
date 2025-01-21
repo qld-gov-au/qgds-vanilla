@@ -96,6 +96,7 @@ img.pull-right {
 }
 
 .text-right {
+  -ms-text-align-last: right; /* IE */
   text-align: right;
 }
 
@@ -120,6 +121,7 @@ img.pull-right {
 }
 
 .order-first {
+  -ms-order: -1;
   order: -1;
 }
 
@@ -164,7 +166,6 @@ a.qld__max-width {
   }
 }
 
-/** @mixin QLD-fontgrid  replace line hight with this + use the variable (map) */
 .qld__body {
   .qld__default-xs,
   .qld__default-sm,
@@ -182,129 +183,129 @@ a.qld__max-width {
 
   .qld__default-xs {
     font-size: var(--QLD-default-mobile-xs);
-    line-height: 20px;
+    line-height: var(--QLD-heading-space-mobile-xs);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-xs);
+      line-height: var(--QLD-heading-space-mobile-xs);
     }
   }
 
   .qld__default-sm {
     font-size: var(--QLD-default-mobile-sm);
-    line-height: 24px;
+    line-height: var(--QLD-heading-space-mobile-sm);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-sm);
+      line-height: var(--QLD-heading-space-mobile-sm);
     }
   }
 
   .qld__default-md {
     font-size: var(--QLD-default-mobile-md);
-    line-height: 32px;
+    line-height: var(--QLD-heading-space-mobile-md);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-md);
+      line-height: var(--QLD-heading-space-mobile-md);
     }
   }
 
   .qld__default-lg {
     font-size: var(--QLD-default-mobile-lg);
-    line-height: 36px;
+    line-height: var(--QLD-heading-space-mobile-lg);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-lg);
+      line-height: var(--QLD-heading-space-mobile-lg);
     }
   }
 
   .qld__default-xl {
     font-size: var(--QLD-default-mobile-xl);
-    line-height: 36px;
+    line-height: var(--QLD-heading-space-mobile-xl);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-xl);
+      line-height: var(--QLD-heading-space-mobile-xl);
     }
   }
 
   .qld__default-xxl {
     font-size: var(--QLD-default-mobile-xxl);
-    line-height: 48px;
+    line-height: var(--QLD-heading-space-mobile-xxl);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-xxl);
+      line-height: var(--QLD-heading-space-mobile-xxl);
     }
   }
 
   .qld__default-xxxl {
     font-size: var(--QLD-default-mobile-xxxl);
-    line-height: 60px;
+    line-height: var(--QLD-heading-space-mobile-xxxl);
 
     &.qld__heading-space {
-      line-height: var(--QLD-heading-space-xxxl);
+      line-height: var(--QLD-heading-space-mobile-xxxl);
     }
   }
 
   @include QLD-media(lg) {
     .qld__default-xs {
       font-size: var(--QLD-default-desktop-xs);
-      line-height: 20px;
+      line-height: var(--QLD-heading-space-desktop-xs);
     }
 
     .qld__default-sm {
       font-size: var(--QLD-default-desktop-sm);
-      line-height: 24px;
+      line-height: var(--QLD-heading-space-desktop-sm);
     }
 
     .qld__default-md {
       font-size: var(--QLD-default-desktop-md);
-      line-height: 32px;
+      line-height: var(--QLD-heading-space-desktop-md);
     }
 
     .qld__default-lg {
       font-size: var(--QLD-default-desktop-lg);
-      line-height: 36px;
+      line-height: var(--QLD-heading-space-desktop-lg);
     }
 
     .qld__default-xl {
       font-size: var(--QLD-default-desktop-xl);
-      line-height: 48px;
+      line-height: var(--QLD-heading-space-desktop-xl);
     }
 
     .qld__default-xxl {
       font-size: var(--QLD-default-desktop-xxl);
-      line-height: 60px;
+      line-height: var(--QLD-heading-space-desktop-xxl);
     }
 
     .qld__default-xxxl {
       font-size: var(--QLD-default-desktop-xxxl);
-      line-height: 72px;
+      line-height: var(--QLD-heading-space-desktop-xxxl);
     }
 
     .qld__default-xs.qld__heading-space {
-      line-height: var(--QLD-heading-space-xs);
+      line-height: var(--QLD-heading-space-desktop-xs);
     }
 
     .qld__default-sm.qld__heading-space {
-      line-height: var(--QLD-heading-space-sm);
+      line-height: var(--QLD-heading-space-desktop-sm);
     }
 
     .qld__default-md.qld__heading-space {
-      line-height: var(--QLD-heading-space-md);
+      line-height: var(--QLD-heading-space-desktop-md);
     }
 
     .qld__default-lg.qld__heading-space {
-      line-height: var(--QLD-heading-space-lg);
+      line-height: var(--QLD-heading-space-desktop-lg);
     }
 
     .qld__default-xl.qld__heading-space {
-      line-height: var(--QLD-heading-space-xl);
+      line-height: var(--QLD-heading-space-desktop-xl);
     }
 
     .qld__default-xxl.qld__heading-space {
-      line-height: var(--QLD-heading-space-xxl);
+      line-height: var(--QLD-heading-space-desktop-xxl);
     }
 
     .qld__default-xxxl.qld__heading-space {
-      line-height: var(--QLD-heading-space-xxxl);
+      line-height: var(--QLD-heading-space-desktop-xxxl);
     }
   }
 }
@@ -314,30 +315,30 @@ a.qld__max-width {
 */
 
 .qld__border-radius--xs {
-  border-radius: $QLD-border-radius-xs;
+  border-radius: var(--QLD-border-radius-xs);
 }
 
 .qld__border-radius--sm {
-  border-radius: $QLD-border-radius-sm;
+  border-radius: var(--QLD-border-radius-sm);
 }
 
 .qld__border-radius--md {
-  border-radius: $QLD-border-radius-md;
+  border-radius: var(--QLD-border-radius-md);
 }
 
 .qld__border-radius--lg {
-  border-radius: $QLD-border-radius-md;
+  border-radius: var(--QLD-border-radius-md);
 
   @include QLD-media(lg) {
-    border-radius: $QLD-border-radius-lg;
+    border-radius: var(--QLD-border-radius-lg);
   }
 }
 
 .qld__border-radius--lg {
-  border-radius: $QLD-border-radius-lg;
+  border-radius: var(--QLD-border-radius-lg);
 
   @include QLD-media(lg) {
-    border-radius: $QLD-border-radius-xl;
+    border-radius: var(--QLD-border-radius-xl);
   }
 }
 

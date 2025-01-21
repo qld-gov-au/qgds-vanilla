@@ -3,12 +3,12 @@
 //--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 .qld__accordion {
-  border: $QLD-border-width-thin solid var(--QLD-color-light__border);
+  border: var(--QLD-border-width-thin) solid var(--QLD-color-light__border);
   display: block;
   padding: 0;
 
   &__title {
-    background-color: var(--QLD-color-light__background--shade); //here
+    background-color: var(--QLD-color-light__background--shade);
     @include QLD-underline("light");
     //@include QLD-fontgrid(md, heading);
     font-size: $typographyMobileH5FontSize;
@@ -99,7 +99,7 @@
       }
     }
     & &-wrapper {
-      border-top: $QLD-border-width-thin solid var(--QLD-color-light__border);
+      border-top: var(--QLD-border-width-thin) solid var(--QLD-color-light__border);
       color: var(--QLD-color-light__text);
       background-color: var(--QLD-color-light__background);
       @include QLD-space(padding, 1unit);

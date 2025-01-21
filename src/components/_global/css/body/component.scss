@@ -571,7 +571,7 @@ form {
       @include QLD-space(width, 1.75unit);
       border: 1px solid var(--QLD-color-light__border);
       border-radius: 50%;
-      background-color: var(--QLD-color-light__background--shade); //here
+      background-color: var(--QLD-color-light__background--shade);
       color: var(--QLD-color-light__heading);
       align-items: center;
       position: absolute;
@@ -726,20 +726,20 @@ form {
     font-weight: $typographyMobileXsFontWeight;
     line-height: $typographyMobileXsLineHeight;
 
+    font-family: $QLD-font-monospace;
+    display: inline-block;
+    border-radius: var(--QLD-border-radius-xs);
+    background-color: var(--QLD-color-light__background--shade);
+    color: var(--QLD-color-light__text);
+    @include QLD-space(line-height, 1.25unit);
+    @include QLD-space(padding, 0.125unit 0.25unit);
+    @include QLD-space(margin, 0unit 0.125unit);
+
     @include QLD-media(lg) {
       font-size: $typographyDesktopXsFontSize;
       font-weight: $typographyDesktopXsFontWeight;
       line-height: $typographyDesktopXsLineHeight;
     }
-
-    @include QLD-space(line-height, 1.25unit);
-    @include QLD-space(padding, 0.125unit 0.25unit);
-    @include QLD-space(margin, 0unit 0.125unit);
-    font-family: $QLD-font-monospace;
-    display: inline-block;
-    border-radius: $QLD-border-radius-xs;
-    background-color: var(--QLD-color-light__background--shade); //here
-    color: var(--QLD-color-light__text);
   }
 
   code {
@@ -753,14 +753,14 @@ form {
     font-weight: $typographyMobileCodeFontWeight;
     line-height: $typographyMobileCodeLineHeight;
 
+    background-color: $themeColorSyntaxBackground;
+    color: $qgdsColorNeutralWhiteDefault;
+
     @include QLD-media(lg) {
       font-size: $typographyDesktopCodeFontSize;
       font-weight: $typographyDesktopCodeFontWeight;
       line-height: $typographyDesktopCodeLineHeight;
     }
-
-    background-color: $themeColorSyntaxBackground;
-    color: $qgdsColorNeutralWhiteDefault;
 
     .token {
       pointer-events: none;
@@ -810,7 +810,7 @@ form {
 
   .qld__block-quote {
     padding-left: 1.375rem;
-    border-left: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
+    border-left: var(--QLD-border-width-thick) solid var(--QLD-color-light__design-accent);
     margin: 0;
   }
 
@@ -820,6 +820,8 @@ form {
     font-size: $typographyMobileQuoteFontSize;
     font-weight: $typographyMobileQuoteFontWeight;
     line-height: $typographyMobileQuoteLineHeight;
+    color: var(--QLD-color-light__heading);
+    margin-top: 1.5rem;
 
     @include QLD-media(lg) {
       font-size: $typographyDesktopQuoteFontSize;
@@ -827,23 +829,20 @@ form {
       line-height: $typographyDesktopQuoteLineHeight;
     }
 
-    color: var(--QLD-color-light__heading);
-    margin-top: 1.5rem;
-
     .qld__quote-source {
       //@include QLD-fontgrid(xs, small);
       font-size: $typographyMobileXsFontSize;
       font-weight: $typographyMobileXsFontWeight;
       line-height: $typographyMobileXsLineHeight;
 
+      color: var(--QLD-color-light__text--lighter);
+      margin-top: 0.625rem;
+
       @include QLD-media(lg) {
         font-size: $typographyDesktopXsFontSize;
         font-weight: $typographyDesktopXsFontWeight;
         line-height: $typographyDesktopXsLineHeight;
       }
-
-      color: var(--QLD-color-light__text--lighter);
-      margin-top: 0.625rem;
     }
   }
 

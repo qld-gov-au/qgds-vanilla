@@ -47,13 +47,13 @@
     width: calc(100vw - 4rem);
     @include QLD-space(max-width, 22.5unit);
     margin-top: 4px;
-    box-shadow: $QLD-box-shaddow-level-two;
+    box-shadow: $QLD-box-shadow-level-two;
     overflow: hidden;
     z-index: 9999;
     &.qld__accordion--open {
       display: block;
-      border-bottom: $QLD-border-width-thick solid var(--QLD-color-light__design-accent);
-      border-radius: $QLD-border-radius-xs;
+      border-bottom: var(--QLD-border-width-thick) solid var(--QLD-color-light__design-accent);
+      border-radius: var(--QLD-border-radius-xs);
       height: auto;
     }
 
@@ -72,7 +72,7 @@
 
         &-link {
           color: var(--QLD-color-light__text);
-          background-color: var(--QLD-color-light__background--shade); //here
+          background-color: var(--QLD-color-light__background--shade);
           text-decoration: none;
           white-space: nowrap;
           overflow: hidden;
@@ -168,7 +168,7 @@
 
           &-link {
             color: var(--QLD-color-light__text);
-            background-color: var(--QLD-color-light__background--shade); //here
+            background-color: var(--QLD-color-light__background--shade);
             text-decoration: none;
 
             &:visited {

@@ -59,12 +59,6 @@
   /**
     * Header pre-header styles
     */
-  @include QLD-media(lg) {
-    .qld__header__pre-header-url {
-      font-size: 14px;
-      line-height: 1;
-    }
-  }
 
   .qld__header__pre-header {
     color: var(--QLD-color-light__text);
@@ -114,9 +108,12 @@
       display: none;
       color: var(--QLD-color-light__link);
 
+      font-size: $typographyMobileSmFontSize;
+      font-weight: $typographyMobileSmFontWeight;
+      line-height: $typographyMobileSmLineHeight;
+
       @include QLD-media(lg) {
         display: inline-block;
-        //@include QLD-fontgrid(sm);
         font-size: $typographyDesktopSmFontSize;
         font-weight: $typographyDesktopSmFontWeight;
         line-height: $typographyDesktopSmLineHeight;
@@ -199,6 +196,11 @@
       display: flex;
       flex-direction: row;
       justify-content: end;
+      height: 52px;
+
+      @include QLD-media(md) {
+        height: 72px;
+      }
 
       @include QLD-media(lg) {
         display: none;
@@ -220,10 +222,10 @@
       align-items: center;
       color: var(--QLD-color-light__link);
       @include QLD-focus();
-      border-left: solid $QLD-border-width-thin var(--QLD-color-neutral--lighter);
+      border-left: solid var(--QLD-border-width-thin) var(--QLD-color-neutral--lighter);
 
       &:hover {
-        background-color: var(--QLD-color-light__background--shade); //here
+        background-color: var(--QLD-color-light__background--shade);
 
         svg {
           color: var(--QLD-color-light__action--secondary-hover);
@@ -440,7 +442,7 @@
         display: block;
         @include QLD-space(padding-right, 1.5unit);
         @include QLD-space(margin-right, 1.5unit);
-        border-right: solid $QLD-border-width-default var(--QLD-color-light__design-accent);
+        border-right: solid var(--QLD-border-width-default) var(--QLD-color-light__design-accent);
       }
 
       img {

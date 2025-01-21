@@ -10,7 +10,7 @@
     </nav>
     <div class="qld__header__pre-header {{#if site.metadata.sitePreHeaderTheme.value}}qld__header__pre-header--{{site.metadata.sitePreHeaderTheme.value}}{{/if}}">
         <div class="container-fluid">
-            <a href="{{#if site.metadata.sitePreHeaderURL.value}}{{site.metadata.sitePreHeaderURL.value}}{{else}}https://www.qld.gov.au/}{{/if}}" >
+            <a class="qld__header__brand-image-wrapper" href="{{#if site.metadata.sitePreHeaderURL.value}}{{site.metadata.sitePreHeaderURL.value}}{{else}}https://www.qld.gov.au/}{{/if}}" >
                 <span class="qld__header__pre-header-url">{{site.metadata.sitePreHeaderText.value}}</span>
                 {{#if site.metadata.sitePreHeaderLogo.value}}
                 <img
@@ -19,7 +19,7 @@
                     src="{{site.metadata.sitePreHeaderLogo.value}}"
                 />
                 {{else}}
-                     <span class="qld__header__pre-header-url--mobile">{{site.metadata.sitePreHeaderText.value}}</span>
+                    <span class="qld__header__pre-header-url--mobile">{{site.metadata.sitePreHeaderText.value}}</span>
                 {{/if}}
 
             </a>
@@ -27,7 +27,7 @@
             <div class="qld__header__cta-wrapper">
                 {{#if site.metadata.mainNavCtaOne.value}}
                 <a class="qld__header__cta-link" href="{{site.metadata.mainNavCtaOne.value}}">
-		            {{#if site.metadata.mainNavCtaOneIcon.value}}
+		              {{#if site.metadata.mainNavCtaOneIcon.value}}
                     <span class="qld__header__cta-link-icon">
                       <i class="{{site.metadata.mainNavCtaOneIcon.value}}"></i>
                     </span>
