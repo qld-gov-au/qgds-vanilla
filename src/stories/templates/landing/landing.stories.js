@@ -10,7 +10,6 @@ import handlebarsInit from "../../../helpers/handlebars.init.js";
 import exampleLanding from "./landing.test.hbs?raw";
 
 import header from "./landing-header.json";
-import theme_switcher from "./landing-theme_switcher.json";
 import navigation from "./landing-navigation.json";
 import mega_main_navigation from "./landing-mega_main_navigation.json";
 import breadcrumbs from "./landing-breadcrumbs.json";
@@ -48,7 +47,6 @@ let json_data = {
   },
   site: site,
   header: header,
-  theme_switcher: theme_switcher,
   navigation: navigation,
   mega_main_navigation: mega_main_navigation,
   breadcrumbs: breadcrumbs,
