@@ -10,11 +10,15 @@
 // Mapping of the QGDS Design Tokens to general CSS variables
 @import "imports/variables-root.scss";
 // Mapping of tokens to CSS variables for the light and dark themes
+// client selects theme
+@import "imports/variables-light.scss";
+@import "imports/variables-dark.scss";
+// system prefers-color-scheme
 @media (prefers-color-scheme: light) {
-  @import "imports/variables-light.scss";
+  @import "imports/variables-prefers-light.scss";
 }
 @media (prefers-color-scheme: dark) {
-  @import "imports/variables-dark.scss";
+  @import "imports/variables-prefers-dark.scss";
 }
 // Import the default variables
 @import "imports/defaults.scss";
