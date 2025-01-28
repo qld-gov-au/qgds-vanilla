@@ -61,6 +61,7 @@ import banner_intermediate from "../components/banner_intermediate/html/componen
 import basic_search from "../components/basic_search/html/component.hbs?raw";
 import body from "../components/body/html/component.hbs?raw";
 import breadcrumbs from "../components/breadcrumbs/breadcrumbs.hbs?raw";
+import calltoaction from "../components/call-to-action/call-to-action.hbs?raw";
 import callout from "../components/callout/html/component.hbs?raw";
 import card_feature from "../components/card_feature/html/component.hbs?raw";
 import card_multi_action from "../components/card_multi_action/html/component.hbs?raw";
@@ -157,6 +158,7 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("basic_search", basic_search);
   handlebars.registerPartial("body", body);
   handlebars.registerPartial("breadcrumbs", breadcrumbs);
+  handlebars.registerPartial("call-to-action", calltoaction);
   handlebars.registerPartial("callout", callout);
   handlebars.registerPartial("card_feature", card_feature);
   handlebars.registerPartial("card_multi_action", card_multi_action);

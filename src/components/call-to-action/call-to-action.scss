@@ -55,6 +55,7 @@ a.qld__cta-link {
     &:disabled,
     &[disabled] {
       font-weight: bold;
+
       &::after {
         @include QLD-space(margin, 0 0.5unit 0 0.5unit);
       }
@@ -100,6 +101,7 @@ a.qld__cta-link.qld__cta-link--view-all {
     mask-image: QLD-svguri($QLD-icon-arrow-view-all);
     background-color: var(--QLD-color-light__action--secondary);
   }
+
   .qld__body--dark &,
   .qld__body--dark-alt &,
   .qld__main-nav--dark & {
