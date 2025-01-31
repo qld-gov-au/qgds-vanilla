@@ -49,7 +49,7 @@ let json_data = {
 };
 
 export default {
-  title: "Global Body",
+  title: "0.3  Templates and  Patterns/Global Body",
   render: (args) => {
     handlebarsInit(Handlebars);
     try {

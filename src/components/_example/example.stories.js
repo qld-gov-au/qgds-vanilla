@@ -4,10 +4,9 @@
  * @module example.stories
  */
 
-// Imports:
-// - the QGDS object containing all components
-// - data you need to populate the component for rendering
-import { QGDS } from "../../js/index.js";
+// load helpers handlebars
+import Handlebars from "handlebars";
+import handlebarsInit from "../../helpers/handlebars.init.js";
 import mockupData from "./example.data.json";
 
 /* ========= STORIES 👇 ===== */
@@ -19,8 +18,9 @@ import mockupData from "./example.data.json";
 export default {
   title: "Components / _Example",
   render: (args) => {
+    handlebarsInit(Handlebars);
     try {
-      return new QGDS.Example({ data: args }).htmlstring;
+      return Handlebars.compile("{{> example }}")(args);
     } catch (e) {
       return JSON.stringify(e) + JSON.stringify(args);
     }

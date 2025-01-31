@@ -47,7 +47,7 @@ fs.readdirSync(THEMES_FOLDER).forEach((file) => {
     };
   }
 });
-
+console.log('Themes Map:', themesMap);
 const CSS_FOLDER = "src/css";
 
 Object.entries(themesMap).forEach(([theme, { paletteFile, scss, variables }]) => {
@@ -112,16 +112,16 @@ if (entryMatch) {
     .split("},")
     .map((e) => e.trim().replace(/[\s{},]+$/, ""))
     .filter((e) => e.includes("in:") && e.includes(".js"))
-    .map((e) => e + ",\n        }"); // Retain existing JS entries
+    .map((e) => e + ",\n    }"); // Retain existing JS entries
 
   // Generate SCSS entries based on `themeMap`
   const newEntries = Object.values(themesMap).map(({ scss }) => {
     const scssPath = `./src/css/${scss}.scss`;
     const outputPath = `./assets/css/${scss}.min`;
     return `{
-          in: "${scssPath}",
-          out: "${outputPath}",
-        }`;
+      in: "${scssPath}",
+      out: "${outputPath}",
+    }`;
   });
 
   // Combine JS and SCSS entries
@@ -130,7 +130,7 @@ if (entryMatch) {
   // Replace `entryPoints` in `esbuild.js`
   esbuildContent = esbuildContent.replace(
     entryRegex,
-    `entryPoints: [\n        ${updatedEntries.join(",\n        ")}\n    ]`,
+    `entryPoints: [\n    ${updatedEntries.join(",\n    ")},\n  ]`,
   );
 
   fs.writeFileSync(ESBUILD_FILE, esbuildContent);

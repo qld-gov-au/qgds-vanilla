@@ -65,7 +65,7 @@ let json_data = {
 };
 
 export default {
-  title: "Education",
+  title: "0.3  Templates and  Patterns/Education",
   render: (args) => {
     handlebarsInit(Handlebars);
     try {

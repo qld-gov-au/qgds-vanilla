@@ -10,8 +10,8 @@
   },
   "scripts": {
     "config": "node .esbuild/helpers/config.js",
-    "prepare": "npm run config && npm run build",
-    "build": "node esbuild.js",
+    "prepare": "npm run build",
+    "build": "npm run config && node esbuild.js",
     "lint": "npm run lint:js && npm run lint:styles",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write .",
