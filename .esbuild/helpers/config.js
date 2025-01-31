@@ -37,7 +37,7 @@ const THEMES_FOLDER = "node_modules/@qld-gov-au/qgds-tokens/dist/scss/styles";
 const themesMap = {};
 
 fs.readdirSync(THEMES_FOLDER).forEach((file) => {
-  const match = file.match(/^qgds-(.+)-palette\.scss$/);
+  const match = file.match(/^(.+)-palette\.scss$/);
   if (match) {
     const theme = match[1];
     themesMap[theme] = {
