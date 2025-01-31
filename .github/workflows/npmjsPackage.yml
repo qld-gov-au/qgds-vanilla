@@ -20,6 +20,7 @@ on:
 
 jobs:
   build:
+    if: github.repository == 'qld-gov-au/qgds-vanilla' #lock npmjs deployment to single repo, alter if you change package.json
     runs-on: ubuntu-latest
     strategy:
       matrix:
