@@ -7,22 +7,22 @@
 // load helpers handlebars
 import Handlebars from "handlebars";
 import handlebarsInit from "../../../helpers/handlebars.init.js";
-import exampleLanding from "./landing.test.hbs?raw";
+import exampleEducation from "./education.test.hbs?raw";
 
-import header from "./landing-header.json";
-import navigation from "./landing-navigation.json";
-import mega_main_navigation from "./landing-mega_main_navigation.json";
-import breadcrumbs from "./landing-breadcrumbs.json";
-import card_multi_action from "./landing-card_multi_action.json";
-import accordion from "./landing-accordion.json";
-import callout from "./landing-callout.json";
-import button from "./landing-button.json";
-import horizontal_rule from "./landing-horizontal_rule.json";
-import pagination from "./landing-pagination.json";
-import internal_navigation from "./landing-internal_navigation.json";
-import widgets from "./landing-widgets.json";
-import banner_intermediate from "./landing-banner_intermediate.json";
-import footer from "./landing-footer.json";
+import header from "./education-header.json";
+import navigation from "./education-navigation.json";
+import mega_main_navigation from "./education-mega_main_navigation.json";
+import breadcrumbs from "./education-breadcrumbs.json";
+import card_multi_action from "./education-card_multi_action.json";
+import accordion from "./education-accordion.json";
+import callout from "./education-callout.json";
+import button from "./education-button.json";
+import horizontal_rule from "./education-horizontal_rule.json";
+import pagination from "./education-pagination.json";
+import internal_navigation from "./education-internal_navigation.json";
+import widgets from "./education-widgets.json";
+import banner_intermediate from "./education-banner_intermediate.json";
+import footer from "./education-footer.json";
 
 let footer_scripts = {};
 let content = {};
@@ -65,11 +65,11 @@ let json_data = {
 };
 
 export default {
-  title: "0.3  Templates and  Patterns/Landing",
+  title: "0.3  Templates and  Patterns/Education",
   render: (args) => {
     handlebarsInit(Handlebars);
     try {
-      return Handlebars.compile(exampleLanding)(args);
+      return Handlebars.compile(exampleEducation)(args);
     } catch (e) {
       console.log(e);
       return JSON.stringify(e) + JSON.stringify(args);
@@ -79,7 +79,7 @@ export default {
 };
 
 /**
- * Landing
+ * Education
 
  */
-export const Landing = {};
+export const Education = {};

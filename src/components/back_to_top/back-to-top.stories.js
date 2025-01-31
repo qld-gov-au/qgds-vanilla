@@ -4,10 +4,9 @@
  * @module back-to-top.stories
  */
 
-// Imports:
-// - the QGDS object containing all components
-// - data you need to populate the component for rendering
-import { QGDS } from "../../js/index.js";
+// load helpers handlebars
+import Handlebars from "handlebars";
+import handlebarsInit from "../../helpers/handlebars.init.js";
 import mockupData from "./back-to-top.data.json";
 
 /* ========= STORIES 👇 ===== */
@@ -15,8 +14,9 @@ import mockupData from "./back-to-top.data.json";
 export default {
   title: "Components / Back to Top",
   render: (args) => {
+    handlebarsInit(Handlebars);
     try {
-      return new QGDS.BackToTop({ data: args }).htmlstring;
+      return Handlebars.compile("{{> back-to-top }}")(args);
     } catch (e) {
       return JSON.stringify(e) + JSON.stringify(args);
     }

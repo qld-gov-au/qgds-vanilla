@@ -4,14 +4,17 @@
  * @module breadcrumbs.stories
  */
 
-import { QGDS } from "../../js/index.js";
+// load helpers handlebars
+import Handlebars from "handlebars";
+import handlebarsInit from "../../helpers/handlebars.init.js";
 import mockupData from "./breadcrumbs.data.json";
 
 export default {
   title: "3 Layout/Breadcrumbs",
   render: (args) => {
+    handlebarsInit(Handlebars);
     try {
-      return new QGDS.Breadcrumbs({ data: args }).htmlstring;
+      return Handlebars.compile("{{> breadcrumbs }}")(args);
     } catch (e) {
       return JSON.stringify(e) + JSON.stringify(args);
     }
