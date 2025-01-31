@@ -61,7 +61,14 @@ jobs:
 
       - name: Lint
         run: |
-          echo "lint disabled at this time" #npm run lint
+          echo "run lint report, but don't fail the build, at this time"
+          npm run lint || exit 0
+
+      - name: Upload Stylelint Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: stylelint-report
+          path: stylelint-report.json
 
       - name: Test
         run: |

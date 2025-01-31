@@ -3,19 +3,19 @@
  */
 
 body {
-    z-index: 1;
+  z-index: 1;
 }
 
 .qld__table__attributes {
-    font-size: 0.9em;
+  font-size: 0.9em;
 
-    .qld__model_field {
-        width: 100%;
-    }
+  .qld__model_field {
+    width: 100%;
+  }
 
-    textarea {
-        height: 100px;
-    }
+  textarea {
+    height: 100px;
+  }
 }
 
 /*
@@ -23,61 +23,60 @@ body {
  */
 
 @media screen and (min-width: md) {
-    body {
-        z-index: 2;
-    }
+  body {
+    z-index: 2;
+  }
 }
-
 
 /*
  * Desktop layout
  */
 
 @media screen and (min-width: lg) {
-    body {
-        z-index: 3;
-    }
+  body {
+    z-index: 3;
+  }
 }
-
 
 /*
 Written to address squiz forms' error state issues
 */
 
 div.sq-form-question-tickbox-list.sq-form-question-error {
-    fieldset {
-        label::before {
-                box-shadow: 0 0 0 3px $QLD-color-status__error;
-        }
+  fieldset {
+    label::before {
+      box-shadow: 0 0 0 3px var(--QLD-color-status__error);
     }
+  }
 }
 
 div.sq-form-question-option-list.sq-form-question-error {
-    fieldset {
-        label::before {
-            box-shadow: 0 0 0 3px $QLD-color-status__error;
-        }
+  fieldset {
+    label::before {
+      box-shadow: 0 0 0 3px var(--QLD-color-status__error);
     }
+  }
 }
 
 div.sq-form-question-error {
-    input[type=text]:not(:focus),
-    input[type=email]:not(:focus),
-    input[type=date]:not(:focus),
-    textarea:not(:focus),
-    select:not(:focus) {
-        border-color: $QLD-color-status__error;
-        background-color: $QLD-color-status__error--lightest;
-    }
+  input[type="text"]:not(:focus),
+  input[type="email"]:not(:focus),
+  input[type="date"]:not(:focus),
+  textarea:not(:focus),
+  select:not(:focus) {
+    border-color: var(--QLD-color-status__error);
+    background-color: var(--QLD-color-status__error--lightest);
+  }
 }
 
-.qld__body--dark, .qld__body--dark-alt {
-    .sq-form-error {
-        color: $QLD-color-status__error--lightest;
-    }
+.qld__body--dark,
+.qld__body--dark-alt {
+  .sq-form-error {
+    color: var(--QLD-color-status__error--lightest);
+  }
 }
 
 .sq-form-error {
-    color: $QLD-color-status__error;
-    margin-top: 0.5rem !important;
+  color: var(--QLD-color-status__error);
+  margin-top: 0.5rem !important;
 }

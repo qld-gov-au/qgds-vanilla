@@ -67,7 +67,7 @@ let json_data = {
 }
 
 export default {
-    title: "Landing",
+    title: "0.3  Templates and  Patterns/Landing",
     render: ( args) => {
         handlebarsInit(Handlebars)
         try {

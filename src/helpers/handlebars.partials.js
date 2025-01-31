@@ -1,6 +1,7 @@
 /* global Handlebars */
 /** THIS IS A GENERATED FILE **/
 
+import example from "../components/_example/example.hbs?raw";
 import blockquote from "../components/_global/css/body/stories/blockquote.hbs?raw";
 import div from "../components/_global/css/body/stories/div.hbs?raw";
 import figcaption from "../components/_global/css/body/stories/figcaption.hbs?raw";
@@ -52,13 +53,14 @@ import _template from "../components/_template/html/component.hbs?raw";
 import az_listing from "../components/a-z_listing/html/component.hbs?raw";
 import abstract from "../components/abstract/html/component.hbs?raw";
 import accordion from "../components/accordion/html/component.hbs?raw";
+import backtotop from "../components/back_to_top/back-to-top.hbs?raw";
 import banner from "../components/banner/html/component.hbs?raw";
 import banner_advanced from "../components/banner_advanced/html/component.hbs?raw";
 import banner_basic from "../components/banner_basic/html/component.hbs?raw";
 import banner_intermediate from "../components/banner_intermediate/html/component.hbs?raw";
 import basic_search from "../components/basic_search/html/component.hbs?raw";
 import body from "../components/body/html/component.hbs?raw";
-import breadcrumbs from "../components/breadcrumbs/html/component.hbs?raw";
+import breadcrumbs from "../components/breadcrumbs/breadcrumbs.hbs?raw";
 import callout from "../components/callout/html/component.hbs?raw";
 import card_feature from "../components/card_feature/html/component.hbs?raw";
 import card_multi_action from "../components/card_multi_action/html/component.hbs?raw";
@@ -95,6 +97,7 @@ import widgets from "../components/widgets/html/component.hbs?raw";
  * @returns {void} Result of the helper operation
  */
 export default function handlebarsPartials(handlebars) {
+  handlebars.registerPartial("example", example);
   handlebars.registerPartial("blockquote", blockquote);
   handlebars.registerPartial("div", div);
   handlebars.registerPartial("figcaption", figcaption);
@@ -146,6 +149,7 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("a-z_listing", az_listing);
   handlebars.registerPartial("abstract", abstract);
   handlebars.registerPartial("accordion", accordion);
+  handlebars.registerPartial("back-to-top", backtotop);
   handlebars.registerPartial("banner", banner);
   handlebars.registerPartial("banner_advanced", banner_advanced);
   handlebars.registerPartial("banner_basic", banner_basic);

@@ -1,0 +1,80 @@
+
+
+{{> header header }}
+
+{{>mega_main_navigation mega_main_navigation}}
+
+{{#> layout_body }}
+    {{#>layout_main }}
+
+      <section class="qld__body qld__body--breadcrumb">
+        <div class="container-fluid">
+          <nav class="qld__breadcrumbs" aria-label="breadcrumb" style="max-width: 1312px;">
+            <ol class="qld__breadcrumbs__list--desktop qld__link-list qld__link-list--inline" style="max-width: 1312px;">
+              <li>
+              <a href="/home.html">Home</a>
+              </li>
+              <li>
+              <a href="/">Design</a>
+              </li>
+              <li aria-current="page" style="overflow: hidden;">
+              Components
+              </li>
+              </ol>
+              <ol class="qld__breadcrumbs__list--mobile qld__link-list qld__link-list--inline">
+              <li>
+              <a href="/">
+              Design
+              </a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </section>
+
+      <section class="qld__body">
+
+          {{#> div class="container-fluid" }}
+
+              {{#> grid_row }}
+
+                  {{#> grid_col col_options="col-xs-12 col-lg-4 col-xl-3"}}
+
+                      {{>internal_navigation  internal_navigation }}
+
+                  {{/grid_col}}
+
+                  {{#> grid_col col_options="col-xs-12 col-lg-8 col-xl-9" col_id="content"}}
+
+                      <section class="qld__body">
+
+                          {{#> div class="container-fluid" }}
+
+                              <h1>Global elements</h1>
+
+                              <div class="qld__abstract">
+                                <p>Global elements</p>
+                              </div>
+
+                          {{/ div}}
+
+                      </section>
+
+                  {{/grid_col}}
+
+              {{/grid_row}}
+
+          {{/ div}}
+
+      </section>
+
+    {{/layout_main}}
+
+    <!-- WIDGETS -->
+    {{>widgets widgets }}
+
+    <!-- FOOTER-->
+    {{>footer footer }}
+
+{{/layout_body}}
+

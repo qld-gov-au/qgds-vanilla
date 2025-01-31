@@ -1,5 +1,4 @@
-Callouts and quotes
-===================
+# Callouts and quotes
 
 May also be known as:
 
@@ -9,18 +8,15 @@ Block-quotes, pullquotes and highlights
 
 Overview Design Implementation Accessibility
 
-On this page
-------------
+## On this page
 
-Overview
---------
+## Overview
 
 A callout is a piece of text from an article that has been taken out and used as a visual aid to help show a reader where important information is located.
 
 Callouts are sometimes referred to as "pull quotes" or "highlighted text." In our Design System callouts can also be used as a visual clue to help direct a user's attention to important pieces of information. Our design system also uses a modified callout style for quotes and dates.
 
-Callout examples
-----------------
+## Callout examples
 
 ### Default callout
 
@@ -28,11 +24,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 ### Title of the callout
 
@@ -56,11 +52,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 ### Title of the callout
 
@@ -82,22 +78,21 @@ Use a calendar callout to alert a user to important dates and events.
 
 A calendar callout has:
 
-*   introduction text (optional)
-*   date
-*   date name.
+- introduction text (optional)
+- date
+- date name.
 
 Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
-Description of the callout
---------------------------
+## Description of the callout
 
 The next public holiday is:
 
@@ -113,8 +108,7 @@ Copy Copied
 
 `<div class="qld__callout qld__callout--calendar-event"> <h2 class="qld__callout__heading qld__callout__heading--sronly">Description of the callout</h2> <p class="qld__callout--calendar-event__lede"> The next public holiday is: </p> <time class="qld__callout--calendar-event__time" datetime="2025-01-01 00:00:00"> Sunday 1 January </time> <span class="qld__callout--calendar-event__name">New Year's Day</span> </div>`
 
-Usage guidelines for callouts
------------------------------
+## Usage guidelines for callouts
 
 Our callout can contain a title and a message.
 
@@ -124,46 +118,45 @@ Some users don’t notice callouts. Therefore, don't use a callout for important
 
 ### Success status icon Indicates a success state When to use
 
-*   Call attention to important pieces of information
-*   Supplement a point in the main text
-*   For quotes and important dates
-*   Link to a relevant resource or supply additional important information
-*   Summaries
-*   Checklists
-*   Examples
-*   Case studies
-*   Definitions
+- Call attention to important pieces of information
+- Supplement a point in the main text
+- For quotes and important dates
+- Link to a relevant resource or supply additional important information
+- Summaries
+- Checklists
+- Examples
+- Case studies
+- Definitions
 
 ### Status cancel icon Cancel icon or warning icon When not to use
 
-*   Too many callouts can be overwhelming and actually detract from the user experience, use them sparingly and only when necessary
-*   Don't use callouts for block quotes or figures
+- Too many callouts can be overwhelming and actually detract from the user experience, use them sparingly and only when necessary
+- Don't use callouts for block quotes or figures
 
 ### Information status icon Indicates that information is required or toggles a tooltip How to use
 
 Read more about when to use text boxes and callouts in the [Australian Government Style Manual.](https://www.stylemanual.gov.au/structuring-content/text-boxes-and-callouts "https://www.stylemanual.gov.au/structuring-content/text-boxes-and-callouts")
 
-* * *
+---
 
-Quote example
--------------
+## Quote example
 
 Use the quote callout component for block quotations of longer than about 30 words.
 
 A quote callout component has:
 
-*   quote text
-*   reference (for cited quotations only).
+- quote text
+- reference (for cited quotations only).
 
 Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 > The goal of the Web is to serve humanity. We build it now so that those who come to it later will be able to create things we cannot ourselves imagine.
 
@@ -179,25 +172,23 @@ Copy Copied
 
 `<figure class="qld__block-quote"> <!-- The blockquote tag is used for a longer quotation, and the cite attribute is used to provide the URL of the source of the quote. --> <blockquote cite="https://example.com/source-of-the-quote"> The goal of the Web is to serve humanity. We build it now so that those who come to it later will be able to create things we cannot ourselves imagine. </blockquote> <!-- The figcaption tag is used to provide a caption for the figure. In this case, it's the name of the author of the quote. --> <figcaption class="qld__quote-source"> Sir Tim Berners-Lee </figcaption> </figure>`
 
-Usage guidelines for quotes
----------------------------
+## Usage guidelines for quotes
 
 ### Success status icon Indicates a success state When to use
 
-*   show direct speech and the quoted work of other writers
-*   enclose the title of certain works
-*   draw attention to a word you’re defining.
+- show direct speech and the quoted work of other writers
+- enclose the title of certain works
+- draw attention to a word you’re defining.
 
 ### Status cancel icon Cancel icon or warning icon When not to use
 
-*   For pull-quotes
+- For pull-quotes
 
 ### Information status icon Indicates that information is required or toggles a tooltip How to use quotes
 
 Read more about when to use text boxes and callouts in the [Australian Government Style Manual](https://www.stylemanual.gov.au/grammar-punctuation-and-conventions/punctuation/quotation-marks#format_long_quotes_as_block_quotes_with_no_quotation_marks "https://www.stylemanual.gov.au/grammar-punctuation-and-conventions/punctuation/quotation-marks#format_long_quotes_as_block_quotes_with_no_quotation_marks").
 
-Research and rationale
-----------------------
+## Research and rationale
 
 Our callout design is based on the [Australian Government Design](https://gold.designsystemau.org/components/callout "https://gold.designsystemau.org/components/callout/") system pattern where a thick lefthand border, background colours, and padding are used enhance the visual weight of the callouts. The research conducted by the Digital Transformation agency indicated that this was done to address [WCAG2.0 Criterion 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html "https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html").
 
@@ -217,8 +208,7 @@ Our quote was influenced by the W3C Design System which had provided best practi
 
 We follow the Australian Government Style Manual which states that you shouldn't use quotation marks to identify the quoted material – the formatting does that instead. Block quotes should also be coded with the HTML <blockquote> element (Digital Transformation Agency n.d.).
 
-Classes
--------
+## Classes
 
 Name
 
@@ -260,23 +250,21 @@ Style applied to `<figcaption>` applies the  quote style in conjunction with t
 
 Determines the look of quote source text.
 
-Variables
----------
+## Variables
 
 Name
 
 Description
 
-`$QLD-color-light-designAccent`
+`var(--QLD-color-light-designAccent)`
 
 Colour of design accent used on light backgrounds for callouts,  and other decorative borders.
 
-`$QLD-color-dark-designAccent`
+`var(--QLD-color-dark-designAccent)`
 
 Colour of design accent used on dark backgrounds for callouts,  and other decorative borders.
 
-Accessible callout requirements
--------------------------------
+## Accessible callout requirements
 
 Keep these considerations in mind if you're modifying the Design System or creating a custom component.
 
@@ -294,8 +282,7 @@ Example of a callout within the main content, using role="region" and aria-label
 
 `<main> <p>This is the main content of the webpage...</p>  <div role="region" aria-label="Helpful Callout"> <p>This is a callout that provides additional information related to the main content.</p> </div> </main>`
 
-Accessible quote requirements
------------------------------
+## Accessible quote requirements
 
 ### WCAG guidelines
 
@@ -319,10 +306,9 @@ Ensure that the text colour and background colour of the quote have a contrast r
 
 If the quote is part of a larger section or article, use clear and descriptive headings to help users navigate through the content.
 
-* * *
+---
 
-References
-----------
+## References
 
 Digital NSW (n.d.) [Callout](https://digitalnsw.github.io/nsw-design-system/components/callout/index.html "https://digitalnsw.github.io/nsw-design-system/components/callout/index.html"), _NSW Design System_, accessed 10 April 2023.
 

@@ -1,16 +1,15 @@
 import { Meta, Markdown } from "@storybook/blocks";
 
-
 <Meta title="1. Styles/Colour" />
 
 # TODO: FIX THIS, is just manual html to MD converted only from https://www.designsystem.qld.gov.au/
-* [ ]: Fix tables
-* [ ]: Fix examples
-* [ ]: Fix links
-* [ ]: QA to original
 
-Colour
-======
+- [ ]: Fix tables
+- [ ]: Fix examples
+- [ ]: Fix links
+- [ ]: QA to original
+
+# Colour
 
 Our versatile and accessible colour matrix is designed to establish a cohesive visual identity while providing customisation options for diverse government digital products and services.
 
@@ -18,16 +17,13 @@ Our versatile and accessible colour matrix is designed to establish a cohesive v
 
 Overview Design Customisation Accessibility
 
-On this page
-------------
+## On this page
 
-Overview
---------
+## Overview
 
 Our approach to applying colour was inspired by the research and designs from the Digital Transformation Agency’s (DTA) colour guidance. In our Design System our colours are divided into brand colours, neutral colours, syntax colours and status colours. Our colour system has been specifically designed to accommodate both light and dark themes as well as multiple custom brand colours.
 
-Default brand colours
----------------------
+## Default brand colours
 
 The default colour palette is primarily blue and green, it's an accessible theme based on the exciting franchise (qld.gov.au) website and Queensland Government corporate guidelines. These default colours reflect [masterbrand](./?path=/docs/0-2-brands-1-master-brand--overview) corporate colour usage.
 
@@ -63,8 +59,7 @@ Golden yellow
 
 #FFE500
 
-Neutral colours
----------------
+## Neutral colours
 
 These are colours that exist outside those which the user can customise but may be used by designers when necessary.
 
@@ -84,7 +79,7 @@ Dark
 
 #78797E
 
-* * *
+---
 
 Light
 
@@ -102,7 +97,7 @@ White
 
 #FFFFFF
 
-* * *
+---
 
 White underline
 
@@ -112,8 +107,7 @@ Dark underline
 
 rgba(255, 255, 255, 0.72)
 
-Other brand colours
--------------------
+## Other brand colours
 
 Maroon is Queensland’s state colour. This colour is only used for ministerial or parliamentary purposes. Although it doesn't feature as part of default master colour palette it's included as a class that designers can use to ensure brand consistency on websites where maroon is required.
 
@@ -125,8 +119,7 @@ Modern maroon
 
 #A70240
 
-Status colours
---------------
+## Status colours
 
 Status colours are reserved colours, these are defaults used across all sites in the Queensland Government Network.
 
@@ -146,7 +139,7 @@ Error lightest
 
 #FFF6F6
 
-* * *
+---
 
 Information
 
@@ -164,7 +157,7 @@ Info lightest
 
 #EFF4F9
 
-* * *
+---
 
 Success
 
@@ -182,7 +175,7 @@ Success lightest
 
 #F7FBF8
 
-* * *
+---
 
 Caution
 
@@ -200,8 +193,7 @@ Caution lightest
 
 #FFFAEA
 
-Syntax colours
---------------
+## Syntax colours
 
 These are colours used for code examples. Only edit these if you intend to use code examples on your site.
 
@@ -221,8 +213,7 @@ Comments
 
 #C0D7EC
 
-Research and rationale
-----------------------
+## Research and rationale
 
 ### How we developed our colour matrix
 
@@ -240,13 +231,13 @@ The existing colour classes weren't robust enough and didn't cover items such as
 
 We solved these issues by doing the following:
 
-*   creating a colour matrix (visual guide) so we could see what colour interactions occurred and how things would need to be made accessible. This allowed us to provide designers a way of customising all colours at once
-*   we chose to remove the automation of colours and instead create a dedicated set of colours variables that could be customised with more control
-*   adding a secondary action class which let us incorporate an additional primary brand colour, this also gave us a colour that could be used for interactive iconography
-*   adding an accent colour class to allow a safe space for decorative brand colour (with no impact on usability)
-*   adding hover classes so we could improve interactive elements including accessibility and usability
-*   adding heading classes so that titles could use colour to stand out slightly from text
-*   adding underline colours to further improve the usability of our hyperlink styles.
+- creating a colour matrix (visual guide) so we could see what colour interactions occurred and how things would need to be made accessible. This allowed us to provide designers a way of customising all colours at once
+- we chose to remove the automation of colours and instead create a dedicated set of colours variables that could be customised with more control
+- adding a secondary action class which let us incorporate an additional primary brand colour, this also gave us a colour that could be used for interactive iconography
+- adding an accent colour class to allow a safe space for decorative brand colour (with no impact on usability)
+- adding hover classes so we could improve interactive elements including accessibility and usability
+- adding heading classes so that titles could use colour to stand out slightly from text
+- adding underline colours to further improve the usability of our hyperlink styles.
 
 We used many of our early website designs to test, refine and iterate on this approach and continue to build and refine this system adding functionality and features.
 
@@ -270,10 +261,10 @@ As a result, we looked at existing colours that were used in key places to deter
 
 These included
 
-*   the current Qld.gov.au franchise page
-*   the state flag
-*   the state crest
-*   key prominent Qld colours.
+- the current Qld.gov.au franchise page
+- the state flag
+- the state crest
+- key prominent Qld colours.
 
 We looked at the qld.gov.au franchise site as a starting point, they utilise light blue, dark blue and light green as their base colours.
 We tweaked these to be more web accessible and used them as our core to build from.
@@ -288,15 +279,13 @@ For these we again looked at the state crest and found the colours of dark green
 
 For more detailed information on our colour research see our [figma documentation.](https://www.figma.com/file/o2iVPuZxjZZu926U3OV9wE/Colour-Anaylsis?type=design&node-id=200%3A63807&t=rS9keu2yq8uvCgIu-1)
 
-Brand colours
--------------
+## Brand colours
 
 Brand colours are those that can be customised to match the brand requirements of a site.
 
 Components and core styles inherit these colours to create a consistent yet flexible theme to optimise your user's experience. The default colour palette below reflects [masterbrand corporate](./?path=/docs/0-2-brands-1-master-brand--overview) colour used as default in the Design System.
 
-How to customise colours
-------------------------
+## How to customise colours
 
 On our platform,  you can modify the colours by using the CSS variables (detailed below).
 
@@ -306,15 +295,15 @@ There are 46 colour variables that users can customise. These variables are divi
 
 ### Colour categories
 
-*   [Backgrounds](./?path=/docs/1-styles-colour--overview#Backgrounds)
-*   [Borders](./?path=/docs/1-styles-colour--overview#Borders)
-*   [Action](./?path=/docs/1-styles-colour--overview#Actions)
-*   [Accent](./?path=/docs/1-styles-colour--overview#Accent)
-*   [Focus](./?path=/docs/1-styles-colour--overview#Focus)
-*   [Text links](./?path=/docs/1-styles-colour--overview#Text-links)
-*   [Text](./?path=/docs/1-styles-colour--overview#Text)
-*   [Underlines](./?path=/docs/1-styles-colour--overview#Underlines)
-*   [Site title](./?path=/docs/1-styles-colour--overview#Site-title)
+- [Backgrounds](./?path=/docs/1-styles-colour--overview#Backgrounds)
+- [Borders](./?path=/docs/1-styles-colour--overview#Borders)
+- [Action](./?path=/docs/1-styles-colour--overview#Actions)
+- [Accent](./?path=/docs/1-styles-colour--overview#Accent)
+- [Focus](./?path=/docs/1-styles-colour--overview#Focus)
+- [Text links](./?path=/docs/1-styles-colour--overview#Text-links)
+- [Text](./?path=/docs/1-styles-colour--overview#Text)
+- [Underlines](./?path=/docs/1-styles-colour--overview#Underlines)
+- [Site title](./?path=/docs/1-styles-colour--overview#Site-title)
 
 ### Backgrounds
 
@@ -330,13 +319,13 @@ Value
 
  Default (White)
 
-`$QLD-color-neutral--white`
+`var(--QLD-color-neutral--white`
 
 `#FFFFFF`
 
 Default shade (Neutral lightest)
 
-`$QLD-color-neutral--lightest`
+`var(--QLD-color-neutral--lightest`
 
 `#F5F5F5`
 
@@ -392,11 +381,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Background colour example
 
@@ -440,25 +429,23 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Border example
 
 Borders for text inputs and dividers for menu items. They change depending on the background they are situated on. Alternative borders are used for form all form fields to ensure optimum contrast.
 
-
-
-*   [Contact us](./?path=/docs/1-styles-colour--overview#)
-*   [About us](./?path=/docs/1-styles-colour--overview#)
-*   [Products](./?path=/docs/1-styles-colour--overview#)
-*   [FAQ](./?path=/docs/1-styles-colour--overview#)
-*   [Terms and conditions](./?path=/docs/1-styles-colour--overview#)
-*   [Privacy policy](./?path=/docs/1-styles-colour--overview#)
-*   [View all](./?path=/docs/1-styles-colour--overview#)
+- [Contact us](./?path=/docs/1-styles-colour--overview#)
+- [About us](./?path=/docs/1-styles-colour--overview#)
+- [Products](./?path=/docs/1-styles-colour--overview#)
+- [FAQ](./?path=/docs/1-styles-colour--overview#)
+- [Terms and conditions](./?path=/docs/1-styles-colour--overview#)
+- [Privacy policy](./?path=/docs/1-styles-colour--overview#)
+- [View all](./?path=/docs/1-styles-colour--overview#)
 
 Label
 
@@ -524,18 +511,18 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Action colour example
 
 Actions colours are used for interactive elements, primary colours are used for more important actions and secondary actions are used for icons and less important actions.
 
-*   [Submit](./?path=/docs/1-styles-colour--overview#)
-*   Find out more
+- [Submit](./?path=/docs/1-styles-colour--overview#)
+- Find out more
 
 ### Accent
 
@@ -563,11 +550,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Accent colour example
 
@@ -605,17 +592,15 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Focus colour example
 
 Focus colours determine the outline colour that appears when as element is in focus. Select the input field below to display the focus state.
-
-
 
 Label
 
@@ -669,11 +654,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Text link example
 
@@ -731,11 +716,11 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Heading colour example
 
@@ -781,17 +766,15 @@ Example
 
 Theme
 
-*    White
-*    Light
-*    Alt
-*    Dark
-*    Dark-alt
+- White
+- Light
+- Alt
+- Dark
+- Dark-alt
 
 #### Underline colour example
 
 Underline colours are slightly lighter version of the original text link colour, this is to to reduce distracting impact that underlines can have in hyperlinks.
-
-
 
 ##### [Underline colour example](./?path=/docs/1-styles-colour--overview#)
 
@@ -817,8 +800,7 @@ Dark site  title colour
 
 `#FFFFFF`
 
-Accessible colour requirements
-------------------------------
+## Accessible colour requirements
 
 Our default colours have already been designed to meet accessibility requirements however keep these considerations in mind if you're modifying the Design System or creating a custom component.
 
@@ -856,17 +838,15 @@ Consistent use of colour throughout a website or application can help users with
 
 This principle is emphasised in WCAG's success criterion 1.3.5 Identify Input Purpose, which requires consistency in the presentation of input fields and instructions throughout a website or application. Additionally, success criterion 3.2.3 Consistent Navigation requires that navigational mechanisms be consistent throughout the website or application. While consistency isn't a specific guideline, it's an important aspect of accessible design and can be applied to multiple WCAG guidelines.
 
-* * *
+---
 
-References
-----------
+## References
 
 Digital Transformation Agency (2018) [Core](https://gold.designsystemau.org/components/core/ "https://gold.designsystemau.org/components/page-alerts/"), _Gold Design System (Formerly DTA)_, accessed 10 April 2023.
 
 W3C (2018) [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21 "https://www.w3.org/TR/WCAG21/"), World Wide Web Consortium, accessed 10 April 2023.
 
-Related
--------
+## Related
 
 [Brand requirements](./?path=/docs/0-1-brand-foundations-brand-requirements--overview)
 
