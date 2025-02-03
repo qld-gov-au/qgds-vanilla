@@ -15,17 +15,20 @@ updates:
         - "@chromatic-com/storybook"
         - "@whitespace/storybook-addon-html"
         - "chromatic"
-    eslint:
+    eslint_esbuild:
       patterns:
         - "eslint*"
         - "@stylistic/eslint-plugin-js"
         - "esbuild-plugin-eslint"
-    esbuild:
-      patterns:
+        - "@eslint*"
         - "esbuild*"
+
     stylelint:
       patterns:
         - "stylelint*"
+    vitest:
+      patterns:
+        - "*vitest*"
   open-pull-requests-limit: 10
   reviewers:
   - qld-gov-au/qld-online-dev-team
