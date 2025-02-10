@@ -17,6 +17,7 @@ jobs:
     env:
       HAVE_TARGET_REPO_CDN: ${{ vars.TARGET_REPO_CDN != '' }}
       HAVE_TARGET_REPO: ${{ vars.TARGET_REPO != '' }}
+      IS_TAG: ${{ startsWith(github.ref, 'refs/tags/') }}
       HAVE_CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN != '' }}
       IS_CHROMATIC_DISABLED: ${{ vars.CHROMATIC_DISABLED == 'True' }}
     strategy:
@@ -129,7 +130,7 @@ jobs:
           github_token: '${{ secrets.GH_TOKEN }}'
           github_pat: '${{ secrets.GH_PAT }}'
           source_folder: dist
-        if: ${{ env.HAVE_TARGET_REPO_CDN == 'true' && success() }}
+        if: ${{ env.HAVE_TARGET_REPO_CDN == 'true'  && env.IS_TAG == 'true' && success() }}
 
       - name: Build Storybook 🔧
         run: | # build the Storybook files
@@ -137,7 +138,7 @@ jobs:
 
       - name: Publish to Chromatic
         ## to ignore Dependabot, add to the if statement: github.actor != 'dependabot[bot]' &&
-        if: ${{ env.HAVE_CHROMATIC_PROJECT_TOKEN == 'true' && env.IS_CHROMATIC_DISABLED == 'false'}}
+        if: ${{ env.HAVE_CHROMATIC_PROJECT_TOKEN == 'true' && env.IS_CHROMATIC_DISABLED == 'false'  && env.IS_TAG == 'false' }}
         uses: chromaui/action@latest
         # Options required to the GitHub Chromatic Action
         with:
