@@ -15,6 +15,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      HAVE_TARGET_REPO_CDN: ${{ vars.TARGET_REPO_CDN != '' }}
+      HAVE_TARGET_REPO: ${{ vars.TARGET_REPO != '' }}
       HAVE_CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN != '' }}
       IS_CHROMATIC_DISABLED: ${{ vars.CHROMATIC_DISABLED == 'True' }}
     strategy:
@@ -106,7 +108,7 @@ jobs:
           cp -r ./.binary-repo/* ./dist
           cp -r ./.binary-repo/.github/* ./dist/.github
 
-      - name: Publish qgds-bootstrap5-release
+      - name: Publish Release
         uses: qld-gov-au/gha-publish-to-git@master
         with:
           repository: ${{ vars.TARGET_REPO }}
@@ -116,9 +118,9 @@ jobs:
           github_pat: '${{ secrets.GH_PAT }}'
           source_folder: dist
           tag_branch: main
-        if: success()
+        if: ${{ env.HAVE_TARGET_REPO == 'true' && success() }}
 
-      - name: Publish to qld-gov-au/qgds-vanilla-cdn
+      - name: Publish to CDN
         uses: qld-gov-au/gha-cdn-version-tree-by-tag-builder@main
         with:
           repository: ${{ vars.TARGET_REPO_CDN }}
@@ -127,7 +129,7 @@ jobs:
           github_token: '${{ secrets.GH_TOKEN }}'
           github_pat: '${{ secrets.GH_PAT }}'
           source_folder: dist
-        if: success()
+        if: ${{ env.HAVE_TARGET_REPO_CDN == 'true' && success() }}
 
       - name: Build Storybook 🔧
         run: | # build the Storybook files
