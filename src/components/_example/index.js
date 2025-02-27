@@ -22,6 +22,7 @@ import meta from "./version.json";
 
 export default function Example({ data, template = hbstemplate }) {
   logic.init();
+  console.log("Example init");
 
   //Minimum required fields for the component to function
   const props = {

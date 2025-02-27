@@ -45,9 +45,17 @@
                     <span class="qld__header__cta-link-text">{{site.metadata.mainNavCtaTwoText.value}}</span>
                 </a>
                 {{/if}}
+                {{#if site.metadata.themeSwitcher.value}}
+                <span class="qld__header__cta-link">
+                  {{>theme_color_scheme theme_color_scheme}}
+                </span>
+                {{/if}}
             </div>
 
             <div class="qld__header__main-nav-controls">
+                {{#if site.metadata.themeSwitcher.value}}
+                  {{>theme_color_scheme theme_color_scheme}}
+                {{/if}}
                 {{#if site.metadata.siteSearchAsset.value}}
                 <button aria-controls="qld-header-search" class="qld__header__toggle-main-nav qld__main-nav__toggle-search qld__main-nav__toggle-search--open" aria-expanded="false">
                     <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" class="qld__icon qld__icon--lg qld__main-nav__toggle-search-icon"><use href="{{@root.site.metadata.siteDefaultIcons.value}}#qld__icon__search"></use></svg>

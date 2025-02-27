@@ -1,130 +1,106 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "type": "object",
-    "required": [
-        "component"
-    ],
-    "properties": {
-        "component": {
-            "type": "object",
-            "required": [
-                "name",
-                "version",
-                "status",
-                "children",
-                "data"
-            ],
-            "properties": {
-                "name": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "version": {
-                    "type": "string"
-                },
-                "status": {
-                    "type": "string"
-                },
-                "children": {
-                    "type": "array",
-                    "items": {}
-                },
-                "data": {
-                    "type": "object",
-                    "required": [
-                        "assetid",
-                        "metadata"
-                    ],
-                    "properties": {
-                        "assetid": {
-                            "type": "string"
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["component"],
+  "properties": {
+    "component": {
+      "type": "object",
+      "required": ["name", "version", "status", "children", "data"],
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string"
+        },
+        "children": {
+          "type": "array",
+          "items": {}
+        },
+        "data": {
+          "type": "object",
+          "required": ["assetid", "metadata"],
+          "properties": {
+            "assetid": {
+              "type": "string"
+            },
+            "metadata": {
+              "type": "object",
+              "patternProperties": {
+                "^[a-zA-Z_0-9]+$": {
+                  "type": "object",
+                  "required": ["type", "friendly_name", "value", "editable"],
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "friendly_name": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    },
+                    "options": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "type": "string"
+                      }
+                    },
+                    "required": {
+                      "type": "boolean"
+                    },
+                    "editable": {
+                      "type": "boolean"
+                    },
+                    "fieldid": {
+                      "type": "string"
+                    },
+                    "display_if": {
+                      "type": "object",
+                      "required": ["show", "operator", "rules"],
+                      "properties": {
+                        "show": {
+                          "type": "boolean"
                         },
-                        "metadata": {
+                        "operator": {
+                          "type": "string"
+                        },
+                        "rules": {
+                          "type": "array",
+                          "items": {
                             "type": "object",
-                            "patternProperties": {
-                                "^[a-zA-Z_0-9]+$": {
-                                    "type": "object",
-                                    "required": [
-                                        "type",
-                                        "friendly_name",
-                                        "value",
-                                        "editable"
-                                    ],
-                                    "properties": {
-                                        "type": {
-                                            "type": "string"
-                                        },
-                                        "description": {
-                                            "type": "string"
-                                        },
-                                        "friendly_name": {
-                                            "type": "string"
-                                        },
-                                        "value": {
-                                            "type": "string"
-                                        },
-                                        "options": {
-                                            "type": "object",
-                                            "additionalProperties": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "required": {
-                                            "type": "boolean"
-                                        },
-                                        "editable": {
-                                            "type": "boolean"
-                                        },
-                                        "fieldid": {
-                                            "type": "string"
-                                        },
-                                        "display_if": {
-                                            "type": "object",
-                                            "required": [
-                                                "show",
-                                                "operator",
-                                                "rules"
-                                            ],
-                                            "properties": {
-                                                "show": {
-                                                    "type": "boolean"
-                                                },
-                                                "operator": {
-                                                    "type": "string"
-                                                },
-                                                "rules": {
-                                                    "type": "array",
-                                                    "items": {
-                                                        "type": "object",
-                                                        "required": [
-                                                            "field",
-                                                            "operator",
-                                                            "value"
-                                                        ],
-                                                        "properties": {
-                                                            "field": {
-                                                                "type": "string"
-                                                            },
-                                                            "operator": {
-                                                                "type": "string"
-                                                            },
-                                                            "value": {
-                                                                "type": "string"
-                                                            }
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
+                            "required": ["field", "operator", "value"],
+                            "properties": {
+                              "field": {
+                                "type": "string"
+                              },
+                              "operator": {
+                                "type": "string"
+                              },
+                              "value": {
+                                "type": "string"
+                              }
                             }
+                          }
                         }
+                      }
                     }
+                  }
                 }
+              }
             }
+          }
         }
+      }
     }
+  }
 }
