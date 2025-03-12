@@ -1,7 +1,7 @@
 /**
- * @file megaMainNavigation.stories.js
- * @description Storybook configuration file for the megaMainNavigation component.
- * @module megaMainNavigation.stories
+ * @file pagination.stories.js
+ * @description Storybook configuration file for the pagination component.
+ * @module pagination.stories
  */
 
 import example1 from "../html/example1.json";
@@ -12,7 +12,7 @@ import Handlebars from "handlebars";
 import handlebarsInit from "../../../helpers/handlebars.init.js";
 
 export default {
-  title: "3 Layout/Navigation/Navigation Bar (Mega Horizontal navigation)",
+  title: "Components/Pagination",
   render: (args) => {
     handlebarsInit(Handlebars);
     try {
@@ -55,7 +55,7 @@ export default {
 };
 
 /**
- * Default See [Horizontal Navigation - Overview](?path=/docs/layout-navigation-bar-horizontal-navigation--horizontal-navigation-overview)
+ * Default
 
  */
 export const Default = {};
