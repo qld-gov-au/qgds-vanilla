@@ -87,6 +87,7 @@ import pagination from "../components/pagination/html/component.hbs?raw";
 import promo_panel from "../components/promo_panel/html/component.hbs?raw";
 import search_box from "../components/search_box/html/component.hbs?raw";
 import tab from "../components/tab/html/component.hbs?raw";
+import theme_color_scheme from "../components/theme_color_scheme/html/component.hbs?raw";
 import updated_date from "../components/updated_date/html/component.hbs?raw";
 import widgets from "../components/widgets/html/component.hbs?raw";
 
@@ -183,6 +184,7 @@ export default function handlebarsPartials(handlebars) {
   handlebars.registerPartial("promo_panel", promo_panel);
   handlebars.registerPartial("search_box", search_box);
   handlebars.registerPartial("tab", tab);
+  handlebars.registerPartial("theme_color_scheme", theme_color_scheme);
   handlebars.registerPartial("updated_date", updated_date);
   handlebars.registerPartial("widgets", widgets);
 

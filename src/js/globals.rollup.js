@@ -21,6 +21,7 @@ import main_navigation from "./../components/main_navigation/js/global.js";
 import mega_main_navigation from "./../components/mega_main_navigation/js/global.js";
 import promo_panel from "./../components/promo_panel/js/global.js";
 import tab from "./../components/tab/js/global.js";
+import theme_color_scheme from "./../components/theme_color_scheme/js/global.js";
 
 
 export default function init(QLD) {
@@ -45,6 +46,7 @@ export default function init(QLD) {
     mega_main_navigation(QLD);
     promo_panel(QLD);
     tab(QLD);
+    theme_color_scheme(QLD);
 
 }
 
