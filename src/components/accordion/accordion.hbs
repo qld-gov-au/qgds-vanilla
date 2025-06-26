@@ -1,0 +1,38 @@
+<section class="qld__body">
+    <div class="container-fluid">
+
+        {{#if heading}}
+            <h2>{{heading}}</h2>
+        {{/if}}
+
+        {{#if intro}}
+            {{{intro}}}
+        {{/if}}
+
+        <div class="qld__accordion-group qld__accordion-group--{{theme}}" id="accordion-group--{{id}}">
+            {{#if toggle_all}}
+                <div class="qld__accordion__toggle">
+                    <button class="qld__accordion__toggle-btn qld__accordion__toggle-btn--closed" type="button">Open all</button>
+                </div>
+            {{/if}}
+            <ul class="qld__accordion-list">
+                {{#each component}}
+                    <li>
+                        <div class="qld__accordion">
+                            <button class="qld__accordion__title js-qld__accordion qld__accordion--closed" aria-controls="{{../theme}}_{{../id}}_{{this.com_id}}" aria-expanded="false">
+                                {{this.title}}
+                            </button>
+
+                            <div class="qld__accordion__body qld__accordion--closed" id="{{../theme}}_{{../id}}_{{this.com_id}}">
+                                <div class="qld__accordion__body-wrapper">
+                                    {{{this.content}}}
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</section>
+
